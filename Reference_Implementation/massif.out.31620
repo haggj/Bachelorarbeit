@@ -1,0 +1,1828 @@
+desc: --stacks=yes
+cmd: ./test
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=58143538
+mem_heap_B=3904
+mem_heap_extra_B=928
+mem_stacks_B=5600
+heap_tree=detailed
+n5: 3904 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2696 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 2696 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 960 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 960 0x115C36: fp_ImportHex (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 960 in 15 places, all below massif's threshold (1.00%)
+   n1: 896 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 896 0x11560A: gmp_subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n3: 896 0x115BAF: fp_Subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 384 0x1111A2: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 192 in 4 places, all below massif's threshold (1.00%)
+       n1: 192 0x1112CA: fp2_Square (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 192 in 6 places, all below massif's threshold (1.00%)
+      n2: 384 0x1111EE: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 192 in 4 places, all below massif's threshold (1.00%)
+       n1: 192 0x1112CA: fp2_Square (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 192 in 6 places, all below massif's threshold (1.00%)
+      n0: 128 in 2 places, all below massif's threshold (1.00%)
+   n2: 512 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 384 0x4E4FC8C: __gmpz_mod (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 384 0x115449: gmp_negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 384 0x115AE7: fp_Negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n2: 192 0x11127C: fp2_Negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 192 0x110331: eval_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n0: 192 in 3 places, all below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n2: 192 0x11129B: fp2_Negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 192 0x110331: eval_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n0: 192 in 3 places, all below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 128 0x11529B: gmp_add_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 128 0x11593A: fp_Add (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 128 in 5 places, all below massif's threshold (1.00%)
+   n1: 168 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 168 0x115306: gmp_copy_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n2: 168 0x1159C5: fp_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 112 0x110DF3: fp2_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 112 0x111B95: mont_pt_copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 112 in 5 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+      n0: 56 in 1 place, below massif's threshold (1.00%)
+   n1: 128 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 128 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 128 0x115799: mp_pow (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 128 in 2 places, all below massif's threshold (1.00%)
+   n0: 32 in 4 places, all below massif's threshold (1.00%)
+ n2: 904 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 672 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 672 0x1153F1: gmp_multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+    n5: 672 0x115AB7: fp_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n3: 224 0x11103C: fp2_Invert (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 112 0x110413: eval_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 112 0x110AF4: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 112 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 112 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n0: 112 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 112 0x110478: eval_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 112 0x110AF4: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 112 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 112 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n0: 112 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 2 places, all below massif's threshold (1.00%)
+     n3: 224 0x111058: fp2_Invert (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 112 0x110413: eval_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 112 0x110AF4: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 112 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 112 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n0: 112 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 112 0x110478: eval_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 112 0x110AF4: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 112 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 112 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n0: 112 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 2 places, all below massif's threshold (1.00%)
+     n2: 112 0x111120: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 112 0x1112CA: fp2_Square (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n2: 112 0x110492: eval_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 112 0x110AF4: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 112 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 112 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n0: 112 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 0 in 2 places, all below massif's threshold (1.00%)
+       n0: 0 in 9 places, all below massif's threshold (1.00%)
+      n0: 0 in 29 places, all below massif's threshold (1.00%)
+     n2: 112 0x111146: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 112 0x1112CA: fp2_Square (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n2: 112 0x110492: eval_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 112 0x110AF4: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 112 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 112 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n0: 112 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 0 in 2 places, all below massif's threshold (1.00%)
+       n0: 0 in 9 places, all below massif's threshold (1.00%)
+      n0: 0 in 28 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 232 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 232 0x115688: gmp_init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+    n1: 232 0x115905: fp_Init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 232 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x1149E0: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n1: 152 0x1149EE: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=103126273
+mem_heap_B=3712
+mem_heap_extra_B=816
+mem_stacks_B=3112
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=169902576
+mem_heap_B=3600
+mem_heap_extra_B=848
+mem_stacks_B=5232
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=224221358
+mem_heap_B=3496
+mem_heap_extra_B=840
+mem_stacks_B=5184
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=290873944
+mem_heap_B=3064
+mem_heap_extra_B=904
+mem_stacks_B=3320
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=326764504
+mem_heap_B=3488
+mem_heap_extra_B=824
+mem_stacks_B=5152
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=400615668
+mem_heap_B=3376
+mem_heap_extra_B=816
+mem_stacks_B=3840
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=471501467
+mem_heap_B=3152
+mem_heap_extra_B=800
+mem_stacks_B=2016
+heap_tree=detailed
+n5: 3152 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2640 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 2640 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 960 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n15: 960 0x115C36: fp_ImportHex (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 64 0x114A4D: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 64 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 64 0x114BB2: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 64 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 64 0x114BCD: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 64 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 64 0x114BE8: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 64 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 64 0x114C03: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 64 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 64 0x114C1E: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 64 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 64 0x114C3C: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 64 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 64 0x114C5A: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 64 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 64 0x114C78: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 64 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 64 0x114C96: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 64 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 64 0x114E48: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 64 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 64 0x114E66: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 64 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 64 0x114EA2: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 64 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 64 0x114EE1: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 64 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 64 0x114F44: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 64 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n1: 768 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 768 0x11560A: gmp_subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n4: 768 0x115BAF: fp_Subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n4: 320 0x1111A2: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n2: 128 0x1105AB: eval_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 64 0x110AD0: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 64 0x110AF4: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n3: 128 0x1112CA: fp2_Square (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 64 0x110748: curve_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x110A94: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n2: 64 0x111EFC: xDBL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x112298: xDBLe (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x110A76: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+             n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 4 places, all below massif's threshold (1.00%)
+       n1: 64 0x110838: curve_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 64 0x110A94: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n4: 320 0x1111EE: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n2: 128 0x1105AB: eval_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 64 0x110AD0: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 64 0x110AF4: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n3: 128 0x1112CA: fp2_Square (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 64 0x110748: curve_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x110A94: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n2: 64 0x111EFC: xDBL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x112298: xDBLe (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x110A76: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+             n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 4 places, all below massif's threshold (1.00%)
+       n1: 64 0x110838: curve_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 64 0x110A94: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 64 0x1112FD: fp2_Sub (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n2: 64 0x112731: xADD (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 64 0x11366F: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+      n2: 64 0x111321: fp2_Sub (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n2: 64 0x112731: xADD (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 64 0x11366F: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n2: 640 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 384 0x4E4FC8C: __gmpz_mod (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 384 0x115449: gmp_negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 384 0x115AE7: fp_Negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n2: 192 0x11127C: fp2_Negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n3: 192 0x110331: eval_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x110AAC: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x110AD0: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x110AF4: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n2: 192 0x11129B: fp2_Negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n3: 192 0x110331: eval_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x110AAC: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x110AD0: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x110AF4: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 256 0x11529B: gmp_add_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n3: 256 0x11593A: fp_Add (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n3: 128 0x110D64: fp2_Add (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n2: 64 0x111F17: xDBL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 64 0x112298: xDBLe (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x110A76: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n2: 64 0x11212B: xDBL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 64 0x112298: xDBLe (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x110A76: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n3: 128 0x110D88: fp2_Add (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n2: 64 0x111F17: xDBL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 64 0x112298: xDBLe (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x110A76: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n2: 64 0x11212B: xDBL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 64 0x112298: xDBLe (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 64 0x110A76: iso_2_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 64 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 64 0x109B67: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n1: 128 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 128 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n2: 128 0x115799: mp_pow (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 64 0x114A93: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 64 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 64 0x114D29: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 64 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 64 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n1: 112 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 112 0x115306: gmp_copy_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 112 0x1159C5: fp_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 112 in 2 places, all below massif's threshold (1.00%)
+   n0: 32 in 4 places, all below massif's threshold (1.00%)
+ n2: 208 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n1: 208 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 208 0x115688: gmp_init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+    n3: 208 0x115905: fp_Init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 88 0x110E38: fp2_Init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 88 in 21 places, all below massif's threshold (1.00%)
+     n1: 88 0x110E4F: fp2_Init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 88 in 21 places, all below massif's threshold (1.00%)
+     n0: 32 in 27 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x1149E0: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n1: 152 0x1149EE: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=551837266
+mem_heap_B=3376
+mem_heap_extra_B=816
+mem_stacks_B=3840
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=601177895
+mem_heap_B=3376
+mem_heap_extra_B=816
+mem_stacks_B=3840
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=669661340
+mem_heap_B=3488
+mem_heap_extra_B=848
+mem_stacks_B=3112
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=707707690
+mem_heap_B=3384
+mem_heap_extra_B=856
+mem_stacks_B=2312
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=776191020
+mem_heap_B=3336
+mem_heap_extra_B=872
+mem_stacks_B=2136
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=829455904
+mem_heap_B=3600
+mem_heap_extra_B=832
+mem_stacks_B=3272
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=867503070
+mem_heap_B=3152
+mem_heap_extra_B=800
+mem_stacks_B=2712
+heap_tree=detailed
+n5: 3152 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2640 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 2640 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 960 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 960 0x115C36: fp_ImportHex (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 960 in 15 places, all below massif's threshold (1.00%)
+   n1: 768 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 768 0x11560A: gmp_subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n3: 768 0x115BAF: fp_Subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n3: 320 0x1111A2: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 128 0x1105AB: eval_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 2 places, all below massif's threshold (1.00%)
+       n1: 128 0x1112CA: fp2_Square (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 6 places, all below massif's threshold (1.00%)
+       n0: 64 in 3 places, all below massif's threshold (1.00%)
+      n3: 320 0x1111EE: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 128 0x1105AB: eval_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 2 places, all below massif's threshold (1.00%)
+       n1: 128 0x1112CA: fp2_Square (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 6 places, all below massif's threshold (1.00%)
+       n0: 64 in 3 places, all below massif's threshold (1.00%)
+      n0: 128 in 2 places, all below massif's threshold (1.00%)
+   n2: 640 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 384 0x4E4FC8C: __gmpz_mod (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 384 0x115449: gmp_negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 384 0x115AE7: fp_Negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n2: 192 0x11127C: fp2_Negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 192 0x110331: eval_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n0: 192 in 3 places, all below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n2: 192 0x11129B: fp2_Negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 192 0x110331: eval_4_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n0: 192 in 3 places, all below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 256 0x11529B: gmp_add_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n3: 256 0x11593A: fp_Add (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 128 0x110D64: fp2_Add (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 128 in 4 places, all below massif's threshold (1.00%)
+      n1: 128 0x110D88: fp2_Add (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 128 in 4 places, all below massif's threshold (1.00%)
+      n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n1: 128 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 128 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 128 0x115799: mp_pow (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 128 in 2 places, all below massif's threshold (1.00%)
+   n1: 112 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 112 0x115306: gmp_copy_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 112 0x1159C5: fp_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 112 in 2 places, all below massif's threshold (1.00%)
+   n0: 32 in 4 places, all below massif's threshold (1.00%)
+ n2: 208 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n1: 208 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 208 0x115688: gmp_init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+    n3: 208 0x115905: fp_Init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 88 0x110E38: fp2_Init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 88 in 21 places, all below massif's threshold (1.00%)
+     n1: 88 0x110E4F: fp2_Init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 88 in 21 places, all below massif's threshold (1.00%)
+     n0: 32 in 27 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x1149E0: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n1: 152 0x1149EE: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=913158683
+mem_heap_B=3376
+mem_heap_extra_B=816
+mem_stacks_B=2264
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=979558949
+mem_heap_B=3600
+mem_heap_extra_B=832
+mem_stacks_B=5184
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=1036266714
+mem_heap_B=3504
+mem_heap_extra_B=832
+mem_stacks_B=2872
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=1107151495
+mem_heap_B=3600
+mem_heap_extra_B=832
+mem_stacks_B=5184
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=1163859175
+mem_heap_B=3424
+mem_heap_extra_B=816
+mem_stacks_B=3072
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=1206389935
+mem_heap_B=3384
+mem_heap_extra_B=856
+mem_stacks_B=3272
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=1248920660
+mem_heap_B=3600
+mem_heap_extra_B=832
+mem_stacks_B=5184
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=1291451416
+mem_heap_B=3504
+mem_heap_extra_B=832
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=1333982217
+mem_heap_B=3600
+mem_heap_extra_B=848
+mem_stacks_B=5232
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=1404866875
+mem_heap_B=3272
+mem_heap_extra_B=824
+mem_stacks_B=2280
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=1461574504
+mem_heap_B=3832
+mem_heap_extra_B=904
+mem_stacks_B=2576
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=1489928396
+mem_heap_B=3504
+mem_heap_extra_B=832
+mem_stacks_B=3272
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=1546636061
+mem_heap_B=3272
+mem_heap_extra_B=824
+mem_stacks_B=3240
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=1574989928
+mem_heap_B=3568
+mem_heap_extra_B=928
+mem_stacks_B=2360
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=1631697567
+mem_heap_B=3536
+mem_heap_extra_B=864
+mem_stacks_B=2264
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=1660051608
+mem_heap_B=3536
+mem_heap_extra_B=864
+mem_stacks_B=2064
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=1718276605
+mem_heap_B=5072
+mem_heap_extra_B=944
+mem_stacks_B=5696
+heap_tree=peak
+n6: 5072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3120 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 3120 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 1152 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1152 0x11560A: gmp_subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n4: 1152 0x115BAF: fp_Subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n3: 448 0x1111A2: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 192 0x10F939: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 192 in 3 places, all below massif's threshold (1.00%)
+       n0: 128 in 8 places, all below massif's threshold (1.00%)
+       n1: 128 0x10F911: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 2 places, all below massif's threshold (1.00%)
+      n3: 448 0x1111EE: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 192 0x10F939: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 192 in 3 places, all below massif's threshold (1.00%)
+       n0: 128 in 12 places, all below massif's threshold (1.00%)
+       n1: 128 0x10F911: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 2 places, all below massif's threshold (1.00%)
+      n2: 128 0x1112FD: fp2_Sub (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 128 0x112731: xADD (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 128 0x111321: fp2_Sub (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 128 0x112731: xADD (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 960 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 960 0x115C36: fp_ImportHex (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 960 in 15 places, all below massif's threshold (1.00%)
+   n1: 560 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 560 0x115306: gmp_copy_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n2: 560 0x1159C5: fp_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 280 0x110DF3: fp2_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 280 in 7 places, all below massif's threshold (1.00%)
+      n1: 280 0x110E12: fp2_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 280 in 6 places, all below massif's threshold (1.00%)
+   n2: 256 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 128 0x11529B: gmp_add_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 128 0x11593A: fp_Add (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 128 in 6 places, all below massif's threshold (1.00%)
+    n1: 128 0x4E4FC8C: __gmpz_mod (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 128 0x115449: gmp_negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 128 0x115AE7: fp_Negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 128 in 2 places, all below massif's threshold (1.00%)
+   n1: 128 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 128 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 128 0x115799: mp_pow (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 128 in 2 places, all below massif's threshold (1.00%)
+   n0: 64 in 5 places, all below massif's threshold (1.00%)
+ n1: 1024 0x513218A: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x5142377: _IO_doallocbuf (genops.c:365)
+   n1: 1024 0x5141496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x513F9EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x510F532: vfprintf (vfprintf.c:1328)
+      n1: 1024 0x5118F24: printf (printf.c:33)
+       n1: 1024 0x109BA8: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 1024 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n3: 624 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 448 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 448 0x1153F1: gmp_multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+    n1: 448 0x115AB7: fp_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 448 in 5 places, all below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 176 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 176 0x115688: gmp_init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+    n1: 176 0x115905: fp_Init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 176 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x1149E0: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n1: 152 0x1149EE: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=1759749844
+mem_heap_B=4752
+mem_heap_extra_B=944
+mem_stacks_B=3984
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=1801222735
+mem_heap_B=4976
+mem_heap_extra_B=960
+mem_stacks_B=3416
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=1842695826
+mem_heap_B=5072
+mem_heap_extra_B=944
+mem_stacks_B=3464
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=1884168688
+mem_heap_B=4616
+mem_heap_extra_B=936
+mem_stacks_B=2576
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=1925642284
+mem_heap_B=4752
+mem_heap_extra_B=944
+mem_stacks_B=3984
+heap_tree=detailed
+n6: 4752 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3008 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 3008 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 1280 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1280 0x11560A: gmp_subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n4: 1280 0x115BAF: fp_Subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n3: 512 0x1111A2: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 192 in 8 places, all below massif's threshold (1.00%)
+       n1: 192 0x10F939: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 192 in 3 places, all below massif's threshold (1.00%)
+       n1: 128 0x10F911: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 2 places, all below massif's threshold (1.00%)
+      n3: 512 0x1111EE: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 192 in 12 places, all below massif's threshold (1.00%)
+       n1: 192 0x10F939: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 192 in 3 places, all below massif's threshold (1.00%)
+       n1: 128 0x10F911: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 2 places, all below massif's threshold (1.00%)
+      n2: 128 0x1112FD: fp2_Sub (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 128 0x112731: xADD (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 128 0x111321: fp2_Sub (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 128 0x112731: xADD (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 960 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 960 0x115C36: fp_ImportHex (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 960 in 15 places, all below massif's threshold (1.00%)
+   n1: 448 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 448 0x115306: gmp_copy_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n2: 448 0x1159C5: fp_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 224 0x110DF3: fp2_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 224 in 7 places, all below massif's threshold (1.00%)
+      n1: 224 0x110E12: fp2_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 224 in 6 places, all below massif's threshold (1.00%)
+   n2: 128 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 128 0x11529B: gmp_add_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 128 0x11593A: fp_Add (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 128 in 6 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 128 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 128 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 128 0x115799: mp_pow (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 128 in 2 places, all below massif's threshold (1.00%)
+   n0: 64 in 5 places, all below massif's threshold (1.00%)
+ n1: 1024 0x513218A: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x5142377: _IO_doallocbuf (genops.c:365)
+   n1: 1024 0x5141496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x513F9EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x510F532: vfprintf (vfprintf.c:1328)
+      n1: 1024 0x5118F24: printf (printf.c:33)
+       n1: 1024 0x109BA8: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 1024 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n3: 416 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 224 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 224 0x1155C1: gmp_square (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+    n2: 224 0x115B77: fp_Square (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n2: 112 0x110FBF: fp2_Invert (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 112 0x111FFE: xDBL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 112 0x112843: xTPL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 112 0x1128D6: xTPLe (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 112 0x110C7E: iso_3_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 112 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 112 0x109C1D: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 112 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 112 0x110FDA: fp2_Invert (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 112 0x111FFE: xDBL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 112 0x112843: xTPL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 112 0x1128D6: xTPLe (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 112 0x110C7E: iso_3_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 112 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 112 0x109C1D: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 112 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 192 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 192 0x115688: gmp_init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+    n1: 192 0x115905: fp_Init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 192 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x1149E0: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n1: 152 0x1149EE: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=38
+#-----------
+time=1967115185
+mem_heap_B=4760
+mem_heap_extra_B=984
+mem_stacks_B=3416
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=2008588676
+mem_heap_B=4960
+mem_heap_extra_B=912
+mem_stacks_B=3984
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=2070798203
+mem_heap_B=4968
+mem_heap_extra_B=952
+mem_stacks_B=5328
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=2112271217
+mem_heap_B=5184
+mem_heap_extra_B=928
+mem_stacks_B=5328
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=2195217023
+mem_heap_B=4944
+mem_heap_extra_B=880
+mem_stacks_B=2496
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=2236689954
+mem_heap_B=4760
+mem_heap_extra_B=984
+mem_stacks_B=3304
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=2298899266
+mem_heap_B=5184
+mem_heap_extra_B=928
+mem_stacks_B=2424
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=2340372157
+mem_heap_B=5088
+mem_heap_extra_B=944
+mem_stacks_B=3256
+heap_tree=detailed
+n6: 5088 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3136 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 3136 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 1408 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1408 0x11560A: gmp_subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n4: 1408 0x115BAF: fp_Subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n3: 576 0x1111A2: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 256 in 8 places, all below massif's threshold (1.00%)
+       n1: 192 0x10F939: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 192 in 3 places, all below massif's threshold (1.00%)
+       n1: 128 0x10F911: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 2 places, all below massif's threshold (1.00%)
+      n3: 576 0x1111EE: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 256 in 12 places, all below massif's threshold (1.00%)
+       n1: 192 0x10F939: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 192 in 3 places, all below massif's threshold (1.00%)
+       n1: 128 0x10F911: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 2 places, all below massif's threshold (1.00%)
+      n2: 128 0x1112FD: fp2_Sub (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 128 0x112731: xADD (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 128 0x111321: fp2_Sub (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 128 0x112731: xADD (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 960 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 960 0x115C36: fp_ImportHex (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 960 in 15 places, all below massif's threshold (1.00%)
+   n1: 448 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 448 0x115306: gmp_copy_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n2: 448 0x1159C5: fp_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 224 0x110DF3: fp2_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 224 in 7 places, all below massif's threshold (1.00%)
+      n1: 224 0x110E12: fp2_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 224 in 6 places, all below massif's threshold (1.00%)
+   n2: 128 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 128 0x11529B: gmp_add_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 128 0x11593A: fp_Add (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 128 in 6 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 128 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 128 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 128 0x115799: mp_pow (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 128 in 2 places, all below massif's threshold (1.00%)
+   n0: 64 in 5 places, all below massif's threshold (1.00%)
+ n1: 1024 0x513218A: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x5142377: _IO_doallocbuf (genops.c:365)
+   n1: 1024 0x5141496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x513F9EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x510F532: vfprintf (vfprintf.c:1328)
+      n1: 1024 0x5118F24: printf (printf.c:33)
+       n1: 1024 0x109BA8: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 1024 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n3: 624 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 448 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 448 0x1153F1: gmp_multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+    n5: 448 0x115AB7: fp_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n2: 112 0x11103C: fp2_Invert (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 112 0x111FFE: xDBL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 112 0x112843: xTPL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 112 0x1128D6: xTPLe (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 112 0x110C7E: iso_3_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 112 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 112 0x109C1D: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 112 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 112 0x111058: fp2_Invert (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 112 0x111FFE: xDBL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 112 0x112843: xTPL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 112 0x1128D6: xTPLe (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 112 0x110C7E: iso_3_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 112 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 112 0x109C1D: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 112 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 112 0x111120: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 112 0x1121A9: xDBL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 112 0x112843: xTPL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 112 0x1128D6: xTPLe (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 112 0x110C7E: iso_3_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 112 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 112 0x109C1D: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 112 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 48 places, all below massif's threshold (1.00%)
+     n2: 112 0x111146: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 112 0x1121A9: xDBL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 112 0x112843: xTPL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 112 0x1128D6: xTPLe (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 112 0x110C7E: iso_3_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 112 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 112 0x109C1D: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 112 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 47 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 176 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 176 0x115688: gmp_init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+    n1: 176 0x115905: fp_Init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 176 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x1149E0: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n1: 152 0x1149EE: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=2402581561
+mem_heap_B=4760
+mem_heap_extra_B=984
+mem_stacks_B=3416
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=2444054507
+mem_heap_B=4864
+mem_heap_extra_B=976
+mem_stacks_B=2624
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=2506264808
+mem_heap_B=4624
+mem_heap_extra_B=928
+mem_stacks_B=2848
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=2589210589
+mem_heap_B=4480
+mem_heap_extra_B=864
+mem_stacks_B=2304
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=2617564473
+mem_heap_B=5032
+mem_heap_extra_B=952
+mem_stacks_B=2416
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=2645918349
+mem_heap_B=5088
+mem_heap_extra_B=944
+mem_stacks_B=2488
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=2674272238
+mem_heap_B=5296
+mem_heap_extra_B=912
+mem_stacks_B=2416
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=2702626372
+mem_heap_B=4864
+mem_heap_extra_B=976
+mem_stacks_B=5328
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=2730980247
+mem_heap_B=4528
+mem_heap_extra_B=928
+mem_stacks_B=2848
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=2759334114
+mem_heap_B=4736
+mem_heap_extra_B=936
+mem_stacks_B=2448
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=2787689350
+mem_heap_B=4960
+mem_heap_extra_B=912
+mem_stacks_B=3984
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=2816043217
+mem_heap_B=4976
+mem_heap_extra_B=960
+mem_stacks_B=3144
+heap_tree=detailed
+n6: 4976 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3008 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 3008 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 1280 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1280 0x11560A: gmp_subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n4: 1280 0x115BAF: fp_Subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n3: 512 0x1111A2: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 192 in 8 places, all below massif's threshold (1.00%)
+       n1: 192 0x10F939: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 192 in 3 places, all below massif's threshold (1.00%)
+       n1: 128 0x10F911: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 2 places, all below massif's threshold (1.00%)
+      n3: 512 0x1111EE: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 192 in 12 places, all below massif's threshold (1.00%)
+       n1: 192 0x10F939: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 192 in 3 places, all below massif's threshold (1.00%)
+       n1: 128 0x10F911: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 2 places, all below massif's threshold (1.00%)
+      n2: 128 0x1112FD: fp2_Sub (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 128 0x112731: xADD (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 128 0x111321: fp2_Sub (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 128 0x112731: xADD (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 960 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 960 0x115C36: fp_ImportHex (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 960 in 15 places, all below massif's threshold (1.00%)
+   n1: 448 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 448 0x115306: gmp_copy_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n2: 448 0x1159C5: fp_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 224 0x110DF3: fp2_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 224 in 7 places, all below massif's threshold (1.00%)
+      n1: 224 0x110E12: fp2_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 224 in 6 places, all below massif's threshold (1.00%)
+   n2: 128 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 128 0x11529B: gmp_add_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 128 0x11593A: fp_Add (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 128 in 6 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 128 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 128 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 128 0x115799: mp_pow (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 128 in 2 places, all below massif's threshold (1.00%)
+   n0: 64 in 5 places, all below massif's threshold (1.00%)
+ n1: 1024 0x513218A: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x5142377: _IO_doallocbuf (genops.c:365)
+   n1: 1024 0x5141496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x513F9EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x510F532: vfprintf (vfprintf.c:1328)
+      n1: 1024 0x5118F24: printf (printf.c:33)
+       n1: 1024 0x109BA8: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 1024 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n3: 640 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 448 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 448 0x1153F1: gmp_multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+    n5: 448 0x115AB7: fp_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n2: 112 0x11103C: fp2_Invert (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 112 0x111FFE: xDBL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 112 0x112843: xTPL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 112 0x1128D6: xTPLe (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 112 0x110C7E: iso_3_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 112 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 112 0x109C1D: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 112 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 112 0x111058: fp2_Invert (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 112 0x111FFE: xDBL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 112 0x112843: xTPL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 112 0x1128D6: xTPLe (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 112 0x110C7E: iso_3_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 112 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 112 0x109C1D: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 112 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 112 0x111120: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 112 0x1112CA: fp2_Square (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n2: 112 0x112033: xDBL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 112 0x112843: xTPL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 112 0x1128D6: xTPLe (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 112 0x110C7E: iso_3_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 112 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n1: 112 0x109C1D: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+             n0: 112 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 0 in 2 places, all below massif's threshold (1.00%)
+       n0: 0 in 14 places, all below massif's threshold (1.00%)
+      n0: 0 in 48 places, all below massif's threshold (1.00%)
+     n2: 112 0x111146: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 112 0x1112CA: fp2_Square (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n2: 112 0x112033: xDBL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 112 0x112843: xTPL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 112 0x1128D6: xTPLe (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 112 0x110C7E: iso_3_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 112 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n1: 112 0x109C1D: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+             n0: 112 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 0 in 2 places, all below massif's threshold (1.00%)
+       n0: 0 in 14 places, all below massif's threshold (1.00%)
+      n0: 0 in 47 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 192 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 192 0x115688: gmp_init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+    n1: 192 0x115905: fp_Init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 192 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x1149E0: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n1: 152 0x1149EE: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=58
+#-----------
+time=2844397095
+mem_heap_B=5128
+mem_heap_extra_B=936
+mem_stacks_B=3056
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=2872750999
+mem_heap_B=4528
+mem_heap_extra_B=928
+mem_stacks_B=3488
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=2901104961
+mem_heap_B=5080
+mem_heap_extra_B=936
+mem_stacks_B=3416
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=2929458850
+mem_heap_B=4880
+mem_heap_extra_B=960
+mem_stacks_B=3416
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=2957813929
+mem_heap_B=4960
+mem_heap_extra_B=912
+mem_stacks_B=3984
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=2986167799
+mem_heap_B=5080
+mem_heap_extra_B=936
+mem_stacks_B=3248
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=3014521718
+mem_heap_B=4760
+mem_heap_extra_B=984
+mem_stacks_B=3416
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=3042875590
+mem_heap_B=5088
+mem_heap_extra_B=944
+mem_stacks_B=3416
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=3071229483
+mem_heap_B=4944
+mem_heap_extra_B=880
+mem_stacks_B=2344
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=3099583368
+mem_heap_B=5296
+mem_heap_extra_B=912
+mem_stacks_B=5328
+heap_tree=detailed
+n6: 5296 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3376 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 3376 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 1152 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1152 0x11560A: gmp_subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n4: 1152 0x115BAF: fp_Subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n3: 448 0x1111A2: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 192 0x10F939: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 192 in 3 places, all below massif's threshold (1.00%)
+       n0: 128 in 8 places, all below massif's threshold (1.00%)
+       n1: 128 0x10F911: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 2 places, all below massif's threshold (1.00%)
+      n3: 448 0x1111EE: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 192 0x10F939: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 192 in 3 places, all below massif's threshold (1.00%)
+       n0: 128 in 12 places, all below massif's threshold (1.00%)
+       n1: 128 0x10F911: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 2 places, all below massif's threshold (1.00%)
+      n2: 128 0x1112FD: fp2_Sub (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 128 0x112731: xADD (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 128 0x111321: fp2_Sub (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 128 0x112731: xADD (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 960 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 960 0x115C36: fp_ImportHex (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 960 in 15 places, all below massif's threshold (1.00%)
+   n1: 560 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 560 0x115306: gmp_copy_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n2: 560 0x1159C5: fp_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 280 0x110DF3: fp2_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 280 in 7 places, all below massif's threshold (1.00%)
+      n1: 280 0x110E12: fp2_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 280 in 6 places, all below massif's threshold (1.00%)
+   n2: 512 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 384 0x11529B: gmp_add_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n3: 384 0x11593A: fp_Add (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 128 in 4 places, all below massif's threshold (1.00%)
+      n1: 128 0x110D64: fp2_Add (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 128 in 6 places, all below massif's threshold (1.00%)
+      n1: 128 0x110D88: fp2_Add (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 128 in 6 places, all below massif's threshold (1.00%)
+    n1: 128 0x4E4FC8C: __gmpz_mod (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 128 0x115449: gmp_negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 128 0x115AE7: fp_Negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 128 in 2 places, all below massif's threshold (1.00%)
+   n1: 128 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 128 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 128 0x115799: mp_pow (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 128 in 2 places, all below massif's threshold (1.00%)
+   n0: 64 in 5 places, all below massif's threshold (1.00%)
+ n1: 1024 0x513218A: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x5142377: _IO_doallocbuf (genops.c:365)
+   n1: 1024 0x5141496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x513F9EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x510F532: vfprintf (vfprintf.c:1328)
+      n1: 1024 0x5118F24: printf (printf.c:33)
+       n1: 1024 0x109BA8: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 1024 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n3: 592 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 448 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 448 0x1153F1: gmp_multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+    n1: 448 0x115AB7: fp_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 448 in 5 places, all below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 144 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 144 0x115688: gmp_init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+    n1: 144 0x115905: fp_Init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 144 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x1149E0: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n1: 152 0x1149EE: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=68
+#-----------
+time=3127937254
+mem_heap_B=4752
+mem_heap_extra_B=944
+mem_stacks_B=3992
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=3156291146
+mem_heap_B=4752
+mem_heap_extra_B=944
+mem_stacks_B=2384
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=3184645031
+mem_heap_B=5296
+mem_heap_extra_B=912
+mem_stacks_B=3304
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=3212998902
+mem_heap_B=5056
+mem_heap_extra_B=912
+mem_stacks_B=3072
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=3241352786
+mem_heap_B=5032
+mem_heap_extra_B=952
+mem_stacks_B=2728
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=3269707590
+mem_heap_B=4752
+mem_heap_extra_B=944
+mem_stacks_B=3984
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=3298061499
+mem_heap_B=5072
+mem_heap_extra_B=944
+mem_stacks_B=3464
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=3326415385
+mem_heap_B=4560
+mem_heap_extra_B=992
+mem_stacks_B=2288
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=3354769255
+mem_heap_B=5008
+mem_heap_extra_B=912
+mem_stacks_B=3384
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=3383123124
+mem_heap_B=4624
+mem_heap_extra_B=928
+mem_stacks_B=2288
+heap_tree=detailed
+n6: 4624 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3120 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 3120 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 1152 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1152 0x11560A: gmp_subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n4: 1152 0x115BAF: fp_Subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n3: 448 0x1111A2: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 192 0x10F939: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 192 in 3 places, all below massif's threshold (1.00%)
+       n0: 128 in 8 places, all below massif's threshold (1.00%)
+       n1: 128 0x10F911: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 2 places, all below massif's threshold (1.00%)
+      n3: 448 0x1111EE: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 192 0x10F939: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 192 in 3 places, all below massif's threshold (1.00%)
+       n0: 128 in 12 places, all below massif's threshold (1.00%)
+       n1: 128 0x10F911: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 2 places, all below massif's threshold (1.00%)
+      n2: 128 0x1112FD: fp2_Sub (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 128 0x112731: xADD (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 128 0x111321: fp2_Sub (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 128 0x112731: xADD (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 960 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 960 0x115C36: fp_ImportHex (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 960 in 15 places, all below massif's threshold (1.00%)
+   n1: 560 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 560 0x115306: gmp_copy_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n2: 560 0x1159C5: fp_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 280 0x110DF3: fp2_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 280 in 7 places, all below massif's threshold (1.00%)
+      n1: 280 0x110E12: fp2_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 280 in 6 places, all below massif's threshold (1.00%)
+   n2: 256 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 128 0x11529B: gmp_add_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n1: 128 0x11593A: fp_Add (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 128 in 6 places, all below massif's threshold (1.00%)
+    n1: 128 0x4E4FC8C: __gmpz_mod (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 128 0x115449: gmp_negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 128 0x115AE7: fp_Negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 128 in 2 places, all below massif's threshold (1.00%)
+   n1: 128 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 128 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 128 0x115799: mp_pow (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 128 in 2 places, all below massif's threshold (1.00%)
+   n0: 64 in 5 places, all below massif's threshold (1.00%)
+ n1: 1024 0x513218A: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x5142377: _IO_doallocbuf (genops.c:365)
+   n1: 1024 0x5141496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x513F9EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x510F532: vfprintf (vfprintf.c:1328)
+      n1: 1024 0x5118F24: printf (printf.c:33)
+       n1: 1024 0x109BA8: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 1024 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n2: 176 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n1: 176 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 176 0x115688: gmp_init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+    n1: 176 0x115905: fp_Init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 176 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 152 0x1149E0: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n1: 152 0x1149EE: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=78
+#-----------
+time=3411477035
+mem_heap_B=5184
+mem_heap_extra_B=928
+mem_stacks_B=3104
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=3439830929
+mem_heap_B=5088
+mem_heap_extra_B=944
+mem_stacks_B=2656
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=3468184797
+mem_heap_B=5240
+mem_heap_extra_B=920
+mem_stacks_B=3144
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=3496538726
+mem_heap_B=5296
+mem_heap_extra_B=912
+mem_stacks_B=3416
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=3524893142
+mem_heap_B=4960
+mem_heap_extra_B=912
+mem_stacks_B=3984
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=3553247009
+mem_heap_B=5088
+mem_heap_extra_B=944
+mem_stacks_B=2272
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=3581600959
+mem_heap_B=4648
+mem_heap_extra_B=952
+mem_stacks_B=5608
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=3609954836
+mem_heap_B=4856
+mem_heap_extra_B=920
+mem_stacks_B=3072
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=3638308742
+mem_heap_B=5200
+mem_heap_extra_B=912
+mem_stacks_B=3248
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=3666662615
+mem_heap_B=4944
+mem_heap_extra_B=880
+mem_stacks_B=2648
+heap_tree=detailed
+n6: 4944 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3248 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 3248 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 1152 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1152 0x11560A: gmp_subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n4: 1152 0x115BAF: fp_Subtract (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n3: 448 0x1111A2: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 192 0x10F939: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 192 in 3 places, all below massif's threshold (1.00%)
+       n0: 128 in 8 places, all below massif's threshold (1.00%)
+       n1: 128 0x10F911: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 2 places, all below massif's threshold (1.00%)
+      n3: 448 0x1111EE: fp2_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 192 0x10F939: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 192 in 3 places, all below massif's threshold (1.00%)
+       n0: 128 in 12 places, all below massif's threshold (1.00%)
+       n1: 128 0x10F911: eval_3_iso (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 2 places, all below massif's threshold (1.00%)
+      n2: 128 0x1112FD: fp2_Sub (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 128 0x112731: xADD (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 128 0x111321: fp2_Sub (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 128 0x112731: xADD (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 128 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 960 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 960 0x115C36: fp_ImportHex (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 960 in 15 places, all below massif's threshold (1.00%)
+   n1: 560 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 560 0x115306: gmp_copy_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n2: 560 0x1159C5: fp_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 280 0x110DF3: fp2_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 280 in 7 places, all below massif's threshold (1.00%)
+      n1: 280 0x110E12: fp2_Copy (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 280 in 6 places, all below massif's threshold (1.00%)
+   n2: 384 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 256 0x11529B: gmp_add_fp (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n3: 256 0x11593A: fp_Add (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 128 0x110D64: fp2_Add (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 128 in 6 places, all below massif's threshold (1.00%)
+      n1: 128 0x110D88: fp2_Add (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 128 in 6 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+    n1: 128 0x4E4FC8C: __gmpz_mod (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 128 0x115449: gmp_negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n1: 128 0x115AE7: fp_Negative (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 128 in 2 places, all below massif's threshold (1.00%)
+   n1: 128 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 128 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 128 0x115799: mp_pow (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n0: 128 in 2 places, all below massif's threshold (1.00%)
+   n0: 64 in 5 places, all below massif's threshold (1.00%)
+ n1: 1024 0x513218A: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x5142377: _IO_doallocbuf (genops.c:365)
+   n1: 1024 0x5141496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x513F9EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x510F532: vfprintf (vfprintf.c:1328)
+      n1: 1024 0x5118F24: printf (printf.c:33)
+       n1: 1024 0x109BA8: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n0: 1024 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n3: 368 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 224 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 224 0x1153F1: gmp_multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+    n3: 224 0x115AB7: fp_Multiply (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n2: 112 0x11103C: fp2_Invert (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 112 0x112599: xADD (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 112 0x11285B: xTPL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 112 0x1128D6: xTPLe (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 112 0x110C7E: iso_3_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 112 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 112 0x109C1D: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 112 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 0 in 3 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 112 0x111058: fp2_Invert (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+      n2: 112 0x112599: xADD (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n1: 112 0x11285B: xTPL (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+        n1: 112 0x1128D6: xTPLe (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+         n1: 112 0x110C7E: iso_3_e (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+          n1: 112 0x11372A: sidh_isogen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+           n1: 112 0x109C1D: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+            n0: 112 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+       n0: 0 in 3 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 144 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 144 0x115688: gmp_init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+    n1: 144 0x115905: fp_Init (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+     n0: 144 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x1149E0: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n1: 152 0x1149EE: sike_setup_params (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+  n1: 152 0x109A76: benchmark_keygen (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+   n0: 152 0x109C83: main (in /home/joy/Bachelorarbeit/SIDH_Implementations/Implementation/Reference_Implementation/test)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=88
+#-----------
+time=3695016511
+mem_heap_B=4752
+mem_heap_extra_B=944
+mem_stacks_B=2592
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=3723370384
+mem_heap_B=4880
+mem_heap_extra_B=960
+mem_stacks_B=2688
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=3751724259
+mem_heap_B=5200
+mem_heap_extra_B=912
+mem_stacks_B=5288
+heap_tree=empty
+#-----------
+snapshot=91
+#-----------
+time=3780078126
+mem_heap_B=4880
+mem_heap_extra_B=960
+mem_stacks_B=3096
+heap_tree=empty
+#-----------
+snapshot=92
+#-----------
+time=3808432030
+mem_heap_B=4960
+mem_heap_extra_B=912
+mem_stacks_B=2720
+heap_tree=empty
+#-----------
+snapshot=93
+#-----------
+time=3836785901
+mem_heap_B=5184
+mem_heap_extra_B=928
+mem_stacks_B=2416
+heap_tree=empty
+#-----------
+snapshot=94
+#-----------
+time=3865139771
+mem_heap_B=5296
+mem_heap_extra_B=912
+mem_stacks_B=3088
+heap_tree=empty
+#-----------
+snapshot=95
+#-----------
+time=3893493677
+mem_heap_B=4944
+mem_heap_extra_B=880
+mem_stacks_B=2496
+heap_tree=empty
