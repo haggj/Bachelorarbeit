@@ -17,7 +17,16 @@ typedef unsigned long CYCLES;
 int benchmark_keygen(const int rep) {
 
   //Define Parameters
-  const sike_params_raw_t *params_raw = &SIKEp434;
+#ifdef PARAM434
+  const sike_params_raw_t *params_raw = &SIKEp434;  
+#elif PARAM503
+  const sike_params_raw_t *params_raw = &SIKEp503;
+#elif PARAM610
+  const sike_params_raw_t *params_raw = &SIKEp610;
+#elif PARAM751
+  const sike_params_raw_t *params_raw = &SIKEp751;
+#endif
+  
   sike_params_t params = { 0 };
   sike_setup_params(params_raw, &params);
   ff_Params* pA = params.EA.ffData;
@@ -38,8 +47,8 @@ int benchmark_keygen(const int rep) {
   sidh_isogen(&params, &publicKey_A,privateKey_A, ALICE);
 
   //BOB
-  sidh_sk_keygen(&params, BOB, privateKey_B);
-  sidh_isogen(&params, &publicKey_B,privateKey_B, BOB);
+  //sidh_sk_keygen(&params, BOB, privateKey_B);
+  //sidh_isogen(&params, &publicKey_B,privateKey_B, BOB);
 
 }
 

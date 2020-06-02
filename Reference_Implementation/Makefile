@@ -1,3 +1,8 @@
+ifeq ($(origin VARNAME),undefined)
+PARAM:=434
+endif
+
+
 CC=gcc
 PREPATH=/home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/
 CFLAGS=\
@@ -6,7 +11,7 @@ CFLAGS=\
 -I $(PREPATH)/include/ \
 -I $(PREPATH)/test/ \
 -I $(PREPATH)/symmetric/ \
--ggdb
+-ggdb -DPARAM$(PARAM)
 # -DTARGET_OS=1 \
 # -DTARGET=4 \
 
@@ -23,7 +28,28 @@ $(PREPATH)src/*.c
 
 LIBS=-lgmp
 
-test: $(OBJ)
-	@ $(CC) -o $@ $^ $(CFLAGS) $(LIBS)
+build: $(OBJ)
+	@ echo "building reference implementation..."
+	@ mkdir -p "build"
+	@ $(CC) -o build/test $^ $(CFLAGS) $(LIBS)
+	@ echo "\e[32mSUCCESS\e[0m"
 
 
+callgrind:
+	@ mkdir -p "benchmarks"
+	@ echo "Running callgrind..."
+	@ valgrind --tool=callgrind --callgrind-out-file=benchmarks/callgrind.out build/test  2> /dev/null
+	@ callgrind_annotate benchmarks/callgrind.out  --tree=calling --threshold=100 > benchmarks/callgrind_annotate.out 2> /dev/null
+	@ echo "\e[32mSUCCESS\e[0m"
+
+massif:
+	@ mkdir -p "benchmarks"
+	@ echo "Running massif..."
+	@ valgrind --tool=massif --stacks=yes --massif-out-file=benchmarks/massif.out build/test  2> /dev/null
+	@ echo "\e[32mSUCCESS\e[0m"
+
+clean_benchmarks:
+	rm -r benchmarks/
+	
+clean:
+	rm -r build/ && rm -r benchmarks/

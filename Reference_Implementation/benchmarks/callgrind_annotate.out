@@ -1,0 +1,1273 @@
+--------------------------------------------------------------------------------
+Profile data file 'benchmarks/callgrind.out' (creator: callgrind-3.13.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 959515373
+Trigger: Program termination
+Profiled target:  build/test (PID 19465, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       100
+Include dirs:     
+User annotated:   
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+           Ir 
+--------------------------------------------------------------------------------
+7,647,140,619  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+           Ir  file:function
+--------------------------------------------------------------------------------
+
+1,159,503,418  *  ???:__gmpn_submul_1 [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+  906,267,716  *  ???:__gmpn_mul_basecase [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+  894,932,969  *  ???:__gmpn_sbpi1_div_qr [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+1,091,436,444  >   ???:__gmpn_submul_1 (13474524x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+  751,951,540  *  ???:__gmpn_hgcd2 [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+  513,095,126  *  ???:__gmpn_tdiv_qr [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+   15,077,952  >   ???:__gmpn_submul_1 (837664x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+  112,287,700  >   ???:__gmpn_rshift (1122877x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+   93,712,996  >   ???:__gmpn_copyi (2739051x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+   44,915,080  >   ???:__gmpn_invert_limb (1122877x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+1,986,369,413  >   ???:__gmpn_sbpi1_div_qr (1122877x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+  371,936,994  >   ???:__gmpn_lshift (4758746x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+   54,448,133  >   ???:__gmpn_sub_n (1675328x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+  116,435,251  >   ???:__gmpn_mul (837664x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+       75,516  >   ???:__gmpn_divrem_1 (186x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+  390,518,548  *  ???:__gmpz_tdiv_r [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+  210,348,336  >   ???:__gmpn_copyi (3861928x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+3,308,271,391  >   ???:__gmpn_tdiv_qr (3861928x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+    2,451,033  >   ???:__gmpz_realloc (7479x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+  371,937,013  *  ???:__gmpn_lshift [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+  314,843,812  *  ???:__gmpn_copyi [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+  183,403,976  *  /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:free [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+  174,211,223  *  ???:__gmpz_add [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+   32,236,060  >   ???:__gmpn_sub_n (528460x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+  241,879,817  >   ???:__gmpz_realloc (730636x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+  102,078,922  >   ???:__gmpn_add_n (1703152x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+  172,322,732  *  ???:__gmpz_mod [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+3,911,589,308  >   ???:__gmpz_tdiv_r (3870013x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+   70,018,470  >   ???:__gmpz_add (510540x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+  144,176,495  *  ???:__gmpn_sub_n [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+  137,376,994  *  ???:__gmpn_sqr_basecase [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+  114,825,923  *  ???:__gmpz_mul [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+  142,197,198  >   ???:__gmpn_sqr (219102x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+   39,046,057  >   ???:__gmp_default_allocate (796837x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+   58,627,935  >   ???:__gmp_default_free (796837x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+      666,420  >   ???:__gmpn_mul_1 (7236x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+  880,276,850  >   ???:__gmpn_mul (903775x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+    1,788,502  >   ???:__gmpz_realloc (7050x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+  112,287,700  *  ???:__gmpn_rshift [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+  102,080,968  *  ???:__gmpn_add_n [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+   95,754,498  *  /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:malloc [/lib/x86_64-linux-gnu/libc-2.27.so]
+    7,981,262  >   /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:_int_malloc (36144x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+       63,620  >   /build/glibc-OTsEL5/glibc-2.27/malloc/hooks.c:malloc_hook_ini (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+   76,696,536  *  ???:__gmpz_sub [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+   57,492,302  >   ???:__gmpn_sub_n (944332x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+        2,046  >   ???:__gmpn_add_n (186x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+   50,782,725  >   ???:__gmpz_realloc (144350x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+   76,535,032  *  /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:realloc [/lib/x86_64-linux-gnu/libc-2.27.so]
+  182,241,711  >   /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:_int_realloc (889942x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+          148  >   /build/glibc-OTsEL5/glibc-2.27/malloc/hooks.c:realloc_hook_ini (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+   67,126,493  *  /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:_int_malloc [/lib/x86_64-linux-gnu/libc-2.27.so]
+          237  >   /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:sysmalloc (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+   65,138,685  *  ???:__gmpn_mul [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+   82,928,691  >   ???:__gmpn_mul_basecase (837664x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+  848,644,725  >   ???:__gmpn_mul_n (903775x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+   64,798,664  *  /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:_int_realloc [/lib/x86_64-linux-gnu/libc-2.27.so]
+   59,144,915  >   /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:_int_malloc (882674x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+   58,298,188  >   /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:_int_free (882674x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+   62,858,306  *  ???:__gmpn_addaddmul_1msb0 [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+   59,649,097  *  ???:__gmpn_mul_1 [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+   58,298,188  *  /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:_int_free [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+   44,922,520  *  ???:__gmpn_invert_limb [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+   41,921,712  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_add_fp [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  477,932,512  >   ???:__gmpz_add (1746738x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+  904,919,044  >   ???:__gmpz_mod (1746738x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+   37,903,770  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Multiply [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+3,637,404,753  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Multiply (988794x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  118,947,240  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Init (1318392x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  918,552,722  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Add (988794x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  148,432,830  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Clear (1318392x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  414,742,843  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Subtract (659196x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+   31,296,959  *  ???:__gmpn_gcdext_lehmer_n [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+   80,611,634  >   ???:__gmpn_hgcd_mul_matrix1_vector (433008x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+    1,473,678  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:__memset_avx2_unaligned_erms (36270x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+  126,762,428  >   ???:__gmpn_matrix22_mul1_inverse_vector (433008x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+    3,286,983  >   ???:__gmpn_addmul_1 (36270x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+    5,735,809  >   ???:__gmpn_gcdext_1 (36270x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+  751,951,540  >   ???:__gmpn_hgcd2 (433008x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+    3,395,607  >   ???:__gmpn_mul_1 (36270x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+   29,694,546  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Add [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+1,424,773,268  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_add_fp (1746738x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+   25,808,347  *  ???:__gmpz_realloc [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+  271,237,117  >   ???:__gmp_default_reallocate (889943x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+   25,472,112  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_multiply [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+2,696,148,280  >   ???:__gmpz_mod (1061338x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+1,173,685,009  >   ???:__gmpz_mul (1061338x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+   25,305,700  *  ???:__gmpn_mul_n [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+  823,339,025  >   ???:__gmpn_mul_basecase (903775x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+   24,124,065  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Init [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  119,312,781  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_init (1608271x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+   24,123,450  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Clear [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  156,926,935  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_clear (1608230x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+   22,803,168  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_subtract [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  184,951,847  >   ???:__gmpz_sub (950132x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+  350,587,738  >   ???:__gmpz_mod (950132x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+   19,299,276  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_init [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  100,013,821  >   ???:__gmpz_init (1608273x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+   19,298,760  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_clear [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  137,628,175  >   ???:__gmpz_clear (1608230x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+   19,240,884  *  ???:__gmp_default_allocate [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+  103,735,097  >   /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:malloc (2405109x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+        1,167  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_xsave (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+   18,186,336  *  ???:__gmpn_matrix22_mul1_inverse_vector [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+   55,587,070  >   ???:__gmpn_mul_1 (866016x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+   52,989,022  >   ???:__gmpn_submul_1 (866016x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+   18,042,746  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Multiply [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+3,895,305,401  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_multiply (1061338x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+   17,753,328  *  ???:__gmpn_hgcd_mul_matrix1_vector [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+   62,858,306  >   ???:__gmpn_addaddmul_1msb0 (866016x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+   16,152,244  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Subtract [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  558,342,753  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_subtract (950132x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+   16,082,730  *  ???:__gmpz_init [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+   83,931,091  >   ???:__gmp_default_allocate (1608273x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+   12,459,206  *  ???:__gmp_default_reallocate [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+        1,188  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_xsave (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+  258,776,723  >   /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:realloc (889942x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+    9,020,900  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Add [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  510,641,349  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Add (721672x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+    8,451,648  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:xDBL [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    2,121,865  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_is_inf_affine (34783x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+   19,511,580  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Init (104340x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  156,344,360  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Sub (139120x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  501,045,952  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Add (347800x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+3,907,712,549  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Multiply (243460x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+1,108,377,707  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Square (69560x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+          666  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_set_inf_affine (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    7,686,380  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Copy (34780x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+1,555,167,449  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Invert (34780x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+   26,050,220  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Clear (104340x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    3,443,220  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Set (34780x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+    8,041,150  *  ???:__gmpz_clear [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+  129,587,025  >   ???:__gmp_default_free (1608230x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+    5,735,809  *  ???:__gmpn_gcdext_1 [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+    5,116,988  *  ???:__gmpz_gcdext [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+       53,754  >   ???:__gmpz_divexact (186x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+       30,318  >   ???:__gmpz_mul (186x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+    5,208,832  >   ???:__gmpn_copyi (144896x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+1,006,994,390  >   ???:__gmpn_gcdext (36270x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+       21,762  >   ???:__gmpz_sub (186x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+    4,820,266  *  ???:__gmpn_sqr [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+  137,376,994  >   ???:__gmpn_sqr_basecase (219103x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+    4,810,138  *  ???:__gmp_default_free [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+  183,403,836  >   /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:free (2405066x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+          986  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_xsave (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+    3,636,700  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Sub [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  159,752,154  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Subtract (290936x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+    3,286,983  *  ???:__gmpn_addmul_1 [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+    2,955,068  *  ???:__gmpz_invert [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+    1,247,800  >   ???:__gmpz_set (18350x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+    2,455,040  >   ???:__gmpz_add (17920x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+1,017,426,044  >   ???:__gmpz_gcdext (36272x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+    2,901,760  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Invert [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  275,943,394  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Multiply (72544x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    6,093,696  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Init (72544x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  251,598,446  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Square (72544x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+   19,841,324  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Negative (36272x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+1,025,244,656  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Invert (36272x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    7,550,968  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Clear (72544x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+   25,273,743  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Add (36272x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+    2,396,982  *  ???:__gmpn_gcdext [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+1,004,514,638  >   ???:__gmpn_gcdext_lehmer_n (36270x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+       82,770  >   ???:__gmpn_tdiv_qr (186x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+    2,137,666  *  ???:__gmpz_set [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+    3,918,536  >   ???:__gmpn_copyi (89064x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+        9,256  >   ???:__gmpz_realloc (26x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+    2,064,483  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Init [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+   18,390,418  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Init (217314x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+    2,064,293  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Clear [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+   25,066,587  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Clear (217294x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+    1,668,512  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_square [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  185,055,672  >   ???:__gmpz_mod (72544x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+   63,713,558  >   ???:__gmpz_mul (72544x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+    1,473,700  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:__memset_avx2_unaligned_erms [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+    1,160,704  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Square [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  250,437,742  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_square (72544x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+    1,137,152  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Constant [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    1,563,584  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_constant_fp (71072x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+    1,131,424  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Copy [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    5,878,368  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_copy_fp (70714x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+    1,093,680  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Square [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+1,160,522,936  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Multiply (72912x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+    1,066,080  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_constant_fp [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      497,504  >   ???:__gmpz_set_ui (71072x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+    1,060,710  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_copy_fp [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    4,817,658  >   ???:__gmpz_set (70714x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+    1,044,060  *  ???:__gmpz_neg [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+    1,655,112  >   ???:__gmpn_copyi (37770x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+      125,820  >   ???:__gmpz_realloc (384x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+      863,720  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_negative [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+   17,219,112  >   ???:__gmpz_mod (39260x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+    2,824,992  >   ???:__gmpz_neg (39260x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+      813,211  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Copy [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    7,009,792  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Copy (70714x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+      804,402  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Set [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    2,658,024  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Constant (69948x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+      668,160  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_IsConst [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      949,520  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_isConstant (35168x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+      628,160  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Negative [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+   20,907,824  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_negative (39260x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+      597,856  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_isConstant [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      351,664  >   ???:__gmpz_cmp_ui (35168x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+      580,352  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_invert_fp [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+1,024,083,952  >   ???:__gmpz_invert (36272x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+      580,352  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Invert [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+1,024,664,304  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_invert_fp (36272x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+      527,460  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_is_inf_affine [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    1,617,680  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_IsConst (35164x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+      497,504  *  ???:__gmpz_set_ui [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+      351,664  *  ???:__gmpz_cmp_ui [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+      348,192  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:xDBLe [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       88,376  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_copy (186x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+7,232,648,551  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:xDBL (34410x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+      263,934  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/isogeny.c:eval_4_iso [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      835,952  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Clear (3348x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+   49,811,735  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Invert (1116x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    5,513,948  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Sub (5022x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+   44,377,931  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Square (2790x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+   16,759,906  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Add (11718x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  187,959,385  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Multiply (11718x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    1,190,400  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Negative (1116x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      651,186  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Init (2790x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      162,378  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Init_set (558x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+       68,076  *  ???:__gmpn_divrem_1 [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+        7,440  >   ???:__gmpn_invert_limb (186x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+       59,305  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-addr.c:_dl_addr [/lib/x86_64-linux-gnu/libc-2.27.so]
+            2  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:rtld_lock_default_unlock_recursive (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+            2  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:rtld_lock_default_lock_recursive (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        1,254  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_xsave (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       51,894  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-lookup.c:do_lookup_x [/lib/x86_64-linux-gnu/ld-2.27.so]
+        8,282  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/strcmp.S:strcmp (175x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        8,100  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-misc.c:_dl_name_match_p (108x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       49,590  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:AddRoundKey [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+       41,888  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:xADD [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    2,943,294  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Square (190x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    1,068,452  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Add (760x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+   11,543,516  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Multiply (950x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    1,371,516  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Sub (1140x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      108,219  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Init (573x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        2,200  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_copy (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       23,275  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_is_inf_affine (381x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      414,099  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Negative (191x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       41,990  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Copy (190x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       30,780  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_IsEqual (380x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    8,501,975  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Invert (190x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      143,962  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Clear (573x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+       40,716  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:MixColumns [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       22,464  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:xtime (1248x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+       37,380  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:SubBytes [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       13,440  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:getSBoxValue (1344x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+       36,216  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:KeyExpansion [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        3,120  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:getSBoxValue (312x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+       35,995  *  ???:__gmpz_set_str [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+           54  >   /build/glibc-OTsEL5/glibc-2.27/ctype/../include/ctype.h:__ctype_b_loc (18x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+       32,798  >   ???:__gmpn_set_str (15x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+        1,958  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_xsave (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        7,270  >   ???:__gmpz_realloc (15x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+          912  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strlen-avx2.S:__strlen_avx2 (14x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+       34,868  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-lookup.c:_dl_lookup_symbol_x [/lib/x86_64-linux-gnu/ld-2.27.so]
+       68,750  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-lookup.c:do_lookup_x (169x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       34,362  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Negative [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    1,694,660  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Negative (2988x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+       33,480  *  ???:__gmpn_divexact_1 [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+       32,798  *  ???:__gmpn_set_str [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+       24,995  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-tunables.c:__GI___tunables_init [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       24,009  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86_64/dl-machine.h:_dl_relocate_object
+            7  >   /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/wcsnlen.c:wcsnlen (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            8  >   /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/ifunc-avx2.h:wcslen (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            8  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:rawmemchr (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+           26  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memcmp.h:bcmp (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+           16  >   /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/ifunc-avx2.h:wmemchr (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            8  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strchr.c:index (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+           77  >   /build/glibc-OTsEL5/glibc-2.27/time/../sysdeps/unix/sysv/linux/x86/time.c:time (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            6  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-strcasecmp.h:strncasecmp (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+           32  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memmove.h:memmove (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            9  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:stpcpy (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+           36  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memset.h:memset (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+           16  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:strnlen (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            8  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:strlen (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            9  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:strcat (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+           26  >   /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/ifunc-wmemset.h:wmemset (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            9  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:strncpy (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+           77  >   /build/glibc-OTsEL5/glibc-2.27/time/../sysdeps/unix/sysv/linux/x86/gettimeofday.c:gettimeofday (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            8  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:memchr (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            6  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-sse4_2.h:strspn (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            8  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:memrchr (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            8  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:rindex (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            6  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-sse4_2.h:strpbrk (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            6  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-strcasecmp.h:strcasecmp (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            9  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:strcpy (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            6  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-sse4_2.h:strcspn (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            8  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:strchrnul (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+           16  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memmove.h:mempcpy (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            8  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strncmp.c:strncmp (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            9  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcmp.c:strcmp (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+           32  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memmove.h:memcpy@@GLIBC_2.14 (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            6  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-strcasecmp.h:strcasecmp_l (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            9  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:stpncpy (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+       96,477  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-lookup.c:_dl_lookup_symbol_x (161x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           16  >   /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/ifunc-avx2.h:wcschr (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            6  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-strcasecmp.h:strncasecmp_l (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+       23,622  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/isogeny.c:curve_4_iso [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      159,030  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Sub (186x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    5,917,684  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Square (372x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+    8,245,772  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Multiply (558x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      787,939  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Add (558x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      123,132  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Negative (186x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       69,564  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Init (372x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       18,414  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Set (186x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      966,828  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Invert (186x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       97,092  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Clear (372x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+       22,464  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:xtime [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+       16,560  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:getSBoxValue [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+       16,308  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/strcmp.S:strcmp [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       15,736  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Init_set [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      105,094  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Init (562x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       42,712  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Constant (1124x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+       13,206  *  ???:__gmpz_divexact [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+       40,548  >   ???:__gmpn_divexact (186x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+       12,160  *  ???:__gmpz_cmp [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+       12,024  *  /build/glibc-OTsEL5/glibc-2.27/elf/do-rel.h:_dl_relocate_object
+
+        7,903  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_double_and_add [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+   25,940,408  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:xADD (189x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+          541  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_clear (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+          222  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_set_inf_affine (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+   63,265,045  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:xDBL (373x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        1,105  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_init (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        1,896  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_copy (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       17,904  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_IsBitSet (373x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+        7,087  *  ???:__gmpz_tstbit [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+        7,068  *  ???:__gmpn_divexact [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+       33,480  >   ???:__gmpn_divexact_1 (186x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+        6,964  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/isogeny.c:iso_2_e [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+          541  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_clear (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+          393  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_init (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+           12  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_curve_copy (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+           24  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_copy (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+  307,526,755  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/isogeny.c:eval_4_iso (558x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+7,233,085,119  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:xDBLe (186x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+   16,409,077  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/isogeny.c:curve_4_iso (186x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+        6,906  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-tunables.h:__GI___tunables_init
+
+        6,460  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_IsEqual [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       24,320  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_IsEqual (380x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+        6,460  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_isequal_fp [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       12,160  >   ???:__gmpz_cmp (380x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+        5,700  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_IsEqual [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       18,620  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_isequal_fp (380x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+        5,595  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_IsBitSet [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       12,309  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_isBitSet_fp (373x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+        5,222  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_isBitSet_fp [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        7,087  >   ???:__gmpz_tstbit (373x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+        5,124  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:ShiftRows [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+        4,990  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_copy [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       91,522  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Copy (382x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+        3,732  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-misc.c:_dl_name_match_p [/lib/x86_64-linux-gnu/ld-2.27.so]
+        7,162  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/strcmp.S:strcmp (280x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        2,767  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-version.c:_dl_check_map_versions [/lib/x86_64-linux-gnu/ld-2.27.so]
+          108  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:calloc (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          554  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/strcmp.S:strcmp (11x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        1,085  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-misc.c:_dl_name_match_p (13x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        1,810  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-cache.c:_dl_cache_libcmp [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        1,406  *  ???:__gmpz_import [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+          428  >   ???:__gmpz_realloc (1x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+        1,324  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-deps.c:_dl_map_object_deps [/lib/x86_64-linux-gnu/ld-2.27.so]
+          116  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strchr.S:index (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           72  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:malloc (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          344  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-sort-maps.c:_dl_sort_maps (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       10,777  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-error-skeleton.c:_dl_catch_exception (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           78  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy (7x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        1,243  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:_dl_map_object_from_fd [/lib/x86_64-linux-gnu/ld-2.27.so]
+          129  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-object.c:_dl_add_to_namespace_list (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+            6  >   /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_next_tls_modid (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        1,070  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-object.c:_dl_new_object (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           24  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-debug.c:_dl_debug_initialize (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           15  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/close.c:close (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           69  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-lookup.c:_dl_setup_hash (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          972  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strlen-avx2.S:__strlen_avx2 [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+          934  *  /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:dl_main [/lib/x86_64-linux-gnu/ld-2.27.so]
+        4,623  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-error-skeleton.c:_dl_receive_error (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           20  >   /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_add_to_slotinfo (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           23  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-lookup.c:_dl_setup_hash (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+            2  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-debug.c:_dl_debug_state (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+      134,179  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-reloc.c:_dl_relocate_object (5x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+            1  >   /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-sysdep.c:_dl_sysdep_start_cleanup (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          530  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-environ.c:_dl_next_ld_env_entry (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+            8  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/access.c:access (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           25  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-debug.c:_dl_debug_initialize (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       12,711  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-deps.c:_dl_map_object_deps (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           50  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/strcmp.S:strcmp (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           15  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-cache.c:_dl_unload_cache (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          149  >   /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_allocate_tls_init (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           79  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-sysdep.c:_dl_discover_osversion (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        1,740  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:_dl_init_paths (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+            4  >   /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_count_modids (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           67  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/memcmp.S:bcmp (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          230  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-object.c:_dl_new_object (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           33  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-object.c:_dl_add_to_namespace_list (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          611  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:init_tls (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        2,506  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:handle_ld_preload (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          899  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:open_verify.constprop.7 [/lib/x86_64-linux-gnu/ld-2.27.so]
+          219  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/wordsize-64/lxstat.c:open (12x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           15  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c:read (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          886  *  /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:ptmalloc_init.part.0
+
+          852  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:_dl_map_object [/lib/x86_64-linux-gnu/ld-2.27.so]
+          154  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:expand_dynamic_string_token (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           69  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strchr.S:index (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        4,378  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:_dl_map_object_from_fd (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        2,964  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-cache.c:_dl_load_cache_lookup (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        1,709  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-misc.c:_dl_name_match_p (16x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           32  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        1,610  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:open_path (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          638  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:open_verify.constprop.7 (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          212  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/strcmp.S:strcmp (6x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          835  *  /build/glibc-OTsEL5/glibc-2.27/elf/get-dynamic-info.h:_dl_map_object_from_fd
+
+          804  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:Cipher [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       50,820  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:SubBytes (84x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       63,180  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:MixColumns (78x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        5,124  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:ShiftRows (84x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       49,590  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:AddRoundKey (90x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+          785  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-object.c:_dl_new_object [/lib/x86_64-linux-gnu/ld-2.27.so]
+          184  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen (7x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          174  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:calloc (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           54  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:malloc (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           51  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           52  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:mempcpy (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          768  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:open_path [/lib/x86_64-linux-gnu/ld-2.27.so]
+          246  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:mempcpy (20x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          495  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:open_verify.constprop.7 (9x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          101  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/wordsize-64/xstat.c:_xstat (8x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          767  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86/cacheinfo.c:intel_check_word.isra.0 [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+          661  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-cache.c:_dl_load_cache_lookup [/lib/x86_64-linux-gnu/ld-2.27.so]
+          107  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-misc.c:_dl_sysdep_read_whole_file (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        1,810  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-cache.c:_dl_cache_libcmp (21x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           68  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          168  >   /build/glibc-OTsEL5/glibc-2.27/string/strdup.c:strdup (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           36  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-tunables.c:__tunable_get_val (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           28  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          608  *  /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-runtime.c:_dl_fixup [/lib/x86_64-linux-gnu/ld-2.27.so]
+        7,141  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-lookup.c:_dl_lookup_symbol_x (8x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          607  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-reloc.c:_dl_relocate_object [/lib/x86_64-linux-gnu/ld-2.27.so]
+           25  >   /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/syscall-template.S:mprotect (5x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          602  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-sort-maps.c:_dl_sort_maps [/lib/x86_64-linux-gnu/ld-2.27.so]
+          120  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:memset (8x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          582  *  /build/glibc-OTsEL5/glibc-2.27/string/../bits/stdlib-bsearch.h:intel_check_word.isra.0
+
+          575  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-hwcaps.c:_dl_important_hwcaps [/lib/x86_64-linux-gnu/ld-2.27.so]
+           74  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:mempcpy (5x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           18  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-tunables.c:__tunable_get_val (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           18  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:malloc (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           16  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          555  *  /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-sysdep.c:_dl_sysdep_start [/lib/x86_64-linux-gnu/ld-2.27.so]
+           17  >   /build/glibc-OTsEL5/glibc-2.27/elf/../misc/sbrk.c:sbrk (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           16  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+      158,872  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:dl_main (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       31,901  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-tunables.c:__GI___tunables_init (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          544  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:malloc [/lib/x86_64-linux-gnu/ld-2.27.so]
+           70  >   /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/mmap64.c:mmap (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          530  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-environ.c:_dl_next_ld_env_entry [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          492  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/generic/ldsodefs.h:_dl_relocate_object
+
+          483  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:memset [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          474  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/generic/ldsodefs.h:do_lookup_x
+
+          472  *  ???:__gmpz_n_pow_ui [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+          139  >   ???:__gmpn_mul_2 (2x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+          613  >   ???:__gmpz_realloc (2x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+          996  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_xsave (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           19  >   ???:__gmpn_lshift (1x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+           62  >   ???:__gmpn_sqr (1x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+          466  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          444  *  /build/glibc-OTsEL5/glibc-2.27/stdlib/../stdlib/strtol_l.c:____strtol_l_internal [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+          410  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/sike_params.c:sike_setup_params [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+          114  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:set_gmp_fp_params (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+           72  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:mp_sizeinbase (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       79,272  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_ImportHex (19x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+          460  >   /build/glibc-OTsEL5/glibc-2.27/stdlib/../stdlib/strtol.c:strtol (4x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+       63,847  >   /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:malloc (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+        5,492  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_Init (21x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        2,355  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:mp_pow (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        1,164  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Init_set (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+          396  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:mempcpy [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          389  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86_64/dl-machine.h:_dl_start
+
+          348  *  /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/mmap64.c:mmap [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          330  *  /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_allocate_tls_storage [/lib/x86_64-linux-gnu/ld-2.27.so]
+           27  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:calloc (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           80  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:malloc (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          327  *  /build/glibc-OTsEL5/glibc-2.27/elf/get-dynamic-info.h:dl_main
+
+          325  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-fini.c:_dl_fini [/lib/x86_64-linux-gnu/ld-2.27.so]
+            3  >   ???:0x0000000004c94438 (1x) [???]
+            3  >   ???:0x0000000004a2a7a8 (1x) [???]
+           95  >   ???:0x00000000000019d0 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+           95  >   ???:0x0000000000000600 (1x) [/usr/lib/valgrind/vgpreload_core-amd64-linux.so]
+           95  >   ???:0x0000000000009410 (1x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+            2  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:rtld_lock_default_lock_recursive (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          378  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-sort-maps.c:_dl_sort_maps (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+            3  >   ???:0x0000000000116cc4 (1x) [???]
+            2  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:rtld_lock_default_unlock_recursive (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          325  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-tunables.c:__tunable_get_val [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          320  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_xsave [/lib/x86_64-linux-gnu/ld-2.27.so]
+        7,787  >   /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-runtime.c:_dl_fixup (8x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          317  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:_dl_init_paths [/lib/x86_64-linux-gnu/ld-2.27.so]
+           10  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          584  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:fillin_rpath (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          711  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-hwcaps.c:_dl_important_hwcaps (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           16  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           48  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:memset (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           54  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:malloc (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          296  *  /build/glibc-OTsEL5/glibc-2.27/elf/do-rel.h:_dl_start
+
+          292  *  /build/glibc-OTsEL5/glibc-2.27/elf/./dl-map-segments.h:_dl_map_object_from_fd
+           15  >   /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/syscall-template.S:mprotect (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          243  >   /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/mmap64.c:mmap (7x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          282  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:memset (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          285  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:fp_ImportHex [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       78,987  >   ???:__gmpz_set_str (19x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+          255  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strchr.S:index [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          247  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86/cacheinfo.c:init_cacheinfo [/lib/x86_64-linux-gnu/libc-2.27.so]
+        1,526  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86/cacheinfo.c:handle_intel.constprop.1 (3x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+          244  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:strsep [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          241  *  /build/glibc-OTsEL5/glibc-2.27/elf/get-dynamic-info.h:_dl_start
+
+          241  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          224  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-init.c:_dl_init [/lib/x86_64-linux-gnu/ld-2.27.so]
+        1,773  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86/cacheinfo.c:init_cacheinfo (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+           17  >   ???:0x0000000000000640 (1x) [/usr/lib/valgrind/vgpreload_core-amd64-linux.so]
+            6  >   ???:0x0000000004a2a520 (1x) [???]
+          207  >   /build/glibc-OTsEL5/glibc-2.27/csu/../csu/init-first.c:_init (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+           17  >   ???:0x0000000000009450 (1x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+            6  >   ???:0x0000000004c35140 (1x) [???]
+
+          222  *  /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/open64.c:open
+
+          218  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/strcspn.S:strcspn [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          185  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:fillin_rpath [/lib/x86_64-linux-gnu/ld-2.27.so]
+          244  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:strsep (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           16  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          104  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:expand_dynamic_string_token (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           18  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:malloc (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+            5  >   ???:0x0000000004000f00 (1x) [???]
+           12  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:mempcpy (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          177  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86/cacheinfo.c:handle_intel.constprop.1 [/lib/x86_64-linux-gnu/libc-2.27.so]
+        1,349  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86/cacheinfo.c:intel_check_word.isra.0 (6x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+          177  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/sidh.c:sidh_isogen [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        1,636  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_curve_clear (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      136,484  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:xADD (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        3,153  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_curve_init (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        2,220  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_copy (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+7,557,028,885  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/isogeny.c:iso_2_e (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+   89,235,024  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_double_and_add (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      165,278  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:get_xR (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+          541  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_clear (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+          306  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Copy (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        1,105  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_init (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+          174  *  /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_finalize.c:__cxa_finalize [/lib/x86_64-linux-gnu/libc-2.27.so]
+           48  >   /build/glibc-OTsEL5/glibc-2.27/nptl/unregister-atfork.c:__unregister_atfork (3x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+          164  *  test.c:benchmark_keygen [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+7,646,574,809  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/sidh.c:sidh_isogen (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        3,316  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:public_key_init (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      212,336  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/sidh.c:sidh_sk_keygen (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+          316  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:gmp_init (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      153,186  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/sike_params.c:sike_setup_params (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+          155  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-error-skeleton.c:_dl_catch_exception [/lib/x86_64-linux-gnu/ld-2.27.so]
+          100  >   /build/glibc-OTsEL5/glibc-2.27/setjmp/../sysdeps/x86_64/setjmp.S:__sigsetjmp (5x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       10,573  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-deps.c:openaux (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        2,127  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:map_doit (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          149  *  /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:sysmalloc [/lib/x86_64-linux-gnu/libc-2.27.so]
+           86  >   /build/glibc-OTsEL5/glibc-2.27/malloc/morecore.c:__default_morecore (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+          146  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-object.c:_dl_add_to_namespace_list [/lib/x86_64-linux-gnu/ld-2.27.so]
+            8  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:rtld_lock_default_lock_recursive (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+            8  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:rtld_lock_default_unlock_recursive (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          145  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/rng.c:randombytes [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      104,535  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/rng.h:AES256_ECB (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+           12  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_avx_unaligned_erms (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+      104,677  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/rng.c:AES256_CTR_DRBG_Update (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+          139  *  ???:__gmpn_mul_2 [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+          131  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/rng.c:AES256_CTR_DRBG_Update [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      104,535  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/rng.h:AES256_ECB (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+           11  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_avx_unaligned_erms (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+          126  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:AES_ECB_encrypt [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+       39,336  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:KeyExpansion (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      169,518  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:Cipher (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+          119  *  /build/glibc-OTsEL5/glibc-2.27/setjmp/../sysdeps/x86_64/setjmp.S:__sigsetjmp [/lib/x86_64-linux-gnu/ld-2.27.so]
+            8  >   /build/glibc-OTsEL5/glibc-2.27/setjmp/sigjmp.c:__sigjmp_save (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+          115  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-lookup.c:_dl_setup_hash [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          114  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:set_gmp_fp_params [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+          114  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_clear [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        3,132  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Clear (12x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+          114  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_init [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        4,914  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Init (12x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+          110  *  /build/glibc-OTsEL5/glibc-2.27/libio/genops.c:_IO_flush_all_lockp [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+          107  *  /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:tcache_init.part.4 [/lib/x86_64-linux-gnu/libc-2.27.so]
+          389  >   /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:_int_malloc (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+          105  *  /build/glibc-OTsEL5/glibc-2.27/stdlib/exit.c:__run_exit_handlers [/lib/x86_64-linux-gnu/libc-2.27.so]
+          206  >   /build/glibc-OTsEL5/glibc-2.27/libio/genops.c:_IO_cleanup (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+           11  >   /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_thread_atexit_impl.c:__call_tls_dtors (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            5  >   /build/glibc-OTsEL5/glibc-2.27/posix/../sysdeps/unix/sysv/linux/_exit.c:_Exit (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+        1,001  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-fini.c:_dl_fini (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          105  *  /build/glibc-OTsEL5/glibc-2.27/malloc/arena.c:ptmalloc_init.part.0 [/lib/x86_64-linux-gnu/libc-2.27.so]
+       60,563  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-addr.c:_dl_addr (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+          182  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-tunables.c:__tunable_get_val (10x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        1,157  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_xsave (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          104  *  /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_allocate_tls_init [/lib/x86_64-linux-gnu/ld-2.27.so]
+           33  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:memset (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           12  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:mempcpy (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          103  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86/cpu-features.c:_dl_sysdep_start
+           70  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-tunables.c:__tunable_get_val (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           87  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86/cpu-features.c:get_common_indeces.constprop.1 (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+          101  *  /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/wordsize-64/xstat.c:_xstat [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           96  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_set_inf_affine [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+          792  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Set (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+           90  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:calloc [/lib/x86_64-linux-gnu/ld-2.27.so]
+          246  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:malloc (10x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           90  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/rng.h:AES256_ECB [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      208,980  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/aes_c.c:AES_ECB_encrypt (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+           88  *  /build/glibc-OTsEL5/glibc-2.27/libio/genops.c:_IO_cleanup [/lib/x86_64-linux-gnu/libc-2.27.so]
+          114  >   /build/glibc-OTsEL5/glibc-2.27/libio/genops.c:_IO_flush_all_lockp (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           87  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86/cpu-features.c:get_common_indeces.constprop.1 [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           84  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-version.c:_dl_check_all_versions [/lib/x86_64-linux-gnu/ld-2.27.so]
+        4,514  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-version.c:_dl_check_map_versions (5x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           83  *  /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:_dl_start [/lib/x86_64-linux-gnu/ld-2.27.so]
+           23  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-lookup.c:_dl_setup_hash (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+      191,634  >   /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-sysdep.c:_dl_sysdep_start (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           81  *  /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:init_tls [/lib/x86_64-linux-gnu/ld-2.27.so]
+           27  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:calloc (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           66  >   /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_determine_tlsoffset (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          437  >   /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_allocate_tls_storage (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           78  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:get_xR [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      158,274  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:xADD (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        1,796  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_copy (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        1,391  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Negative (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+          393  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_init (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+          541  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_clear (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        2,805  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Copy (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+           74  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-sysdep.c:_dl_discover_osversion [/lib/x86_64-linux-gnu/ld-2.27.so]
+            5  >   /build/glibc-OTsEL5/glibc-2.27/posix/../sysdeps/unix/syscall-template.S:uname (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           72  *  /build/glibc-OTsEL5/glibc-2.27/string/strdup.c:strdup [/lib/x86_64-linux-gnu/ld-2.27.so]
+          118  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           72  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:malloc (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           56  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           71  *  /build/glibc-OTsEL5/glibc-2.27/elf/./dl-load.h:_dl_map_object_from_fd
+
+           69  *  ???:__gmpz_sizeinbase [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+           69  *  /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:handle_ld_preload [/lib/x86_64-linux-gnu/ld-2.27.so]
+           18  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          218  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/strcspn.S:strcspn (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        2,201  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-error-skeleton.c:_dl_catch_error (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           68  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-deps.c:openaux [/lib/x86_64-linux-gnu/ld-2.27.so]
+       10,505  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:_dl_map_object (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           68  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-vdso.c:_dl_vdso_vsym [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           67  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/memcmp.S:bcmp [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           66  *  /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:realloc_hook_ini
+           56  >   /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:_int_realloc (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           66  *  /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_determine_tlsoffset [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           60  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/sidh.c:sidh_sk_keygen [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+          108  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/encoding.c:clear_free (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        1,880  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/encoding.c:ostoi (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+          219  >   /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:malloc (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+          664  >   ???:__gmpz_mod (1x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+           36  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:mp_sizeinbase (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+      209,369  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/symmetric/rng.c:randombytes (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+           58  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:public_key_init [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        3,258  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Init (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+           57  *  /build/glibc-OTsEL5/glibc-2.27/ctype/../include/ctype.h:__ctype_b_loc [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           55  *  /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:(below main) [/lib/x86_64-linux-gnu/libc-2.27.so]
+7,646,944,134  >   /home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/test.c:main (1x)
+           29  >   /build/glibc-OTsEL5/glibc-2.27/setjmp/../sysdeps/x86_64/bsd-_setjmp.S:_setjmp (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+           65  >   /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_atexit.c:__cxa_atexit (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+        1,333  >   /build/glibc-OTsEL5/glibc-2.27/stdlib/exit.c:exit (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+           57  >   ???:__libc_csu_init (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+           54  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memset.h:memset [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           54  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/posix/dl-fileid.h:_dl_map_object_from_fd
+           30  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/wordsize-64/fxstat.c:_fxstat (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           51  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-open.c:_dl_find_dso_for_object [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           50  *  /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:malloc_hook_ini
+          164  >   /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:_int_malloc (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+          496  >   /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:tcache_init.part.4 (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           49  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-debug.c:_dl_debug_initialize [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           48  *  /build/glibc-OTsEL5/glibc-2.27/misc/sbrk.c:sbrk [/lib/x86_64-linux-gnu/libc-2.27.so]
+           24  >   /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/x86_64/brk.c:brk (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           48  *  /build/glibc-OTsEL5/glibc-2.27/nptl/unregister-atfork.c:__unregister_atfork [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           44  *  /build/glibc-OTsEL5/glibc-2.27/csu/../sysdeps/generic/dl-hash.h:_init
+
+           44  *  /build/glibc-OTsEL5/glibc-2.27/time/../sysdeps/generic/dl-hash.h:gettimeofday
+
+           43  *  /build/glibc-OTsEL5/glibc-2.27/time/../sysdeps/generic/dl-hash.h:time
+
+           41  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-misc.c:_dl_sysdep_read_whole_file [/lib/x86_64-linux-gnu/ld-2.27.so]
+            5  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/close.c:close (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           35  >   /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/mmap64.c:mmap (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           10  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/wordsize-64/fxstat.c:_fxstat (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+           16  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/wordsize-64/lxstat.c:open (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           40  *  /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/syscall-template.S:mprotect [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           40  *  /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/wordsize-64/fxstat.c:_fxstat [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           39  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:mp_sizeinbase [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+           69  >   ???:__gmpz_sizeinbase (3x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+           38  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:expand_dynamic_string_token [/lib/x86_64-linux-gnu/ld-2.27.so]
+           70  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strchr.S:index (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+          150  >   /build/glibc-OTsEL5/glibc-2.27/string/strdup.c:strdup (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           36  *  /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_atexit.c:__cxa_atexit [/lib/x86_64-linux-gnu/libc-2.27.so]
+           29  >   /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_atexit.c:__new_exitfn (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           35  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_curve_init [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        1,086  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Init (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        2,032  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_init (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+           34  *  ???:__libc_csu_init [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+           17  >   ???:0x0000000000001a10 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+            6  >   ???:0x0000000000109698 (1x) [???]
+
+           33  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strrchr-avx2.S:__strrchr_avx2 [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           32  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:mp_pow [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        2,323  >   ???:__gmpz_ui_pow_ui (2x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+           32  *  /build/glibc-OTsEL5/glibc-2.27/csu/../csu/init-first.c:_init [/lib/x86_64-linux-gnu/libc-2.27.so]
+           16  >   /build/glibc-OTsEL5/glibc-2.27/ctype/ctype-info.c:__ctype_init (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+           58  >   /build/glibc-OTsEL5/glibc-2.27/misc/init-misc.c:__init_misc (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           32  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memmove.h:memmove [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           32  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_curve_clear [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        1,082  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_pt_clear (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+          522  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp2.c:fp2_Clear (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+           32  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memmove.h:memcpy@@GLIBC_2.14 [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           29  *  /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_atexit.c:__new_exitfn [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           27  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/encoding.c:clear_free [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+           11  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:__memset_avx2_unaligned_erms (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+           70  >   /build/glibc-OTsEL5/glibc-2.27/malloc/malloc.c:free (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           26  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:mp_import [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        1,834  >   ???:__gmpz_import (1x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+           25  *  /build/glibc-OTsEL5/glibc-2.27/misc/init-misc.c:__init_misc [/lib/x86_64-linux-gnu/libc-2.27.so]
+           33  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strrchr-avx2.S:__strrchr_avx2 (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           24  *  /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/ifunc-wmemset.h:wmemset [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           24  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memcmp.h:bcmp [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           24  *  /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/x86_64/brk.c:brk [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           24  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86/dl-procinfo.h:_dl_load_cache_lookup
+           48  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/strcmp.S:strcmp (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           23  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-error-skeleton.c:_dl_catch_error [/lib/x86_64-linux-gnu/ld-2.27.so]
+        2,178  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-error-skeleton.c:_dl_catch_exception (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           23  *  /build/glibc-OTsEL5/glibc-2.27/malloc/hooks.c:realloc_hook_ini [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           23  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_avx_unaligned_erms [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           23  *  /build/glibc-OTsEL5/glibc-2.27/csu/../sysdeps/unix/sysv/linux/x86_64/init-first.c:_init
+           34  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-vdso.c:_dl_vdso_vsym (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           22  *  ???:__gmpz_ui_pow_ui [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+        2,301  >   ???:__gmpz_n_pow_ui (2x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+           20  *  /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_add_to_slotinfo [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           20  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/encoding.c:ostoi [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+        1,860  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/fp.c:mp_import (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+           20  *  /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/close.c:close [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           19  *  ???:0x0000000000001090 [/lib/x86_64-linux-gnu/ld-2.27.so]
+        2,250  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-init.c:_dl_init (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+      192,666  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:_dl_start (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+7,646,945,684  >   ???:_start (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+           17  *  ???:0x0000000000000640 [/usr/lib/valgrind/vgpreload_core-amd64-linux.so]
+
+           17  *  ???:0x0000000000009450 [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+           17  *  /build/glibc-OTsEL5/glibc-2.27/time/../sysdeps/unix/sysv/linux/x86/time.c:time [/lib/x86_64-linux-gnu/libc-2.27.so]
+           17  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-vdso.c:_dl_vdso_vsym (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           17  *  ???:0x0000000000001a10 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+           17  *  /build/glibc-OTsEL5/glibc-2.27/elf/../misc/sbrk.c:sbrk [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           16  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memmove.h:mempcpy [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           16  *  /build/glibc-OTsEL5/glibc-2.27/time/../sysdeps/unix/sysv/linux/x86/gettimeofday.c:gettimeofday [/lib/x86_64-linux-gnu/libc-2.27.so]
+           17  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-vdso.c:_dl_vdso_vsym (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           16  *  /build/glibc-OTsEL5/glibc-2.27/stdlib/../stdlib/strtol.c:strtol [/lib/x86_64-linux-gnu/libc-2.27.so]
+          444  >   /build/glibc-OTsEL5/glibc-2.27/stdlib/../stdlib/strtol_l.c:____strtol_l_internal (4x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           16  *  /build/glibc-OTsEL5/glibc-2.27/ctype/ctype-info.c:__ctype_init [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           15  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-error-skeleton.c:_dl_receive_error [/lib/x86_64-linux-gnu/ld-2.27.so]
+        4,608  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:version_check_doit (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           15  *  /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c:read [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           14  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/not-errno.h:_dl_load_cache_lookup
+
+           14  *  /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/ifunc-avx2.h:wmemchr [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           14  *  /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:map_doit [/lib/x86_64-linux-gnu/ld-2.27.so]
+        2,113  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:_dl_map_object (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           14  *  /build/glibc-OTsEL5/glibc-2.27/malloc/hooks.c:malloc_hook_ini [/lib/x86_64-linux-gnu/libc-2.27.so]
+       62,893  >   /build/glibc-OTsEL5/glibc-2.27/malloc/arena.c:ptmalloc_init.part.0 (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           14  *  /build/glibc-OTsEL5/glibc-2.27/malloc/morecore.c:__default_morecore [/lib/x86_64-linux-gnu/libc-2.27.so]
+           72  >   /build/glibc-OTsEL5/glibc-2.27/misc/sbrk.c:sbrk (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           14  *  /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/ifunc-avx2.h:wcschr [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           14  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:strnlen [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           14  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:strlen [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           13  *  /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/wordsize-64/lxstat.c:open [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           12  *  ???:0x0000000000000600 [/usr/lib/valgrind/vgpreload_core-amd64-linux.so]
+            8  >   ???:0x0000000000000570 (1x) [/usr/lib/valgrind/vgpreload_core-amd64-linux.so]
+           75  >   ???:0x0000000004a2a560 (1x) [???]
+
+           12  *  ???:0x00000000000019d0 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+            8  >   ???:0x0000000000001940 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+           75  >   ???:0x0000000000109900 (1x) [???]
+
+           12  *  /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:rtld_lock_default_lock_recursive [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           12  *  ???:0x0000000000009410 [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+            8  >   ???:0x0000000000009380 (1x) [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+           75  >   ???:0x0000000004c35350 (1x) [???]
+
+           12  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/src/montgomery.c:mont_curve_copy [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+           12  *  /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:rtld_lock_default_unlock_recursive [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           11  *  ???:_start [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+7,646,945,673  >   /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:(below main) (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           11  *  /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_thread_atexit_impl.c:__call_tls_dtors [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+           11  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/x86_64/brk.c:brk [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           10  *  /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:version_check_doit [/lib/x86_64-linux-gnu/ld-2.27.so]
+        4,598  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-version.c:_dl_check_all_versions (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+           10  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-cache.c:_dl_unload_cache [/lib/x86_64-linux-gnu/ld-2.27.so]
+            5  >   /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/syscall-template.S:munmap (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+            9  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcmp.c:strcmp [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            8  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:stpcpy [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            8  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strchr.c:index [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            8  *  /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/access.c:access [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+            8  *  /build/glibc-OTsEL5/glibc-2.27/setjmp/sigjmp.c:__sigjmp_save [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            8  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:stpncpy [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            8  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strncmp.c:strncmp [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            8  *  ???:0x0000000000001940 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+            8  *  ???:0x0000000000009380 [/usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2]
+
+            8  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:strcat [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            8  *  ???:0x0000000000000570 [/usr/lib/valgrind/vgpreload_core-amd64-linux.so]
+
+            8  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:strncpy [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            8  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86_64/dl-machine.h:_dl_fixup
+
+            8  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:strcpy [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            7  *  test.c:main [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+7,646,944,127  >   test.c:benchmark_keygen (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/Reference_Implementation/build/test]
+
+            7  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:rawmemchr [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            7  *  /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/wcsnlen.c:wcsnlen [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            7  *  /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/ifunc-avx2.h:wcslen [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            7  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:memrchr [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            7  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:rindex [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            7  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:strchrnul [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            7  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:memchr [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            6  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86/dl-hwcap.h:_dl_important_hwcaps
+
+            6  *  ???:0x0000000000109698 [???]
+
+            6  *  ???:0x0000000004c35140 [???]
+
+            6  *  /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_next_tls_modid [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+            6  *  ???:0x0000000004a2a520 [???]
+
+            5  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-strcasecmp.h:strncasecmp [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            5  *  /build/glibc-OTsEL5/glibc-2.27/posix/../sysdeps/unix/sysv/linux/_exit.c:_Exit [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            5  *  /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/syscall-template.S:munmap [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+            5  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-strcasecmp.h:strcasecmp [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            5  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-sse4_2.h:strpbrk [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            5  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-strcasecmp.h:strncasecmp_l [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            5  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-strcasecmp.h:strcasecmp_l [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            5  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-sse4_2.h:strspn [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            5  *  /build/glibc-OTsEL5/glibc-2.27/stdlib/exit.c:exit [/lib/x86_64-linux-gnu/libc-2.27.so]
+        1,328  >   /build/glibc-OTsEL5/glibc-2.27/stdlib/exit.c:__run_exit_handlers (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            5  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-sse4_2.h:strcspn [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            5  *  /build/glibc-OTsEL5/glibc-2.27/posix/../sysdeps/unix/syscall-template.S:uname [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+            4  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:free [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+            4  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86_64/dl-irel.h:_dl_fixup
+           18  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memset.h:memset (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+            8  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:strlen (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            4  *  /build/glibc-OTsEL5/glibc-2.27/libio/libioP.h:_IO_flush_all_lockp
+
+            4  *  /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_count_modids [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+            4  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/not-errno.h:_dl_important_hwcaps
+
+            4  *  /build/glibc-OTsEL5/glibc-2.27/libio/libioP.h:_IO_cleanup
+
+            3  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-osinfo.h:dl_main
+
+            3  *  /build/glibc-OTsEL5/glibc-2.27/malloc/arena.c:malloc_hook_ini
+
+            3  *  ???:0x0000000004a2a7a8 [???]
+
+            3  *  /build/glibc-OTsEL5/glibc-2.27/malloc/arena.c:realloc_hook_ini
+
+            3  *  ???:0x0000000004c94438 [???]
+
+            3  *  ???:0x0000000000116cc4 [???]
+
+            2  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strnlen.c:strnlen
+
+            2  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memcmp.c:bcmp
+
+            2  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-sysdep.c:_dl_sysdep_start
+           11  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/x86_64/brk.c:brk (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+            2  *  /build/glibc-OTsEL5/glibc-2.27/malloc/arena.c:sysmalloc
+
+            2  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strlen.c:strlen
+
+            2  *  /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/wmemchr.c:wmemchr
+
+            2  *  /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/wmemset.c:wmemset
+
+            2  *  /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/wcschr.c:wcschr
+
+            2  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-debug.c:_dl_debug_state [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+            2  *  /build/glibc-OTsEL5/glibc-2.27/setjmp/../sysdeps/x86_64/bsd-_setjmp.S:_setjmp [/lib/x86_64-linux-gnu/libc-2.27.so]
+           27  >   /build/glibc-OTsEL5/glibc-2.27/setjmp/../sysdeps/x86_64/setjmp.S:__sigsetjmp (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+            2  *  /build/glibc-OTsEL5/glibc-2.27/elf/setup-vdso.h:dl_main
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strncase.c:strncasecmp
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strncase_l.c:strncasecmp_l
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcasecmp_l.c:strcasecmp_l
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strpbrk.c:strpbrk
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strchrnul.c:strchrnul
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcspn.c:strcspn
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/wcslen.c:wcslen
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcat.c:strcat
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-sysdep.c:_dl_sysdep_start_cleanup [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+            1  *  ???:0x0000000004c35350 [???]
+           74  >   /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_finalize.c:__cxa_finalize (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            1  *  ???:0x0000000004000f00 [???]
+            4  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:free (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/stpcpy.c:stpcpy
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strncpy.c:strncpy
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strrchr.c:rindex
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memchr.c:memchr
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strspn.c:strspn
+
+            1  *  ???:0x0000000004a2a560 [???]
+           74  >   /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_finalize.c:__cxa_finalize (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memrchr.c:memrchr
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/stpncpy.c:stpncpy
+
+            1  *  ???:0x0000000000109900 [???]
+           74  >   /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_finalize.c:__cxa_finalize (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcpy.c:strcpy
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/rawmemchr.c:rawmemchr
+
+            1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcasecmp.c:strcasecmp
+
