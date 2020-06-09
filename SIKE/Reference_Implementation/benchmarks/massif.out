@@ -1,0 +1,2455 @@
+desc: --stacks=yes --massif-out-file=benchmarks/massif.out
+cmd: build/test
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=143312365
+mem_heap_B=5976
+mem_heap_extra_B=1128
+mem_stacks_B=6208
+heap_tree=detailed
+n5: 5976 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4336 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 4336 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 1560 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1560 0x115DC0: fp_ImportHex (fp.c:204)
+     n0: 1560 in 15 places, all below massif's threshold (1.00%)
+   n1: 1456 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1456 0x115794: gmp_subtract (fp.c:72)
+     n3: 1456 0x115D39: fp_Subtract (fp.c:192)
+      n2: 624 0x11132C: fp2_Multiply (fp2.c:136)
+       n0: 312 in 4 places, all below massif's threshold (1.00%)
+       n1: 312 0x111454: fp2_Square (fp2.c:186)
+        n0: 312 in 6 places, all below massif's threshold (1.00%)
+      n2: 624 0x111378: fp2_Multiply (fp2.c:141)
+       n0: 312 in 4 places, all below massif's threshold (1.00%)
+       n1: 312 0x111454: fp2_Square (fp2.c:186)
+        n0: 312 in 6 places, all below massif's threshold (1.00%)
+      n0: 208 in 2 places, all below massif's threshold (1.00%)
+   n2: 832 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 624 0x4E4FC8C: __gmpz_mod (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 624 0x1155D3: gmp_negative (fp.c:50)
+      n2: 624 0x115C71: fp_Negative (fp.c:175)
+       n2: 312 0x111406: fp2_Negative (fp2.c:156)
+        n1: 312 0x1104BB: eval_4_iso (isogeny.c:222)
+         n0: 312 in 3 places, all below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n2: 312 0x111425: fp2_Negative (fp2.c:157)
+        n1: 312 0x1104BB: eval_4_iso (isogeny.c:222)
+         n0: 312 in 3 places, all below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 208 0x115425: gmp_add_fp (fp.c:14)
+     n1: 208 0x115AC4: fp_Add (fp.c:139)
+      n0: 208 in 5 places, all below massif's threshold (1.00%)
+   n1: 288 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 288 0x115490: gmp_copy_fp (fp.c:23)
+     n2: 288 0x115B4F: fp_Copy (fp.c:151)
+      n2: 192 0x110F7D: fp2_Copy (fp2.c:39)
+       n1: 192 0x111D1F: mont_pt_copy (montgomery.c:61)
+        n0: 192 in 5 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+      n0: 96 in 1 place, below massif's threshold (1.00%)
+   n1: 152 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 152 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 152 0x115923: mp_pow (fp.c:105)
+      n0: 152 in 2 places, all below massif's threshold (1.00%)
+   n0: 48 in 4 places, all below massif's threshold (1.00%)
+ n2: 1336 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 1152 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 1152 0x11557B: gmp_multiply (fp.c:43)
+    n5: 1152 0x115C41: fp_Multiply (fp.c:171)
+     n3: 384 0x1111C6: fp2_Invert (fp2.c:103)
+      n2: 192 0x11059D: eval_4_iso (isogeny.c:230)
+       n1: 192 0x110C7E: iso_2_e (isogeny.c:331)
+        n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+         n1: 192 0x109A8B: benchmark_keygen_A (test.c:24)
+          n0: 192 0x109CE3: main (test.c:79)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 192 0x110602: eval_4_iso (isogeny.c:234)
+       n1: 192 0x110C7E: iso_2_e (isogeny.c:331)
+        n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+         n1: 192 0x109A8B: benchmark_keygen_A (test.c:24)
+          n0: 192 0x109CE3: main (test.c:79)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 2 places, all below massif's threshold (1.00%)
+     n3: 384 0x1111E2: fp2_Invert (fp2.c:104)
+      n2: 192 0x11059D: eval_4_iso (isogeny.c:230)
+       n1: 192 0x110C7E: iso_2_e (isogeny.c:331)
+        n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+         n1: 192 0x109A8B: benchmark_keygen_A (test.c:24)
+          n0: 192 0x109CE3: main (test.c:79)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 192 0x110602: eval_4_iso (isogeny.c:234)
+       n1: 192 0x110C7E: iso_2_e (isogeny.c:331)
+        n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+         n1: 192 0x109A8B: benchmark_keygen_A (test.c:24)
+          n0: 192 0x109CE3: main (test.c:79)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 2 places, all below massif's threshold (1.00%)
+     n2: 192 0x1112AA: fp2_Multiply (fp2.c:130)
+      n2: 192 0x111454: fp2_Square (fp2.c:186)
+       n2: 192 0x11061C: eval_4_iso (isogeny.c:235)
+        n1: 192 0x110C7E: iso_2_e (isogeny.c:331)
+         n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 192 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 192 0x109CE3: main (test.c:79)
+        n0: 0 in 2 places, all below massif's threshold (1.00%)
+       n0: 0 in 9 places, all below massif's threshold (1.00%)
+      n0: 0 in 29 places, all below massif's threshold (1.00%)
+     n2: 192 0x1112D0: fp2_Multiply (fp2.c:131)
+      n2: 192 0x111454: fp2_Square (fp2.c:186)
+       n2: 192 0x11061C: eval_4_iso (isogeny.c:235)
+        n1: 192 0x110C7E: iso_2_e (isogeny.c:331)
+         n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 192 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 192 0x109CE3: main (test.c:79)
+        n0: 0 in 2 places, all below massif's threshold (1.00%)
+       n0: 0 in 9 places, all below massif's threshold (1.00%)
+      n0: 0 in 28 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 184 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 184 0x115812: gmp_init (fp.c:85)
+    n1: 184 0x115A8F: fp_Init (fp.c:135)
+     n0: 184 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x114B6A: sike_setup_params (sike_params.c:173)
+  n0: 152 0x109C32: main (test.c:71)
+ n1: 152 0x114B78: sike_setup_params (sike_params.c:174)
+  n0: 152 0x109C32: main (test.c:71)
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=391853173
+mem_heap_B=5472
+mem_heap_extra_B=1040
+mem_stacks_B=5792
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=541312411
+mem_heap_B=5096
+mem_heap_extra_B=1048
+mem_stacks_B=4120
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=817231881
+mem_heap_B=5096
+mem_heap_extra_B=1048
+mem_stacks_B=4120
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=1121483752
+mem_heap_B=4704
+mem_heap_extra_B=992
+mem_stacks_B=2960
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=1338942101
+mem_heap_B=5288
+mem_heap_extra_B=1048
+mem_stacks_B=4120
+heap_tree=detailed
+n5: 5288 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4240 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 4240 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 1560 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n15: 1560 0x115DC0: fp_ImportHex (fp.c:204)
+     n1: 104 0x114BD7: sike_setup_params (sike_params.c:183)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114D3C: sike_setup_params (sike_params.c:201)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114D57: sike_setup_params (sike_params.c:204)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114D72: sike_setup_params (sike_params.c:205)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114D8D: sike_setup_params (sike_params.c:206)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114DA8: sike_setup_params (sike_params.c:207)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114DC6: sike_setup_params (sike_params.c:208)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114DE4: sike_setup_params (sike_params.c:209)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114E02: sike_setup_params (sike_params.c:210)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114E20: sike_setup_params (sike_params.c:211)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114FD2: sike_setup_params (sike_params.c:234)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114FF0: sike_setup_params (sike_params.c:236)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x11502C: sike_setup_params (sike_params.c:238)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x11506B: sike_setup_params (sike_params.c:240)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x1150CE: sike_setup_params (sike_params.c:243)
+      n0: 104 0x109C32: main (test.c:71)
+   n1: 1456 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1456 0x115794: gmp_subtract (fp.c:72)
+     n4: 1456 0x115D39: fp_Subtract (fp.c:192)
+      n5: 624 0x11132C: fp2_Multiply (fp2.c:136)
+       n2: 208 0x110735: eval_4_iso (isogeny.c:243)
+        n1: 104 0x110C5A: iso_2_e (isogeny.c:328)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 104 0x109CE3: main (test.c:79)
+        n1: 104 0x110C7E: iso_2_e (isogeny.c:331)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 104 0x109CE3: main (test.c:79)
+       n3: 208 0x111454: fp2_Square (fp2.c:186)
+        n1: 104 0x1108D2: curve_4_iso (isogeny.c:270)
+         n1: 104 0x110C1E: iso_2_e (isogeny.c:323)
+          n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+            n0: 104 0x109CE3: main (test.c:79)
+        n2: 104 0x112086: xDBL (montgomery.c:132)
+         n1: 104 0x112422: xDBLe (montgomery.c:177)
+          n1: 104 0x110C00: iso_2_e (isogeny.c:322)
+           n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+            n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+             n0: 104 0x109CE3: main (test.c:79)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 4 places, all below massif's threshold (1.00%)
+       n1: 104 0x1109C2: curve_4_iso (isogeny.c:281)
+        n1: 104 0x110C1E: iso_2_e (isogeny.c:323)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 104 0x109CE3: main (test.c:79)
+       n2: 104 0x1121D8: xDBL (montgomery.c:151)
+        n1: 104 0x112422: xDBLe (montgomery.c:177)
+         n1: 104 0x110C00: iso_2_e (isogeny.c:322)
+          n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+            n0: 104 0x109CE3: main (test.c:79)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+      n5: 624 0x111378: fp2_Multiply (fp2.c:141)
+       n2: 208 0x110735: eval_4_iso (isogeny.c:243)
+        n1: 104 0x110C5A: iso_2_e (isogeny.c:328)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 104 0x109CE3: main (test.c:79)
+        n1: 104 0x110C7E: iso_2_e (isogeny.c:331)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 104 0x109CE3: main (test.c:79)
+       n3: 208 0x111454: fp2_Square (fp2.c:186)
+        n1: 104 0x1108D2: curve_4_iso (isogeny.c:270)
+         n1: 104 0x110C1E: iso_2_e (isogeny.c:323)
+          n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+            n0: 104 0x109CE3: main (test.c:79)
+        n2: 104 0x112086: xDBL (montgomery.c:132)
+         n1: 104 0x112422: xDBLe (montgomery.c:177)
+          n1: 104 0x110C00: iso_2_e (isogeny.c:322)
+           n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+            n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+             n0: 104 0x109CE3: main (test.c:79)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 4 places, all below massif's threshold (1.00%)
+       n1: 104 0x1109C2: curve_4_iso (isogeny.c:281)
+        n1: 104 0x110C1E: iso_2_e (isogeny.c:323)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 104 0x109CE3: main (test.c:79)
+       n2: 104 0x1121D8: xDBL (montgomery.c:151)
+        n1: 104 0x112422: xDBLe (montgomery.c:177)
+         n1: 104 0x110C00: iso_2_e (isogeny.c:322)
+          n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+            n0: 104 0x109CE3: main (test.c:79)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+      n2: 104 0x111487: fp2_Sub (fp2.c:196)
+       n2: 104 0x1128BB: xADD (montgomery.c:237)
+        n1: 104 0x1137F9: sidh_isogen (sidh.c:124)
+         n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+          n0: 104 0x109CE3: main (test.c:79)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+      n2: 104 0x1114AB: fp2_Sub (fp2.c:197)
+       n2: 104 0x1128BB: xADD (montgomery.c:237)
+        n1: 104 0x1137F9: sidh_isogen (sidh.c:124)
+         n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+          n0: 104 0x109CE3: main (test.c:79)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n2: 832 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 624 0x4E4FC8C: __gmpz_mod (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 624 0x1155D3: gmp_negative (fp.c:50)
+      n2: 624 0x115C71: fp_Negative (fp.c:175)
+       n2: 312 0x111406: fp2_Negative (fp2.c:156)
+        n3: 312 0x1104BB: eval_4_iso (isogeny.c:222)
+         n1: 104 0x110C36: iso_2_e (isogeny.c:325)
+          n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+            n0: 104 0x109CE3: main (test.c:79)
+         n1: 104 0x110C5A: iso_2_e (isogeny.c:328)
+          n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+            n0: 104 0x109CE3: main (test.c:79)
+         n1: 104 0x110C7E: iso_2_e (isogeny.c:331)
+          n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+            n0: 104 0x109CE3: main (test.c:79)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n2: 312 0x111425: fp2_Negative (fp2.c:157)
+        n3: 312 0x1104BB: eval_4_iso (isogeny.c:222)
+         n1: 104 0x110C36: iso_2_e (isogeny.c:325)
+          n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+            n0: 104 0x109CE3: main (test.c:79)
+         n1: 104 0x110C5A: iso_2_e (isogeny.c:328)
+          n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+            n0: 104 0x109CE3: main (test.c:79)
+         n1: 104 0x110C7E: iso_2_e (isogeny.c:331)
+          n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+            n0: 104 0x109CE3: main (test.c:79)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 208 0x115425: gmp_add_fp (fp.c:14)
+     n3: 208 0x115AC4: fp_Add (fp.c:139)
+      n2: 104 0x110EEE: fp2_Add (fp2.c:17)
+       n2: 104 0x1122B5: xDBL (montgomery.c:160)
+        n1: 104 0x112422: xDBLe (montgomery.c:177)
+         n1: 104 0x110C00: iso_2_e (isogeny.c:322)
+          n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+            n0: 104 0x109CE3: main (test.c:79)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 3 places, all below massif's threshold (1.00%)
+      n2: 104 0x110F12: fp2_Add (fp2.c:18)
+       n2: 104 0x1122B5: xDBL (montgomery.c:160)
+        n1: 104 0x112422: xDBLe (montgomery.c:177)
+         n1: 104 0x110C00: iso_2_e (isogeny.c:322)
+          n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 104 0x109A8B: benchmark_keygen_A (test.c:24)
+            n0: 104 0x109CE3: main (test.c:79)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 3 places, all below massif's threshold (1.00%)
+      n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n1: 192 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 192 0x115490: gmp_copy_fp (fp.c:23)
+     n1: 192 0x115B4F: fp_Copy (fp.c:151)
+      n0: 192 in 2 places, all below massif's threshold (1.00%)
+   n1: 152 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 152 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 152 0x115923: mp_pow (fp.c:105)
+      n0: 152 in 2 places, all below massif's threshold (1.00%)
+   n0: 48 in 4 places, all below massif's threshold (1.00%)
+ n2: 744 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 576 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 576 0x11557B: gmp_multiply (fp.c:43)
+    n4: 576 0x115C41: fp_Multiply (fp.c:171)
+     n2: 192 0x1111C6: fp2_Invert (fp2.c:103)
+      n2: 192 0x112188: xDBL (montgomery.c:145)
+       n1: 192 0x112422: xDBLe (montgomery.c:177)
+        n1: 192 0x110C00: iso_2_e (isogeny.c:322)
+         n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 192 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 192 0x109CE3: main (test.c:79)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+      n0: 0 in 3 places, all below massif's threshold (1.00%)
+     n2: 192 0x1111E2: fp2_Invert (fp2.c:104)
+      n2: 192 0x112188: xDBL (montgomery.c:145)
+       n1: 192 0x112422: xDBLe (montgomery.c:177)
+        n1: 192 0x110C00: iso_2_e (isogeny.c:322)
+         n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 192 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 192 0x109CE3: main (test.c:79)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+      n0: 0 in 3 places, all below massif's threshold (1.00%)
+     n2: 192 0x1112AA: fp2_Multiply (fp2.c:130)
+      n2: 192 0x112333: xDBL (montgomery.c:163)
+       n1: 192 0x112422: xDBLe (montgomery.c:177)
+        n1: 192 0x110C00: iso_2_e (isogeny.c:322)
+         n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 192 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 192 0x109CE3: main (test.c:79)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+      n0: 0 in 34 places, all below massif's threshold (1.00%)
+     n0: 0 in 2 places, all below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 168 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 168 0x115812: gmp_init (fp.c:85)
+    n1: 168 0x115A8F: fp_Init (fp.c:135)
+     n0: 168 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x114B6A: sike_setup_params (sike_params.c:173)
+  n0: 152 0x109C32: main (test.c:71)
+ n1: 152 0x114B78: sike_setup_params (sike_params.c:174)
+  n0: 152 0x109C32: main (test.c:71)
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=1479649869
+mem_heap_B=5088
+mem_heap_extra_B=1024
+mem_stacks_B=4856
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=1686747592
+mem_heap_B=4920
+mem_heap_extra_B=1064
+mem_stacks_B=5792
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=1893688354
+mem_heap_B=5568
+mem_heap_extra_B=1040
+mem_stacks_B=3152
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=2077634784
+mem_heap_B=5280
+mem_heap_extra_B=1040
+mem_stacks_B=4056
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=2399542372
+mem_heap_B=5472
+mem_heap_extra_B=1040
+mem_stacks_B=3952
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=2744443272
+mem_heap_B=5664
+mem_heap_extra_B=1040
+mem_stacks_B=3952
+heap_tree=detailed
+n5: 5664 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4448 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 4448 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 1560 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1560 0x115DC0: fp_ImportHex (fp.c:204)
+     n0: 1560 in 15 places, all below massif's threshold (1.00%)
+   n1: 1456 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1456 0x115794: gmp_subtract (fp.c:72)
+     n3: 1456 0x115D39: fp_Subtract (fp.c:192)
+      n3: 624 0x11132C: fp2_Multiply (fp2.c:136)
+       n0: 208 in 3 places, all below massif's threshold (1.00%)
+       n1: 208 0x110735: eval_4_iso (isogeny.c:243)
+        n0: 208 in 2 places, all below massif's threshold (1.00%)
+       n1: 208 0x111454: fp2_Square (fp2.c:186)
+        n0: 208 in 6 places, all below massif's threshold (1.00%)
+      n3: 624 0x111378: fp2_Multiply (fp2.c:141)
+       n0: 208 in 3 places, all below massif's threshold (1.00%)
+       n1: 208 0x110735: eval_4_iso (isogeny.c:243)
+        n0: 208 in 2 places, all below massif's threshold (1.00%)
+       n1: 208 0x111454: fp2_Square (fp2.c:186)
+        n0: 208 in 6 places, all below massif's threshold (1.00%)
+      n0: 208 in 2 places, all below massif's threshold (1.00%)
+   n2: 1040 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 624 0x4E4FC8C: __gmpz_mod (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 624 0x1155D3: gmp_negative (fp.c:50)
+      n2: 624 0x115C71: fp_Negative (fp.c:175)
+       n2: 312 0x111406: fp2_Negative (fp2.c:156)
+        n1: 312 0x1104BB: eval_4_iso (isogeny.c:222)
+         n0: 312 in 3 places, all below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n2: 312 0x111425: fp2_Negative (fp2.c:157)
+        n1: 312 0x1104BB: eval_4_iso (isogeny.c:222)
+         n0: 312 in 3 places, all below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 416 0x115425: gmp_add_fp (fp.c:14)
+     n1: 416 0x115AC4: fp_Add (fp.c:139)
+      n0: 416 in 5 places, all below massif's threshold (1.00%)
+   n1: 192 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 192 0x115490: gmp_copy_fp (fp.c:23)
+     n1: 192 0x115B4F: fp_Copy (fp.c:151)
+      n0: 192 in 2 places, all below massif's threshold (1.00%)
+   n1: 152 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 152 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 152 0x115923: mp_pow (fp.c:105)
+      n0: 152 in 2 places, all below massif's threshold (1.00%)
+   n0: 48 in 4 places, all below massif's threshold (1.00%)
+ n2: 912 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 768 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 768 0x11557B: gmp_multiply (fp.c:43)
+    n5: 768 0x115C41: fp_Multiply (fp.c:171)
+     n2: 192 0x1111C6: fp2_Invert (fp2.c:103)
+      n2: 192 0x112188: xDBL (montgomery.c:145)
+       n1: 192 0x112422: xDBLe (montgomery.c:177)
+        n1: 192 0x110C00: iso_2_e (isogeny.c:322)
+         n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 192 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 192 0x109CE3: main (test.c:79)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+      n0: 0 in 3 places, all below massif's threshold (1.00%)
+     n2: 192 0x1111E2: fp2_Invert (fp2.c:104)
+      n2: 192 0x112188: xDBL (montgomery.c:145)
+       n1: 192 0x112422: xDBLe (montgomery.c:177)
+        n1: 192 0x110C00: iso_2_e (isogeny.c:322)
+         n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 192 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 192 0x109CE3: main (test.c:79)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+      n0: 0 in 3 places, all below massif's threshold (1.00%)
+     n2: 192 0x1112AA: fp2_Multiply (fp2.c:130)
+      n1: 192 0x112265: xDBL (montgomery.c:157)
+       n1: 192 0x112422: xDBLe (montgomery.c:177)
+        n1: 192 0x110C00: iso_2_e (isogeny.c:322)
+         n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 192 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 192 0x109CE3: main (test.c:79)
+      n0: 0 in 34 places, all below massif's threshold (1.00%)
+     n2: 192 0x1112D0: fp2_Multiply (fp2.c:131)
+      n1: 192 0x112265: xDBL (montgomery.c:157)
+       n1: 192 0x112422: xDBLe (montgomery.c:177)
+        n1: 192 0x110C00: iso_2_e (isogeny.c:322)
+         n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 192 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 192 0x109CE3: main (test.c:79)
+      n0: 0 in 33 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 144 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 144 0x115812: gmp_init (fp.c:85)
+    n1: 144 0x115A8F: fp_Init (fp.c:135)
+     n0: 144 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x114B6A: sike_setup_params (sike_params.c:173)
+  n0: 152 0x109C32: main (test.c:71)
+ n1: 152 0x114B78: sike_setup_params (sike_params.c:174)
+  n0: 152 0x109C32: main (test.c:71)
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=2959053699
+mem_heap_B=5096
+mem_heap_extra_B=1048
+mem_stacks_B=3952
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=3112346234
+mem_heap_B=4912
+mem_heap_extra_B=1056
+mem_stacks_B=3008
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=3357616299
+mem_heap_B=5568
+mem_heap_extra_B=1040
+mem_stacks_B=4120
+heap_tree=detailed
+n5: 5568 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4344 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 4344 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 1560 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1560 0x115DC0: fp_ImportHex (fp.c:204)
+     n0: 1560 in 15 places, all below massif's threshold (1.00%)
+   n1: 1352 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1352 0x115794: gmp_subtract (fp.c:72)
+     n3: 1352 0x115D39: fp_Subtract (fp.c:192)
+      n3: 624 0x11132C: fp2_Multiply (fp2.c:136)
+       n0: 208 in 3 places, all below massif's threshold (1.00%)
+       n1: 208 0x110735: eval_4_iso (isogeny.c:243)
+        n0: 208 in 2 places, all below massif's threshold (1.00%)
+       n1: 208 0x111454: fp2_Square (fp2.c:186)
+        n0: 208 in 6 places, all below massif's threshold (1.00%)
+      n3: 520 0x111378: fp2_Multiply (fp2.c:141)
+       n1: 208 0x110735: eval_4_iso (isogeny.c:243)
+        n0: 208 in 2 places, all below massif's threshold (1.00%)
+       n1: 208 0x111454: fp2_Square (fp2.c:186)
+        n0: 208 in 6 places, all below massif's threshold (1.00%)
+       n0: 104 in 3 places, all below massif's threshold (1.00%)
+      n0: 208 in 2 places, all below massif's threshold (1.00%)
+   n2: 1040 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 624 0x4E4FC8C: __gmpz_mod (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 624 0x1155D3: gmp_negative (fp.c:50)
+      n2: 624 0x115C71: fp_Negative (fp.c:175)
+       n2: 312 0x111406: fp2_Negative (fp2.c:156)
+        n1: 312 0x1104BB: eval_4_iso (isogeny.c:222)
+         n0: 312 in 3 places, all below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n2: 312 0x111425: fp2_Negative (fp2.c:157)
+        n1: 312 0x1104BB: eval_4_iso (isogeny.c:222)
+         n0: 312 in 3 places, all below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 416 0x115425: gmp_add_fp (fp.c:14)
+     n1: 416 0x115AC4: fp_Add (fp.c:139)
+      n0: 416 in 5 places, all below massif's threshold (1.00%)
+   n1: 192 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 192 0x115490: gmp_copy_fp (fp.c:23)
+     n1: 192 0x115B4F: fp_Copy (fp.c:151)
+      n0: 192 in 2 places, all below massif's threshold (1.00%)
+   n1: 152 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 152 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 152 0x115923: mp_pow (fp.c:105)
+      n0: 152 in 2 places, all below massif's threshold (1.00%)
+   n0: 48 in 4 places, all below massif's threshold (1.00%)
+ n2: 920 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 768 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 768 0x11557B: gmp_multiply (fp.c:43)
+    n5: 768 0x115C41: fp_Multiply (fp.c:171)
+     n2: 192 0x1111C6: fp2_Invert (fp2.c:103)
+      n2: 192 0x112188: xDBL (montgomery.c:145)
+       n1: 192 0x112422: xDBLe (montgomery.c:177)
+        n1: 192 0x110C00: iso_2_e (isogeny.c:322)
+         n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 192 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 192 0x109CE3: main (test.c:79)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+      n0: 0 in 3 places, all below massif's threshold (1.00%)
+     n2: 192 0x1111E2: fp2_Invert (fp2.c:104)
+      n2: 192 0x112188: xDBL (montgomery.c:145)
+       n1: 192 0x112422: xDBLe (montgomery.c:177)
+        n1: 192 0x110C00: iso_2_e (isogeny.c:322)
+         n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 192 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 192 0x109CE3: main (test.c:79)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+      n0: 0 in 3 places, all below massif's threshold (1.00%)
+     n2: 192 0x1112AA: fp2_Multiply (fp2.c:130)
+      n1: 192 0x1121D8: xDBL (montgomery.c:151)
+       n1: 192 0x112422: xDBLe (montgomery.c:177)
+        n1: 192 0x110C00: iso_2_e (isogeny.c:322)
+         n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 192 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 192 0x109CE3: main (test.c:79)
+      n0: 0 in 34 places, all below massif's threshold (1.00%)
+     n2: 192 0x1112D0: fp2_Multiply (fp2.c:131)
+      n1: 192 0x1121D8: xDBL (montgomery.c:151)
+       n1: 192 0x112422: xDBLe (montgomery.c:177)
+        n1: 192 0x110C00: iso_2_e (isogeny.c:322)
+         n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 192 0x109A8B: benchmark_keygen_A (test.c:24)
+           n0: 192 0x109CE3: main (test.c:79)
+      n0: 0 in 33 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 152 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 152 0x115812: gmp_init (fp.c:85)
+    n1: 152 0x115A8F: fp_Init (fp.c:135)
+     n0: 152 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x114B6A: sike_setup_params (sike_params.c:173)
+  n0: 152 0x109C32: main (test.c:71)
+ n1: 152 0x114B78: sike_setup_params (sike_params.c:174)
+  n0: 152 0x109C32: main (test.c:71)
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=3633543136
+mem_heap_B=5160
+mem_heap_extra_B=1144
+mem_stacks_B=4168
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=3848152849
+mem_heap_B=5664
+mem_heap_extra_B=1040
+mem_stacks_B=3952
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=4154737966
+mem_heap_B=4904
+mem_heap_extra_B=1032
+mem_stacks_B=4088
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=4369348048
+mem_heap_B=5088
+mem_heap_extra_B=1024
+mem_stacks_B=4864
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=4645271744
+mem_heap_B=5288
+mem_heap_extra_B=1048
+mem_stacks_B=4120
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=4921194927
+mem_heap_B=5472
+mem_heap_extra_B=1040
+mem_stacks_B=4120
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=5105144162
+mem_heap_B=5664
+mem_heap_extra_B=1040
+mem_stacks_B=4120
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=5381067664
+mem_heap_B=5472
+mem_heap_extra_B=1040
+mem_stacks_B=3000
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=5565017268
+mem_heap_B=5280
+mem_heap_extra_B=1040
+mem_stacks_B=5792
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=5748966143
+mem_heap_B=4536
+mem_heap_extra_B=1048
+mem_stacks_B=4168
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=6070876492
+mem_heap_B=4720
+mem_heap_extra_B=1056
+mem_stacks_B=4168
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=6254826592
+mem_heap_B=5568
+mem_heap_extra_B=1040
+mem_stacks_B=4120
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=6438776229
+mem_heap_B=5088
+mem_heap_extra_B=1024
+mem_stacks_B=4864
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=6755819724
+mem_heap_B=5096
+mem_heap_extra_B=1048
+mem_stacks_B=4120
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=6934901632
+mem_heap_B=5280
+mem_heap_extra_B=1040
+mem_stacks_B=4120
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=7113983469
+mem_heap_B=5664
+mem_heap_extra_B=1040
+mem_stacks_B=3616
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=7385042153
+mem_heap_B=6304
+mem_heap_extra_B=1224
+mem_stacks_B=6304
+heap_tree=peak
+n5: 6304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5056 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 5056 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 1872 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1872 0x115794: gmp_subtract (fp.c:72)
+     n4: 1872 0x115D39: fp_Subtract (fp.c:192)
+      n3: 728 0x11132C: fp2_Multiply (fp2.c:136)
+       n1: 312 0x10FAC3: eval_3_iso (isogeny.c:119)
+        n0: 312 in 3 places, all below massif's threshold (1.00%)
+       n0: 208 in 8 places, all below massif's threshold (1.00%)
+       n1: 208 0x10FA9B: eval_3_iso (isogeny.c:118)
+        n0: 208 in 2 places, all below massif's threshold (1.00%)
+      n3: 728 0x111378: fp2_Multiply (fp2.c:141)
+       n1: 312 0x10FAC3: eval_3_iso (isogeny.c:119)
+        n0: 312 in 3 places, all below massif's threshold (1.00%)
+       n0: 208 in 11 places, all below massif's threshold (1.00%)
+       n1: 208 0x10FA9B: eval_3_iso (isogeny.c:118)
+        n0: 208 in 2 places, all below massif's threshold (1.00%)
+      n2: 208 0x111487: fp2_Sub (fp2.c:196)
+       n1: 208 0x1128BB: xADD (montgomery.c:237)
+        n0: 208 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 208 0x1114AB: fp2_Sub (fp2.c:197)
+       n1: 208 0x1128BB: xADD (montgomery.c:237)
+        n0: 208 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 1560 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1560 0x115DC0: fp_ImportHex (fp.c:204)
+     n0: 1560 in 15 places, all below massif's threshold (1.00%)
+   n1: 960 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 960 0x115490: gmp_copy_fp (fp.c:23)
+     n2: 960 0x115B4F: fp_Copy (fp.c:151)
+      n1: 480 0x110F7D: fp2_Copy (fp2.c:39)
+       n0: 480 in 7 places, all below massif's threshold (1.00%)
+      n1: 480 0x110F9C: fp2_Copy (fp2.c:40)
+       n0: 480 in 6 places, all below massif's threshold (1.00%)
+   n2: 416 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 208 0x115425: gmp_add_fp (fp.c:14)
+     n1: 208 0x115AC4: fp_Add (fp.c:139)
+      n0: 208 in 6 places, all below massif's threshold (1.00%)
+    n1: 208 0x4E4FC8C: __gmpz_mod (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 208 0x1155D3: gmp_negative (fp.c:50)
+      n1: 208 0x115C71: fp_Negative (fp.c:175)
+       n0: 208 in 2 places, all below massif's threshold (1.00%)
+   n1: 152 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 152 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 152 0x115923: mp_pow (fp.c:105)
+      n0: 152 in 2 places, all below massif's threshold (1.00%)
+   n0: 96 in 5 places, all below massif's threshold (1.00%)
+ n3: 944 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 768 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 768 0x11557B: gmp_multiply (fp.c:43)
+    n5: 768 0x115C41: fp_Multiply (fp.c:171)
+     n2: 192 0x1111C6: fp2_Invert (fp2.c:103)
+      n2: 192 0x112723: xADD (montgomery.c:217)
+       n1: 192 0x1129E5: xTPL (montgomery.c:254)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 3 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 192 0x1111E2: fp2_Invert (fp2.c:104)
+      n2: 192 0x112723: xADD (montgomery.c:217)
+       n1: 192 0x1129E5: xTPL (montgomery.c:254)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 3 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 192 0x1112AA: fp2_Multiply (fp2.c:130)
+      n2: 192 0x111454: fp2_Square (fp2.c:186)
+       n2: 192 0x112758: xADD (montgomery.c:220)
+        n1: 192 0x1129E5: xTPL (montgomery.c:254)
+         n1: 192 0x112A60: xTPLe (montgomery.c:270)
+          n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+           n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+            n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+             n0: 192 0x109D6D: main (test.c:80)
+        n0: 0 in 3 places, all below massif's threshold (1.00%)
+       n0: 0 in 14 places, all below massif's threshold (1.00%)
+      n0: 0 in 46 places, all below massif's threshold (1.00%)
+     n2: 192 0x1112D0: fp2_Multiply (fp2.c:131)
+      n2: 192 0x111454: fp2_Square (fp2.c:186)
+       n2: 192 0x112758: xADD (montgomery.c:220)
+        n1: 192 0x1129E5: xTPL (montgomery.c:254)
+         n1: 192 0x112A60: xTPLe (montgomery.c:270)
+          n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+           n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+            n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+             n0: 192 0x109D6D: main (test.c:80)
+        n0: 0 in 3 places, all below massif's threshold (1.00%)
+       n0: 0 in 14 places, all below massif's threshold (1.00%)
+      n0: 0 in 45 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 176 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 176 0x115812: gmp_init (fp.c:85)
+    n1: 176 0x115A8F: fp_Init (fp.c:135)
+     n0: 176 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x114B6A: sike_setup_params (sike_params.c:173)
+  n0: 152 0x109C32: main (test.c:71)
+ n1: 152 0x114B78: sike_setup_params (sike_params.c:174)
+  n0: 152 0x109C32: main (test.c:71)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=7564123975
+mem_heap_B=6320
+mem_heap_extra_B=1224
+mem_stacks_B=4264
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=7743207423
+mem_heap_B=5936
+mem_heap_extra_B=1240
+mem_stacks_B=4264
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=7922289290
+mem_heap_B=6112
+mem_heap_extra_B=1176
+mem_stacks_B=2992
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=8101372739
+mem_heap_B=6120
+mem_heap_extra_B=1248
+mem_stacks_B=5936
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=8280454574
+mem_heap_B=6312
+mem_heap_extra_B=1200
+mem_stacks_B=4264
+heap_tree=detailed
+n5: 6312 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5264 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 5264 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 1872 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1872 0x115794: gmp_subtract (fp.c:72)
+     n4: 1872 0x115D39: fp_Subtract (fp.c:192)
+      n3: 728 0x11132C: fp2_Multiply (fp2.c:136)
+       n1: 312 0x10FAC3: eval_3_iso (isogeny.c:119)
+        n0: 312 in 3 places, all below massif's threshold (1.00%)
+       n0: 208 in 8 places, all below massif's threshold (1.00%)
+       n1: 208 0x10FA9B: eval_3_iso (isogeny.c:118)
+        n0: 208 in 2 places, all below massif's threshold (1.00%)
+      n3: 728 0x111378: fp2_Multiply (fp2.c:141)
+       n1: 312 0x10FAC3: eval_3_iso (isogeny.c:119)
+        n0: 312 in 3 places, all below massif's threshold (1.00%)
+       n0: 208 in 11 places, all below massif's threshold (1.00%)
+       n1: 208 0x10FA9B: eval_3_iso (isogeny.c:118)
+        n0: 208 in 2 places, all below massif's threshold (1.00%)
+      n2: 208 0x111487: fp2_Sub (fp2.c:196)
+       n1: 208 0x1128BB: xADD (montgomery.c:237)
+        n0: 208 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 208 0x1114AB: fp2_Sub (fp2.c:197)
+       n1: 208 0x1128BB: xADD (montgomery.c:237)
+        n0: 208 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 1560 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1560 0x115DC0: fp_ImportHex (fp.c:204)
+     n0: 1560 in 15 places, all below massif's threshold (1.00%)
+   n1: 960 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 960 0x115490: gmp_copy_fp (fp.c:23)
+     n2: 960 0x115B4F: fp_Copy (fp.c:151)
+      n1: 480 0x110F7D: fp2_Copy (fp2.c:39)
+       n0: 480 in 7 places, all below massif's threshold (1.00%)
+      n1: 480 0x110F9C: fp2_Copy (fp2.c:40)
+       n0: 480 in 6 places, all below massif's threshold (1.00%)
+   n2: 624 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 416 0x115425: gmp_add_fp (fp.c:14)
+     n3: 416 0x115AC4: fp_Add (fp.c:139)
+      n1: 208 0x110EEE: fp2_Add (fp2.c:17)
+       n0: 208 in 6 places, all below massif's threshold (1.00%)
+      n1: 208 0x110F12: fp2_Add (fp2.c:18)
+       n0: 208 in 6 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+    n1: 208 0x4E4FC8C: __gmpz_mod (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 208 0x1155D3: gmp_negative (fp.c:50)
+      n1: 208 0x115C71: fp_Negative (fp.c:175)
+       n0: 208 in 2 places, all below massif's threshold (1.00%)
+   n1: 152 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 152 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 152 0x115923: mp_pow (fp.c:105)
+      n0: 152 in 2 places, all below massif's threshold (1.00%)
+   n0: 96 in 5 places, all below massif's threshold (1.00%)
+ n3: 744 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 576 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 576 0x11557B: gmp_multiply (fp.c:43)
+    n4: 576 0x115C41: fp_Multiply (fp.c:171)
+     n2: 192 0x1111C6: fp2_Invert (fp2.c:103)
+      n2: 192 0x112723: xADD (montgomery.c:217)
+       n1: 192 0x1129E5: xTPL (montgomery.c:254)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 3 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 192 0x1111E2: fp2_Invert (fp2.c:104)
+      n2: 192 0x112723: xADD (montgomery.c:217)
+       n1: 192 0x1129E5: xTPL (montgomery.c:254)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 3 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 192 0x1112AA: fp2_Multiply (fp2.c:130)
+      n2: 192 0x1127CD: xADD (montgomery.c:225)
+       n1: 192 0x1129E5: xTPL (montgomery.c:254)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 3 places, all below massif's threshold (1.00%)
+      n0: 0 in 48 places, all below massif's threshold (1.00%)
+     n0: 0 in 2 places, all below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 168 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 168 0x115812: gmp_init (fp.c:85)
+    n1: 168 0x115A8F: fp_Init (fp.c:135)
+     n0: 168 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x114B6A: sike_setup_params (sike_params.c:173)
+  n0: 152 0x109C32: main (test.c:71)
+ n1: 152 0x114B78: sike_setup_params (sike_params.c:174)
+  n0: 152 0x109C32: main (test.c:71)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=38
+#-----------
+time=8459536428
+mem_heap_B=6688
+mem_heap_extra_B=1176
+mem_stacks_B=3488
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=8638618246
+mem_heap_B=6304
+mem_heap_extra_B=1224
+mem_stacks_B=4264
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=8817700162
+mem_heap_B=6320
+mem_heap_extra_B=1224
+mem_stacks_B=4264
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=8996782263
+mem_heap_B=5920
+mem_heap_extra_B=1208
+mem_stacks_B=4232
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=9175864654
+mem_heap_B=6320
+mem_heap_extra_B=1224
+mem_stacks_B=4264
+heap_tree=detailed
+n5: 6320 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5072 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 5072 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 2288 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 2288 0x115794: gmp_subtract (fp.c:72)
+     n4: 2288 0x115D39: fp_Subtract (fp.c:192)
+      n3: 936 0x11132C: fp2_Multiply (fp2.c:136)
+       n0: 416 in 8 places, all below massif's threshold (1.00%)
+       n1: 312 0x10FAC3: eval_3_iso (isogeny.c:119)
+        n0: 312 in 3 places, all below massif's threshold (1.00%)
+       n1: 208 0x10FA9B: eval_3_iso (isogeny.c:118)
+        n0: 208 in 2 places, all below massif's threshold (1.00%)
+      n3: 936 0x111378: fp2_Multiply (fp2.c:141)
+       n0: 416 in 11 places, all below massif's threshold (1.00%)
+       n1: 312 0x10FAC3: eval_3_iso (isogeny.c:119)
+        n0: 312 in 3 places, all below massif's threshold (1.00%)
+       n1: 208 0x10FA9B: eval_3_iso (isogeny.c:118)
+        n0: 208 in 2 places, all below massif's threshold (1.00%)
+      n2: 208 0x111487: fp2_Sub (fp2.c:196)
+       n1: 208 0x1128BB: xADD (montgomery.c:237)
+        n0: 208 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 208 0x1114AB: fp2_Sub (fp2.c:197)
+       n1: 208 0x1128BB: xADD (montgomery.c:237)
+        n0: 208 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 1560 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1560 0x115DC0: fp_ImportHex (fp.c:204)
+     n0: 1560 in 15 places, all below massif's threshold (1.00%)
+   n1: 768 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 768 0x115490: gmp_copy_fp (fp.c:23)
+     n2: 768 0x115B4F: fp_Copy (fp.c:151)
+      n1: 384 0x110F7D: fp2_Copy (fp2.c:39)
+       n0: 384 in 7 places, all below massif's threshold (1.00%)
+      n1: 384 0x110F9C: fp2_Copy (fp2.c:40)
+       n0: 384 in 6 places, all below massif's threshold (1.00%)
+   n2: 208 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 208 0x115425: gmp_add_fp (fp.c:14)
+     n1: 208 0x115AC4: fp_Add (fp.c:139)
+      n0: 208 in 6 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 152 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 152 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 152 0x115923: mp_pow (fp.c:105)
+      n0: 152 in 2 places, all below massif's threshold (1.00%)
+   n0: 96 in 5 places, all below massif's threshold (1.00%)
+ n3: 944 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 768 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 768 0x11557B: gmp_multiply (fp.c:43)
+    n5: 768 0x115C41: fp_Multiply (fp.c:171)
+     n2: 192 0x1111C6: fp2_Invert (fp2.c:103)
+      n2: 192 0x112188: xDBL (montgomery.c:145)
+       n1: 192 0x1129CD: xTPL (montgomery.c:253)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 192 0x1111E2: fp2_Invert (fp2.c:104)
+      n2: 192 0x112188: xDBL (montgomery.c:145)
+       n1: 192 0x1129CD: xTPL (montgomery.c:253)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 192 0x1112AA: fp2_Multiply (fp2.c:130)
+      n2: 192 0x11224A: xDBL (montgomery.c:156)
+       n1: 192 0x1129CD: xTPL (montgomery.c:253)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 48 places, all below massif's threshold (1.00%)
+     n2: 192 0x1112D0: fp2_Multiply (fp2.c:131)
+      n2: 192 0x11224A: xDBL (montgomery.c:156)
+       n1: 192 0x1129CD: xTPL (montgomery.c:253)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 47 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 176 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 176 0x115812: gmp_init (fp.c:85)
+    n1: 176 0x115A8F: fp_Init (fp.c:135)
+     n0: 176 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x114B6A: sike_setup_params (sike_params.c:173)
+  n0: 152 0x109C32: main (test.c:71)
+ n1: 152 0x114B78: sike_setup_params (sike_params.c:174)
+  n0: 152 0x109C32: main (test.c:71)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=43
+#-----------
+time=9444488074
+mem_heap_B=6496
+mem_heap_extra_B=1192
+mem_stacks_B=3184
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=9713110936
+mem_heap_B=6096
+mem_heap_extra_B=1128
+mem_stacks_B=3216
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=9892193234
+mem_heap_B=6288
+mem_heap_extra_B=1160
+mem_stacks_B=5904
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=10071276529
+mem_heap_B=6288
+mem_heap_extra_B=1160
+mem_stacks_B=5904
+heap_tree=detailed
+n5: 6288 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5056 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 5056 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 1872 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1872 0x115794: gmp_subtract (fp.c:72)
+     n4: 1872 0x115D39: fp_Subtract (fp.c:192)
+      n3: 728 0x11132C: fp2_Multiply (fp2.c:136)
+       n1: 312 0x10FAC3: eval_3_iso (isogeny.c:119)
+        n0: 312 in 3 places, all below massif's threshold (1.00%)
+       n0: 208 in 8 places, all below massif's threshold (1.00%)
+       n1: 208 0x10FA9B: eval_3_iso (isogeny.c:118)
+        n0: 208 in 2 places, all below massif's threshold (1.00%)
+      n3: 728 0x111378: fp2_Multiply (fp2.c:141)
+       n1: 312 0x10FAC3: eval_3_iso (isogeny.c:119)
+        n0: 312 in 3 places, all below massif's threshold (1.00%)
+       n0: 208 in 11 places, all below massif's threshold (1.00%)
+       n1: 208 0x10FA9B: eval_3_iso (isogeny.c:118)
+        n0: 208 in 2 places, all below massif's threshold (1.00%)
+      n2: 208 0x111487: fp2_Sub (fp2.c:196)
+       n1: 208 0x1128BB: xADD (montgomery.c:237)
+        n0: 208 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 208 0x1114AB: fp2_Sub (fp2.c:197)
+       n1: 208 0x1128BB: xADD (montgomery.c:237)
+        n0: 208 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 1560 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1560 0x115DC0: fp_ImportHex (fp.c:204)
+     n0: 1560 in 15 places, all below massif's threshold (1.00%)
+   n1: 960 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 960 0x115490: gmp_copy_fp (fp.c:23)
+     n2: 960 0x115B4F: fp_Copy (fp.c:151)
+      n1: 480 0x110F7D: fp2_Copy (fp2.c:39)
+       n0: 480 in 7 places, all below massif's threshold (1.00%)
+      n1: 480 0x110F9C: fp2_Copy (fp2.c:40)
+       n0: 480 in 6 places, all below massif's threshold (1.00%)
+   n2: 416 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 208 0x115425: gmp_add_fp (fp.c:14)
+     n1: 208 0x115AC4: fp_Add (fp.c:139)
+      n0: 208 in 6 places, all below massif's threshold (1.00%)
+    n1: 208 0x4E4FC8C: __gmpz_mod (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 208 0x1155D3: gmp_negative (fp.c:50)
+      n1: 208 0x115C71: fp_Negative (fp.c:175)
+       n0: 208 in 2 places, all below massif's threshold (1.00%)
+   n1: 152 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 152 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 152 0x115923: mp_pow (fp.c:105)
+      n0: 152 in 2 places, all below massif's threshold (1.00%)
+   n0: 96 in 5 places, all below massif's threshold (1.00%)
+ n3: 928 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 768 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 384 0x11557B: gmp_multiply (fp.c:43)
+    n3: 384 0x115C41: fp_Multiply (fp.c:171)
+     n2: 192 0x1111C6: fp2_Invert (fp2.c:103)
+      n2: 192 0x112723: xADD (montgomery.c:217)
+       n1: 192 0x1129E5: xTPL (montgomery.c:254)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 3 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 192 0x1111E2: fp2_Invert (fp2.c:104)
+      n2: 192 0x112723: xADD (montgomery.c:217)
+       n1: 192 0x1129E5: xTPL (montgomery.c:254)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 3 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n1: 384 0x11574B: gmp_square (fp.c:67)
+    n2: 384 0x115D01: fp_Square (fp.c:188)
+     n2: 192 0x111149: fp2_Invert (fp2.c:95)
+      n2: 192 0x112723: xADD (montgomery.c:217)
+       n1: 192 0x1129E5: xTPL (montgomery.c:254)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 3 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 192 0x111164: fp2_Invert (fp2.c:96)
+      n2: 192 0x112723: xADD (montgomery.c:217)
+       n1: 192 0x1129E5: xTPL (montgomery.c:254)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 3 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+  n1: 160 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 160 0x115812: gmp_init (fp.c:85)
+    n1: 160 0x115A8F: fp_Init (fp.c:135)
+     n0: 160 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x114B6A: sike_setup_params (sike_params.c:173)
+  n0: 152 0x109C32: main (test.c:71)
+ n1: 152 0x114B78: sike_setup_params (sike_params.c:174)
+  n0: 152 0x109C32: main (test.c:71)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=47
+#-----------
+time=10339901760
+mem_heap_B=5760
+mem_heap_extra_B=1256
+mem_stacks_B=4096
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=10608525322
+mem_heap_B=5472
+mem_heap_extra_B=1288
+mem_stacks_B=3232
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=10877148138
+mem_heap_B=6688
+mem_heap_extra_B=1176
+mem_stacks_B=3024
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=11017855928
+mem_heap_B=5744
+mem_heap_extra_B=1224
+mem_stacks_B=5008
+heap_tree=detailed
+n5: 5744 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4864 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 4864 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 2080 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 2080 0x115794: gmp_subtract (fp.c:72)
+     n4: 2080 0x115D39: fp_Subtract (fp.c:192)
+      n3: 832 0x11132C: fp2_Multiply (fp2.c:136)
+       n0: 312 in 8 places, all below massif's threshold (1.00%)
+       n1: 312 0x10FAC3: eval_3_iso (isogeny.c:119)
+        n0: 312 in 3 places, all below massif's threshold (1.00%)
+       n1: 208 0x10FA9B: eval_3_iso (isogeny.c:118)
+        n0: 208 in 2 places, all below massif's threshold (1.00%)
+      n3: 832 0x111378: fp2_Multiply (fp2.c:141)
+       n0: 312 in 11 places, all below massif's threshold (1.00%)
+       n1: 312 0x10FAC3: eval_3_iso (isogeny.c:119)
+        n0: 312 in 3 places, all below massif's threshold (1.00%)
+       n1: 208 0x10FA9B: eval_3_iso (isogeny.c:118)
+        n0: 208 in 2 places, all below massif's threshold (1.00%)
+      n2: 208 0x111487: fp2_Sub (fp2.c:196)
+       n1: 208 0x1128BB: xADD (montgomery.c:237)
+        n0: 208 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 208 0x1114AB: fp2_Sub (fp2.c:197)
+       n1: 208 0x1128BB: xADD (montgomery.c:237)
+        n0: 208 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 1560 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1560 0x115DC0: fp_ImportHex (fp.c:204)
+     n0: 1560 in 15 places, all below massif's threshold (1.00%)
+   n1: 768 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 768 0x115490: gmp_copy_fp (fp.c:23)
+     n2: 768 0x115B4F: fp_Copy (fp.c:151)
+      n1: 384 0x110F7D: fp2_Copy (fp2.c:39)
+       n0: 384 in 7 places, all below massif's threshold (1.00%)
+      n1: 384 0x110F9C: fp2_Copy (fp2.c:40)
+       n0: 384 in 6 places, all below massif's threshold (1.00%)
+   n2: 208 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 208 0x115425: gmp_add_fp (fp.c:14)
+     n1: 208 0x115AC4: fp_Add (fp.c:139)
+      n0: 208 in 6 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 152 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 152 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 152 0x115923: mp_pow (fp.c:105)
+      n0: 152 in 2 places, all below massif's threshold (1.00%)
+   n0: 96 in 5 places, all below massif's threshold (1.00%)
+ n3: 576 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 384 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 384 0x11574B: gmp_square (fp.c:67)
+    n2: 384 0x115D01: fp_Square (fp.c:188)
+     n2: 192 0x111149: fp2_Invert (fp2.c:95)
+      n2: 192 0x112188: xDBL (montgomery.c:145)
+       n1: 192 0x1129CD: xTPL (montgomery.c:253)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 192 0x111164: fp2_Invert (fp2.c:96)
+      n2: 192 0x112188: xDBL (montgomery.c:145)
+       n1: 192 0x1129CD: xTPL (montgomery.c:253)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 192 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 192 0x115812: gmp_init (fp.c:85)
+    n1: 192 0x115A8F: fp_Init (fp.c:135)
+     n0: 192 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x114B6A: sike_setup_params (sike_params.c:173)
+  n0: 152 0x109C32: main (test.c:71)
+ n1: 152 0x114B78: sike_setup_params (sike_params.c:174)
+  n0: 152 0x109C32: main (test.c:71)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=51
+#-----------
+time=11158564490
+mem_heap_B=5936
+mem_heap_extra_B=1240
+mem_stacks_B=5936
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=11299272314
+mem_heap_B=6496
+mem_heap_extra_B=1176
+mem_stacks_B=5936
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=11439980082
+mem_heap_B=6288
+mem_heap_extra_B=1160
+mem_stacks_B=4064
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=11580687854
+mem_heap_B=6096
+mem_heap_extra_B=1128
+mem_stacks_B=2944
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=11721396177
+mem_heap_B=5744
+mem_heap_extra_B=1224
+mem_stacks_B=6216
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=11862103974
+mem_heap_B=6312
+mem_heap_extra_B=1200
+mem_stacks_B=4264
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=12002811757
+mem_heap_B=6096
+mem_heap_extra_B=1128
+mem_stacks_B=3488
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=12143519568
+mem_heap_B=5760
+mem_heap_extra_B=1256
+mem_stacks_B=5936
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=12284227339
+mem_heap_B=5920
+mem_heap_extra_B=1176
+mem_stacks_B=2968
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=12424935110
+mem_heap_B=5728
+mem_heap_extra_B=1176
+mem_stacks_B=3248
+heap_tree=detailed
+n5: 5728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4864 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n5: 4864 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 2288 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 2288 0x115794: gmp_subtract (fp.c:72)
+     n4: 2288 0x115D39: fp_Subtract (fp.c:192)
+      n7: 936 0x11132C: fp2_Multiply (fp2.c:136)
+       n3: 312 0x10FAC3: eval_3_iso (isogeny.c:119)
+        n1: 104 0x110E3E: iso_3_e (isogeny.c:360)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+        n1: 104 0x110E62: iso_3_e (isogeny.c:363)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+        n1: 104 0x110E86: iso_3_e (isogeny.c:366)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+       n2: 208 0x10FA9B: eval_3_iso (isogeny.c:118)
+        n1: 104 0x110E62: iso_3_e (isogeny.c:363)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+        n1: 104 0x110E86: iso_3_e (isogeny.c:366)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+       n1: 104 0x10FC6C: curve_3_iso (isogeny.c:144)
+        n1: 104 0x110E26: iso_3_e (isogeny.c:358)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+       n1: 104 0x10FD46: curve_3_iso (isogeny.c:153)
+        n1: 104 0x110E26: iso_3_e (isogeny.c:358)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+       n2: 104 0x111454: fp2_Square (fp2.c:186)
+        n2: 104 0x112086: xDBL (montgomery.c:132)
+         n1: 104 0x1129CD: xTPL (montgomery.c:253)
+          n1: 104 0x112A60: xTPLe (montgomery.c:270)
+           n1: 104 0x110E08: iso_3_e (isogeny.c:357)
+            n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+             n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+              n0: 104 0x109D6D: main (test.c:80)
+         n0: 0 in 2 places, all below massif's threshold (1.00%)
+        n0: 0 in 8 places, all below massif's threshold (1.00%)
+       n2: 104 0x1121D8: xDBL (montgomery.c:151)
+        n1: 104 0x1129CD: xTPL (montgomery.c:253)
+         n1: 104 0x112A60: xTPLe (montgomery.c:270)
+          n1: 104 0x110E08: iso_3_e (isogeny.c:357)
+           n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+            n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+             n0: 104 0x109D6D: main (test.c:80)
+        n0: 0 in 2 places, all below massif's threshold (1.00%)
+       n0: 0 in 4 places, all below massif's threshold (1.00%)
+      n7: 936 0x111378: fp2_Multiply (fp2.c:141)
+       n3: 312 0x10FAC3: eval_3_iso (isogeny.c:119)
+        n1: 104 0x110E3E: iso_3_e (isogeny.c:360)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+        n1: 104 0x110E62: iso_3_e (isogeny.c:363)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+        n1: 104 0x110E86: iso_3_e (isogeny.c:366)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+       n2: 208 0x10FA9B: eval_3_iso (isogeny.c:118)
+        n1: 104 0x110E62: iso_3_e (isogeny.c:363)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+        n1: 104 0x110E86: iso_3_e (isogeny.c:366)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+       n1: 104 0x10FC6C: curve_3_iso (isogeny.c:144)
+        n1: 104 0x110E26: iso_3_e (isogeny.c:358)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+       n1: 104 0x10FD46: curve_3_iso (isogeny.c:153)
+        n1: 104 0x110E26: iso_3_e (isogeny.c:358)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+       n2: 104 0x111454: fp2_Square (fp2.c:186)
+        n2: 104 0x112086: xDBL (montgomery.c:132)
+         n1: 104 0x1129CD: xTPL (montgomery.c:253)
+          n1: 104 0x112A60: xTPLe (montgomery.c:270)
+           n1: 104 0x110E08: iso_3_e (isogeny.c:357)
+            n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+             n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+              n0: 104 0x109D6D: main (test.c:80)
+         n0: 0 in 2 places, all below massif's threshold (1.00%)
+        n0: 0 in 9 places, all below massif's threshold (1.00%)
+       n2: 104 0x1121D8: xDBL (montgomery.c:151)
+        n1: 104 0x1129CD: xTPL (montgomery.c:253)
+         n1: 104 0x112A60: xTPLe (montgomery.c:270)
+          n1: 104 0x110E08: iso_3_e (isogeny.c:357)
+           n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+            n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+             n0: 104 0x109D6D: main (test.c:80)
+        n0: 0 in 2 places, all below massif's threshold (1.00%)
+       n0: 0 in 7 places, all below massif's threshold (1.00%)
+      n2: 208 0x111487: fp2_Sub (fp2.c:196)
+       n3: 208 0x1128BB: xADD (montgomery.c:237)
+        n1: 104 0x1129E5: xTPL (montgomery.c:254)
+         n1: 104 0x112A60: xTPLe (montgomery.c:270)
+          n1: 104 0x110E08: iso_3_e (isogeny.c:357)
+           n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+            n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+             n0: 104 0x109D6D: main (test.c:80)
+        n2: 104 0x1137F9: sidh_isogen (sidh.c:124)
+         n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+          n0: 104 0x109D6D: main (test.c:80)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 2 places, all below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 208 0x1114AB: fp2_Sub (fp2.c:197)
+       n3: 208 0x1128BB: xADD (montgomery.c:237)
+        n1: 104 0x1129E5: xTPL (montgomery.c:254)
+         n1: 104 0x112A60: xTPLe (montgomery.c:270)
+          n1: 104 0x110E08: iso_3_e (isogeny.c:357)
+           n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+            n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+             n0: 104 0x109D6D: main (test.c:80)
+        n2: 104 0x1137F9: sidh_isogen (sidh.c:124)
+         n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+          n0: 104 0x109D6D: main (test.c:80)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 2 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 1560 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n15: 1560 0x115DC0: fp_ImportHex (fp.c:204)
+     n1: 104 0x114BD7: sike_setup_params (sike_params.c:183)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114D3C: sike_setup_params (sike_params.c:201)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114D57: sike_setup_params (sike_params.c:204)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114D72: sike_setup_params (sike_params.c:205)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114D8D: sike_setup_params (sike_params.c:206)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114DA8: sike_setup_params (sike_params.c:207)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114DC6: sike_setup_params (sike_params.c:208)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114DE4: sike_setup_params (sike_params.c:209)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114E02: sike_setup_params (sike_params.c:210)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114E20: sike_setup_params (sike_params.c:211)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114FD2: sike_setup_params (sike_params.c:234)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114FF0: sike_setup_params (sike_params.c:236)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x11502C: sike_setup_params (sike_params.c:238)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x11506B: sike_setup_params (sike_params.c:240)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x1150CE: sike_setup_params (sike_params.c:243)
+      n0: 104 0x109C32: main (test.c:71)
+   n1: 768 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 768 0x115490: gmp_copy_fp (fp.c:23)
+     n2: 768 0x115B4F: fp_Copy (fp.c:151)
+      n1: 384 0x110F7D: fp2_Copy (fp2.c:39)
+       n0: 384 in 7 places, all below massif's threshold (1.00%)
+      n1: 384 0x110F9C: fp2_Copy (fp2.c:40)
+       n0: 384 in 6 places, all below massif's threshold (1.00%)
+   n1: 152 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 152 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 152 0x115923: mp_pow (fp.c:105)
+      n0: 152 in 2 places, all below massif's threshold (1.00%)
+   n0: 96 in 6 places, all below massif's threshold (1.00%)
+ n3: 560 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 384 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 384 0x11557B: gmp_multiply (fp.c:43)
+    n3: 384 0x115C41: fp_Multiply (fp.c:171)
+     n2: 192 0x1111C6: fp2_Invert (fp2.c:103)
+      n2: 192 0x112188: xDBL (montgomery.c:145)
+       n1: 192 0x1129CD: xTPL (montgomery.c:253)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 192 0x1111E2: fp2_Invert (fp2.c:104)
+      n2: 192 0x112188: xDBL (montgomery.c:145)
+       n1: 192 0x1129CD: xTPL (montgomery.c:253)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 176 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 176 0x115812: gmp_init (fp.c:85)
+    n1: 176 0x115A8F: fp_Init (fp.c:135)
+     n0: 176 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x114B6A: sike_setup_params (sike_params.c:173)
+  n0: 152 0x109C32: main (test.c:71)
+ n1: 152 0x114B78: sike_setup_params (sike_params.c:174)
+  n0: 152 0x109C32: main (test.c:71)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=61
+#-----------
+time=12565642912
+mem_heap_B=5568
+mem_heap_extra_B=1288
+mem_stacks_B=4288
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=12706350680
+mem_heap_B=6320
+mem_heap_extra_B=1224
+mem_stacks_B=3576
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=12847058518
+mem_heap_B=6496
+mem_heap_extra_B=1176
+mem_stacks_B=4264
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=12987766552
+mem_heap_B=6688
+mem_heap_extra_B=1176
+mem_stacks_B=5936
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=13128475394
+mem_heap_B=6112
+mem_heap_extra_B=1176
+mem_stacks_B=5008
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=13269183166
+mem_heap_B=5744
+mem_heap_extra_B=1224
+mem_stacks_B=3544
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=13409891003
+mem_heap_B=6320
+mem_heap_extra_B=1224
+mem_stacks_B=4264
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=13550598820
+mem_heap_B=5928
+mem_heap_extra_B=1200
+mem_stacks_B=4232
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=13691306620
+mem_heap_B=5728
+mem_heap_extra_B=1176
+mem_stacks_B=3496
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=13832014392
+mem_heap_B=5936
+mem_heap_extra_B=1240
+mem_stacks_B=3112
+heap_tree=detailed
+n5: 5936 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4656 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n5: 4656 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 2080 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 2080 0x115794: gmp_subtract (fp.c:72)
+     n4: 2080 0x115D39: fp_Subtract (fp.c:192)
+      n6: 832 0x11132C: fp2_Multiply (fp2.c:136)
+       n3: 312 0x10FAC3: eval_3_iso (isogeny.c:119)
+        n1: 104 0x110E3E: iso_3_e (isogeny.c:360)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+        n1: 104 0x110E62: iso_3_e (isogeny.c:363)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+        n1: 104 0x110E86: iso_3_e (isogeny.c:366)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+       n2: 208 0x10FA9B: eval_3_iso (isogeny.c:118)
+        n1: 104 0x110E62: iso_3_e (isogeny.c:363)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+        n1: 104 0x110E86: iso_3_e (isogeny.c:366)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+       n1: 104 0x10FC6C: curve_3_iso (isogeny.c:144)
+        n1: 104 0x110E26: iso_3_e (isogeny.c:358)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+       n1: 104 0x10FD46: curve_3_iso (isogeny.c:153)
+        n1: 104 0x110E26: iso_3_e (isogeny.c:358)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+       n2: 104 0x111454: fp2_Square (fp2.c:186)
+        n2: 104 0x112086: xDBL (montgomery.c:132)
+         n1: 104 0x1129CD: xTPL (montgomery.c:253)
+          n1: 104 0x112A60: xTPLe (montgomery.c:270)
+           n1: 104 0x110E08: iso_3_e (isogeny.c:357)
+            n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+             n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+              n0: 104 0x109D6D: main (test.c:80)
+         n0: 0 in 2 places, all below massif's threshold (1.00%)
+        n0: 0 in 8 places, all below massif's threshold (1.00%)
+       n0: 0 in 5 places, all below massif's threshold (1.00%)
+      n6: 832 0x111378: fp2_Multiply (fp2.c:141)
+       n3: 312 0x10FAC3: eval_3_iso (isogeny.c:119)
+        n1: 104 0x110E3E: iso_3_e (isogeny.c:360)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+        n1: 104 0x110E62: iso_3_e (isogeny.c:363)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+        n1: 104 0x110E86: iso_3_e (isogeny.c:366)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+       n2: 208 0x10FA9B: eval_3_iso (isogeny.c:118)
+        n1: 104 0x110E62: iso_3_e (isogeny.c:363)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+        n1: 104 0x110E86: iso_3_e (isogeny.c:366)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+       n1: 104 0x10FC6C: curve_3_iso (isogeny.c:144)
+        n1: 104 0x110E26: iso_3_e (isogeny.c:358)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+       n1: 104 0x10FD46: curve_3_iso (isogeny.c:153)
+        n1: 104 0x110E26: iso_3_e (isogeny.c:358)
+         n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+          n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+           n0: 104 0x109D6D: main (test.c:80)
+       n2: 104 0x111454: fp2_Square (fp2.c:186)
+        n2: 104 0x112086: xDBL (montgomery.c:132)
+         n1: 104 0x1129CD: xTPL (montgomery.c:253)
+          n1: 104 0x112A60: xTPLe (montgomery.c:270)
+           n1: 104 0x110E08: iso_3_e (isogeny.c:357)
+            n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+             n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+              n0: 104 0x109D6D: main (test.c:80)
+         n0: 0 in 2 places, all below massif's threshold (1.00%)
+        n0: 0 in 9 places, all below massif's threshold (1.00%)
+       n0: 0 in 8 places, all below massif's threshold (1.00%)
+      n2: 208 0x111487: fp2_Sub (fp2.c:196)
+       n3: 208 0x1128BB: xADD (montgomery.c:237)
+        n1: 104 0x1129E5: xTPL (montgomery.c:254)
+         n1: 104 0x112A60: xTPLe (montgomery.c:270)
+          n1: 104 0x110E08: iso_3_e (isogeny.c:357)
+           n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+            n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+             n0: 104 0x109D6D: main (test.c:80)
+        n2: 104 0x1137F9: sidh_isogen (sidh.c:124)
+         n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+          n0: 104 0x109D6D: main (test.c:80)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 2 places, all below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 208 0x1114AB: fp2_Sub (fp2.c:197)
+       n3: 208 0x1128BB: xADD (montgomery.c:237)
+        n1: 104 0x1129E5: xTPL (montgomery.c:254)
+         n1: 104 0x112A60: xTPLe (montgomery.c:270)
+          n1: 104 0x110E08: iso_3_e (isogeny.c:357)
+           n1: 104 0x1138B4: sidh_isogen (sidh.c:129)
+            n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+             n0: 104 0x109D6D: main (test.c:80)
+        n2: 104 0x1137F9: sidh_isogen (sidh.c:124)
+         n1: 104 0x109B04: benchmark_keygen_B (test.c:40)
+          n0: 104 0x109D6D: main (test.c:80)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 2 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 1560 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n15: 1560 0x115DC0: fp_ImportHex (fp.c:204)
+     n1: 104 0x114BD7: sike_setup_params (sike_params.c:183)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114D3C: sike_setup_params (sike_params.c:201)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114D57: sike_setup_params (sike_params.c:204)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114D72: sike_setup_params (sike_params.c:205)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114D8D: sike_setup_params (sike_params.c:206)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114DA8: sike_setup_params (sike_params.c:207)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114DC6: sike_setup_params (sike_params.c:208)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114DE4: sike_setup_params (sike_params.c:209)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114E02: sike_setup_params (sike_params.c:210)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114E20: sike_setup_params (sike_params.c:211)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114FD2: sike_setup_params (sike_params.c:234)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x114FF0: sike_setup_params (sike_params.c:236)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x11502C: sike_setup_params (sike_params.c:238)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x11506B: sike_setup_params (sike_params.c:240)
+      n0: 104 0x109C32: main (test.c:71)
+     n1: 104 0x1150CE: sike_setup_params (sike_params.c:243)
+      n0: 104 0x109C32: main (test.c:71)
+   n1: 768 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 768 0x115490: gmp_copy_fp (fp.c:23)
+     n2: 768 0x115B4F: fp_Copy (fp.c:151)
+      n1: 384 0x110F7D: fp2_Copy (fp2.c:39)
+       n0: 384 in 7 places, all below massif's threshold (1.00%)
+      n1: 384 0x110F9C: fp2_Copy (fp2.c:40)
+       n0: 384 in 6 places, all below massif's threshold (1.00%)
+   n1: 152 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 152 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 152 0x115923: mp_pow (fp.c:105)
+      n0: 152 in 2 places, all below massif's threshold (1.00%)
+   n0: 96 in 6 places, all below massif's threshold (1.00%)
+ n3: 976 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 768 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 768 0x11557B: gmp_multiply (fp.c:43)
+    n5: 768 0x115C41: fp_Multiply (fp.c:171)
+     n2: 192 0x1111C6: fp2_Invert (fp2.c:103)
+      n2: 192 0x112188: xDBL (montgomery.c:145)
+       n1: 192 0x1129CD: xTPL (montgomery.c:253)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 192 0x1111E2: fp2_Invert (fp2.c:104)
+      n2: 192 0x112188: xDBL (montgomery.c:145)
+       n1: 192 0x1129CD: xTPL (montgomery.c:253)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 192 0x1112AA: fp2_Multiply (fp2.c:130)
+      n2: 192 0x111454: fp2_Square (fp2.c:186)
+       n2: 192 0x1121BD: xDBL (montgomery.c:149)
+        n1: 192 0x1129CD: xTPL (montgomery.c:253)
+         n1: 192 0x112A60: xTPLe (montgomery.c:270)
+          n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+           n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+            n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+             n0: 192 0x109D6D: main (test.c:80)
+        n0: 0 in 2 places, all below massif's threshold (1.00%)
+       n0: 0 in 14 places, all below massif's threshold (1.00%)
+      n0: 0 in 48 places, all below massif's threshold (1.00%)
+     n2: 192 0x1112D0: fp2_Multiply (fp2.c:131)
+      n2: 192 0x111454: fp2_Square (fp2.c:186)
+       n2: 192 0x1121BD: xDBL (montgomery.c:149)
+        n1: 192 0x1129CD: xTPL (montgomery.c:253)
+         n1: 192 0x112A60: xTPLe (montgomery.c:270)
+          n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+           n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+            n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+             n0: 192 0x109D6D: main (test.c:80)
+        n0: 0 in 2 places, all below massif's threshold (1.00%)
+       n0: 0 in 14 places, all below massif's threshold (1.00%)
+      n0: 0 in 47 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 208 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 208 0x115812: gmp_init (fp.c:85)
+    n1: 208 0x115A8F: fp_Init (fp.c:135)
+     n0: 208 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x114B6A: sike_setup_params (sike_params.c:173)
+  n0: 152 0x109C32: main (test.c:71)
+ n1: 152 0x114B78: sike_setup_params (sike_params.c:174)
+  n0: 152 0x109C32: main (test.c:71)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=71
+#-----------
+time=13972722179
+mem_heap_B=5360
+mem_heap_extra_B=1208
+mem_stacks_B=3104
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=14113429952
+mem_heap_B=6320
+mem_heap_extra_B=1224
+mem_stacks_B=4096
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=14254137744
+mem_heap_B=6096
+mem_heap_extra_B=1128
+mem_stacks_B=3488
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=14394845531
+mem_heap_B=6096
+mem_heap_extra_B=1128
+mem_stacks_B=2848
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=14535553900
+mem_heap_B=5936
+mem_heap_extra_B=1240
+mem_stacks_B=5936
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=14676261737
+mem_heap_B=6496
+mem_heap_extra_B=1176
+mem_stacks_B=4264
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=14816969664
+mem_heap_B=6496
+mem_heap_extra_B=1176
+mem_stacks_B=5936
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=14957677463
+mem_heap_B=5744
+mem_heap_extra_B=1224
+mem_stacks_B=5040
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=15098385234
+mem_heap_B=6112
+mem_heap_extra_B=1176
+mem_stacks_B=3952
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=15239093025
+mem_heap_B=6512
+mem_heap_extra_B=1224
+mem_stacks_B=3168
+heap_tree=detailed
+n5: 6512 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5280 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 5280 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 2288 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 2288 0x115794: gmp_subtract (fp.c:72)
+     n4: 2288 0x115D39: fp_Subtract (fp.c:192)
+      n3: 936 0x11132C: fp2_Multiply (fp2.c:136)
+       n0: 416 in 8 places, all below massif's threshold (1.00%)
+       n1: 312 0x10FAC3: eval_3_iso (isogeny.c:119)
+        n0: 312 in 3 places, all below massif's threshold (1.00%)
+       n1: 208 0x10FA9B: eval_3_iso (isogeny.c:118)
+        n0: 208 in 2 places, all below massif's threshold (1.00%)
+      n3: 936 0x111378: fp2_Multiply (fp2.c:141)
+       n0: 416 in 11 places, all below massif's threshold (1.00%)
+       n1: 312 0x10FAC3: eval_3_iso (isogeny.c:119)
+        n0: 312 in 3 places, all below massif's threshold (1.00%)
+       n1: 208 0x10FA9B: eval_3_iso (isogeny.c:118)
+        n0: 208 in 2 places, all below massif's threshold (1.00%)
+      n2: 208 0x111487: fp2_Sub (fp2.c:196)
+       n1: 208 0x1128BB: xADD (montgomery.c:237)
+        n0: 208 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 208 0x1114AB: fp2_Sub (fp2.c:197)
+       n1: 208 0x1128BB: xADD (montgomery.c:237)
+        n0: 208 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 1560 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1560 0x115DC0: fp_ImportHex (fp.c:204)
+     n0: 1560 in 15 places, all below massif's threshold (1.00%)
+   n1: 768 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 768 0x115490: gmp_copy_fp (fp.c:23)
+     n2: 768 0x115B4F: fp_Copy (fp.c:151)
+      n1: 384 0x110F7D: fp2_Copy (fp2.c:39)
+       n0: 384 in 7 places, all below massif's threshold (1.00%)
+      n1: 384 0x110F9C: fp2_Copy (fp2.c:40)
+       n0: 384 in 6 places, all below massif's threshold (1.00%)
+   n2: 416 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 416 0x115425: gmp_add_fp (fp.c:14)
+     n1: 416 0x115AC4: fp_Add (fp.c:139)
+      n0: 416 in 6 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 152 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 152 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 152 0x115923: mp_pow (fp.c:105)
+      n0: 152 in 2 places, all below massif's threshold (1.00%)
+   n0: 96 in 5 places, all below massif's threshold (1.00%)
+ n3: 928 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 768 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 768 0x11557B: gmp_multiply (fp.c:43)
+    n5: 768 0x115C41: fp_Multiply (fp.c:171)
+     n2: 192 0x1111C6: fp2_Invert (fp2.c:103)
+      n2: 192 0x112188: xDBL (montgomery.c:145)
+       n1: 192 0x1129CD: xTPL (montgomery.c:253)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 192 0x1111E2: fp2_Invert (fp2.c:104)
+      n2: 192 0x112188: xDBL (montgomery.c:145)
+       n1: 192 0x1129CD: xTPL (montgomery.c:253)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 192 0x1112AA: fp2_Multiply (fp2.c:130)
+      n2: 192 0x112333: xDBL (montgomery.c:163)
+       n1: 192 0x1129CD: xTPL (montgomery.c:253)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 48 places, all below massif's threshold (1.00%)
+     n2: 192 0x1112D0: fp2_Multiply (fp2.c:131)
+      n2: 192 0x112333: xDBL (montgomery.c:163)
+       n1: 192 0x1129CD: xTPL (montgomery.c:253)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 47 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 160 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 160 0x115812: gmp_init (fp.c:85)
+    n1: 160 0x115A8F: fp_Init (fp.c:135)
+     n0: 160 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x114B6A: sike_setup_params (sike_params.c:173)
+  n0: 152 0x109C32: main (test.c:71)
+ n1: 152 0x114B78: sike_setup_params (sike_params.c:174)
+  n0: 152 0x109C32: main (test.c:71)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=81
+#-----------
+time=15379800813
+mem_heap_B=6496
+mem_heap_extra_B=1176
+mem_stacks_B=4264
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=15520508599
+mem_heap_B=6312
+mem_heap_extra_B=1200
+mem_stacks_B=4264
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=15661216380
+mem_heap_B=6496
+mem_heap_extra_B=1192
+mem_stacks_B=3096
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=15801924149
+mem_heap_B=6096
+mem_heap_extra_B=1128
+mem_stacks_B=3680
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=15942631920
+mem_heap_B=6128
+mem_heap_extra_B=1240
+mem_stacks_B=3712
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=16083339725
+mem_heap_B=6688
+mem_heap_extra_B=1176
+mem_stacks_B=3568
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=16224047513
+mem_heap_B=5752
+mem_heap_extra_B=1264
+mem_stacks_B=4312
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=16364755562
+mem_heap_B=6288
+mem_heap_extra_B=1160
+mem_stacks_B=5904
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=16505464232
+mem_heap_B=5744
+mem_heap_extra_B=1224
+mem_stacks_B=5008
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=16646172027
+mem_heap_B=5744
+mem_heap_extra_B=1224
+mem_stacks_B=4968
+heap_tree=detailed
+n5: 5744 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4864 0x4E3C6E2: __gmp_default_reallocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n6: 4864 0x4E53B48: __gmpz_realloc (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 2080 0x4E5581C: __gmpz_sub (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 2080 0x115794: gmp_subtract (fp.c:72)
+     n4: 2080 0x115D39: fp_Subtract (fp.c:192)
+      n3: 832 0x11132C: fp2_Multiply (fp2.c:136)
+       n0: 312 in 8 places, all below massif's threshold (1.00%)
+       n1: 312 0x10FAC3: eval_3_iso (isogeny.c:119)
+        n0: 312 in 3 places, all below massif's threshold (1.00%)
+       n1: 208 0x10FA9B: eval_3_iso (isogeny.c:118)
+        n0: 208 in 2 places, all below massif's threshold (1.00%)
+      n3: 832 0x111378: fp2_Multiply (fp2.c:141)
+       n0: 312 in 11 places, all below massif's threshold (1.00%)
+       n1: 312 0x10FAC3: eval_3_iso (isogeny.c:119)
+        n0: 312 in 3 places, all below massif's threshold (1.00%)
+       n1: 208 0x10FA9B: eval_3_iso (isogeny.c:118)
+        n0: 208 in 2 places, all below massif's threshold (1.00%)
+      n2: 208 0x111487: fp2_Sub (fp2.c:196)
+       n1: 208 0x1128BB: xADD (montgomery.c:237)
+        n0: 208 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n2: 208 0x1114AB: fp2_Sub (fp2.c:197)
+       n1: 208 0x1128BB: xADD (montgomery.c:237)
+        n0: 208 in 4 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 1560 0x4E54E86: __gmpz_set_str (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 1560 0x115DC0: fp_ImportHex (fp.c:204)
+     n0: 1560 in 15 places, all below massif's threshold (1.00%)
+   n1: 768 0x4E54943: __gmpz_set (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 768 0x115490: gmp_copy_fp (fp.c:23)
+     n2: 768 0x115B4F: fp_Copy (fp.c:151)
+      n1: 384 0x110F7D: fp2_Copy (fp2.c:39)
+       n0: 384 in 7 places, all below massif's threshold (1.00%)
+      n1: 384 0x110F9C: fp2_Copy (fp2.c:40)
+       n0: 384 in 6 places, all below massif's threshold (1.00%)
+   n2: 208 0x4E436DC: __gmpz_add (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 208 0x115425: gmp_add_fp (fp.c:14)
+     n1: 208 0x115AC4: fp_Add (fp.c:139)
+      n0: 208 in 6 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 152 0x4E50A9B: __gmpz_n_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+    n1: 152 0x4E56CB0: __gmpz_ui_pow_ui (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+     n1: 152 0x115923: mp_pow (fp.c:105)
+      n0: 152 in 2 places, all below massif's threshold (1.00%)
+   n0: 96 in 5 places, all below massif's threshold (1.00%)
+ n3: 576 0x4E3C697: __gmp_default_allocate (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+  n2: 384 0x4E4FEBC: __gmpz_mul (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n1: 384 0x11574B: gmp_square (fp.c:67)
+    n2: 384 0x115D01: fp_Square (fp.c:188)
+     n2: 192 0x111149: fp2_Invert (fp2.c:95)
+      n2: 192 0x112188: xDBL (montgomery.c:145)
+       n1: 192 0x1129CD: xTPL (montgomery.c:253)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+     n2: 192 0x111164: fp2_Invert (fp2.c:96)
+      n2: 192 0x112188: xDBL (montgomery.c:145)
+       n1: 192 0x1129CD: xTPL (montgomery.c:253)
+        n1: 192 0x112A60: xTPLe (montgomery.c:270)
+         n1: 192 0x110E08: iso_3_e (isogeny.c:357)
+          n1: 192 0x1138B4: sidh_isogen (sidh.c:129)
+           n1: 192 0x109B04: benchmark_keygen_B (test.c:40)
+            n0: 192 0x109D6D: main (test.c:80)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 4 places, all below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 192 0x4E4CE36: __gmpz_init (in /usr/lib/x86_64-linux-gnu/libgmp.so.10.3.2)
+   n2: 192 0x115812: gmp_init (fp.c:85)
+    n1: 192 0x115A8F: fp_Init (fp.c:135)
+     n0: 192 in 29 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 152 0x114B6A: sike_setup_params (sike_params.c:173)
+  n0: 152 0x109C32: main (test.c:71)
+ n1: 152 0x114B78: sike_setup_params (sike_params.c:174)
+  n0: 152 0x109C32: main (test.c:71)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=91
+#-----------
+time=16786879812
+mem_heap_B=6224
+mem_heap_extra_B=1224
+mem_stacks_B=3656
+heap_tree=empty
+#-----------
+snapshot=92
+#-----------
+time=16927587623
+mem_heap_B=5936
+mem_heap_extra_B=1240
+mem_stacks_B=4264
+heap_tree=empty
+#-----------
+snapshot=93
+#-----------
+time=17068295397
+mem_heap_B=6096
+mem_heap_extra_B=1128
+mem_stacks_B=3488
+heap_tree=empty
+#-----------
+snapshot=94
+#-----------
+time=17209003178
+mem_heap_B=5944
+mem_heap_extra_B=1264
+mem_stacks_B=4104
+heap_tree=empty
+#-----------
+snapshot=95
+#-----------
+time=17349711602
+mem_heap_B=6320
+mem_heap_extra_B=1240
+mem_stacks_B=5792
+heap_tree=empty
+#-----------
+snapshot=96
+#-----------
+time=17490419379
+mem_heap_B=6200
+mem_heap_extra_B=1168
+mem_stacks_B=4232
+heap_tree=empty
+#-----------
+snapshot=97
+#-----------
+time=17631127155
+mem_heap_B=5424
+mem_heap_extra_B=1128
+mem_stacks_B=2808
+heap_tree=empty

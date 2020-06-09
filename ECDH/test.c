@@ -1,39 +1,50 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 
 #include <openssl/evp.h>
 #include <openssl/ec.h>
 
-#include <countcpu.h>
 
-#define REPETITIONS 500
-
-typedef unsigned long CYCLES;
-
-
-void handleErrors(){
-    printf("Error");
-    exit(0);
-}
-
-void benchmark_keygen(const int rep)
+void benchmark_keygen()
 {
-	EC_KEY *key;
-	if(NULL == (key = EC_KEY_new_by_curve_name(NID_X9_62_prime256v1))) handleErrors();
+	EVP_PKEY_CTX *pctx;
+	EVP_PKEY_CTX *ctx;
+	EVP_PKEY *key_A = NULL, *key_B = NULL;
+	int status;
 
-	unsigned long long int sum = 0;
-	for(int i = 0; i < rep; i++){
-		
-		CYCLES start = benchmark_start();
-		EC_KEY_generate_key(key);
-		CYCLES stop = benchmark_stop();
-		sum += stop - start;
-	}  
-  printf("Average: %li\t", (unsigned long) (sum/rep));
+	/* Define Algorithm to be ED25519 */
+	pctx = EVP_PKEY_CTX_new_id(EVP_PKEY_X25519, NULL);
+	assert(pctx != NULL);
 
+	/* Generate the keys */
+	status = EVP_PKEY_keygen_init(pctx);
+	assert(status == 1);
+	status = EVP_PKEY_keygen(pctx, &key_A);
+	assert(status == 1);
+	status = EVP_PKEY_keygen(pctx, &key_B);
+	assert(status == 1);
+
+
+	/* Derivate secret*/
+	unsigned char shard_secret;
+	size_t size = 32;
+
+	ctx = EVP_PKEY_CTX_new(key_A, NULL);
+	assert(ctx != NULL);
+	status = EVP_PKEY_derive_init(ctx);
+	assert(status == 1);
+  	status = EVP_PKEY_derive_set_peer(ctx, key_B);
+  	assert(status == 1);
+	
+	status = EVP_PKEY_derive(ctx, &shard_secret, &size);
+	assert(status == 1);
+	assert(size == 32);
+	
 }
+
 
 
 void main(){
-    benchmark_keygen(REPETITIONS);
+    benchmark_keygen();
 }

@@ -1,0 +1,1307 @@
+--------------------------------------------------------------------------------
+Profile data file 'benchmarks/callgrind.out' (creator: callgrind-3.13.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 6222052
+Trigger: Program termination
+Profiled target:  build/test (PID 30640, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       100
+Include dirs:     
+User annotated:   
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+         Ir 
+--------------------------------------------------------------------------------
+137,252,864  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+        Ir  file:function
+--------------------------------------------------------------------------------
+
+68,739,114  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64_asm.S:mp_mul
+
+31,671,552  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64_asm.S:rdc_mont
+
+ 5,657,226  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64_asm.S:fpsub434
+
+ 5,375,276  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64_asm.S:fpadd434
+
+ 4,913,326  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64_asm.S:0x000000000001d80f [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+ 4,713,351  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 2,383,155  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64_asm.S:0x000000000001d861 (52959x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+17,370,552  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:rdc_mont (105918x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 3,495,294  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64_asm.S:0x000000000001d80f (158877x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 3,442,335  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64_asm.S:0x000000000001d90e (52959x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+44,326,683  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:mp_mul (158877x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+ 3,442,335  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64_asm.S:0x000000000001d90e [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+ 2,383,155  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64_asm.S:0x000000000001d861 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+ 2,142,480  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpmul434_mont [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 8,784,168  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:rdc_mont (53562x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+14,943,798  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:mp_mul (53562x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+ 1,651,640  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpinv434_mont_bingcd [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    13,524  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpmul434_mont (28x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+ 1,159,016  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2sqr434_mont [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 1,310,192  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (25196x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+24,339,336  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpmul434_mont (50392x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 1,108,624  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64_asm.S:0x000000000001d80f (50392x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+   710,164  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpcorrection434 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+   434,524  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:Tate_pairings_2_torsion
+   158,704  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpcorrection434 (872x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   152,064  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64_asm.S:0x000000000001d80f (6912x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 2,387,124  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:mp_mul (8556x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 1,403,184  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:rdc_mont (8556x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   758,992  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (14596x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   741,636  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (11772x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+   340,218  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpsqr434_mont [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 1,360,872  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:rdc_mont (8298x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 2,315,142  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:mp_mul (8298x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+   247,263  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:mp_mul [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+   237,572  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:mont_twodim_scalarmult [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    35,880  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:recover_os (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 6,270,432  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:xDBLADD (434x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    72,204  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:ADD (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+   199,425  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S:__memcmp_avx2_movbe [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+   197,966  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:Tate_pairings_3_torsion
+   283,392  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:rdc_mont (1728x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   546,000  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (10500x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 1,040,256  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (16512x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   101,192  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpcorrection434 (556x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   482,112  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:mp_mul (1728x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+   194,304  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:rdc_mont [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+   186,160  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpneg434 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+   170,891  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:Traverse_w_notdiv_e'2 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    12,656  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2_conj (112x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   554,840  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (388x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   165,099  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S:__memcmp_avx2_movbe (12377x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+ 6,147,628  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:Traverse_w_notdiv_e'2 (208x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+   158,936  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:EphemeralKeyGeneration_Compressed_A
+    78,672  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64_asm.S:0x000000000001d80f (3576x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   997,704  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:mp_mul (3576x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   245,544  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (4722x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   586,464  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:rdc_mont (3576x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   225,792  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (3584x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+   158,925  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:EphemeralSecretAgreement_Compressed_A
+   997,704  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:mp_mul (3576x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    78,672  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64_asm.S:0x000000000001d80f (3576x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   225,666  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (3582x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   586,464  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:rdc_mont (3576x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   245,648  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (4724x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+   120,427  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:LADDER3PT [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   619,190  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (433x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 6,255,984  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:xDBLADD (433x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+   110,926  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    90,404  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:xTPL
+   678,496  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (13048x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   352,296  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (5592x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    86,698  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    83,569  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:Traverse_w_div_e'2 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    33,811  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S:__memcmp_avx2_movbe (1967x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+   835,120  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (584x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    23,787  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2_conj (216x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 5,224,829  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:Traverse_w_div_e'2 (400x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    76,296  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:xDBLADD
+   315,588  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpcorrection434 (1734x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   436,968  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (6936x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   360,672  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (6936x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    75,603  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2_conj [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   182,320  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpneg434 (2279x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    71,764  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:xTPL [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 5,163,280  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2sqr434_mont (4660x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 9,329,320  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (6524x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    67,419  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:xTPL_fast
+   283,296  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (5448x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   600,642  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (9534x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    65,918  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:eval_3_isog [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 8,196,760  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (5732x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 3,175,528  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2sqr434_mont (2866x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    64,728  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:eval_4_isog
+   421,848  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (6696x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   348,192  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (6696x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    63,696  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:Tate_pairings_3_torsion [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 3,948,912  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2sqr434_mont (3564x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   248,253  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:mont_n_way_inv (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    34,272  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (544x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   123,396  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2_conj (1092x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+11,334,180  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (7926x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    28,288  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (544x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    62,496  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:eval_4_isog [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 2,473,056  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2sqr434_mont (2232x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 9,575,280  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (6696x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    61,831  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:Montgomery_inversion_mod_order_bingcd [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     4,872  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:Montgomery_multiply_mod_order (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    61,619  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:eval_3_isog
+   298,064  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (5732x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   361,116  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (5732x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    56,526  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpinv434_chain_mont [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   460,350  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:mp_mul (1650x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   644,688  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpsqr434_mont (1332x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    92,736  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpmul434_mont (192x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   270,600  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:rdc_mont (1650x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    55,780  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:is_sqr_fp2 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   320,128  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:rdc_mont (1952x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       252  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,456  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpcorrection434 (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   544,608  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:mp_mul (1952x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+        67  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S:__memcmp_avx2_movbe (4x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+     5,808  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpsqr434_mont (12x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    55,488  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:xDBLADD [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 3,842,544  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2sqr434_mont (3468x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 7,438,860  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (5202x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    52,720  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:BasePoint3n
+   544,608  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:mp_mul (1952x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,280  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpneg434 (16x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     2,912  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpcorrection434 (16x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       756  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (12x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,956  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpdiv2_434 (12x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   320,128  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:rdc_mont (1952x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       416  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    52,408  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:solve_dlog.part.2
+   169,632  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:mp_mul (608x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    38,304  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (608x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    31,616  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (608x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    99,712  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:rdc_mont (608x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    46,308  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:xTPL_fast [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 4,869,150  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (3405x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 4,527,288  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2sqr434_mont (4086x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    45,768  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:Double.constprop.7
+   269,568  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (5184x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   326,592  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (5184x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    39,068  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:from_base
+
+    38,668  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:Tate_pairings_2_torsion [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    97,632  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2_conj (864x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 8,019,440  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (5608x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   248,714  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:mont_n_way_inv (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   959,528  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2sqr434_mont (866x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    35,072  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:get_3_isog
+   379,764  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (6028x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    56,992  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (1096x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    34,440  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:multiply.constprop.8 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    29,976  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:Traverse_w_div_e'2
+    78,624  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpcorrection434 (432x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 1,254,528  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpsqr434_mont (2592x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   134,784  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (2592x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   163,296  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (2592x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    27,986  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:sqrt_Fp2 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   508,300  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpinv434_chain_mont (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+        26  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S:__memcmp_avx2_movbe (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+       160  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpneg434 (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       252  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       632  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpdiv2_434 (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,932  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpmul434_mont (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   160,064  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:rdc_mont (976x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   272,304  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:mp_mul (976x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     2,904  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpsqr434_mont (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       728  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpcorrection434 (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    26,534  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:BasePoint3n_decompression
+   272,304  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:mp_mul (976x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       320  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpneg434 (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,956  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpdiv2_434 (12x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       504  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   160,064  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:rdc_mont (976x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    26,302  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-lookup.c:do_lookup_x [/lib/x86_64-linux-gnu/ld-2.27.so]
+     3,186  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-misc.c:_dl_name_match_p (30x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+     5,064  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/strcmp.S:strcmp (108x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+    26,088  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:Double.constprop.7 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 5,559,840  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (3888x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 2,871,936  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2sqr434_mont (2592x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    24,995  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-tunables.c:__GI___tunables_init [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+    20,716  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:Traverse_w_notdiv_e'2
+    40,768  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpcorrection434 (224x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   346,544  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpsqr434_mont (716x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   111,696  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (2148x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   691,656  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpmul434_mont (1432x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    45,108  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (716x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    19,687  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-lookup.c:_dl_lookup_symbol_x [/lib/x86_64-linux-gnu/ld-2.27.so]
+    34,813  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-lookup.c:do_lookup_x (95x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+    19,267  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../torsion_basis.c:sqrtinv2 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   477,078  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpinv434_mont_bingcd (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     2,912  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpcorrection434 (16x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 1,370,688  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpsqr434_mont (2832x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       233  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S:__memcmp_avx2_movbe (16x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+       452  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2_conj (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,008  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (16x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   540,960  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpmul434_mont (1120x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    17,914  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86_64/dl-machine.h:_dl_relocate_object
+        77  >   /build/glibc-OTsEL5/glibc-2.27/time/../sysdeps/unix/sysv/linux/x86/time.c:time (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+        16  >   /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/ifunc-avx2.h:wmemchr (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         8  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:rindex (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         6  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-strcasecmp.h:strcasecmp (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+        16  >   /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/ifunc-avx2.h:wcschr (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+        77  >   /build/glibc-OTsEL5/glibc-2.27/time/../sysdeps/unix/sysv/linux/x86/gettimeofday.c:gettimeofday (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         9  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:stpcpy (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         6  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-strcasecmp.h:strncasecmp_l (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+    54,500  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-lookup.c:_dl_lookup_symbol_x (95x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        26  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memcmp.h:bcmp (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         6  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-sse4_2.h:strpbrk (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         8  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:memchr (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         8  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:rawmemchr (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         8  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:strchrnul (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         9  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:strcat (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         9  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcmp.c:strcmp (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         6  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-sse4_2.h:strspn (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         8  >   /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/ifunc-avx2.h:wcslen (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+        26  >   /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/ifunc-wmemset.h:wmemset (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         8  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:strlen (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         7  >   /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/wcsnlen.c:wcsnlen (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+        16  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memmove.h:mempcpy (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         9  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:strncpy (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         9  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:strcpy (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         6  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-sse4_2.h:strcspn (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+        16  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memmove.h:memcpy@@GLIBC_2.14 (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         8  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strncmp.c:strncmp (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         8  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:memrchr (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         9  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:stpncpy (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         6  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-strcasecmp.h:strcasecmp_l (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         6  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-strcasecmp.h:strncasecmp (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+        16  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:strnlen (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+        18  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memset.h:memset (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+        32  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memmove.h:memmove (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         8  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strchr.c:index (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+    14,028  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:EphemeralKeyGeneration_Compressed_A
+ 3,889,600  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (2720x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    14,028  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:EphemeralSecretAgreement_Compressed_A
+ 3,889,600  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (2720x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    13,219  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:get_2_torsion_entangled_basis_compression
+       480  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpneg434 (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   136,152  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:mp_mul (488x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    80,032  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:rdc_mont (488x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       252  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    13,196  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:get_2_torsion_entangled_basis_decompression
+   136,152  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:mp_mul (488x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       320  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpneg434 (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    80,032  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:rdc_mont (488x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    12,878  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:get_3_isog [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   783,640  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (548x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   910,776  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2sqr434_mont (822x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    11,742  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:EphemeralKeyGeneration_Compressed_B [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 1,089,561  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:get_3_isog (137x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     4,194  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2_encode (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     4,290  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       164  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:init_basis (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+21,078,939  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:PublicKeyCompression_B (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 3,506,889  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:LADDER3PT (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   266,369  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:inv_3_way (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 7,823,170  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:eval_3_isog (922x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+    10,189  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:EphemeralSecretAgreement_Compressed_B [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 1,089,561  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:get_3_isog (137x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,398  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2_encode (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   267,520  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:j_inv (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+        63  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 8,108,024  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:PublicKeyADecompression_B (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 4,335,835  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:eval_3_isog (511x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     9,583  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:EphemeralKeyGeneration_Compressed_A [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     4,194  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2_encode (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     4,290  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       164  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:init_basis (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 3,490,734  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:LADDER3PT (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     5,113  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:get_4_isog (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+38,415,969  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:PublicKeyCompression_A (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   266,369  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:inv_3_way (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 8,352,000  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:eval_4_isog (720x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     9,543  *  /build/glibc-OTsEL5/glibc-2.27/elf/do-rel.h:_dl_relocate_object
+
+     9,131  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/strcmp.S:strcmp [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+     8,934  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:mont_twodim_scalarmult
+
+     8,331  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:EphemeralSecretAgreement_Compressed_A [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 4,593,600  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:eval_4_isog (396x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 5,988,010  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:PublicKeyBDecompression_A (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       126  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,398  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2_encode (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     5,113  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:get_4_isog (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   267,520  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:j_inv (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     7,678  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:EphemeralSecretAgreement_Compressed_B
+       378  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       208  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     7,672  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:EphemeralKeyGeneration_Compressed_B
+       504  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     6,906  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-tunables.h:__GI___tunables_init
+
+     6,712  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:Traverse_w_div_e
+   294,272  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpsqr434_mont (608x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    31,616  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (608x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    38,304  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (608x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     5,382  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:Montgomery_multiply_mod_order [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    22,632  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:multiply.constprop.8 (69x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     4,856  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:Traverse_w_div_e [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 2,637,495  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:Traverse_w_div_e'2 (16x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   200,200  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (140x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     4,512  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpdiv2_434 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     3,282  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:mp_shiftr1 (48x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     4,272  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:EphemeralSecretAgreement_Compressed_B
+ 7,842,780  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:xTPL (466x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     4,272  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:EphemeralKeyGeneration_Compressed_B
+ 7,842,780  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:xTPL (466x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     4,180  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:from_base [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     4,032  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:Traverse_w_notdiv_e
+    23,088  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (444x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     9,324  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (148x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   142,968  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpmul434_mont (296x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    71,632  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpsqr434_mont (148x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     3,640  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:solve_dlog.part.2 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   200,200  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (140x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 3,213,455  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:Traverse_w_div_e (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     3,350  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../torsion_basis.c:BasePoint3n [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       630  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (10x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    17,160  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (12x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 6,066,528  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:Double.constprop.7 (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+        52  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S:__memcmp_avx2_movbe (4x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+     5,808  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpsqr434_mont (12x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,456  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpcorrection434 (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     3,282  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:mp_shiftr1 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     3,280  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:BasePoint3n
+ 8,303,072  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:xTPL_fast (544x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     2,504  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:Traverse_w_notdiv_e [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   114,400  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (80x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 2,159,974  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:Traverse_w_notdiv_e'2 (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     1,734  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-version.c:_dl_check_map_versions [/lib/x86_64-linux-gnu/ld-2.27.so]
+       273  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/strcmp.S:strcmp (5x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       794  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-misc.c:_dl_name_match_p (7x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        81  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:calloc (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+     1,664  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../torsion_basis.c:BasePoint3n_decompression [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     8,580  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       378  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+        36  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S:__memcmp_avx2_movbe (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+     2,904  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpsqr434_mont (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 3,033,264  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:Double.constprop.7 (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       728  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpcorrection434 (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     1,344  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2_decode [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     7,728  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpmul434_mont (16x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     1,219  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:inv_mod_orderA [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     9,840  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:multiply.constprop.8 (30x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+     1,211  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-misc.c:_dl_name_match_p [/lib/x86_64-linux-gnu/ld-2.27.so]
+     3,661  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/strcmp.S:strcmp (92x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       960  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:recover_os [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    94,380  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (66x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     3,780  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (60x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,872  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (36x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     6,648  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2sqr434_mont (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       957  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-deps.c:_dl_map_object_deps [/lib/x86_64-linux-gnu/ld-2.27.so]
+       232  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-sort-maps.c:_dl_sort_maps (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        70  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strchr.S:index (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        50  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy (5x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        54  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:malloc (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+     5,970  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-error-skeleton.c:_dl_catch_exception (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       948  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../torsion_basis.c:get_2_torsion_entangled_basis_compression [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    10,010  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (7x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   696,073  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:is_sqr_fp2 (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       140  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2add434 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       484  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpsqr434_mont (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       364  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpcorrection434 (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       252  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       158  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpdiv2_434 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,449  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpmul434_mont (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+        18  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S:__memcmp_avx2_movbe (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+   117,578  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpinv434_mont_bingcd (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       900  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../torsion_basis.c:get_2_torsion_entangled_basis_decompression [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   117,578  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpinv434_mont_bingcd (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+        18  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S:__memcmp_avx2_movbe (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+     1,449  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpmul434_mont (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       158  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpdiv2_434 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       189  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       364  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpcorrection434 (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       484  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpsqr434_mont (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       280  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2add434 (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     5,720  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   232,026  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:is_sqr_fp2 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       899  *  /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:dl_main [/lib/x86_64-linux-gnu/ld-2.27.so]
+        33  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-object.c:_dl_add_to_namespace_list (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        23  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-lookup.c:_dl_setup_hash (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        25  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-debug.c:_dl_debug_initialize (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+     2,978  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-error-skeleton.c:_dl_receive_error (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+         4  >   /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_count_modids (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+         1  >   /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-sysdep.c:_dl_sysdep_start_cleanup (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+    83,267  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-reloc.c:_dl_relocate_object (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+     1,740  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:_dl_init_paths (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        20  >   /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_add_to_slotinfo (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+         2  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-debug.c:_dl_debug_state (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        79  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-sysdep.c:_dl_discover_osversion (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        67  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/memcmp.S:bcmp (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        15  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-cache.c:_dl_unload_cache (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       530  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-environ.c:_dl_next_ld_env_entry (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       149  >   /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_allocate_tls_init (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+     2,506  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:handle_ld_preload (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        50  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/strcmp.S:strcmp (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       542  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:init_tls (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       230  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-object.c:_dl_new_object (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+     7,333  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-deps.c:_dl_map_object_deps (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+         8  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/access.c:access (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       871  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-cache.c:_dl_cache_libcmp [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       846  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:_dl_map_object_from_fd [/lib/x86_64-linux-gnu/ld-2.27.so]
+         6  >   /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_next_tls_modid (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        10  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/close.c:close (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        16  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-debug.c:_dl_debug_initialize (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        82  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-object.c:_dl_add_to_namespace_list (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        46  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-lookup.c:_dl_setup_hash (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       758  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-object.c:_dl_new_object (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       823  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:PublicKeyBDecompression_A
+ 2,091,031  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:xTPL_fast (137x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       767  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86/cacheinfo.c:intel_check_word.isra.0 [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+       680  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2_encode [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     3,640  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpcorrection434 (20x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     9,660  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpmul434_mont (20x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       674  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:open_verify.constprop.7 [/lib/x86_64-linux-gnu/ld-2.27.so]
+       184  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/wordsize-64/lxstat.c:open (10x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        10  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c:read (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+       628  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:sqrtinv2
+
+       598  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-object.c:_dl_new_object [/lib/x86_64-linux-gnu/ld-2.27.so]
+       147  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:calloc (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        32  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:mempcpy (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        36  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:malloc (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        41  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       134  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen (5x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       597  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:open_path [/lib/x86_64-linux-gnu/ld-2.27.so]
+       209  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:mempcpy (17x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       440  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:open_verify.constprop.7 (8x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       101  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/wordsize-64/xstat.c:_xstat (8x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       584  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../torsion_basis.c:CompleteMPoint [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 2,413,226  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../torsion_basis.c:sqrtinv2 (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     4,432  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2sqr434_mont (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+        52  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S:__memcmp_avx2_movbe (4x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+       504  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    34,320  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (24x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       416  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       582  *  /build/glibc-OTsEL5/glibc-2.27/string/../bits/stdlib-bsearch.h:intel_check_word.isra.0
+
+       575  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-hwcaps.c:_dl_important_hwcaps [/lib/x86_64-linux-gnu/ld-2.27.so]
+        16  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        18  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-tunables.c:__tunable_get_val (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        18  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:malloc (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        74  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:mempcpy (5x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       564  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:mont_n_way_inv [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    17,160  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (12x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   479,243  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2inv434_mont_bingcd (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       555  *  /build/glibc-OTsEL5/glibc-2.27/elf/get-dynamic-info.h:_dl_map_object_from_fd
+
+       555  *  /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-sysdep.c:_dl_sysdep_start [/lib/x86_64-linux-gnu/ld-2.27.so]
+        17  >   /build/glibc-OTsEL5/glibc-2.27/elf/../misc/sbrk.c:sbrk (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+    31,901  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-tunables.c:__GI___tunables_init (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+   100,826  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:dl_main (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        16  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       554  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:ADD [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       280  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2add434 (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    11,080  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2sqr434_mont (10x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    57,200  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (40x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       530  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-environ.c:_dl_next_ld_env_entry [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       512  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:PointMonty2Weier [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,120  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2add434 (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     7,728  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpmul434_mont (16x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       485  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-reloc.c:_dl_relocate_object [/lib/x86_64-linux-gnu/ld-2.27.so]
+        20  >   /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/syscall-template.S:mprotect (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       445  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:_dl_map_object [/lib/x86_64-linux-gnu/ld-2.27.so]
+     3,041  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:_dl_map_object_from_fd (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       428  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:open_verify.constprop.7 (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       154  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:expand_dynamic_string_token (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+     1,519  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-cache.c:_dl_load_cache_lookup (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        46  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strchr.S:index (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        59  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/strcmp.S:strcmp (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+     1,347  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:open_path (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        16  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       892  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-misc.c:_dl_name_match_p (7x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       427  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:malloc [/lib/x86_64-linux-gnu/ld-2.27.so]
+        35  >   /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/mmap64.c:mmap (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       424  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:memset [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       391  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-sort-maps.c:_dl_sort_maps [/lib/x86_64-linux-gnu/ld-2.27.so]
+        94  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:memset (6x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       389  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86_64/dl-machine.h:_dl_start
+
+       368  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:PointMonty2Weier
+
+       356  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-cache.c:_dl_load_cache_lookup [/lib/x86_64-linux-gnu/ld-2.27.so]
+       107  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-misc.c:_dl_sysdep_read_whole_file (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        34  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        18  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-tunables.c:__tunable_get_val (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        80  >   /build/glibc-OTsEL5/glibc-2.27/string/strdup.c:strdup (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       871  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-cache.c:_dl_cache_libcmp (11x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        10  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       339  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:mempcpy [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       339  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:Tate_4_pairings_3_torsion [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     4,864  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:PointMonty2Weier (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+18,431,915  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:Tate_pairings_3_torsion (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     6,279  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:Monty2Weier (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       332  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       330  *  /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_allocate_tls_storage [/lib/x86_64-linux-gnu/ld-2.27.so]
+        18  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:malloc (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        27  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:calloc (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       320  *  /build/glibc-OTsEL5/glibc-2.27/elf/get-dynamic-info.h:dl_main
+
+       317  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:PublicKeyCompression_A
+     8,526  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:Montgomery_multiply_mod_order (7x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       317  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:_dl_init_paths [/lib/x86_64-linux-gnu/ld-2.27.so]
+       584  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:fillin_rpath (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       711  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-hwcaps.c:_dl_important_hwcaps (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        16  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        10  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        54  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:malloc (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        48  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:memset (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       316  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:init_basis
+
+       296  *  /build/glibc-OTsEL5/glibc-2.27/elf/do-rel.h:_dl_start
+
+       294  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/generic/ldsodefs.h:_dl_relocate_object
+
+       271  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:PublicKeyBDecompression_A [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,204  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2_decode (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 3,297,514  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:mont_twodim_scalarmult (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       984  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:multiply.constprop.8 (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     5,875  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:inv_mod_orderA (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   588,866  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../torsion_basis.c:get_2_torsion_entangled_basis_decompression (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       140  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2add434 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       269  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-fini.c:_dl_fini [/lib/x86_64-linux-gnu/ld-2.27.so]
+         2  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:rtld_lock_default_unlock_recursive (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+         3  >   ???:0x0000000004a2a7a8 (1x) [???]
+         3  >   ???:0x000000000012c6b4 (1x) [???]
+         2  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:rtld_lock_default_lock_recursive (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        95  >   ???:0x0000000000000810 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       253  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-sort-maps.c:_dl_sort_maps (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        95  >   ???:0x0000000000000600 (1x) [/usr/lib/valgrind/vgpreload_core-amd64-linux.so]
+
+       261  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/generic/ldsodefs.h:do_lookup_x
+
+       252  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2inv434_mont_bingcd [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       378  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     5,796  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpmul434_mont (12x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   710,330  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpinv434_mont_bingcd (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       480  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpneg434 (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     5,808  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpsqr434_mont (12x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       247  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86/cacheinfo.c:init_cacheinfo [/lib/x86_64-linux-gnu/libc-2.27.so]
+     1,526  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86/cacheinfo.c:handle_intel.constprop.1 (3x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+       244  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:strsep [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       243  *  /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/mmap64.c:mmap [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       242  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:ADD
+     2,016  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (32x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       832  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (16x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       241  *  /build/glibc-OTsEL5/glibc-2.27/elf/get-dynamic-info.h:_dl_start
+
+       236  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:recover_y [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   975,288  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:sqrt_Fp2 (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   262,382  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:get_A (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     5,720  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    71,760  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:recover_os (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       218  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/strcspn.S:strcspn [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       217  *  /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/open64.c:open [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+       214  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:LADDER3PT
+       504  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,304  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpdiv2_434 (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       210  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2add434 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,890  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (30x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       198  *  /build/glibc-OTsEL5/glibc-2.27/elf/./dl-map-segments.h:_dl_map_object_from_fd
+        10  >   /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/syscall-template.S:mprotect (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       173  >   /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/mmap64.c:mmap (5x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       249  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:memset (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       197  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:PublicKeyADecompression_B
+     7,308  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:Montgomery_multiply_mod_order (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       652  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpdiv2_434 (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       126  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       196  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:get_A
+     1,936  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpsqr434_mont (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       160  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpneg434 (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   242,600  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpinv434_mont_bingcd (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,386  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (22x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,932  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpmul434_mont (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       416  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       194  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:mont_n_way_inv.constprop.9 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   243,801  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2inv434_mont_bingcd (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     8,580  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       186  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strchr.S:index [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       185  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:fillin_rpath [/lib/x86_64-linux-gnu/ld-2.27.so]
+        16  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+         5  >   ???:0x0000000004000f00 (1x) [???]
+       244  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:strsep (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       104  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:expand_dynamic_string_token (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        18  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:malloc (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        12  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:mempcpy (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       180  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:ph3 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    43,248  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:from_base (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+18,443,397  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:Tate_4_pairings_3_torsion (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 2,527,922  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:Traverse_w_notdiv_e (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       177  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86/cacheinfo.c:handle_intel.constprop.1 [/lib/x86_64-linux-gnu/libc-2.27.so]
+     1,349  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86/cacheinfo.c:intel_check_word.isra.0 (6x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+       176  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-init.c:_dl_init [/lib/x86_64-linux-gnu/ld-2.27.so]
+     1,773  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86/cacheinfo.c:init_cacheinfo (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+        17  >   ???:0x0000000000000640 (1x) [/usr/lib/valgrind/vgpreload_core-amd64-linux.so]
+       201  >   /build/glibc-OTsEL5/glibc-2.27/csu/../csu/init-first.c:_init (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+         6  >   ???:0x0000000004a2a520 (1x) [???]
+
+       169  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:PublicKeyCompression_A [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,398  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2_encode (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+16,559,505  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../torsion_basis.c:BuildOrdinaryE3nBasis (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     3,654  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:Montgomery_multiply_mod_order (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     3,327  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2_decode (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    33,299  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:Montgomery_inversion_mod_order_bingcd (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     5,720  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+21,014,834  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:ph3 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   658,237  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:recover_y (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   126,965  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:mont_n_way_inv.constprop.9 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       167  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       162  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:PublicKeyBDecompression_A
+       978  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpdiv2_434 (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       126  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       161  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:PublicKeyCompression_B [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     3,327  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2_decode (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+19,220,683  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:ph2 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     5,720  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,398  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2_encode (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 1,057,609  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../torsion_basis.c:get_2_torsion_entangled_basis_compression (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     5,184  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:inv_mod_orderA (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   125,610  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:mont_n_way_inv.constprop.9 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       984  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:multiply.constprop.8 (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   658,093  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:recover_y (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       159  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:PublicKeyADecompression_B [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    33,404  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:Montgomery_inversion_mod_order_bingcd (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 3,327,508  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:mont_twodim_scalarmult (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,214  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2_decode (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       140  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2add434 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     3,654  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:Montgomery_multiply_mod_order (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       145  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:PublicKeyCompression_B
+
+       144  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:Monty2Weier [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     2,216  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2sqr434_mont (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     2,860  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     5,796  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpmul434_mont (12x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       136  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:j_inv
+       624  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (12x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,260  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (20x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       134  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:inv_3_way [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    17,160  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (12x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       123  *  test.c:benchmark_keygen [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+56,745,156  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:EphemeralKeyGeneration_Compressed_A (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+41,640,546  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:EphemeralKeyGeneration_Compressed_B (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+17,060,805  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:EphemeralSecretAgreement_Compressed_A (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+        97  >   /usr/include/x86_64-linux-gnu/bits/string_fortified.h:random_mod_order_A (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+21,667,906  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:EphemeralSecretAgreement_Compressed_B (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       142  >   /usr/include/x86_64-linux-gnu/bits/string_fortified.h:random_mod_order_B (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       122  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2inv434_mont [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       126  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     2,898  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpmul434_mont (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       160  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpneg434 (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   508,300  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpinv434_chain_mont (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     3,872  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpsqr434_mont (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       120  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:recover_y
+       504  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       320  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpneg434 (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       118  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:Monty2Weier
+     1,008  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (16x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       416  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       116  *  /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_finalize.c:__cxa_finalize [/lib/x86_64-linux-gnu/libc-2.27.so]
+        32  >   /build/glibc-OTsEL5/glibc-2.27/nptl/unregister-atfork.c:__unregister_atfork (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+       114  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:Tate_4_pairings_2_torsion [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     4,864  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:PointMonty2Weier (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+15,400,210  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:Tate_pairings_2_torsion (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     6,279  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:Monty2Weier (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       110  *  /build/glibc-OTsEL5/glibc-2.27/libio/genops.c:_IO_flush_all_lockp [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+       106  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-tunables.c:__tunable_get_val [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       105  *  /build/glibc-OTsEL5/glibc-2.27/stdlib/exit.c:__run_exit_handlers [/lib/x86_64-linux-gnu/libc-2.27.so]
+        11  >   /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_thread_atexit_impl.c:__call_tls_dtors (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+       206  >   /build/glibc-OTsEL5/glibc-2.27/libio/genops.c:_IO_cleanup (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+       722  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-fini.c:_dl_fini (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+         5  >   /build/glibc-OTsEL5/glibc-2.27/posix/../sysdeps/unix/sysv/linux/_exit.c:_Exit (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+       104  *  /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_allocate_tls_init [/lib/x86_64-linux-gnu/ld-2.27.so]
+        33  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:memset (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        12  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:mempcpy (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       103  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86/cpu-features.c:_dl_sysdep_start
+        87  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86/cpu-features.c:get_common_indeces.constprop.1 (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        70  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-tunables.c:__tunable_get_val (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       103  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-object.c:_dl_add_to_namespace_list [/lib/x86_64-linux-gnu/ld-2.27.so]
+         6  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:rtld_lock_default_unlock_recursive (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+         6  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:rtld_lock_default_lock_recursive (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       101  *  /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/wordsize-64/xstat.c:_xstat [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+       101  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:ph2 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   953,021  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:solve_dlog.part.2 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+15,411,534  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:Tate_4_pairings_2_torsion (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+       100  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../pairing.c:get_A [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+    11,440  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     2,216  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2sqr434_mont (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+        98  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:j_inv [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     8,864  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2sqr434_mont (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     8,580  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   515,478  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2inv434_mont (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+        93  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-error-skeleton.c:_dl_catch_exception [/lib/x86_64-linux-gnu/ld-2.27.so]
+     5,868  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-deps.c:openaux (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        60  >   /build/glibc-OTsEL5/glibc-2.27/setjmp/../sysdeps/x86_64/setjmp.S:__sigsetjmp (3x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+     2,127  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:map_doit (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        92  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-lookup.c:_dl_setup_hash [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        88  *  /build/glibc-OTsEL5/glibc-2.27/libio/genops.c:_IO_cleanup [/lib/x86_64-linux-gnu/libc-2.27.so]
+       114  >   /build/glibc-OTsEL5/glibc-2.27/libio/genops.c:_IO_flush_all_lockp (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        88  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:inv_3_way
+     2,898  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpmul434_mont (6x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       126  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+       160  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpneg434 (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     3,872  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpsqr434_mont (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+   508,300  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fpinv434_chain_mont (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+        87  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:ph3
+
+        87  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86/cpu-features.c:get_common_indeces.constprop.1 [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        83  *  /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:_dl_start [/lib/x86_64-linux-gnu/ld-2.27.so]
+   133,588  >   /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-sysdep.c:_dl_sysdep_start (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        23  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-lookup.c:_dl_setup_hash (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        81  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:ph2
+ 2,855,946  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../dlog.c:solve_dlog.part.2 (3x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+        80  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:get_4_isog
+       208  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpsub434 (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     1,008  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (16x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+        79  *  /build/glibc-OTsEL5/glibc-2.27/setjmp/../sysdeps/x86_64/setjmp.S:__sigsetjmp [/lib/x86_64-linux-gnu/libc-2.27.so]
+         8  >   /build/glibc-OTsEL5/glibc-2.27/setjmp/sigjmp.c:__sigjmp_save (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        76  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../torsion_basis.c:BuildOrdinaryE3nBasis [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     2,860  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2mul434_mont (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+15,326,112  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../torsion_basis.c:BasePoint3n (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+        13  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S:__memcmp_avx2_movbe (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+ 1,229,706  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../torsion_basis.c:CompleteMPoint (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+        74  *  /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:init_tls [/lib/x86_64-linux-gnu/ld-2.27.so]
+        66  >   /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_determine_tlsoffset (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        27  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:calloc (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       375  >   /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_allocate_tls_storage (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        74  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-sysdep.c:_dl_discover_osversion [/lib/x86_64-linux-gnu/ld-2.27.so]
+         5  >   /build/glibc-OTsEL5/glibc-2.27/posix/../sysdeps/unix/syscall-template.S:uname (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        72  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:calloc [/lib/x86_64-linux-gnu/ld-2.27.so]
+       210  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:malloc (8x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        71  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-version.c:_dl_check_all_versions [/lib/x86_64-linux-gnu/ld-2.27.so]
+     2,882  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-version.c:_dl_check_map_versions (4x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        70  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:mul3 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+        69  *  /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:handle_ld_preload [/lib/x86_64-linux-gnu/ld-2.27.so]
+     2,201  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-error-skeleton.c:_dl_catch_error (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        18  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+       218  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/strcspn.S:strcspn (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        68  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-vdso.c:_dl_vdso_vsym [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        68  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/random/random.c:randombytes [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+        67  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:Tate_4_pairings_2_torsion
+
+        67  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/memcmp.S:bcmp [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        66  *  /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_determine_tlsoffset [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        66  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../ec_isogeny.c:get_4_isog [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+     8,864  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:fp2sqr434_mont (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+        55  *  /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:(below main) [/lib/x86_64-linux-gnu/libc-2.27.so]
+137,114,781  >   /home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/test.c:main (1x)
+        57  >   ???:__libc_csu_init (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+        65  >   /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_atexit.c:__cxa_atexit (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+     1,054  >   /build/glibc-OTsEL5/glibc-2.27/stdlib/exit.c:exit (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+        29  >   /build/glibc-OTsEL5/glibc-2.27/setjmp/../sysdeps/x86_64/bsd-_setjmp.S:_setjmp (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        54  *  /build/glibc-OTsEL5/glibc-2.27/string/strdup.c:strdup [/lib/x86_64-linux-gnu/ld-2.27.so]
+        54  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:malloc (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        38  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        84  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strlen.S:strlen (3x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        44  *  /build/glibc-OTsEL5/glibc-2.27/csu/../sysdeps/generic/dl-hash.h:_init
+
+        44  *  /build/glibc-OTsEL5/glibc-2.27/time/../sysdeps/generic/dl-hash.h:gettimeofday
+
+        43  *  /build/glibc-OTsEL5/glibc-2.27/time/../sysdeps/generic/dl-hash.h:time
+
+        41  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-misc.c:_dl_sysdep_read_whole_file [/lib/x86_64-linux-gnu/ld-2.27.so]
+        35  >   /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/mmap64.c:mmap (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        16  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/wordsize-64/lxstat.c:open (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        10  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/wordsize-64/fxstat.c:_fxstat (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+         5  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/close.c:close (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        41  *  /build/glibc-OTsEL5/glibc-2.27/elf/./dl-load.h:_dl_map_object_from_fd
+
+        41  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-debug.c:_dl_debug_initialize [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        40  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:CompleteMPoint
+       504  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpadd434 (8x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+        38  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:expand_dynamic_string_token [/lib/x86_64-linux-gnu/ld-2.27.so]
+       150  >   /build/glibc-OTsEL5/glibc-2.27/string/strdup.c:strdup (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+        70  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/../strchr.S:index (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        36  *  /usr/include/x86_64-linux-gnu/bits/string_fortified.h:PublicKeyBDecompression_A
+
+        36  *  /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_atexit.c:__cxa_atexit [/lib/x86_64-linux-gnu/libc-2.27.so]
+        29  >   /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_atexit.c:__new_exitfn (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        34  *  ???:__libc_csu_init [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+         6  >   ???:0x0000000000108688 (1x) [???]
+        17  >   ???:0x0000000000000850 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+        34  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-deps.c:openaux [/lib/x86_64-linux-gnu/ld-2.27.so]
+     5,834  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:_dl_map_object (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        32  *  /build/glibc-OTsEL5/glibc-2.27/csu/../csu/init-first.c:_init [/lib/x86_64-linux-gnu/libc-2.27.so]
+        52  >   /build/glibc-OTsEL5/glibc-2.27/misc/init-misc.c:__init_misc (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+        16  >   /build/glibc-OTsEL5/glibc-2.27/ctype/ctype-info.c:__ctype_init (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        32  *  /build/glibc-OTsEL5/glibc-2.27/nptl/unregister-atfork.c:__unregister_atfork [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        32  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memmove.h:memmove [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        31  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/posix/dl-fileid.h:_dl_map_object_from_fd
+        20  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/wordsize-64/fxstat.c:_fxstat (2x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        30  *  /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/wordsize-64/fxstat.c:_fxstat [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        30  *  /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/syscall-template.S:mprotect [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        29  *  /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_atexit.c:__new_exitfn [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        28  *  /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c:read [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        28  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../torsion_basis.c:PublicKeyADecompression_B
+ 3,509,236  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../torsion_basis.c:BasePoint3n_decompression (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+ 1,224,372  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../torsion_basis.c:CompleteMPoint (2x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+        27  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strrchr-avx2.S:__strrchr_avx2 [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        26  *  /usr/include/x86_64-linux-gnu/bits/string_fortified.h:PublicKeyADecompression_B
+
+        25  *  /usr/include/x86_64-linux-gnu/bits/string_fortified.h:PublicKeyCompression_B
+
+        25  *  /build/glibc-OTsEL5/glibc-2.27/misc/init-misc.c:__init_misc [/lib/x86_64-linux-gnu/libc-2.27.so]
+        27  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strrchr-avx2.S:__strrchr_avx2 (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        24  *  /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/ifunc-wmemset.h:wmemset [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        24  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memcmp.h:bcmp [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        23  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-error-skeleton.c:_dl_catch_error [/lib/x86_64-linux-gnu/ld-2.27.so]
+     2,178  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-error-skeleton.c:_dl_catch_exception (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        23  *  /build/glibc-OTsEL5/glibc-2.27/csu/../sysdeps/unix/sysv/linux/x86_64/init-first.c:_init
+        34  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-vdso.c:_dl_vdso_vsym (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        20  *  /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_add_to_slotinfo [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        19  *  ???:0x0000000000001090 [/lib/x86_64-linux-gnu/ld-2.27.so]
+   134,620  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:_dl_start (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+     2,173  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-init.c:_dl_init (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+137,116,052  >   ???:_start (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+        18  *  /usr/include/x86_64-linux-gnu/bits/string_fortified.h:PublicKeyCompression_A
+
+        18  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memset.h:memset [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        17  *  /build/glibc-OTsEL5/glibc-2.27/elf/../misc/sbrk.c:sbrk [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        17  *  /build/glibc-OTsEL5/glibc-2.27/time/../sysdeps/unix/sysv/linux/x86/time.c:time [/lib/x86_64-linux-gnu/libc-2.27.so]
+        17  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-vdso.c:_dl_vdso_vsym (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        17  *  ???:0x0000000000000850 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+        17  *  ???:0x0000000000000640 [/usr/lib/valgrind/vgpreload_core-amd64-linux.so]
+
+        16  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memmove.h:memcpy@@GLIBC_2.14 [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        16  *  /build/glibc-OTsEL5/glibc-2.27/time/../sysdeps/unix/sysv/linux/x86/gettimeofday.c:gettimeofday [/lib/x86_64-linux-gnu/libc-2.27.so]
+        17  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-vdso.c:_dl_vdso_vsym (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        16  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-memmove.h:mempcpy [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        16  *  /build/glibc-OTsEL5/glibc-2.27/ctype/ctype-info.c:__ctype_init [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        15  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-error-skeleton.c:_dl_receive_error [/lib/x86_64-linux-gnu/ld-2.27.so]
+     2,963  >   /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:version_check_doit (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        15  *  /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/close.c:close [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        14  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:strnlen [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        14  *  /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/ifunc-avx2.h:wcschr [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        14  *  /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:map_doit [/lib/x86_64-linux-gnu/ld-2.27.so]
+     2,113  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-load.c:_dl_map_object (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        14  *  /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/ifunc-avx2.h:wmemchr [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        13  *  /usr/include/x86_64-linux-gnu/bits/string_fortified.h:mul3
+
+        12  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86/dl-procinfo.h:_dl_load_cache_lookup
+        24  >   /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/strcmp.S:strcmp (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        12  *  ???:0x0000000000000810 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+         8  >   ???:0x0000000000000780 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+        75  >   ???:0x0000000000108720 (1x) [???]
+
+        12  *  ???:0x0000000000000600 [/usr/lib/valgrind/vgpreload_core-amd64-linux.so]
+        75  >   ???:0x0000000004a2a560 (1x) [???]
+         8  >   ???:0x0000000000000570 (1x) [/usr/lib/valgrind/vgpreload_core-amd64-linux.so]
+
+        12  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:init_basis [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+        11  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/x86_64/brk.c:brk [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        11  *  ???:_start [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+137,116,041  >   /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:(below main) (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        11  *  /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/wordsize-64/lxstat.c:open [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        11  *  /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_thread_atexit_impl.c:__call_tls_dtors [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+        10  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:BuildOrdinaryE3nBasis
+       728  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/AMD64/fp_x64.c:fpcorrection434 (4x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+        10  *  /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:version_check_doit [/lib/x86_64-linux-gnu/ld-2.27.so]
+     2,953  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-version.c:_dl_check_all_versions (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+        10  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-cache.c:_dl_unload_cache [/lib/x86_64-linux-gnu/ld-2.27.so]
+         5  >   /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/syscall-template.S:munmap (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+         9  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcmp.c:strcmp [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         9  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:random_mod_order_B
+        46  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/random/random.c:randombytes (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+        83  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../fpx.c:mul3 (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+         8  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strchr.c:index [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         8  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:strncpy [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         8  *  ???:0x0000000000000780 [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+         8  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:stpcpy [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         8  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:strcat [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         8  *  /build/glibc-OTsEL5/glibc-2.27/setjmp/sigjmp.c:__sigjmp_save [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         8  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strncmp.c:strncmp [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         8  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:stpncpy [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         8  *  /usr/include/x86_64-linux-gnu/bits/fcntl2.h:randombytes
+        28  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/open64.c:open (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         8  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-unaligned-ssse3.h:strcpy [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         8  *  /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:rtld_lock_default_unlock_recursive [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+         8  *  /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/access.c:access [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+         8  *  ???:0x0000000000000570 [/usr/lib/valgrind/vgpreload_core-amd64-linux.so]
+
+         8  *  /usr/include/x86_64-linux-gnu/bits/unistd.h:randombytes
+        18  >   /build/glibc-OTsEL5/glibc-2.27/io/../sysdeps/unix/sysv/linux/read.c:read (2x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         8  *  /build/glibc-OTsEL5/glibc-2.27/elf/rtld.c:rtld_lock_default_lock_recursive [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+         7  *  /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/P434/../sidh.c:random_mod_order_A
+        84  >   /home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/x64/SIKEp434_compressed/random/random.c:randombytes (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+         7  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:strlen [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         7  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/not-errno.h:_dl_load_cache_lookup
+
+         7  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:rawmemchr [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         7  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:strchrnul [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         7  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:memchr [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         7  *  /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/ifunc-avx2.h:wcslen [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         7  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:memrchr [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         7  *  /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/wcsnlen.c:wcsnlen [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         7  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:rindex [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         6  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/x86/dl-hwcap.h:_dl_important_hwcaps
+
+         6  *  ???:0x0000000000108688 [???]
+
+         6  *  /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_next_tls_modid [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+         6  *  ???:0x0000000004a2a520 [???]
+
+         6  *  test.c:main [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+137,114,775  >   test.c:benchmark_keygen (1x) [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+         6  *  /usr/include/x86_64-linux-gnu/bits/string_fortified.h:random_mod_order_A [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+         5  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-sse4_2.h:strpbrk [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         5  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-strcasecmp.h:strcasecmp_l [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         5  *  /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/syscall-template.S:munmap [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+         5  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-sse4_2.h:strcspn [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         5  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-strcasecmp.h:strcasecmp [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         5  *  /build/glibc-OTsEL5/glibc-2.27/posix/../sysdeps/unix/sysv/linux/_exit.c:_Exit [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         5  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-strcasecmp.h:strncasecmp_l [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         5  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-strcasecmp.h:strncasecmp [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         5  *  /build/glibc-OTsEL5/glibc-2.27/posix/../sysdeps/unix/syscall-template.S:uname [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+         5  *  /build/glibc-OTsEL5/glibc-2.27/stdlib/exit.c:exit [/lib/x86_64-linux-gnu/libc-2.27.so]
+     1,049  >   /build/glibc-OTsEL5/glibc-2.27/stdlib/exit.c:__run_exit_handlers (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         5  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/ifunc-sse4_2.h:strspn [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         4  *  /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-tls.c:_dl_count_modids [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+         4  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/not-errno.h:_dl_important_hwcaps
+
+         4  *  /build/glibc-OTsEL5/glibc-2.27/libio/libioP.h:_IO_flush_all_lockp
+
+         4  *  /build/glibc-OTsEL5/glibc-2.27/libio/libioP.h:_IO_cleanup
+
+         4  *  /usr/include/x86_64-linux-gnu/bits/string_fortified.h:random_mod_order_B [/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/SIKE/x64/build/test]
+
+         4  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:free [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+         3  *  ???:0x000000000012c6b4 [???]
+
+         3  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-osinfo.h:dl_main
+
+         3  *  ???:0x0000000004a2a7a8 [???]
+
+         2  *  /build/glibc-OTsEL5/glibc-2.27/elf/dl-debug.c:_dl_debug_state [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+         2  *  /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/dl-sysdep.c:_dl_sysdep_start
+        11  >   /build/glibc-OTsEL5/glibc-2.27/elf/../sysdeps/unix/sysv/linux/x86_64/brk.c:brk (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+         2  *  /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/wmemchr.c:wmemchr
+
+         2  *  /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/wcschr.c:wcschr
+
+         2  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strnlen.c:strnlen
+
+         2  *  /build/glibc-OTsEL5/glibc-2.27/setjmp/../sysdeps/x86_64/bsd-_setjmp.S:_setjmp [/lib/x86_64-linux-gnu/libc-2.27.so]
+        27  >   /build/glibc-OTsEL5/glibc-2.27/setjmp/../sysdeps/x86_64/setjmp.S:__sigsetjmp (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         2  *  /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/wmemset.c:wmemset
+
+         2  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memcmp.c:bcmp
+
+         2  *  /build/glibc-OTsEL5/glibc-2.27/elf/setup-vdso.h:dl_main
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcpy.c:strcpy
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memchr.c:memchr
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/rawmemchr.c:rawmemchr
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strncase.c:strncasecmp
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/stpcpy.c:stpcpy
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcat.c:strcat
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/wcsmbs/../sysdeps/x86_64/multiarch/wcslen.c:wcslen
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strncpy.c:strncpy
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strpbrk.c:strpbrk
+
+         1  *  ???:0x0000000000108720 [???]
+        74  >   /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_finalize.c:__cxa_finalize (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strspn.c:strspn
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strlen.c:strlen
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strncase_l.c:strncasecmp_l
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcasecmp_l.c:strcasecmp_l
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strchrnul.c:strchrnul
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcasecmp.c:strcasecmp
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strrchr.c:rindex
+
+         1  *  ???:0x0000000004a2a560 [???]
+        74  >   /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_finalize.c:__cxa_finalize (1x) [/lib/x86_64-linux-gnu/libc-2.27.so]
+
+         1  *  ???:0x0000000004000f00 [???]
+         4  >   /build/glibc-OTsEL5/glibc-2.27/elf/dl-minimal.c:free (1x) [/lib/x86_64-linux-gnu/ld-2.27.so]
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcspn.c:strcspn
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/stpncpy.c:stpncpy
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memrchr.c:memrchr
+
+         1  *  /build/glibc-OTsEL5/glibc-2.27/elf/../elf/dl-sysdep.c:_dl_sysdep_start_cleanup [/lib/x86_64-linux-gnu/ld-2.27.so]
+
