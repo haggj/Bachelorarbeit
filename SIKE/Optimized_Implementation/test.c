@@ -9,12 +9,7 @@
 
 
 
-#define REPETITIONS 1
-
-typedef unsigned long CYCLES;
-
-
-int benchmark_keygen(const int rep) {
+int benchmark_keygen() {
 
   unsigned char private_key_A[SIDH_SECRETKEYBYTES] = { 0 };
   unsigned char public_key_A[SIDH_PUBLICKEYBYTES] = { 0 };
@@ -49,7 +44,7 @@ int benchmark_keygen(const int rep) {
 
 int main() {
 
-  benchmark_keygen(REPETITIONS);
+  benchmark_keygen();
   return 0;
 
 
