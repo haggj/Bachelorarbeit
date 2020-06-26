@@ -5,7 +5,6 @@ import pandas
 
 
 from statistics import mean
-from prettytable import PrettyTable
 
 def bash(command):
     process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
@@ -14,7 +13,7 @@ def bash(command):
     if return_code != 0:
         print ("Error during command: " + command)
         print(stream)
-        exit(0)
+        raise Exception()
     return
 
 def getCallgrindFunctionCalls(callgrind, function):
@@ -40,17 +39,6 @@ def getCallgrindFunctionCalls(callgrind, function):
             if event.name == "Samples":
                 ret[callee.name] = int(data)
     return ret
-
-def print_statistics(result):
-    #result is list of dictionaries
-    TABLE = PrettyTable()
-    TABLE.field_names = list(result[0].keys())
-
-    for r in result:
-        TABLE.add_row(list(r.values()))
-
-    print(TABLE)
-
 
 class Base_Implementation():
 
