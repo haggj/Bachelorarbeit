@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+h1, p{
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  text-align:center;
+}
+
+table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body><p>All values (except memory) are absolute instruction counts.</p><p>*Maximum memory consumption in bytes.</p><h1>ECDH</h1><table>
+    <tr>
+        <th>Curve</th>
+        <th>KeysA</th>
+        <th>KeysB</th>
+        <th>SecretA</th>
+        <th>SecretB</th>
+        <th>Memory*</th>
+    </tr>
+    <tr>
+        <td>25519</td>
+        <td>569.279</td>
+        <td>546.487</td>
+        <td>512.759</td>
+        <td>512.759</td>
+        <td>13.576</td>
+    </tr>
+</table><h1>Sike Optimized</h1><table>
+    <tr>
+        <th>Curve</th>
+        <th>PrivateKeyA</th>
+        <th>PublicKeyA</th>
+        <th>PrivateKeyB</th>
+        <th>PublicKeyB</th>
+        <th>SecretA</th>
+        <th>SecretB</th>
+        <th>Memory*</th>
+    </tr>
+    <tr>
+        <td>p434</td>
+        <td>90</td>
+        <td>195.766.407</td>
+        <td>57</td>
+        <td>216.548.718</td>
+        <td>158.715.898</td>
+        <td>182.403.124</td>
+        <td>8.008</td>
+    </tr>
+    <tr>
+        <td>p503</td>
+        <td>95</td>
+        <td>300.960.599</td>
+        <td>57</td>
+        <td>331.368.751</td>
+        <td>245.139.361</td>
+        <td>279.727.050</td>
+        <td>7.928</td>
+    </tr>
+    <tr>
+        <td>p610</td>
+        <td>96</td>
+        <td>617.632.135</td>
+        <td>53</td>
+        <td>615.248.913</td>
+        <td>514.833.551</td>
+        <td>521.242.325</td>
+        <td>11.704</td>
+    </tr>
+    <tr>
+        <td>p751</td>
+        <td>97</td>
+        <td>988.815.348</td>
+        <td>59</td>
+        <td>1.110.622.514</td>
+        <td>812.990.929</td>
+        <td>946.083.828</td>
+        <td>13.496</td>
+    </tr>
+</table><h1>Sike Optimized Compressed</h1><table>
+    <tr>
+        <th>Curve</th>
+        <th>PrivateKeyA</th>
+        <th>PublicKeyA</th>
+        <th>PrivateKeyB</th>
+        <th>PublicKeyB</th>
+        <th>SecretA</th>
+        <th>SecretB</th>
+        <th>Memory*</th>
+    </tr>
+    <tr>
+        <td>p434</td>
+        <td>97</td>
+        <td>550.718.327</td>
+        <td>150</td>
+        <td>430.177.233</td>
+        <td>180.549.309</td>
+        <td>221.006.919</td>
+        <td>16.536</td>
+    </tr>
+    <tr>
+        <td>p503</td>
+        <td>95</td>
+        <td>773.529.636</td>
+        <td>147</td>
+        <td>651.745.505</td>
+        <td>278.052.931</td>
+        <td>346.536.349</td>
+        <td>19.096</td>
+    </tr>
+    <tr>
+        <td>p610</td>
+        <td>99</td>
+        <td>1.478.980.790</td>
+        <td>187</td>
+        <td>1.206.304.893</td>
+        <td>574.098.925</td>
+        <td>643.242.914</td>
+        <td>23.896</td>
+    </tr>
+    <tr>
+        <td>p751</td>
+        <td>107</td>
+        <td>2.701.783.435</td>
+        <td>202</td>
+        <td>2.186.135.735</td>
+        <td>916.331.321</td>
+        <td>1.155.239.029</td>
+        <td>27.768</td>
+    </tr>
+</table><h1>Sike x64</h1><table>
+    <tr>
+        <th>Curve</th>
+        <th>PrivateKeyA</th>
+        <th>PublicKeyA</th>
+        <th>PrivateKeyB</th>
+        <th>PublicKeyB</th>
+        <th>SecretA</th>
+        <th>SecretB</th>
+        <th>Memory*</th>
+    </tr>
+    <tr>
+        <td>p434</td>
+        <td>90</td>
+        <td>18.331.210</td>
+        <td>57</td>
+        <td>20.387.082</td>
+        <td>14.850.647</td>
+        <td>17.182.025</td>
+        <td>8.104</td>
+    </tr>
+    <tr>
+        <td>p503</td>
+        <td>95</td>
+        <td>25.466.692</td>
+        <td>57</td>
+        <td>28.206.470</td>
+        <td>20.731.488</td>
+        <td>23.829.301</td>
+        <td>8.088</td>
+    </tr>
+    <tr>
+        <td>p610</td>
+        <td>96</td>
+        <td>47.045.492</td>
+        <td>53</td>
+        <td>47.165.758</td>
+        <td>39.194.638</td>
+        <td>39.988.742</td>
+        <td>11.808</td>
+    </tr>
+    <tr>
+        <td>p751</td>
+        <td>97</td>
+        <td>68.209.369</td>
+        <td>59</td>
+        <td>77.081.514</td>
+        <td>56.041.244</td>
+        <td>65.709.246</td>
+        <td>13.648</td>
+    </tr>
+</table><h1>Sike x64 Compressed</h1><table>
+    <tr>
+        <th>Curve</th>
+        <th>PrivateKeyA</th>
+        <th>PublicKeyA</th>
+        <th>PrivateKeyB</th>
+        <th>PublicKeyB</th>
+        <th>SecretA</th>
+        <th>SecretB</th>
+        <th>Memory*</th>
+    </tr>
+    <tr>
+        <td>p434</td>
+        <td>97</td>
+        <td>52.787.017</td>
+        <td>142</td>
+        <td>41.762.588</td>
+        <td>17.184.641</td>
+        <td>21.643.634</td>
+        <td>18.600</td>
+    </tr>
+    <tr>
+        <td>p503</td>
+        <td>95</td>
+        <td>72.856.749</td>
+        <td>142</td>
+        <td>56.239.990</td>
+        <td>23.902.976</td>
+        <td>29.556.599</td>
+        <td>21.368</td>
+    </tr>
+    <tr>
+        <td>p610</td>
+        <td>99</td>
+        <td>115.873.878</td>
+        <td>172</td>
+        <td>93.754.252</td>
+        <td>44.253.650</td>
+        <td>49.282.954</td>
+        <td>26.976</td>
+    </tr>
+    <tr>
+        <td>p751</td>
+        <td>107</td>
+        <td>176.821.890</td>
+        <td>188</td>
+        <td>152.560.831</td>
+        <td>63.936.714</td>
+        <td>79.132.438</td>
+        <td>31.664</td>
+    </tr>
+</table><h1>Sike Reference Implementation</h1><table>
+    <tr>
+        <th>Curve</th>
+        <th>PrivateKeyA</th>
+        <th>PublicKeyA</th>
+        <th>PrivateKeyB</th>
+        <th>PublicKeyB</th>
+        <th>SecretA</th>
+        <th>SecretB</th>
+        <th>Memory*</th>
+    </tr>
+    <tr>
+        <td>p434</td>
+        <td>176.904</td>
+        <td>1.804.227.119</td>
+        <td>177.406</td>
+        <td>2.441.422.495</td>
+        <td>22.631.277</td>
+        <td>54.232.679</td>
+        <td>11.304</td>
+    </tr>
+    <tr>
+        <td>p503</td>
+        <td>177.005</td>
+        <td>2.597.942.432</td>
+        <td>177.507</td>
+        <td>3.553.882.514</td>
+        <td>26.969.379</td>
+        <td>70.756.593</td>
+        <td>11.912</td>
+    </tr>
+    <tr>
+        <td>p610</td>
+        <td>212.107</td>
+        <td>4.434.526.827</td>
+        <td>212.186</td>
+        <td>5.963.101.044</td>
+        <td>34.653.272</td>
+        <td>99.908.937</td>
+        <td>13.000</td>
+    </tr>
+    <tr>
+        <td>p751</td>
+        <td>212.336</td>
+        <td>7.646.574.809</td>
+        <td>212.858</td>
+        <td>10.821.674.076</td>
+        <td>44.884.105</td>
+        <td>149.657.786</td>
+        <td>13.832</td>
+    </tr>
+</table><h1>CIRCL</h1><table>
+    <tr>
+        <th>Curve</th>
+        <th>PrivateKeyA</th>
+        <th>PublicKeyA</th>
+        <th>PrivateKeyB</th>
+        <th>PublicKeyB</th>
+        <th>SecretA</th>
+        <th>SecretB</th>
+        <th>Memory*</th>
+    </tr>
+    <tr>
+        <td>p434</td>
+        <td>2.692</td>
+        <td>28.090.502</td>
+        <td>948</td>
+        <td>29.500.124</td>
+        <td>21.474.107</td>
+        <td>24.825.820</td>
+        <td>22.528</td>
+    </tr>
+    <tr>
+        <td>p503</td>
+        <td>2.692</td>
+        <td>31.603.390</td>
+        <td>948</td>
+        <td>33.406.975</td>
+        <td>24.384.107</td>
+        <td>28.170.997</td>
+        <td>25.840</td>
+    </tr>
+    <tr>
+        <td>p751</td>
+        <td>2.692</td>
+        <td>93.829.714</td>
+        <td>948</td>
+        <td>104.104.800</td>
+        <td>75.845.726</td>
+        <td>88.718.066</td>
+        <td>24.264</td>
+    </tr>
+</table>* Maximum memory consumption in bytes.</body></html>

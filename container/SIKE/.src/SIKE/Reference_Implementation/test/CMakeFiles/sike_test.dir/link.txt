@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/sike_test.dir/test.o CMakeFiles/sike_test.dir/printing.o CMakeFiles/sike_test.dir/test_arith.o CMakeFiles/sike_test.dir/test_sike.o CMakeFiles/sike_test.dir/test_extras.o  -o sike_test -lsike_ref 
