@@ -1,4 +1,4 @@
-from src.base import Base_Implementation, getCallgrindFunctionCalls, bash
+from src.base import Base_Implementation, getCallgrindFunctionCalls, bash, bcolors
 import pandas
 
 curves = ["434","503","751"]
