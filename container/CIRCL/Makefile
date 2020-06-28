@@ -4,7 +4,7 @@ build:
 	@ echo "building p$(PARAM)$(COMPRESSED)..."
 	@ mkdir -p "build"
 	@ mkdir -p "lib"
-	@ cd go; go build -tags p$(PARAM) -gcflags="all=-N -l" -o ../build/test
+	@ cd go; go build -tags "p$(PARAM) amd64" -gcflags="all=-N -l" -o ../build/test
 	@ echo "\e[32mSUCCESS\e[0m"
 
 

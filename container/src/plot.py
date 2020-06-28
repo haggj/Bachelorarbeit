@@ -5,7 +5,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from multiprocessing import Process
 from pathlib import Path
-
+import json
+import os
+from src.base import bcolors
 
 def autolabel(rects, ax):
     """Attach a text label above each bar in *rects*, displaying its height."""
@@ -83,11 +85,11 @@ def plotCurve(result, name, memory=False):
     ax.set_ylim(bottom=0)
     fig.set_size_inches(18, 8)
 
-    Path("diagrams").mkdir(parents=True, exist_ok=True)
+    Path("data").mkdir(parents=True, exist_ok=True)
     if not memory:
-        fig.savefig('diagrams/' + name +'.png', dpi=100)
+        fig.savefig('data/' + name +'.png', dpi=100)
     else:
-        fig.savefig('diagrams/' + name + '_mem.png', dpi=100)
+        fig.savefig('data/' + name + '_mem.png', dpi=100)
 
 
 def generatePlot(result):
@@ -111,13 +113,13 @@ def generateTable(results):
     with open('pre.html', "r") as file:
         preHTML = file.read()
 
-    Path("diagrams").mkdir(parents=True, exist_ok=True)
-    with open('diagrams/result.html','w') as file:
+    Path("data").mkdir(parents=True, exist_ok=True)
+    with open('data/result.html','w') as file:
         file.write(preHTML + "<p>All values (except memory) are absolute instruction counts.</p><p>*Maximum memory consumption in bytes.</p>")
         for key, value in results.items():
             file.write("<h1>"  + key + "</h1>")
             file.write(format_statstics(value).replace("Memory", "Memory*"))
-        file.write("* Maximum memory consumption in bytes.</body></html>")
+        file.write("</body></html>")
     
 def format_statstics(result):
     #result is list of dictionaries
@@ -128,3 +130,15 @@ def format_statstics(result):
         TABLE.add_row(list(r.values()))
 
     return TABLE.get_html_string()
+
+def saveAsJson(result):
+    with open('data/result.json', 'a') as f:
+        json.dump(result, f)
+
+def loadFromJson():
+    if os.path.isfile("cached.json"):
+        with open('cached.json', 'r') as f:
+            cached = json.load(f)
+            print("\nUsing cached data for:\n" + bcolors.WARNING + "\t\n".join(cached.keys())  + bcolors.ENDC)
+            return cached
+    return {}

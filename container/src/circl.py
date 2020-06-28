@@ -1,9 +1,10 @@
 from src.base import Base_Implementation, getCallgrindFunctionCalls, bash, bcolors
+import progressbar
 import pandas
 
 curves = ["434","503","751"]
 
-class CIRCL_Implementation(Base_Implementation):
+class CIRCL_x64_Implementation(Base_Implementation):
 
     def __init__(self):
         self.path = "CIRCL/"
@@ -38,7 +39,7 @@ class CIRCL_Implementation(Base_Implementation):
 
     def callgrind_average(self, count):
         results = []
-        for i in range(count):
+        for i in progressbar.progressbar(range(count), redirect_stdout=True, prefix="    Callgrind "):
             count = 0
             while True:
                 try:
@@ -52,7 +53,6 @@ class CIRCL_Implementation(Base_Implementation):
                     
             res = self.callgrind_result()
             results.append(res)
-            print ("callgrind: " + str(i), end="\r")
 
         df = pandas.DataFrame(results)
         average = dict(df.mean())
