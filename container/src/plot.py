@@ -132,7 +132,7 @@ def format_statstics(result):
     return TABLE.get_html_string()
 
 def saveAsJson(result):
-    with open('data/result.json', 'a') as f:
+    with open('data/cached.json', 'a') as f:
         json.dump(result, f)
 
 def loadFromJson():
