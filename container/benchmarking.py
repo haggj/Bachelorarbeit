@@ -6,6 +6,8 @@ from src.sike import Sike_Reference_Implementation
 
 from src.circl import CIRCL_x64_Implementation
 
+from src.microsoft import Microsoft_x64_Implementation, Microsoft_x64_Implementation_Compressed
+
 from src.plot import generatePlot, generateTable, saveAsJson, loadFromJson
 
 import signal
@@ -37,9 +39,9 @@ def SIKE():
         RESULTS["Sike x64 Compressed"] = x64_compressed.get_statistics(COUNT)
 
     # Sike Reference Implementation
-    if "Sike Reference Implementation" not in RESULTS:
+    if "Sike Reference" not in RESULTS:
         RI = Sike_Reference_Implementation()
-        RESULTS["Sike Reference Implementation"] = RI.get_statistics(COUNT)
+        RESULTS["Sike Reference"] = RI.get_statistics(COUNT)
 
 
 def ECDH():
@@ -51,9 +53,18 @@ def ECDH():
 
 def CIRCL():
     # CIRCL Implementation, supporting p434, p503, p751
-    if "CIRCL" not in RESULTS:
+    if "CIRCL x64" not in RESULTS:
         CIRCL = CIRCL_x64_Implementation()
-        RESULTS["CIRCL"] = CIRCL.get_statistics(COUNT)
+        RESULTS["CIRCL x64"] = CIRCL.get_statistics(COUNT)
+
+def MICROSOFT():
+    if "Microsoft x64" not in RESULTS:
+        MS_x64 = Microsoft_x64_Implementation()
+        RESULTS["Microsoft x64"] = MS_x64.get_statistics(COUNT)
+
+    if "Microsoft x64 Compressed" not in RESULTS:
+        MS_x64_compressed = Microsoft_x64_Implementation_Compressed()
+        RESULTS["Microsoft x64 Compressed"] = MS_x64_compressed.get_statistics(COUNT)
 
 def signal_handler(sig,frame):
     saveAsJson(RESULTS)
@@ -66,6 +77,7 @@ if __name__ == "__main__":
     ECDH()
     SIKE()
     CIRCL()
+    MICROSOFT()
 
     saveAsJson(RESULTS)
     

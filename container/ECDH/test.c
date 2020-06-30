@@ -30,7 +30,7 @@ void benchmark_keygen()
 	EVP_PKEY *key_A = NULL, *key_B = NULL;
 	int status;
 
-	/* Define Algorithm to be ED25519 */
+	/* Define Algorithm to be Diffie-Hellman via Curve 25519 */
 	pctx = EVP_PKEY_CTX_new_id(EVP_PKEY_X25519, NULL);
 	assert(pctx != NULL);
 
@@ -46,7 +46,7 @@ void benchmark_keygen()
 	/* Derivate secret*/
 	unsigned char shared_secret_A;
 	unsigned char shared_secret_B;
-	size_t size = 32;
+	size_t size = 126;
 
 	/* A */
 	ctx = EVP_PKEY_CTX_new(key_A, NULL);
@@ -57,8 +57,6 @@ void benchmark_keygen()
   	assert(status == 1);
 	status = derive_A(ctx, &shared_secret_A, &size);
 	assert(status == 1);
-
-	printf("Done A\n");
 
 	EVP_PKEY *key_A2 = NULL, *key_B2 = NULL;
 
@@ -71,10 +69,8 @@ void benchmark_keygen()
 	EVP_PKEY_CTX *ctx2;
 	ctx2 = EVP_PKEY_CTX_new(key_B2, NULL);
 	assert(ctx2 != NULL);
-		printf("Done A\n");
 	status = EVP_PKEY_derive_init(ctx2);
 	assert(status == 1);
-		printf("Done A\n");
   	status = EVP_PKEY_derive_set_peer(ctx2, key_A2);
   	assert(status == 1);
 	status = derive_B(ctx2, &shared_secret_B, &size);

@@ -8,7 +8,10 @@ This repository contains code to benchmark currently available SIDH implementati
     - x64 Implementation
     - x64 Implementation Compressed
 - CIRCL
-- Microsoft (tbd)
+    - x64 Implementation
+- Microsoft
+    - x64 Implementation
+    - x64 Implementation Compressed
 
 # Usage
 
@@ -31,7 +34,7 @@ The following output files are generated:
 
 - ```data/cached.json```: Contains cached JSON Data, that can be read by the application to produce the output graphs and html. The idea is to save the internal status for later use. The benchmarking application checks if the file "cached.json" exists in it's local directory. If the file is found, the cached data is used and benchmarking takes less time. If you want to use cached data within the docker container, simply copy that file to container/cached.json.
 
-**NOTE:** SIKE Reference Implementation is very slow and makes bar charts hard to read. Therefor, that implementation will not be listed in the charts. However, the benchmarks are executed and results can be seen in ```data/results.html```
+**NOTE:** SIKE Reference Implementation and SIKE Optimized Implementation are very slow and makes bar charts hard to read. Therefor, only x64 optimized implementations are listed in the charts. However, the benchmarks are executed for all implementations and results can be seen in ```data/results.html```
 
 **NOTE:** Each output file contains ECDH (via Curve25519) benchmarks as reference value.
 

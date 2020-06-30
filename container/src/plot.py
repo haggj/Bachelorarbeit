@@ -27,15 +27,17 @@ def plotCurve(result, name, memory=False):
     labels = []
     if not memory:
         labels = ['Keygen A', 'Keygen B', 'Secret A', 'Secret B']
-        ecdh_means = list(map(map_float, list(result["ECDH"][0].values())[1:-1]))
-        ecdh_means = list(map(map_round, ecdh_means))
-        title = 'Instructions by Implementation for SIKE '
+        if "ECDH" in result:
+            ecdh_means = list(map(map_float, list(result["ECDH"][0].values())[1:-1]))
+            ecdh_means = list(map(map_round, ecdh_means))
+        title = 'Overall Instructions for Parameters '
         y_axis = 'Overall Instructions in 1.000.000'
     else:
         labels = ["Memory"]
-        ecdh_means = float(list(result["ECDH"][0].values())[-1])
-        ecdh_means = round(ecdh_means,1)
-        title = 'Maximum Memory by Implementation for '
+        if "ECDH" in result:
+            ecdh_means = float(list(result["ECDH"][0].values())[-1])
+            ecdh_means = round(ecdh_means,1)
+        title = 'Maximum memory consumption in kilobytes for '
         y_axis = 'Memory in Kilobytes'
 
 
@@ -47,13 +49,15 @@ def plotCurve(result, name, memory=False):
     offset = -width*3
 
     fig, ax = plt.subplots()
-    rects1 = ax.bar(x + offset, ecdh_means, width, label='ECDH (Reference value)')
-    autolabel(rects1, ax)
+
+    if "ECDH" in result:
+        ecdh = ax.bar(x + offset, ecdh_means, width, label='ECDH (Reference value)')
+        autolabel(ecdh, ax)
 
     count = 1
 
     for implementation, list_of_results in result.items():
-        if implementation == "Sike Reference Implementation":
+        if implementation in ["Sike Reference", "Sike Optimized", "Sike Optimized Compressed"]:
             continue
         for curve in list_of_results:
             #print(curve)
@@ -132,8 +136,12 @@ def format_statstics(result):
     return TABLE.get_html_string()
 
 def saveAsJson(result):
-    with open('data/cached.json', 'a') as f:
-        json.dump(result, f)
+    if os.path.isfile("cached.json"):
+        with open('data/cached.json', 'a') as f:
+            json.dump(result, f)
+    else:
+         with open('data/cached.json', 'w+') as f:
+            json.dump(result, f)
 
 def loadFromJson():
     if os.path.isfile("cached.json"):
