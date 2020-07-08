@@ -21,10 +21,20 @@ RUN apt-get -y install golang-1.10
 ENV PATH="/usr/lib/go-1.10/bin:${PATH}"
 RUN go get "github.com/cloudflare/circl/dh/sidh"
 
-#install openssl and libgmp3
+#install libgmp3
 RUN apt-get -y install libssl-dev
 RUN apt-get -y install  libgmp3-dev
 
+COPY openssl openssl
+
+#install openssl from source with debug symbols
+RUN mkdir /opt/openssl
+RUN tar xfvz openssl/openssl-1.1.1g.tar.gz --directory /opt/openssl
+RUN export LD_LIBRARY_PATH=/opt/openssl/lib
+RUN cd /opt/openssl/openssl-1.1.1g
+RUN cd /opt/openssl/openssl-1.1.1g; ./config --prefix=/opt/openssl --openssldir=/opt/openssl/ssl --debug
+RUN cd /opt/openssl/openssl-1.1.1g; make
+RUN cd /opt/openssl/openssl-1.1.1g; make install
 
 COPY container .
 
