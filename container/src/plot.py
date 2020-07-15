@@ -28,7 +28,7 @@ def plotCurve(result, name, memory=False):
     if not memory:
         labels = ['Keygen A', 'Keygen B', 'Secret A', 'Secret B']
         if "ECDH" in result:
-            ecdh_means = list(map(map_float, list(result["ECDH"][0].values())[1:-1]))
+            ecdh_means = list(map(map_float, list(result["ECDH"][0].values())[2:-1]))
             ecdh_means = list(map(map_round, ecdh_means))
         title = 'Overall Instructions for Parameters '
         y_axis = 'Overall Instructions in 1.000.000'
@@ -57,15 +57,14 @@ def plotCurve(result, name, memory=False):
     count = 1
 
     for implementation, list_of_results in result.items():
+        #Ignored implementations in graph
         if implementation in ["Sike Reference", "Sike Optimized", "Sike Optimized Compressed"]:
             continue
         for curve in list_of_results:
-            #print(curve)
             if name == curve['Curve']:
-
                 if not memory:
                    
-                    stats = list(map(map_float, list(curve.values())[1:-1]))
+                    stats = list(map(map_float, list(curve.values())[2:-1]))
                     keygen_a =stats[0] + stats[1]
                     keygen_b = stats[2] + stats[3]
                     mean = [keygen_a, keygen_b, stats[4], stats[5]]
@@ -121,7 +120,7 @@ def generateTable(results):
     with open('data/result.html','w') as file:
         file.write(preHTML + "<p>All values (except memory) are absolute instruction counts.</p><p>*Maximum memory consumption in bytes.</p>")
         for key, value in results.items():
-            file.write("<h1>"  + key + "</h1>")
+            file.write("<h1>" + key + "</h1>")
             file.write(format_statstics(value).replace("Memory", "Memory*"))
         file.write("</body></html>")
     

@@ -1,5 +1,4 @@
-from src.base import Base_Implementation, bash, getCallgrindFunctionCalls, bcolors
-import re
+from src.base import Base_Implementation
 
 
 curves=["434", "503", "610", "751"]
@@ -12,20 +11,8 @@ def get_matching(dic, search):
     return None
 
 class Microsoft_Base(Base_Implementation):
-    def __init(self):
-        self.args = ""
-
-    def get_statistics(self, count):
-        print("\n" + bcolors.WARNING + type(self).__name__ + bcolors.ENDC)
-
-        result = []
-        for curve in curves:
-            print(bcolors.BOLD + "Handling curve "+curve+"..." + bcolors.ENDC)
-            res = {}
-            res["Curve"]= "p"+curve
-            res.update(super().get_statistics(count, "{} PARAM={}".format(self.args, curve)))
-            result.append(res)
-        return result
+    def __init__(self, count, args):
+        super().__init__(count=count, path="Microsoft/", args=args, callgrind_main="benchmark_keygen", curves=curves)
 
     def map_functions(self, callgrind_result):
         res = {
@@ -40,12 +27,10 @@ class Microsoft_Base(Base_Implementation):
 
 
 class Microsoft_x64_Implementation(Microsoft_Base):
-    def __init__(self):
-        self.path = "Microsoft"
-        self.args = ""
+    def __init__(self, count):
+        super().__init__(count=count, args="")
     
 
 class Microsoft_x64_Implementation_Compressed(Microsoft_Base):
-    def __init__(self):
-        self.path = "Microsoft"
-        self.args = "COMPRESSED=_compressed"
+    def __init__(self, count):
+        super().__init__(count=count, args="COMPRESSED=_compressed")

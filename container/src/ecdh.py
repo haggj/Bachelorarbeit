@@ -1,12 +1,10 @@
-from src.base import Base_Implementation, bash, bcolors
+from src.base import Base_Implementation
 
-from prettytable import PrettyTable
-from statistics import mean
 
+curves = ["25519"]
 class ECDH_Implementation(Base_Implementation):
-    def __init__(self):
-        self.path = "ECDH/"
-        self.args = ""
+    def __init__(self, count):
+        super().__init__(count=count, path="ECDH/", args="", callgrind_main="benchmark_keygen", curves=curves)
 
     def map_functions(self, callgrind_result):
         res = {
@@ -16,10 +14,3 @@ class ECDH_Implementation(Base_Implementation):
             "SecretB": int(callgrind_result["derive_B"]),
         }
         return res
-    
-    def get_statistics(self, count):
-        print("\n" + bcolors.WARNING + type(self).__name__ + bcolors.ENDC)
-        ret = {"Curve": "25519"}
-        ret.update(super().get_statistics(count, self.args))
-
-        return [ret]
