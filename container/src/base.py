@@ -4,6 +4,7 @@ import subprocess
 import pandas
 import progressbar
 
+import os
 
 from statistics import mean
 
@@ -26,6 +27,46 @@ def bash(command):
         print ("Error during command: " + command)
         raise Exception(stream)
     return
+
+def mostExpensiveFunctions(callgrind, count):
+    """Opens a callgrind.out file and finds the most expensive functions
+
+    Args:
+        callgrind (path): Path to callgrind function
+        count (int): Number of functions to return
+
+    Returns:
+       list of the most expensive functions.
+    """
+    f = open(callgrind)
+    parser = gprof2dot.CallgrindParser(f)
+    profile = parser.parse()
+
+    
+    class function:
+        def __init__(self, name, instructions, percentage):
+            self.absolute_instructions = instructions
+            self.name = name
+            self.percentage = percentage
+
+        def __str__(self):
+            return str(round(self.percentage*100,2)) + "% -- " + self.name
+    
+    functions = []
+    for name, fun in profile.functions.items():
+        percentage=None
+        samples=None
+        for event, value in fun.events.items():
+            if event.name=="Time ratio":
+                percentage=value
+            elif event.name=="Samples":
+                samples=value
+        if percentage and samples:
+            functions.append(function(name, samples, percentage))
+
+
+    functions = sorted(functions, key=lambda func: func.percentage, reverse=True)
+    return functions[:count]
 
 def getCallgrindFunctionCalls(callgrind, function):
     """Opens a callgrind.out file and returns all functions called within the specified function.
@@ -81,6 +122,11 @@ class Base_Implementation():
 
         df = pandas.DataFrame(results)
         average = dict(df.mean())
+
+        if "LISTEXP" in os.environ:
+            for e in mostExpensiveFunctions(self.path+"/benchmarks/callgrind.out", 3):
+                print(e)
+
         return average
 
     def massif_result(self):

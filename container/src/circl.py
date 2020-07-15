@@ -1,6 +1,7 @@
-from src.base import Base_Implementation, getCallgrindFunctionCalls, bash, bcolors
+from src.base import Base_Implementation, getCallgrindFunctionCalls, bash, bcolors, mostExpensiveFunctions
 import progressbar
 import pandas
+import os
 
 curves = ["434","503","751"]
 
@@ -53,6 +54,10 @@ class CIRCL_x64_Implementation(Base_Implementation):
                     
             res = self.callgrind_result()
             results.append(res)
+
+        if "LISTEXP" in os.environ:
+            for e in mostExpensiveFunctions(self.path+"/benchmarks/callgrind.out", 3):
+                print(e)
 
         df = pandas.DataFrame(results)
         average = dict(df.mean())

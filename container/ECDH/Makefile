@@ -1,16 +1,15 @@
 CC=gcc
 
-CFLAGS= -I .. 
+CFLAGS= -ggdb3 -I/usr/local/ssl/include/ -Wl,-rpath,/usr/local/ssl/lib/ -L/usr/local/ssl/lib/ -lcrypto
 
 OBJ = test.c
 
-LIBS=-L/usr/lib/x86_64-linux-gnu/ -lssl -lcrypto
-
+LD_LIBRARY_PATH=/usr/local/ssl/lib
 
 build: $(OBJ)
 	@ echo "building ECDH..."
 	@ mkdir -p "build"
-	@ $(CC) -o build/test $^ $(CFLAGS) $(LIBS)
+	@ $(CC) -o build/test $^ $(CFLAGS)
 	@ echo "\e[32mSUCCESS\e[0m"
 
 callgrind:

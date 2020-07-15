@@ -2,10 +2,6 @@
 #include <stdlib.h>
 
 #include <api.h>
-
-#include <openssl/dh.h>
-#include <openssl/ecdh.h>
-
 int benchmark_keygen() {
 
   unsigned char private_key_A[SIDH_SECRETKEYBYTES] = { 0 };

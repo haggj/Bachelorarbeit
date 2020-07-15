@@ -22,7 +22,6 @@ ENV PATH="/usr/lib/go-1.10/bin:${PATH}"
 RUN go get "github.com/cloudflare/circl/dh/sidh"
 
 #install libgmp3
-RUN apt-get -y install libssl-dev
 RUN apt-get -y install  libgmp3-dev
 
 COPY openssl openssl
@@ -30,9 +29,7 @@ COPY openssl openssl
 #install openssl from source with debug symbols
 RUN mkdir /opt/openssl
 RUN tar xfvz openssl/openssl-1.1.1g.tar.gz --directory /opt/openssl
-RUN export LD_LIBRARY_PATH=/opt/openssl/lib
-RUN cd /opt/openssl/openssl-1.1.1g
-RUN cd /opt/openssl/openssl-1.1.1g; ./config --prefix=/opt/openssl --openssldir=/opt/openssl/ssl --debug
+RUN cd /opt/openssl/openssl-1.1.1g; ./config --prefix=/usr/local/ssl --openssldir=/usr/local/ssl -g3 -ggdb --debug
 RUN cd /opt/openssl/openssl-1.1.1g; make
 RUN cd /opt/openssl/openssl-1.1.1g; make install
 

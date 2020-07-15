@@ -4,10 +4,6 @@
 
 #include <api.h>
 
-#include <openssl/dh.h>
-#include <openssl/ecdh.h>
-
-
 
 int benchmark_keygen() {
 
