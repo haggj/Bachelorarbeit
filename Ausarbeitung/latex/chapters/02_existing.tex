@@ -4,3 +4,30 @@ aksdjföladsjf
 \section{SIKE}
 \section{CIRCL}
 \section{PQCrypto-SIDH Microsoft}
+
+\begin{table}[htpb]
+  \centering
+  \begin{tabular}{|K{3cm}|K{4cm}|K{4cm}|K{4cm}|}
+	\hline
+    \rowcolor{lightgray!50}
+     & \textbf{SIKE} & \textbf{PQCrypto-SIDH} & \textbf{CIRCL} \\
+	\hline
+    \bfseries\makecell{Developer}& SIKE & Microsoft & Cloudflare \\
+    \hline
+    \bfseries\makecell{Language} & \makecell{C \\ Assembly} & \makecell{C \\ Assembly} & \makecell{GO \\ Assembly}\\
+    \hline
+    \bfseries\makecell{Reference} & \makecell{C \\ Assembly} & \makecell{C \\ Assembly} & \makecell{GO \\ Assembly}\\
+    \hline
+    \hline
+    \bfseries\makecell{Implemented \\ primitives} & \makecell{SIDH \\ PKE \\ KEM\\} & \makecell{SIDH \\ KEM\\} & \makecell{SIDH \\ KEM\\} \\
+	\hline
+	\bfseries\makecell{Available \\ parameters} & \makecell{p434 \\ p503 \\ p610 \\ p751\\} & \makecell{p434 \\ p503 \\ p610 \\ p751\\} & \makecell{p434 \\ p503 \\ p751\\} \\
+	\hline
+	\bfseries\makecell{Optimized \\ versions} & \makecell{Generic (portable c) \\ x64 \\ x64 compressed \\ ARM64 \\ ARM Cortex M4 \\ VHDL \\} & \makecell{Generic (portable c) \\ x64 \\ x64 compressed \\ ARMv8 \\ ARMv8 compressed\\} & \makecell{Generic (GO) \\ AMD64\\ ARM64 \\} \\
+	\hline
+	\bfseries\makecell{Security} & \makecell{Constant time} & \makecell{Constant time}  & \makecell{Constant time} \\
+	\hline
+
+  \end{tabular}
+   \caption[Existing SIDH implementations]{Overview and comparison of existing SIDH implementations.}\label{tab:existing_sidh}
+\end{table}

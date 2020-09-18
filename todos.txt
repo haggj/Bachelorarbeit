@@ -1,0 +1,7 @@
+TODO:
+1.1
+- compare KEM and KEX
+
+1.2
+- details about quantum computers, why are they faster?
+- details about shors algorithm

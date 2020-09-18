@@ -74,6 +74,14 @@ k_{AB} & = A^b mod p \\
 \end{equation}
 \item Alice and Bob created the shared secret $k_{AB}$. Note that only the public keys of Alice and Bob were send over an insecure channel. The generated secret was calculated decentralized by Alice and Bob.
 \end{enumerate}
+This procedure also can be illustrated in the following diagram, which emphasizes the commutative properties of the protocol. It does not matter if first apply $x \to x^a$ or $x \to x^b$ to the starting point $g$. The result is the same, since $g^{ab} = g^{ba}$.
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=0.5\textwidth]{background/diffie_hellman}
+  \caption[Diffie Hellman diagram]{Diffie Hellman diagram, both paths lead to the same result.}
+  \label{fig:diffie_hellman}
+\end{figure}
 
 \subsubsection{Security}
 If an attacker wants to compute $k_{AB}$, it needs to compute the private keys $A$ and $B$ of Alice and Bob. Since only the public keys are exchanged, the attacker needs to compute:
@@ -163,7 +171,6 @@ Thus, to break symmetric encryption one need to perform a brute-force attack on 
 To sum up, quantum computers make use of quantum mechanical phenomena in order to solve mathematical problems, which are assumed to be difficult for modern computers. As a result large-scale quantum computers might break many algorithms of modern asymmetric cryptography and enforce increased key sizes for symmetric encryption schemes. The following table form the NIST \textit{"Report on Post-Quantum Cryptography"} \parencite{chen2016report} shows the impact of quantum computers on modern encryption schemes:
 
 \begin{table}[htpb]
-  \caption[Impact of quantum computers on encryption schemes]{Impact of quantum computers on encryption schemes}\label{tab:impact}
   \centering
   \begin{tabular}{|K{3cm}|K{3cm}|K{4cm}|K{4cm}|}
 	\hline
@@ -181,15 +188,16 @@ To sum up, quantum computers make use of quantum mechanical phenomena in order t
       ECDH, ECDSA & Public key & Signatures, key exchange & No longer secure \\
     \hline
   \end{tabular}
+  \caption[Impact of quantum computers on modern encryption schemes]{Impact of quantum computers on modern encryption schemes}\label{tab:impact}
 \end{table}
 
 In contrast to this development in modern cryptography NIST states~\parencite{chen2016report}:
 \begin{quote}
 \textit{"In the last three decades, public key cryptography has become an indispensable component of our global communication digital infrastructure. These networks support a plethora of applications that are important to our economy, our security, and our way of life, such as mobile phones, internet commerce, social networks, and cloud computing. In such a connected world, the ability of individuals, businesses and governments to communicate securely is of the utmost importance."}
 \end{quote}
-This statement emphasizes the urgency and need of new asymmetric encryption schemes. As a consequence, NIST initiated a process to standardize quantum-secure public-key algorithms. In literature, this is called \textit{post-quantum cryptography}, since the objectives of the submitted procedures is to stay secure against a large-scale quantum computer. In July 2020, Round 3 of the standardization process was announced. Different approaches for quantum-resistant algorithms have been proposed. In this work, the focus is on isogeny-based cryptography (section \ref{isogeny-based_crypto}). Other classes of post-quantum cryptography are described for completeness in the following section \ref{classes_pqc}.
+This statement emphasizes the urgency and need of new asymmetric encryption schemes. As a consequence, NIST initiated a process to standardize quantum-secure public-key algorithms. In literature, this is called \textit{post-quantum cryptography}, since the objectives of the submitted procedures is to stay secure against a large-scale quantum computer. In July 2020, Round 3 of the standardization process was announced. Different approaches for quantum-resistant algorithms have been proposed. In this work, the focus is on isogeny-based cryptography (section \ref{sec:isogeny-based_crypto}). Other classes of post-quantum cryptography are described for completeness in the following section \ref{sec:classes_pqc}.
 
-\subsection{Classes of Post-Quantum Cryptography} \label{classes_pqc}
+\subsection{Classes of Post-Quantum Cryptography} \label{sec:classes_pqc}
 
 This section provides an overview about important post-quantum cryptography classes: Lattice-based, multivariate and code-based cryptography as well as hash-based signatures are shortly presented. 
 
@@ -205,11 +213,11 @@ Beside asymmetric cryptography, code-based schemes have been proposed for digita
 Hash-based signatures describe the construction of digital signatures schemes based on hash functions. Thus, the security of theses primitives is based on the security of the underlying hash function and not on hard algorithmic problems~\parencite{bernstein2017post}. Since hash functions are widely deployed in modern computer systems, the security of hash-based signatures is well understood~\parencite{chen2016report}.\\
 The initially developed One-Time Signatures have the downside, that a new public key pair is needed for each signature~\parencite{becker2008merkle}. In 1979, Merkle introduced the Merkle Signature Scheme (MSS), which uses one public key for multiple signatures~\parencite{merkle1979secrecy}. Further improvements of MSS introduced public keys, which can be used for $2^{80}$ signatures. However, this also leads to longer signature sizes~\parencite{becker2008merkle}.
 
-\subsection{Isogeny-based Cryptography} \label{isogeny-based_crypto}
+\subsection{Isogeny-based Cryptography} \label{sec:isogeny-based_crypto}
 Isogeny-based cryptography was proposed in 2011 as a new cryptographic system, that might resists quantum computing~\parencite{jao2011towards}. Beside the publication describing isogeny-based cryptgraphy, the authors also provided a reference implementaion of a public key system, which is called SIKE~\parencite{sike2020spec}. The security of these primitives is based on finding isogenies between supersingular elliptic curves.\\
-In the following, the problem is roughly illustrated. It is not indented to precise the mathematics behind isogeny-based cryptography, since this is not the scope of this work. However, the reader might become a little understanding of the magic behind supersingular isogenies.
+In the following, the problem is roughly illustrated. It is not indented to precise the mathematics behind isogeny-based cryptography, since this is not the scope of this work. However, the reader might become a little understanding of the magic behind supersingular isogenies. Next, the central component of isogeny-based cryptography, namely the Supersingular Isogeny Diffie Hellman (SIDH), is described. Finally, details of the reference implementation SIKE will be given.
 
-\subsubsection{Illustration of the Problem}
+\subsubsection{Illustration of the Problem ~\parencite{urbanik2017friendly}~\parencite{costello2019supersingular}}
 Isogeny-based cryptography works on supersingular elliptic curves. To be more precise, it is based on isogenies between supersingular elliptic curves.
 \\
 In the context of elliptic curves, one can calculate a quotient of an elliptic curve $E$ by a subgroup $S$. This essentially means to construct a new elliptic curve $E$\textbackslash $S$.
@@ -224,9 +232,86 @@ The idea behind isogeny-based cryptography might be illustrated as followed:
 \item This yields the isogeny $\phi_A: E \to E_A$, which is used as private key.
 \item The curve $E_A$ is used as part of the public key.
 \end{enumerate}
-As usually in asymmetric cryptography, the hard mathematical problem is the calculation of the private key while knowing the public key. To be more precise: Find the isogeny $\phi_A: E \to E_A$´ while knowing curves $E$ and $E_A$ is considered to be a quantum-resistant challenge.
+As usually in asymmetric cryptography, the hard mathematical problem is the calculation of the private key while knowing the public key. To be more precise: Find the isogeny $\phi_A: E \to E_A$ while knowing curves $E$ and $E_A$ is considered to be a quantum-resistant challenge.
 \\
-This key pair, however, is not used to decrypt or encrypt data. In fact, this procedure is very similar to the previously introduced Diffie-Hellman key exchange, where the key pair is used to establish a shared secret between two communication partners.
-In essence, isogney-based cryptography creates a shared via a Diffie-Hellman like procedure. This is called \textit{Supersingular Isogeny Diffe Hellman (SIDH)}.
+This key pair, however, is not used to decrypt or encrypt data. In fact, the procedure is very similar to the previously introduced Diffie-Hellman key exchange, where the key pair is used to establish a shared secret between two communication partners.
+In its core, isogney-based cryptography creates a shared secret via a Diffie-Hellman like procedure. This is called \textit{Supersingular Isogeny Diffe Hellman (SIDH)}.
 
 \subsubsection{Supersingular Isogeny Diffie Hellman (SIDH)}
+
+Recall the Diffie Hellman diagram in  \autoref{fig:diffie_hellman}, where the commutative property of the protocol was shown. The same diagram can be drawn for the Diffie Hellman on supersingular isogenies, see \autoref{fig:sidh}. 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{background/sidh}
+  \caption[Supersingular Isogeny Diffie Hellman diagram]{Supersingular Isogeny Diffie Hellman procedure, both paths lead to the same result. Note, the different isogenies $\phi_{A}'$ and $\phi_{B}'$, that are applied in each second step of the diagram. The reason for this lies in the mathematics of supersingular isogenies: $\phi_{A} \phi_{B} \neq \phi_{B} \phi_{A}$. In order to construct $\phi_{X}'$ or $\phi_{B}'$, the public key of each communication partner provides additional information beside the curve $E_A$ or $E_B$.~\parencite{costello2016gentle}}
+  \label{fig:sidh}
+\end{figure}
+In the previous section the underlying mathematical idea was illustrated. The described key generation can be extended to a key exchange primitive, which has strong similarity to the classical Diffie-Hellman key exchange. Starting point of SIDH is a known supersingular elliptic curve E. 
+
+\begin{enumerate}
+\item Alice creates an isogeny $\phi_A$ (private key), which leads to curve $E_A$ (part of the public key).
+\item Bob creates an isogeny $\phi_B$ (private key), which leads to curve $E_B$ (part of the public key).
+\item Alice and Bob exchange their public keys.
+\item Bob computes $\phi_B'$ (using additional information from the public key of Alice) and applies $\phi_B'$ to the received $E_A$. This results in $E_{AB}$
+\item Alice computes $\phi_A'$ (using additional information from the public key of Bob) and applies $\phi_A'$ to the received $E_B$. This results in $E_{AB}$
+\item Alice and Bob now share the  common secret $E_{AB}$.
+\end{enumerate}
+
+\subsubsection{Implemenation Details}
+
+The reference implementation of SIKE \parencite{sike2020spec} provides two fundamental functions: \textit{isogen} and \textit{isoex}. Both are used, to implement the previously introduced Supersingular Isogeny Diffie-Hellman (SIDH) algorithm. Note, that the secret key \textit{sk} is represented as a random integer.
+\\
+
+\begin{table}[htpb]
+  \centering
+  \begin{tabular}{|K{3cm}|K{3cm}|K{4cm}|}
+	\hline
+    \rowcolor{lightgray!50}
+      \textbf{Function} & \textbf{Input} & \textbf{Output} \\
+	\hline
+      \textit{isogen} & secret key \textit{sk} & public key \textit{pk} \\
+     \hline
+      \textit{isoex} & secret key \textit{sk}, public key \textit{pk} & shared secret \textit{sec}\\
+     \hline
+  \end{tabular}
+   \caption[Core functions of the SIKE reference implementation]{Core functions of the SIKE reference implementation.}\label{tab:sike_core_functions}
+\end{table}
+
+The function \textit{isogen} takes a secret key (random integer) as input an generates the public key. The shared secret is generated by \textit{isoex}, which takes the own secret key and the foreign public key as input. The key exchange procedure with respect to \textit{isogen} and \textit{isoex} works as followed:
+
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=0.6\textwidth]{background/sike_sidh}
+  \caption[SIDH based on \textit{isogen} and \textit{isoex}]{SIDH based on \textit{isogen} and \textit{isoex}: After generating a random secret key \textit{sk}, each party computes its public key \textit{pk}. After the exchange of public keys, each party finally calculates the shared secret \textit{sec}.} \label{fig:sike-sidh}
+\end{figure}
+Beside this key exchange algorithm, SIKE provides a complete asymmetric encryption scheme and a key encpsulation mechansim (KEM)~\parencite{sike2020spec}. 
+Both of these schemes build upon the here described SIKE core functions \textit{isogen} and \textit{isoex}.
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{background/sike_asym}
+  \caption[SIKE public key encryption]
+  {The SIKE public key encryption system consists of three algorithms: 
+  \\
+  1. \textit{Gen} generates a key pair \textit{(sk, pk)}.
+  \\
+  2. \textit{Enc} encrypts a given plaintext $m$ using a foreign public key \textit{pk} and the own secret key \textit{r}.
+  \\
+  3. \textit{Dec} decodes a given cipthertext using the own secret key \textit{sk}.
+  \\ Note, that the function $F$ used in \textit{Enc} and \textit{Dec} is a key derivation function.} \label{fig:sike-sidh}
+\end{figure}
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{background/sike_kem}
+  \caption[SIKE public key encryption]
+  {The SIKE public key encryption system consists of three algorithms: 
+  \\
+  1. \textit{Gen} generates a key pair \textit{(sk, pk)}.
+  \\
+  2. \textit{Enc} encrypts a given plaintext $m$ using a foreign public key \textit{pk} and the own secret key \textit{r}.
+  \\
+  3. \textit{Dec} decodes a given cipthertext using the own secret key \textit{sk}.
+  \\ Note, that the function $F$ used in \textit{Enc} and \textit{Dec} is a key derivation function.} \label{fig:sike-sidh}
+\end{figure}
