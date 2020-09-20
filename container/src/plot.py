@@ -125,12 +125,12 @@ def generateTable(results):
         file.write("</body></html>")
     
 def format_statstics(result):
-    #result is list of dictionaries
+    #result is instance of class BenchmarkImpl
     TABLE = PrettyTable()
-    TABLE.field_names = list(result[0].keys())
+    TABLE.field_names = result.get_benchmark_names()
 
-    for r in result:
-        TABLE.add_row(list(r.values()))
+    for curve in result.curves:
+        TABLE.add_row(curve.get_benchmark_values())
 
     return TABLE.get_html_string()
 
@@ -143,8 +143,8 @@ def saveAsJson(result):
             json.dump(result, f)
 
 def loadFromJson():
-    if os.path.isfile("cached.json"):
-        with open('cached.json', 'r') as f:
+    if os.path.isfile("data/cached.json"):
+        with open('data/cached.json', 'r') as f:
             cached = json.load(f)
             print("\nUsing cached data for:\n" + bcolors.WARNING + "\t\n".join(cached.keys())  + bcolors.ENDC)
             return cached

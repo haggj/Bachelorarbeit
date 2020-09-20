@@ -1,7 +1,7 @@
 from src.base import Base_Implementation
 
 
-curves=["434", "503", "610", "751"]
+curves=["434"]#, "503", "610", "751"]
 
 
 def get_matching(dic, search):

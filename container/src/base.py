@@ -101,6 +101,62 @@ def getCallgrindFunctionCalls(callgrind, function):
                 ret[callee.name] = int(data)
     return ret
 
+class BenchmarkImpl:
+    def __init__(self, description):
+        self.name = description
+        self.curves = []
+
+    def add_curve(self, curve):
+        self.curves.append(curve)
+    
+    def get_benchmark_names(self):
+        if len(self.curves) == 0:
+            return None
+        return self.curves[0].get_benchmark_names()
+
+    def __str__(self):
+        return "%s\n\t%s" % (self.name, "\n".join([str(curve) for curve in self.curves]))
+
+class BenchmarkCurve:
+    def __init__(self, description):
+        self.name = description
+        self.benchmarks = []
+
+    def add_benchmarks(self, append):
+        if isinstance(append, list):
+            self.benchmarks = self.benchmarks + append
+        else:
+            self.benchmarks.append(append)
+
+    def set_hotspots(self, hotspots):
+        self.hotspots = hotspots
+
+    def get_hotspots(self):
+        return self.hotspots
+
+    def get_benchmark_names(self):
+        return [benchmark.name for benchmark in self.benchmarks]
+    
+    def get_benchmark_values(self):
+        return [benchmark.get_average() for benchmark in self.benchmarks]
+
+    def __str__(self):
+        seperator = "\n\t\t"
+        return "p%s%s%s" % (self.name, seperator, seperator.join([str(benchmark) for benchmark in self.benchmarks]))
+
+class Benchmarks:
+    def __init__(self, description, values):
+        self.name = description
+        self.values = values
+    def get_minimum(self):
+        return min(self.values)
+    def get_maximum(self):
+        return max(self.values)
+    def get_average(self):
+        return round(mean(self.values))
+    def __str__(self):
+         return self.name + ": " + str(self.get_average())
+
 class Base_Implementation():
 
     def __init__(self, count, path, args, callgrind_main, curves):
@@ -125,31 +181,30 @@ class Base_Implementation():
         calls = getCallgrindFunctionCalls(self.path+"/benchmarks/callgrind.out", self.callgrind_main)
         return self.map_functions(calls)
 
-    def callgrind_average(self):
+    def callgrind(self):
         results = []
-        
 
-
-        for i in progressbar.progressbar(range(self.count), redirect_stdout=True, prefix="    Callgrind "):
-            count = 0
-            while True:
+        for _ in progressbar.progressbar(range(self.count), redirect_stdout=True, prefix="    Callgrind "):
+            for _ in range(0,10):
                 try:
                     bash('make callgrind -C {}'.format(self.path))
                     res = self.callgrind_result()
                     results.append(res)
                     break
                 except Exception as e:
-                    count +=1
-                    if count == 10:
-                        print("Callgrind failed 10 times...")
-                        break
+                    pass
+            print("Callgrind failed 10 times...")
+        
+        # Combine single benchmarks to a common result
+        benchmarks = []
+        for description in ["PrivateKeyA", "PublicKeyA",  "PrivateKeyB", "PublicKeyB", "SecretA", "SecretB"]:
+            values = [res[description] for res in results]
+            benchmark = Benchmarks(description, values)
+            benchmarks.append(benchmark)
 
-        df = pandas.DataFrame(results)
-        average = dict(df.mean())
-
-        return average
+        return benchmarks
     
-    def get_expensive(self):
+    def hotspots(self):
         result = []
         for e in mostExpensiveFunctions(self.path+"/benchmarks/callgrind.out", 3):
                 result.append(str(e))
@@ -163,34 +218,35 @@ class Base_Implementation():
         return peak_mem
 
 
-    def massif_average(self):
-        results = []
+    def massif(self):
+        values = []
         for i in progressbar.progressbar(range(self.count), redirect_stdout=True, prefix="    Massif    "):
             bash('make massif -C {}'.format(self.path))
             res = self.massif_result()
-            results.append(res)
-        return int(mean(results))
+            values.append(res)
+        return Benchmarks("Memory", values)
 
 
-    def get_benchmarks(self, args):
-        #compile and generate benchmark outputs
-        bash('make build -B -C {} {}'.format(self.path, args))
+    def benchmark_curve(self, curve):
+        #compile and generate benchmark outputs for specific curve
+        args = "{} {} PARAM={}".format(self.path, self.args, curve)
+        bash('make build -B -C {}'.format(args))
 
-        result = self.callgrind_average()
-        result["Memory"] = self.massif_average()
+        benchmark_curve = BenchmarkCurve(curve)
+        benchmark_curve.add_benchmarks(self.callgrind())
+        benchmark_curve.add_benchmarks(self.massif())
+        benchmark_curve.set_hotspots(self.hotspots())
 
-        return {k:format(int(v), ",").replace(",", ".") for k, v in result.items()}
+        return benchmark_curve
 
     def get_statistics(self):
-        #Generate statistics for all defined curves
+        #Generate statistics for all curves
         print("\n" + bcolors.WARNING + type(self).__name__ + bcolors.ENDC)
 
-        result = []
+        benchmark = BenchmarkImpl(type(self).__name__)
+        
         for curve in self.curves:
             print(bcolors.BOLD + "Handling curve "+curve+"..." + bcolors.ENDC)
-            res = {}
-            res["Curve"]= "p"+curve
-            res["Expensive"] = self.get_expensive()
-            res.update(self.get_benchmarks("{} PARAM={}".format(self.args, curve)))
-            result.append(res)
-        return result
+            benchmark.add_curve(self.benchmark_curve(curve))
+
+        return benchmark

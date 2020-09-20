@@ -13,7 +13,7 @@ from src.plot import generatePlot, generateTable, saveAsJson, loadFromJson
 import signal
 import sys
 
-COUNT = 100
+COUNT = 1
 RESULTS = {}
 
 
@@ -62,9 +62,9 @@ def MICROSOFT():
         MS_x64 = Microsoft_x64_Implementation(COUNT)
         RESULTS["Microsoft x64"] = MS_x64.get_statistics()
 
-    if "Microsoft x64 Compressed" not in RESULTS:
-        MS_x64_compressed = Microsoft_x64_Implementation_Compressed(COUNT)
-        RESULTS["Microsoft x64 Compressed"] = MS_x64_compressed.get_statistics()
+    # if "Microsoft x64 Compressed" not in RESULTS:
+    #     MS_x64_compressed = Microsoft_x64_Implementation_Compressed(COUNT)
+    #     RESULTS["Microsoft x64 Compressed"] = MS_x64_compressed.get_statistics()
 
 def signal_handler(sig,frame):
     saveAsJson(RESULTS)
@@ -73,12 +73,18 @@ def signal_handler(sig,frame):
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     RESULTS = loadFromJson()
+    RESULTS = {}
 
-    ECDH()
-    SIKE()
-    CIRCL()
+    #ECDH()
+    #SIKE()
+    #CIRCL()
     MICROSOFT()
+    import json
+   
+   
+    for name,bench in RESULTS.items():
+        print(str(bench))
 
-    saveAsJson(RESULTS)
-    generatePlot(RESULTS)
+    #saveAsJson(RESULTS)
+    #generatePlot(RESULTS)
     generateTable(RESULTS)
