@@ -8,7 +8,9 @@ from src.circl import CIRCL_x64_Implementation
 
 from src.microsoft import Microsoft_x64_Implementation, Microsoft_x64_Implementation_Compressed
 
-from src.plot import generatePlot, generateTable, saveAsJson, loadFromJson
+from src.plot_graph import generate_graph
+from src.plot_table import generate_table
+from src.caching import load_from_json, save_as_json
 
 import signal
 import sys
@@ -62,29 +64,23 @@ def MICROSOFT():
         MS_x64 = Microsoft_x64_Implementation(COUNT)
         RESULTS["Microsoft x64"] = MS_x64.get_statistics()
 
-    # if "Microsoft x64 Compressed" not in RESULTS:
-    #     MS_x64_compressed = Microsoft_x64_Implementation_Compressed(COUNT)
-    #     RESULTS["Microsoft x64 Compressed"] = MS_x64_compressed.get_statistics()
+    if "Microsoft x64 Compressed" not in RESULTS:
+        MS_x64_compressed = Microsoft_x64_Implementation_Compressed(COUNT)
+        RESULTS["Microsoft x64 Compressed"] = MS_x64_compressed.get_statistics()
 
 def signal_handler(sig,frame):
-    saveAsJson(RESULTS)
+    save_as_json(RESULTS)
     sys.exit(0)
 
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
-    RESULTS = loadFromJson()
+    RESULTS = load_from_json()
     RESULTS = {}
 
     #ECDH()
     #SIKE()
-    #CIRCL()
+    CIRCL()
     MICROSOFT()
-    import json
-   
-   
-    for name,bench in RESULTS.items():
-        print(str(bench))
-
-    #saveAsJson(RESULTS)
-    #generatePlot(RESULTS)
-    generateTable(RESULTS)
+    save_as_json(RESULTS)
+    generate_graph(RESULTS)
+    generate_table(RESULTS)

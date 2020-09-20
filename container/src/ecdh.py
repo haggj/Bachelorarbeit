@@ -8,8 +8,10 @@ class ECDH_Implementation(Base_Implementation):
 
     def map_functions(self, callgrind_result):
         res = {
-            "KeygenA": int(callgrind_result["keygen_A"]/2),
-            "KeygenB": int(callgrind_result["keygen_B"]/2),
+            "PublicKeyA": int(callgrind_result["keygen_A"]/2),
+            "PublicKeyB": int(callgrind_result["keygen_B"]/2),
+            "PrivateKeyA": 0,
+            "PrivateKeyB": 0,
             "SecretA": int(callgrind_result["derive_A"]),
             "SecretB": int(callgrind_result["derive_B"]),
         }

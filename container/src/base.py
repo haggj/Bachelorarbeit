@@ -107,12 +107,19 @@ class BenchmarkImpl:
         self.curves = []
 
     def add_curve(self, curve):
+        curve.impl = self
         self.curves.append(curve)
     
     def get_benchmark_names(self):
         if len(self.curves) == 0:
             return None
         return self.curves[0].get_benchmark_names()
+    
+    def get_benchmarks_of_curve(self, name):
+        for curve in self.curves:
+            if curve.name == name:
+                return curve
+        return None
 
     def __str__(self):
         return "%s\n\t%s" % (self.name, "\n".join([str(curve) for curve in self.curves]))
@@ -121,6 +128,7 @@ class BenchmarkCurve:
     def __init__(self, description):
         self.name = description
         self.benchmarks = []
+        self.hotspots = None
 
     def add_benchmarks(self, append):
         if isinstance(append, list):
@@ -139,6 +147,31 @@ class BenchmarkCurve:
     
     def get_benchmark_values(self):
         return [benchmark.get_average() for benchmark in self.benchmarks]
+    
+    def get_benchmarks_for_plot(self):
+
+        benchmarks = []
+        #KeyGenA
+        val = self.find_benchmark("PublicKeyA",0)
+        val += self.find_benchmark("PrivateKeyA",0)
+        benchmarks.append(val if val != 0 else "no values")
+        #KeyGenB
+        val = self.find_benchmark("PublicKeyB",0)
+        val += self.find_benchmark("PrivateKeyB",0)
+        benchmarks.append(val if val != 0 else "no values")
+        #SecretA
+        val = self.find_benchmark("SecretA",0)
+        benchmarks.append(val if val != 0 else "no values")
+        #SecretB
+        val = self.find_benchmark("SecretB",0)
+        benchmarks.append(val if val != 0 else "no values")
+        return benchmarks
+
+    def find_benchmark(self, name, alternative):
+        for benchmark in self.benchmarks:
+            if benchmark.name == name:
+                return benchmark.get_average()
+        return alternative
 
     def __str__(self):
         seperator = "\n\t\t"
@@ -185,15 +218,18 @@ class Base_Implementation():
         results = []
 
         for _ in progressbar.progressbar(range(self.count), redirect_stdout=True, prefix="    Callgrind "):
-            for _ in range(0,10):
+            fails = 0
+            while True:
                 try:
                     bash('make callgrind -C {}'.format(self.path))
                     res = self.callgrind_result()
                     results.append(res)
                     break
                 except Exception as e:
-                    pass
-            print("Callgrind failed 10 times...")
+                    fails += 1
+                    if fails == 10:            
+                        print("Callgrind failed 10 times...")
+                        break
         
         # Combine single benchmarks to a common result
         benchmarks = []
