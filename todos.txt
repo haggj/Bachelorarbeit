@@ -5,3 +5,7 @@ TODO:
 1.2
 - details about quantum computers, why are they faster?
 - details about shors algorithm
+
+
+2
+- illustrate SIDH APIs for each library

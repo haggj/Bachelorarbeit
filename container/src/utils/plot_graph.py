@@ -24,25 +24,28 @@ def autolabel(rects, ax):
 def plot_memory(curve, benchmarks, ecdh_compare=None):
     # benchmarks is list of BenchmarkCurve objects
     labels = ["Memory"]
-    title = 'Maximum memory consumption in kilobytes for '
+    title = 'Maximum memory consumption in kilobytes for p' + str(curve)
     y_axis = 'Memory in Kilobytes'
 
-    x = np.arange(len(labels))  # the label locations
-    margin = 0.25
-    width = (1.-2.*margin)
-
-    offset = -width*3
+    number_of_implementations = len(benchmarks) + (1 if ecdh_compare else 0)
+    
+    x = np.arange(len(labels))
+    width = 0.8/number_of_implementations
+    offset = -width*(number_of_implementations/2)
 
     fig, ax = plt.subplots()
+
+    count = 0
 
     if ecdh_compare:
         values = [round(ecdh_compare.find_benchmark(
             "Memory", "not found")/1000, 1)]
-        ecdh = ax.bar(x + offset, values, width,
+        ecdh = ax.bar(x + offset + 0.1 , values, width,
                       label='ECDH (Reference value)')
         autolabel(ecdh, ax)
+        count += 1
 
-    count = 0
+
     for benchmark in benchmarks:
         values = [round(benchmark.find_benchmark(
             "Memory", "not found")/1000, 1)]
@@ -70,21 +73,22 @@ def plot_instructions(curve, benchmarks, ecdh_compare=None):
     title = 'Overall Instructions for Parameters ' + str(curve)
     y_axis = 'Overall Instructions in 1.000.000'
 
-    x = np.arange(len(labels))  # the label locations
-    margin = 0.25
-    width = (1.-2.*margin)/4
-
-    offset = -width*3
+    number_of_implementations = len(benchmarks) + (1 if ecdh_compare else 0)
+    
+    x = np.arange(len(labels))
+    width = 0.8/number_of_implementations
+    offset = -width*(number_of_implementations/2)
 
     fig, ax = plt.subplots()
 
+    count = 0
     if ecdh_compare:
         values = list(map(map_round, ecdh_compare.get_benchmarks_for_plot()))
         ecdh = ax.bar(x + offset, values, width,
                       label='ECDH (Reference value)')
         autolabel(ecdh, ax)
+        count += 1
 
-    count = 0
     for benchmark in benchmarks:
         values = list(map(map_round, benchmark.get_benchmarks_for_plot()))
         rec = ax.bar(x + width*count + offset, values,
@@ -108,12 +112,29 @@ def plot_instructions(curve, benchmarks, ecdh_compare=None):
 def generate_graph(result):
     curves = ["434", "503", "610", "751"]
     processes = []
+    if "ECDH" in result:
+        ecdh = result["ECDH"].curves[0]
+    else:
+        ecdh = None
+    ecdh = None
+
     for curve in curves:
         # 1. Collect all benchmarks for specific curve
         benchmarks = []
+        implementations = [
+            "CIRCL_x64_Implementation",
+            #"Microsoft_x64_Implementation",
+            #"Microsoft_x64_Implementation_Compressed",
+            "Sike_Optimized_Implementation",
+            "Sike_Optimized_Implementation_Compressed",
+            "Sike_x64_Implementation",
+            #"Sike_x64_Implementation_Compressed",
+            #"Sike_Reference_Implementation",
+            #"ECDH_Implementation"
+        ]
         for name, impl in result.items():
             # Ignore these implementations
-            if impl.name in ["Sike Reference", "Sike Optimized", "Sike Optimized Compressed"]:
+            if impl.name not in implementations:
                 continue
             found = impl.get_benchmarks_of_curve(curve)
             if found:
@@ -121,10 +142,10 @@ def generate_graph(result):
         # 2. Generate plots
         if benchmarks:
             # 2.1 Generates plots regarding instructions
-            p1 = Process(target=plot_instructions, args=(curve, benchmarks))
+            p1 = Process(target=plot_instructions, args=(curve, benchmarks, ecdh))
             p1.start()
             # 2.2 Generate plots regarding memory
-            p2 = Process(target=plot_memory, args=(curve, benchmarks))
+            p2 = Process(target=plot_memory, args=(curve, benchmarks, ecdh))
             p2.start()
             processes.append(p1)
             processes.append(p2)

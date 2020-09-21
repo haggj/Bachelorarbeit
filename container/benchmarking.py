@@ -8,9 +8,9 @@ from src.circl import CIRCL_x64_Implementation
 
 from src.microsoft import Microsoft_x64_Implementation, Microsoft_x64_Implementation_Compressed
 
-from src.plot_graph import generate_graph
-from src.plot_table import generate_table
-from src.caching import load_from_json, save_as_json
+from src.utils.plot_graph import generate_graph
+from src.utils.plot_table import generate_table
+from src.utils.caching import load_from_json, save_as_json
 
 import signal
 import sys
@@ -75,10 +75,9 @@ def signal_handler(sig,frame):
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     RESULTS = load_from_json()
-    RESULTS = {}
 
-    #ECDH()
-    #SIKE()
+    ECDH()
+    SIKE()
     CIRCL()
     MICROSOFT()
     save_as_json(RESULTS)

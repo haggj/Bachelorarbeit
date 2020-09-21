@@ -143,10 +143,10 @@ class BenchmarkCurve:
         return self.hotspots
 
     def get_benchmark_names(self):
-        return [benchmark.name for benchmark in self.benchmarks]
+        return [benchmark.name for benchmark in self.benchmarks] + ["Hotspots"]
     
     def get_benchmark_values(self):
-        return [benchmark.get_average() for benchmark in self.benchmarks]
+        return [benchmark.get_average() for benchmark in self.benchmarks] + [self.hotspots]
     
     def get_benchmarks_for_plot(self):
 

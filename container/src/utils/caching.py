@@ -37,6 +37,7 @@ def deserialize_curve(dic):
             curve = BenchmarkCurve(dic["name"])
             for benchmark in dic["benchmarks"]:
                 curve.add_benchmarks(deserialize_benchmarks(benchmark))
+                curve.set_hotspots(dic["hotspots"])
             return curve
     return None
 

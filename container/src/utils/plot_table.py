@@ -3,7 +3,10 @@ from prettytable import PrettyTable
 
 
 def format_number(number):
-    return format(round(int(number)), ",").replace(",", ".")
+    try:    
+        return format(round(int(number)), ",").replace(",", ".")
+    except Exception:
+        return number
 
 
 def generate_table(results):
