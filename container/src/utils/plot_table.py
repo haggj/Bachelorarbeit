@@ -2,13 +2,6 @@ from pathlib import Path
 from prettytable import PrettyTable
 
 
-def format_number(number):
-    try:    
-        return format(round(int(number)), ",").replace(",", ".")
-    except Exception:
-        return number
-
-
 def generate_table(results):
     with open('pre.html', "r") as file:
         preHTML = file.read()
@@ -31,7 +24,6 @@ def table_from_implementation(result):
 
     for curve in result.curves:
         values = curve.get_benchmark_values()
-        values = [format_number(val) for val in values]
         TABLE.add_row(values)
 
     return TABLE.get_html_string()

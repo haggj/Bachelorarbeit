@@ -1,9 +1,9 @@
-from src.base import Base_Implementation
+from src.base import BaseImplementation
 
 
 curves = ["434","503","751"]
 
-class CIRCL_x64_Implementation(Base_Implementation):
+class CIRCL_x64_Implementation(BaseImplementation):
 
     def __init__(self, count):
         super().__init__(count=count, path="CIRCL/", args="", callgrind_main="main.main", curves=curves)

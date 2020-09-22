@@ -15,7 +15,7 @@ from src.utils.caching import load_from_json, save_as_json
 import signal
 import sys
 
-COUNT = 1
+COUNT = 2
 RESULTS = {}
 
 
@@ -77,7 +77,7 @@ if __name__ == "__main__":
     RESULTS = load_from_json()
 
     ECDH()
-    SIKE()
+    #SIKE()
     CIRCL()
     MICROSOFT()
     save_as_json(RESULTS)

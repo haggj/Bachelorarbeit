@@ -1,4 +1,4 @@
-from src.base import Base_Implementation
+from src.base import BaseImplementation
 
 
 curves=["434", "503", "610", "751"]
@@ -10,7 +10,7 @@ def get_matching(dic, search):
         return found[0]
     return None
 
-class Microsoft_Base(Base_Implementation):
+class Microsoft_Base(BaseImplementation):
     def __init__(self, count, args):
         super().__init__(count=count, path="Microsoft/", args=args, callgrind_main="benchmark_keygen", curves=curves)
 

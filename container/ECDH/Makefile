@@ -1,8 +1,8 @@
 CC=gcc
+PARAM=283
+CFLAGS= -ggdb3 -I/usr/local/ssl/include/ -Wl,-rpath,/usr/local/ssl/lib/ -L/usr/local/ssl/lib/ -lcrypto -D PARAM=${PARAM}
 
-CFLAGS= -ggdb3 -I/usr/local/ssl/include/ -Wl,-rpath,/usr/local/ssl/lib/ -L/usr/local/ssl/lib/ -lcrypto
-
-OBJ = test.c
+OBJ = test_copy.c
 
 LD_LIBRARY_PATH=/usr/local/ssl/lib
 

@@ -1,5 +1,6 @@
 
-from src.base import Base_Implementation, getCallgrindFunctionCalls
+from src.base import BaseImplementation
+from src.utils.callgrind import extract_function_calls
 
 
 curves = ["434", "503", "610", "751"]
@@ -18,7 +19,7 @@ def sike_map_functions(callgrind_result, compressed):
         }
     return res
 
-class Sike_Optimized_Implementation(Base_Implementation):
+class Sike_Optimized_Implementation(BaseImplementation):
     def __init__(self, count):
         super().__init__(count=count, path="SIKE/Optimized_Implementation",
                          args="", callgrind_main="benchmark_keygen", curves=curves)
@@ -27,7 +28,7 @@ class Sike_Optimized_Implementation(Base_Implementation):
         return sike_map_functions(callgrind_result, False)
 
 
-class Sike_Optimized_Implementation_Compressed(Base_Implementation):
+class Sike_Optimized_Implementation_Compressed(BaseImplementation):
     def __init__(self, count):
         super().__init__(count=count, path="SIKE/Optimized_Implementation",
                          args="COMPRESSED=_compressed", callgrind_main="benchmark_keygen", curves=curves)
@@ -36,7 +37,7 @@ class Sike_Optimized_Implementation_Compressed(Base_Implementation):
         return sike_map_functions(callgrind_result, True)
 
 
-class Sike_x64_Implementation(Base_Implementation):
+class Sike_x64_Implementation(BaseImplementation):
     def __init__(self, count):
         super().__init__(count=count, path="SIKE/x64",
                          args="", callgrind_main="benchmark_keygen", curves=curves)
@@ -45,7 +46,7 @@ class Sike_x64_Implementation(Base_Implementation):
         return sike_map_functions(callgrind_result, False)
 
 
-class Sike_x64_Implementation_Compressed(Base_Implementation):
+class Sike_x64_Implementation_Compressed(BaseImplementation):
     def __init__(self, count):
         super().__init__(count=count, path="SIKE/x64",
                          args="COMPRESSED=_compressed", callgrind_main="benchmark_keygen", curves=curves)
@@ -54,7 +55,7 @@ class Sike_x64_Implementation_Compressed(Base_Implementation):
         return sike_map_functions(callgrind_result, True)
 
 
-class Sike_Reference_Implementation(Base_Implementation):
+class Sike_Reference_Implementation(BaseImplementation):
     def __init__(self, count):
         super().__init__(count=count, path="SIKE/Reference_Implementation",
                          args="", callgrind_main="benchmark_keygen", curves=curves)
@@ -73,17 +74,17 @@ class Sike_Reference_Implementation(Base_Implementation):
     def callgrind_result(self):
         result = {}
 
-        c1 = getCallgrindFunctionCalls(
+        c1 = extract_function_calls(
             self.path+"/benchmarks/callgrind.out", "benchmark_keygen_A")
-        c2 = getCallgrindFunctionCalls(
+        c2 = extract_function_calls(
             self.path+"/benchmarks/callgrind.out", "benchmark_secret_A")
         c1.update(c2)
         for key in c1.keys():
             result[str(key) + "_A"] = c1[key]
 
-        c1 = getCallgrindFunctionCalls(
+        c1 = extract_function_calls(
             self.path+"/benchmarks/callgrind.out", "benchmark_keygen_B")
-        c2 = getCallgrindFunctionCalls(
+        c2 = extract_function_calls(
             self.path+"/benchmarks/callgrind.out", "benchmark_secret_B")
         c1.update(c2)
         for key in c1.keys():

@@ -1,7 +1,7 @@
 import json
 import os
 
-from src.base import bcolors, BenchmarkCurve, BenchmarkImpl, Benchmarks
+from src.base import bcolors, BenchmarkCurve, BenchmarkImpl, Benchmark
 
 
 class MyEncoder(json.JSONEncoder):
@@ -45,7 +45,7 @@ def deserialize_curve(dic):
 def deserialize_benchmarks(dic):
     if "values" in dic and "name" in dic:
         if isinstance(dic["values"], list):
-            return Benchmarks(dic["name"], dic["values"])
+            return Benchmark(dic["name"], dic["values"])
 
 
 def load_from_json():

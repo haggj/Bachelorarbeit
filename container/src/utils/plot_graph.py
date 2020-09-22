@@ -3,12 +3,7 @@ import matplotlib.pyplot as plt
 from multiprocessing import Process
 from pathlib import Path
 
-
-def map_float(x): return float(x.replace(".", ""))
-
-
 def map_round(x): return round(float(x)/1000000, 1)
-
 
 def autolabel(rects, ax):
     """Attach a text label above each bar in *rects*, displaying its height."""
@@ -40,8 +35,8 @@ def plot_memory(curve, benchmarks, ecdh_compare=None):
     if ecdh_compare:
         values = [round(ecdh_compare.find_benchmark(
             "Memory", "not found")/1000, 1)]
-        ecdh = ax.bar(x + offset + 0.1 , values, width,
-                      label='ECDH (Reference value)')
+        ecdh = ax.bar(x + offset, values, width,
+                      label = 'ECDH '+ecdh_compare.name+' (Reference value)')
         autolabel(ecdh, ax)
         count += 1
 
@@ -85,7 +80,7 @@ def plot_instructions(curve, benchmarks, ecdh_compare=None):
     if ecdh_compare:
         values = list(map(map_round, ecdh_compare.get_benchmarks_for_plot()))
         ecdh = ax.bar(x + offset, values, width,
-                      label='ECDH (Reference value)')
+                      label='ECDH '+ecdh_compare.name+' (Reference value)')
         autolabel(ecdh, ax)
         count += 1
 
@@ -108,30 +103,33 @@ def plot_instructions(curve, benchmarks, ecdh_compare=None):
     Path("data").mkdir(parents=True, exist_ok=True)
     fig.savefig('data/' + str(curve) + '.png', dpi=100)
 
+def map_to_ecdh(curve):
+    if curve == "434":
+        return "283"
+    if curve == "503":
+        return "409"
+    if curve == "751":
+        return "571"
+    return None
 
 def generate_graph(result):
     curves = ["434", "503", "610", "751"]
-    processes = []
-    if "ECDH" in result:
-        ecdh = result["ECDH"].curves[0]
-    else:
-        ecdh = None
-    ecdh = None
-
-    for curve in curves:
-        # 1. Collect all benchmarks for specific curve
-        benchmarks = []
-        implementations = [
+    implementations = [
             "CIRCL_x64_Implementation",
-            #"Microsoft_x64_Implementation",
+            "Microsoft_x64_Implementation",
             #"Microsoft_x64_Implementation_Compressed",
-            "Sike_Optimized_Implementation",
-            "Sike_Optimized_Implementation_Compressed",
+            #"Sike_Optimized_Implementation",
+            #"Sike_Optimized_Implementation_Compressed",
             "Sike_x64_Implementation",
             #"Sike_x64_Implementation_Compressed",
             #"Sike_Reference_Implementation",
             #"ECDH_Implementation"
-        ]
+    ]
+    processes = []
+
+    for curve in curves:
+        # 1. Collect all benchmarks for specific curve
+        benchmarks = []
         for name, impl in result.items():
             # Ignore these implementations
             if impl.name not in implementations:
@@ -139,7 +137,12 @@ def generate_graph(result):
             found = impl.get_benchmarks_of_curve(curve)
             if found:
                 benchmarks.append(found)
-        # 2. Generate plots
+        # 2. Choose ECDH as comparision
+        ecdh = None
+        if "ECDH" in result:
+            if map_to_ecdh(curve):
+                ecdh = result["ECDH"].get_benchmarks_of_curve(map_to_ecdh(curve))
+        # 3. Generate plots
         if benchmarks:
             # 2.1 Generates plots regarding instructions
             p1 = Process(target=plot_instructions, args=(curve, benchmarks, ecdh))
