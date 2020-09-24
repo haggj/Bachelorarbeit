@@ -1,3 +1,5 @@
+""" Contains the main class BaseImplementation as well as some shared common functions.
+"""
 import msparser
 import subprocess
 import pandas
@@ -9,6 +11,8 @@ from src.utils.benchmarks import BenchmarkImpl, BenchmarkCurve, Benchmark
 from src.utils.callgrind import extract_function_calls, extract_hotspots
 
 class bcolors:
+    """Human meaningful colors
+    """
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
     OKGREEN = '\033[92m'
@@ -19,6 +23,14 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 def bash(command):
+    """Executes a command in a new process.
+
+    Args:
+        command (string): Command to execute
+
+    Raises:
+        Exception: Exception is raised if command does not return with 0
+    """
     process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
     stream = process.communicate()
     return_code = process.returncode
@@ -37,6 +49,14 @@ class BaseImplementation():
         self.count = count
 
     def map_functions(self, callgrind_result):
+        """Maps the incoming dictionary to a default output dictionary which is expected for further analysis.
+
+        Args:
+            callgrind_result ([type]): Dictionary, which is mapped to the default dictionary.
+
+        Raises:
+            NotImplementedError: Raises, if subclass has not implemented this function.
+        """
         res = {
             "PrivateKeyA": 0,
             "PublicKeyA": 0 ,
@@ -48,10 +68,20 @@ class BaseImplementation():
         raise NotImplementedError("Mapping not implemented")
 
     def callgrind_result(self):
+        """Opens the callgrind file and returns the relevant data for benchmarking.
+
+        Returns:
+            Dict containing the interesting benchmarking statistics.
+        """
         calls = extract_function_calls(self.path+"/benchmarks/callgrind.out", self.callgrind_main)
         return self.map_functions(calls)
 
     def callgrind(self):
+        """Calls self.count times callgrind and extracts the results.
+
+        Returns:
+            List of Benchmark objects, containing the benchmarks of multiple callgrind runs.
+        """
         results = []
 
         for _ in progressbar.progressbar(range(self.count), redirect_stdout=True, prefix="    Callgrind "):
@@ -72,18 +102,26 @@ class BaseImplementation():
         benchmarks = []
         for description in ["PrivateKeyA", "PublicKeyA",  "PrivateKeyB", "PublicKeyB", "SecretA", "SecretB"]:
             values = [res[description] for res in results]
-            benchmark = Benchmark(description, values)
-            benchmarks.append(benchmark)
+            if values:
+                benchmark = Benchmark(description, values)
+                benchmarks.append(benchmark)
 
         return benchmarks
     
     def hotspots(self):
-        result = []
-        for e in extract_hotspots(self.path+"/benchmarks/callgrind.out", 3):
-                result.append(str(e))
-        return "\n".join(result)
+        """Extracts the most expensive functions during callgrind execution.
+
+        Returns:
+            List of strings, representing the execution hotspots.
+        """
+        return extract_hotspots(self.path+"/benchmarks/callgrind.out", 3)
 
     def massif_result(self):
+        """Opens the massif file and calculates the peak memory consumption.
+
+        Returns:
+            Peak memory consuption as integer.
+        """
         data = msparser.parse_file(self.path+"/benchmarks/massif.out")
         peak =  data["peak_snapshot_index"]
         peak_data = data["snapshots"][peak]
@@ -91,7 +129,12 @@ class BaseImplementation():
         return peak_mem
 
 
-    def massif(self):
+    def massif(self):        
+        """Calls self.count times massif and extracts the results.
+
+        Returns:
+            List of Benchmark objects, containing the benchmarks of multiple massif runs.
+        """        
         values = []
         for i in progressbar.progressbar(range(self.count), redirect_stdout=True, prefix="    Massif    "):
             bash('make massif -C {}'.format(self.path))
@@ -101,6 +144,14 @@ class BaseImplementation():
 
 
     def benchmark_curve(self, curve):
+        """Compilation and benchmarking for a specific curve
+
+        Args:
+            curve (string): String representing the curve to benchmark
+
+        Returns:
+            BenchmarkCurve: Contains all benchmarks for the curve
+        """
         #compile and generate benchmark outputs for specific curve
         args = "{} {} PARAM={}".format(self.path, self.args, curve)
         bash('make build -B -C {}'.format(args))
@@ -113,13 +164,17 @@ class BaseImplementation():
         return benchmark_curve
 
     def get_statistics(self):
-        #Generate statistics for all curves
+        """Runs benchmark for all curves specified in self.curves.
+
+        Returns:
+            BenchmarkImpl: Benchmarking object, that contains benchmarks for all defined curves.
+        """
         print("\n" + bcolors.WARNING + type(self).__name__ + bcolors.ENDC)
 
         benchmark = BenchmarkImpl(type(self).__name__)
         
         for curve in self.curves:
-            print(bcolors.BOLD + "Handling curve "+curve+"..." + bcolors.ENDC)
+            print(bcolors.BOLD + "Handling curve "+ str(curve) +"..." + bcolors.ENDC)
             benchmark.add_curve(self.benchmark_curve(curve))
 
         return benchmark

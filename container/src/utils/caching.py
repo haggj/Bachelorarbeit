@@ -3,7 +3,7 @@ import os
 
 from src.base import bcolors, BenchmarkCurve, BenchmarkImpl, Benchmark
 
-
+cached_file = ".cached/cached.json"
 class MyEncoder(json.JSONEncoder):
     def default(self, obj):
         dic = dict(obj.__dict__)
@@ -13,11 +13,11 @@ class MyEncoder(json.JSONEncoder):
 
 
 def save_as_json(result):
-    if os.path.isfile("cached.json"):
-        with open('data/cached.json', 'a') as f:
+    if os.path.isfile("data/cached.json"):
+        with open("data/cached.json", 'w') as f:
             json.dump(result, f, cls=MyEncoder)
     else:
-        with open('data/cached.json', 'w+') as f:
+        with open("data/cached.json", 'w+') as f:
             json.dump(result, f,  cls=MyEncoder)
 
 
@@ -49,8 +49,8 @@ def deserialize_benchmarks(dic):
 
 
 def load_from_json():
-    if os.path.isfile("data/cached.json"):
-        with open('data/cached.json', 'r') as f:
+    if os.path.isfile(cached_file):
+        with open(cached_file, 'r') as f:
             cached = json.load(f)
             serialized = {}
             for name, dic in cached.items():

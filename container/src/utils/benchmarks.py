@@ -1,8 +1,9 @@
 import statistics
 
 def format_number(number):
-    try:    
-        return format(round(int(number)), ",").replace(",", ".")
+    try:
+        rounded = round(number) if isinstance(number, float) else round(int(number))
+        return format(rounded, ",").replace(",", ".")
     except Exception:
         return number
 
@@ -12,23 +13,20 @@ class BenchmarkImpl:
         self.curves = []
 
     def add_curve(self, curve):
+        # Save a reference to this implementation within the curve
         curve.impl = self
         self.curves.append(curve)
     
     def get_benchmark_names(self):
         if len(self.curves) == 0:
-            return None
+            return []
         return self.curves[0].get_benchmark_names()
     
-    def get_benchmarks_of_curve(self, name):
+    def get_curve_by_name(self, name):
         for curve in self.curves:
             if curve.name == name:
                 return curve
         return None
-    
-    def __str__(self):
-        return "%s\n\t%s" % (self.name, "\n".join([str(curve) for curve in self.curves]))
-
 class BenchmarkCurve:
     def __init__(self, description):
         self.name = description
@@ -50,18 +48,35 @@ class BenchmarkCurve:
     def get_benchmark_names(self):
         return ["Parameter"] + [benchmark.name for benchmark in self.benchmarks] + ["Hotspots"]
     
-    def get_benchmark_values(self):
+    def get_benchmark_values(self, newline="\n"):
+        """Returns a list of all benchmarking values. Each list element is a string of the form:
+        "[average]
+        ([standard derivation])"
+
+        Args:
+            newline (str, optional): Newline character. Defaults to "\n".
+
+        Returns:
+            list: List of benchmaring values.
+        """
         final = []
         final.append(self.name)
         for benchmark in self.benchmarks:
-            app = "{}\n({})".format( format_number(benchmark.get_average()), 
+            app = "{}{}({})".format(format_number(benchmark.get_average()),
+                                    newline,
                                     format_number(benchmark.get_stdev()))
             final.append(app)
         
-        final.append(self.hotspots)
+        final.append(newline.join(self.hotspots))
         return final
     
     def get_benchmarks_for_plot(self):
+        """Summarizes benchmarking values. Keygen is the sum of public key generation +
+        private key generation. 
+
+        Returns:
+            list: [[Keygen A], [Keygen B], [Secret A], [Secret B]]
+        """
 
         benchmarks = []
         #KeyGenA
@@ -81,14 +96,20 @@ class BenchmarkCurve:
         return benchmarks
 
     def find_benchmark(self, name, alternative):
+        """Returns average of benchmark specified by name. If benchmark is not found,
+        alternative is returned
+
+        Args:
+            name (str): Name of wanted benchmark.
+            alternative: Alternative to return, if name is not a valid benchmark.
+
+        Returns:
+            Average of benchmark or alternative.
+        """
         for benchmark in self.benchmarks:
             if benchmark.name == name:
                 return benchmark.get_average()
         return alternative
-
-    def __str__(self):
-        seperator = "\n\t\t"
-        return "p%s%s%s" % (self.name, seperator, seperator.join([str(benchmark) for benchmark in self.benchmarks]))
 
 class Benchmark:
     def __init__(self, description, values):

@@ -1,10 +1,13 @@
+# Default Parameter
 PARAM:=434
+
+# Note: circl does not support gccgo -> need to use default compiler gc, which does not enable gcc optimazation flags
 
 build:
 	@ echo "building p$(PARAM)$(COMPRESSED)..."
 	@ mkdir -p "build"
 	@ mkdir -p "lib"
-	@ cd go; go build -tags "p$(PARAM) amd64" -gcflags="all=-N -l" -o ../build/test
+	@ cd go; go build -tags "p$(PARAM) $(VERSION)" -gcflags="all=-l" -o ../build/test
 	@ echo "\e[32mSUCCESS\e[0m"
 
 

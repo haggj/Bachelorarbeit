@@ -1,22 +1,22 @@
 # Default compiler
 CC=gcc
 
+# Default parameter
+PARAM:=434
+
 # Include files
-PREPATH=.src/src/P$(PARAM)
+PREPATH=.src/$(VERSION)src/P$(PARAM)
 CFLAGS=\
 -I ./ \
 -I $(PREPATH)/ \
 -O3 -ggdb
 
-# Default parameter
-PARAM:=434
 CFLAGS := $(CFLAGS) -D PARAM=${PARAM}
 
-# Map against prebuild sidh lib
 ifdef COMPRESSED
-	CFLAGS := $(CFLAGS) -D COMPRESSED -L.src/lib$(PARAM)comp/ -lsidh
+	CFLAGS := $(CFLAGS) -D COMPRESSED -L.src/$(VERSION)lib$(PARAM)comp/ -lsidh
 else
-	CFLAGS := $(CFLAGS) -L.src/lib$(PARAM)/ -lsidh
+	CFLAGS := $(CFLAGS) -L.src/$(VERSION)lib$(PARAM)/ -lsidh
 endif
 
 OBJ = benchmark.c
@@ -30,7 +30,7 @@ build: $(OBJ)
 callgrind:
 	@ mkdir -p "benchmarks"
 	@ echo "Running callgrind..."
-	# @ sudo ../../drop-caches.sh
+	@ sudo ../drop-caches.sh
 	@ valgrind --tool=callgrind --callgrind-out-file=benchmarks/callgrind.out build/benchmark  2> /dev/null
 	@ echo "\e[32mSUCCESS\e[0m"
 

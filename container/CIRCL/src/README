@@ -1,2 +1,0 @@
-CIRCL src is empty, because src-files are directly include into go:
-go get -v "github.com/cloudflare/circl/dh/sidh"

@@ -1,3 +1,0 @@
-/home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/test/CMakeFiles/rebuild_cache.dir
-/home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/test/CMakeFiles/sike_test.dir
-/home/joy/Bachelorarbeit/SIDH_Implementations/SIKE/Reference_Implementation/test/CMakeFiles/edit_cache.dir

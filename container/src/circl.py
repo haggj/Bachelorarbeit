@@ -3,11 +3,9 @@ from src.base import BaseImplementation
 
 curves = ["434","503","751"]
 
-class CIRCL_x64_Implementation(BaseImplementation):
-
-    def __init__(self, count):
-        super().__init__(count=count, path="CIRCL/", args="", callgrind_main="main.main", curves=curves)
-
+class CIRCL_Base(BaseImplementation):
+    def __init__(self, count, path, args):
+        super().__init__(count=count, path=path, args=args, callgrind_main="main.main", curves=curves)
 
     def map_functions(self, callgrind_result):
         res = {
@@ -19,3 +17,6 @@ class CIRCL_x64_Implementation(BaseImplementation):
             "SecretB": callgrind_result["main.sharedB"]
         }
         return res
+class CIRCL_x64(CIRCL_Base):
+    def __init__(self, count):
+        super().__init__(count=count, path="CIRCL/", args="VERSION=amd64")

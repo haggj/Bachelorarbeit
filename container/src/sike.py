@@ -19,7 +19,7 @@ def sike_map_functions(callgrind_result, compressed):
         }
     return res
 
-class Sike_Optimized_Implementation(BaseImplementation):
+class Sike_Generic(BaseImplementation):
     def __init__(self, count):
         super().__init__(count=count, path="SIKE/Optimized_Implementation",
                          args="", callgrind_main="benchmark_keygen", curves=curves)
@@ -28,7 +28,7 @@ class Sike_Optimized_Implementation(BaseImplementation):
         return sike_map_functions(callgrind_result, False)
 
 
-class Sike_Optimized_Implementation_Compressed(BaseImplementation):
+class Sike_Generic_Compressed(BaseImplementation):
     def __init__(self, count):
         super().__init__(count=count, path="SIKE/Optimized_Implementation",
                          args="COMPRESSED=_compressed", callgrind_main="benchmark_keygen", curves=curves)
@@ -37,7 +37,7 @@ class Sike_Optimized_Implementation_Compressed(BaseImplementation):
         return sike_map_functions(callgrind_result, True)
 
 
-class Sike_x64_Implementation(BaseImplementation):
+class Sike_x64(BaseImplementation):
     def __init__(self, count):
         super().__init__(count=count, path="SIKE/x64",
                          args="", callgrind_main="benchmark_keygen", curves=curves)
@@ -46,7 +46,7 @@ class Sike_x64_Implementation(BaseImplementation):
         return sike_map_functions(callgrind_result, False)
 
 
-class Sike_x64_Implementation_Compressed(BaseImplementation):
+class Sike_x64_Compressed(BaseImplementation):
     def __init__(self, count):
         super().__init__(count=count, path="SIKE/x64",
                          args="COMPRESSED=_compressed", callgrind_main="benchmark_keygen", curves=curves)
@@ -55,7 +55,7 @@ class Sike_x64_Implementation_Compressed(BaseImplementation):
         return sike_map_functions(callgrind_result, True)
 
 
-class Sike_Reference_Implementation(BaseImplementation):
+class Sike_Reference(BaseImplementation):
     def __init__(self, count):
         super().__init__(count=count, path="SIKE/Reference_Implementation",
                          args="", callgrind_main="benchmark_keygen", curves=curves)

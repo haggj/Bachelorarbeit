@@ -114,16 +114,26 @@ def map_to_ecdh(curve):
 
 def generate_graph(result):
     curves = ["434", "503", "610", "751"]
-    implementations = [
-            "CIRCL_x64_Implementation",
-            "Microsoft_x64_Implementation",
-            #"Microsoft_x64_Implementation_Compressed",
-            #"Sike_Optimized_Implementation",
-            #"Sike_Optimized_Implementation_Compressed",
-            "Sike_x64_Implementation",
-            #"Sike_x64_Implementation_Compressed",
-            #"Sike_Reference_Implementation",
-            #"ECDH_Implementation"
+    implementations =[
+        #ECDH
+        "ECDH",
+
+        #SIKE
+        #"Sike_Reference",
+        "Sike_Generic",
+        #"Sike_Generic_Compressed",
+        "Sike_x64",
+        #"Sike_x64_Compressed",
+
+        #CIRCL
+        "CIRCL_Generic",
+        "CIRCL_x64",
+
+        #MICROSOFT
+        "Microsoft_Generic",
+        #"Microsoft_Generic_Compressed",
+        "Microsoft_x64",
+        #"Microsoft_x64_Compressed",
     ]
     processes = []
 
@@ -134,14 +144,14 @@ def generate_graph(result):
             # Ignore these implementations
             if impl.name not in implementations:
                 continue
-            found = impl.get_benchmarks_of_curve(curve)
+            found = impl.get_curve_by_name(curve)
             if found:
                 benchmarks.append(found)
         # 2. Choose ECDH as comparision
         ecdh = None
         if "ECDH" in result:
             if map_to_ecdh(curve):
-                ecdh = result["ECDH"].get_benchmarks_of_curve(map_to_ecdh(curve))
+                ecdh = result["ECDH"].get_curve_by_name(map_to_ecdh(curve))
         # 3. Generate plots
         if benchmarks:
             # 2.1 Generates plots regarding instructions

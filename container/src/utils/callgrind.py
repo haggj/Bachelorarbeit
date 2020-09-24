@@ -38,7 +38,7 @@ def extract_hotspots(callgrind, count):
 
 
     functions = sorted(functions, key=lambda func: func.percentage, reverse=True)
-    return functions[:count]
+    return [str(f) for f in functions[:count]]
 
 
 def extract_function_calls(callgrind, function):
@@ -59,7 +59,6 @@ def extract_function_calls(callgrind, function):
 
     for call in profile.functions[function].calls.values():
         callee = profile.functions[call.callee_id]
-
         for event, data in call.events.items():
             if event.name == "Samples":
                 ret[callee.name] = int(data)

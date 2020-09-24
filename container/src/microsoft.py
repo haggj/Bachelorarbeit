@@ -11,8 +11,8 @@ def get_matching(dic, search):
     return None
 
 class Microsoft_Base(BaseImplementation):
-    def __init__(self, count, args):
-        super().__init__(count=count, path="Microsoft/", args=args, callgrind_main="benchmark_keygen", curves=curves)
+    def __init__(self, count, path, args):
+        super().__init__(count=count, path=path, args=args, callgrind_main="benchmark_keygen", curves=curves)
 
     def map_functions(self, callgrind_result):
         res = {
@@ -26,11 +26,20 @@ class Microsoft_Base(BaseImplementation):
         return res
 
 
-class Microsoft_x64_Implementation(Microsoft_Base):
+class Microsoft_x64(Microsoft_Base):
     def __init__(self, count):
-        super().__init__(count=count, args="")
+        super().__init__(count=count, path="Microsoft/", args="VERSION=x64/")
     
 
-class Microsoft_x64_Implementation_Compressed(Microsoft_Base):
+class Microsoft_x64_Compressed(Microsoft_Base):
     def __init__(self, count):
-        super().__init__(count=count, args="COMPRESSED=_compressed")
+        super().__init__(count=count, path="Microsoft/", args="COMPRESSED=_compressed VERSION=x64/")
+
+class Microsoft_Generic(Microsoft_Base):
+    def __init__(self, count):
+        super().__init__(count=count, path="Microsoft/", args="VERSION=generic/")
+    
+
+class Microsoft_Generic_Compressed(Microsoft_Base):
+    def __init__(self, count):
+        super().__init__(count=count, path="Microsoft/", args="COMPRESSED=_compressed VERSION=generic/")
