@@ -1,7 +1,7 @@
 from src.base import BaseImplementation
 
 
-curves = ["283", "409", "571"]
+curves = ["secp256", "secp384", "secp521"]
 class ECDH(BaseImplementation):
     def __init__(self, count):
         super().__init__(count=count, path="ECDH/", args="", callgrind_main="benchmark", curves=curves)

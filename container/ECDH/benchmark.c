@@ -35,11 +35,11 @@ int __attribute__ ((noinline)) derive_B(char* secret_B, int secret_len, EC_KEY *
 
 void benchmark()
 {
-	#if PARAM==256
-		int curve = NID_X9_62_prime256v1:;
-	#elif PARAM==384
+	#if PARAM==secp256
+		int curve = NID_X9_62_prime256v1;
+	#elif PARAM==secp384
 		int curve = NID_secp384r1;
-	#elif PARAM==521
+	#elif PARAM==secp521
 		int curve = NID_secp521r1;
 	#endif
 	EC_KEY *key_A, *key_B;
