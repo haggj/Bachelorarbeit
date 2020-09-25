@@ -12,7 +12,7 @@
   #include <p751.c>
 #endif
 
-int benchmark_keygen() {
+int __attribute__ ((noinline)) benchmark_keygen() {
 
   unsigned char PrivateKeyA[SIDH_SECRETKEYBYTES_A], PrivateKeyB[SIDH_SECRETKEYBYTES_B];
   unsigned char PublicKeyA[SIDH_PUBLICKEYBYTES], PublicKeyB[SIDH_PUBLICKEYBYTES];

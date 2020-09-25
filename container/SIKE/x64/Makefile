@@ -11,7 +11,6 @@ CFLAGS=\
 -I .. \
 -I $(PREPATH)/P$(PARAM)/ \
 -O3 \
--ggdb\
 -D __LINUX__ \
 -D _AMD64_  \
 -D _FAST_ \

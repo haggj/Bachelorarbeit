@@ -10,7 +10,7 @@ PREPATH=../.src/Optimized_Implementation/portable/SIKEp$(PARAM)$(COMPRESSED)/
 CFLAGS=\
 -I .. \
 -I $(PREPATH)/P$(PARAM)/ \
--O3 -ggdb\
+-O3 \
 -D __LINUX__ \
 -D _AMD64_  \
 -D _GENERIC_ \

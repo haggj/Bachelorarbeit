@@ -10,7 +10,7 @@
 #include <unistd.h>
 
 
-int benchmark_keygen_A(sike_params_t params, sike_public_key_t publicKey_A, mp *privateKey_A) {
+int __attribute__ ((noinline)) benchmark_keygen_A(sike_params_t params, sike_public_key_t publicKey_A, mp *privateKey_A) {
 
   ff_Params* pA = params.EA.ffData;
   
@@ -25,7 +25,7 @@ int benchmark_keygen_A(sike_params_t params, sike_public_key_t publicKey_A, mp *
 
 }
 
-int benchmark_keygen_B(sike_params_t params, sike_public_key_t publicKey_B, mp *privateKey_B) {
+int __attribute__ ((noinline)) benchmark_keygen_B(sike_params_t params, sike_public_key_t publicKey_B, mp *privateKey_B) {
 
   ff_Params* pB = params.EB.ffData;
   
@@ -41,20 +41,20 @@ int benchmark_keygen_B(sike_params_t params, sike_public_key_t publicKey_B, mp *
 
 }
 
-int benchmark_secret_A(sike_params_t params, sike_public_key_t publicKey_B, mp privateKey_A){
+int __attribute__ ((noinline)) benchmark_secret_A(sike_params_t params, sike_public_key_t publicKey_B, mp privateKey_A){
   fp2 secret;
   fp2_Init(params.EA.ffData, &secret);
   sidh_isoex(&params, &publicKey_B, privateKey_A, ALICE, &secret);
 }
 
-int benchmark_secret_B(sike_params_t params, sike_public_key_t publicKey_A, mp privateKey_B){
+int __attribute__ ((noinline)) benchmark_secret_B(sike_params_t params, sike_public_key_t publicKey_A, mp privateKey_B){
   fp2 secret;
   fp2_Init(params.EB.ffData, &secret);
   sidh_isoex(&params, &publicKey_A, privateKey_B, BOB, &secret);
 
 }
 
-int main() {
+int __attribute__ ((noinline)) main() {
 
 //Define Parameters
 #ifdef PARAM434

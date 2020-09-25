@@ -12,7 +12,7 @@ CFLAGS=\
 -I $(PREPATH)/include/ \
 -I $(PREPATH)/test/ \
 -I $(PREPATH)/symmetric/ \
--ggdb -DPARAM$(PARAM)
+-O3 -DPARAM$(PARAM)
 
 OBJ = \
 benchmark.c \

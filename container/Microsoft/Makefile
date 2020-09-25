@@ -9,7 +9,7 @@ PREPATH=.src/$(VERSION)src/P$(PARAM)
 CFLAGS=\
 -I ./ \
 -I $(PREPATH)/ \
--O3 -ggdb
+-O3
 
 CFLAGS := $(CFLAGS) -D PARAM=${PARAM}
 

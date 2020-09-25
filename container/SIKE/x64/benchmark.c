@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #include <api.h>
-int benchmark_keygen() {
+int __attribute__ ((noinline)) benchmark_keygen() {
 
   unsigned char private_key_A[SIDH_SECRETKEYBYTES] = { 0 };
   unsigned char public_key_A[SIDH_PUBLICKEYBYTES] = { 0 };
