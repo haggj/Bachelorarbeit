@@ -1,0 +1,29 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\babel@toc {english}{}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\babel@toc {ngerman}{}
+\babel@toc {english}{}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {1.1}{\ignorespaces Impact of quantum computers on modern encryption schemes}}{7}{table.caption.15}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces Core functions of the SIKE reference implementation}}{12}{table.caption.24}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Existing SIDH implementations}}{18}{table.caption.29}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Example table}}{32}{table.caption.40}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {A.1}{\ignorespaces Benchmarks for ECDH}}{35}{table.caption.47}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Benchmarks for Sike Reference}}{36}{table.caption.48}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces Benchmarks for Sike Generic}}{37}{table.caption.49}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces Benchmarks for Sike Generic Compressed}}{38}{table.caption.50}%
+\contentsline {table}{\numberline {A.5}{\ignorespaces Benchmarks for Sike x64}}{39}{table.caption.51}%
+\contentsline {table}{\numberline {A.6}{\ignorespaces Benchmarks for Sike x64 Compressed}}{40}{table.caption.52}%
+\contentsline {table}{\numberline {A.7}{\ignorespaces Benchmarks for CIRCL x64}}{41}{table.caption.53}%
+\contentsline {table}{\numberline {A.8}{\ignorespaces Benchmarks for Microsoft Generic}}{42}{table.caption.54}%
+\contentsline {table}{\numberline {A.9}{\ignorespaces Benchmarks for Microsoft Generic Compressed}}{43}{table.caption.55}%
+\contentsline {table}{\numberline {A.10}{\ignorespaces Benchmarks for Microsoft x64}}{44}{table.caption.56}%
+\contentsline {table}{\numberline {A.11}{\ignorespaces Benchmarks for Microsoft x64 Compressed}}{45}{table.caption.57}%

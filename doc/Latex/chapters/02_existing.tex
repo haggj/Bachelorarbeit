@@ -1,0 +1,71 @@
+\chapter{Description of existing SIDH implementations}\label{chapter:existing_sidh}
+Currently, three implementations of Supersingular Isogeny Diffie-Hellman (SIDH) are available, namely \textit{SIKE}, \textit{CIRCL} and \textit{PQCrypto-SIDH}. In this chapter each implementation is introduced in detail. At the end of the chapter, \autoref{tab:existing_sidh} shows similarities and differences between all approaches.
+\\
+In the following, some algorithms are described as \textit{compressed}. These compressed version exploit shorter public key sizes while increasing the computation time of the algorithms.
+
+\section{SIKE}
+SIKE stands for \textbf{S}upersingular \textbf{I}sogeny \textbf{K}ey \textbf{E}ncapsulation. It is the reference implementation of the first proposed isogeny-based cryptographic primitives \parencite{jao2011towards}. Today, SIKE is a NIST candidate for quantum-resist \textit{"Public-key Encryption and Key-establishment Algorithms"}. It is developed by a cooperation of researchers, lead by David Jao \parencite{sike2020spec}.
+\\
+SIKE implements its key encapsulation mechanism (KEM) upon a public key encryption system (PKE), which is built upon SIDH (as highlighted in \autoref{chapter:background}). Beside a generic reference implementation, SIKE offers various optimized implementations of their cryptographic primitves:
+\begin{itemize}
+  \item Generic optimized implementation, written in portable C
+  \item x64 optimized implementation, partly written in x64 assembly
+  \item x64 optimized compressed implementation, partly written in x64 assembly
+  \item ARM64 optimized implementation, partly written in ARMv8 assembly
+  \item ARM Cortex M4 optimized implementation, partly written in ARM thumb assembly
+  \item VHDL implementation
+\end{itemize}
+All of these implementations can be run with the following parameter sets: \texttt{p434}, \texttt{p503}, \texttt{p610} and \texttt{p751}. SIKE states to countermeasure timing and cache attacks by implementing constant time cryptography~\parencite{sike2020spec}.
+
+
+\section{PQCrypto-SIDH}
+PQCrypto-SIDH is a software library mainly written in C. It is developed by Microsoft for experimental purposes \parencite{microsoft2020sidh}. Note, that many developers of SIKE also work for Microsoft leading to great similarities between SIKE and PQCrypto-SIDH. However, in terms of compression, SIKE references  the here described Microsoft library in its documentation.\\
+The PQCrypto-SIDH library implements a isogney-based KEM and the underlying SIDH. Moreover, the library offers the following optimized versions:
+\begin{itemize}
+  \item Generic optimized implementation, written in portable C
+  \item Generic optimized compressed implementation, written in portable C
+  \item x64 optimized implementation, partly written in assembly
+  \item x64 optimized compressed implementation, partly written in assembly
+  \item ARMv8 optimized implementation, partly written in assembly
+  \item ARMv8 optimized compressed implementation, partly written in assembly
+\end{itemize}
+All of these implementations can be run with the following parameter sets: \texttt{p434}, \texttt{p503}, \texttt{p610} and \texttt{p751}. The developers argue to protect the algorithms against timing and cache attacks. Therefore, the library implements constant time operations on secret key material~\parencite{microsoft2020sidh}.
+
+\section{CIRCL}
+
+CIRCL (\textbf{C}loudflare \textbf{I}nteroperable, \textbf{R}eusable \textbf{C}ryptographic \textbf{L}ibrary) is a by Cloudflare developed collection of cryptographic primitives~\parencite{circl2020github}. CIRCL is written in Go and implements some quantum-secure algorithms like SIDH and an isogeny-based KEM. Cloudflare does not guarantee for any security within their library. Furthermore, the isogeny-based cryptographic primitives are adopted from the official SIKE implementation. The following implementation optimizations are available:
+
+\begin{itemize}
+  \item Generic optimized implementation, written in Go
+  \item AMD64 optimized implementation, partly written in assembly
+  \item ARM64 optimized implementation, partly written in assembly
+\end{itemize}
+
+Note, that there are no compressed versions available. The library supports the following parameter sets: \texttt{p434}, \texttt{p503} and \texttt{p751}. To avoid side-channel attacks, their code is implemented in constant time~\parencite{circl2019intro}.
+
+\begin{table}[htpb]
+  \centering
+  \begin{tabular}{|K{3cm}|K{4cm}|K{4cm}|K{4cm}|}
+	\hline
+    \rowcolor{lightgray!50}
+     & \textbf{SIKE} & \textbf{PQCrypto-SIDH} & \textbf{CIRCL} \\
+	\hline
+    \bfseries\makecell{Developer}& Research cooperation & Microsoft & Cloudflare \\
+    \hline
+    \bfseries\makecell{Language} & \makecell{C \\ Assembly} & \makecell{C \\ Assembly} & \makecell{GO \\ Assembly}\\
+    \hline
+    \bfseries\makecell{Reference} & \makecell{C \\ Assembly} & \makecell{C \\ Assembly} & \makecell{GO \\ Assembly}\\
+    \hline
+    \hline
+    \bfseries\makecell{Implemented \\ primitives} & \makecell{SIDH \\ PKE \\ KEM\\} & \makecell{SIDH \\ KEM\\} & \makecell{SIDH \\ KEM\\} \\
+	\hline
+	\bfseries\makecell{Available \\ parameters} & \makecell{p434 \\ p503 \\ p610 \\ p751\\} & \makecell{p434 \\ p503 \\ p610 \\ p751\\} & \makecell{p434 \\ p503 \\ p751\\} \\
+	\hline
+	\bfseries\makecell{Optimized \\ versions} & \makecell{Generic (portable c) \\ x64 \\ x64 compressed \\ ARM64 \\ ARM Cortex M4 \\ VHDL \\} & \makecell{Generic (portable c) \\ x64 \\ x64 compressed \\ ARMv8 \\ ARMv8 compressed\\} & \makecell{Generic (GO) \\ AMD64\\ ARM64 \\} \\
+	\hline
+	\bfseries\makecell{Security} & \makecell{Constant time} & \makecell{Constant time}  & \makecell{Constant time} \\
+	\hline
+
+  \end{tabular}
+   \caption[Existing SIDH implementations]{Overview and comparison of existing SIDH implementations.}\label{tab:existing_sidh}
+\end{table}

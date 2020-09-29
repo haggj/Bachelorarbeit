@@ -1,0 +1,552 @@
+\chapter{General Addenda}
+
+\section{Detailed Benchmarks}
+\subsection{Benchmarks for ECDH}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
+	\hline
+	\rowcolor{lightgray!50}
+	\bfseries\makecell{Parameter} & \bfseries\makecell{secp256} & \bfseries\makecell{secp384} & \bfseries\makecell{secp521}\\
+	\hline
+	\makecell{PrivateKeyA} & \makecell{0\\(0)} & \makecell{0\\(0)} & \makecell{0\\(0)}\\
+	\hline
+	\makecell{PublicKeyA} & \makecell{159.418\\(0)} & \makecell{159.418\\(0)} & \makecell{159.418\\(0)}\\
+	\hline
+	\makecell{PrivateKeyB} & \makecell{0\\(0)} & \makecell{0\\(0)} & \makecell{0\\(0)}\\
+	\hline
+	\makecell{PublicKeyB} & \makecell{114.430\\(0)} & \makecell{114.430\\(0)} & \makecell{114.430\\(0)}\\
+	\hline
+	\makecell{SecretA} & \makecell{652.796\\(0)} & \makecell{652.796\\(0)} & \makecell{652.796\\(0)}\\
+	\hline
+	\makecell{SecretB} & \makecell{651.270\\(0)} & \makecell{651.270\\(0)} & \makecell{651.270\\(0)}\\
+	\hline
+	\makecell{Memory} & \makecell{12.152\\(0)} & \makecell{12.152\\(0)} & \makecell{12.152\\(0)}\\
+
+	\hline
+	\end{tabular}
+	\caption[Benchmarks for ECDH]{Benchmarks for ECDH}
+	\label{tab:benchmarks_ECDH}
+\end{table}
+Execution hotspots parameter \textit{secp256}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{\_\_ecp\_nistz256\_mul\_montq:} 29.89\%
+	\item \texttt{\_\_ecp\_nistz256\_sqr\_montq:} 18.32\%
+	\item \texttt{\_dl\_relocate\_object:} 7.27\%
+\end{enumerate}
+Execution hotspots parameter \textit{secp384}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{\_\_ecp\_nistz256\_mul\_montq:} 29.89\%
+	\item \texttt{\_\_ecp\_nistz256\_sqr\_montq:} 18.32\%
+	\item \texttt{\_dl\_relocate\_object:} 7.27\%
+\end{enumerate}
+Execution hotspots parameter \textit{secp521}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{\_\_ecp\_nistz256\_mul\_montq:} 29.89\%
+	\item \texttt{\_\_ecp\_nistz256\_sqr\_montq:} 18.32\%
+	\item \texttt{\_dl\_relocate\_object:} 7.27\%
+\end{enumerate}
+\subsection{Benchmarks for Sike Reference}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
+	\hline
+	\rowcolor{lightgray!50}
+	\bfseries\makecell{Parameter} & \bfseries\makecell{434} & \bfseries\makecell{503} & \bfseries\makecell{610} & \bfseries\makecell{751}\\
+	\hline
+	\makecell{PrivateKeyA} & \makecell{28.919\\(0)} & \makecell{29.020\\(0)} & \makecell{34.541\\(0)} & \makecell{34.770\\(0)}\\
+	\hline
+	\makecell{PublicKeyA} & \makecell{1.739.736.057\\(0)} & \makecell{2.512.464.770\\(0)} & \makecell{4.308.288.592\\(0)} & \makecell{7.461.795.045\\(0)}\\
+	\hline
+	\makecell{PrivateKeyB} & \makecell{29.418\\(0)} & \makecell{29.519\\(0)} & \makecell{34.617\\(0)} & \makecell{35.289\\(0)}\\
+	\hline
+	\makecell{PublicKeyB} & \makecell{2.352.757.723\\(0)} & \makecell{3.435.254.160\\(0)} & \makecell{5.790.924.796\\(0)} & \makecell{10.556.125.964\\(0)}\\
+	\hline
+	\makecell{SecretA} & \makecell{18.726.146\\(0)} & \makecell{22.075.791\\(0)} & \makecell{27.927.622\\(0)} & \makecell{35.617.111\\(0)}\\
+	\hline
+	\makecell{SecretB} & \makecell{43.530.260\\(0)} & \makecell{56.573.382\\(0)} & \makecell{79.580.027\\(0)} & \makecell{118.687.930\\(0)}\\
+	\hline
+	\makecell{Memory} & \makecell{11.208\\(0)} & \makecell{11.928\\(0)} & \makecell{12.904\\(0)} & \makecell{13.736\\(0)}\\
+
+	\hline
+	\end{tabular}
+	\caption[Benchmarks for Sike Reference]{Benchmarks for Sike Reference}
+	\label{tab:benchmarks_Sike_Reference}
+\end{table}
+Execution hotspots parameter \textit{434}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{\_\_gmpn\_sbpi1\_div\_qr:} 10.7\%
+	\item \texttt{\_\_gmpn\_tdiv\_qr:} 9.59\%
+	\item \texttt{\_\_gmpn\_hgcd2:} 9.29\%
+\end{enumerate}
+Execution hotspots parameter \textit{503}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{\_\_gmpn\_sbpi1\_div\_qr:} 11.08\%
+	\item \texttt{\_\_gmpn\_hgcd2:} 9.8\%
+	\item \texttt{\_\_gmpn\_submul\_1:} 9.61\%
+\end{enumerate}
+Execution hotspots parameter \textit{610}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{\_\_gmpn\_submul\_1:} 12.08\%
+	\item \texttt{\_\_gmpn\_sbpi1\_div\_qr:} 11.67\%
+	\item \texttt{\_\_gmpn\_mul\_basecase:} 10.13\%
+\end{enumerate}
+Execution hotspots parameter \textit{751}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{\_\_gmpn\_submul\_1:} 15.21\%
+	\item \texttt{\_\_gmpn\_mul\_basecase:} 11.82\%
+	\item \texttt{\_\_gmpn\_sbpi1\_div\_qr:} 11.69\%
+\end{enumerate}
+\subsection{Benchmarks for Sike Generic}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
+	\hline
+	\rowcolor{lightgray!50}
+	\bfseries\makecell{Parameter} & \bfseries\makecell{434} & \bfseries\makecell{503} & \bfseries\makecell{610} & \bfseries\makecell{751}\\
+	\hline
+	\makecell{PrivateKeyA} & \makecell{90\\(0)} & \makecell{95\\(0)} & \makecell{96\\(0)} & \makecell{97\\(0)}\\
+	\hline
+	\makecell{PublicKeyA} & \makecell{194.932.002\\(0)} & \makecell{299.462.858\\(0)} & \makecell{618.958.459\\(0)} & \makecell{989.778.051\\(0)}\\
+	\hline
+	\makecell{PrivateKeyB} & \makecell{57\\(0)} & \makecell{57\\(0)} & \makecell{53\\(0)} & \makecell{59\\(0)}\\
+	\hline
+	\makecell{PublicKeyB} & \makecell{215.702.626\\(0)} & \makecell{329.835.556\\(0)} & \makecell{616.667.764\\(0)} & \makecell{1.111.885.426\\(0)}\\
+	\hline
+	\makecell{SecretA} & \makecell{158.061.535\\(0)} & \makecell{243.950.880\\(0)} & \makecell{515.975.033\\(0)} & \makecell{813.862.458\\(0)}\\
+	\hline
+	\makecell{SecretB} & \makecell{181.708.340\\(0)} & \makecell{278.459.825\\(0)} & \makecell{522.486.909\\(0)} & \makecell{947.216.296\\(0)}\\
+	\hline
+	\makecell{Memory} & \makecell{7.720\\(0)} & \makecell{7.784\\(0)} & \makecell{11.288\\(0)} & \makecell{13.016\\(0)}\\
+
+	\hline
+	\end{tabular}
+	\caption[Benchmarks for Sike Generic]{Benchmarks for Sike Generic}
+	\label{tab:benchmarks_Sike_Generic}
+\end{table}
+Execution hotspots parameter \textit{434}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 59.45\%
+	\item \texttt{rdc\_mont:} 31.67\%
+	\item \texttt{fp2mul434\_mont:} 4.58\%
+\end{enumerate}
+Execution hotspots parameter \textit{503}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 59.06\%
+	\item \texttt{rdc\_mont:} 33.02\%
+	\item \texttt{fp2mul503\_mont:} 4.07\%
+\end{enumerate}
+Execution hotspots parameter \textit{610}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 60.05\%
+	\item \texttt{rdc\_mont:} 32.8\%
+	\item \texttt{fp2mul610\_mont:} 4.0\%
+\end{enumerate}
+Execution hotspots parameter \textit{751}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 61.06\%
+	\item \texttt{rdc\_mont:} 32.76\%
+	\item \texttt{fp2mul751\_mont:} 3.42\%
+\end{enumerate}
+\subsection{Benchmarks for Sike Generic Compressed}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
+	\hline
+	\rowcolor{lightgray!50}
+	\bfseries\makecell{Parameter} & \bfseries\makecell{434} & \bfseries\makecell{503} & \bfseries\makecell{610} & \bfseries\makecell{751}\\
+	\hline
+	\makecell{PrivateKeyA} & \makecell{97\\(0)} & \makecell{95\\(0)} & \makecell{99\\(0)} & \makecell{107\\(0)}\\
+	\hline
+	\makecell{PublicKeyA} & \makecell{507.955.664\\(0)} & \makecell{769.892.382\\(0)} & \makecell{1.820.164.702\\(0)} & \makecell{2.510.000.545\\(0)}\\
+	\hline
+	\makecell{PrivateKeyB} & \makecell{185\\(0)} & \makecell{145\\(0)} & \makecell{215\\(0)} & \makecell{200\\(0)}\\
+	\hline
+	\makecell{PublicKeyB} & \makecell{431.555.333\\(0)} & \makecell{644.590.547\\(0)} & \makecell{1.209.342.668\\(0)} & \makecell{2.160.772.067\\(0)}\\
+	\hline
+	\makecell{SecretA} & \makecell{179.835.371\\(0)} & \makecell{276.747.068\\(0)} & \makecell{575.399.356\\(0)} & \makecell{917.374.629\\(0)}\\
+	\hline
+	\makecell{SecretB} & \makecell{225.926.297\\(0)} & \makecell{336.288.536\\(0)} & \makecell{644.892.098\\(0)} & \makecell{1.128.772.498\\(0)}\\
+	\hline
+	\makecell{Memory} & \makecell{16.968\\(0)} & \makecell{19.080\\(0)} & \makecell{23.976\\(0)} & \makecell{28.008\\(0)}\\
+
+	\hline
+	\end{tabular}
+	\caption[Benchmarks for Sike Generic Compressed]{Benchmarks for Sike Generic Compressed}
+	\label{tab:benchmarks_Sike_Generic_Compressed}
+\end{table}
+Execution hotspots parameter \textit{434}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 58.79\%
+	\item \texttt{rdc\_mont:} 32.14\%
+	\item \texttt{fp2mul434\_mont:} 4.14\%
+\end{enumerate}
+Execution hotspots parameter \textit{503}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 58.4\%
+	\item \texttt{rdc\_mont:} 33.45\%
+	\item \texttt{fp2mul503\_mont:} 3.71\%
+\end{enumerate}
+Execution hotspots parameter \textit{610}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 59.39\%
+	\item \texttt{rdc\_mont:} 33.38\%
+	\item \texttt{fp2mul610\_mont:} 3.59\%
+\end{enumerate}
+Execution hotspots parameter \textit{751}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 60.47\%
+	\item \texttt{rdc\_mont:} 33.27\%
+	\item \texttt{fp2mul751\_mont:} 3.1\%
+\end{enumerate}
+\subsection{Benchmarks for Sike x64}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
+	\hline
+	\rowcolor{lightgray!50}
+	\bfseries\makecell{Parameter} & \bfseries\makecell{434} & \bfseries\makecell{503} & \bfseries\makecell{610} & \bfseries\makecell{751}\\
+	\hline
+	\makecell{PrivateKeyA} & \makecell{90\\(0)} & \makecell{95\\(0)} & \makecell{96\\(0)} & \makecell{97\\(0)}\\
+	\hline
+	\makecell{PublicKeyA} & \makecell{18.197.636\\(0)} & \makecell{25.309.825\\(0)} & \makecell{46.870.491\\(0)} & \makecell{67.976.631\\(0)}\\
+	\hline
+	\makecell{PrivateKeyB} & \makecell{57\\(0)} & \makecell{57\\(0)} & \makecell{53\\(0)} & \makecell{59\\(0)}\\
+	\hline
+	\makecell{PublicKeyB} & \makecell{20.227.975\\(0)} & \makecell{28.024.313\\(0)} & \makecell{46.946.162\\(0)} & \makecell{76.798.386\\(0)}\\
+	\hline
+	\makecell{SecretA} & \makecell{14.735.273\\(0)} & \makecell{20.595.673\\(0)} & \makecell{39.015.534\\(0)} & \makecell{55.840.033\\(0)}\\
+	\hline
+	\makecell{SecretB} & \makecell{17.044.799\\(0)} & \makecell{23.672.739\\(0)} & \makecell{39.800.369\\(0)} & \makecell{65.465.094\\(0)}\\
+	\hline
+	\makecell{Memory} & \makecell{8.168\\(0)} & \makecell{8.520\\(0)} & \makecell{11.392\\(0)} & \makecell{13.328\\(0)}\\
+
+	\hline
+	\end{tabular}
+	\caption[Benchmarks for Sike x64]{Benchmarks for Sike x64}
+	\label{tab:benchmarks_Sike_x64}
+\end{table}
+Execution hotspots parameter \textit{434}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 52.23\%
+	\item \texttt{rdc\_mont:} 23.46\%
+	\item \texttt{fpsub434:} 4.22\%
+\end{enumerate}
+Execution hotspots parameter \textit{503}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 49.88\%
+	\item \texttt{rdc\_mont:} 27.18\%
+	\item \texttt{fpsub503:} 4.12\%
+\end{enumerate}
+Execution hotspots parameter \textit{610}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 51.51\%
+	\item \texttt{rdc\_mont:} 28.57\%
+	\item \texttt{fpsub610:} 3.72\%
+\end{enumerate}
+Execution hotspots parameter \textit{751}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 53.34\%
+	\item \texttt{rdc\_mont:} 27.94\%
+	\item \texttt{fpsub751:} 3.81\%
+\end{enumerate}
+\subsection{Benchmarks for Sike x64 Compressed}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
+	\hline
+	\rowcolor{lightgray!50}
+	\bfseries\makecell{Parameter} & \bfseries\makecell{434} & \bfseries\makecell{503} & \bfseries\makecell{610} & \bfseries\makecell{751}\\
+	\hline
+	\makecell{PrivateKeyA} & \makecell{97\\(0)} & \makecell{95\\(0)} & \makecell{99\\(0)} & \makecell{107\\(0)}\\
+	\hline
+	\makecell{PublicKeyA} & \makecell{49.081.389\\(0)} & \makecell{72.924.289\\(0)} & \makecell{124.731.117\\(0)} & \makecell{177.153.088\\(0)}\\
+	\hline
+	\makecell{PrivateKeyB} & \makecell{142\\(0)} & \makecell{144\\(0)} & \makecell{179\\(0)} & \makecell{188\\(0)}\\
+	\hline
+	\makecell{PublicKeyB} & \makecell{41.639.764\\(0)} & \makecell{56.327.210\\(0)} & \makecell{93.860.650\\(0)} & \makecell{152.724.615\\(0)}\\
+	\hline
+	\makecell{SecretA} & \makecell{17.064.280\\(0)} & \makecell{23.745.225\\(0)} & \makecell{44.070.006\\(0)} & \makecell{63.695.110\\(0)}\\
+	\hline
+	\makecell{SecretB} & \makecell{21.186.310\\(0)} & \makecell{29.577.143\\(0)} & \makecell{48.761.150\\(0)} & \makecell{79.202.705\\(0)}\\
+	\hline
+	\makecell{Memory} & \makecell{19.240\\(0)} & \makecell{21.608\\(0)} & \makecell{27.264\\(0)} & \makecell{31.936\\(0)}\\
+
+	\hline
+	\end{tabular}
+	\caption[Benchmarks for Sike x64 Compressed]{Benchmarks for Sike x64 Compressed}
+	\label{tab:benchmarks_Sike_x64_Compressed}
+\end{table}
+Execution hotspots parameter \textit{434}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 50.21\%
+	\item \texttt{rdc\_mont:} 23.13\%
+	\item \texttt{fpsub434:} 4.21\%
+\end{enumerate}
+Execution hotspots parameter \textit{503}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 47.93\%
+	\item \texttt{rdc\_mont:} 26.79\%
+	\item \texttt{fpsub503:} 4.11\%
+\end{enumerate}
+Execution hotspots parameter \textit{610}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 49.73\%
+	\item \texttt{rdc\_mont:} 28.29\%
+	\item \texttt{fpsub610:} 3.75\%
+\end{enumerate}
+Execution hotspots parameter \textit{751}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 51.7\%
+	\item \texttt{rdc\_mont:} 27.77\%
+	\item \texttt{fpsub751:} 3.83\%
+\end{enumerate}
+\subsection{Benchmarks for CIRCL x64}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
+	\hline
+	\rowcolor{lightgray!50}
+	\bfseries\makecell{Parameter} & \bfseries\makecell{434} & \bfseries\makecell{503} & \bfseries\makecell{751}\\
+	\hline
+	\makecell{PrivateKeyA} & \makecell{671\\(0)} & \makecell{671\\(0)} & \makecell{671\\(0)}\\
+	\hline
+	\makecell{PublicKeyA} & \makecell{27.166.852\\(0)} & \makecell{30.574.116\\(0)} & \makecell{92.507.067\\(0)}\\
+	\hline
+	\makecell{PrivateKeyB} & \makecell{672\\(0)} & \makecell{672\\(0)} & \makecell{672\\(0)}\\
+	\hline
+	\makecell{PublicKeyB} & \makecell{28.959.882\\(0)} & \makecell{32.771.222\\(0)} & \makecell{103.101.279\\(0)}\\
+	\hline
+	\makecell{SecretA} & \makecell{21.087.575\\(0)} & \makecell{23.925.285\\(0)} & \makecell{75.131.907\\(0)}\\
+	\hline
+	\makecell{SecretB} & \makecell{24.364.078\\(0)} & \makecell{27.627.558\\(0)} & \makecell{87.853.843\\(0)}\\
+	\hline
+	\makecell{Memory} & \makecell{21.944\\(0)} & \makecell{22.552\\(0)} & \makecell{22.664\\(0)}\\
+
+	\hline
+	\end{tabular}
+	\caption[Benchmarks for CIRCL x64]{Benchmarks for CIRCL x64}
+	\label{tab:benchmarks_CIRCL_x64}
+\end{table}
+Execution hotspots parameter \textit{434}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{p434.mulP434:} 47.29\%
+	\item \texttt{p434.rdcP434:} 22.94\%
+	\item \texttt{p434.subP434:} 5.81\%
+\end{enumerate}
+Execution hotspots parameter \textit{503}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{p503.mulP503:} 41.41\%
+	\item \texttt{p503.rdcP503:} 23.06\%
+	\item \texttt{p503.subP503:} 8.4\%
+\end{enumerate}
+Execution hotspots parameter \textit{751}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{p751.mulP751:} 56.17\%
+	\item \texttt{p751.rdcP751:} 21.72\%
+	\item \texttt{p751.subP751:} 6.02\%
+\end{enumerate}
+\subsection{Benchmarks for Microsoft Generic}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
+	\hline
+	\rowcolor{lightgray!50}
+	\bfseries\makecell{Parameter} & \bfseries\makecell{434} & \bfseries\makecell{503} & \bfseries\makecell{610} & \bfseries\makecell{751}\\
+	\hline
+	\makecell{PrivateKeyA} & \makecell{86\\(0)} & \makecell{91\\(0)} & \makecell{91\\(0)} & \makecell{91\\(0)}\\
+	\hline
+	\makecell{PublicKeyA} & \makecell{195.425.484\\(0)} & \makecell{300.437.100\\(0)} & \makecell{620.117.514\\(0)} & \makecell{992.618.213\\(0)}\\
+	\hline
+	\makecell{PrivateKeyB} & \makecell{53\\(0)} & \makecell{53\\(0)} & \makecell{48\\(0)} & \makecell{53\\(0)}\\
+	\hline
+	\makecell{PublicKeyB} & \makecell{216.131.501\\(0)} & \makecell{330.771.955\\(0)} & \makecell{617.536.325\\(0)} & \makecell{1.114.734.257\\(0)}\\
+	\hline
+	\makecell{SecretA} & \makecell{158.459.759\\(0)} & \makecell{244.758.599\\(0)} & \makecell{516.977.970\\(0)} & \makecell{816.142.131\\(0)}\\
+	\hline
+	\makecell{SecretB} & \makecell{182.033.988\\(0)} & \makecell{279.212.025\\(0)} & \makecell{523.130.069\\(0)} & \makecell{949.500.928\\(0)}\\
+	\hline
+	\makecell{Memory} & \makecell{8.040\\(0)} & \makecell{8.360\\(0)} & \makecell{11.784\\(0)} & \makecell{13.624\\(0)}\\
+
+	\hline
+	\end{tabular}
+	\caption[Benchmarks for Microsoft Generic]{Benchmarks for Microsoft Generic}
+	\label{tab:benchmarks_Microsoft_Generic}
+\end{table}
+Execution hotspots parameter \textit{434}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 60.55\%
+	\item \texttt{rdc\_mont:} 31.9\%
+	\item \texttt{fp2mul434\_mont:} 4.56\%
+\end{enumerate}
+Execution hotspots parameter \textit{503}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 60.12\%
+	\item \texttt{rdc\_mont:} 33.25\%
+	\item \texttt{fp2mul503\_mont:} 3.96\%
+\end{enumerate}
+Execution hotspots parameter \textit{610}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 61.24\%
+	\item \texttt{rdc\_mont:} 32.54\%
+	\item \texttt{fp2mul610\_mont:} 4.02\%
+\end{enumerate}
+Execution hotspots parameter \textit{751}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 62.22\%
+	\item \texttt{rdc\_mont:} 32.44\%
+	\item \texttt{fp2mul751\_mont:} 3.43\%
+\end{enumerate}
+\subsection{Benchmarks for Microsoft Generic Compressed}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
+	\hline
+	\rowcolor{lightgray!50}
+	\bfseries\makecell{Parameter} & \bfseries\makecell{434} & \bfseries\makecell{503} & \bfseries\makecell{610} & \bfseries\makecell{751}\\
+	\hline
+	\makecell{PrivateKeyA} & \makecell{97\\(0)} & \makecell{95\\(0)} & \makecell{99\\(0)} & \makecell{105\\(0)}\\
+	\hline
+	\makecell{PublicKeyA} & \makecell{366.742.854\\(0)} & \makecell{516.734.423\\(0)} & \makecell{1.015.885.701\\(0)} & \makecell{1.975.978.300\\(0)}\\
+	\hline
+	\makecell{PrivateKeyB} & \makecell{239\\(0)} & \makecell{233\\(0)} & \makecell{206\\(0)} & \makecell{314\\(0)}\\
+	\hline
+	\makecell{PublicKeyB} & \makecell{340.757.086\\(0)} & \makecell{518.426.765\\(0)} & \makecell{956.292.705\\(0)} & \makecell{1.791.584.371\\(0)}\\
+	\hline
+	\makecell{SecretA} & \makecell{177.457.712\\(0)} & \makecell{274.004.587\\(0)} & \makecell{569.195.809\\(0)} & \makecell{908.464.384\\(0)}\\
+	\hline
+	\makecell{SecretB} & \makecell{201.754.449\\(0)} & \makecell{309.530.308\\(0)} & \makecell{577.402.232\\(0)} & \makecell{1.043.915.539\\(0)}\\
+	\hline
+	\makecell{Memory} & \makecell{69.576\\(0)} & \makecell{89.896\\(0)} & \makecell{134.600\\(0)} & \makecell{193.336\\(0)}\\
+
+	\hline
+	\end{tabular}
+	\caption[Benchmarks for Microsoft Generic Compressed]{Benchmarks for Microsoft Generic Compressed}
+	\label{tab:benchmarks_Microsoft_Generic_Compressed}
+\end{table}
+Execution hotspots parameter \textit{434}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 59.8\%
+	\item \texttt{rdc\_mont:} 32.56\%
+	\item \texttt{fp2mul434\_mont:} 4.01\%
+\end{enumerate}
+Execution hotspots parameter \textit{503}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 59.27\%
+	\item \texttt{rdc\_mont:} 33.82\%
+	\item \texttt{fp2mul503\_mont:} 2.91\%
+\end{enumerate}
+Execution hotspots parameter \textit{610}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 60.59\%
+	\item \texttt{rdc\_mont:} 33.18\%
+	\item \texttt{fp2mul610\_mont:} 3.59\%
+\end{enumerate}
+Execution hotspots parameter \textit{751}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 61.4\%
+	\item \texttt{rdc\_mont:} 33.22\%
+	\item \texttt{fp2mul751\_mont:} 2.27\%
+\end{enumerate}
+\subsection{Benchmarks for Microsoft x64}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
+	\hline
+	\rowcolor{lightgray!50}
+	\bfseries\makecell{Parameter} & \bfseries\makecell{434} & \bfseries\makecell{503} & \bfseries\makecell{610} & \bfseries\makecell{751}\\
+	\hline
+	\makecell{PrivateKeyA} & \makecell{86\\(0)} & \makecell{91\\(0)} & \makecell{91\\(0)} & \makecell{91\\(0)}\\
+	\hline
+	\makecell{PublicKeyA} & \makecell{16.733.523\\(0)} & \makecell{23.373.795\\(0)} & \makecell{44.826.467\\(0)} & \makecell{64.976.610\\(0)}\\
+	\hline
+	\makecell{PrivateKeyB} & \makecell{53\\(0)} & \makecell{53\\(0)} & \makecell{48\\(0)} & \makecell{53\\(0)}\\
+	\hline
+	\makecell{PublicKeyB} & \makecell{18.587.638\\(0)} & \makecell{25.858.758\\(0)} & \makecell{44.876.850\\(0)} & \makecell{73.377.700\\(0)}\\
+	\hline
+	\makecell{SecretA} & \makecell{13.529.422\\(0)} & \makecell{18.993.109\\(0)} & \makecell{37.346.394\\(0)} & \makecell{53.326.381\\(0)}\\
+	\hline
+	\makecell{SecretB} & \makecell{15.655.268\\(0)} & \makecell{21.831.732\\(0)} & \makecell{38.025.823\\(0)} & \makecell{62.514.039\\(0)}\\
+	\hline
+	\makecell{Memory} & \makecell{8.936\\(0)} & \makecell{9.048\\(0)} & \makecell{12.944\\(0)} & \makecell{15.008\\(0)}\\
+
+	\hline
+	\end{tabular}
+	\caption[Benchmarks for Microsoft x64]{Benchmarks for Microsoft x64}
+	\label{tab:benchmarks_Microsoft_x64}
+\end{table}
+Execution hotspots parameter \textit{434}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 55.81\%
+	\item \texttt{rdc\_mont:} 23.82\%
+	\item \texttt{0x000000000000cd3c:} 4.56\%
+\end{enumerate}
+Execution hotspots parameter \textit{503}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 52.33\%
+	\item \texttt{rdc\_mont:} 28.27\%
+	\item \texttt{0x000000000000d8e4:} 4.38\%
+\end{enumerate}
+Execution hotspots parameter \textit{610}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 53.86\%
+	\item \texttt{rdc\_mont:} 29.88\%
+	\item \texttt{0x000000000000f256:} 3.86\%
+\end{enumerate}
+Execution hotspots parameter \textit{751}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 55.83\%
+	\item \texttt{rdc\_mont:} 29.24\%
+	\item \texttt{0x000000000000fefd:} 3.62\%
+\end{enumerate}
+\subsection{Benchmarks for Microsoft x64 Compressed}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
+	\hline
+	\rowcolor{lightgray!50}
+	\bfseries\makecell{Parameter} & \bfseries\makecell{434} & \bfseries\makecell{503} & \bfseries\makecell{610} & \bfseries\makecell{751}\\
+	\hline
+	\makecell{PrivateKeyA} & \makecell{97\\(0)} & \makecell{95\\(0)} & \makecell{99\\(0)} & \makecell{105\\(0)}\\
+	\hline
+	\makecell{PublicKeyA} & \makecell{33.203.258\\(0)} & \makecell{49.727.822\\(0)} & \makecell{76.667.900\\(0)} & \makecell{115.234.119\\(0)}\\
+	\hline
+	\makecell{PrivateKeyB} & \makecell{149\\(0)} & \makecell{152\\(0)} & \makecell{187\\(0)} & \makecell{200\\(0)}\\
+	\hline
+	\makecell{PublicKeyB} & \makecell{30.783.404\\(0)} & \makecell{41.916.959\\(0)} & \makecell{71.642.291\\(0)} & \makecell{118.819.557\\(0)}\\
+	\hline
+	\makecell{SecretA} & \makecell{15.538.172\\(0)} & \makecell{21.689.456\\(0)} & \makecell{42.098.078\\(0)} & \makecell{60.202.480\\(0)}\\
+	\hline
+	\makecell{SecretB} & \makecell{17.949.480\\(0)} & \makecell{24.857.647\\(0)} & \makecell{42.885.843\\(0)} & \makecell{69.856.043\\(0)}\\
+	\hline
+	\makecell{Memory} & \makecell{69.960\\(0)} & \makecell{90.640\\(0)} & \makecell{135.216\\(0)} & \makecell{193.872\\(0)}\\
+
+	\hline
+	\end{tabular}
+	\caption[Benchmarks for Microsoft x64 Compressed]{Benchmarks for Microsoft x64 Compressed}
+	\label{tab:benchmarks_Microsoft_x64_Compressed}
+\end{table}
+Execution hotspots parameter \textit{434}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 52.74\%
+	\item \texttt{rdc\_mont:} 23.26\%
+	\item \texttt{0x00000000000247dc:} 3.53\%
+\end{enumerate}
+Execution hotspots parameter \textit{503}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 49.6\%
+	\item \texttt{rdc\_mont:} 27.74\%
+	\item \texttt{0x0000000000026694:} 3.38\%
+\end{enumerate}
+Execution hotspots parameter \textit{610}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 51.51\%
+	\item \texttt{rdc\_mont:} 29.43\%
+	\item \texttt{0x000000000002e046:} 3.11\%
+\end{enumerate}
+Execution hotspots parameter \textit{751}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{mp\_mul:} 53.61\%
+	\item \texttt{rdc\_mont:} 28.98\%
+	\item \texttt{0x0000000000032f6d:} 2.89\%
+\end{enumerate}
