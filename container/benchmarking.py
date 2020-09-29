@@ -16,7 +16,7 @@ from src.utils.caching import load_from_json, save_as_json
 import signal
 import sys
 
-COUNT = 1
+COUNT = 100
 RESULTS = {}
 
 def benchmark(Class):
@@ -32,7 +32,6 @@ def signal_handler(sig,frame):
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     RESULTS = load_from_json()
-    del RESULTS["ECDH"]
 
     implementations =[
         #ECDH

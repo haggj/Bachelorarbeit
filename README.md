@@ -10,9 +10,11 @@ This repository contains code to benchmark currently available SIDH implementati
 - CIRCL
     - x64 Implementation
 - Microsoft
+    - Generic Implementation
+    - Generic Implementation Compressed
     - x64 Implementation
     - x64 Implementation Compressed
-
+- ECDH (used for comparison)
 # Usage
 
 1. Make sure you have installed ```docker``` on your system.
@@ -32,11 +34,7 @@ The following output files are generated:
 
 - ```data/<curve>.png```: Bar chart showing the absolute instruction counts for each implementation initialized with \<curve\>.
 
-- ```data/cached.json```: Contains cached JSON Data, that can be read by the application to produce the output graphs and html. The idea is to save the internal status for later use. The benchmarking application checks if the file "cached.json" exists in it's local directory. If the file is found, the cached data is used and benchmarking takes less time. If you want to use cached data within the docker container, simply copy that file to container/cached.json.
-
-**NOTE:** SIKE Reference Implementation and SIKE Optimized Implementation are very slow and makes bar charts hard to read. Therefor, only x64 optimized implementations are listed in the charts. However, the benchmarks are executed for all implementations and results can be seen in ```data/results.html```
-
-**NOTE:** Each output file contains ECDH (via Curve25519) benchmarks as reference value.
+- ```data/cached.json```: Contains cached JSON Data, that can be read by the application to produce the output graphs and html. The idea is to save the internal status for later use. The benchmarking application checks if the file "cached.json" exists in it's local directory. If the file is found, the cached data is used and benchmarking takes less time. If you want to use cached data within the docker container, simply copy that file to .cached/cached.json.
 
 # SIDH Security Level
 The assumed security levels of the SIDH parameters, as described by [NIST](https://csrc.nist.gov/CSRC/media/Projects/Post-Quantum-Cryptography/documents/call-for-proposals-final-dec-2016.pdf) and [SIKE](https://sike.org/files/SIDH-spec.pdf):
@@ -46,5 +44,8 @@ The assumed security levels of the SIDH parameters, as described by [NIST](https
 	p610: 192-AES
 	p751: 256-AES
 
-    As reference, ECDH:
-	CURVE25519: 128-AES
+**NOTE:** Each output file contains ECDH benchmarks as reference value. The following elliptic curves are used to match the appropriate security classes:
+
+    p434 and secp256r1 matching 128-Bit AES security
+    p610 and secp384r1 matching 192-Bit AES security
+    p751 and secp521r1 matching 256-Bit AES security

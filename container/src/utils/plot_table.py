@@ -1,5 +1,6 @@
 from pathlib import Path
 from prettytable import PrettyTable
+from numpy import transpose
 
 
 
@@ -14,7 +15,8 @@ def generate_html_table(results):
     Path("data").mkdir(parents=True, exist_ok=True)
     with open('data/result.html', 'w') as file:
         file.write(
-            preHTML + "<p>All values (except memory) are absolute instruction counts.</p><p>*Maximum memory consumption in bytes.</p>")
+            preHTML + "<p>All values (except Memory) are averages of absolute instruction counts. <br> All values in brackets are the standard derivation over N=100 samples.</p>"+ \
+            "<p>*Maximum memory consumption in bytes.</p>")
         for name, impl in results.items():
             file.write("<h1>" + name + "</h1>")
             file.write(html_from_implementation(
@@ -33,27 +35,67 @@ def generate_latex_table(results):
 
 def latex_from_implementation(result):
 
-    caption_short = caption_long = result.name.replace("_", " ")
+    # Create table of the form
+    # name | value1 | value2 | ...
+    # tom  |   d    |   e    | ...
+    # ...
 
-    headers = result.get_benchmark_names()
+    table = [result.get_benchmark_names()]
+    for curve in result.curves:
+        table.append(curve.get_benchmark_values("\\\\"))
+
+    # Inverse the table to obtain the form
+    # name    |   tom  | ...
+    # value1  |   d    |  
+    # value2  |   e    |   
+    # ...
+
+    table = transpose(table)
+
+    caption_short = caption_long = "Benchmarks for " + result.name.replace("_", " ")
+
+    headers = table[0]
     headers = ["\\bfseries\makecell{" + str(val)+ "}"  for val in headers]
 
     pre_table = \
-        "\\begin{table}[htpb]\n\t\\centering\n\t\\begin{tabular}{|" + len(headers)*r"K{1cm}|" +"}\n\t\\hline\n\t\\rowcolor{lightgray!50}\n\t" + \
+        "\subsubsection{"+ caption_long +"}\n\\begin{table}[H]\n\t\\centering\n\t\\begin{tabular}{|" + len(headers)*r"K{2.5cm}|" +"}\n\t\\hline\n\t\\rowcolor{lightgray!50}\n\t" + \
         " & ".join(headers) + "\\\\\n"
 
     post_table = \
-        "\n\t\end{tabular}\n\t\caption[" + caption_short + "]{" + caption_long + "}\n\end{table}\n"
+        "\n\t\hline\n\t\end{tabular}" + \
+        "\n\t\caption[" + caption_short + "]{" + caption_long + "}" + \
+        "\n\t\label{tab:benchmarks_"+result.name + "}" + \
+        "\n\end{table}\n"
 
-    table = pre_table
-    for curve in result.curves:
-        cells = ["\makecell{" + str(val).replace("%", "\%").replace("_", "\_") + "}" for val in curve.get_benchmark_values(newline="\\\\")]
-        row = "\t\hline\n\t" + " & ".join(cells) + "\\\\\n"
-        table+=row
-    table += post_table
-    return table
-    
+    table_str = pre_table
+    for row in table[1:-1]:
+        cells = [format_latex_cell(val) for val in row]
+        row_str = "\t\hline\n\t" + " & ".join(cells) + "\\\\\n"
+        table_str+=row_str
+    table_str += post_table
+    return table_str + format_latex_hotspots(table[0], table[-1])
 
+def format_latex_hotspots(heading, hotspots):
+    res = ""
+    for idx, name in enumerate(heading[1:]):
+        res += "Execution hotspots parameter \\textit{" + name + "}:\n"
+        res += "\\begin{enumerate}[noitemsep]"
+        for hotspot in hotspots[idx+1].split("\\\\"):
+            fun = escape_latex(hotspot).split(" ")[0]
+            percentage = escape_latex(hotspot).split(" ")[1]
+            res += "\n\t\\item " + "\\texttt{" + fun + "} " + percentage 
+        res += "\n\\end{enumerate}\n"
+    return res
+
+
+def escape_latex(val):
+    con = val.replace("%", "\%")
+    con = con.replace("_", "\_")
+    return con
+
+def format_latex_cell(val):
+    con = escape_latex(str(val))
+    return "\makecell{" + con + "}"
 
 def html_from_implementation(result):
     # result is instance of class BenchmarkImpl

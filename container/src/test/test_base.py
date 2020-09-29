@@ -128,8 +128,9 @@ class TestBaseImplementation(TestCase):
     def test_get_statistics(self):
         self.implementation.curves = [1,2,3,4]
         fake_benchmark = MagicMock()
-        with patch("src.base.BaseImplementation.benchmark_curve", return_value=fake_benchmark) as mock_benchmark:
-            result = self.implementation.get_statistics()
+        with patch('builtins.print'):
+            with patch("src.base.BaseImplementation.benchmark_curve", return_value=fake_benchmark) as mock_benchmark:
+                result = self.implementation.get_statistics()
 
         self.assertEqual(mock_benchmark.call_count, len(self.implementation.curves))
         self.assertEqual(type(result), BenchmarkImpl)

@@ -105,11 +105,11 @@ def plot_instructions(curve, benchmarks, ecdh_compare=None):
 
 def map_to_ecdh(curve):
     if curve == "434":
-        return "283"
+        return "secp256"
     if curve == "503":
-        return "409"
+        return "secp384"
     if curve == "751":
-        return "571"
+        return "secp521"
     return None
 
 def generate_graph(result):

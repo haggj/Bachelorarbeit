@@ -2,16 +2,8 @@ FROM ubuntu:18.04
 
 WORKDIR /usr/src/app
 
-COPY container/requirements.txt ./
-
-# Install python
-RUN apt-get -y update
-RUN apt-get -y install python3
-RUN apt-get -y install python3-pip
-RUN python3 -m pip install --no-cache-dir -r requirements.txt
-ENV PYTHONUNBUFFERED=1
-
 # Install valgrind
+RUN apt-get -y update
 RUN apt-get -y install valgrind
 RUN apt-get -y install sudo
 
@@ -48,6 +40,15 @@ RUN cd Microsoft/.src/generic; make ARCH=x64 CC=gcc OPT_LEVEL=GENERIC USE_MULX=F
 RUN mkdir SIKE; mkdir SIKE/.src
 RUN wget https://sike.org/files/sike.tar.gz
 RUN tar -xf sike.tar.gz -C SIKE/.src/ --strip-components 1
+
+
+
+# Install python
+COPY container/requirements.txt ./
+RUN apt-get -y install python3
+RUN apt-get -y install python3-pip
+RUN python3 -m pip install --no-cache-dir -r requirements.txt
+ENV PYTHONUNBUFFERED=1
 
 COPY container .
 
