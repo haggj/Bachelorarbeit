@@ -1,17 +1,15 @@
 # Default compiler
 CC=gcc
 
-# Default parameter
-PARAM=283
-
 # Include Files
-CFLAGS= -ggdb -O3 -I/usr/local/ssl/include/ -Wl,-rpath,/usr/local/ssl/lib/ -L/usr/local/ssl/lib/ -lcrypto -D PARAM=${PARAM}
+CFLAGS= -ggdb -O3 -I/usr/local/ssl/include/ -Wl,-rpath,/usr/local/ssl/lib/ -L/usr/local/ssl/lib/ -lcrypto -D ${PARAM}
 LD_LIBRARY_PATH=/usr/local/ssl/lib
 
 OBJ = benchmark.c
 
 build: $(OBJ)
 	@ echo "building ECDH..."
+	@ echo ${PARAM}
 	@ mkdir -p "build"
 	@ $(CC) -o build/benchmark $^ $(CFLAGS)
 	@ echo "\e[32mSUCCESS\e[0m"

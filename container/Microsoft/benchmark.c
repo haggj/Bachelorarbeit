@@ -2,13 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-#if PARAM==434
+#if p434
   #include <p434.c>
-#elif PARAM==503
+#elif p503
  #include <p503.c>
-#elif PARAM==610
+#elif p610
   #include <p610.c>
-#elif PARAM==751
+#elif p751
   #include <p751.c>
 #endif
 

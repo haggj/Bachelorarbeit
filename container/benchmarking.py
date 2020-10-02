@@ -16,13 +16,14 @@ from src.utils.caching import load_from_json, save_as_json
 import signal
 import sys
 
-COUNT = 100
+# Number of repetitions for each benchmark
+N = 3
 RESULTS = {}
 
 def benchmark(Class):
     name = Class.__name__
     if name not in RESULTS:
-        instance = Class(COUNT)
+        instance = Class(N)
         RESULTS[name] = instance.get_statistics()
 
 def signal_handler(sig,frame):
@@ -32,6 +33,7 @@ def signal_handler(sig,frame):
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     RESULTS = load_from_json()
+    del RESULTS["Microsoft_Generic"]
 
     implementations =[
         #ECDH

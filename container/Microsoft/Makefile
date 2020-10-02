@@ -11,7 +11,7 @@ CFLAGS=\
 -I $(PREPATH)/ \
 -O3
 
-CFLAGS := $(CFLAGS) -D PARAM=${PARAM}
+CFLAGS := $(CFLAGS) -D p${PARAM}
 
 ifdef COMPRESSED
 	CFLAGS := $(CFLAGS) -D COMPRESSED -L.src/$(VERSION)lib$(PARAM)comp/ -lsidh

@@ -58,7 +58,7 @@ def latex_from_implementation(result):
     headers = ["\\bfseries\makecell{" + str(val)+ "}"  for val in headers]
 
     pre_table = \
-        "\subsubsection{"+ caption_long +"}\n\\begin{table}[H]\n\t\\centering\n\t\\begin{tabular}{|" + len(headers)*r"K{2.5cm}|" +"}\n\t\\hline\n\t\\rowcolor{lightgray!50}\n\t" + \
+        "\subsection{"+ caption_long +"}\n\\begin{table}[H]\n\t\\centering\n\t\\begin{tabular}{|" + len(headers)*r"K{2.5cm}|" +"}\n\t\\hline\n\t\\rowcolor{lightgray!50}\n\t" + \
         " & ".join(headers) + "\\\\\n"
 
     post_table = \
@@ -95,6 +95,8 @@ def escape_latex(val):
 
 def format_latex_cell(val):
     con = escape_latex(str(val))
+    if (val == "Memory"):
+        return "\makecell{" + con + "\\\\in bytes}"
     return "\makecell{" + con + "}"
 
 def html_from_implementation(result):

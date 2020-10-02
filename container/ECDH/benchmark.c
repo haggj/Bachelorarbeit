@@ -35,20 +35,21 @@ int __attribute__ ((noinline)) derive_B(char* secret_B, int secret_len, EC_KEY *
 
 void benchmark()
 {
-	#if PARAM==secp256
-		int curve = NID_X9_62_prime256v1;
-	#elif PARAM==secp384
-		int curve = NID_secp384r1;
-	#elif PARAM==secp521
-		int curve = NID_secp521r1;
+	#if secp256
+		#define benchmark_curve NID_X9_62_prime256v1
+	#elif secp384
+		#define benchmark_curve NID_secp384r1
+	#elif secp521
+		#define benchmark_curve NID_secp521r1
 	#endif
+	
 	EC_KEY *key_A, *key_B;
 	int field_size, secret_len, ret;
 	unsigned char *secret_A, *secret_B;
 
 	/* Create an Elliptic Curve Key object and set it up to use the ANSI X9.62 Prime 256v1 curve */
-	if(NULL == (key_A = EC_KEY_new_by_curve_name(curve))) handleErrors("creating key object A");
-	if(NULL == (key_B = EC_KEY_new_by_curve_name(curve))) handleErrors("creating key object B");
+	if(NULL == (key_A = EC_KEY_new_by_curve_name(benchmark_curve))) handleErrors("creating key object A");
+	if(NULL == (key_B = EC_KEY_new_by_curve_name(benchmark_curve))) handleErrors("creating key object B");
 
 	/* Generate the private and public key */
 	keygen_A(key_A);
