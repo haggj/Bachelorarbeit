@@ -13,22 +13,22 @@
 \contentsline {subsection}{\numberline {1.1.1}Diffie-Hellman Key-Exchange}{3}{subsection.1.1.1}%
 \contentsline {subsubsection}{\nonumberline Protocol}{3}{section*.8}%
 \contentsline {subsubsection}{\nonumberline Security}{4}{section*.10}%
-\contentsline {subsection}{\numberline {1.1.2}Key Encapsulation}{4}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.2}Key Encapsulation}{5}{subsection.1.1.2}%
 \contentsline {subsection}{\numberline {1.1.3}Differences}{5}{subsection.1.1.3}%
 \contentsline {section}{\numberline {1.2}Post-Quantum Cryptography}{5}{section.1.2}%
 \contentsline {subsubsection}{\nonumberline Discrete Logarithm Problem}{6}{section*.11}%
 \contentsline {subsubsection}{\nonumberline Factorization Problem}{6}{section*.12}%
-\contentsline {subsection}{\numberline {1.2.1}Impact of Quantum Computers on Cryptography}{6}{subsection.1.2.1}%
-\contentsline {subsubsection}{\nonumberline Shor's Algorithm}{6}{section*.13}%
+\contentsline {subsection}{\numberline {1.2.1}Impact of Quantum Computers on Cryptography}{7}{subsection.1.2.1}%
+\contentsline {subsubsection}{\nonumberline Shor's Algorithm}{7}{section*.13}%
 \contentsline {subsubsection}{\nonumberline Grover's Algorithm}{7}{section*.14}%
 \contentsline {subsection}{\numberline {1.2.2}Classes of Post-Quantum Cryptography}{8}{subsection.1.2.2}%
 \contentsline {subsubsection}{\nonumberline Lattice-based Cryptography}{8}{section*.16}%
-\contentsline {subsubsection}{\nonumberline Multivariate Cryptography}{8}{section*.17}%
+\contentsline {subsubsection}{\nonumberline Multivariate Cryptography}{9}{section*.17}%
 \contentsline {subsubsection}{\nonumberline Code-based Cryptography}{9}{section*.18}%
 \contentsline {subsubsection}{\nonumberline Hash-based Signatures}{9}{section*.19}%
-\contentsline {subsection}{\numberline {1.2.3}Isogeny-based Cryptography}{9}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.3}Isogeny-based Cryptography}{10}{subsection.1.2.3}%
 \contentsline {subsubsection}{\nonumberline Illustration of the Problem ~\parencite {urbanik2017friendly}~\parencite {costello2019supersingular}}{10}{section*.20}%
-\contentsline {subsubsection}{\nonumberline Supersingular Isogeny Diffie Hellman (SIDH)}{10}{section*.21}%
+\contentsline {subsubsection}{\nonumberline Supersingular Isogeny Diffie Hellman (SIDH)}{11}{section*.21}%
 \contentsline {subsubsection}{\nonumberline Implemenation Details}{12}{section*.23}%
 \contentsline {subsubsection}{\nonumberline Security considerations}{14}{section*.28}%
 \contentsline {chapter}{\numberline {2}Description of existing SIDH implementations}{16}{chapter.2}%
@@ -50,42 +50,45 @@
 \contentsline {subsection}{\numberline {3.2.3}Adding Implementations}{26}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}Usage}{27}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Results}{29}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}SIKE Implementations}{30}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Optimized Implementations}{31}{subsection.3.4.2}%
-\contentsline {subsubsection}{\nonumberline Results matching NIST security level 1}{31}{section*.42}%
-\contentsline {subsubsection}{\nonumberline Results matching NIST security level 5}{32}{section*.45}%
-\contentsline {subsection}{\numberline {3.4.3}Compressed implementations}{33}{subsection.3.4.3}%
-\contentsline {subsubsection}{\nonumberline Results matching NIST security level 1}{33}{section*.48}%
-\contentsline {subsubsection}{\nonumberline Results matching NIST security level 5}{34}{section*.51}%
-\contentsline {chapter}{\numberline {4}Performance Analysis}{35}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Measures for Efficiency}{35}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Comparing SIDH libraries}{35}{subsection.4.1.1}%
-\contentsline {subsubsection}{\nonumberline Generic optimized implementations}{36}{section*.54}%
-\contentsline {subsubsection}{\nonumberline x64 optimized implementations}{36}{section*.55}%
-\contentsline {subsubsection}{\nonumberline Analysis of execution hotspots}{37}{section*.56}%
-\contentsline {subsection}{\numberline {4.1.2}Comparing SIDH and ECDH}{37}{subsection.4.1.2}%
-\contentsline {subsubsection}{\nonumberline Overall}{37}{section*.57}%
-\contentsline {subsubsection}{\nonumberline Analysis of ECDH execution hotspots}{37}{section*.58}%
-\contentsline {section}{\numberline {4.2}Security Considerations}{37}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Constant time}{37}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Key length}{37}{subsection.4.2.2}%
-\contentsline {chapter}{\numberline {5}Conclusion}{38}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Introduction}{39}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Section}{39}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Subsection}{39}{subsection.6.1.1}%
-\contentsline {chapter}{\numberline {A}General Addenda}{42}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Detailed Benchmarks}{42}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Benchmarks for ECDH}{42}{subsection.A.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Benchmarks for Sike Reference}{43}{subsection.A.1.2}%
-\contentsline {subsection}{\numberline {A.1.3}Benchmarks for Sike Generic}{44}{subsection.A.1.3}%
-\contentsline {subsection}{\numberline {A.1.4}Benchmarks for Sike Generic Compressed}{45}{subsection.A.1.4}%
-\contentsline {subsection}{\numberline {A.1.5}Benchmarks for Sike x64}{46}{subsection.A.1.5}%
-\contentsline {subsection}{\numberline {A.1.6}Benchmarks for Sike x64 Compressed}{47}{subsection.A.1.6}%
-\contentsline {subsection}{\numberline {A.1.7}Benchmarks for CIRCL x64}{48}{subsection.A.1.7}%
-\contentsline {subsection}{\numberline {A.1.8}Benchmarks for Microsoft Generic}{49}{subsection.A.1.8}%
-\contentsline {subsection}{\numberline {A.1.9}Benchmarks for Microsoft Generic Compressed}{50}{subsection.A.1.9}%
-\contentsline {subsection}{\numberline {A.1.10}Benchmarks for Microsoft x64}{51}{subsection.A.1.10}%
-\contentsline {subsection}{\numberline {A.1.11}Benchmarks for Microsoft x64 Compressed}{52}{subsection.A.1.11}%
-\contentsline {chapter}{\nonumberline List of Figures}{53}{chapter*.77}%
-\contentsline {chapter}{\nonumberline List of Tables}{54}{chapter*.78}%
-\contentsline {chapter}{\nonumberline Bibliography}{55}{chapter*.79}%
+\contentsline {subsubsection}{\nonumberline Benchmarked libraries}{29}{section*.40}%
+\contentsline {subsubsection}{\nonumberline Implementations in each library}{29}{section*.41}%
+\contentsline {subsubsection}{\nonumberline Parameter sets for each implementation}{29}{section*.42}%
+\contentsline {subsection}{\numberline {3.4.1}SIDH security levels}{31}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}SIKE Implementations}{32}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Optimized Implementations}{33}{subsection.3.4.3}%
+\contentsline {subsubsection}{\nonumberline Results matching NIST security level 1}{33}{section*.47}%
+\contentsline {subsubsection}{\nonumberline Results matching NIST security level 5}{34}{section*.50}%
+\contentsline {subsection}{\numberline {3.4.4}Compressed implementations}{35}{subsection.3.4.4}%
+\contentsline {subsubsection}{\nonumberline Results matching NIST security level 1}{35}{section*.53}%
+\contentsline {subsubsection}{\nonumberline Results matching NIST security level 5}{36}{section*.56}%
+\contentsline {chapter}{\numberline {4}Performance Analysis}{37}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Measures for Efficiency}{37}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Comparing SIDH security levels}{37}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Comparing SIKE Implementations}{37}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Comparing optimized implementations}{38}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Generic optimized implementations}{38}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}x64 optimized implementations}{39}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Comparing compressed implementations}{39}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Analysis of execution hotspots}{40}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Comparing SIDH and ECDH}{41}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Analysis of ECDH execution hotspots}{41}{subsection.4.7.1}%
+\contentsline {section}{\numberline {4.8}Security Considerations}{42}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Constant time}{42}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Key size}{43}{subsection.4.8.2}%
+\contentsline {chapter}{\numberline {5}Conclusion}{44}{chapter.5}%
+\contentsline {chapter}{\numberline {A}General Addenda}{45}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Detailed Benchmarks}{45}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Benchmarks for ECDH}{46}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Benchmarks for Sike Reference}{47}{subsection.A.1.2}%
+\contentsline {subsection}{\numberline {A.1.3}Benchmarks for Sike Generic}{48}{subsection.A.1.3}%
+\contentsline {subsection}{\numberline {A.1.4}Benchmarks for Sike Generic Compressed}{49}{subsection.A.1.4}%
+\contentsline {subsection}{\numberline {A.1.5}Benchmarks for Sike x64}{50}{subsection.A.1.5}%
+\contentsline {subsection}{\numberline {A.1.6}Benchmarks for Sike x64 Compressed}{51}{subsection.A.1.6}%
+\contentsline {subsection}{\numberline {A.1.7}Benchmarks for CIRCL x64}{52}{subsection.A.1.7}%
+\contentsline {subsection}{\numberline {A.1.8}Benchmarks for Microsoft Generic}{53}{subsection.A.1.8}%
+\contentsline {subsection}{\numberline {A.1.9}Benchmarks for Microsoft Generic Compressed}{54}{subsection.A.1.9}%
+\contentsline {subsection}{\numberline {A.1.10}Benchmarks for Microsoft x64}{55}{subsection.A.1.10}%
+\contentsline {subsection}{\numberline {A.1.11}Benchmarks for Microsoft x64 Compressed}{56}{subsection.A.1.11}%
+\contentsline {chapter}{\nonumberline List of Figures}{57}{chapter*.71}%
+\contentsline {chapter}{\nonumberline List of Tables}{58}{chapter*.72}%
+\contentsline {chapter}{\nonumberline Bibliography}{59}{chapter*.73}%

@@ -77,6 +77,11 @@ void benchmark()
 		OPENSSL_free(secret_A);
 		assert(0);
 	}
+	EC_GROUP *g = EC_KEY_get0_group(key_A);
+	int bits = EC_GROUP_order_bits(g);
+	printf("Len: %d", bits);
+
+
 	/* Clean up */
 	EC_KEY_free(key_A);
 	EC_KEY_free(key_B);

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.13)  1 OCT 2020 15:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.13)  6 OCT 2020 08:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1606,6 +1606,9 @@ LaTeX Warning: Label `fig:sike-sidh' multiply defined.
 
 LaTeX Warning: Label `fig:sike-sidh' multiply defined.
 
+
+LaTeX Warning: Label `tab:benchmarks_Sike_x64' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1676,13 +1679,6 @@ Package biblatex Info: ... file 'main.bbl' found.
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
 (biblatex)                latex
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                longa2018note
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -1941,18 +1937,23 @@ LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
 (Font)              Font shape `T1/pplx/m/it' tried instead on input line 41.
  [7] (./chapters/01_background.tex
 chapter 1.
-<figures/background/symmetric_encryption.png, id=179, 758.835pt x 231.86626pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--5
+
+ []
+
+<figures/background/symmetric_encryption.png, id=189, 758.835pt x 231.86626pt>
 File: figures/background/symmetric_encryption.png Graphic file (type png)
 <use figures/background/symmetric_encryption.png>
 Package pdftex.def Info: figures/background/symmetric_encryption.png  used on i
-nput line 11.
+nput line 12.
 (pdftex.def)             Requested size: 358.50612pt x 109.54323pt.
 [1
 
 
 
  <./figures/background/symmetric_encryption.png>]
-<figures/background/asymmetric_encryption.png, id=189, 783.92876pt x 282.05376p
+<figures/background/asymmetric_encryption.png, id=199, 783.92876pt x 282.05376p
 t>
 File: figures/background/asymmetric_encryption.png Graphic file (type png)
 <use figures/background/asymmetric_encryption.png>
@@ -1972,69 +1973,70 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.29405pt on input line 50.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 50.
-<figures/background/diffie_hellman.png, id=204, 473.77pt x 333.245pt>
+ [3]
+<figures/background/diffie_hellman.png, id=232, 473.77pt x 333.245pt>
 File: figures/background/diffie_hellman.png Graphic file (type png)
 <use figures/background/diffie_hellman.png>
 Package pdftex.def Info: figures/background/diffie_hellman.png  used on input l
 ine 81.
 (pdftex.def)             Requested size: 224.06548pt x 157.60146pt.
- [3] [4 <./figures/background/diffie_hellman.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 135--139
+ [4 <./figures/background/diffie_hellman.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 134--138
 
  []
 
 [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 167--172
+Underfull \hbox (badness 10000) in paragraph at lines 166--171
 
  []
 
 [7]
 LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
-205.
+204.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 ) [8] [9]
-<figures/background/sidh.png, id=343, 383.4325pt x 338.26375pt>
+<figures/background/sidh.png, id=356, 383.4325pt x 338.26375pt>
 File: figures/background/sidh.png Graphic file (type png)
 <use figures/background/sidh.png>
-Package pdftex.def Info: figures/background/sidh.png  used on input line 245.
+Package pdftex.def Info: figures/background/sidh.png  used on input line 244.
 (pdftex.def)             Requested size: 224.06548pt x 197.67444pt.
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 262--264
+Underfull \hbox (badness 10000) in paragraph at lines 261--263
 
  []
 
 [11 <./figures/background/sidh.png>]
-<figures/background/sike_sidh.png, id=373, 452.69125pt x 292.09125pt>
+<figures/background/sike_sidh.png, id=388, 452.69125pt x 292.09125pt>
 File: figures/background/sike_sidh.png Graphic file (type png)
 <use figures/background/sike_sidh.png>
 Package pdftex.def Info: figures/background/sike_sidh.png  used on input line 2
-85.
+84.
 (pdftex.def)             Requested size: 268.8813pt x 173.49113pt.
-<figures/background/sike_asym.png, id=375, 703.62875pt x 502.87875pt>
+<figures/background/sike_asym.png, id=390, 703.62875pt x 502.87875pt>
 File: figures/background/sike_asym.png Graphic file (type png)
 <use figures/background/sike_asym.png>
 Package pdftex.def Info: figures/background/sike_asym.png  used on input line 2
-93.
+92.
 (pdftex.def)             Requested size: 358.50612pt x 256.21922pt.
  [12 <./figures/background/sike_sidh.png>]
-<figures/background/sike_kem.png, id=384, 814.04124pt x 583.17876pt>
+<figures/background/sike_kem.png, id=399, 814.04124pt x 583.17876pt>
 File: figures/background/sike_kem.png Graphic file (type png)
 <use figures/background/sike_kem.png>
 Package pdftex.def Info: figures/background/sike_kem.png  used on input line 30
-7.
+6.
 (pdftex.def)             Requested size: 358.50612pt x 256.83081pt.
 
 [13 <./figures/background/sike_asym.png>] [14 <./figures/background/sike_kem.pn
 g>]
 LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 
-333.
+332.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pplx.fd
 File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
 )
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-33.
+32.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -2045,12 +2047,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 )
 (./chapters/02_existing.tex
-Underfull \hbox (badness 10000) in paragraph at lines 338--1
+Underfull \hbox (badness 10000) in paragraph at lines 337--1
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--1
+Underfull \hbox (badness 10000) in paragraph at lines 337--1
 
  []
 
@@ -2099,7 +2101,7 @@ ta-tion (\T1/cmtt/m/n/10.95 SIKE_Generic_Compressed\T1/pplx/m/n/10.95 (-20) )
  []
 
 [21]
-<figures/benchmarks/application_flow.png, id=506, 500.87125pt x 482.80376pt>
+<figures/benchmarks/application_flow.png, id=523, 500.87125pt x 482.80376pt>
 File: figures/benchmarks/application_flow.png Graphic file (type png)
 <use figures/benchmarks/application_flow.png>
 Package pdftex.def Info: figures/benchmarks/application_flow.png  used on input
@@ -2111,13 +2113,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--127
  []
 
 [23 <./figures/benchmarks/application_flow.png>]
-<figures/benchmarks/uml.png, id=526, 618.31pt x 904.37875pt>
+<figures/benchmarks/uml.png, id=543, 618.31pt x 904.37875pt>
 File: figures/benchmarks/uml.png Graphic file (type png)
 <use figures/benchmarks/uml.png>
 Package pdftex.def Info: figures/benchmarks/uml.png  used on input line 130.
 (pdftex.def)             Requested size: 358.50612pt x 524.38826pt.
  [24]
-<figures/benchmarks/uml_results.png, id=532, 934.49126pt x 281.05pt>
+<figures/benchmarks/uml_results.png, id=549, 934.49126pt x 281.05pt>
 File: figures/benchmarks/uml_results.png Graphic file (type png)
 <use figures/benchmarks/uml_results.png>
 Package pdftex.def Info: figures/benchmarks/uml_results.png  used on input line
@@ -2128,173 +2130,195 @@ Package pdftex.def Info: figures/benchmarks/uml_results.png  used on input line
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 ) [27] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 228--235
+Underfull \hbox (badness 10000) in paragraph at lines 242--247
 
  []
 
-<figures/benchmarks/sike/sike.png, id=600, 1261.8342pt x 640.3122pt>
+[29] [30]
+<figures/benchmarks/all_curves/SIKE_x64.png, id=633, 1205.4636pt x 639.5895pt>
+File: figures/benchmarks/all_curves/SIKE_x64.png Graphic file (type png)
+<use figures/benchmarks/all_curves/SIKE_x64.png>
+Package pdftex.def Info: figures/benchmarks/all_curves/SIKE_x64.png  used on in
+put line 253.
+(pdftex.def)             Requested size: 403.31511pt x 213.99298pt.
+<figures/benchmarks/all_curves/SIKE_x64_mem.png, id=634, 1205.4636pt x 639.5895
+pt>
+File: figures/benchmarks/all_curves/SIKE_x64_mem.png Graphic file (type png)
+<use figures/benchmarks/all_curves/SIKE_x64_mem.png>
+Package pdftex.def Info: figures/benchmarks/all_curves/SIKE_x64_mem.png  used o
+n input line 261.
+(pdftex.def)             Requested size: 403.31511pt x 213.99298pt.
+<figures/benchmarks/sike/sike.png, id=635, 1261.8342pt x 640.3122pt>
 File: figures/benchmarks/sike/sike.png Graphic file (type png)
 <use figures/benchmarks/sike/sike.png>
 Package pdftex.def Info: figures/benchmarks/sike/sike.png  used on input line 2
-43.
+70.
 (pdftex.def)             Requested size: 403.31511pt x 204.65982pt.
-[29]
-<figures/benchmarks/sike/sike_mem.png, id=608, 1256.0526pt x 642.4803pt>
+ [31 <./figures/benchmarks/all_curves/Sike_x64.png> <./figures/benchmarks/all_c
+urves/Sike_x64_mem.png>]
+<figures/benchmarks/sike/sike_mem.png, id=644, 1256.0526pt x 642.4803pt>
 File: figures/benchmarks/sike/sike_mem.png Graphic file (type png)
 <use figures/benchmarks/sike/sike_mem.png>
 Package pdftex.def Info: figures/benchmarks/sike/sike_mem.png  used on input li
-ne 251.
+ne 278.
 (pdftex.def)             Requested size: 403.31511pt x 206.29393pt.
-<figures/benchmarks/optimized/434.png, id=609, 1391.9202pt x 640.3122pt>
+<figures/benchmarks/optimized/434.png, id=645, 1391.9202pt x 640.3122pt>
 File: figures/benchmarks/optimized/434.png Graphic file (type png)
 <use figures/benchmarks/optimized/434.png>
 Package pdftex.def Info: figures/benchmarks/optimized/434.png  used on input li
-ne 261.
+ne 289.
 (pdftex.def)             Requested size: 448.13095pt x 206.14491pt.
- [30 <./figures/benchmarks/sike/sike.png> <./figures/benchmarks/sike/sike_mem.p
+ [32 <./figures/benchmarks/sike/sike.png> <./figures/benchmarks/sike/sike_mem.p
 ng>]
-<figures/benchmarks/optimized/434_mem.png, id=618, 1391.9202pt x 640.3122pt>
+<figures/benchmarks/optimized/434_mem.png, id=654, 1391.9202pt x 640.3122pt>
 File: figures/benchmarks/optimized/434_mem.png Graphic file (type png)
 <use figures/benchmarks/optimized/434_mem.png>
 Package pdftex.def Info: figures/benchmarks/optimized/434_mem.png  used on inpu
-t line 269.
+t line 297.
 (pdftex.def)             Requested size: 448.13095pt x 206.14491pt.
-<figures/benchmarks/optimized/751.png, id=619, 1391.9202pt x 640.3122pt>
+<figures/benchmarks/optimized/751.png, id=655, 1391.9202pt x 640.3122pt>
 File: figures/benchmarks/optimized/751.png Graphic file (type png)
 <use figures/benchmarks/optimized/751.png>
 Package pdftex.def Info: figures/benchmarks/optimized/751.png  used on input li
-ne 312.
+ne 340.
 (pdftex.def)             Requested size: 448.13095pt x 206.14491pt.
- [31 <./figures/benchmarks/optimized/434.png> <./figures/benchmarks/optimized/4
+ [33 <./figures/benchmarks/optimized/434.png> <./figures/benchmarks/optimized/4
 34_mem.png>]
-<figures/benchmarks/optimized/751_mem.png, id=629, 1391.9202pt x 640.3122pt>
+<figures/benchmarks/optimized/751_mem.png, id=665, 1391.9202pt x 640.3122pt>
 File: figures/benchmarks/optimized/751_mem.png Graphic file (type png)
 <use figures/benchmarks/optimized/751_mem.png>
 Package pdftex.def Info: figures/benchmarks/optimized/751_mem.png  used on inpu
-t line 320.
+t line 348.
 (pdftex.def)             Requested size: 448.13095pt x 206.14491pt.
-<figures/benchmarks/compressed/434.png, id=630, 1308.8097pt x 640.3122pt>
+<figures/benchmarks/compressed/434.png, id=666, 1308.8097pt x 640.3122pt>
 File: figures/benchmarks/compressed/434.png Graphic file (type png)
 <use figures/benchmarks/compressed/434.png>
 Package pdftex.def Info: figures/benchmarks/compressed/434.png  used on input l
-ine 331.
+ine 359.
 (pdftex.def)             Requested size: 448.13095pt x 219.23721pt.
- [32 <./figures/benchmarks/optimized/751.png> <./figures/benchmarks/optimized/7
+ [34 <./figures/benchmarks/optimized/751.png> <./figures/benchmarks/optimized/7
 51_mem.png>]
-<figures/benchmarks/compressed/434_mem.png, id=640, 1308.8097pt x 640.3122pt>
+<figures/benchmarks/compressed/434_mem.png, id=676, 1308.8097pt x 640.3122pt>
 File: figures/benchmarks/compressed/434_mem.png Graphic file (type png)
 <use figures/benchmarks/compressed/434_mem.png>
 Package pdftex.def Info: figures/benchmarks/compressed/434_mem.png  used on inp
-ut line 339.
+ut line 367.
 (pdftex.def)             Requested size: 448.13095pt x 219.23721pt.
-<figures/benchmarks/compressed/751.png, id=641, 1316.0367pt x 640.3122pt>
+<figures/benchmarks/compressed/751.png, id=677, 1316.0367pt x 640.3122pt>
 File: figures/benchmarks/compressed/751.png Graphic file (type png)
 <use figures/benchmarks/compressed/751.png>
 Package pdftex.def Info: figures/benchmarks/compressed/751.png  used on input l
-ine 382.
+ine 410.
 (pdftex.def)             Requested size: 448.13095pt x 218.03545pt.
- [33 <./figures/benchmarks/compressed/434.png> <./figures/benchmarks/compressed
+ [35 <./figures/benchmarks/compressed/434.png> <./figures/benchmarks/compressed
 /434_mem.png>]
-<figures/benchmarks/compressed/751_mem.png, id=651, 1308.8097pt x 640.3122pt>
+<figures/benchmarks/compressed/751_mem.png, id=688, 1308.8097pt x 640.3122pt>
 File: figures/benchmarks/compressed/751_mem.png Graphic file (type png)
 <use figures/benchmarks/compressed/751_mem.png>
 Package pdftex.def Info: figures/benchmarks/compressed/751_mem.png  used on inp
-ut line 390.
+ut line 418.
 (pdftex.def)             Requested size: 448.13095pt x 219.23721pt.
-) (./chapters/04_analysis.tex
-[34 <./figures/benchmarks/compressed/751.png> <./figures/benchmarks/compressed/
-751_mem.png>]
+)
+(./chapters/04_analysis.tex [36 <./figures/benchmarks/compressed/751.png> <./fi
+gures/benchmarks/compressed/751_mem.png>]
 chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--18
+LaTeX Warning: Hyper reference `sec:analysis_effiency_sidh' on page 37 undefine
+d on input line 8.
+
+
+LaTeX Warning: Reference `sec:analysis_effiency_sidh' on page 37 undefined on i
+nput line 9.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--22
 
  []
 
-[35
+[37
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
+Underfull \hbox (badness 10000) in paragraph at lines 31--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
+Underfull \hbox (badness 10000) in paragraph at lines 31--36
 
  []
 
-[36]
-Underfull \hbox (badness 10000) in paragraph at lines 37--44
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 44--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--44
+Underfull \hbox (badness 10000) in paragraph at lines 44--51
 
  []
 
-) (./chapters/05_conclusion.tex [37]
+
+Overfull \hbox (8.85048pt too wide) in paragraph at lines 53--55
+\T1/pplx/m/n/10.95 (-20) Compressed im-ple-men-ta-tions of SIDH promise short-e
+ned key size com-pared to non-compressed
+ []
+
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 60--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--65
+
+ []
+
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 81--88
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--88
+
+ []
+
+
+Overfull \hbox (46.94725pt too wide) in paragraph at lines 90--93
+\T1/pplx/m/n/10.95 (-20) The hotspots of \T1/cmtt/m/n/10.95 secp256r1 \T1/pplx/
+m/n/10.95 (-20) are the low level prime field arith-metic func-tions \T1/cmtt/m
+/n/10.95 __ecp_nistz256_mul_montq
+ []
+
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 107--111
+
+ []
+
+[42]) (./chapters/05_conclusion.tex [43]
 chapter 5.
-) (./chapters/01_introduction.tex [38
+) (./pages/appendix.tex [44
 
 
 ]
-chapter 6.
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2019/09/10 1.8c listings language file
-)
-File: logos/tum.pdf Graphic file (type pdf)
-<use logos/tum.pdf>
-Package pdftex.def Info: logos/tum.pdf  used on input line 95.
-(pdftex.def)             Requested size: 358.50612pt x 188.89207pt.
-<figures/tum.jpg, id=716, 569.12625pt x 377.41pt>
-File: figures/tum.jpg Graphic file (type jpg)
-<use figures/tum.jpg>
-Package pdftex.def Info: figures/tum.jpg  used on input line 101.
-(pdftex.def)             Requested size: 358.50612pt x 237.75227pt.
-File: logos/tum.pdf Graphic file (type pdf)
-<use logos/tum.pdf>
-Package pdftex.def Info: logos/tum.pdf  used on input line 107.
-(pdftex.def)             Requested size: 231.47705pt x 121.87819pt.
-File: figures/tum.jpg Graphic file (type jpg)
-<use figures/tum.jpg>
-Package pdftex.def Info: figures/tum.jpg  used on input line 109.
-(pdftex.def)             Requested size: 183.78279pt x 121.87819pt.
-
-
-LaTeX Font Warning: Font shape `T1/pplx/b/sc' undefined
-(Font)              using `T1/pplx/b/n' instead on input line 120.
-
-
-LaTeX Font Warning: Font shape `T1/pplx/m/scit' undefined
-(Font)              using `T1/pplx/m/sc' instead on input line 122.
-
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/pplx/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-) (./pages/appendix.tex [39
-
-
-] [40] [41 <./figures/tum.jpg>]
 chapter A.
-[42
+[45
 
 
-] [43] [44] [45] [46] [47] [48] [49] [50] [51]) [52]
-Package tocbasic Info: character protrusion at lof deactivated on input line 57
+] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55]) [56]
+Package tocbasic Info: character protrusion at lof deactivated on input line 56
 .
  (build/main.lof)
 \tf@lof=\write10
 \openout10 = `main.lof'.
 
 
-[53
+[57
 
 
 ]
-Package tocbasic Info: character protrusion at lot deactivated on input line 58
+Package tocbasic Info: character protrusion at lot deactivated on input line 57
 .
  (build/main.lot)
 \tf@lot=\write11
@@ -2303,34 +2327,36 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 58
 
 No file main.gls.
 No file main.acr.
-[54
+[58
 
 
 ]
 chapter without number
-[55
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplx/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+[59
 
 
-]
-Overfull \hbox (62.83977pt too wide) in paragraph at lines 61--61
+] [60]
+Overfull \hbox (62.83977pt too wide) in paragraph at lines 60--60
 []\T1/pplx/m/it/10.95 (-20) GoLang Wiki Com-piler Op-ti-miza-tions\T1/pplx/m/n/
 10.95 (-20) . []$\T1/cmtt/m/n/10.95 https : / / github . com / golang / go / wi
 ki / CompilerOptimizations$[]\T1/pplx/m/n/10.95 (-20) .
  []
 
-[56]
 No complaints by nag.
-[57]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
+[61]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 62.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 62.
  (build/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 62.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 62.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2340,51 +2366,32 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57626 strings out of 482771
- 1257305 string characters out of 5955540
- 2218512 words of memory out of 5000000
- 70940 multiletter control sequences out of 15000+600000
- 619592 words of font info for 423 fonts, out of 8000000 for 9000
+ 56940 strings out of 482771
+ 1241455 string characters out of 5955540
+ 2211701 words of memory out of 5000000
+ 70210 multiletter control sequences out of 15000+600000
+ 620851 words of font info for 456 fonts, out of 8000000 for 9000
  85 hyphenation exceptions out of 8191
- 81i,19n,139p,10099b,2833s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{glo:tuma} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{glo:computer} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{glo:tum} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:kdeac} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{glo:R0} has been referenced but does not exist, rep
-laced by a fixed one
-
-pdfTeX warning (dest): name{glo:r0} has been referenced but does not exist, rep
-laced by a fixed one
-
-pdfTeX warning (dest): name{glo:ddye} has been referenced but does not exist, r
-eplaced by a fixed one
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/joy/.texlive
-2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk> </home/joy/.texlive2
-019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecit1095.600pk> </home/joy/.texlive20
-19/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/mathpazo/fplmbb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/m
-athpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrc8
-a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on build/main.pdf (65 pages, 1504980 bytes).
+ 81i,21n,139p,10099b,2836s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/joy/.texli
+ve2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk> </home/joy/.texliv
+e2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecit1095.600pk> </home/joy/.texlive
+2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/mathpazo/fplmbb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathp
+azo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/palatino/uplri8a.pfb>
+Output written on build/main.pdf (69 pages, 1334666 bytes).
 PDF statistics:
- 1434 PDF objects out of 1440 (max. 8388607)
- 1181 compressed objects within 12 object streams
- 475 named destinations out of 1000 (max. 500000)
- 63544 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1485 PDF objects out of 1728 (max. 8388607)
+ 1221 compressed objects within 13 object streams
+ 479 named destinations out of 1000 (max. 500000)
+ 63077 words of extra memory for PDF output out of 74296 (max. 10000000)
 

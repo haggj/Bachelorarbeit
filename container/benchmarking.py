@@ -17,7 +17,7 @@ import signal
 import sys
 
 # Number of repetitions for each benchmark
-N = 3
+N = 100
 RESULTS = {}
 
 def benchmark(Class):
@@ -33,7 +33,6 @@ def signal_handler(sig,frame):
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     RESULTS = load_from_json()
-    del RESULTS["Microsoft_Generic"]
 
     implementations =[
         #ECDH

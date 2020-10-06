@@ -1043,6 +1043,48 @@
       \field{pages}{1\bibrangedash 28}
       \range{pages}{28}
     \endentry
+    \entry{koziel2018high}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=66bdb902d3dd5dbafb28a45fb702271b}{%
+           family={Koziel},
+           familyi={K\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b1a893a570f2c5894f810ba29771478}{%
+           family={Azarderakhsh},
+           familyi={A\bibinitperiod},
+           given={Reza},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=515344c8e8d27bcc8fadbb795f52545c}{%
+           family={Kermani},
+           familyi={K\bibinitperiod},
+           given={Mehran\bibnamedelima Mozaffari},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{3bb901431aee4b261a740f27e7ab8825}
+      \strng{fullhash}{3bb901431aee4b261a740f27e7ab8825}
+      \strng{bibnamehash}{3bb901431aee4b261a740f27e7ab8825}
+      \strng{authorbibnamehash}{3bb901431aee4b261a740f27e7ab8825}
+      \strng{authornamehash}{3bb901431aee4b261a740f27e7ab8825}
+      \strng{authorfullhash}{3bb901431aee4b261a740f27e7ab8825}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Computers}
+      \field{number}{11}
+      \field{title}{A high-performance and scalable hardware architecture for isogeny-based cryptography}
+      \field{volume}{67}
+      \field{year}{2018}
+      \field{pages}{1594\bibrangedash 1609}
+      \range{pages}{16}
+    \endentry
     \entry{microsoft2020sidh}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
@@ -1209,7 +1251,6 @@
     \endentry
   \enddatalist
   \missing{latex}
-  \missing{longa2018note}
 \endrefsection
 \endinput
 

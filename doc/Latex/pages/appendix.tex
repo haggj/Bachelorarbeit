@@ -1,6 +1,10 @@
 \chapter{General Addenda}
 
 \section{Detailed Benchmarks}
+\label{app:detailed_benchmarks}
+This addenda contains the detailed benchmarks which were measured by the benchmarking suite.\\
+The tables listed contain benchmarking results for the different implementations. For each implementation and each parameter set the listed functions where executed $N=100$ times. The tables contain the average execution time and average peak memory consumption ($\bar{x}=\frac{1}{N}\sum_{i=1}^N{(x_i)}$). Moreover, the values in brackets are the standard deviation over all measured values. This standard deviation is computed as $s=\sqrt{\frac{1}{N-1}\sum_{i=1}^N(x_i-\bar{x})^2}$. All values (except memory)  are absolute instruction counts.\newpage
+
 \subsection{Benchmarks for ECDH}
 \begin{table}[H]
 	\centering
@@ -11,17 +15,17 @@
 	\hline
 	\makecell{PrivateKeyA} & \makecell{0\\(0)} & \makecell{0\\(0)} & \makecell{0\\(0)}\\
 	\hline
-	\makecell{PublicKeyA} & \makecell{159.418\\(0)} & \makecell{159.418\\(0)} & \makecell{159.418\\(0)}\\
+	\makecell{PublicKeyA} & \makecell{159.418\\(0)} & \makecell{10.357.129\\(3.556)} & \makecell{24.548.035\\(6.482)}\\
 	\hline
 	\makecell{PrivateKeyB} & \makecell{0\\(0)} & \makecell{0\\(0)} & \makecell{0\\(0)}\\
 	\hline
-	\makecell{PublicKeyB} & \makecell{114.430\\(0)} & \makecell{114.430\\(0)} & \makecell{114.430\\(0)}\\
+	\makecell{PublicKeyB} & \makecell{114.430\\(0)} & \makecell{10.307.769\\(4.039)} & \makecell{24.499.652\\(6.215)}\\
 	\hline
-	\makecell{SecretA} & \makecell{652.796\\(0)} & \makecell{652.796\\(0)} & \makecell{652.796\\(0)}\\
+	\makecell{SecretA} & \makecell{652.796\\(2)} & \makecell{10.305.471\\(3.531)} & \makecell{24.497.519\\(6.193)}\\
 	\hline
-	\makecell{SecretB} & \makecell{651.270\\(0)} & \makecell{651.270\\(0)} & \makecell{651.270\\(0)}\\
+	\makecell{SecretB} & \makecell{651.270\\(2)} & \makecell{10.303.993\\(3.882)} & \makecell{24.494.213\\(6.054)}\\
 	\hline
-	\makecell{Memory} & \makecell{12.152\\(0)} & \makecell{12.152\\(0)} & \makecell{12.152\\(0)}\\
+	\makecell{Memory\\in bytes} & \makecell{12.152\\(0)} & \makecell{13.984\\(0)} & \makecell{16.251\\(13)}\\
 
 	\hline
 	\end{tabular}
@@ -36,15 +40,15 @@ Execution hotspots parameter \textit{secp256}:
 \end{enumerate}
 Execution hotspots parameter \textit{secp384}:
 \begin{enumerate}[noitemsep]
-	\item \texttt{\_\_ecp\_nistz256\_mul\_montq:} 29.89\%
-	\item \texttt{\_\_ecp\_nistz256\_sqr\_montq:} 18.32\%
-	\item \texttt{\_dl\_relocate\_object:} 7.27\%
+	\item \texttt{bn\_mul\_mont:} 67.23\%
+	\item \texttt{bn\_mod\_add\_fixed\_top:} 6.28\%
+	\item \texttt{bn\_mul\_mont\_fixed\_top:} 3.82\%
 \end{enumerate}
 Execution hotspots parameter \textit{secp521}:
 \begin{enumerate}[noitemsep]
-	\item \texttt{\_\_ecp\_nistz256\_mul\_montq:} 29.89\%
-	\item \texttt{\_\_ecp\_nistz256\_sqr\_montq:} 18.32\%
-	\item \texttt{\_dl\_relocate\_object:} 7.27\%
+	\item \texttt{bn\_mul\_mont:} 80.08\%
+	\item \texttt{bn\_mod\_add\_fixed\_top:} 4.83\%
+	\item \texttt{bn\_mul\_mont\_fixed\_top:} 2.2\%
 \end{enumerate}
 \subsection{Benchmarks for Sike Reference}
 \begin{table}[H]
@@ -66,7 +70,7 @@ Execution hotspots parameter \textit{secp521}:
 	\hline
 	\makecell{SecretB} & \makecell{43.530.260\\(0)} & \makecell{56.573.382\\(0)} & \makecell{79.580.027\\(0)} & \makecell{118.687.930\\(0)}\\
 	\hline
-	\makecell{Memory} & \makecell{11.208\\(0)} & \makecell{11.928\\(0)} & \makecell{12.904\\(0)} & \makecell{13.736\\(0)}\\
+	\makecell{Memory\\in bytes} & \makecell{11.208\\(0)} & \makecell{11.928\\(0)} & \makecell{12.904\\(0)} & \makecell{13.736\\(0)}\\
 
 	\hline
 	\end{tabular}
@@ -117,7 +121,7 @@ Execution hotspots parameter \textit{751}:
 	\hline
 	\makecell{SecretB} & \makecell{181.708.340\\(0)} & \makecell{278.459.825\\(0)} & \makecell{522.486.909\\(0)} & \makecell{947.216.296\\(0)}\\
 	\hline
-	\makecell{Memory} & \makecell{7.720\\(0)} & \makecell{7.784\\(0)} & \makecell{11.288\\(0)} & \makecell{13.016\\(0)}\\
+	\makecell{Memory\\in bytes} & \makecell{7.720\\(0)} & \makecell{7.784\\(0)} & \makecell{11.288\\(0)} & \makecell{13.016\\(0)}\\
 
 	\hline
 	\end{tabular}
@@ -158,17 +162,17 @@ Execution hotspots parameter \textit{751}:
 	\hline
 	\makecell{PrivateKeyA} & \makecell{97\\(0)} & \makecell{95\\(0)} & \makecell{99\\(0)} & \makecell{107\\(0)}\\
 	\hline
-	\makecell{PublicKeyA} & \makecell{507.955.664\\(0)} & \makecell{769.892.382\\(0)} & \makecell{1.820.164.702\\(0)} & \makecell{2.510.000.545\\(0)}\\
+	\makecell{PublicKeyA} & \makecell{530.693.055\\(36.636.736)} & \makecell{800.568.613\\(51.179.821)} & \makecell{1.546.560.342\\(104.069.626)} & \makecell{2.619.265.805\\(178.208.196)}\\
 	\hline
 	\makecell{PrivateKeyB} & \makecell{185\\(0)} & \makecell{145\\(0)} & \makecell{215\\(0)} & \makecell{200\\(0)}\\
 	\hline
-	\makecell{PublicKeyB} & \makecell{431.555.333\\(0)} & \makecell{644.590.547\\(0)} & \makecell{1.209.342.668\\(0)} & \makecell{2.160.772.067\\(0)}\\
+	\makecell{PublicKeyB} & \makecell{430.783.226\\(2.956.687)} & \makecell{648.550.068\\(5.818.409)} & \makecell{1.209.676.275\\(9.989.150)} & \makecell{2.163.046.938\\(23.915.892)}\\
 	\hline
-	\makecell{SecretA} & \makecell{179.835.371\\(0)} & \makecell{276.747.068\\(0)} & \makecell{575.399.356\\(0)} & \makecell{917.374.629\\(0)}\\
+	\makecell{SecretA} & \makecell{179.835.016\\(2.751)} & \makecell{276.744.609\\(2.820)} & \makecell{575.396.837\\(4.432)} & \makecell{917.385.785\\(6.137)}\\
 	\hline
-	\makecell{SecretB} & \makecell{225.926.297\\(0)} & \makecell{336.288.536\\(0)} & \makecell{644.892.098\\(0)} & \makecell{1.128.772.498\\(0)}\\
+	\makecell{SecretB} & \makecell{223.183.731\\(2.871.219)} & \makecell{342.669.712\\(3.247.052)} & \makecell{640.870.333\\(5.431.240)} & \makecell{1.141.966.654\\(14.089.895)}\\
 	\hline
-	\makecell{Memory} & \makecell{16.968\\(0)} & \makecell{19.080\\(0)} & \makecell{23.976\\(0)} & \makecell{28.008\\(0)}\\
+	\makecell{Memory\\in bytes} & \makecell{16.968\\(0)} & \makecell{19.080\\(0)} & \makecell{23.976\\(0)} & \makecell{28.008\\(0)}\\
 
 	\hline
 	\end{tabular}
@@ -177,26 +181,26 @@ Execution hotspots parameter \textit{751}:
 \end{table}
 Execution hotspots parameter \textit{434}:
 \begin{enumerate}[noitemsep]
-	\item \texttt{mp\_mul:} 58.79\%
-	\item \texttt{rdc\_mont:} 32.14\%
-	\item \texttt{fp2mul434\_mont:} 4.14\%
+	\item \texttt{mp\_mul:} 58.77\%
+	\item \texttt{rdc\_mont:} 32.15\%
+	\item \texttt{fp2mul434\_mont:} 4.13\%
 \end{enumerate}
 Execution hotspots parameter \textit{503}:
 \begin{enumerate}[noitemsep]
 	\item \texttt{mp\_mul:} 58.4\%
-	\item \texttt{rdc\_mont:} 33.45\%
+	\item \texttt{rdc\_mont:} 33.46\%
 	\item \texttt{fp2mul503\_mont:} 3.71\%
 \end{enumerate}
 Execution hotspots parameter \textit{610}:
 \begin{enumerate}[noitemsep]
-	\item \texttt{mp\_mul:} 59.39\%
-	\item \texttt{rdc\_mont:} 33.38\%
-	\item \texttt{fp2mul610\_mont:} 3.59\%
+	\item \texttt{mp\_mul:} 59.42\%
+	\item \texttt{rdc\_mont:} 33.34\%
+	\item \texttt{fp2mul610\_mont:} 3.61\%
 \end{enumerate}
 Execution hotspots parameter \textit{751}:
 \begin{enumerate}[noitemsep]
-	\item \texttt{mp\_mul:} 60.47\%
-	\item \texttt{rdc\_mont:} 33.27\%
+	\item \texttt{mp\_mul:} 60.46\%
+	\item \texttt{rdc\_mont:} 33.29\%
 	\item \texttt{fp2mul751\_mont:} 3.1\%
 \end{enumerate}
 \subsection{Benchmarks for Sike x64}
@@ -219,7 +223,7 @@ Execution hotspots parameter \textit{751}:
 	\hline
 	\makecell{SecretB} & \makecell{17.044.799\\(0)} & \makecell{23.672.739\\(0)} & \makecell{39.800.369\\(0)} & \makecell{65.465.094\\(0)}\\
 	\hline
-	\makecell{Memory} & \makecell{8.168\\(0)} & \makecell{8.520\\(0)} & \makecell{11.392\\(0)} & \makecell{13.328\\(0)}\\
+	\makecell{Memory\\in bytes} & \makecell{8.168\\(0)} & \makecell{8.520\\(0)} & \makecell{11.392\\(0)} & \makecell{13.328\\(0)}\\
 
 	\hline
 	\end{tabular}
@@ -260,17 +264,17 @@ Execution hotspots parameter \textit{751}:
 	\hline
 	\makecell{PrivateKeyA} & \makecell{97\\(0)} & \makecell{95\\(0)} & \makecell{99\\(0)} & \makecell{107\\(0)}\\
 	\hline
-	\makecell{PublicKeyA} & \makecell{49.081.389\\(0)} & \makecell{72.924.289\\(0)} & \makecell{124.731.117\\(0)} & \makecell{177.153.088\\(0)}\\
+	\makecell{PublicKeyA} & \makecell{51.478.796\\(3.842.012)} & \makecell{70.633.473\\(4.623.263)} & \makecell{120.698.795\\(6.557.301)} & \makecell{184.983.750\\(10.400.022)}\\
 	\hline
 	\makecell{PrivateKeyB} & \makecell{142\\(0)} & \makecell{144\\(0)} & \makecell{179\\(0)} & \makecell{188\\(0)}\\
 	\hline
-	\makecell{PublicKeyB} & \makecell{41.639.764\\(0)} & \makecell{56.327.210\\(0)} & \makecell{93.860.650\\(0)} & \makecell{152.724.615\\(0)}\\
+	\makecell{PublicKeyB} & \makecell{41.648.989\\(345.077)} & \makecell{56.629.973\\(517.293)} & \makecell{94.418.639\\(796.824)} & \makecell{152.512.949\\(1.142.155)}\\
 	\hline
-	\makecell{SecretA} & \makecell{17.064.280\\(0)} & \makecell{23.745.225\\(0)} & \makecell{44.070.006\\(0)} & \makecell{63.695.110\\(0)}\\
+	\makecell{SecretA} & \makecell{17.062.490\\(1.558)} & \makecell{23.745.084\\(2.055)} & \makecell{44.067.290\\(2.871)} & \makecell{63.697.941\\(4.288)}\\
 	\hline
-	\makecell{SecretB} & \makecell{21.186.310\\(0)} & \makecell{29.577.143\\(0)} & \makecell{48.761.150\\(0)} & \makecell{79.202.705\\(0)}\\
+	\makecell{SecretB} & \makecell{21.428.968\\(241.953)} & \makecell{29.717.372\\(262.099)} & \makecell{49.633.365\\(394.707)} & \makecell{80.095.836\\(886.898)}\\
 	\hline
-	\makecell{Memory} & \makecell{19.240\\(0)} & \makecell{21.608\\(0)} & \makecell{27.264\\(0)} & \makecell{31.936\\(0)}\\
+	\makecell{Memory\\in bytes} & \makecell{19.240\\(0)} & \makecell{21.608\\(0)} & \makecell{27.264\\(0)} & \makecell{31.936\\(0)}\\
 
 	\hline
 	\end{tabular}
@@ -280,26 +284,26 @@ Execution hotspots parameter \textit{751}:
 Execution hotspots parameter \textit{434}:
 \begin{enumerate}[noitemsep]
 	\item \texttt{mp\_mul:} 50.21\%
-	\item \texttt{rdc\_mont:} 23.13\%
-	\item \texttt{fpsub434:} 4.21\%
+	\item \texttt{rdc\_mont:} 23.14\%
+	\item \texttt{fpsub434:} 4.22\%
 \end{enumerate}
 Execution hotspots parameter \textit{503}:
 \begin{enumerate}[noitemsep]
-	\item \texttt{mp\_mul:} 47.93\%
-	\item \texttt{rdc\_mont:} 26.79\%
-	\item \texttt{fpsub503:} 4.11\%
+	\item \texttt{mp\_mul:} 47.88\%
+	\item \texttt{rdc\_mont:} 26.74\%
+	\item \texttt{fpsub503:} 4.1\%
 \end{enumerate}
 Execution hotspots parameter \textit{610}:
 \begin{enumerate}[noitemsep]
 	\item \texttt{mp\_mul:} 49.73\%
-	\item \texttt{rdc\_mont:} 28.29\%
+	\item \texttt{rdc\_mont:} 28.31\%
 	\item \texttt{fpsub610:} 3.75\%
 \end{enumerate}
 Execution hotspots parameter \textit{751}:
 \begin{enumerate}[noitemsep]
-	\item \texttt{mp\_mul:} 51.7\%
-	\item \texttt{rdc\_mont:} 27.77\%
-	\item \texttt{fpsub751:} 3.83\%
+	\item \texttt{mp\_mul:} 51.71\%
+	\item \texttt{rdc\_mont:} 27.79\%
+	\item \texttt{fpsub751:} 3.82\%
 \end{enumerate}
 \subsection{Benchmarks for CIRCL x64}
 \begin{table}[H]
@@ -311,17 +315,17 @@ Execution hotspots parameter \textit{751}:
 	\hline
 	\makecell{PrivateKeyA} & \makecell{671\\(0)} & \makecell{671\\(0)} & \makecell{671\\(0)}\\
 	\hline
-	\makecell{PublicKeyA} & \makecell{27.166.852\\(0)} & \makecell{30.574.116\\(0)} & \makecell{92.507.067\\(0)}\\
+	\makecell{PublicKeyA} & \makecell{27.173.063\\(12.785)} & \makecell{30.588.687\\(14.339)} & \makecell{92.516.170\\(11.132)}\\
 	\hline
 	\makecell{PrivateKeyB} & \makecell{672\\(0)} & \makecell{672\\(0)} & \makecell{672\\(0)}\\
 	\hline
-	\makecell{PublicKeyB} & \makecell{28.959.882\\(0)} & \makecell{32.771.222\\(0)} & \makecell{103.101.279\\(0)}\\
+	\makecell{PublicKeyB} & \makecell{28.959.178\\(431)} & \makecell{32.771.303\\(314)} & \makecell{103.101.351\\(244)}\\
 	\hline
-	\makecell{SecretA} & \makecell{21.087.575\\(0)} & \makecell{23.925.285\\(0)} & \makecell{75.131.907\\(0)}\\
+	\makecell{SecretA} & \makecell{21.089.046\\(2.101)} & \makecell{23.926.495\\(1.461)} & \makecell{75.130.980\\(636)}\\
 	\hline
-	\makecell{SecretB} & \makecell{24.364.078\\(0)} & \makecell{27.627.558\\(0)} & \makecell{87.853.843\\(0)}\\
+	\makecell{SecretB} & \makecell{24.364.188\\(324)} & \makecell{27.627.692\\(360)} & \makecell{87.853.968\\(337)}\\
 	\hline
-	\makecell{Memory} & \makecell{21.944\\(0)} & \makecell{22.552\\(0)} & \makecell{22.664\\(0)}\\
+	\makecell{Memory\\in bytes} & \makecell{21.654\\(1.022)} & \makecell{21.691\\(896)} & \makecell{21.663\\(1.055)}\\
 
 	\hline
 	\end{tabular}
@@ -330,19 +334,19 @@ Execution hotspots parameter \textit{751}:
 \end{table}
 Execution hotspots parameter \textit{434}:
 \begin{enumerate}[noitemsep]
-	\item \texttt{p434.mulP434:} 47.29\%
-	\item \texttt{p434.rdcP434:} 22.94\%
+	\item \texttt{p434.mulP434:} 47.28\%
+	\item \texttt{p434.rdcP434:} 22.93\%
 	\item \texttt{p434.subP434:} 5.81\%
 \end{enumerate}
 Execution hotspots parameter \textit{503}:
 \begin{enumerate}[noitemsep]
-	\item \texttt{p503.mulP503:} 41.41\%
-	\item \texttt{p503.rdcP503:} 23.06\%
-	\item \texttt{p503.subP503:} 8.4\%
+	\item \texttt{p503.mulP503:} 41.39\%
+	\item \texttt{p503.rdcP503:} 23.04\%
+	\item \texttt{p503.subP503:} 8.39\%
 \end{enumerate}
 Execution hotspots parameter \textit{751}:
 \begin{enumerate}[noitemsep]
-	\item \texttt{p751.mulP751:} 56.17\%
+	\item \texttt{p751.mulP751:} 56.16\%
 	\item \texttt{p751.rdcP751:} 21.72\%
 	\item \texttt{p751.subP751:} 6.02\%
 \end{enumerate}
@@ -366,7 +370,7 @@ Execution hotspots parameter \textit{751}:
 	\hline
 	\makecell{SecretB} & \makecell{182.033.988\\(0)} & \makecell{279.212.025\\(0)} & \makecell{523.130.069\\(0)} & \makecell{949.500.928\\(0)}\\
 	\hline
-	\makecell{Memory} & \makecell{8.040\\(0)} & \makecell{8.360\\(0)} & \makecell{11.784\\(0)} & \makecell{13.624\\(0)}\\
+	\makecell{Memory\\in bytes} & \makecell{8.040\\(0)} & \makecell{8.360\\(0)} & \makecell{11.784\\(0)} & \makecell{13.624\\(0)}\\
 
 	\hline
 	\end{tabular}
@@ -407,17 +411,17 @@ Execution hotspots parameter \textit{751}:
 	\hline
 	\makecell{PrivateKeyA} & \makecell{97\\(0)} & \makecell{95\\(0)} & \makecell{99\\(0)} & \makecell{105\\(0)}\\
 	\hline
-	\makecell{PublicKeyA} & \makecell{366.742.854\\(0)} & \makecell{516.734.423\\(0)} & \makecell{1.015.885.701\\(0)} & \makecell{1.975.978.300\\(0)}\\
+	\makecell{PublicKeyA} & \makecell{354.807.131\\(28.640.848)} & \makecell{548.929.246\\(48.233.475)} & \makecell{1.058.952.592\\(69.882.412)} & \makecell{1.767.280.284\\(114.624.073)}\\
 	\hline
 	\makecell{PrivateKeyB} & \makecell{239\\(0)} & \makecell{233\\(0)} & \makecell{206\\(0)} & \makecell{314\\(0)}\\
 	\hline
-	\makecell{PublicKeyB} & \makecell{340.757.086\\(0)} & \makecell{518.426.765\\(0)} & \makecell{956.292.705\\(0)} & \makecell{1.791.584.371\\(0)}\\
+	\makecell{PublicKeyB} & \makecell{340.645.715\\(4.510.751)} & \makecell{513.777.907\\(5.790.443)} & \makecell{956.709.613\\(11.260.973)} & \makecell{1.731.204.963\\(18.353.464)}\\
 	\hline
-	\makecell{SecretA} & \makecell{177.457.712\\(0)} & \makecell{274.004.587\\(0)} & \makecell{569.195.809\\(0)} & \makecell{908.464.384\\(0)}\\
+	\makecell{SecretA} & \makecell{177.456.197\\(1.970)} & \makecell{274.002.754\\(1.875)} & \makecell{569.195.853\\(3.954)} & \makecell{908.459.651\\(5.191)}\\
 	\hline
-	\makecell{SecretB} & \makecell{201.754.449\\(0)} & \makecell{309.530.308\\(0)} & \makecell{577.402.232\\(0)} & \makecell{1.043.915.539\\(0)}\\
+	\makecell{SecretB} & \makecell{201.752.486\\(871)} & \makecell{309.529.792\\(1.000)} & \makecell{577.403.156\\(1.459)} & \makecell{1.043.916.680\\(1.618)}\\
 	\hline
-	\makecell{Memory} & \makecell{69.576\\(0)} & \makecell{89.896\\(0)} & \makecell{134.600\\(0)} & \makecell{193.336\\(0)}\\
+	\makecell{Memory\\in bytes} & \makecell{69.576\\(0)} & \makecell{89.896\\(0)} & \makecell{134.600\\(0)} & \makecell{193.336\\(0)}\\
 
 	\hline
 	\end{tabular}
@@ -426,27 +430,27 @@ Execution hotspots parameter \textit{751}:
 \end{table}
 Execution hotspots parameter \textit{434}:
 \begin{enumerate}[noitemsep]
-	\item \texttt{mp\_mul:} 59.8\%
-	\item \texttt{rdc\_mont:} 32.56\%
-	\item \texttt{fp2mul434\_mont:} 4.01\%
+	\item \texttt{mp\_mul:} 59.82\%
+	\item \texttt{rdc\_mont:} 32.48\%
+	\item \texttt{fp2mul434\_mont:} 4.06\%
 \end{enumerate}
 Execution hotspots parameter \textit{503}:
 \begin{enumerate}[noitemsep]
-	\item \texttt{mp\_mul:} 59.27\%
-	\item \texttt{rdc\_mont:} 33.82\%
-	\item \texttt{fp2mul503\_mont:} 2.91\%
+	\item \texttt{mp\_mul:} 59.26\%
+	\item \texttt{rdc\_mont:} 33.89\%
+	\item \texttt{fp2mul503\_mont:} 2.89\%
 \end{enumerate}
 Execution hotspots parameter \textit{610}:
 \begin{enumerate}[noitemsep]
-	\item \texttt{mp\_mul:} 60.59\%
-	\item \texttt{rdc\_mont:} 33.18\%
-	\item \texttt{fp2mul610\_mont:} 3.59\%
+	\item \texttt{mp\_mul:} 60.56\%
+	\item \texttt{rdc\_mont:} 33.26\%
+	\item \texttt{fp2mul610\_mont:} 3.55\%
 \end{enumerate}
 Execution hotspots parameter \textit{751}:
 \begin{enumerate}[noitemsep]
-	\item \texttt{mp\_mul:} 61.4\%
-	\item \texttt{rdc\_mont:} 33.22\%
-	\item \texttt{fp2mul751\_mont:} 2.27\%
+	\item \texttt{mp\_mul:} 61.48\%
+	\item \texttt{rdc\_mont:} 33.03\%
+	\item \texttt{fp2mul751\_mont:} 2.33\%
 \end{enumerate}
 \subsection{Benchmarks for Microsoft x64}
 \begin{table}[H]
@@ -468,7 +472,7 @@ Execution hotspots parameter \textit{751}:
 	\hline
 	\makecell{SecretB} & \makecell{15.655.268\\(0)} & \makecell{21.831.732\\(0)} & \makecell{38.025.823\\(0)} & \makecell{62.514.039\\(0)}\\
 	\hline
-	\makecell{Memory} & \makecell{8.936\\(0)} & \makecell{9.048\\(0)} & \makecell{12.944\\(0)} & \makecell{15.008\\(0)}\\
+	\makecell{Memory\\in bytes} & \makecell{8.936\\(0)} & \makecell{9.048\\(0)} & \makecell{12.944\\(0)} & \makecell{15.008\\(0)}\\
 
 	\hline
 	\end{tabular}
@@ -509,17 +513,17 @@ Execution hotspots parameter \textit{751}:
 	\hline
 	\makecell{PrivateKeyA} & \makecell{97\\(0)} & \makecell{95\\(0)} & \makecell{99\\(0)} & \makecell{105\\(0)}\\
 	\hline
-	\makecell{PublicKeyA} & \makecell{33.203.258\\(0)} & \makecell{49.727.822\\(0)} & \makecell{76.667.900\\(0)} & \makecell{115.234.119\\(0)}\\
+	\makecell{PublicKeyA} & \makecell{32.099.997\\(2.309.282)} & \makecell{44.418.194\\(3.712.967)} & \makecell{80.996.244\\(6.287.779)} & \makecell{123.157.832\\(12.599.138)}\\
 	\hline
 	\makecell{PrivateKeyB} & \makecell{149\\(0)} & \makecell{152\\(0)} & \makecell{187\\(0)} & \makecell{200\\(0)}\\
 	\hline
-	\makecell{PublicKeyB} & \makecell{30.783.404\\(0)} & \makecell{41.916.959\\(0)} & \makecell{71.642.291\\(0)} & \makecell{118.819.557\\(0)}\\
+	\makecell{PublicKeyB} & \makecell{30.784.457\\(316.772)} & \makecell{41.848.170\\(319.398)} & \makecell{72.151.350\\(669.781)} & \makecell{118.144.325\\(1.757.118)}\\
 	\hline
-	\makecell{SecretA} & \makecell{15.538.172\\(0)} & \makecell{21.689.456\\(0)} & \makecell{42.098.078\\(0)} & \makecell{60.202.480\\(0)}\\
+	\makecell{SecretA} & \makecell{15.538.409\\(588)} & \makecell{21.689.738\\(483)} & \makecell{42.096.902\\(1.350)} & \makecell{60.202.926\\(1.955)}\\
 	\hline
-	\makecell{SecretB} & \makecell{17.949.480\\(0)} & \makecell{24.857.647\\(0)} & \makecell{42.885.843\\(0)} & \makecell{69.856.043\\(0)}\\
+	\makecell{SecretB} & \makecell{17.949.468\\(571)} & \makecell{24.856.517\\(656)} & \makecell{42.885.495\\(895)} & \makecell{69.857.944\\(1.243)}\\
 	\hline
-	\makecell{Memory} & \makecell{69.960\\(0)} & \makecell{90.640\\(0)} & \makecell{135.216\\(0)} & \makecell{193.872\\(0)}\\
+	\makecell{Memory\\in bytes} & \makecell{69.960\\(0)} & \makecell{90.640\\(0)} & \makecell{135.216\\(0)} & \makecell{193.872\\(0)}\\
 
 	\hline
 	\end{tabular}
@@ -528,25 +532,25 @@ Execution hotspots parameter \textit{751}:
 \end{table}
 Execution hotspots parameter \textit{434}:
 \begin{enumerate}[noitemsep]
-	\item \texttt{mp\_mul:} 52.74\%
-	\item \texttt{rdc\_mont:} 23.26\%
-	\item \texttt{0x00000000000247dc:} 3.53\%
+	\item \texttt{mp\_mul:} 52.82\%
+	\item \texttt{rdc\_mont:} 23.28\%
+	\item \texttt{0x00000000000247dc:} 3.56\%
 \end{enumerate}
 Execution hotspots parameter \textit{503}:
 \begin{enumerate}[noitemsep]
-	\item \texttt{mp\_mul:} 49.6\%
-	\item \texttt{rdc\_mont:} 27.74\%
-	\item \texttt{0x0000000000026694:} 3.38\%
+	\item \texttt{mp\_mul:} 49.75\%
+	\item \texttt{rdc\_mont:} 27.75\%
+	\item \texttt{0x0000000000026694:} 3.45\%
 \end{enumerate}
 Execution hotspots parameter \textit{610}:
 \begin{enumerate}[noitemsep]
-	\item \texttt{mp\_mul:} 51.51\%
-	\item \texttt{rdc\_mont:} 29.43\%
-	\item \texttt{0x000000000002e046:} 3.11\%
+	\item \texttt{mp\_mul:} 51.53\%
+	\item \texttt{rdc\_mont:} 29.48\%
+	\item \texttt{0x000000000002e046:} 3.09\%
 \end{enumerate}
 Execution hotspots parameter \textit{751}:
 \begin{enumerate}[noitemsep]
-	\item \texttt{mp\_mul:} 53.61\%
-	\item \texttt{rdc\_mont:} 28.98\%
-	\item \texttt{0x0000000000032f6d:} 2.89\%
+	\item \texttt{mp\_mul:} 53.4\%
+	\item \texttt{rdc\_mont:} 28.99\%
+	\item \texttt{0x0000000000032f6d:} 2.8\%
 \end{enumerate}

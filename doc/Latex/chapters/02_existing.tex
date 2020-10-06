@@ -33,14 +33,13 @@ All of these implementations can be run with the following parameter sets: \text
 
 \section{CIRCL}
 
-CIRCL (\textbf{C}loudflare \textbf{I}nteroperable, \textbf{R}eusable \textbf{C}ryptographic \textbf{L}ibrary) is a by Cloudflare developed collection of cryptographic primitives~\parencite{circl2020github}. CIRCL is written in Go and implements some quantum-secure algorithms like SIDH and an isogeny-based KEM. Cloudflare does not guarantee for any security within their library. Furthermore, the isogeny-based cryptographic primitives are adopted from the official SIKE implementation. The following implementation optimizations are available:
+CIRCL (\textbf{C}loudflare \textbf{I}nteroperable, \textbf{R}eusable \textbf{C}ryptographic \textbf{L}ibrary) is a by Cloudflare developed collection of cryptographic primitives~\parencite{circl2020github}. CIRCL is written in Go and implements some quantum-secure algorithms like SIDH and an isogeny-based KEM. Cloudflare does not guarantee for any security within their library. Furthermore, the isogeny-based cryptographic primitives are adopted from the official SIKE implementation. The following implementation optimizations are stated to be available:
 
 \begin{itemize}
-  \item Generic optimized implementation, written in Go
+  \item Generic optimized implementation, written in Go (unfortunately, this version could not be compiled)
   \item AMD64 optimized implementation, partly written in assembly
   \item ARM64 optimized implementation, partly written in assembly
 \end{itemize}
-
 Note, that there are no compressed versions available. The library supports the following parameter sets: \texttt{p434}, \texttt{p503} and \texttt{p751}. To avoid side-channel attacks, their code is implemented in constant time~\parencite{circl2019intro}.
 
 \begin{table}[htpb]

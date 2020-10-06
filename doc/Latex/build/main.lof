@@ -18,26 +18,19 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Flow chart of the benchmarking suite.}}{23}{figure.caption.35}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Class diagram for the all implementations supported by the benchmarking suite.}}{25}{figure.caption.37}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Class diagram for benchmarking results.}}{26}{figure.caption.39}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Overall instructions SIKE}}{30}{figure.caption.40}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Maximum memory consumption SIKE}}{30}{figure.caption.41}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Overall instructions p434}}{31}{figure.caption.43}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Maximum memory consumption p434}}{31}{figure.caption.44}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Overall instructions p751}}{32}{figure.caption.46}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Maximum memory consumption 751}}{32}{figure.caption.47}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Overall instructions compressed p434}}{33}{figure.caption.49}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Maximum memory consumption compressed p434}}{33}{figure.caption.50}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Overall instructions compressed p751}}{34}{figure.caption.52}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Maximum memory consumption compressed p751}}{34}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Overall instructions for all parameter sets via \texttt {SIKE\_x64}}}{31}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Maximum memory consumption for all parameter sets via \texttt {SIKE\_x64}}}{31}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Overall instructions SIKE}}{32}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Maximum memory consumption SIKE}}{32}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Overall instructions p434}}{33}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Maximum memory consumption p434}}{33}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Overall instructions p751}}{34}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Maximum memory consumption 751}}{34}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Overall instructions compressed p434}}{35}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Maximum memory consumption compressed p434}}{35}{figure.caption.55}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Overall instructions compressed p751}}{36}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Maximum memory consumption compressed p751}}{36}{figure.caption.58}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Example drawing}}{39}{figure.caption.60}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Example plot}}{40}{figure.caption.61}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Example listing}}{40}{figure.caption.62}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Something else can be written here for listing this, otherwise the caption will be written!}}{40}{figure.caption.63}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces For pictures with the same name, the direct folder needs to be chosen.\relax }}{41}{figure.caption.64}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Two TUM pictures side by side.\relax }}{41}{figure.caption.65}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces TUM Logo}}{41}{subfigure.6.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces TUM Slide}}{41}{subfigure.6.2}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
