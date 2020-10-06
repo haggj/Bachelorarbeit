@@ -128,7 +128,8 @@ k_{AB} = h^{-1}(m1)
 \end{enumerate}
 
 \subsection{Differences}
-TODO: differences betweent kem and kex (decentralized, pfs?), discrete log vs factorization
+Both presented key exchange primitives solve the challenge to securely share a symmetric encryption key between communication partners. However, there are a few differences between KEM and Diffie-Hellman. Firsty, while KEMs transmit a shared secret from one subject to another the calculation in the Diffie-Hellman protocol is done decentralized. Thus, the shared secret will never be send over an insecure channel.\\
+Moreover, a KEM relies on a long term asymmetric key pair which is used to encapsulate and dencapsulate the randomly chosen shared secret. If the private key is compromised by an attacker all following symmetric encrypted communication could be revealed. On the contrary, a compromised Diffie-Hellman key exchange would only affect the messages which are encrypted using the secret resulting from that single Diffie-Hellman handshake. All following DH key exchanges are not compromised from the previously compromised exchange. In literature this is called \textit{perfect forward secrecy (PFS)}~\parencite{ITSicherheit}.
 
 \section{Post-Quantum Cryptography}
 This section introduces the term \textit{quantum computer} and describes its consequences on modern cryptography. In the following a \textit{classical computer} refers to a non-quantum computer, which can be simulated by a deterministic Turing machine. In contrast to \textit{classical computer} the term \textit{quantum computer} describes a machine, which uses quantum mechanical phenomena to perform computations. It is important to note, that quantum computers can simulate classical computers~\parencite{nielsen2002quantum}. In addition, classical computer are able to simulate quantum computers with exponential time overhead~\parencite{nielsen2002quantum}. Thus, classical and quantum computations can calculate the same class of functions. However, quantum computers enable operations, that allow much faster computation~\parencite{nielsen2002quantum}.\\
@@ -212,11 +213,12 @@ Beside asymmetric cryptography, code-based schemes have been proposed for digita
 Hash-based signatures describe the construction of digital signatures schemes based on hash functions. Thus, the security of theses primitives is based on the security of the underlying hash function and not on hard algorithmic problems~\parencite{bernstein2017post}. Since hash functions are widely deployed in modern computer systems, the security of hash-based signatures is well understood~\parencite{chen2016report}.\\
 The initially developed One-Time Signatures has the downside, that a new public key pair is needed for each signature~\parencite{becker2008merkle}. In 1979, Merkle introduced the Merkle Signature Scheme (MSS), which uses one public key for multiple signatures~\parencite{merkle1979secrecy}. Further improvements of MSS introduced public keys, which can be used for $2^{80}$ signatures. However, this also leads to longer signature sizes~\parencite{becker2008merkle}.
 
-\subsection{Isogeny-based Cryptography} \label{sec:isogeny-based_crypto}
+\section{Isogeny-based Cryptography} \label{sec:isogeny-based_crypto}
 Isogeny-based cryptography was proposed in 2011 as a new cryptographic system, that might resists quantum computing~\parencite{jao2011towards}. Beside the publication describing isogeny-based cryptgraphy, the authors also provided a reference implementaion of a public key system called \textit{SIKE}~\parencite{sike2020spec}. Isogeny-based cryptography benfits from small key sizes compared to other post-quantum cryptography classes, however, their performance is comparatively slow~\parencite{sike2020spec}. The security of these primitives is based on finding isogenies between supersingular elliptic curves.\\
 In the following, the problem is roughly illustrated. It is not indented to precise the mathematics behind isogeny-based cryptography, since this is not the scope of this work. However, the reader might become a little understanding of the magic behind supersingular isogenies. Then, the central component of isogeny-based cryptography - namely the Supersingular Isogeny Diffie Hellman (SIDH) - is described. Afterwards, details of the reference implementation SIKE are given and the security of SIDH is considered.
 
-\subsubsection{Illustration of the Problem ~\parencite{urbanik2017friendly}~\parencite{costello2019supersingular}}
+\subsection{Illustration of the Problem}
+This section is adopted from ~\parencite{urbanik2017friendly} and ~\parencite{costello2019supersingular}.\\
 Isogeny-based cryptography works on supersingular elliptic curves. To be more precise: It is based on isogenies between supersingular elliptic curves.
 \\
 In the context of elliptic curves one can calculate a quotient of an elliptic curve $E$ by a subgroup $S$. This essentially means to construct a new elliptic curve $E$\textbackslash $S$.
@@ -236,7 +238,7 @@ As usually in asymmetric cryptography the hard mathematical problem is the calcu
 This key pair, however, is not used to decrypt or encrypt data. In fact, the procedure is very similar to the previously introduced Diffie-Hellman key exchange where the key pair is used to establish a shared secret between two communication partners.
 In its core, isogney-based cryptography creates a shared secret via a Diffie-Hellman like procedure. This is called \textit{Supersingular Isogeny Diffe Hellman (SIDH)}.
 
-\subsubsection{Supersingular Isogeny Diffie Hellman (SIDH)}
+\subsection{Supersingular Isogeny Diffie Hellman (SIDH)}
 
 Recall the Diffie Hellman diagram in  \autoref{fig:diffie_hellman} where the commutative property of the protocol was shown. The same diagram can be drawn for the Diffie Hellman on supersingular isogenies (see \autoref{fig:sidh}):
 \begin{figure}[H]
@@ -256,7 +258,7 @@ In the previous section the underlying mathematical idea was illustrated. The de
 \item Alice and Bob now share the  common secret $E_{AB}$.
 \end{enumerate}
 
-\subsubsection{Implemenation Details}
+\subsection{Implemenation Details}
 
 The reference implementation of SIKE \parencite{sike2020spec} provides two fundamental functions: \textit{isogen} and \textit{isoex}. Both are used, to implement the previously introduced Supersingular Isogeny Diffie-Hellman (SIDH) algorithm. Note that the secret key \textit{sk} is represented as a random integer.
 \\
@@ -284,39 +286,40 @@ The function \textit{isogen} takes a secret key (random integer) as input an gen
   \includegraphics[width=0.6\textwidth]{background/sike_sidh}
   \caption[SIDH based on \textit{isogen} and \textit{isoex}]{SIDH based on \textit{isogen} and \textit{isoex}: After generating a random secret key \textit{sk} each party computes its public key \textit{pk}. After the exchange of public keys each party finally calculates the shared secret \textit{sec}.} \label{fig:sike-sidh}
 \end{figure}
-Beside this key exchange algorithm, SIKE provides a complete asymmetric encryption scheme and a key encpsulation mechansim (KEM)~\parencite{sike2020spec}. 
-Both of these schemes build upon the here described SIKE core functions \textit{isogen} and \textit{isoex}.
+Beside this key exchange algorithm, SIKE provides a complete asymmetric encryption scheme  and a key encpsulation mechansim  ~\parencite{sike2020spec}. Both of these schemes build upon the here described SIKE core functions \textit{isogen} and \textit{isoex}.
+
+\subsubsection{Isogeny-based PKE}
+The isogeny-based public key encryption system (PKE, \autoref{fig:sike-pke}) consists of three algorithms:
+\begin{enumerate}
+\item \textit{Gen} generates a key pair \textit{(sk, pk)}.
+\item \textit{Enc} encrypts a given plaintext $m$ using a foreign public key \textit{pk} and the own secret key \textit{r}.
+\item \textit{Dec} decodes a given cipthertext using the own secret key \textit{sk}
+\end{enumerate}
+Note, that the function $F$ used in \textit{Enc} and \textit{Dec} is a key derivation function.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{background/sike_asym}
-  \caption[SIKE public key encryption]
-  {The SIKE public key encryption system consists of three algorithms: 
-  \\
-  1. \textit{Gen} generates a key pair \textit{(sk, pk)}.
-  \\
-  2. \textit{Enc} encrypts a given plaintext $m$ using a foreign public key \textit{pk} and the own secret key \textit{r}.
-  \\
-  3. \textit{Dec} decodes a given cipthertext using the own secret key \textit{sk}.
-  \\ Note, that the function $F$ used in \textit{Enc} and \textit{Dec} is a key derivation function.} \label{fig:sike-sidh}
+  \caption[Isogeny-based PKE]
+  {Isogeny-based public key encryption (PKE) scheme.} \label{fig:sike-pke}
 \end{figure}
 
+\subsubsection{Isogeny-based KEM}
+The isogeny-based key encapsulation mechanism (KEM, \autoref{fig:sike-kem}) consists of three algorithms:
+\begin{enumerate}
+\item \textit{Gen} generates a key pair \textit{(sk, pk)} and a secret \textit{s}.
+\item \textit{Ecnaps} takes a given public key as input and calculates a secret to share named \textit{K}. Moreover the function returns a ciphertext \textit{c}, that will be forwarded to the owner of the public key.
+\item \textit{Dec} takes a ciphertext \textit{c} and the output of \textit{Gen} as input in order to retrieve the shared secret \textit{K}.
+\end{enumerate}
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{background/sike_kem}
-  \caption[SIKE public key encryption]
-  {The SIKE key exchange mechanism consists of three algorithms: 
-  \\
-  1. \textit{Gen} TODO
-  \\
-  2. \textit{Encaps} TODO
-  \\
-  3. \textit{Decaps} TODO
-  } \label{fig:sike-sidh}
+  \caption[Isogeny-based KEM]
+  {Isogeny-based key encapsulation mechanism (KEM).} \label{fig:sike-kem}
 \end{figure}
 
-\subsubsection{Security considerations}\label{sidh_security}
-The security of SIKE is based on the hardness of the \textit{SIDH problem}: Given two supersingular elliptic curves $E$ and $E'$, find an isogeny between them~\parencite{sike2020spec}. 
+\subsection{Security considerations}\label{sidh_security}
+The security of isogeny-based cryptography is based on the hardness of the \textit{SIDH problem}: Given two supersingular elliptic curves $E$ and $E'$, find an isogeny between them~\parencite{sike2020spec}. 
 \\
 The SIKE reference implementation proposes different parameter sets, each supposing to ensure a NIST defined security level. These NIST defined security levels are:
 \begin{enumerate}

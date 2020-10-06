@@ -17,6 +17,32 @@ SIKE implements its key encapsulation mechanism (KEM) upon a public key encrypti
 \end{itemize}
 All of these implementations can be run with the following parameter sets: \texttt{p434}, \texttt{p503}, \texttt{p610} and \texttt{p751}. SIKE states to countermeasure timing and cache attacks by implementing constant time cryptography~\parencite{sike2020spec}.
 
+\subsubsection{SIKE API}
+The API of SIKE for a SIDH key exchange is the following:
+
+
+\begin{lstlisting}[language=C, commentstyle=\color{Comment}\ttfamily, ,numbers=none, morekeywords={PrivateKey_A, PrivateKey_B, PublicKey_A, PublicKey_B, SharedSecret_A, SharedSecret_B}]
+// Generate random private key for Alice
+random_mod_order_A(PrivateKey_A);
+
+// Generate random private key for Bob
+random_mod_order_B(PrivateKey_B);
+
+// Generate ephemeral public key for Alice
+EphemeralKeyGeneration_A(PrivateKey_A, PublicKey_A);
+
+// Generate ephemeral public key for Bob
+EphemeralKeyGeneration_B(PrivateKey_B, PublicKey_B);
+
+// Computation of shared secret by Alice
+EphemeralSecretAgreement_A(PrivateKey_A, PublicKey_B, SharedSecret_A)
+
+// Computation of shared secret by Bob
+EphemeralSecretAgreement_B(PrivateKey_B, PublicKey_A, SharedSecret_B)
+
+\end{lstlisting}
+All parameters used in this API are of type \texttt{unsigned char*}. Note that for all implementations and all parameter sets the API is the same. Therefore, during compilation one need to include the correct files to initialize SIKE with a specific parameter set.
+
 
 \section{PQCrypto-SIDH}
 PQCrypto-SIDH is a software library mainly written in C. It is developed by Microsoft for experimental purposes \parencite{microsoft2020sidh}. Note, that many developers of SIKE also work for Microsoft leading to great similarities between SIKE and PQCrypto-SIDH. However, in terms of compression, SIKE references  the here described Microsoft library in its documentation.\\
@@ -31,6 +57,31 @@ The PQCrypto-SIDH library implements a isogney-based KEM and the underlying SIDH
 \end{itemize}
 All of these implementations can be run with the following parameter sets: \texttt{p434}, \texttt{p503}, \texttt{p610} and \texttt{p751}. The developers argue to protect the algorithms against timing and cache attacks. Therefore, the library implements constant time operations on secret key material~\parencite{microsoft2020sidh}.
 
+\subsubsection{PQCrypto-SIDH API}
+The API of PQCrypto-SIDH for a SIDH key exchange is the following:
+
+\begin{lstlisting}[language=C, commentstyle=\color{Comment}\ttfamily, ,numbers=none, morekeywords={PrivateKey_A, PrivateKey_B, PublicKey_A, PublicKey_B, SharedSecret_A, SharedSecret_B}]
+// Generate random private key for Alice
+random_mod_order_A_SIDHpXXX(PrivateKey_A);
+
+// Generate random private key for Bob
+random_mod_order_B_SIDHpXXX(PrivateKey_B);
+
+// Generate ephemeral public key for Alice
+EphemeralKeyGeneration_A_SIDHpXXX(PrivateKey_A, PublicKey_A);
+
+// Generate ephemeral public key for Bob
+EphemeralKeyGeneration_B_SIDHpXXXPrivateKey_B, PublicKey_B);
+
+// Computation of shared secret by Alice
+EphemeralSecretAgreement_A_SIDHpXXX(PrivateKey_A, PublicKey_B, SharedSecret_A)
+
+// Computation of shared secret by Bob
+EphemeralSecretAgreement_B_SIDHpXXX(PrivateKey_B, PublicKey_A, SharedSecret_B)
+
+\end{lstlisting}
+For XXX $\in$ \{\texttt{434, 503, 610, 751}\}. All parameters used in this API are of type \texttt{unsigned char*}.
+
 \section{CIRCL}
 
 CIRCL (\textbf{C}loudflare \textbf{I}nteroperable, \textbf{R}eusable \textbf{C}ryptographic \textbf{L}ibrary) is a by Cloudflare developed collection of cryptographic primitives~\parencite{circl2020github}. CIRCL is written in Go and implements some quantum-secure algorithms like SIDH and an isogeny-based KEM. Cloudflare does not guarantee for any security within their library. Furthermore, the isogeny-based cryptographic primitives are adopted from the official SIKE implementation. The following implementation optimizations are stated to be available:
@@ -42,7 +93,40 @@ CIRCL (\textbf{C}loudflare \textbf{I}nteroperable, \textbf{R}eusable \textbf{C}r
 \end{itemize}
 Note, that there are no compressed versions available. The library supports the following parameter sets: \texttt{p434}, \texttt{p503} and \texttt{p751}. To avoid side-channel attacks, their code is implemented in constant time~\parencite{circl2019intro}.
 
-\begin{table}[htpb]
+\subsubsection{CIRCL API}
+The API of CIRCL for a SIDH key exchange is the following:
+
+\begin{lstlisting}[language=GO, commentstyle=\color{Comment}\ttfamily, ,numbers=none, morekeywords={PrivateKey_A, PrivateKey_B, PublicKey_A, PublicKey_B, SharedSecret_A, SharedSecret_B}]
+// Generate random private key for Alice
+PrivateKey_A = sidh.NewPrivateKey(sidh.FpXXX, sidh.KeyVariantSidhA)
+PrivateKey_A.Generate(rand.Reader)
+
+// Generate random private key for Bob
+PrivateKey_B = sidh.NewPrivateKey(sidh.FpXXX, sidh.KeyVariantSidhB)
+PrivateKey_B.Generate(rand.Reader)
+
+// Generate public key for Alice
+PublicKey_A = sidh.NewPublicKey(sidh.FpXXX, sidh.KeyVariantSidhA)
+PrivateKey_A.GeneratePublicKey(PublicKey_A)
+
+// Generate public key for Bob
+PublicKey_B = sidh.NewPublicKey(sidh.FpXXX, sidh.KeyVariantSidhB)
+PrivateKey_B.GeneratePublicKey(PublicKey_B)
+
+// Computation of shared secret by Alice
+SharedSecret_A := make([]byte, PrivateKey_A.SharedSecretSize())
+PrivateKey_A.DeriveSecret(SharedSecret_A, PublicKey_B)
+
+// Computation of shared secret by Bob
+SharedSecret_B := make([]byte, PrivateKey_B.SharedSecretSize())
+PrivateKey_B.DeriveSecret(SharedSecret_B, PublicKey_A)
+
+\end{lstlisting}
+For XXX $\in$ \{\texttt{434, 503, 751}\}.
+
+\section{Overview}
+
+\begin{table}[H]
   \centering
   \begin{tabular}{|K{3cm}|K{4cm}|K{4cm}|K{4cm}|}
 	\hline
