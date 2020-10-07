@@ -1,44 +1,10 @@
 TODO:
-1.1
-- compare KEM and KEX
 
 1.2
 - details about quantum computers, why are they faster?
 - details about shors algorithm
-- describe kem and public key system
 
 
 2
-- illustrate SIDH APIs for each library
 - SIDH natrual candidate to replace modern Diffie-Hellman
-
-
-Measures for efficiency
-
-	- comparision among SIDH
-
-		Overall
-		generic optimized
-		x64 optimized
-		compressed
-
-		execution hotspots based on library:
-			sike
-			pq-crypo
-			circl
-
-	- comoparison between SIDH and ECDH
-
-		overall
-		ecdh hotspots
-
-Security analysis
-
-	- constant time, standard derivation
-		sike
-		pq-crypto
-		circl
-		ecdh
-		
-	- key length
 

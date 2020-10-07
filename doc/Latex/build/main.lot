@@ -6,24 +6,24 @@
 \babel@toc {ngerman}{}
 \babel@toc {english}{}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1.1}{\ignorespaces Impact of quantum computers on modern encryption schemes}}{8}{table.caption.15}%
-\contentsline {table}{\numberline {1.2}{\ignorespaces Core functions of the SIKE reference implementation}}{12}{table.caption.21}%
+\contentsline {table}{\numberline {1.1}{\ignorespaces Impact of quantum computers on modern encryption schemes}}{9}{table.caption.16}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces Core functions of the SIKE reference implementation}}{13}{table.caption.22}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Existing SIDH implementations}}{20}{table.caption.30}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Comparison of key sizes}}{45}{table.caption.55}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Existing SIDH implementations}}{21}{table.caption.31}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Benchmarks for ECDH}}{48}{table.caption.56}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces Benchmarks for Sike Reference}}{49}{table.caption.57}%
-\contentsline {table}{\numberline {A.3}{\ignorespaces Benchmarks for Sike Generic}}{50}{table.caption.58}%
-\contentsline {table}{\numberline {A.4}{\ignorespaces Benchmarks for Sike Generic Compressed}}{51}{table.caption.59}%
-\contentsline {table}{\numberline {A.5}{\ignorespaces Benchmarks for Sike x64}}{52}{table.caption.60}%
-\contentsline {table}{\numberline {A.6}{\ignorespaces Benchmarks for Sike x64 Compressed}}{53}{table.caption.61}%
-\contentsline {table}{\numberline {A.7}{\ignorespaces Benchmarks for CIRCL x64}}{54}{table.caption.62}%
-\contentsline {table}{\numberline {A.8}{\ignorespaces Benchmarks for Microsoft Generic}}{55}{table.caption.63}%
-\contentsline {table}{\numberline {A.9}{\ignorespaces Benchmarks for Microsoft Generic Compressed}}{56}{table.caption.64}%
-\contentsline {table}{\numberline {A.10}{\ignorespaces Benchmarks for Microsoft x64}}{57}{table.caption.65}%
-\contentsline {table}{\numberline {A.11}{\ignorespaces Benchmarks for Microsoft x64 Compressed}}{58}{table.caption.66}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Comparison of key sizes}}{44}{table.caption.56}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {A.1}{\ignorespaces Benchmarks for ECDH}}{47}{table.caption.57}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Benchmarks for Sike Reference}}{48}{table.caption.58}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces Benchmarks for Sike Generic}}{49}{table.caption.59}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces Benchmarks for Sike Generic Compressed}}{50}{table.caption.60}%
+\contentsline {table}{\numberline {A.5}{\ignorespaces Benchmarks for Sike x64}}{51}{table.caption.61}%
+\contentsline {table}{\numberline {A.6}{\ignorespaces Benchmarks for Sike x64 Compressed}}{52}{table.caption.62}%
+\contentsline {table}{\numberline {A.7}{\ignorespaces Benchmarks for CIRCL x64}}{53}{table.caption.63}%
+\contentsline {table}{\numberline {A.8}{\ignorespaces Benchmarks for Microsoft Generic}}{54}{table.caption.64}%
+\contentsline {table}{\numberline {A.9}{\ignorespaces Benchmarks for Microsoft Generic Compressed}}{55}{table.caption.65}%
+\contentsline {table}{\numberline {A.10}{\ignorespaces Benchmarks for Microsoft x64}}{56}{table.caption.66}%
+\contentsline {table}{\numberline {A.11}{\ignorespaces Benchmarks for Microsoft x64 Compressed}}{57}{table.caption.67}%
 \addvspace {10\p@ }

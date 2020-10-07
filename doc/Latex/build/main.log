@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.13)  6 OCT 2020 12:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.13)  7 OCT 2020 11:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1956,80 +1956,91 @@ input line 29.
 (pdftex.def)             Requested size: 358.50612pt x 128.98883pt.
  [2 <./figures/background/asymmetric_encryption.png>]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 50.
+(Font)              scaled to size 9.37807pt on input line 52.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 50.
+(Font)              scaled to size 7.29405pt on input line 52.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 50.
+(Font)              scaled to size 5.21004pt on input line 52.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 50.
+(Font)              scaled to size 9.37807pt on input line 52.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 50.
+(Font)              scaled to size 7.29405pt on input line 52.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 50.
+(Font)              scaled to size 5.21004pt on input line 52.
  [3]
-<figures/background/diffie_hellman.png, id=228, 473.77pt x 333.245pt>
+<figures/background/diffie_hellman.png, id=226, 473.77pt x 333.245pt>
 File: figures/background/diffie_hellman.png Graphic file (type png)
 <use figures/background/diffie_hellman.png>
 Package pdftex.def Info: figures/background/diffie_hellman.png  used on input l
-ine 81.
+ine 83.
 (pdftex.def)             Requested size: 224.06548pt x 157.60146pt.
  [4 <./figures/background/diffie_hellman.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 135--139
+
+LaTeX Warning: Citation 'rsa2005problem' on page 5 undefined on input line 132.
+
+
+
+Overfull \hbox (0.11603pt too wide) in paragraph at lines 132--134
+\T1/pplx/m/n/10.95 (-20) If an at-tacker wants to com-pute $\OML/zplm/m/it/10.9
+5 k[]$ \T1/pplx/m/n/10.95 (-20) it is nec-es-sary to break the RSA en-cryp-tion
+ $\OML/zplm/m/it/10.95 RSA[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 m\OT1/ppl
+x/m/n/10.95 (-20) , \OML/zplm/m/it/10.95 e[]\OT1/zplm/m/n/10.95 )$
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 140--144
 
  []
 
-[5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 167--172
+[6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 172--177
 
  []
 
-[7]
+[8]
 LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
-205.
+210.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-) [8] [9]
-[10]
-<figures/background/sidh.png, id=365, 383.4325pt x 338.26375pt>
+) [9] [10]
+[11]
+<figures/background/sidh.png, id=372, 383.4325pt x 338.26375pt>
 File: figures/background/sidh.png Graphic file (type png)
 <use figures/background/sidh.png>
-Package pdftex.def Info: figures/background/sidh.png  used on input line 246.
+Package pdftex.def Info: figures/background/sidh.png  used on input line 252.
 (pdftex.def)             Requested size: 224.06548pt x 197.67444pt.
- [11 <./figures/background/sidh.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 263--265
+ [12 <./figures/background/sidh.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 271--273
 
  []
 
-<figures/background/sike_sidh.png, id=378, 452.69125pt x 292.09125pt>
+<figures/background/sike_sidh.png, id=387, 452.69125pt x 292.09125pt>
 File: figures/background/sike_sidh.png Graphic file (type png)
 <use figures/background/sike_sidh.png>
 Package pdftex.def Info: figures/background/sike_sidh.png  used on input line 2
-86.
+94.
 (pdftex.def)             Requested size: 268.8813pt x 173.49113pt.
-[12 <./figures/background/sike_sidh.png>]
-<figures/background/sike_asym.png, id=393, 703.62875pt x 502.87875pt>
+[13 <./figures/background/sike_sidh.png>]
+<figures/background/sike_asym.png, id=399, 703.62875pt x 502.87875pt>
 File: figures/background/sike_asym.png Graphic file (type png)
 <use figures/background/sike_asym.png>
 Package pdftex.def Info: figures/background/sike_asym.png  used on input line 3
-02.
+10.
 (pdftex.def)             Requested size: 358.50612pt x 256.21922pt.
- [13 <./figures/background/sike_asym.png>]
-<figures/background/sike_kem.png, id=409, 814.04124pt x 584.1825pt>
+<figures/background/sike_kem.png, id=401, 814.04124pt x 584.1825pt>
 File: figures/background/sike_kem.png Graphic file (type png)
 <use figures/background/sike_kem.png>
-Package pdftex.def Info: figures/background/sike_kem.png  used on input line 31
-6.
+Package pdftex.def Info: figures/background/sike_kem.png  used on input line 32
+4.
 (pdftex.def)             Requested size: 358.50612pt x 257.27284pt.
- [14 <./figures/background/sike_kem.png>]
+ [14 <./figures/background/sike_asym.png>]
 LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 
-335.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pplx.fd
+345.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pplx.fd
 File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
 )
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-35.
+45.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -2038,18 +2049,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-)
-(./chapters/02_existing.tex
-Underfull \hbox (badness 10000) in paragraph at lines 340--1
+ [15 <./figures/background/sike_kem.png>]) (./chapters/02_existing.tex
+Underfull \hbox (badness 10000) in paragraph at lines 350--1
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--1
+Underfull \hbox (badness 10000) in paragraph at lines 350--1
 
  []
 
-[15]
+[16]
 chapter 2.
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
@@ -2059,11 +2069,11 @@ File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 26.
- [16
+ [17
 
 
-] [17]
-[18] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+] [18]
+[19] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
@@ -2072,17 +2082,13 @@ File: lstlang2.sty 2019/09/10 1.8c listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2019/09/10 1.8c listings language file
 )
-Overfull \hbox (28.66034pt too wide) in paragraph at lines 131--153
+Overfull \hbox (28.66034pt too wide) in paragraph at lines 129--151
  [][] 
  []
 
-) (./chapters/03_benchmarks.tex [19] [20]
+) (./chapters/03_benchmarks.tex [20] [21]
 chapter 3.
-
-LaTeX Warning: Reference `sec:benchmarks_results' on page 21 undefined on input
- line 2.
-
-[21
+[22
 
 
 ] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -2090,43 +2096,42 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
-) [22]
-Overfull \hbox (7.7168pt too wide) in paragraph at lines 79--80
+) [23]
+Overfull \hbox (7.7168pt too wide) in paragraph at lines 80--81
 []\T1/pplx/m/n/10.95 (-20) Sike generic op-ti-mized and com-pressed im-ple-men-
 ta-tion (\T1/cmtt/m/n/10.95 SIKE_Generic_Compressed\T1/pplx/m/n/10.95 (-20) ) 
  []
 
-[23]
-<figures/benchmarks/application_flow.png, id=598, 500.87125pt x 482.80376pt>
+[24]
+<figures/benchmarks/application_flow.png, id=607, 500.87125pt x 482.80376pt>
 File: figures/benchmarks/application_flow.png Graphic file (type png)
 <use figures/benchmarks/application_flow.png>
 Package pdftex.def Info: figures/benchmarks/application_flow.png  used on input
- line 111.
-(pdftex.def)             Requested size: 358.50612pt x 345.58516pt.
- [24]
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+ line 112.
+(pdftex.def)             Requested size: 313.69029pt x 302.38516pt.
+ [25]
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
-[25 <./figures/benchmarks/application_flow.png>]
-<figures/benchmarks/uml.png, id=617, 618.31pt x 904.37875pt>
+<figures/benchmarks/uml.png, id=619, 618.31pt x 904.37875pt>
 File: figures/benchmarks/uml.png Graphic file (type png)
 <use figures/benchmarks/uml.png>
-Package pdftex.def Info: figures/benchmarks/uml.png  used on input line 130.
+Package pdftex.def Info: figures/benchmarks/uml.png  used on input line 131.
 (pdftex.def)             Requested size: 358.50612pt x 524.38826pt.
- [26]
-<figures/benchmarks/uml_results.png, id=623, 934.49126pt x 281.05pt>
+[26 <./figures/benchmarks/application_flow.png>]
+<figures/benchmarks/uml_results.png, id=628, 934.49126pt x 281.05pt>
 File: figures/benchmarks/uml_results.png Graphic file (type png)
 <use figures/benchmarks/uml_results.png>
 Package pdftex.def Info: figures/benchmarks/uml_results.png  used on input line
- 140.
-(pdftex.def)             Requested size: 448.13095pt x 134.77809pt.
+ 141.
+(pdftex.def)             Requested size: 358.50612pt x 107.82076pt.
  [27 <./figures/benchmarks/uml.png>] [28 <./figures/benchmarks/uml_results.png>
 ]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
-) [29] [30])
-(./chapters/04_analysis.tex [31]
+) [29])
+(./chapters/04_analysis.tex [30]
 chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 20--25
@@ -2143,164 +2148,164 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--25
 
  []
 
-[32
+[31
 
 
 ]
-<figures/benchmarks/all_curves/SIKE_x64.png, id=709, 1205.4636pt x 639.5895pt>
+<figures/benchmarks/all_curves/SIKE_x64.png, id=710, 1205.4636pt x 639.5895pt>
 File: figures/benchmarks/all_curves/SIKE_x64.png Graphic file (type png)
 <use figures/benchmarks/all_curves/SIKE_x64.png>
 Package pdftex.def Info: figures/benchmarks/all_curves/SIKE_x64.png  used on in
-put line 32.
+put line 33.
 (pdftex.def)             Requested size: 403.31511pt x 213.99298pt.
-<figures/benchmarks/all_curves/SIKE_x64_mem.png, id=710, 1205.4636pt x 639.5895
+<figures/benchmarks/all_curves/SIKE_x64_mem.png, id=711, 1205.4636pt x 639.5895
 pt>
 File: figures/benchmarks/all_curves/SIKE_x64_mem.png Graphic file (type png)
 <use figures/benchmarks/all_curves/SIKE_x64_mem.png>
 Package pdftex.def Info: figures/benchmarks/all_curves/SIKE_x64_mem.png  used o
-n input line 40.
+n input line 41.
 (pdftex.def)             Requested size: 403.31511pt x 213.99298pt.
- [33 <./figures/benchmarks/all_curves/Sike_x64.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 51--59
+ [32 <./figures/benchmarks/all_curves/Sike_x64.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 52--60
 
  []
 
-[34 <./figures/benchmarks/all_curves/Sike_x64_mem.png>]
-<figures/benchmarks/sike/sike.png, id=729, 1261.8342pt x 640.3122pt>
+[33 <./figures/benchmarks/all_curves/Sike_x64_mem.png>]
+<figures/benchmarks/sike/sike.png, id=730, 1261.8342pt x 640.3122pt>
 File: figures/benchmarks/sike/sike.png Graphic file (type png)
 <use figures/benchmarks/sike/sike.png>
 Package pdftex.def Info: figures/benchmarks/sike/sike.png  used on input line 6
-2.
+3.
 (pdftex.def)             Requested size: 403.31511pt x 204.65982pt.
-<figures/benchmarks/sike/sike_mem.png, id=730, 1256.0526pt x 642.4803pt>
+<figures/benchmarks/sike/sike_mem.png, id=731, 1256.0526pt x 642.4803pt>
 File: figures/benchmarks/sike/sike_mem.png Graphic file (type png)
 <use figures/benchmarks/sike/sike_mem.png>
 Package pdftex.def Info: figures/benchmarks/sike/sike_mem.png  used on input li
-ne 70.
+ne 71.
 (pdftex.def)             Requested size: 403.31511pt x 206.29393pt.
- [35 <./figures/benchmarks/sike/sike.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 84--89
+ [34 <./figures/benchmarks/sike/sike.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 85--90
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--89
+Underfull \hbox (badness 10000) in paragraph at lines 85--90
 
  []
 
-[36 <./figures/benchmarks/sike/sike_mem.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 97--104
+[35 <./figures/benchmarks/sike/sike_mem.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 98--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--104
+Underfull \hbox (badness 10000) in paragraph at lines 98--105
 
  []
 
-<figures/benchmarks/optimized/434.png, id=757, 1391.9202pt x 640.3122pt>
+<figures/benchmarks/optimized/434.png, id=758, 1391.9202pt x 640.3122pt>
 File: figures/benchmarks/optimized/434.png Graphic file (type png)
 <use figures/benchmarks/optimized/434.png>
 Package pdftex.def Info: figures/benchmarks/optimized/434.png  used on input li
-ne 107.
+ne 108.
 (pdftex.def)             Requested size: 448.13095pt x 206.14491pt.
-[37]
-<figures/benchmarks/optimized/434_mem.png, id=768, 1391.9202pt x 640.3122pt>
+[36]
+<figures/benchmarks/optimized/434_mem.png, id=769, 1391.9202pt x 640.3122pt>
 File: figures/benchmarks/optimized/434_mem.png Graphic file (type png)
 <use figures/benchmarks/optimized/434_mem.png>
 Package pdftex.def Info: figures/benchmarks/optimized/434_mem.png  used on inpu
-t line 115.
+t line 116.
 (pdftex.def)             Requested size: 448.13095pt x 206.14491pt.
-<figures/benchmarks/optimized/751.png, id=769, 1391.9202pt x 640.3122pt>
+<figures/benchmarks/optimized/751.png, id=770, 1391.9202pt x 640.3122pt>
 File: figures/benchmarks/optimized/751.png Graphic file (type png)
 <use figures/benchmarks/optimized/751.png>
 Package pdftex.def Info: figures/benchmarks/optimized/751.png  used on input li
-ne 123.
+ne 124.
 (pdftex.def)             Requested size: 448.13095pt x 206.14491pt.
- [38 <./figures/benchmarks/optimized/434.png> <./figures/benchmarks/optimized/4
+ [37 <./figures/benchmarks/optimized/434.png> <./figures/benchmarks/optimized/4
 34_mem.png>]
-<figures/benchmarks/optimized/751_mem.png, id=776, 1391.9202pt x 640.3122pt>
+<figures/benchmarks/optimized/751_mem.png, id=777, 1391.9202pt x 640.3122pt>
 File: figures/benchmarks/optimized/751_mem.png Graphic file (type png)
 <use figures/benchmarks/optimized/751_mem.png>
 Package pdftex.def Info: figures/benchmarks/optimized/751_mem.png  used on inpu
-t line 131.
+t line 132.
 (pdftex.def)             Requested size: 448.13095pt x 206.14491pt.
 
-Overfull \hbox (8.85048pt too wide) in paragraph at lines 138--140
+Overfull \hbox (8.85048pt too wide) in paragraph at lines 139--141
 \T1/pplx/m/n/10.95 (-20) Compressed im-ple-men-ta-tions of SIDH promise short-e
 ned key size com-pared to non-compressed
  []
 
-[39 <./figures/benchmarks/optimized/751.png> <./figures/benchmarks/optimized/75
+[38 <./figures/benchmarks/optimized/751.png> <./figures/benchmarks/optimized/75
 1_mem.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 145--150
+Underfull \hbox (badness 10000) in paragraph at lines 146--151
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--150
+Underfull \hbox (badness 10000) in paragraph at lines 146--151
 
  []
 
-<figures/benchmarks/compressed/434.png, id=788, 1308.8097pt x 640.3122pt>
+<figures/benchmarks/compressed/434.png, id=789, 1308.8097pt x 640.3122pt>
 File: figures/benchmarks/compressed/434.png Graphic file (type png)
 <use figures/benchmarks/compressed/434.png>
 Package pdftex.def Info: figures/benchmarks/compressed/434.png  used on input l
-ine 153.
+ine 154.
 (pdftex.def)             Requested size: 448.13095pt x 219.23721pt.
-<figures/benchmarks/compressed/434_mem.png, id=789, 1308.8097pt x 640.3122pt>
+<figures/benchmarks/compressed/434_mem.png, id=790, 1308.8097pt x 640.3122pt>
 File: figures/benchmarks/compressed/434_mem.png Graphic file (type png)
 <use figures/benchmarks/compressed/434_mem.png>
 Package pdftex.def Info: figures/benchmarks/compressed/434_mem.png  used on inp
-ut line 161.
+ut line 162.
 (pdftex.def)             Requested size: 448.13095pt x 219.23721pt.
-[40 <./figures/benchmarks/compressed/434.png>]
-<figures/benchmarks/compressed/751.png, id=803, 1316.0367pt x 640.3122pt>
+[39 <./figures/benchmarks/compressed/434.png>]
+<figures/benchmarks/compressed/751.png, id=804, 1316.0367pt x 640.3122pt>
 File: figures/benchmarks/compressed/751.png Graphic file (type png)
 <use figures/benchmarks/compressed/751.png>
 Package pdftex.def Info: figures/benchmarks/compressed/751.png  used on input l
-ine 169.
+ine 170.
 (pdftex.def)             Requested size: 448.13095pt x 218.03545pt.
-<figures/benchmarks/compressed/751_mem.png, id=804, 1308.8097pt x 640.3122pt>
+<figures/benchmarks/compressed/751_mem.png, id=805, 1308.8097pt x 640.3122pt>
 File: figures/benchmarks/compressed/751_mem.png Graphic file (type png)
 <use figures/benchmarks/compressed/751_mem.png>
 Package pdftex.def Info: figures/benchmarks/compressed/751_mem.png  used on inp
-ut line 177.
+ut line 178.
 (pdftex.def)             Requested size: 448.13095pt x 219.23721pt.
- [41 <./figures/benchmarks/compressed/434_mem.png> <./figures/benchmarks/compre
-ssed/751.png>] [42 <./figures/benchmarks/compressed/751_mem.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 199--206
+ [40 <./figures/benchmarks/compressed/434_mem.png> <./figures/benchmarks/compre
+ssed/751.png>] [41 <./figures/benchmarks/compressed/751_mem.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 200--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--206
+Underfull \hbox (badness 10000) in paragraph at lines 200--207
 
  []
 
 
-Overfull \hbox (46.94725pt too wide) in paragraph at lines 208--211
+Overfull \hbox (46.94725pt too wide) in paragraph at lines 209--212
 \T1/pplx/m/n/10.95 (-20) The hotspots of \T1/cmtt/m/n/10.95 secp256r1 \T1/pplx/
 m/n/10.95 (-20) are the low level prime field arith-metic func-tions \T1/cmtt/m
 /n/10.95 __ecp_nistz256_mul_montq
  []
 
-[43]
-Underfull \hbox (badness 10000) in paragraph at lines 225--229
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 226--230
 
  []
 
-[44]) (./chapters/05_conclusion.tex [45]
+[43]) (./chapters/05_conclusion.tex [44]
 chapter 5.
-) (./pages/appendix.tex [46
+) (./pages/appendix.tex [45
 
 
 ]
 chapter A.
-[47
+[46
 
 
-] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57]) [58]
+] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56]) [57]
 Package tocbasic Info: character protrusion at lof deactivated on input line 56
 .
  (build/main.lof)
@@ -2308,7 +2313,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 56
 \openout10 = `main.lof'.
 
 
-[59
+[58
 
 
 ]
@@ -2321,7 +2326,7 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 57
 
 No file main.gls.
 No file main.acr.
-[60
+[59
 
 
 ]
@@ -2329,10 +2334,10 @@ chapter without number
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplx/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-[61
+[60
 
 
-] [62]
+] [61]
 Overfull \hbox (62.83977pt too wide) in paragraph at lines 60--60
 []\T1/pplx/m/it/10.95 (-20) GoLang Wiki Com-piler Op-ti-miza-tions\T1/pplx/m/n/
 10.95 (-20) . []$\T1/cmtt/m/n/10.95 https : / / github . com / golang / go / wi
@@ -2340,7 +2345,7 @@ ki / CompilerOptimizations$[]\T1/pplx/m/n/10.95 (-20) .
  []
 
 No complaints by nag.
-[63]
+[62]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 62.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 62.
  (build/main.aux)
@@ -2355,16 +2360,21 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57055 strings out of 482771
- 1243657 string characters out of 5955540
- 2212080 words of memory out of 5000000
+ 57065 strings out of 482771
+ 1243759 string characters out of 5955540
+ 2212095 words of memory out of 5000000
  70273 multiletter control sequences out of 15000+600000
- 620431 words of font info for 450 fonts, out of 8000000 for 9000
+ 620939 words of font info for 458 fonts, out of 8000000 for 9000
  85 hyphenation exceptions out of 8191
  81i,21n,139p,10099b,2836s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/joy/.texli
@@ -2382,10 +2392,10 @@ are/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/palatino/uplri8a.pfb>
-Output written on build/main.pdf (71 pages, 1342039 bytes).
+Output written on build/main.pdf (70 pages, 1342821 bytes).
 PDF statistics:
- 1563 PDF objects out of 1728 (max. 8388607)
- 1293 compressed objects within 13 object streams
+ 1564 PDF objects out of 1728 (max. 8388607)
+ 1295 compressed objects within 13 object streams
  539 named destinations out of 1000 (max. 500000)
  63061 words of extra memory for PDF output out of 74296 (max. 10000000)
 

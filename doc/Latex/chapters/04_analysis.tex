@@ -2,7 +2,7 @@
 
 The results presented in this chapter were calculated on a x64 architecture (Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz) running Ubuntu 20.04.1 LTS. The installed docker version was 19.03.8. The benchmarking suite was initialized to run callgrind and massif 100 times, respectively (e.g. N=100).\\
 The exact values measured (averages and standard derivation over $N$=100 samples) and the identified execution hotspots for all implementations instantiated respectively with all parameter sets (see \autoref{sec:included_implementations}) can be found in addenda \ref{app:detailed_benchmarks}. The efficiency in this chapter will be quantified by the peak memory consumption and by the absolute instruction count measured by the benchmarking suite (details in \autoref{chapter:benchmarking_suite}). \\
-The graphs presented in this chapter use the following terminology:
+The graphs presented use the following terminology:
 Assume Alice (A) and Bob (B) want to establish a shared secret using a SIDH key exchange.
 \begin{itemize}
 \item \textit{KeygenA} describes the key generation (public and private key) of Alice.
@@ -17,11 +17,12 @@ The chapter ends with security considerations for all benchmarked implementation
 
 \section{Comparing SIDH security levels}\label{sec:analysis_sidh_levels}
 
-Before any differences between libraries or implementations are drawn this section considers the different parameter sets proposed in \parencite{sike2020spec}: \texttt{p434}, \texttt{p503}, \texttt{p610} and \texttt{p751}. All these parameters match a security level defined by NIST (see \autoref{sidh_security} for details). This section makes use of the \texttt{SIKE\_x64} implementation to visualize the claimed resources of all parameter sets. However, the chosen implementation does not effect the results for this comparison .\\\\
+Before any differences between libraries or implementations are drawn, this section considers the different parameter sets proposed in \parencite{sike2020spec}: \texttt{p434}, \texttt{p503}, \texttt{p610} and \texttt{p751}. All these parameters match a security level defined by NIST (see \autoref{sidh_security} for details). This section makes use of the \texttt{SIKE\_x64} implementation to visualize the claimed resources of all parameter sets. However, the chosen implementation does not effect the results for this comparison .\\\\
 \autoref{fig:results_all_curves} shows the absolute instruction counts for \texttt{SIKE\_x64} initialized with all available parameter sets. While \texttt{p434} executes 18 million instructions for \textit{KeygenA}, \texttt{p751} requires 67 million operations ($3.7$ times more). Roughly the same can be seen for \textit{KeygenB}, \textit{SecretA} and \textit{SecretB}. The other parameter sets \texttt{p503} and \texttt{p610} almost lie on a linear line between the highest and lowest security class.\\\\
 Similarly, the measured peak memory consumption is for \texttt{p751} the highest ($13.3$ kB) and for \texttt{p434} the lowest ($8.2$ kB). Again, the other parameter sets can be found in between of these boundary values (\autoref{fig:results_all_curves_mem}). \\\\
-This analysis clearly shows that a increased security level for SIDH corresponds with a increased claim of resources. While the difference in terms of memory consumption is relatively small the execution times differ a lot: On average and compared to \texttt{p434} the parameter
+This analysis clearly shows that a increased security level for SIDH corresponds with a increased claim of resources. While the difference in terms of memory consumption is relatively small the execution times differ a lot: On average and compared to \texttt{p434} the parameter set
 \begin{itemize}
+\itemsep0em 
 \item \texttt{p503} executes $1.4$ times more instructions
 \item \texttt{p610} executes $2.5$ times more instructions
 \item \texttt{p710} executes $3.7$ times more instructions
@@ -54,8 +55,8 @@ Before comparisons between the SIDH libraries \textit{SIKE}, \textit{PQ-Crypto} 
 Besides execution times, \autoref{fig:results_sike_mem} also compares the memory consumption. As stated by the authors of SIKE, compressed variants allocate more memory: The peak memory allocation is with 17 kilobytes (\texttt{SIKE\_Generic\_Compressed}) and 19.2 kilobytes (\texttt{SIKE\_x64\_Compressed}) twice as high as the non-compressed versions.\\
 The \texttt{SIKE\_Reference} implementation is with 11.2 kB allocated memory peak close to the average of all SIKE implementations. However, regarding the execution times for key generation, the reference implementation is by far the slowest variant: The more than 2.3 billion ($2.300.000.000$) instructions were measured in order to generate Bobs key pair. This is slower by factor 100 compared to \texttt{SIKE\_x64}. As the name suggests, this reference implementation must be seen as a proof-of-concept. Thus, it will not be considered further in this analysis.
 \\\\
-To sum up, the comparison between all SIKE implementations showed, that \textit{optimized} versions have decreased instructions counts as well as decreased memory consumptions compared to \textit{compressed} implementations. The further analysis of the detailed benchmarks in in addenda \ref{app:detailed_benchmarks} lead to a very similar result for the \textit{PQ-Crypto} library of Microsoft.
-One can state, that \textit{compressed} versions roughly demand twice as much resources than \textit{optimized} variants.
+To sum up, the comparison between all SIKE implementations showed that \textit{optimized} versions have decreased instructions counts as well as decreased memory consumptions compared to \textit{compressed} implementations. The further analysis of the detailed benchmarks in in addenda \ref{app:detailed_benchmarks} lead to a very similar result for the \textit{PQ-Crypto} library of Microsoft.
+One can state that \textit{compressed} versions roughly demand twice as much resources than \textit{optimized} variants.
 
 \begin{figure}[H]
   \centering
@@ -85,7 +86,7 @@ Generic optimized implementations contain generally optimized code for various h
 \\\\
 Peak memory consumptions for parameter \textit{p434} are visualized in  \autoref{fig:results_opt_434_mem}. As in terms of execution time, memory allocation numbers between \textit{SIKE\_Generic} and \textit{Microsoft\_Generic} hardly differ: The SIKE version occupies $0.3$ kB less memory for \textit{p434} and $0.7$ kB less than for \textit{p751}. Overall, the relative difference regarding memory consumption is about $5$\%.
 \\\\
-Although both implementations hardly differ in their performance benchmarks one can state, that \textit{SIKE\_Generic} demands less resources than \textit{Microsoft\_Generic}. This disparity, however, is marginal.
+Although both implementations hardly differ in their performance benchmarks one can state that \textit{SIKE\_Generic} demands less resources than \textit{Microsoft\_Generic}. This disparity, however, is marginal.
 
 \subsubsection{x64 optimized implementations}\label{sec:analysis_x64}
 X64 optimized implementations exploit AMD64 specific hardware operations to improve performance on these machines. The benchmarking suite currently supports the following x64 optimized variants:
@@ -197,7 +198,7 @@ It can be seen that all three SIDH libraries struggle with the same issue: Perfo
 \section{Comparing SIDH and ECDH} \label{sec:analysis_effiency_ecdh}
 
 To be able to make reliable statements about the current state of SIDH this section compares the quantum-secure SIDH implementations with state-of-the-art elliptic curve Diffie-Hellman (ECDH). \\
-Beside all optimized SIDH versions \autoref{fig:results_opt_434} also shows benchmarks for a ECDH reference value via \texttt{secp256r1}. Note, that the security class of parameter set \texttt{p434} matches with \texttt{secp256r1} (see \autoref{sec:benchmarks_details} for details). Compared to the fastest SIDH optimized implementation (\texttt{Microsoft\_x64}) ECDH is significantly faster: $80$ times less instructions for KeygenA and $180$ times less instruction for KeygenB are executed. Additionally, the generation of the secret is $18$ times faster for secretA and $21$ times faster for secretB.\\
+Beside all optimized SIDH versions \autoref{fig:results_opt_434} also shows benchmarks for a ECDH reference value via \texttt{secp256r1}. Note that the security class of parameter set \texttt{p434} matches with \texttt{secp256r1} (see \autoref{sec:benchmarks_details} for details). Compared to the fastest SIDH optimized implementation (\texttt{Microsoft\_x64}) ECDH is significantly faster: $80$ times less instructions for KeygenA and $180$ times less instruction for KeygenB are executed. Additionally, the generation of the secret is $18$ times faster for secretA and $21$ times faster for secretB.\\
 More moderate results can be observed for parameter set \texttt{P751} and \texttt{secp512} (\autoref{fig:results_opt_751}): KeygenA ($2.5$ times),  KeygenB ($3$ times), SecretA ($2.2$ times) and SecretB ($2.6$ times) of \texttt{secp512} are faster compared to the fastest SIDH variant \texttt{Microsoft\_x64}.
 \\\\
 While ECDH exploits much faster execution times the memory consumption of ECDH is higher.  \autoref{fig:results_opt_434_mem} shows a memory consumption of $7.7$ kB (\texttt{SIKE\_Generic} via \texttt{p434}) while ECDH allocates $12.2$ kB memory ($1.5$ times more). Similarly ECDH allocates $1.2$ times more memory than SIDH instantiated with \texttt{p751} (\autoref{fig:results_opt_751_mem}).
@@ -259,20 +260,3 @@ This section compares the size of public keys implemented by the SIDH libraries 
 	\label{tab:benchmarks_Sike_x64}
 \end{table}
 Shorter public key sizes reduce transmitting and storage costs. The ECDH implementations exploit significantly shorter public keys than SIDH. However, SIDH implements the shortest public key sizes of all quantum-resistant alternatives \parencite{koziel2018high}.
-
-%CIRCL:
-%434 -> 330 bytes
-%503 -> 378 bytes
-%751 -> 564 bytes
-
-%MS:
-%default:
-%434 -> 330 bytes
-%503 -> 378 bytes
-%610 -> 462 bytes
-%751 -> 564 bytes
-%compressed:
-%434 -> 197 bytes
-%503 -> 225 bytes
-%610 -> 274 bytes
-%751 -> 335 bytes
