@@ -71,19 +71,21 @@
 \contentsline {subsection}{\numberline {4.4.1}Constant time}{43}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Key size}{44}{subsection.4.4.2}%
 \contentsline {chapter}{\numberline {5}Conclusion}{45}{chapter.5}%
-\contentsline {chapter}{\numberline {A}General Addenda}{46}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Detailed Benchmarks}{46}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Benchmarks for ECDH}{47}{subsection.A.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Benchmarks for Sike Reference}{48}{subsection.A.1.2}%
-\contentsline {subsection}{\numberline {A.1.3}Benchmarks for Sike Generic}{49}{subsection.A.1.3}%
-\contentsline {subsection}{\numberline {A.1.4}Benchmarks for Sike Generic Compressed}{50}{subsection.A.1.4}%
-\contentsline {subsection}{\numberline {A.1.5}Benchmarks for Sike x64}{51}{subsection.A.1.5}%
-\contentsline {subsection}{\numberline {A.1.6}Benchmarks for Sike x64 Compressed}{52}{subsection.A.1.6}%
-\contentsline {subsection}{\numberline {A.1.7}Benchmarks for CIRCL x64}{53}{subsection.A.1.7}%
-\contentsline {subsection}{\numberline {A.1.8}Benchmarks for Microsoft Generic}{54}{subsection.A.1.8}%
-\contentsline {subsection}{\numberline {A.1.9}Benchmarks for Microsoft Generic Compressed}{55}{subsection.A.1.9}%
-\contentsline {subsection}{\numberline {A.1.10}Benchmarks for Microsoft x64}{56}{subsection.A.1.10}%
-\contentsline {subsection}{\numberline {A.1.11}Benchmarks for Microsoft x64 Compressed}{57}{subsection.A.1.11}%
-\contentsline {chapter}{\nonumberline List of Figures}{58}{chapter*.68}%
-\contentsline {chapter}{\nonumberline List of Tables}{59}{chapter*.69}%
-\contentsline {chapter}{\nonumberline Bibliography}{60}{chapter*.70}%
+\contentsline {subsubsection}{\nonumberline Comparing SIDH libraries}{45}{section*.57}%
+\contentsline {subsubsection}{\nonumberline Comparing SIDH and ECDH}{46}{section*.60}%
+\contentsline {chapter}{\numberline {A}General Addenda}{47}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Detailed Benchmarks}{47}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Benchmarks for ECDH}{48}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Benchmarks for Sike Reference}{49}{subsection.A.1.2}%
+\contentsline {subsection}{\numberline {A.1.3}Benchmarks for Sike Generic}{50}{subsection.A.1.3}%
+\contentsline {subsection}{\numberline {A.1.4}Benchmarks for Sike Generic Compressed}{51}{subsection.A.1.4}%
+\contentsline {subsection}{\numberline {A.1.5}Benchmarks for Sike x64}{52}{subsection.A.1.5}%
+\contentsline {subsection}{\numberline {A.1.6}Benchmarks for Sike x64 Compressed}{53}{subsection.A.1.6}%
+\contentsline {subsection}{\numberline {A.1.7}Benchmarks for CIRCL x64}{54}{subsection.A.1.7}%
+\contentsline {subsection}{\numberline {A.1.8}Benchmarks for Microsoft Generic}{55}{subsection.A.1.8}%
+\contentsline {subsection}{\numberline {A.1.9}Benchmarks for Microsoft Generic Compressed}{56}{subsection.A.1.9}%
+\contentsline {subsection}{\numberline {A.1.10}Benchmarks for Microsoft x64}{57}{subsection.A.1.10}%
+\contentsline {subsection}{\numberline {A.1.11}Benchmarks for Microsoft x64 Compressed}{58}{subsection.A.1.11}%
+\contentsline {chapter}{\nonumberline List of Figures}{59}{chapter*.73}%
+\contentsline {chapter}{\nonumberline List of Tables}{60}{chapter*.74}%
+\contentsline {chapter}{\nonumberline Bibliography}{61}{chapter*.75}%
