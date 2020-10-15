@@ -50,7 +50,9 @@
 \newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
 
 
-\usepackage[acronym,xindy,toc]{glossaries} % TODO: include "acronym" if glossary and acronym should be separated
+\usepackage[doublespacing]{setspace}
+\usepackage[nopostdot,xindy,nonumberlist,toc]{glossaries}
+\setglossarystyle{superheader}
 \makeglossaries
 \loadglsentries{pages/glossary.tex} % important update for glossaries, before document
 

@@ -1,6 +1,6 @@
 \chapter{Conclusion}\label{chapter:conclusion}
 
-This final chapter compactly summarizes all results of the benchmarking suite. For a detailed analysis of the measured data see \autoref{chapter:analysis} and addenda \ref{app:detailed_benchmarks}. The presented data in this chapter provide a relative comparison between the SIDH libraries \textit{SIKE}, PQ-\textit{Crypto} and \textit{CIRCL}. Moreover, the relative difference between SIDH and ECDH is shown.\\
+This final chapter summarizes all results of the benchmarking suite. For a detailed analysis of the measured data see \autoref{chapter:analysis} and addenda \ref{app:detailed_benchmarks}. The presented data in this chapter provides a relative comparison between the SIDH libraries \textit{SIKE}, PQ-\textit{Crypto} and \textit{CIRCL}. Moreover, the relative difference between SIDH and ECDH is shown.\\
 The most efficient implementation in the following tables is highlighted in green and has a relative difference of 1 to itself. All other implementations in the appropriate row are labeled with the relative distance to the most efficient implementation. For this evaluation the execution times and memory consumption for a whole Diffie-Hellman exchange are accumulated (key generation of A and B \textit{plus} secret generation of A and B).
 
 \subsubsection{Comparing SIDH libraries}
@@ -51,8 +51,8 @@ On the contrary, \textit{SIKE} allocates less memory than \textit{PQ-Crypto} for
 
 \subsubsection{Comparing SIDH and ECDH}
 
-The analysis of \autoref{tab:conclusion_ecdh_sidh} compactly shows the differences between \textit{SIDH} and \textit{ECDH} in terms of execution times. Note that all security classes and only the x64 optimized variants of all libraries are considered.\\
-While the overhead of \textit{SIDH} for the security level AES128 (matches NIST security level 1 and p434) is enormous the relative difference for higher security levels decreases. However, ECDH requests a little more memory than SIDH (see \autoref{chapter:analysis}).
+The analysis of \autoref{tab:conclusion_ecdh_sidh} reveals the differences between \textit{SIDH} and \textit{ECDH} in terms of execution times. Note that all security classes and only the x64 optimized variants of all libraries are considered.\\
+While the overhead of \textit{SIDH} for the security level AES128 (matches NIST security level 1 and p434) is enormous the relative difference for higher security levels decreases. However, ECDH requests slightly more memory than SIDH (see \autoref{chapter:analysis}).
 
 
 \begin{table}[H]
