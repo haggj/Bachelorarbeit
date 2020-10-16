@@ -7,9 +7,9 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {1.1}{\ignorespaces Impact of quantum computers on modern encryption schemes}}{9}{table.caption.16}%
-\contentsline {table}{\numberline {1.2}{\ignorespaces Core functions of the SIKE reference implementation}}{13}{table.caption.22}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces Core functions of the \gls {SIKE} reference implementation}}{13}{table.caption.22}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Existing SIDH implementations}}{21}{table.caption.31}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Existing \gls {SIDH} implementations}}{21}{table.caption.31}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces Comparison of key sizes}}{44}{table.caption.56}%

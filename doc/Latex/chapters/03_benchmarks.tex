@@ -1,5 +1,5 @@
 \chapter{Benchmarking Suite}\label{chapter:benchmarking_suite}
-In this chapter a benchmarking suite is presented that is able to generate comparable benchmarks between all SIDH implementations introduced in \autoref{chapter:existing_sidh}. To get a better understanding of the results, this chapter starts with a  description of the tools and methodologies used for benchmarking (\autoref{sec:benchmarks_methods}). The implementation details given in \autoref{sec:benchmarks_details} provide precise internals of the benchmarking suite. This might be used for further development of the software. A description of how to actually use the presented benchmarking suite will be given in \autoref{sec:benchmarks_usage}.
+In this chapter a benchmarking suite is presented that is able to generate comparable benchmarks between all \gls{SIDH} implementations introduced in \autoref{chapter:existing_sidh}. To get a better understanding of the results, this chapter starts with a  description of the tools and methodologies used for benchmarking (\autoref{sec:benchmarks_methods}). The implementation details given in \autoref{sec:benchmarks_details} provide precise internals of the benchmarking suite. This might be used for further development of the software. A description of how to actually use the presented benchmarking suite will be given in \autoref{sec:benchmarks_usage}.
 
 \section{Benchmarking Methodology}\label{sec:benchmarks_methods}
 In order to generate independent and stable benchmarking results, the benchmarking suite runs within a virtual environment: \textit{Docker} is used to separate the running suite from the host operating system. This reduces the influence of resource intensive processes which might falsify benchmarking results. Moreover, \textit{Docker} enables a portable and scalable software solution. The benchmarking suite runs within a Ubuntu Docker image leading to a virtual operating system.
@@ -16,7 +16,7 @@ In the following, the process of benchmarking is described within five steps. In
 \end{enumerate}
 
 \subsubsection{Create the benchmarking code}
-Each software libraries presented in \autoref{chapter:existing_sidh} implements various cryptographic primitives. To avoid overhead when calculating benchmarks, only the required functions to generate a SIDH key exchange should be called. Thus, a simple benchmarking file is provided for each implementation which calls the appropriate underlying API. This benchmarking file must ensure that all required headers are imported, the API is called correctly and a \texttt{main}-function is provided.
+Each software libraries presented in \autoref{chapter:existing_sidh} implements various cryptographic primitives. To avoid overhead when calculating benchmarks, only the required functions to generate a \gls{SIDH} key exchange should be called. Thus, a simple benchmarking file is provided for each implementation which calls the appropriate underlying API. This benchmarking file must ensure that all required headers are imported, the API is called correctly and a \texttt{main}-function is provided.
 
 \subsubsection{Compile the benchmarking code}
 Once the benchmarking source code is created, it needs to be compiled to a binary. Therefore, all required dependencies (libraries, headers, sourc code, ..) need to be provided to the compiler. The benchmarking suite provides a \texttt{Makefile} for each implementation, where the compilation process is implemented.
@@ -58,7 +58,7 @@ The profiling data will be written to the file defined by \texttt{--massif-out-f
 Once the output files of \textit{Callgrind} and \textit{Massif} are produced, one can parse and analyze the corresponding files to obtain:
 \begin{enumerate}
 \item Absolute instructions per function.
-\item Maximum memory consumption during SIDH key exchange.
+\item Maximum memory consumption during \gls{SIDH} key exchange.
 \end{enumerate}
 This information is finally used by the benchmarking suite to produce graphs and tables for further investigation. To receive reliable information all benchmarks are measured multiple times (e.g. $N=100$ times).\\
 To further increase the quality and reproducibility of the results the cache of the virtual operating system is cleared, before \textit{Callgrind} and \textit{Massif} are executed. This is done via:
@@ -73,7 +73,7 @@ sync; sudo sh -c "echo 3 > /proc/sys/vm/drop_caches"
 The benchmarking suite is developed in Python3 on a Linux/Ubuntu operating system. Currently, the following implementations are included:
 \label{sec:included_implementations}
 \begin{itemize}
-\item SIKE working on: \texttt{p434, p503, p610 and p751}
+\item \gls{SIKE} working on: \texttt{p434, p503, p610 and p751}
 	\begin{itemize}
 	\item Sike reference implementation (\texttt{SIKE\_Reference})
 	\item Sike generic optimized implementation (\texttt{SIKE\_Generic})
@@ -81,7 +81,7 @@ The benchmarking suite is developed in Python3 on a Linux/Ubuntu operating syste
 	\item Sike x64 optimized implementation (\texttt{SIKE\_x64})
 	\item Sike x64 optimized and compressed implementation (\texttt{SIKE\_x64\_Compressed})
 	\end{itemize}
-\item PQCrypto-SIDH working on: \texttt{p434, p503, p610 and p751}
+\item \gls{PQCrypto-SIDH} working on: \texttt{p434, p503, p610 and p751}
 	\begin{itemize}
 	\item PQCrypto-SIDH generic optimized implementation (\texttt{Microsoft\_Generic})
 	\item PQCrypto-SIDH generic optimized and compressed implementation \\ (\texttt{Microsoft\_Generic\_Compressed})
@@ -93,8 +93,8 @@ The benchmarking suite is developed in Python3 on a Linux/Ubuntu operating syste
 	\item CIRCL x64 optimized implementation (\texttt{CIRCL\_x64})
 	\end{itemize}
 \end{itemize}
-Furthermore, the benchmarking suite provides classical elliptic curve Diffie-Hellman (ECDH) based on OpenSSL. Since SIDH is a candidate to replace current Diffie-Hellman algorithms, ECDH is intended as reference value: The objective is it to compare optimized modern ECDH with quantum-secure SIDH.\\
-Since each parameter set of SIDH meets a different security level (compare \autoref{sidh_security}) ECDH is also instantiated with different curves, each matching a SIDH security level. The used elliptic curves are:
+Furthermore, the benchmarking suite provides classical elliptic curve Diffie-Hellman (ECDH) based on \gls{openssl}. Since \gls{SIDH} is a candidate to replace current Diffie-Hellman algorithms, \gls{ECDH} is intended as reference value: The objective is to compare optimized modern \gls{ECDH} with quantum-secure \gls{SIDH}.\\
+Since each parameter set of \gls{SIDH} meets a different security level (compare \autoref{sidh_security}) \gls{ECDH} is also instantiated with different curves, each matching a \gls{SIDH} security level. The used elliptic curves are:
 \begin{enumerate}
 \item \texttt{secp256r1} (openssl: \texttt{prime256v1} \parencite{turner2009elliptic}): 128 bit security matching \texttt{SIKEp434} \parencite{brown2010sec}
 \item \texttt{secp384r1} (openssl: \texttt{secp384r1}): 192 bit security matching \texttt{SIKEp610} \parencite{brown2010sec}
@@ -105,13 +105,13 @@ For each of these introduced implementations the application measures benchmarks
 \subsection{Application Flow}\label{sec:app_flow}
 This sections illustrates the application flow of the benchmarking suite (see \autoref{fig:app_flow}). Once triggered to run benchmarks, the following procedure is repeated for every implementation: The suite first compiles the benchmarking code. The binary is then executed multiple times to generate $N$ benchmarking results, respectively for \textit{Callgrind} and \textit{Massif}. Outputs of \textit{Callgrind} and \textit{Massif} are parsed and saved in the benchmarking suite after each run.
 \\
-Finally, the results are visualized in different formats. Graphs compare the recorded instruction counts and the peak memory consumption among implementations instantiated with comparable security classes. The HTML and Latex tables lists detailed benchmarks per implementation.
+Finally, the results are visualized in different formats. Graphs compare the recorded instruction counts and the peak memory consumption among implementations instantiated with comparable security classes. The \gls{HTML} and Latex tables lists detailed benchmarks per implementation.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\textwidth]{benchmarks/application_flow}
   \caption[Flow chart of the benchmarking suite.]
-  {Flow chart of the benchmarking suite. For each SIDH implementation, the source code is compiled and benchmarked multiple times. The benchmarking results are visualized in different format: Graphs, HTML and Latex.
+  {Flow chart of the benchmarking suite. For each \gls{SIDH} implementation, the source code is compiled and benchmarked multiple times. The benchmarking results are visualized in different format: Graphs, \gls{HTML} and Latex.
   } \label{fig:app_flow}
 \end{figure}
 
@@ -130,7 +130,7 @@ The main logic of the benchmarking suite is placed within the class \texttt{Base
   \centering
   \includegraphics[width=0.9\textwidth]{benchmarks/uml}
   \caption[Class diagram for supported implementations]
-  {Class diagram for all implementations supported by the benchmarking suite. All concrete implementations of SIDH inherit from \texttt{BaseImplementation}. A \textit{Makefile} provided by each subclass specifies how the benchmarking code is built and run.} \label{fig:uml}
+  {Class diagram for all implementations supported by the benchmarking suite. All concrete implementations of \gls{SIDH} inherit from \texttt{BaseImplementation}. A \textit{Makefile} provided by each subclass specifies how the benchmarking code is built and run.} \label{fig:uml}
 \end{figure}
 
 \subsubsection{Representation of benchmarking results}
@@ -144,11 +144,11 @@ The class \texttt{BechmarkImpl} represents the benchmarking results of a specifi
 \end{figure}
 
 \subsection{Adding Implementations}
-To add a new implementation to the benchmarking suite it is recommended to consider already existing implementations. Adding a SIDH implementation to the benchmarking suite requires the following steps:
+To add a new implementation to the benchmarking suite it is recommended to consider already existing implementations. Adding a \gls{SIDH} implementation to the benchmarking suite requires the following steps:
 \begin{enumerate}
 \itemsep0em 
 \item Add a new folder into the \texttt{container/} folder of the root directory \\ \texttt{container/new\_implementation/}.
-\item Create a file \texttt{container/new\_implementation/benchmark.c} that calls the SIDH key exchange API of the new implementation.
+\item Create a file \texttt{container/new\_implementation/benchmark.c} that calls the \gls{SIDH} key exchange API of the new implementation.
 \item Add all necessary dependencies into \texttt{container/new\_implementation/} that are needed to compile \texttt{benchmark.c}. Note, maybe some changes in the \textit{Dockerfile} are necessary to install certain dependencies on the virtual operating system started by Docker.
 \item Create a \texttt{Makefile} supporting the following commands:
 	\begin{itemize}
@@ -207,14 +207,14 @@ Testing the benchmarking suite runs for a while, since each implementation is co
 \begin{lstlisting}[numbers=none,linewidth=4cm]
 ./run.sh benchmark
 \end{lstlisting}
-This command triggers the \textit{benchmarking.py} script within the docker container. This script contains the entry logic of the benchmarking suite. It benchmarks all available implementations and generates different output formats (graphs, html, latex). The frequency of measurements for each benchmark is configurable: The variable \texttt{N} in \texttt{container/benchmarking.py} describes the amount of repetitions for \textit{callgrind} and \textit{massif}. Once the benchmarks are done all output files can be inspected in the  \texttt{data/} folder of your current directory. These files visualize average values over N samples. The output files are:
+This command triggers the \textit{benchmarking.py} script within the docker container. This script contains the entry logic of the benchmarking suite. It benchmarks all available implementations and generates different output formats (graphs, \gls{HTML}, latex). The frequency of measurements for each benchmark is configurable: The variable \texttt{N} in \texttt{container/benchmarking.py} describes the amount of repetitions for \textit{callgrind} and \textit{massif}. Once the benchmarks are done all output files can be inspected in the  \texttt{data/} folder of your current directory. These files visualize average values over N samples. The output files are:
 	\begin{itemize}
-	\item \textit{XXX.png}: These files compare the absolute instruction counts of all implementations which were run on the XXX parameter set (XXX $\in {434, 503, 610, 751}$). Additionally, it contains a ECDH benchmark for comparison.
-	\item \textit{XXX\_mem.png}: These files compare the peak memory consumption of all implementations which were run on the XXX parameter set (XXX $\in {434, 503, 610, 751}$). Additionally, it contains a ECDH benchmark for comparison.
+	\item \textit{XXX.png}: These files compare the absolute instruction counts of all implementations which were run on the XXX parameter set (XXX $\in {434, 503, 610, 751}$). Additionally, it contains a \gls{ECDH} benchmark for comparison.
+	\item \textit{XXX\_mem.png}: These files compare the peak memory consumption of all implementations which were run on the XXX parameter set (XXX $\in {434, 503, 610, 751}$). Additionally, it contains a \gls{ECDH} benchmark for comparison.
 
 	\item \textit{cached.json}: This cache file contains all benchmarking results. It can be used as input for the benchmarking suite to use cached data instead of generating all benchmarks again. Since the benchmarking suite runs multiple hours if each implementation is evaluated N=100 times, this functionality speeds up the generation of output data significantly. To use the cached file as input, copy it to \texttt{container/.cached/cached.json} and run the benchmarking suite again.
 	
-	\item \textit{results.html}: This file lists detailed benchmarking results in a human readable HTML table. 
+	\item \textit{results.html}: This file lists detailed benchmarking results in a human readable \gls{HTML} table. 
 	
 	\item \textit{results.tex}: This file contains the benchmarking results formatted in a Latex. The output is used for this thesis.
 	\end{itemize}

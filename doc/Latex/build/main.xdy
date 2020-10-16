@@ -1,5 +1,5 @@
 ;; xindy style file created by the glossaries package
-;; for document 'main' on 2020-10-15
+;; for document 'main' on 2020-10-16
 
 ; required styles
 
@@ -63,227 +63,227 @@
 
 (define-location-class "roman-page-numbers"
    ( :sep "{}{" "roman-numbers-lowercase" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "roman-page-numbers-roman-page-numbers" 
    ( :sep "{" "roman-numbers-lowercase" :sep "}{" "roman-numbers-lowercase" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Roman-page-numbers-roman-page-numbers" 
    ( :sep "{" "roman-numbers-uppercase" :sep "}{" "roman-numbers-lowercase" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "arabic-page-numbers-roman-page-numbers" 
    ( :sep "{" "arabic-numbers" :sep "}{" "roman-numbers-lowercase" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "alpha-page-numbers-roman-page-numbers" 
    ( :sep "{" "alpha" :sep "}{" "roman-numbers-lowercase" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Alpha-page-numbers-roman-page-numbers" 
    ( :sep "{" "ALPHA" :sep "}{" "roman-numbers-lowercase" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Appendix-page-numbers-roman-page-numbers" 
    ( :sep "{" "ALPHA" :sep "." "arabic-numbers" :sep "}{" "roman-numbers-lowercase" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "arabic-section-numbers-roman-page-numbers" 
    ( :sep "{" "arabic-numbers" :sep "." "arabic-numbers" :sep "}{" "roman-numbers-lowercase" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Roman-page-numbers"
    ( :sep "{}{" "roman-numbers-uppercase" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "roman-page-numbers-Roman-page-numbers" 
    ( :sep "{" "roman-numbers-lowercase" :sep "}{" "roman-numbers-uppercase" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Roman-page-numbers-Roman-page-numbers" 
    ( :sep "{" "roman-numbers-uppercase" :sep "}{" "roman-numbers-uppercase" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "arabic-page-numbers-Roman-page-numbers" 
    ( :sep "{" "arabic-numbers" :sep "}{" "roman-numbers-uppercase" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "alpha-page-numbers-Roman-page-numbers" 
    ( :sep "{" "alpha" :sep "}{" "roman-numbers-uppercase" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Alpha-page-numbers-Roman-page-numbers" 
    ( :sep "{" "ALPHA" :sep "}{" "roman-numbers-uppercase" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Appendix-page-numbers-Roman-page-numbers" 
    ( :sep "{" "ALPHA" :sep "." "arabic-numbers" :sep "}{" "roman-numbers-uppercase" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "arabic-section-numbers-Roman-page-numbers" 
    ( :sep "{" "arabic-numbers" :sep "." "arabic-numbers" :sep "}{" "roman-numbers-uppercase" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "arabic-page-numbers"
    ( :sep "{}{" "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "roman-page-numbers-arabic-page-numbers" 
    ( :sep "{" "roman-numbers-lowercase" :sep "}{" "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Roman-page-numbers-arabic-page-numbers" 
    ( :sep "{" "roman-numbers-uppercase" :sep "}{" "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "arabic-page-numbers-arabic-page-numbers" 
    ( :sep "{" "arabic-numbers" :sep "}{" "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "alpha-page-numbers-arabic-page-numbers" 
    ( :sep "{" "alpha" :sep "}{" "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Alpha-page-numbers-arabic-page-numbers" 
    ( :sep "{" "ALPHA" :sep "}{" "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Appendix-page-numbers-arabic-page-numbers" 
    ( :sep "{" "ALPHA" :sep "." "arabic-numbers" :sep "}{" "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "arabic-section-numbers-arabic-page-numbers" 
    ( :sep "{" "arabic-numbers" :sep "." "arabic-numbers" :sep "}{" "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "alpha-page-numbers"
    ( :sep "{}{" "alpha" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "roman-page-numbers-alpha-page-numbers" 
    ( :sep "{" "roman-numbers-lowercase" :sep "}{" "alpha" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Roman-page-numbers-alpha-page-numbers" 
    ( :sep "{" "roman-numbers-uppercase" :sep "}{" "alpha" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "arabic-page-numbers-alpha-page-numbers" 
    ( :sep "{" "arabic-numbers" :sep "}{" "alpha" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "alpha-page-numbers-alpha-page-numbers" 
    ( :sep "{" "alpha" :sep "}{" "alpha" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Alpha-page-numbers-alpha-page-numbers" 
    ( :sep "{" "ALPHA" :sep "}{" "alpha" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Appendix-page-numbers-alpha-page-numbers" 
    ( :sep "{" "ALPHA" :sep "." "arabic-numbers" :sep "}{" "alpha" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "arabic-section-numbers-alpha-page-numbers" 
    ( :sep "{" "arabic-numbers" :sep "." "arabic-numbers" :sep "}{" "alpha" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Alpha-page-numbers"
    ( :sep "{}{" "ALPHA" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "roman-page-numbers-Alpha-page-numbers" 
    ( :sep "{" "roman-numbers-lowercase" :sep "}{" "ALPHA" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Roman-page-numbers-Alpha-page-numbers" 
    ( :sep "{" "roman-numbers-uppercase" :sep "}{" "ALPHA" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "arabic-page-numbers-Alpha-page-numbers" 
    ( :sep "{" "arabic-numbers" :sep "}{" "ALPHA" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "alpha-page-numbers-Alpha-page-numbers" 
    ( :sep "{" "alpha" :sep "}{" "ALPHA" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Alpha-page-numbers-Alpha-page-numbers" 
    ( :sep "{" "ALPHA" :sep "}{" "ALPHA" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Appendix-page-numbers-Alpha-page-numbers" 
    ( :sep "{" "ALPHA" :sep "." "arabic-numbers" :sep "}{" "ALPHA" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "arabic-section-numbers-Alpha-page-numbers" 
    ( :sep "{" "arabic-numbers" :sep "." "arabic-numbers" :sep "}{" "ALPHA" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Appendix-page-numbers"
    ( :sep "{}{" "ALPHA" :sep "." "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "roman-page-numbers-Appendix-page-numbers" 
    ( :sep "{" "roman-numbers-lowercase" :sep "}{" "ALPHA" :sep "." "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Roman-page-numbers-Appendix-page-numbers" 
    ( :sep "{" "roman-numbers-uppercase" :sep "}{" "ALPHA" :sep "." "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "arabic-page-numbers-Appendix-page-numbers" 
    ( :sep "{" "arabic-numbers" :sep "}{" "ALPHA" :sep "." "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "alpha-page-numbers-Appendix-page-numbers" 
    ( :sep "{" "alpha" :sep "}{" "ALPHA" :sep "." "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Alpha-page-numbers-Appendix-page-numbers" 
    ( :sep "{" "ALPHA" :sep "}{" "ALPHA" :sep "." "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Appendix-page-numbers-Appendix-page-numbers" 
    ( :sep "{" "ALPHA" :sep "." "arabic-numbers" :sep "}{" "ALPHA" :sep "." "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "arabic-section-numbers-Appendix-page-numbers" 
    ( :sep "{" "arabic-numbers" :sep "." "arabic-numbers" :sep "}{" "ALPHA" :sep "." "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "arabic-section-numbers"
    ( :sep "{}{" "arabic-numbers" :sep "." "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "roman-page-numbers-arabic-section-numbers" 
    ( :sep "{" "roman-numbers-lowercase" :sep "}{" "arabic-numbers" :sep "." "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Roman-page-numbers-arabic-section-numbers" 
    ( :sep "{" "roman-numbers-uppercase" :sep "}{" "arabic-numbers" :sep "." "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "arabic-page-numbers-arabic-section-numbers" 
    ( :sep "{" "arabic-numbers" :sep "}{" "arabic-numbers" :sep "." "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "alpha-page-numbers-arabic-section-numbers" 
    ( :sep "{" "alpha" :sep "}{" "arabic-numbers" :sep "." "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Alpha-page-numbers-arabic-section-numbers" 
    ( :sep "{" "ALPHA" :sep "}{" "arabic-numbers" :sep "." "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "Appendix-page-numbers-arabic-section-numbers" 
    ( :sep "{" "ALPHA" :sep "." "arabic-numbers" :sep "}{" "arabic-numbers" :sep "." "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 (define-location-class "arabic-section-numbers-arabic-section-numbers" 
    ( :sep "{" "arabic-numbers" :sep "." "arabic-numbers" :sep "}{" "arabic-numbers" :sep "." "arabic-numbers" :sep "}" ) 
-   :min-range-length 2
+   :min-range-length 100
 ) 
 
 ; user defined location classes

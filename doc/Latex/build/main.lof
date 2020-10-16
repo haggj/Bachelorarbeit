@@ -11,8 +11,8 @@
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Diffie-Hellman diagram}}{4}{figure.caption.9}%
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Supersingular Isogeny Diffie-Hellman diagram}}{12}{figure.caption.21}%
 \contentsline {figure}{\numberline {1.5}{\ignorespaces \gls {SIDH} based on \textit {isogen} and \textit {isoex}}}{13}{figure.caption.23}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Isogeny-based PKE}}{14}{figure.caption.25}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Isogeny-based KEM}}{15}{figure.caption.27}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Isogeny-based \gls {PKE}}}{14}{figure.caption.25}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Isogeny-based \gls {KEM}}}{15}{figure.caption.27}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Flow chart of the benchmarking suite.}}{26}{figure.caption.37}%
@@ -21,8 +21,8 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Overall instructions for all parameter sets via \texttt {SIKE\_x64}}}{32}{figure.caption.42}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Maximum memory consumption for all parameter sets via \texttt {SIKE\_x64}}}{33}{figure.caption.43}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Overall instructions SIKE}}{34}{figure.caption.44}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Maximum memory consumption SIKE}}{35}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Overall instructions \gls {SIKE}}}{34}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Maximum memory consumption \gls {SIKE}}}{35}{figure.caption.45}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Overall instructions p434}}{37}{figure.caption.48}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Maximum memory consumption p434}}{37}{figure.caption.49}%
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Overall instructions p751}}{38}{figure.caption.50}%

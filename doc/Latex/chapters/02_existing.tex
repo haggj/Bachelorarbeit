@@ -1,12 +1,12 @@
-\chapter{Description of existing SIDH implementations}\label{chapter:existing_sidh}
-Currently, three implementations of Supersingular Isogeny Diffie-Hellman (SIDH) are available: \textit{SIKE}, \textit{CIRCL} and \textit{PQCrypto-SIDH}. In this chapter each implementation is introduced in detail. At the end of this chapter, \autoref{tab:existing_sidh} summarizes similarities and differences between all approaches.
+\chapter{Description of existing \gls{SIDH} implementations}\label{chapter:existing_sidh}
+Currently, three implementations of Supersingular Isogeny Diffie-Hellman (\gls{SIDH}) are available: \textit{\gls{SIKE}}, \textit{\gls{CIRCL}} and \textit{\gls{PQCrypto-SIDH}}. In this chapter each implementation is introduced in detail. At the end of this chapter, \autoref{tab:existing_sidh} summarizes similarities and differences between all approaches.
 \\
 In the following, some algorithms are described as \textit{compressed}. These compressed version exploit shorter public key sizes while increasing the computation time of the algorithms.
 
-\section{SIKE}
-SIKE stands for \textbf{S}upersingular \textbf{I}sogeny \textbf{K}ey \textbf{E}ncapsulation. It is the reference implementation of the first proposed isogeny-based cryptographic primitives \parencite{jao2011towards}. Today, SIKE is a NIST candidate for quantum-resist \textit{"Public-key Encryption and Key-establishment Algorithms"}. It is developed by a cooperation of researchers, lead by David Jao \parencite{sike2020spec}.
+\section{\gls{SIKE}}
+\gls{SIKE} stands for \textbf{S}upersingular \textbf{I}sogeny \textbf{K}ey \textbf{E}ncapsulation. It is the reference implementation of the first proposed isogeny-based cryptographic primitives \parencite{jao2011towards}. Today, \gls{SIKE} is a \gls{NIST} candidate for quantum-resist \textit{"Public-key Encryption and Key-establishment Algorithms"}. It is developed by a cooperation of researchers, lead by David Jao \parencite{sike2020spec}.
 \\
-SIKE implements its key encapsulation mechanism (KEM) upon a public key encryption system (PKE) which is built upon SIDH (as highlighted in \autoref{chapter:background}). Beside a generic reference implementation, SIKE offers various optimized implementations of their cryptographic primitves:
+\gls{SIKE} implements its key encapsulation mechanism (\gls{KEM}) upon a public key encryption system (\gls{PKE}) which is built upon \gls{SIDH} (as highlighted in \autoref{chapter:background}). Beside a generic reference implementation, \gls{SIKE} offers various optimized implementations of their cryptographic primitves:
 \begin{itemize}
   \item Generic optimized implementation, written in portable C
   \item x64 optimized implementation, partly written in x64 assembly
@@ -15,10 +15,10 @@ SIKE implements its key encapsulation mechanism (KEM) upon a public key encrypti
   \item ARM Cortex M4 optimized implementation, partly written in ARM thumb assembly
   \item VHDL implementation
 \end{itemize}
-All of these implementations can be run with the following parameter sets: \texttt{p434}, \texttt{p503}, \texttt{p610} and \texttt{p751}. SIKE asserts to countermeasure timing and cache attacks by implementing constant time cryptography~\parencite{sike2020spec}.
+All of these implementations can be run with the following parameter sets: \texttt{p434}, \texttt{p503}, \texttt{p610} and \texttt{p751}. \gls{SIKE} asserts to countermeasure timing and cache attacks by implementing constant time cryptography~\parencite{sike2020spec}.
 
-\subsubsection{SIKE API}
-The API of SIKE for a SIDH key exchange is the following:
+\subsubsection{\gls{SIKE} API}
+The API of \gls{SIKE} for a \gls{SIDH} key exchange is the following:
 
 
 \begin{lstlisting}[language=C, commentstyle=\color{Comment}\ttfamily, ,numbers=none, morekeywords={PrivateKey_A, PrivateKey_B, PublicKey_A, PublicKey_B, SharedSecret_A, SharedSecret_B}]
@@ -41,11 +41,11 @@ EphemeralSecretAgreement_A(PrivateKey_A, PublicKey_B, SharedSecret_A)
 EphemeralSecretAgreement_B(PrivateKey_B, PublicKey_A, SharedSecret_B)
 
 \end{lstlisting}
-All parameters used in this API are of type \texttt{unsigned char*}. Note that for all implementations and all parameter sets the API is the same. Therefore, during compilation one need to include the correct files to initialize SIKE with a specific parameter set.
+All parameters used in this API are of type \texttt{unsigned char*}. Note that for all implementations and all parameter sets the API is the same. Therefore, during compilation one need to include the correct files to initialize \gls{SIKE} with a specific parameter set.
 
-\section{PQCrypto-SIDH}
-PQCrypto-SIDH is a software library, mainly written in C. It is developed by Microsoft for experimental purposes \parencite{microsoft2020sidh}. Note that many developers of SIKE also work for Microsoft, leading to great similarities between SIKE and PQCrypto-SIDH. However, in terms of compression, SIKE references the below described Microsoft library in its documentation.\\
-The PQCrypto-SIDH library implements a isogney-based KEM and the underlying SIDH. Moreover, the library offers the following optimized versions:
+\section{\gls{PQCrypto-SIDH}}
+\gls{PQCrypto-SIDH} is a software library, mainly written in C. It is developed by Microsoft for experimental purposes \parencite{microsoft2020sidh}. Note that many developers of \gls{SIKE} also work for Microsoft, leading to great similarities between \gls{SIKE} and \gls{PQCrypto-SIDH}. However, in terms of compression, \gls{SIKE} references the below described Microsoft library in its documentation.\\
+The \gls{PQCrypto-SIDH} library implements a isogney-based \gls{KEM} and the underlying \gls{SIDH}. Moreover, the library offers the following optimized versions:
 \begin{itemize}
   \item Generic optimized implementation, written in portable C
   \item Generic optimized compressed implementation, written in portable C
@@ -55,8 +55,8 @@ The PQCrypto-SIDH library implements a isogney-based KEM and the underlying SIDH
   \item ARMv8 optimized compressed implementation, partly written in assembly
 \end{itemize}
 All of these implementations can be run with the following parameter sets: \texttt{p434}, \texttt{p503}, \texttt{p610} and \texttt{p751}. The developers argue that the algorithms are protected against timing and cache attacks. Therefore, the library implements constant time operations on secret key material~\parencite{microsoft2020sidh}.
-\subsubsection{PQCrypto-SIDH API}
-The API of PQCrypto-SIDH for a SIDH key exchange is the following:
+\subsubsection{\gls{PQCrypto-SIDH} API}
+The API of \gls{PQCrypto-SIDH} for a \gls{SIDH} key exchange is the following:
 
 \begin{lstlisting}[language=C, commentstyle=\color{Comment}\ttfamily, ,numbers=none, morekeywords={PrivateKey_A, PrivateKey_B, PublicKey_A, PublicKey_B, SharedSecret_A, SharedSecret_B}]
 // Generate random private key for Alice
@@ -80,9 +80,9 @@ EphemeralSecretAgreement_B_SIDHpXXX(PrivateKey_B, PublicKey_A, SharedSecret_B)
 \end{lstlisting}
 For XXX $\in$ \{\texttt{434, 503, 610, 751}\}. All parameters used in this API are of type \texttt{unsigned char*}.
 
-\section{CIRCL}
+\section{\gls{CIRCL}}
 
-CIRCL (\textbf{C}loudflare \textbf{I}nteroperable, \textbf{R}eusable \textbf{C}ryptographic \textbf{L}ibrary) is a collection of cryptographic primitives developed by Cloudflare ~\parencite{circl2020github}. CIRCL is written in Go and implements some quantum-secure algorithms like SIDH and an isogeny-based KEM. Cloudflare does not guarantee for any security within their library. Furthermore, the isogeny-based cryptographic primitives are adopted from the official SIKE implementation. The following implementation optimizations are stated to be available:
+\gls{CIRCL} (\textbf{C}loudflare \textbf{I}nteroperable, \textbf{R}eusable \textbf{C}ryptographic \textbf{L}ibrary) is a collection of cryptographic primitives developed by Cloudflare ~\parencite{circl2020github}. \gls{CIRCL} is written in Go and implements some quantum-secure algorithms like \gls{SIDH} and an isogeny-based \gls{KEM}. Cloudflare does not guarantee for any security within their library. Furthermore, the isogeny-based cryptographic primitives are adopted from the official \gls{SIKE} implementation. The following implementation optimizations are stated to be available:
 
 \begin{itemize}
   \item Generic optimized implementation, written in Go (unfortunately, this version could not be compiled)
@@ -91,8 +91,8 @@ CIRCL (\textbf{C}loudflare \textbf{I}nteroperable, \textbf{R}eusable \textbf{C}r
 \end{itemize}
 Note that there are no compressed versions available. The library supports the following parameter sets: \texttt{p434}, \texttt{p503} and \texttt{p751}. To avoid side-channel attacks, their code is implemented in constant time~\parencite{circl2019intro}.
 
-\subsubsection{CIRCL API}
-The API of CIRCL for a SIDH key exchange is the following:
+\subsubsection{\gls{CIRCL} API}
+The API of \gls{CIRCL} for a \gls{SIDH} key exchange is the following:
 
 \begin{lstlisting}[language=GO, commentstyle=\color{Comment}\ttfamily, ,numbers=none, morekeywords={PrivateKey_A, PrivateKey_B, PublicKey_A, PublicKey_B, SharedSecret_A, SharedSecret_B}]
 // Generate random private key for Alice
@@ -129,7 +129,7 @@ For XXX $\in$ \{\texttt{434, 503, 751}\}.
   \begin{tabular}{|K{3cm}|K{4cm}|K{4cm}|K{4cm}|}
 	\hline
     \rowcolor{lightgray!50}
-     & \textbf{SIKE} & \textbf{PQCrypto-SIDH} & \textbf{CIRCL} \\
+     & \textbf{\gls{SIKE}} & \textbf{\gls{PQCrypto-SIDH}} & \textbf{\gls{CIRCL}} \\
 	\hline
     \bfseries\makecell{Developer}& Research cooperation & Microsoft & Cloudflare \\
     \hline
@@ -138,7 +138,7 @@ For XXX $\in$ \{\texttt{434, 503, 751}\}.
     \bfseries\makecell{Reference} & \makecell{\url{www.sike.org}} & \makecell{Github:\\\href{https://github.com/microsoft/PQCrypto-SIDH}{PQCrypto-SIDH} }& \makecell{Github:\\\href{https://github.com/cloudflare/circl}{cloudflare/circl}}\\
     \hline
     \hline
-    \bfseries\makecell{Implemented \\ primitives} & \makecell{SIDH \\ PKE \\ KEM\\} & \makecell{SIDH \\ KEM\\} & \makecell{SIDH \\ KEM\\} \\
+    \bfseries\makecell{Implemented \\ primitives} & \makecell{\gls{SIDH} \\ \gls{PKE} \\ \gls{KEM}\\} & \makecell{\gls{SIDH} \\ \gls{KEM}\\} & \makecell{\gls{SIDH} \\ \gls{KEM}\\} \\
 	\hline
 	\bfseries\makecell{Available \\ parameters} & \makecell{p434 \\ p503 \\ p610 \\ p751\\} & \makecell{p434 \\ p503 \\ p610 \\ p751\\} & \makecell{p434 \\ p503 \\ p751\\} \\
 	\hline
@@ -148,5 +148,5 @@ For XXX $\in$ \{\texttt{434, 503, 751}\}.
 	\hline
 
   \end{tabular}
-   \caption[Existing SIDH implementations]{Overview of existing SIDH implementations.}\label{tab:existing_sidh}
+   \caption[Existing \gls{SIDH} implementations]{Overview of existing \gls{SIDH} implementations.}\label{tab:existing_sidh}
 \end{table}

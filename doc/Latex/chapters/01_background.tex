@@ -12,11 +12,11 @@ In modern cryptography one can distinguish between \textit{symmetric} and \texti
   \includegraphics[width=0.8\textwidth]{background/symmetric_encryption}
   \caption[Symmetric encryption scheme]{Simple symmetric encryption scheme: Encryption and decryption algorithm use the same key.} \label{fig:symmetric-encryption}
 \end{figure}
-In the following, symmetric decryption and encryption is expressed in a more formal way. The common key \textit{k} is used for encryption (\textit{Enc}) and decryption (\textit{Dec}), \textit{p} is the plaintext and \textit{c} is the ciphertext:
+In the following, symmetric decryption and encryption is expressed in a more formal way. The common key \textit{k} is used for encryption (\textit{\gls{Enc}}) and decryption (\textit{\gls{Dec}}), \textit{p} is the plaintext and \textit{c} is the ciphertext:
 
 \begin{align*}
-Enc(p, k) = c\\
-Dec(c, k) = p
+\gls{Enc}(p, k) = c\\
+\gls{Dec}(c, k) = p
 \end{align*}
 
 \subsubsection{Asymmetric Cryptography}
@@ -32,8 +32,8 @@ In asymmetric cryptography each participating subject needs to generate a key pa
 To formalize this procedure, again assume \textit{p} as plaintext and \textit{c} as ciphertext. The generated key pair of Bob consists of a private key for decryption ($d_{Bob}$) and a public key for encryption ($e_{Bob}$).
 
 \begin{align*}
-Enc(p, e_{Bob}) = c\\
-Dec(c, d_{Bob}) = p
+\gls{Enc}(p, e_{Bob}) = c\\
+\gls{Dec}(c, d_{Bob}) = p
 \end{align*}
 \\
 In contrast to \textit{symmetric} encryption, no secret key needs to be exchanged. However, the encryption and decryption of data using \textit{asymmetric} encryption require intensive mathematical computations. Hence, the encryption of big sets of data using asymmetric encryption is not efficient.\\
@@ -74,7 +74,7 @@ k_{AB} & = A^b mod p \\
  & = g^{a b} mod p
 \end{split}
 \end{equation}
-\item Alice and Bob created the shared secret $k_{AB}$. Note that only the public keys of Alice and Bob were sent through an insecure channel. The generated secret was calculated locally by Alice and Bob.
+\item Alice and Bob created the shared secret \gls{k_ab}. Note that only the public keys of Alice and Bob were sent through an insecure channel. The generated secret was calculated locally by Alice and Bob.
 \end{enumerate}
 This procedure can also be illustrated in the following diagram emphasizing the commutative properties of the protocol. It does not make any difference which function is applied first to the starting point $g$ ($x \to x^a$ or $x \to x^b$). The result is the same, since $g^{ab} = g^{ba}$.
 
@@ -86,7 +86,7 @@ This procedure can also be illustrated in the following diagram emphasizing the 
 \end{figure}
 
 \subsubsection{Security}
-If an attacker wants to compute $k_{AB}$, she needs to compute the private keys $A$ and $B$ of Alice and Bob. Since only the public keys are exchanged, the attacker needs to compute:
+If an attacker wants to compute \gls{k_ab}, she needs to compute the private keys $A$ and $B$ of Alice and Bob. Since only the public keys are exchanged, the attacker needs to compute:
 \begin{equation*}
 \begin{split}
 b &= log_g\:B\:mod\;p\\ 
@@ -95,17 +95,17 @@ a &= log_g\:A\:mod\;p
 \end{equation*}
 \\
 Hence, the security of the classical Diffie-Hellman key exchange is based on the discrete logarithm problem considered difficult to be solved by classical computers (see \autoref{discrete_log_problem}). However, if an attacker is able to solve this challenge, this would neither compromise any keys from the past nor any future keys of the communication (this is called \textit{perfect forward secrecy}, short \textit{\gls{PFS}}~\parencite{ITSicherheit}). Another Diffie-Hellman handshake would challenge the attacker with the discrete logarithm problem again. Thus, the Diffie-Hellman key exchange may be used as efficient perfect forward secrecy (\gls{PFS}) protocol when keys are renewed regularly.\\
-In modern cryptography elliptic curves are often used to increase the security of the Diffie-Hellman key exchange (\gls{ECDH}). The participants have to agree on an elliptic curve and a point $P$ on that curve. In order to generate a shared secret $k_{AB}$ \gls{ECDH} follows the same principles as described above. However, the protocol is adopted to work on elliptic curves. The advantage of \gls{ECDH} is the increased security strength while using the same key size as the classical Diffie-Hellman protocol~\parencite{ITSicherheit}.
+In modern cryptography elliptic curves are often used to increase the security of the Diffie-Hellman key exchange (\gls{ECDH}). The participants have to agree on an elliptic curve and a point $P$ on that curve. In order to generate a shared secret \gls{k_ab} \gls{ECDH} follows the same principles as described above. However, the protocol is adopted to work on elliptic curves. The advantage of \gls{ECDH} is the increased security strength while using the same key size as the classical Diffie-Hellman protocol~\parencite{ITSicherheit}.
 \\
 Note that the introduced protocol does not authorize the participating subjects and does not guarantee integrity. Thus, this simple protocol may be exploited by a Man-In-The-Middle attack. A more advanced protocol using certificates and signed messages can be implemented, to guarantee authentication and integrity~\parencite{ITSicherheit}.
 
 \subsection{Key Encapsulation}
 
-A Key Encapsulation Mechanism (KEM) transmits a previously generated symmetric key to another subject. KEMs usually use asymmetric key pairs in order to encrypt the generated symmetric key. In the following, the concept of KEMs is illustrated by the PKCS \#1 v1.5 algorithm which uses \gls{RSA} key pairs to transmit a shared secret from Alice to Bob \parencite{rsakem}:
+A Key Encapsulation Mechanism (\gls{KEM}) transmits a previously generated symmetric key to another subject. \glspl{KEM} usually use asymmetric key pairs in order to encrypt the generated symmetric key. In the following, the concept of \glspl{KEM} is illustrated by  \gls{rsa_kem} using \gls{RSA} key pairs to transmit a shared secret from Alice to Bob \parencite{rsakem}:
 
 \begin{enumerate}
 \item Bob generates a \gls{RSA} key pair (public key $e_{Bob}$ and private key $d_{Bob}$) and transmits the public key to Alice.
-\item Alice generates a random secret key $k_{AB}$:
+\item Alice generates a random secret key \gls{k_ab}:
 \begin{equation*}
 k_{AB} = random()
 \end{equation*}
@@ -129,12 +129,12 @@ k_{AB} = h^{-1}(m1)
 \end{enumerate}
 
 \subsubsection{Security}
-If an attacker wants to compute $k_{AB}$ it is necessary to break the \gls{RSA} encryption $RSA_{enc}(m, e_{Bob})$ in order to reveal $m$. Applying the inverse mapping function $h^{-1}$ then yields the secret key $k_{AB}$. In order to break the \gls{RSA} encryption the attacker needs to compute the private key of Bob given his public key. This computation is assumed to be equally demanding as solving the factorization problem (see \autoref{factorization_problem}) for big numbers~\parencite{rsa2005problem}.\\
-Note that once an attacker was able to compromise Bobs private key, all following exchanged shared secrets $k_{AB}$ are compromised as well. Thus, this protocol does not ensure perfect forward secrecy (\gls{PFS}).
+If an attacker wants to compute \gls{k_ab} it is necessary to break the \gls{RSA} encryption $RSA_{enc}(m, e_{Bob})$ in order to reveal $m$. Applying the inverse mapping function $h^{-1}$ then yields the secret key \gls{k_ab}. In order to break the \gls{RSA} encryption the attacker needs to compute the private key of Bob given his public key. This computation is assumed to be equally demanding as solving the factorization problem (see \autoref{factorization_problem}) for big numbers~\parencite{rsa2005problem}.\\
+Note that once an attacker was able to compromise Bobs private key, all following exchanged shared secrets \gls{k_ab} are compromised as well. Thus, this protocol does not ensure perfect forward secrecy (\gls{PFS}).
 
 \subsection{Differences}
-Both presented key exchange protocols securely share a symmetric encryption key between two communicating subjects. However, there are some differences between KEM and Diffie-Hellman. Firsty, while KEMs transmit a shared secret from one subject to another, the calculation in the Diffie-Hellman protocol is decentralized. Thus, the shared secret will never be send through an insecure channel.\\
-Secondly, KEM relies on a long-term asymmetric key pair which is used to encapsulate and dencapsulate the randomly chosen shared secret. If the private key is compromised by an attacker, all following symmetric encrypted communication could be revealed. On the contrary, a compromised Diffie-Hellman key exchange would only affect the messages which are encrypted using the secret resulting from that single Diffie-Hellman handshake. All following \gls{DH} key exchanges are not compromised from the previously compromised exchange. In literature this is called \textit{perfect forward secrecy (\gls{PFS})}~\parencite{ITSicherheit}.
+Both presented key exchange protocols securely share a symmetric encryption key between two communicating subjects. However, there are some differences between \gls{KEM} and Diffie-Hellman. Firsty, while \glspl{KEM} transmit a shared secret from one subject to another, the calculation in the Diffie-Hellman protocol is decentralized. Thus, the shared secret will never be send through an insecure channel.\\
+Secondly, \gls{KEM} relies on a long-term asymmetric key pair which is used to encapsulate and dencapsulate the randomly chosen shared secret. If the private key is compromised by an attacker, all following symmetric encrypted communication could be revealed. On the contrary, a compromised Diffie-Hellman key exchange would only affect the messages which are encrypted using the secret resulting from that single Diffie-Hellman handshake. All following \gls{DH} key exchanges are not compromised from the previously compromised exchange. In literature this is called \textit{perfect forward secrecy (\gls{PFS})}~\parencite{ITSicherheit}.
 
 \section{Post-Quantum Cryptography}
 This section introduces the term \textit{quantum computer} and describes its consequences on modern cryptography. In the following, a \textit{classical computer} refers to a non-quantum computer which can be simulated by a deterministic Turing machine. In contrast to \textit{classical computer} the term \textit{quantum computer} describes a machine using quantum mechanical phenomena to perform computations. It is important to note that quantum computers can simulate classical computers~\parencite{nielsen2002quantum}. In addition, classical computer are able to simulate quantum computers with exponential time overhead~\parencite{nielsen2002quantum}. Thus, classical and quantum computers can calculate the same class of functions. However, quantum computers enable operations allowing much faster computation~\parencite{nielsen2002quantum}.\\
@@ -150,7 +150,7 @@ The discrete logarithm problem consists in the following challenge \parencite{be
 \iff &x = log_g\;y\:mod p
 \end{split}
 \end{equation*}
-Up to this date, it it remains still unknown if a classical computer is able to compute the general discrete logarithm problem in polynomial time. Thus, the discrete logarithm problem is considered difficult to be solved by classical computers~\parencite{beutelspacher2010diskrete}. This assumption makes the discrete logarithm problem an attractive basis for various cryptographic primitives: DSA, ElGamal, classical Diffie-Hellman, and Elliptic Curve Diffie-Hellman (\gls{ECDH}) exploit the hardness of the discrete logarithm problem in order to secure their algorithms.
+Up to this date, it it remains still unknown if a classical computer is able to compute the general discrete logarithm problem in polynomial time. Thus, the discrete logarithm problem is considered difficult to be solved by classical computers~\parencite{beutelspacher2010diskrete}. This assumption makes the discrete logarithm problem an attractive basis for various cryptographic primitives: \gls{DSA}, ElGamal, classical Diffie-Hellman, and Elliptic Curve Diffie-Hellman (\gls{ECDH}) exploit the hardness of the discrete logarithm problem in order to secure their algorithms.
 
 \subsubsection{Factorization Problem} \label{factorization_problem}
 
@@ -173,7 +173,7 @@ The second algorithm impacting computer security was published by Lov Grover in 
 In contrast to public-key systems that relay on hard mathematical problems, symmetric encryption schemes relay on the secrecy of a randomly generated key. 
 Thus, to break symmetric encryption, one needs to perform a brute-force attack on the symmetric key. \textit{Grover's algorithm} offers a square root speed up on classical brute-force attacks~\parencite{mavroeidis2018impact}. Assume a randomly generated $n$-bit key. A classical brute force algorithm lies in $\mathcal{O}(2^n)$, which is considered to be safe for a big $n$ (e.g. $n$=128). \textit{Grover's algorithm} speeds up this attack to $\mathcal{O}(\sqrt{2^n})$ = $\mathcal{O}(2^{n/2})$~\parencite{mavroeidis2018impact}. However, the complexity is still exponential and with a growing key size $n$ the security can be increased further. Thus, \textit{Grover's algorithm} forces symmetric encryption schemes to increase their key size in order to stay secure.
 \\\\
-Summing up, quantum computers make use of quantum mechanical phenomena in order to solve mathematical problems which are assumed to be difficult for classical computers. As a result large-scale quantum computers might break many algorithms of modern \textit{asymmetric} cryptography and enforce increased key sizes for \textit{symmetric} encryption schemes. The following table form the NIST \textit{"Report on Post-Quantum Cryptography"} \parencite{chen2016report} demonstrates the impact of quantum computers on modern encryption schemes:
+Summing up, quantum computers make use of quantum mechanical phenomena in order to solve mathematical problems which are assumed to be difficult for classical computers. As a result large-scale quantum computers might break many algorithms of modern \textit{asymmetric} cryptography and enforce increased key sizes for \textit{symmetric} encryption schemes. The following table form the \gls{NIST} \textit{"Report on Post-Quantum Cryptography"} \parencite{chen2016report} demonstrates the impact of quantum computers on modern encryption schemes:
 
 \begin{table}[H]
   \centering
@@ -182,45 +182,45 @@ Summing up, quantum computers make use of quantum mechanical phenomena in order 
     \rowcolor{lightgray!50}
       \textbf{Cryptographic} \textbf{algorithm} & \textbf{Type} & \textbf{Purpose} & \textbf{Impact from} \textbf{ quantum computer} \\
 	\hline
-      AES & Symmetric key & Encryption & Larger key sizes needed \\
+      \gls{AES} & Symmetric key & Encryption & Larger key sizes needed \\
     \hline
-      SHA & --- & Hash functions & Larger output needed \\
+      \gls{SHA} & --- & Hash functions & Larger output needed \\
     \hline
       \gls{RSA} & Public key & Signatures, key establishment & No longer secure \\
 	\hline      
-      DSA & Publiy key & Signatures, key exchange & No longer secure \\
+      \gls{DSA} & Publiy key & Signatures, key exchange & No longer secure \\
     \hline
-      \gls{ECDH}, ECDSA & Public key & Signatures, key exchange & No longer secure \\
+      \gls{ECDH}, \gls{ECDSA} & Public key & Signatures, key exchange & No longer secure \\
     \hline
   \end{tabular}
   \caption[Impact of quantum computers on modern encryption schemes]{Impact of quantum computers on modern encryption schemes (adopted from \parencite{chen2016report}).}\label{tab:impact}
 \end{table}
 
-In contrast to this development in modern cryptography NIST states~\parencite{chen2016report}:
+In contrast to this development in modern cryptography \gls{NIST} states~\parencite{chen2016report}:
 \begin{quote}
 \textit{"In the last three decades, public key cryptography has become an indispensable component of our global communication digital infrastructure. These networks support a plethora of applications that are important to our economy, our security, and our way of life, such as mobile phones, internet commerce, social networks, and cloud computing. In such a connected world, the ability of individuals, businesses and governments to communicate securely is of the utmost importance."}
 \end{quote}
-This statement emphasizes the urgency and need of new asymmetric encryption schemes. As a consequence, NIST initiated a process to standardize quantum-secure public-key algorithms. This is called \textit{post-quantum cryptography}, since the objectives of the submitted procedures is to stay secure against a large-scale quantum computer. In July 2020, Round 3 of this standardization process was announced. Different approaches for quantum-resistant algorithms have been proposed. This thesis focus on isogeny-based cryptography (section \ref{sec:isogeny-based_crypto}). Other classes of post-quantum cryptography are described for completeness in the following section \ref{sec:classes_pqc}.
+This statement emphasizes the urgency and need of new asymmetric encryption schemes. As a consequence, \gls{NIST} initiated a process to standardize quantum-secure public-key algorithms. This is called \textit{post-quantum cryptography}, since the objectives of the submitted procedures is to stay secure against a large-scale quantum computer. In July 2020, Round 3 of this standardization process was announced. Different approaches for quantum-resistant algorithms have been proposed. This thesis focus on isogeny-based cryptography (section \ref{sec:isogeny-based_crypto}). Other classes of post-quantum cryptography are described for completeness in the following section \ref{sec:classes_pqc}.
 
 \subsection{Classes of Post-Quantum Cryptography} \label{sec:classes_pqc}
 
 This section provides an overview over important post-quantum cryptography classes: Lattice-based, multivariate and code-based cryptography as well as hash-based signatures are briefly presented. 
 
 \subsubsection{Lattice-based Cryptography}
-Lattice-based cryptography is - as the name suggests - based on the mathematical construct of lattices\footnote{A lattice $l$ is a subgroup of $\mathbb{R}^n$. In the context of cryptography usually integer lattices are considered: $l \subseteq \mathbb{Z}^n$ \parencite{chi2015lattice}.}. There are different computational optimization problems involving lattices that are considered difficult to be solved even by quantum computers~\parencite{chi2015lattice}. In 1998, NTRU was published as the first public-key system based on lattices ~\parencite{hoffstein1998ntru}. Since then NTRU was continuously improved resulting in NTRUencrypt (public-key system) and NTRUsign (digital signing algorithm). Furthermore, a fully homomorphic encryption scheme based on lattices was published in 2009~\parencite{gentry2009fully}.\\
-Lattice-based cryptography is characterized by simplicity and efficiency \parencite{chen2016report}. The security of existing implementations (NTRU or Ring-LWE) can be reduced to NP-hard problems. However, lattices encryption schemes have problems to prove security against known cryptoanalysis \parencite{chen2016report}.
+Lattice-based cryptography is - as the name suggests - based on the mathematical construct of lattices\footnote{A lattice $l$ is a subgroup of $\mathbb{R}^n$. In the context of cryptography usually integer lattices are considered: $l \subseteq \mathbb{Z}^n$ \parencite{chi2015lattice}.}. There are different computational optimization problems involving lattices that are considered difficult to be solved even by quantum computers~\parencite{chi2015lattice}. In 1998, \gls{NTRU} was published as the first public-key system based on lattices ~\parencite{hoffstein1998ntru}. Since then \gls{NTRU} was continuously improved resulting in NTRUencrypt (public-key system) and \gls{NTRUsign} (digital signing algorithm). Furthermore, a fully homomorphic encryption scheme based on lattices was published in 2009~\parencite{gentry2009fully}.\\
+Lattice-based cryptography is characterized by simplicity and efficiency \parencite{chen2016report}. The security of existing implementations (\gls{NTRU} or Ring-LWE) can be reduced to NP-hard problems. However, lattices encryption schemes have problems to prove security against known cryptoanalysis \parencite{chen2016report}.
 \subsubsection{Multivariate Cryptography}
 Multivariate cryptography are public key systems that are based on multivariate polynomials (e.g. $p(x,y)=x+2y$) over a finite field $\mathbb{F}$. The proof that solving systems of multivariate polynomials are NP-hard~\parencite{hartmanis1982computers} is the bsis of their security. This makes multivariate public key systems attractive for post-quantum cryptography; especially their short signatures make them a candidate for quantum-secure digital signature algorithms~\parencite{ding2017current}, e.g. the Rainbow signature scheme~\parencite{ding2005rainbow}.
 \subsubsection{Code-based Cryptography}
-Code-based cryptographic primitives are build upon error-correcting codes. A public key system using error-correcting codes uses a public key to add errors to a given plaintext resulting in a ciphertext. Only the owner of the private key is able to correct these errors and to reconstruct the plaintext~\parencite{bernstein2017post}. McEliece, published in 1978, was the first of those systems and it has not been broken until today~\parencite{mceliece1978public}. On the other hand, code-based cryptography requires large key sizes~\parencite{bernstein2017post}.\\
+Code-based cryptographic primitives are build upon error-correcting codes. A public key system using error-correcting codes uses a public key to add errors to a given plaintext resulting in a ciphertext. Only the owner of the private key is able to correct these errors and to reconstruct the plaintext~\parencite{bernstein2017post}. \gls{McEliece}, published in 1978, was the first of those systems and it has not been broken until today~\parencite{mceliece1978public}. On the other hand, code-based cryptography requires large key sizes~\parencite{bernstein2017post}.\\
 Besides asymmetric cryptography, code-based schemes have been proposed for digital signatures, random number generators and cryptographic hash functions~\parencite{bernstein2017post}.
 \subsubsection{Hash-based Signatures}
 Hash-based signatures refer to the construction of digital signatures schemes based on hash functions. Thus, the security of theses primitives is based on the security of the underlying hash function and not on hard algorithmic problems~\parencite{bernstein2017post}. Since hash functions are widely deployed in modern computer systems, the security of hash-based signatures is well understood~\parencite{chen2016report}.\\
-The initially developed One-Time Signatures have the downside that a new public key pair is needed for each signature~\parencite{becker2008merkle}. In 1979, Merkle introduced the Merkle Signature Scheme (MSS) which uses one public key for multiple signatures~\parencite{merkle1979secrecy}. Further improvements of MSS introduced public keys usable for $2^{80}$ signatures. However, this also leads to longer signature sizes~\parencite{becker2008merkle}.
+The initially developed One-Time Signatures have the downside that a new public key pair is needed for each signature~\parencite{becker2008merkle}. In 1979, Merkle introduced the Merkle Signature Scheme (\gls{MSS}) which uses one public key for multiple signatures~\parencite{merkle1979secrecy}. Further improvements of \gls{MSS} introduced public keys usable for $2^{80}$ signatures. However, this also leads to longer signature sizes~\parencite{becker2008merkle}.
 
 \section{Isogeny-based Cryptography} \label{sec:isogeny-based_crypto}
-Isogeny-based cryptography was proposed in 2011 as a new cryptographic system that might resists quantum computing~\parencite{jao2011towards}. Besides the publication describing isogeny-based cryptgraphy, the authors also provided a reference implementation of a public key system called \textit{SIKE}~\parencite{sike2020spec}. Isogeny-based cryptography benfits from small key sizes compared to other post-quantum cryptography classes, however, their performance is comparatively slow~\parencite{sike2020spec}. The security of these primitives is based on finding isogenies between supersingular elliptic curves.\\
-In the following, the problem is roughly illustrated. It is not indented to provide exact details about the mathematics of isogeny-based cryptography, since that would be beyond the scope. However, one might become a basic understanding of the magic behind supersingular isogenies. Subsequently, the central component of isogeny-based cryptography - namely the Supersingular Isogeny Diffie Hellman (\gls{SIDH}) - is described. Finally, details of the reference implementation SIKE are given and the security of \gls{SIDH} is considered.
+Isogeny-based cryptography was proposed in 2011 as a new cryptographic system that might resists quantum computing~\parencite{jao2011towards}. Besides the publication describing isogeny-based cryptgraphy, the authors also provided a reference implementation of a public key system called \textit{\gls{SIKE}}~\parencite{sike2020spec}. Isogeny-based cryptography benfits from small key sizes compared to other post-quantum cryptography classes, however, their performance is comparatively slow~\parencite{sike2020spec}. The security of these primitives is based on finding isogenies between supersingular elliptic curves.\\
+In the following, the problem is roughly illustrated. It is not indented to provide exact details about the mathematics of isogeny-based cryptography, since that would be beyond the scope. However, one might become a basic understanding of the magic behind supersingular isogenies. Subsequently, the central component of isogeny-based cryptography - namely the Supersingular Isogeny Diffie Hellman (\gls{SIDH}) - is described. Finally, details of the reference implementation \gls{SIKE} are given and the security of \gls{SIDH} is considered.
 
 \subsection{Mathematics}
 This section is adopted from~\citetitle{urbanik2017friendly}~\parencite{urbanik2017friendly} and~\citetitle{costello2019supersingular}~\parencite{costello2019supersingular}.\\
@@ -268,7 +268,7 @@ Starting point of \gls{SIDH} is a publicly known supersingular elliptic curve E.
 
 \subsection{Implemenation Details}
 
-The reference implementation of SIKE \parencite{sike2020spec} provides two fundamental functions: \textit{isogen} and \textit{isoex}. Both are used, to implement the previously introduced Supersingular Isogeny Diffie-Hellman (\gls{SIDH}) algorithm. Note that the secret key \textit{sk} is represented as a random integer.
+The reference implementation of \gls{SIKE} \parencite{sike2020spec} provides two fundamental functions: \textit{isogen} and \textit{isoex}. Both are used, to implement the previously introduced Supersingular Isogeny Diffie-Hellman (\gls{SIDH}) algorithm. Note that the secret key \textit{sk} is represented as a random integer.
 \\
 
 \begin{table}[H]
@@ -283,7 +283,7 @@ The reference implementation of SIKE \parencite{sike2020spec} provides two funda
       \textit{isoex} & secret key \textit{sk}, public key \textit{pk} & shared secret \textit{sec}\\
      \hline
   \end{tabular}
-   \caption[Core functions of the SIKE reference implementation]{Core functions of the SIKE reference implementation.}\label{tab:sike_core_functions}
+   \caption[Core functions of the \gls{SIKE} reference implementation]{Core functions of the \gls{SIKE} reference implementation.}\label{tab:sike_core_functions}
 \end{table}
 
 The function \textit{isogen} takes a secret key (random integer) as input and generates the public key. The shared secret is generated by \textit{isoex} taking the own secret key and the foreign public key as input. The \gls{SIDH} key exchange procedure with respect to \textit{isogen} and \textit{isoex} works as follows:
@@ -294,42 +294,42 @@ The function \textit{isogen} takes a secret key (random integer) as input and ge
   \includegraphics[width=0.6\textwidth]{background/sike_sidh}
   \caption[\gls{SIDH} based on \textit{isogen} and \textit{isoex}]{\gls{SIDH} based on \textit{isogen} and \textit{isoex}: After generating a random secret key \textit{sk} each subject computes its public key \textit{pk}. After the exchange of public keys each subject finally calculates the shared secret \textit{sec}.} \label{fig:sike-sidh}
 \end{figure}
-Beside this key exchange algorithm, SIKE provides a complete asymmetric encryption scheme  and a key encpsulation mechansim  ~\parencite{sike2020spec}. Both of these schemes build upon the here described SIKE core functions \textit{isogen} and \textit{isoex}.
+Beside this key exchange algorithm, \gls{SIKE} provides a complete asymmetric encryption scheme  and a key encpsulation mechansim  ~\parencite{sike2020spec}. Both of these schemes build upon the here described \gls{SIKE} core functions \textit{isogen} and \textit{isoex}.
 
-\subsubsection{Isogeny-based PKE}
-The isogeny-based public key encryption system (PKE, \autoref{fig:sike-pke}) consists of three algorithms:
+\subsubsection{Isogeny-based \gls{PKE}}
+The isogeny-based public-key encryption system (\gls{PKE}, \autoref{fig:sike-pke}) consists of three algorithms:
 \begin{enumerate}
 \item \textit{Gen} generates a key pair \textit{(sk, pk)}.
-\item \textit{Enc} encrypts a given plaintext $m$ using a foreign public key \textit{pk} and the own secret key \textit{r}.
-\item \textit{Dec} decodes a given cipthertext using the own secret key \textit{sk}
+\item \textit{\gls{Enc}} encrypts a given plaintext $m$ using a foreign public key \textit{pk} and the own secret key \textit{r}.
+\item \textit{\gls{Dec}} decodes a given cipthertext using the own secret key \textit{sk}
 \end{enumerate}
-Note that the function $F$ used in \textit{Enc} and \textit{Dec} is a key derivation function.
+Note that the function $F$ used in \textit{\gls{Enc}} and \textit{\gls{Dec}} is a key derivation function.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{background/sike_asym}
-  \caption[Isogeny-based PKE]
-  {Isogeny-based public key encryption (PKE) scheme.} \label{fig:sike-pke}
+  \caption[Isogeny-based \gls{PKE}]
+  {Isogeny-based public-key encryption (\gls{PKE}) scheme.} \label{fig:sike-pke}
 \end{figure}
 
-\subsubsection{Isogeny-based KEM}
-The isogeny-based key encapsulation mechanism (KEM, \autoref{fig:sike-kem}) consists of three algorithms:
+\subsubsection{Isogeny-based \gls{KEM}}
+The isogeny-based key encapsulation mechanism (\gls{KEM}, \autoref{fig:sike-kem}) consists of three algorithms:
 \begin{enumerate}
 \item \textit{Gen} generates a key pair \textit{(sk, pk)} and a secret \textit{s}.
 \item \textit{Ecnaps} takes a given public key as input and calculates a secret to share named \textit{K}. Moreover, the function returns a ciphertext \textit{c} that will be forwarded to the owner of the public key.
-\item \textit{Dec} takes a ciphertext \textit{c} and the output of \textit{Gen} as input in order to retrieve the shared secret \textit{K}.
+\item \textit{\gls{Dec}} takes a ciphertext \textit{c} and the output of \textit{Gen} as input in order to retrieve the shared secret \textit{K}.
 \end{enumerate}
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{background/sike_kem}
-  \caption[Isogeny-based KEM]
-  {Isogeny-based key encapsulation mechanism (KEM).} \label{fig:sike-kem}
+  \caption[Isogeny-based \gls{KEM}]
+  {Isogeny-based key encapsulation mechanism (\gls{KEM}).} \label{fig:sike-kem}
 \end{figure}
 
 \subsection{Security}\label{sidh_security}
 The security of isogeny-based cryptography is based on the hardness of the \textit{\gls{SIDH} problem}: Given two supersingular elliptic curves $E$ and $E'$, find an isogeny between them~\parencite{sike2020spec}. 
 \\
-The SIKE reference implementation proposes different parameter sets, each supposing to ensure a NIST defined security level. These NIST defined security levels are:
+The \gls{SIKE} reference implementation proposes different parameter sets, each supposing to ensure a \gls{NIST} defined security level. These \gls{NIST} defined security levels are:
 \begin{enumerate}
 \itemsep0em 
 	\item Any attack breaking this security level must require resources comparable to perform a key search on a 128-bit key (e.g. AES128).
@@ -338,16 +338,16 @@ The SIKE reference implementation proposes different parameter sets, each suppos
 	\item Any attack breaking this security level must require resources comparable to perform a collision search search on a 384-bit hash function (e.g. SHA384).
 	\item Any attack breaking this security level must require resources comparable to perform a key search on a 256-bit key (e.g. AES256).
 \end{enumerate}
-The proposed parameter sets of SIKE are named after the bit length of the underlying primes:
+The proposed parameter sets of \gls{SIKE} are named after the bit length of the underlying primes:
 
 \begin{itemize}
 \itemsep0em 
-	\item \texttt{SIKEp434} supposed to satisfy NIST securiy level 1 (AES128)
-	\item \texttt{SIKEp503} supposed to satisfy NIST securiy level 2 (SHA256)
-	\item \texttt{SIKEp610} supposed to satisfy NIST securiy level 3 (AES192)
-	\item \texttt{SIKEp751} supposed to satisfy NIST securiy level 5 (AES256)
+	\item \texttt{SIKEp434} supposed to satisfy \gls{NIST} securiy level 1 (AES128)
+	\item \texttt{SIKEp503} supposed to satisfy \gls{NIST} securiy level 2 (SHA256)
+	\item \texttt{SIKEp610} supposed to satisfy \gls{NIST} securiy level 3 (AES192)
+	\item \texttt{SIKEp751} supposed to satisfy \gls{NIST} securiy level 5 (AES256)
 \end{itemize}
-Current research suggest that the SIKE parameter sets satisfy the defined security levels even under the assumption of currently known algorithms~\parencite{jaques2019quantum}. Therefore, the authors consider three algorithms to solve the \textit{\gls{SIDH} problem}: \textit{Tani's quantum claw finding algorithm}~\parencite{tani2009claw}, \textit{Grover's algorithm}~\parencite{grover1996fast} and a \textit{parallel collision-finding algorithm}~\parencite{van1999parallel}.
+Current research suggest that the \gls{SIKE} parameter sets satisfy the defined security levels even under the assumption of currently known algorithms~\parencite{jaques2019quantum}. Therefore, the authors consider three algorithms to solve the \textit{\gls{SIDH} problem}: \textit{Tani's quantum claw finding algorithm}~\parencite{tani2009claw}, \textit{Grover's algorithm}~\parencite{grover1996fast} and a \textit{parallel collision-finding algorithm}~\parencite{van1999parallel}.
 \\\\
 Ephemeral \gls{SIDH} keys are predestined to implement quantum-secure perfect forward secrecy protocols (\gls{PFS})~\parencite{koziel2018high}. \gls{PFS} ensures that a compromised long-term key does not reveal past or future keys of the protocol.
 \\\\
