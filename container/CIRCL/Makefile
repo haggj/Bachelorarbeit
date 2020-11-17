@@ -7,21 +7,22 @@ build:
 	@ echo "building p$(PARAM)$(COMPRESSED)..."
 	@ mkdir -p "build"
 	@ mkdir -p "lib"
-	@ cd go; go build -tags "p$(PARAM) $(VERSION)" -gcflags="all=-l" -o ../build/benchmark
+	@ echo $(VERSION)
+	@ cd go; go build -tags "p$(PARAM) $(ARCH) $(ASM)" -gcflags="all=-l" -o ../build/benchmark
 	@ echo "\e[32mSUCCESS\e[0m"
 
 
 callgrind:
 	@ mkdir -p "benchmarks"
 	@ echo "Running callgrind..."
-	# @ sudo ../drop-caches.sh
+	# @ sudo ../helper/drop-caches.sh
 	@ valgrind --tool=callgrind --callgrind-out-file=benchmarks/callgrind.out build/benchmark  2> /dev/null
 	@ echo "\e[32mSUCCESS\e[0m"
 
 massif:
 	@ mkdir -p "benchmarks"
 	@ echo "Running massif..."
-	# @ sudo ../drop-caches.sh
+	# @ sudo ../helper/drop-caches.sh
 	@ valgrind --tool=massif --stacks=yes --massif-out-file=benchmarks/massif.out build/benchmark  2> /dev/null
 	@ echo "\e[32mSUCCESS\e[0m"
 

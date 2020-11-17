@@ -4,7 +4,7 @@ from src.sike import Sike_Generic, Sike_Generic_Compressed
 from src.sike import Sike_x64, Sike_x64_Compressed
 from src.sike import Sike_Reference
 
-from src.circl import CIRCL_x64
+from src.circl import CIRCL_x64, CIRCL_Generic
 
 from src.microsoft import Microsoft_x64, Microsoft_x64_Compressed
 from src.microsoft import Microsoft_Generic, Microsoft_Generic_Compressed
@@ -22,6 +22,12 @@ RESULTS = {}
 
 def benchmark(Class):
     name = Class.__name__
+
+    instance = Class(N)
+
+    #print(name)
+    #ins_per_cyc = instance.perf()
+
     if name not in RESULTS:
         instance = Class(N)
         RESULTS[name] = instance.get_statistics()
@@ -36,7 +42,7 @@ if __name__ == "__main__":
 
     implementations =[
         #ECDH
-        ECDH,
+        #ECDH,
 
         # #SIKE
         Sike_Reference,
@@ -47,6 +53,7 @@ if __name__ == "__main__":
 
         #CIRCL
         CIRCL_x64,
+        CIRCL_Generic,
 
         # #MICROSOFT
         Microsoft_Generic,
@@ -58,6 +65,7 @@ if __name__ == "__main__":
     for implementation in implementations:
         benchmark(implementation)
 
+    print(RESULTS["CIRCL_Generic"])
     save_as_json(RESULTS)
     generate_graph(RESULTS)
     generate_table(RESULTS)

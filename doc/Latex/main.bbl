@@ -500,63 +500,6 @@
       \field{title}{The impact of quantum computing on present cryptography}
       \field{year}{2018}
     \endentry
-    \entry{barker2019transitioning}{book}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=fe89f812e7e0e1b0369322681b2dcd7c}{%
-           family={Barker},
-           familyi={B\bibinitperiod},
-           given={Elaine},
-           giveni={E\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d8d3d671bf058eb39c1df7474a019c7a}{%
-           family={Roginsky},
-           familyi={R\bibinitperiod},
-           given={Allen},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{2}{%
-        {NIST, National Institute of Standards}%
-        {Technology}%
-      }
-      \strng{namehash}{7303ec9a79e7641079b95025a886be78}
-      \strng{fullhash}{7303ec9a79e7641079b95025a886be78}
-      \strng{bibnamehash}{7303ec9a79e7641079b95025a886be78}
-      \strng{authorbibnamehash}{7303ec9a79e7641079b95025a886be78}
-      \strng{authornamehash}{7303ec9a79e7641079b95025a886be78}
-      \strng{authorfullhash}{7303ec9a79e7641079b95025a886be78}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Transitioning the Use of Cryptographic Algorithms and Key Lengths}
-      \field{year}{2019}
-    \endentry
-    \entry{nist2017callforproposals}{manual}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a44b6b00e5eebd7494e1fd00658685e2}{%
-           family={NIST},
-           familyi={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{a44b6b00e5eebd7494e1fd00658685e2}
-      \strng{fullhash}{a44b6b00e5eebd7494e1fd00658685e2}
-      \strng{bibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
-      \strng{authorbibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
-      \strng{authornamehash}{a44b6b00e5eebd7494e1fd00658685e2}
-      \strng{authorfullhash}{a44b6b00e5eebd7494e1fd00658685e2}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Post-Quantum Cryptography - Call for Proposals}
-      \field{year}{2017 (accessed November 14, 2020)}
-      \verb{urlraw}
-      \verb https://csrc.nist.gov/Projects/post-quantum-cryptography/post-quantum-cryptography-standardization/Call-for-Proposals
-      \endverb
-      \verb{url}
-      \verb https://csrc.nist.gov/Projects/post-quantum-cryptography/post-quantum-cryptography-standardization/Call-for-Proposals
-      \endverb
-    \endentry
     \entry{chi2015lattice}{article}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=6526e625bbde61e4b626af42a8f05fa0}{%
@@ -696,8 +639,8 @@
       \strng{authorbibnamehash}{84d4ea2bd3ec736effccd97ee64d09ef}
       \strng{authornamehash}{84d4ea2bd3ec736effccd97ee64d09ef}
       \strng{authorfullhash}{84d4ea2bd3ec736effccd97ee64d09ef}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Siam Review}
@@ -855,8 +798,8 @@
       \strng{authorbibnamehash}{c24c7f2b41732cd2b75960c6676580f9}
       \strng{authornamehash}{c24c7f2b41732cd2b75960c6676580f9}
       \strng{authorfullhash}{c24c7f2b41732cd2b75960c6676580f9}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Ruhr-University Bochum, Tech. Rep}
@@ -881,8 +824,8 @@
       \strng{authorbibnamehash}{ba0f3c19a29c2c58be529a4e214ca47f}
       \strng{authornamehash}{ba0f3c19a29c2c58be529a4e214ca47f}
       \strng{authorfullhash}{ba0f3c19a29c2c58be529a4e214ca47f}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Secrecy, authentication, and public key systems.}
@@ -1016,8 +959,8 @@
       \strng{authorbibnamehash}{3bab7e9ae72c3bc83bf317ccae0c4cee}
       \strng{authornamehash}{3bab7e9ae72c3bc83bf317ccae0c4cee}
       \strng{authorfullhash}{3bab7e9ae72c3bc83bf317ccae0c4cee}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Tutorial Talk at SPACE}
@@ -1112,8 +1055,8 @@
       \strng{authorbibnamehash}{c334e7236a4b227f2667afd6a938c691}
       \strng{authornamehash}{c334e7236a4b227f2667afd6a938c691}
       \strng{authorfullhash}{c334e7236a4b227f2667afd6a938c691}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of cryptology}
@@ -1154,8 +1097,8 @@
       \strng{authorbibnamehash}{3bb901431aee4b261a740f27e7ab8825}
       \strng{authornamehash}{3bb901431aee4b261a740f27e7ab8825}
       \strng{authorfullhash}{3bb901431aee4b261a740f27e7ab8825}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Computers}
@@ -1250,8 +1193,8 @@
       \endverb
     \endentry
     \entry{gowiki2020compiler}{misc}{}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://github.com/golang/go/wiki/CompilerOptimizations}}
       \field{note}{Accessed: 2020-09-25}
@@ -1296,8 +1239,8 @@
       \strng{authorbibnamehash}{316b4ac408e83ccb52257b07fde25554}
       \strng{authornamehash}{dca719896e778e5eb8c8a7b4492e93f4}
       \strng{authorfullhash}{316b4ac408e83ccb52257b07fde25554}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{RFC 5480 (Proposed Standard)}
@@ -1322,8 +1265,8 @@
       \strng{authorbibnamehash}{2be146928cca275202256d038924a0b7}
       \strng{authornamehash}{2be146928cca275202256d038924a0b7}
       \strng{authorfullhash}{2be146928cca275202256d038924a0b7}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Standars for Efficient Cryptography}

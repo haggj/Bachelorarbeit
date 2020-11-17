@@ -1,11 +1,13 @@
 """ Contains the main class BaseImplementation as well as some shared common functions.
 """
 import msparser
+import statistics
 import subprocess
 import pandas
 import progressbar
 import statistics
 import os
+import re
 
 from src.utils.benchmarks import BenchmarkImpl, BenchmarkCurve, Benchmark
 from src.utils.callgrind import extract_function_calls, extract_hotspots
@@ -34,12 +36,12 @@ def bash(command):
         Exception: Exception is raised if command does not return with 0
     """
     process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
-    stream = process.communicate()
+    out, err = process.communicate()
     return_code = process.returncode
     if return_code != 0:
         print("Error during command: " + command)
-        raise Exception(stream)
-    return
+        raise Exception(err)
+    return out
 
 
 class BaseImplementation():
@@ -101,7 +103,7 @@ class BaseImplementation():
                     if fails == 10:
                         print("Callgrind failed 10 times...")
                         break
-
+        
         # Combine single benchmarks to a common result
         benchmarks = []
         for description in ["PrivateKeyA", "PublicKeyA",  "PrivateKeyB", "PublicKeyB", "SecretA", "SecretB"]:
@@ -111,6 +113,27 @@ class BaseImplementation():
                 benchmarks.append(benchmark)
 
         return benchmarks
+    
+    def perf(self):
+
+        # compile and generate benchmark outputs for specific curve
+        args = "{} {} PARAM={}".format(self.path, self.args, self.curves[0])
+        bash('make build -B -C {}'.format(args))
+
+        all = []
+        for _ in range(5):
+            command = "sudo perf stat -o tmp.txt ./{path}/build/benchmark".format(path=self.path)
+            bash(command)
+            out = open("tmp.txt").read()
+            
+            res = re.findall("[0-9].[0-9][0-9]\  insn per cycle", out)
+            all.append(float(res[0][0:4]))
+
+        print("test")
+        print(statistics.mean(all))
+        print(statistics.stdev(all))
+        print(max(all))
+        return
 
     def hotspots(self) -> list:
         """Extracts the most expensive functions during callgrind execution.

@@ -1,12 +1,12 @@
 \chapter{Description of existing \gls{SIDH} implementations}\label{chapter:existing_sidh}
-Currently, three implementations of Supersingular Isogeny Diffie-Hellman (\gls{SIDH}) are available: \textit{\gls{SIKE}}, \textit{\gls{CIRCL}} and \textit{\gls{PQCrypto-SIDH}}. In this chapter each implementation is introduced in detail. At the end of this chapter, \autoref{tab:existing_sidh} summarizes similarities and differences between all approaches.
+Currently, three implementations of \gls{SIDH} are available: \textit{\gls{SIKE}} \parencite{sike2020spec}, \textit{\gls{CIRCL}} \parencite{circl2020github} and \textit{\gls{PQCrypto-SIDH}} \parencite{microsoft2020sidh}. In this chapter each implementation is introduced in detail. At the end of this chapter, \autoref{tab:existing_sidh} summarizes similarities and differences between all approaches.
 \\
 In the following, some algorithms are described as \textit{compressed}. These compressed version exploit shorter public key sizes while increasing the computation time of the algorithms.
 
 \section{\gls{SIKE}}
-\gls{SIKE} stands for \textbf{S}upersingular \textbf{I}sogeny \textbf{K}ey \textbf{E}ncapsulation. It is the reference implementation of the first proposed isogeny-based cryptographic primitives \parencite{jao2011towards}. Today, \gls{SIKE} is a \gls{NIST} candidate for quantum-resist \textit{"Public-key Encryption and Key-establishment Algorithms"}. It is developed by a cooperation of researchers, lead by David Jao \parencite{sike2020spec}.
+\gls{SIKE} stands for \textbf{S}upersingular \textbf{I}sogeny \textbf{K}ey \textbf{E}ncapsulation. It is the reference implementation of the first proposed isogeny-based cryptographic primitives \parencite{jao2011towards}. Today, \gls{SIKE} is a \gls{NIST} candidate for quantum-resistant \textit{"Public-key Encryption and Key-establishment Algorithms"}. It is developed by a cooperation of researchers, lead by David Jao \parencite{sike2020spec}.
 \\
-\gls{SIKE} implements its key encapsulation mechanism (\gls{KEM}) upon a public key encryption system (\gls{PKE}) which is built upon \gls{SIDH} (as highlighted in \autoref{chapter:background}). Beside a generic reference implementation, \gls{SIKE} offers various optimized implementations of their cryptographic primitves:
+\gls{SIKE} implements its key encapsulation mechanism (\gls{KEM}) upon a public key encryption system (\gls{PKE}) which is built upon \gls{SIDH} (as described in \autoref{chapter:background}). Besides a generic reference implementation, \gls{SIKE} offers various optimized implementations of their cryptographic primitves:
 \begin{itemize}
   \item Generic optimized implementation, written in portable C
   \item x64 optimized implementation, partly written in x64 assembly
@@ -16,32 +16,57 @@ In the following, some algorithms are described as \textit{compressed}. These co
   \item VHDL implementation
 \end{itemize}
 All of these implementations can be run with the following parameter sets: \texttt{p434}, \texttt{p503}, \texttt{p610} and \texttt{p751}. \gls{SIKE} asserts to countermeasure timing and cache attacks by implementing constant time cryptography~\parencite{sike2020spec}.
-
+\newpage
 \subsubsection{\gls{SIKE} API}
 The API of \gls{SIKE} for a \gls{SIDH} key exchange is the following:
 
+All parameters used in this API are of type \texttt{unsigned char*}. Note that for all implementations and all parameter sets the API is the same. Therefore, during compilation one need to include the correct subfolders (namely \texttt{SIKEp434}, \texttt{SIKEp503}, \texttt{SIKEp610} and \texttt{SIKEp751}) to initialize \gls{SIKE} with a specific parameter set.
 
-\begin{lstlisting}[language=C, commentstyle=\color{Comment}\ttfamily, ,numbers=none, morekeywords={PrivateKey_A, PrivateKey_B, PublicKey_A, PublicKey_B, SharedSecret_A, SharedSecret_B}]
+\definecolor{keywordcol}{RGB}{51, 102, 255}
+ \lstset{language=C, commentstyle=\color{Comment}\ttfamily, ,numbers=none, morekeywords={PrivateKey_A, PrivateKey_B, PublicKey_A, PublicKey_B, SharedSecret_A, SharedSecret_B}, keywordstyle=\color{keywordcol}, basicstyle=\small}
+
+\begin{lstlisting}[]
 // Generate random private key for Alice
-random_mod_order_A(PrivateKey_A);
-
-// Generate random private key for Bob
-random_mod_order_B(PrivateKey_B);
-
-// Generate ephemeral public key for Alice
-EphemeralKeyGeneration_A(PrivateKey_A, PublicKey_A);
-
-// Generate ephemeral public key for Bob
-EphemeralKeyGeneration_B(PrivateKey_B, PublicKey_B);
-
-// Computation of shared secret by Alice
-EphemeralSecretAgreement_A(PrivateKey_A, PublicKey_B, SharedSecret_A)
-
-// Computation of shared secret by Bob
-EphemeralSecretAgreement_B(PrivateKey_B, PublicKey_A, SharedSecret_B)
-
+void random_mod_order_A(PrivateKey_A);
 \end{lstlisting}
-All parameters used in this API are of type \texttt{unsigned char*}. Note that for all implementations and all parameter sets the API is the same. Therefore, during compilation one need to include the correct files to initialize \gls{SIKE} with a specific parameter set.
+Generating a random private key for Alice. The generated random bytes lie within an interval that is defined by the used parameter set. The generated private key is stored within \textcolor{keywordcol}{\texttt{PrivateKey}\_A}. No value is returned.
+
+\begin{lstlisting}[]
+// Generate random private key for Bob
+void random_mod_order_B(PrivateKey_B);
+\end{lstlisting}
+Generating a random private key for Bob. The generated random bytes lie within an interval that is defined by the used parameter set. The generated private key is stored within \textcolor{keywordcol}{\texttt{PrivateKey}\_B}. No value is returned.
+
+\begin{lstlisting}[]
+// Generate ephemeral public key for Alice
+int EphemeralKeyGeneration_A(PrivateKey_A, PublicKey_A);
+\end{lstlisting}
+This function takes Alice's randomly generated private key \textcolor{keywordcol}{\texttt{PrivateKey}\_A} as input and computes a corresponding public key in \textcolor{keywordcol}{\texttt{PublicKey}\_A}. The function returns 0 if successful.\\
+The reference implementation of SIKE calls this function \texttt{isogen}. All later published SIKE implementations renamed the function to \texttt{EphemeralKeyGeneration}.
+
+\begin{lstlisting}[]
+// Generate ephemeral public key for Bob
+int EphemeralKeyGeneration_B(PrivateKey_B, PublicKey_B);
+\end{lstlisting}
+This function takes Bob's randomly generated private key \textcolor{keywordcol}{\texttt{PrivateKey}\_B} as input and computes a corresponding public key in \textcolor{keywordcol}{\texttt{PublicKey}\_B}. The function returns 0 if successful.\\
+The reference implementation of SIKE calls this function \texttt{isogen}. All later published SIKE implementations renamed the function to \texttt{EphemeralKeyGeneration}.
+
+\begin{lstlisting}[]
+// Computation of shared secret by Alice
+int EphemeralSecretAgreement_A(PrivateKey_A, PublicKey_B, SharedSecret_A)
+\end{lstlisting}
+This function uses Alice's \textcolor{keywordcol}{\texttt{PrivateKey}\_A} and Bob's \textcolor{keywordcol}{\texttt{PublicKey}\_B} to produce a shared secret \textcolor{keywordcol}{\texttt{SharedSecret\_A}} between Alice and Bob. If successful, this function returns 0. 
+Note that this is the same as the function \texttt{isoex} in the SIKE Reference implementation.
+
+\begin{lstlisting}[]
+// Computation of shared secret by Bob
+int EphemeralSecretAgreement_B(PrivateKey_B, PublicKey_A, SharedSecret_B)
+\end{lstlisting}
+This function uses Bob's \textcolor{keywordcol}{\texttt{PrivateKey}\_B} and Alice's \textcolor{keywordcol}{\texttt{PublicKey}\_A} to produce a shared secret \textcolor{keywordcol}{\texttt{SharedSecret\_B}} between Alice and Bob. If successful, this function returns 0. 
+Note that this is the same as the function \texttt{isoex} in the SIKE Reference implementation.
+
+
+
 
 \section{\gls{PQCrypto-SIDH}}
 \gls{PQCrypto-SIDH} is a software library, mainly written in C. It is developed by Microsoft for experimental purposes \parencite{microsoft2020sidh}. Note that many developers of \gls{SIKE} also work for Microsoft, leading to great similarities between \gls{SIKE} and \gls{PQCrypto-SIDH}. However, in terms of compression, \gls{SIKE} references the below described Microsoft library in its documentation.\\
@@ -56,45 +81,71 @@ The \gls{PQCrypto-SIDH} library implements a isogney-based \gls{KEM} and the und
 \end{itemize}
 All of these implementations can be run with the following parameter sets: \texttt{p434}, \texttt{p503}, \texttt{p610} and \texttt{p751}. The developers argue that the algorithms are protected against timing and cache attacks. Therefore, the library implements constant time operations on secret key material~\parencite{microsoft2020sidh}.
 \subsubsection{\gls{PQCrypto-SIDH} API}
-The API of \gls{PQCrypto-SIDH} for a \gls{SIDH} key exchange is the following:
 
-\begin{lstlisting}[language=C, commentstyle=\color{Comment}\ttfamily, ,numbers=none, morekeywords={PrivateKey_A, PrivateKey_B, PublicKey_A, PublicKey_B, SharedSecret_A, SharedSecret_B}]
+When analyzing the API of \gls{PQCrypto-SIDH} it turns out that internally equivalent files are used for \gls{PQCrypto-SIDH} and \gls{SIKE}. However, the API differs since \gls{PQCrypto-SIDH} adds the used parameter set directly to the function names. Within each function the appropriate parameters are defined before the actual logic is executed.\\
+The API of \gls{PQCrypto-SIDH} for a \gls{SIDH} key exchange is the following:\\ (\texttt{XXX} $\in$ \{\texttt{434, 503, 610, 751}\}. All parameters used in this API are of type \texttt{unsigned char*}.)
+
+\begin{lstlisting}[]
 // Generate random private key for Alice
-random_mod_order_A_SIDHpXXX(PrivateKey_A);
-
-// Generate random private key for Bob
-random_mod_order_B_SIDHpXXX(PrivateKey_B);
-
-// Generate ephemeral public key for Alice
-EphemeralKeyGeneration_A_SIDHpXXX(PrivateKey_A, PublicKey_A);
-
-// Generate ephemeral public key for Bob
-EphemeralKeyGeneration_B_SIDHpXXXPrivateKey_B, PublicKey_B);
-
-// Computation of shared secret by Alice
-EphemeralSecretAgreement_A_SIDHpXXX(PrivateKey_A, PublicKey_B, SharedSecret_A)
-
-// Computation of shared secret by Bob
-EphemeralSecretAgreement_B_SIDHpXXX(PrivateKey_B, PublicKey_A, SharedSecret_B)
-
+void random_mod_order_A_SIDHpXXX(PrivateKey_A);
 \end{lstlisting}
-For XXX $\in$ \{\texttt{434, 503, 610, 751}\}. All parameters used in this API are of type \texttt{unsigned char*}.
+Generating a random private key for Alice. The generated random bytes lie within an interval that is defined by the used parameter set. The generated private key is stored within \textcolor{keywordcol}{\texttt{PrivateKey}\_A}. No value is returned.
+
+\begin{lstlisting}[]
+// Generate random private key for Bob
+void random_mod_order_B_SIDHpXXX(PrivateKey_B);
+\end{lstlisting}
+Generating a random private key for Bob. The generated random bytes lie within an interval that is defined by the used parameter set. The generated private key is stored within \textcolor{keywordcol}{\texttt{PrivateKey}\_B}. No value is returned.
+
+\begin{lstlisting}[]
+// Generate ephemeral public key for Alice
+int EphemeralKeyGeneration_A_SIDHpXXX(PrivateKey_A, PublicKey_A);
+\end{lstlisting}
+This function takes Alice's randomly generated private key \textcolor{keywordcol}{\texttt{PrivateKey}\_A} as input and computes a corresponding public key in \textcolor{keywordcol}{\texttt{PublicKey}\_A}. The function returns 0 if successful.\\
+The reference implementation of SIKE calls this function \texttt{isogen}.
+
+\begin{lstlisting}[]
+// Generate ephemeral public key for Bob
+int EphemeralKeyGeneration_B_SIDHpXXX(PrivateKey_B, PublicKey_B);
+\end{lstlisting}
+This function takes Bob's randomly generated private key \textcolor{keywordcol}{\texttt{PrivateKey}\_B} as input and computes a corresponding public key in \textcolor{keywordcol}{\texttt{PublicKey}\_B}. The function returns 0 if successful.\\
+The reference implementation of SIKE calls this function \texttt{isogen}.
+
+\begin{lstlisting}[]
+// Computation of shared secret by Alice
+int EphemeralSecretAgreement_A_SIDHpXXX(PrivateKey_A, PublicKey_B, SharedSecret_A)
+\end{lstlisting}
+This function uses Alice's \textcolor{keywordcol}{\texttt{PrivateKey}\_A} and Bob's \textcolor{keywordcol}{\texttt{PublicKey}\_B} to produce a shared secret \textcolor{keywordcol}{\texttt{SharedSecret\_A}} between Alice and Bob. If successful, this function returns 0. 
+Note that this is the same as the function \texttt{isoex} in the SIKE Reference implementation.
+
+\begin{lstlisting}[]
+// Computation of shared secret by Bob
+int EphemeralSecretAgreement_B_SIDHpXXX(PrivateKey_B, PublicKey_A, SharedSecret_B)
+\end{lstlisting}
+This function uses Bob's \textcolor{keywordcol}{\texttt{PrivateKey}\_B} and Alice's \textcolor{keywordcol}{\texttt{PublicKey}\_A} to produce a shared secret \textcolor{keywordcol}{\texttt{SharedSecret\_B}} between Alice and Bob. If successful, this function returns 0. 
+Note that this is the same as the function \texttt{isoex} in the SIKE Reference implementation.
+
+
 
 \section{\gls{CIRCL}}
 
 \gls{CIRCL} (\textbf{C}loudflare \textbf{I}nteroperable, \textbf{R}eusable \textbf{C}ryptographic \textbf{L}ibrary) is a collection of cryptographic primitives developed by Cloudflare ~\parencite{circl2020github}. \gls{CIRCL} is written in Go and implements some quantum-secure algorithms like \gls{SIDH} and an isogeny-based \gls{KEM}. Cloudflare does not guarantee for any security within their library. Furthermore, the isogeny-based cryptographic primitives are adopted from the official \gls{SIKE} implementation. The following implementation optimizations are stated to be available:
 
 \begin{itemize}
-  \item Generic optimized implementation, written in Go (unfortunately, this version could not be compiled)
+  \item Generic optimized implementation, written in Go 
   \item AMD64 optimized implementation, partly written in assembly
   \item ARM64 optimized implementation, partly written in assembly
 \end{itemize}
 Note that there are no compressed versions available. The library supports the following parameter sets: \texttt{p434}, \texttt{p503} and \texttt{p751}. To avoid side-channel attacks, their code is implemented in constant time~\parencite{circl2019intro}.
 
 \subsubsection{\gls{CIRCL} API}
-The API of \gls{CIRCL} for a \gls{SIDH} key exchange is the following:
+The API of \gls{CIRCL} for a \gls{SIDH} key exchange is the following:\\
+(\texttt{XXX} $\in$ \{\texttt{434, 503, 751}\})
 
-\begin{lstlisting}[language=GO, commentstyle=\color{Comment}\ttfamily, ,numbers=none, morekeywords={PrivateKey_A, PrivateKey_B, PublicKey_A, PublicKey_B, SharedSecret_A, SharedSecret_B}]
+
+ \lstset{language=GO, commentstyle=\color{Comment}\ttfamily, ,numbers=none, morekeywords={PrivateKey_A, PrivateKey_B, PublicKey_A, PublicKey_B, SharedSecret_A, SharedSecret_B}, keywordstyle=\color{keywordcol}}
+
+\begin{lstlisting}[]
 // Generate random private key for Alice
 PrivateKey_A = sidh.NewPrivateKey(sidh.FpXXX, sidh.KeyVariantSidhA)
 PrivateKey_A.Generate(rand.Reader)
@@ -102,7 +153,11 @@ PrivateKey_A.Generate(rand.Reader)
 // Generate random private key for Bob
 PrivateKey_B = sidh.NewPrivateKey(sidh.FpXXX, sidh.KeyVariantSidhB)
 PrivateKey_B.Generate(rand.Reader)
+\end{lstlisting}
+The function \texttt{NewPrivateKey} allocates memory for a new private key using the defined parameter set (\texttt{sidh.FpXXX}) and the defined subject (\texttt{sidh.KeyVariantSidhA} for Alice and \texttt{sidh.KeyVariantSidhB} for Bob). The generated private key objects provides the function \texttt{Generate} that randomly generates a new private key based on a passed random number generator (\texttt{rand.Reader}) .
+The code above initializes and randomly generates the private keys for Alice (\textcolor{keywordcol}{\texttt{PrivateKey\_A}}) and Bob (\textcolor{keywordcol}{\texttt{PrivateKey\_B}}).
 
+\begin{lstlisting}[]
 // Generate public key for Alice
 PublicKey_A = sidh.NewPublicKey(sidh.FpXXX, sidh.KeyVariantSidhA)
 PrivateKey_A.GeneratePublicKey(PublicKey_A)
@@ -110,7 +165,12 @@ PrivateKey_A.GeneratePublicKey(PublicKey_A)
 // Generate public key for Bob
 PublicKey_B = sidh.NewPublicKey(sidh.FpXXX, sidh.KeyVariantSidhB)
 PrivateKey_B.GeneratePublicKey(PublicKey_B)
+\end{lstlisting}
+The function \texttt{NewPublicKey} allocates memory for a new public key using the defined parameter set (\texttt{sidh.FpXXX}) and the defined subject (\texttt{sidh.KeyVariantSidhA} for Alice and \texttt{sidh.KeyVariantSidhB} for Bob). The already generated private key object provides the function \texttt{GeneratePublicKey} that returns the appropriate public key into the passed public key object. This corresponds to the \texttt{isogen} function of the SIKE reference implementation.
+The code above firstly initializes the public keys for Alice (\textcolor{keywordcol}{\texttt{PublicKey\_A}}) and Bob (\textcolor{keywordcol}{\texttt{PublicKey\_B}}). The above created private keys of Alice and Bob are then used to fill the public key objects.
 
+
+\begin{lstlisting}[]
 // Computation of shared secret by Alice
 SharedSecret_A := make([]byte, PrivateKey_A.SharedSecretSize())
 PrivateKey_A.DeriveSecret(SharedSecret_A, PublicKey_B)
@@ -118,9 +178,9 @@ PrivateKey_A.DeriveSecret(SharedSecret_A, PublicKey_B)
 // Computation of shared secret by Bob
 SharedSecret_B := make([]byte, PrivateKey_B.SharedSecretSize())
 PrivateKey_B.DeriveSecret(SharedSecret_B, PublicKey_A)
-
 \end{lstlisting}
-For XXX $\in$ \{\texttt{434, 503, 751}\}.
+In order to create the shared secrets for Alice and Bob, the initially created private key objects provide the function \texttt{DeriveSecret}. This function expects a public key and a previously allocated memory to store the shared secret in. This corresponds to the \texttt{isoex} function of the SIKE reference implementation.
+The code above firstly allocates the memory for a shared secret and finally generates the shared secret between Alice and Bob.
 
 \section{Overview}
 

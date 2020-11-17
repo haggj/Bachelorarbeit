@@ -1,4 +1,57 @@
 \chapter{General Addenda}
+\section{Project hierarchy}
+\label{app:hierarchy}
+This section illustrates the project hierarchy of the developed benchmarking suite. For details see the description below.
+
+\dirtree{%
+.1 root.
+.2 container.
+.3 SIKE.
+.3 Microsoft.
+.3 CIRCL.
+.3 ECDH.
+.3 helper.
+.3 src.
+.4 test.
+.4 utils.
+.5 benchmarks.py.
+.5 caching.py.
+.5 callgrind.py.
+.5 plot\_graph.py.
+.5 plot\_tables.py.
+.4 base.py.
+.4 circl.py.
+.4 ecdh.py.
+.4 microsoft.py.
+.4 sike.py.
+.3 requirements.txt.
+.3 benchmarking.py.
+.2 data.
+.3 XXX.png.
+.3 XXX\_mem.png.
+.3 cached.json.
+.3 result.html.
+.3 result.tex.
+.2 Dockerfile.
+.2 README.md.
+.2 run.sh.
+}
+\newpage
+The root project directory contains following sub directories:
+\begin{enumerate}
+\item \texttt{container}: \\
+This folder contains everything needed to start the Docker container. Besides the source code of the benchmarking suite (\texttt{container/src}), this folder also contains sub folders for all included libraries. These sub folders (\texttt{container/SIKE}, \texttt{container/Microsoft}, \texttt{container/CIRCL} and \texttt{container/ECDH}) contain Makefiles to compile and benchmark the appropriate library (for details see \autoref{sec:benchmarks_details_add}).\\
+\textit{Requirements.txt} lists the Python dependencies for the benchmarking suite and \textit{benchmarking.py} contains the entrypoint of the benchmarking suite.
+\item \texttt{data}:\\
+The data folder contains the output data of the benchmarking suite as described in \autoref{sec:benchmarks_usage}.
+\item \texttt{Dockerfile}:\\
+This Dockerfile specifies the Docker container the benchmarking suite runs in.
+\item \texttt{README.md}:\\
+The README describing the usage of the benchmarking suite.
+\item \texttt{run.sh}:\\
+This shell script can be invoked with the following arguments: \texttt{benchark}, \texttt{build} and \texttt{test}. For details see \autoref{sec:benchmarks_usage}.
+\end{enumerate}
+
 
 \section{Detailed Benchmarks}
 \label{app:detailed_benchmarks}

@@ -1,18 +1,22 @@
 \chapter{Conclusion}\label{chapter:conclusion}
 
-This final chapter summarizes all results of the benchmarking suite. For a detailed analysis of the measured data see \autoref{chapter:analysis} and addenda \ref{app:detailed_benchmarks}. The presented data in this chapter provides a relative comparison between the SIDH libraries \textit{SIKE}, PQ-\textit{Crypto} and \textit{CIRCL}. Moreover, the relative difference between SIDH and ECDH is shown.\\
+This final chapter presents the major results of the previous \autoref{chapter:analysis} in \autoref{sec:conclusion_res} and describes limitations of the thesis in \autoref{sec:conclusion_limits}.
+
+\section{Results}\label{sec:conclusion_res}
+
+This section summarizes all results of the benchmarking suite. For a detailed analysis of the measured data see \autoref{chapter:analysis} and addenda \ref{app:detailed_benchmarks}. The presented data in this section provides a relative comparison between the \gls{SIDH} libraries \textit{\gls{SIKE}}, PQ-\textit{Crypto} and \textit{\gls{CIRCL}}. Moreover, the relative difference between \gls{SIDH} and \gls{ECDH} is shown.\\
 The most efficient implementation in the following tables is highlighted in green and has a relative difference of 1 to itself. All other implementations in the appropriate row are labeled with the relative distance to the most efficient implementation. For this evaluation the execution times and memory consumption for a whole Diffie-Hellman exchange are accumulated (key generation of A and B \textit{plus} secret generation of A and B).
 
-\subsubsection{Comparing SIDH libraries}
+\subsubsection{Comparing \gls{SIDH} libraries}
 
-The values in \autoref{tab:conclusion_p434} indicate \textit{PQ-Crypto} as the fastest library for \textit{x64}, \textit{x64 compressed} and \textit{generic compressed} implementations, while \textit{SIKE} is little faster for the \textit{generic} variant. \textit{CIRCL} only provides an \textit{x64} implementation and is much slower than \textit{SIKE} and \textit{PQ-Crypto}.
+The values in \autoref{tab:conclusion_p434} indicate \textit{\gls{PQCrypto-SIDH} } as the fastest library for \textit{x64}, \textit{x64 compressed} and \textit{generic compressed} implementations, while \textit{\gls{SIKE}} is little faster for the \textit{generic} variant. \textit{\gls{CIRCL}} only provides an \textit{x64} implementation and is much slower than \textit{\gls{SIKE}} and \textit{\gls{PQCrypto-SIDH} }.
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|K{4cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
 	\hline
 	\rowcolor{lightgray!50}
-	\bfseries\makecell{Category} & \bfseries\makecell{SIKE} & \bfseries\makecell{PQ-Crypto} & \bfseries\makecell{CIRCL} \\
+	\bfseries\makecell{Category} & \bfseries\makecell{\gls{SIKE}} & \bfseries\makecell{PQCrypto} & \bfseries\makecell{\gls{CIRCL}} \\
 	\hline
 	\makecell{x64} & \makecell{1.09} & \cellcolor{green}1 & \makecell{1.57} \\
 	\hline
@@ -23,18 +27,18 @@ The values in \autoref{tab:conclusion_p434} indicate \textit{PQ-Crypto} as the f
 	\makecell{Generic compressed} &\makecell{1.27}  & \cellcolor{green}1 & \makecell{-} \\
 	\hline
 	\end{tabular}
-	\caption[Relative execution times p434]{Comparison of execution times for all SIDH libraries initialized with p434.}
+	\caption[Relative execution times p434]{Comparison of execution times for all \gls{SIDH} libraries initialized with p434.}
 	\label{tab:conclusion_p434}
 \end{table}
 
-On the contrary, \textit{SIKE} allocates less memory than \textit{PQ-Crypto} for all implementations, especially for both \textit{compressed} versions \textit{PQ-Crypto} demands clearly more memory. Again, \textit{CIRCL} request the most resources.
+On the contrary, \textit{\gls{SIKE}} allocates less memory than \textit{\gls{PQCrypto-SIDH} } for all implementations, especially for both \textit{compressed} versions \textit{\gls{PQCrypto-SIDH} } demands clearly more memory. Again, \textit{\gls{CIRCL}} request the most resources.
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|K{4cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
 	\hline
 	\rowcolor{lightgray!50}
-	\bfseries\makecell{Category} & \bfseries\makecell{SIKE} & \bfseries\makecell{PQ-Crypto} & \bfseries\makecell{CIRCL} \\
+	\bfseries\makecell{Category} & \bfseries\makecell{\gls{SIKE}} & \bfseries\makecell{PQCrypto} & \bfseries\makecell{\gls{CIRCL}} \\
 	\hline
 	\makecell{x64} & \cellcolor{green}1 & \makecell{1.09} & \makecell{2.65} \\
 	\hline
@@ -45,14 +49,14 @@ On the contrary, \textit{SIKE} allocates less memory than \textit{PQ-Crypto} for
 	\makecell{Generic compressed} &\cellcolor{green}1  & \makecell{4.1} & \makecell{-} \\
 	\hline
 	\end{tabular}
-	\caption[Relative memory consumption p434]{Comparison of memory consumption for all SIDH libraries initialized with p434.}
+	\caption[Relative memory consumption p434]{Comparison of memory consumption for all \gls{SIDH} libraries initialized with p434.}
 	\label{tab:conclusion_p434_mem}
 \end{table}
 
-\subsubsection{Comparing SIDH and ECDH}
+\subsubsection{Comparing \gls{SIDH} and \gls{ECDH}}
 
-The analysis of \autoref{tab:conclusion_ecdh_sidh} reveals the differences between \textit{SIDH} and \textit{ECDH} in terms of execution times. Note that all security classes and only the x64 optimized variants of all libraries are considered.\\
-While the overhead of \textit{SIDH} for the security level AES128 (matches NIST security level 1 and p434) is enormous the relative difference for higher security levels decreases. However, ECDH requests slightly more memory than SIDH (see \autoref{chapter:analysis}).
+The analysis of \autoref{tab:conclusion_ecdh_sidh} reveals the differences between \textit{\gls{SIDH}} and \textit{\gls{ECDH}} in terms of execution times. Note that all security classes and only the x64 optimized variants of all libraries are considered.\\
+While the overhead of \textit{\gls{SIDH}} for the security level AES128 (matches NIST security level 1 and p434) is enormous the relative difference for higher security levels decreases. However, \gls{ECDH} requests slightly more memory than \gls{SIDH} (see \autoref{chapter:analysis}).
 
 
 \begin{table}[H]
@@ -62,11 +66,21 @@ While the overhead of \textit{SIDH} for the security level AES128 (matches NIST 
 \cellcolor{lightgray!50}                                 & \multicolumn{3}{c|}{\cellcolor{lightgray!50}\textbf{SIDH}} & \textbf{ECDH} \\ \hhline{>{\arrayrulecolor{lightgray!50}}->{\arrayrulecolor{black}}----}
 
 \rowcolor{lightgray!50} 
-\multirow{-2}{*}{\cellcolor{lightgray!50}\textbf{Security Level}} &SIKE           &PQ-Crypto      &CIRCL          &openssl \\ \hline
+\multirow{-2}{*}{\cellcolor{lightgray!50}\textbf{Security Level}} &\gls{SIKE}           &PQCrypto       &\gls{CIRCL}          & openSSL \\ \hline
                                                          AES128 &44.55               &40.93               &64.46               &\cellcolor{green}1  \\ \hline
                                                          AES192 &2.36               &2.18               &2.78               &\cellcolor{green}1   \\ \hline
                                                          AES256 &2.71               &2.59               &3.66               &\cellcolor{green}1   \\ \hline
 \end{tabular}
-\caption[Relative execution times compared to ECDH]{Comparison of the x64 optimized SIDH implementations with modern x64 optimized ECDH by openssl.}
+\caption[Relative execution times compared to \gls{ECDH}]{Comparison of the x64 optimized \gls{SIDH} implementations with modern x64 optimized \gls{ECDH} by  \gls{openssl} in terms of execution time.}
 \label{tab:conclusion_ecdh_sidh}
 \end{table}
+
+\section{Limitations}\label{sec:conclusion_limits}
+
+This section lists limitations and approaches for future work in the context of this thesis.
+\\
+Firstly, the correctness of the results measured by the benchmarking suite is based on the tools \textit{massif} and \textit{callgrind} provided by \texttt{valgrind}. Any disruptions within these tools directly affect all benchmarks.
+\\
+Secondly, the integration process to generate benchmarks for a new implementation could be further improved. Up to now, the process described in \ref{sec:benchmarks_details_add} is time-consuming and error-prone. This could be improved e.g. by auto detecting new sub folders containing appropriate Makefiles. Moreover, the generation of different output graphs can currently only be achieved by manually changing the source code of the benchmarking suite. Appropriate command line arguments for the benchmarking suite might increase usability.
+\\
+Finally, for the comparison between \gls{SIDH} and \gls{ECDH} only three curves of the  \gls{openssl} library are considered. A more precise analysis among existing \gls{ECDH} libraries might reveal more detailed results.

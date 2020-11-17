@@ -9,7 +9,7 @@ def generate_table(results):
     generate_latex_table(results)
 
 def generate_html_table(results):
-    with open('pre.html', "r") as file:
+    with open('helper/pre.html', "r") as file:
         preHTML = file.read()
 
     Path("data").mkdir(parents=True, exist_ok=True)

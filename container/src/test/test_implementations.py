@@ -4,7 +4,7 @@ from src.sike import Sike_Generic, Sike_Generic_Compressed
 from src.sike import Sike_x64, Sike_x64_Compressed
 from src.sike import Sike_Reference, Sike_Base
 
-from src.circl import CIRCL_x64, CIRCL_Base
+from src.circl import CIRCL_x64, CIRCL_Base, CIRCL_Generic
 
 from src.microsoft import Microsoft_x64, Microsoft_x64_Compressed
 from src.microsoft import Microsoft_Generic, Microsoft_Generic_Compressed
@@ -25,7 +25,7 @@ class TestImplementations(TestCase):
     def test_init(self):
         implementations =[
             #ECDH
-            ECDH,
+            #ECDH,
 
             # #SIKE
             Sike_Reference,
@@ -36,6 +36,7 @@ class TestImplementations(TestCase):
 
             #CIRCL
             CIRCL_x64,
+            CIRCL_Generic,
 
             # #MICROSOFT
             Microsoft_Generic,

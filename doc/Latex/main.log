@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.13)  29 SEP 2020 09:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.13)  16 OCT 2020 20:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6,34 +6,12 @@ entering extended mode
 **/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/main.tex
 (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/main.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-02-25>
-
-/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/main.tex:1: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 $
-       $\RequirePackage[l2tabu,orthodox]{nag}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 1.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 1.
-(/usr/share/texlive/texmf-dist/tex/latex/nag/nag.sty
+L3 programming layer <2020-02-25> (/usr/share/texlive/texmf-dist/tex/latex/nag/nag.sty
 Package: nag 2011/11/25 0.7 warning about old commands (ulmi)
 \c@nag@c=\count167
 \c@nag@sins=\count168
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 1--279
-[]$$
- []
-
 Package nag Info: Loaded nag-l2tabu.cfg  on input line 552.
-(/usr/share/texlive/texmf-dist/tex/latex/nag/nag-l2tabu.cfg
+ (/usr/share/texlive/texmf-dist/tex/latex/nag/nag-l2tabu.cfg
 File: nag-l2tabu.cfg 2010/05/17 v2.11 l2tabu rules for nag.sty (ulmi)
 )
 Package nag Info: Loaded nag-orthodox.cfg  on input line 552.
@@ -152,7 +130,7 @@ Package tocbasic Info: omitting babel extension for `lot'
 \c@table=\count178
 Class scrbook Info: Redefining `\numberline' on input line 7040.
 \bibindent=\dimen134
-) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/settings.tex (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+) (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/settings.tex (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
@@ -723,8 +701,8 @@ Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
 \pgfplots@tmpa=\dimen194
 \c@pgfplots@coordindex=\count414
 \c@pgfplots@scanlineindex=\count415
- (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex))
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+ (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
 \c@pgfplotsarray@tmp=\count416
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
 \c@pgfplotstable@counta=\count417
@@ -1079,6 +1057,8 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@inbox=\box78
 \enit@count@id=\count475
 \enitdp@description=\count476
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/hhline.sty
+Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -1097,7 +1077,13 @@ File: upzd.fd 2001/06/04 font definitions for U/pzd.
 LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/upsy.fd
 File: upsy.fd 2001/06/04 font definitions for U/psy.
-)) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/base/glossaries.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+Package scrhack Info: loading setspace hack on input line 54.
+ (/usr/share/texlive/texmf-dist/tex/latex/koma-script/setspace.hak
+File: setspace.hak 2020/01/24 v3.29 KOMA-Script scrhack part (hacking package setspace)
+) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/base/glossaries.sty
 Package: glossaries 2020/02/13 v4.45 (NLCT)
  (/usr/share/texlive/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
 Package: mfirstuc 2017/11/14 v2.06 (NLCT)
@@ -1278,15 +1264,15 @@ Package: glossary-tree 2020/02/13 v4.45 (NLCT)
 \glo@main@file=\write6
 \openout6 = `main.glo'.
 
-Package glossaries Info: Writing glossary file main.glo on input line 54.
-\glo@acronym@file=\write7
-\openout7 = `main.acn'.
-
-Package glossaries Info: Writing glossary file main.acn on input line 54.
+Package glossaries Info: Writing glossary file main.glo on input line 57.
  (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/pages/glossary.tex))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
- (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/main.aux)
+ (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/main.aux
+
+LaTeX Warning: Label `tab:benchmarks_Sike_x64' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
@@ -1342,12 +1328,11 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' not found.
-
-No file main.bbl.
+Package biblatex Info: ... file 'main.bbl' found.
+ (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/main.bbl)
 Package biblatex Info: Reference section=0 on input line 22.
 Package biblatex Info: Reference segment=0 on input line 22.
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count515
 \scratchdimen=\dimen343
@@ -1410,8 +1395,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 22.
 LaTeX Info: Redefining \pageref on input line 22.
 LaTeX Info: Redefining \nameref on input line 22.
-\@outlinefile=\write8
-\openout8 = `main.out'.
+ (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/main.out) (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/main.out)
+\@outlinefile=\write7
+\openout7 = `main.out'.
 
 Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           Using `bookmark' together with `hyperref' is recommended,
@@ -1497,12 +1483,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/pages/cover.tex
-<logos/tum.pdf, id=11, 54.02504pt x 28.452pt>
+<logos/tum.pdf, id=7, 54.02504pt x 28.452pt>
 File: logos/tum.pdf Graphic file (type pdf)
 <use logos/tum.pdf>
 Package pdftex.def Info: logos/tum.pdf  used on input line 16.
 (pdftex.def)             Requested size: 108.06296pt x 56.9055pt.
-<logos/faculty.png, id=12, 339.51843pt x 339.51843pt>
+<logos/faculty.png, id=8, 339.51843pt x 339.51843pt>
 File: logos/faculty.png Graphic file (type png)
 <use logos/faculty.png>
 Package pdftex.def Info: logos/faculty.png  used on input line 40.
@@ -1513,7 +1499,7 @@ Package pdftex.def Info: logos/faculty.png  used on input line 40.
 
 
 
- </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/logos/tum.pdf> </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/logos/faculty.png>]) (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/pages/title.tex
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/logos/tum.pdf> </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/logos/faculty.png>]) (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/pages/title.tex
 File: logos/tum.pdf Graphic file (type pdf)
 <use logos/tum.pdf>
 Package pdftex.def Info: logos/tum.pdf  used on input line 8.
@@ -1546,298 +1532,120 @@ chapter without number
 
 ]
 Package tocbasic Info: character protrusion at toc deactivated on input line 38.
-\tf@toc=\write9
-\openout9 = `main.toc'.
-
- [6
+ (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/main.toc [6
 
 
 
 
-] (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/chapters/01_background.tex
+])
+\tf@toc=\write8
+\openout8 = `main.toc'.
+
+LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
+(Font)              Font shape `T1/pplx/m/it' tried instead on input line 41.
+ [7] (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/chapters/00_introduction.tex
 chapter 1.
+) (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/chapters/01_background.tex [1
 
-LaTeX Warning: Reference `fig:symmetric-encryption' on page 1 undefined on input line 7.
 
-<figures/background/symmetric_encryption.png, id=72, 758.835pt x 231.86626pt>
+
+]
+chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--5
+
+ []
+
+<figures/background/symmetric_encryption.png, id=212, 758.835pt x 231.86626pt>
 File: figures/background/symmetric_encryption.png Graphic file (type png)
 <use figures/background/symmetric_encryption.png>
-Package pdftex.def Info: figures/background/symmetric_encryption.png  used on input line 11.
+Package pdftex.def Info: figures/background/symmetric_encryption.png  used on input line 12.
 (pdftex.def)             Requested size: 358.50612pt x 109.54323pt.
-
-LaTeX Warning: Reference `fig:asymmetric-encryption' on page 1 undefined on input line 25.
-
-[1
-
+[2
 
 
  </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/background/symmetric_encryption.png>]
-<figures/background/asymmetric_encryption.png, id=82, 783.92876pt x 282.05376pt>
+<figures/background/asymmetric_encryption.png, id=229, 783.92876pt x 282.05376pt>
 File: figures/background/asymmetric_encryption.png Graphic file (type png)
 <use figures/background/asymmetric_encryption.png>
 Package pdftex.def Info: figures/background/asymmetric_encryption.png  used on input line 29.
 (pdftex.def)             Requested size: 358.50612pt x 128.98883pt.
-
-
-LaTeX Warning: Citation 'ITSicherheit' on page 2 undefined on input line 40.
-
-
-LaTeX Warning: Citation 'diffie1976new' on page 2 undefined on input line 47.
-
-LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
-(Font)              Font shape `T1/pplx/m/it' tried instead on input line 48.
-[2 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/background/asymmetric_encryption.png>]
+ [3 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/background/asymmetric_encryption.png>]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 50.
+(Font)              scaled to size 9.37807pt on input line 52.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 50.
+(Font)              scaled to size 7.29405pt on input line 52.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 50.
+(Font)              scaled to size 5.21004pt on input line 52.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 50.
+(Font)              scaled to size 9.37807pt on input line 52.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 50.
+(Font)              scaled to size 7.29405pt on input line 52.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 50.
-
-
-LaTeX Warning: Citation 'ITSicherheit' on page 3 undefined on input line 50.
-
-
-LaTeX Warning: Citation 'watjen2018kryptographie' on page 3 undefined on input line 50.
-
-
-Overfull \hbox (6.43243pt too wide) in paragraph at lines 50--51
-\T1/pplx/m/n/10.95 (-20) ulo $\OML/zplm/m/it/10.95 p$[][][]\T1/pplx/m/n/10.95 (-20) . Both, $\OML/zplm/m/it/10.95 p$ \T1/pplx/m/n/10.95 (-20) and $\OML/zplm/m/it/10.95 g$ \T1/pplx/m/n/10.95 (-20) are not se-cret and may be known to the pub-lic [[]]. 
- []
-
-<figures/background/diffie_hellman.png, id=91, 473.77pt x 333.245pt>
+(Font)              scaled to size 5.21004pt on input line 52.
+ [4]
+<figures/background/diffie_hellman.png, id=265, 473.77pt x 333.245pt>
 File: figures/background/diffie_hellman.png Graphic file (type png)
 <use figures/background/diffie_hellman.png>
-Package pdftex.def Info: figures/background/diffie_hellman.png  used on input line 81.
+Package pdftex.def Info: figures/background/diffie_hellman.png  used on input line 83.
 (pdftex.def)             Requested size: 224.06548pt x 157.60146pt.
-[3]
-
-LaTeX Warning: Reference `discrete_log_problem' on page 4 undefined on input line 95.
-
-
-LaTeX Warning: Citation 'ITSicherheit' on page 4 undefined on input line 95.
-
-
-LaTeX Warning: Citation 'ITSicherheit' on page 4 undefined on input line 97.
-
-
-LaTeX Warning: Citation 'ITSicherheit' on page 4 undefined on input line 99.
-
-
-LaTeX Warning: Citation 'rsakem' on page 4 undefined on input line 103.
-
-[4 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/background/diffie_hellman.png>]
-
-LaTeX Warning: Citation 'nielsen2002quantum' on page 5 undefined on input line 135.
-
-
-LaTeX Warning: Citation 'chen2016report' on page 5 undefined on input line 136.
-
-
-LaTeX Warning: Citation 'lidar2013quantum' on page 5 undefined on input line 136.
-
-
-LaTeX Warning: Citation 'chen2016report' on page 5 undefined on input line 136.
-
-
-LaTeX Warning: Citation 'chen2016report' on page 5 undefined on input line 138.
-
-
-LaTeX Warning: Citation 'boudot2795' on page 5 undefined on input line 138.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--139
-
+ [5 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/background/diffie_hellman.png>]
+Overfull \hbox (0.11603pt too wide) in paragraph at lines 132--134
+\T1/pplx/m/n/10.95 (-20) If an at-tacker wants to com-pute [][]$\OML/zplm/m/it/10.95 k[]$[] \T1/pplx/m/n/10.95 (-20) it is nec-es-sary to break the [][]RSA[] en-cryp-tion $\OML/zplm/m/it/10.95 RSA[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 m\OT1/pplx/m/n/10.95 (-20) , \OML/zplm/m/it/10.95 e[]\OT1/zplm/m/n/10.95 )$
  []
-
-[5]
-
-LaTeX Warning: Citation 'beutelspacher2010diskrete' on page 6 undefined on input line 141.
-
-
-LaTeX Warning: Citation 'beutelspacher2010diskrete' on page 6 undefined on input line 148.
-
-
-LaTeX Warning: Citation 'ITSicherheit' on page 6 undefined on input line 156.
-
-
-LaTeX Warning: Citation 'ITSicherheit' on page 6 undefined on input line 156.
-
-
-LaTeX Warning: Citation 'nielsen2002quantum' on page 6 undefined on input line 160.
-
-
-LaTeX Warning: Citation 'shor1994algorithms' on page 6 undefined on input line 163.
 
 [6]
-
-LaTeX Warning: Citation 'grover1996fast' on page 7 undefined on input line 167.
-
-
-LaTeX Warning: Citation 'nielsen2002quantum' on page 7 undefined on input line 167.
-
-
-LaTeX Warning: Citation 'mavroeidis2018impact' on page 7 undefined on input line 169.
-
-
-LaTeX Warning: Citation 'mavroeidis2018impact' on page 7 undefined on input line 169.
-
-
-LaTeX Warning: Citation 'chen2016report' on page 7 undefined on input line 171.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--172
+Underfull \hbox (badness 10000) in paragraph at lines 140--144
 
  []
 
+[7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 172--177
 
-LaTeX Warning: Citation 'chen2016report' on page 7 undefined on input line 194.
-
-[7]
-
-LaTeX Warning: Reference `sec:isogeny-based_crypto' on page 8 undefined on input line 198.
-
-
-LaTeX Warning: Reference `sec:classes_pqc' on page 8 undefined on input line 198.
-
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 205.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
-File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-)
-
-LaTeX Warning: Citation 'chi2015lattice' on page 8 undefined on input line 205.
-
-
-LaTeX Warning: Citation 'chi2015lattice' on page 8 undefined on input line 205.
-
-
-LaTeX Warning: Citation 'hoffstein1998ntru' on page 8 undefined on input line 205.
-
-
-LaTeX Warning: Citation 'gentry2009fully' on page 8 undefined on input line 205.
-
-
-LaTeX Warning: Citation 'chen2016report' on page 8 undefined on input line 206.
-
-
-LaTeX Warning: Citation 'chen2016report' on page 8 undefined on input line 206.
-
-
-LaTeX Warning: Citation 'hartmanis1982computers' on page 8 undefined on input line 208.
-
-
-LaTeX Warning: Citation 'ding2017current' on page 8 undefined on input line 208.
-
-
-LaTeX Warning: Citation 'ding2005rainbow' on page 8 undefined on input line 208.
-
-[8]
-
-LaTeX Warning: Citation 'bernstein2017post' on page 9 undefined on input line 210.
-
-
-LaTeX Warning: Citation 'mceliece1978public' on page 9 undefined on input line 210.
-
-
-LaTeX Warning: Citation 'bernstein2017post' on page 9 undefined on input line 211.
-
-
-LaTeX Warning: Citation 'bernstein2017post' on page 9 undefined on input line 213.
-
-
-LaTeX Warning: Citation 'chen2016report' on page 9 undefined on input line 213.
-
-
-LaTeX Warning: Citation 'becker2008merkle' on page 9 undefined on input line 214.
-
-
-LaTeX Warning: Citation 'merkle1979secrecy' on page 9 undefined on input line 214.
-
-
-LaTeX Warning: Citation 'becker2008merkle' on page 9 undefined on input line 214.
-
-
-LaTeX Warning: Citation 'jao2011towards' on page 9 undefined on input line 217.
-
-
-LaTeX Warning: Citation 'sike2020spec' on page 9 undefined on input line 217.
-
-
-LaTeX Warning: Citation 'sike2020spec' on page 9 undefined on input line 217.
-
-
-LaTeX Warning: Citation 'urbanik2017friendly' on page 9 undefined on input line 220.
-
-
-LaTeX Warning: Citation 'costello2019supersingular' on page 9 undefined on input line 220.
+ []
 
 [9]
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 210.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+) [10] [11] [12]
 
-LaTeX Warning: Citation 'sike2020spec' on page 10 undefined on input line 235.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gls' on input line 246.
 
-
-LaTeX Warning: Reference `fig:diffie_hellman' on page 10 undefined on input line 242.
-
-
-LaTeX Warning: Reference `fig:sidh' on page 10 undefined on input line 242.
-
-<figures/background/sidh.png, id=165, 383.4325pt x 338.26375pt>
+<figures/background/sidh.png, id=487, 383.4325pt x 338.26375pt>
 File: figures/background/sidh.png Graphic file (type png)
 <use figures/background/sidh.png>
-Package pdftex.def Info: figures/background/sidh.png  used on input line 245.
+Package pdftex.def Info: figures/background/sidh.png  used on input line 252.
 (pdftex.def)             Requested size: 224.06548pt x 197.67444pt.
-
-LaTeX Warning: Citation 'costello2016gentle' on page 10 undefined on input line 246.
-
-
-LaTeX Warning: Citation 'costello2016gentle' on page 10 undefined on input line 246.
-
-[10]
-
-LaTeX Warning: Citation 'sike2020spec' on page 11 undefined on input line 262.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 262--264
+[13 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/background/sidh.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 271--273
 
  []
 
-[11 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/background/sidh.png>]
-<figures/background/sike_sidh.png, id=189, 452.69125pt x 292.09125pt>
+<figures/background/sike_sidh.png, id=507, 452.69125pt x 292.09125pt>
 File: figures/background/sike_sidh.png Graphic file (type png)
 <use figures/background/sike_sidh.png>
-Package pdftex.def Info: figures/background/sike_sidh.png  used on input line 285.
+Package pdftex.def Info: figures/background/sike_sidh.png  used on input line 292.
 (pdftex.def)             Requested size: 268.8813pt x 173.49113pt.
-
-
-LaTeX Warning: Citation 'sike2020spec' on page 12 undefined on input line 288.
-
-<figures/background/sike_asym.png, id=190, 703.62875pt x 502.87875pt>
+[14 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/background/sike_sidh.png>]
+<figures/background/sike_asym.png, id=530, 703.62875pt x 502.87875pt>
 File: figures/background/sike_asym.png Graphic file (type png)
 <use figures/background/sike_asym.png>
-Package pdftex.def Info: figures/background/sike_asym.png  used on input line 293.
-(pdftex.def)             Requested size: 358.50612pt x 256.21922pt.
-[12 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/background/sike_sidh.png>]
-<figures/background/sike_kem.png, id=199, 814.04124pt x 583.17876pt>
+Package pdftex.def Info: figures/background/sike_asym.png  used on input line 308.
+(pdftex.def)             Requested size: 448.13095pt x 320.27594pt.
+ [15 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/background/sike_asym.png>]
+<figures/background/sike_kem.png, id=550, 814.04124pt x 584.1825pt>
 File: figures/background/sike_kem.png Graphic file (type png)
 <use figures/background/sike_kem.png>
-Package pdftex.def Info: figures/background/sike_kem.png  used on input line 307.
-(pdftex.def)             Requested size: 358.50612pt x 256.83081pt.
- [13 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/background/sike_asym.png>]
-
-LaTeX Warning: Citation 'sike2020spec' on page 14 undefined on input line 320.
-
-[14 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/background/sike_kem.png>]
-LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 333.
+Package pdftex.def Info: figures/background/sike_kem.png  used on input line 322.
+(pdftex.def)             Requested size: 448.13095pt x 321.59552pt.
+ [16 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/background/sike_kem.png>]
+LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 343.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pplx.fd
 File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
 )
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 333.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 343.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
@@ -1845,327 +1653,402 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-
-LaTeX Warning: Citation 'jaques2019quantum' on page 15 undefined on input line 338.
-
-
-LaTeX Warning: Citation 'tani2009claw' on page 15 undefined on input line 338.
-
-
-LaTeX Warning: Citation 'grover1996fast' on page 15 undefined on input line 338.
-
-
-LaTeX Warning: Citation 'van1999parallel' on page 15 undefined on input line 338.
-
-
-LaTeX Warning: Citation 'longa2018note' on page 15 undefined on input line 340.
-
-
-LaTeX Warning: Citation 'sike2020spec' on page 15 undefined on input line 342.
-
 ) (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/chapters/02_existing.tex
-Underfull \hbox (badness 10000) in paragraph at lines 338--1
+Underfull \hbox (badness 10000) in paragraph at lines 348--1
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 338--1
-
- []
-
-[15]
-chapter 2.
-
-LaTeX Warning: Reference `tab:existing_sidh' on page 16 undefined on input line 2.
-
-
-LaTeX Warning: Citation 'jao2011towards' on page 16 undefined on input line 7.
-
-
-LaTeX Warning: Citation 'sike2020spec' on page 16 undefined on input line 7.
-
-
-LaTeX Warning: Reference `chapter:background' on page 16 undefined on input line 9.
-
-
-LaTeX Warning: Citation 'sike2020spec' on page 16 undefined on input line 18.
-
-
-LaTeX Warning: Citation 'microsoft2020sidh' on page 16 undefined on input line 22.
-
-[16
-
-
-]
-
-LaTeX Warning: Citation 'microsoft2020sidh' on page 17 undefined on input line 32.
-
-
-LaTeX Warning: Citation 'circl2020github' on page 17 undefined on input line 36.
-
-
-LaTeX Warning: Citation 'circl2019intro' on page 17 undefined on input line 44.
-
-
-Overfull \hbox (28.66034pt too wide) in paragraph at lines 48--70
- [][] 
- []
-
-) (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/chapters/03_benchmarks.tex [17] [18]
+[17]
 chapter 3.
 
-LaTeX Warning: Reference `chapter:existing_sidh' on page 19 undefined on input line 2.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gls' on input line 1.
 
 
-LaTeX Warning: Reference `chapter:existing_sidh' on page 19 undefined on input line 17.
-
-
-LaTeX Warning: Citation 'gowiki2020compiler' on page 19 undefined on input line 21.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gls' on input line 6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-) [19
+)
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 26.
+ [18
 
 
 ]
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 25.
- (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gls' on input line 46.
+
+[19]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gls' on input line 83.
+
+[20] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2019/09/10 1.8c listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2019/09/10 1.8c listings language file
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2019/09/10 1.8c listings language file
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2019/09/10 1.8c listings language file
-) [20]
-Underfull \hbox (badness 10000) in paragraph at lines 61--63
-
+)
+Overfull \hbox (28.66034pt too wide) in paragraph at lines 129--151
+ [][] 
  []
 
+) (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/chapters/03_benchmarks.tex [21] [22]
+chapter 4.
+[23
 
-Overfull \hbox (7.7168pt too wide) in paragraph at lines 77--78
+
+] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+) [24]
+Overfull \hbox (7.7168pt too wide) in paragraph at lines 80--81
 []\T1/pplx/m/n/10.95 (-20) Sike generic op-ti-mized and com-pressed im-ple-men-ta-tion (\T1/cmtt/m/n/10.95 SIKE_Generic_Compressed\T1/pplx/m/n/10.95 (-20) ) 
  []
 
-[21]
-
-LaTeX Warning: Reference `sidh_security' on page 22 undefined on input line 94.
-
-
-LaTeX Warning: Citation 'turner2009elliptic' on page 22 undefined on input line 96.
-
-
-LaTeX Warning: Citation 'brown2010sec' on page 22 undefined on input line 96.
-
-
-Overfull \hbox (8.52419pt too wide) in paragraph at lines 96--97
-[]\T1/cmtt/m/n/10.95 secp256r1 \T1/pplx/m/n/10.95 (-20) (openssl: \T1/cmtt/m/n/10.95 prime256v1 \T1/pplx/m/n/10.95 (-20) [[]]): 128 bit se-cu-rity match-ing \T1/cmtt/m/n/10.95 SIKEp434
- []
-
-
-LaTeX Warning: Citation 'brown2010sec' on page 22 undefined on input line 97.
-
-
-LaTeX Warning: Citation 'brown2010sec' on page 22 undefined on input line 98.
-
-
-LaTeX Warning: Reference `fig:app_flow' on page 22 undefined on input line 103.
-
-<figures/benchmarks/application_flow.png, id=291, 500.87125pt x 482.80376pt>
+[25]
+<figures/benchmarks/application_flow.png, id=831, 500.87125pt x 482.80376pt>
 File: figures/benchmarks/application_flow.png Graphic file (type png)
 <use figures/benchmarks/application_flow.png>
-Package pdftex.def Info: figures/benchmarks/application_flow.png  used on input line 109.
-(pdftex.def)             Requested size: 358.50612pt x 345.58516pt.
-[22]
-
-LaTeX Warning: Reference `fig:uml' on page 23 undefined on input line 124.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+Package pdftex.def Info: figures/benchmarks/application_flow.png  used on input line 112.
+(pdftex.def)             Requested size: 313.69029pt x 302.38516pt.
+ [26]
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
-[23 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/benchmarks/application_flow.png>]
-<figures/benchmarks/uml.png, id=309, 618.31pt x 904.37875pt>
+<figures/benchmarks/uml.png, id=849, 618.31pt x 904.37875pt>
 File: figures/benchmarks/uml.png Graphic file (type png)
 <use figures/benchmarks/uml.png>
-Package pdftex.def Info: figures/benchmarks/uml.png  used on input line 128.
-(pdftex.def)             Requested size: 358.50612pt x 524.38826pt.
- [24]
+Package pdftex.def Info: figures/benchmarks/uml.png  used on input line 131.
+(pdftex.def)             Requested size: 403.31511pt x 589.93678pt.
+[27 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/benchmarks/application_flow.png>]
+Overfull \vbox (31.33652pt too high) has occurred while \output is active []
 
-LaTeX Warning: Reference `fig:uml_results' on page 25 undefined on input line 134.
-
-<figures/benchmarks/uml_results.png, id=314, 934.49126pt x 281.05pt>
+ [28 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/benchmarks/uml.png>]
+<figures/benchmarks/uml_results.png, id=865, 934.49126pt x 281.05pt>
 File: figures/benchmarks/uml_results.png Graphic file (type png)
 <use figures/benchmarks/uml_results.png>
-Package pdftex.def Info: figures/benchmarks/uml_results.png  used on input line 138.
+Package pdftex.def Info: figures/benchmarks/uml_results.png  used on input line 141.
 (pdftex.def)             Requested size: 448.13095pt x 134.77809pt.
-[25 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/benchmarks/uml.png>] [26 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/benchmarks/uml_results.png>] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+ [29 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/benchmarks/uml_results.png>] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
-) [27]) (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/chapters/04_analysis.tex [28] [29]
-chapter 4.
-) (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/chapters/05_conclusion.tex [30
-
-
-]
+) [30]) (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/chapters/04_analysis.tex [31]
 chapter 5.
-) (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/chapters/01_introduction.tex [31
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gls' on input line 18.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--25
+
+ []
+
+[32
 
 
 ]
+<figures/benchmarks/all_curves/SIKE_x64.png, id=960, 1205.4636pt x 639.5895pt>
+File: figures/benchmarks/all_curves/SIKE_x64.png Graphic file (type png)
+<use figures/benchmarks/all_curves/SIKE_x64.png>
+Package pdftex.def Info: figures/benchmarks/all_curves/SIKE_x64.png  used on input line 33.
+(pdftex.def)             Requested size: 403.31511pt x 213.99298pt.
+<figures/benchmarks/all_curves/SIKE_x64_mem.png, id=961, 1205.4636pt x 639.5895pt>
+File: figures/benchmarks/all_curves/SIKE_x64_mem.png Graphic file (type png)
+<use figures/benchmarks/all_curves/SIKE_x64_mem.png>
+Package pdftex.def Info: figures/benchmarks/all_curves/SIKE_x64_mem.png  used on input line 41.
+(pdftex.def)             Requested size: 403.31511pt x 213.99298pt.
+ [33 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/benchmarks/all_curves/Sike_x64.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gls' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gls' on input line 51.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--59
+
+ []
+
+[34 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/benchmarks/all_curves/Sike_x64_mem.png>]
+<figures/benchmarks/sike/sike.png, id=1000, 1261.8342pt x 640.3122pt>
+File: figures/benchmarks/sike/sike.png Graphic file (type png)
+<use figures/benchmarks/sike/sike.png>
+Package pdftex.def Info: figures/benchmarks/sike/sike.png  used on input line 62.
+(pdftex.def)             Requested size: 403.31511pt x 204.65982pt.
+<figures/benchmarks/sike/sike_mem.png, id=1003, 1256.0526pt x 642.4803pt>
+File: figures/benchmarks/sike/sike_mem.png Graphic file (type png)
+<use figures/benchmarks/sike/sike_mem.png>
+Package pdftex.def Info: figures/benchmarks/sike/sike_mem.png  used on input line 70.
+(pdftex.def)             Requested size: 403.31511pt x 206.29393pt.
+ [35 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/benchmarks/sike/sike.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 84--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--89
+
+ []
+
+[36 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/benchmarks/sike/sike_mem.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 97--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--104
+
+ []
+
+<figures/benchmarks/optimized/434.png, id=1053, 1391.9202pt x 640.3122pt>
+File: figures/benchmarks/optimized/434.png Graphic file (type png)
+<use figures/benchmarks/optimized/434.png>
+Package pdftex.def Info: figures/benchmarks/optimized/434.png  used on input line 107.
+(pdftex.def)             Requested size: 448.13095pt x 206.14491pt.
+[37]
+<figures/benchmarks/optimized/434_mem.png, id=1071, 1391.9202pt x 640.3122pt>
+File: figures/benchmarks/optimized/434_mem.png Graphic file (type png)
+<use figures/benchmarks/optimized/434_mem.png>
+Package pdftex.def Info: figures/benchmarks/optimized/434_mem.png  used on input line 115.
+(pdftex.def)             Requested size: 448.13095pt x 206.14491pt.
+<figures/benchmarks/optimized/751.png, id=1076, 1391.9202pt x 640.3122pt>
+File: figures/benchmarks/optimized/751.png Graphic file (type png)
+<use figures/benchmarks/optimized/751.png>
+Package pdftex.def Info: figures/benchmarks/optimized/751.png  used on input line 123.
+(pdftex.def)             Requested size: 448.13095pt x 206.14491pt.
+ [38 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/benchmarks/optimized/434.png> </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/benchmarks/optimized/434_mem.png>]
+<figures/benchmarks/optimized/751_mem.png, id=1087, 1391.9202pt x 640.3122pt>
+File: figures/benchmarks/optimized/751_mem.png Graphic file (type png)
+<use figures/benchmarks/optimized/751_mem.png>
+Package pdftex.def Info: figures/benchmarks/optimized/751_mem.png  used on input line 131.
+(pdftex.def)             Requested size: 448.13095pt x 206.14491pt.
+
+Overfull \hbox (8.85048pt too wide) in paragraph at lines 138--140
+\T1/pplx/m/n/10.95 (-20) Compressed im-ple-men-ta-tions of [][]SIDH[] promise short-ened key size com-pared to non-compressed
+ []
+
+[39 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/benchmarks/optimized/751.png> </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/benchmarks/optimized/751_mem.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 145--150
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--150
+
+ []
+
+<figures/benchmarks/compressed/434.png, id=1109, 1308.8097pt x 640.3122pt>
+File: figures/benchmarks/compressed/434.png Graphic file (type png)
+<use figures/benchmarks/compressed/434.png>
+Package pdftex.def Info: figures/benchmarks/compressed/434.png  used on input line 153.
+(pdftex.def)             Requested size: 448.13095pt x 219.23721pt.
+<figures/benchmarks/compressed/434_mem.png, id=1112, 1308.8097pt x 640.3122pt>
+File: figures/benchmarks/compressed/434_mem.png Graphic file (type png)
+<use figures/benchmarks/compressed/434_mem.png>
+Package pdftex.def Info: figures/benchmarks/compressed/434_mem.png  used on input line 161.
+(pdftex.def)             Requested size: 448.13095pt x 219.23721pt.
+[40 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/benchmarks/compressed/434.png>]
+<figures/benchmarks/compressed/751.png, id=1127, 1316.0367pt x 640.3122pt>
+File: figures/benchmarks/compressed/751.png Graphic file (type png)
+<use figures/benchmarks/compressed/751.png>
+Package pdftex.def Info: figures/benchmarks/compressed/751.png  used on input line 169.
+(pdftex.def)             Requested size: 448.13095pt x 218.03545pt.
+<figures/benchmarks/compressed/751_mem.png, id=1130, 1308.8097pt x 640.3122pt>
+File: figures/benchmarks/compressed/751_mem.png Graphic file (type png)
+<use figures/benchmarks/compressed/751_mem.png>
+Package pdftex.def Info: figures/benchmarks/compressed/751_mem.png  used on input line 177.
+(pdftex.def)             Requested size: 448.13095pt x 219.23721pt.
+ [41 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/benchmarks/compressed/434_mem.png> </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/benchmarks/compressed/751.png>] [42 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/benchmarks/compressed/751_mem.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gls' on input line 197.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gls' on input line 197.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--206
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--206
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gls' on input line 206.
+
+
+Overfull \hbox (46.94725pt too wide) in paragraph at lines 208--211
+\T1/pplx/m/n/10.95 (-20) The hotspots of \T1/cmtt/m/n/10.95 secp256r1 \T1/pplx/m/n/10.95 (-20) are the low level prime field arith-metic func-tions \T1/cmtt/m/n/10.95 __ecp_nistz256_mul_montq
+ []
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 225--229
+
+ []
+
+[44]) (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/chapters/05_conclusion.tex [45]
 chapter 6.
-
-LaTeX Warning: Citation 'latex' on page 32 undefined on input line 8.
-
-
-LaTeX Warning: Reference `tab:sample' on page 32 undefined on input line 12.
+[46
 
 
-LaTeX Warning: Reference `fig:sample-drawing' on page 32 undefined on input line 12.
+]
+Overfull \hbox (0.67807pt too wide) in paragraph at lines 69--69
+ []|[]| 
+ []
 
-
-LaTeX Warning: Reference `fig:sample-plot' on page 32 undefined on input line 12.
-
-
-LaTeX Warning: Reference `fig:sample-listing' on page 32 undefined on input line 12.
-
-
-LaTeX Warning: Reference `fig:tum' on page 32 undefined on input line 12.
-
-
-LaTeX Warning: Reference `fig:tumslide' on page 32 undefined on input line 12.
-
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2019/09/10 1.8c listings language file
-)
-File: logos/tum.pdf Graphic file (type pdf)
-<use logos/tum.pdf>
-Package pdftex.def Info: logos/tum.pdf  used on input line 95.
-(pdftex.def)             Requested size: 358.50612pt x 188.89207pt.
-<figures/tum.jpg, id=396, 569.12625pt x 377.41pt>
-File: figures/tum.jpg Graphic file (type jpg)
-<use figures/tum.jpg>
-Package pdftex.def Info: figures/tum.jpg  used on input line 101.
-(pdftex.def)             Requested size: 358.50612pt x 237.75227pt.
-File: logos/tum.pdf Graphic file (type pdf)
-<use logos/tum.pdf>
-Package pdftex.def Info: logos/tum.pdf  used on input line 107.
-(pdftex.def)             Requested size: 231.47705pt x 121.87819pt.
-File: figures/tum.jpg Graphic file (type jpg)
-<use figures/tum.jpg>
-Package pdftex.def Info: figures/tum.jpg  used on input line 109.
-(pdftex.def)             Requested size: 183.78279pt x 121.87819pt.
-
-
-LaTeX Font Warning: Font shape `T1/pplx/b/sc' undefined
-(Font)              using `T1/pplx/b/n' instead on input line 120.
-
-
-LaTeX Font Warning: Font shape `T1/pplx/m/scit' undefined
-(Font)              using `T1/pplx/m/sc' instead on input line 122.
-
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/pplx/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-) (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/pages/appendix.tex [32
-
-
-] [33] [34 </home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/figures/tum.jpg>]
+) (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/pages/appendix.tex [47]
 chapter A.
-[35
+[48
 
 
-] [36] [37] [38] [39] [40] [41] [42] [43] [44]) [45]
+] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58]) [59]
 Package tocbasic Info: character protrusion at lof deactivated on input line 57.
-\tf@lof=\write10
-\openout10 = `main.lof'.
+ (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/main.lof)
+\tf@lof=\write9
+\openout9 = `main.lof'.
 
- [46
+ [60
 
 
 ]
 Package tocbasic Info: character protrusion at lot deactivated on input line 58.
-\tf@lot=\write11
-\openout11 = `main.lot'.
+ (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/main.lot)
+\tf@lot=\write10
+\openout10 = `main.lot'.
 
 
 No file main.gls.
-No file main.acr.
-
-LaTeX Warning: Empty bibliography on input line 61.
-
-No complaints by nag.
-[47
+[61
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
+chapter without number
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplx/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+[62
+
+
+] [63]
+Overfull \hbox (62.83977pt too wide) in paragraph at lines 62--62
+[]\T1/pplx/m/it/10.95 (-20) GoLang Wiki Com-piler Op-ti-miza-tions\T1/pplx/m/n/10.95 (-20) . []$\T1/cmtt/m/n/10.95 https : / / github . com / golang / go / wiki / CompilerOptimizations$[]\T1/pplx/m/n/10.95 (-20) .
+ []
+
+No complaints by nag.
+[64]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 64.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 64.
  (/home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 64.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 64.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
+LaTeX Warning: There were multiply-defined labels.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57252 strings out of 482771
- 1250075 string characters out of 5955540
- 2204017 words of memory out of 5000000
- 70731 multiletter control sequences out of 15000+600000
- 620129 words of font info for 381 fonts, out of 8000000 for 9000
+ 57765 strings out of 482771
+ 1258144 string characters out of 5955540
+ 2217706 words of memory out of 5000000
+ 70893 multiletter control sequences out of 15000+600000
+ 626573 words of font info for 485 fonts, out of 8000000 for 9000
  85 hyphenation exceptions out of 8191
- 81i,19n,139p,10168b,2340s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{glo:tuma} has been referenced but does not exist, replaced by a fixed one
+ 81i,21n,139p,10168b,2834s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{glo:computer} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{glo:kB} has been referenced but does not exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{glo:tum} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{glo:kdeac} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{glo:HTML} has been referenced but does not exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{glo:R0} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{glo:openssl} has been referenced but does not exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{glo:r0} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{glo:PKE} has been referenced but does not exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{glo:ddye} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{glo:MSS} has been referenced but does not exist, replaced by a fixed one
 
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/joy/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk> </home/joy/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecit1095.600pk> </home/joy/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on /home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/main.pdf (55 pages, 967709 bytes).
+pdfTeX warning (dest): name{glo:McEliece} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:NTRUsign} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:NTRU} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:ECDSA} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:SHA} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:AES} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:NIST} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:DSA} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:DH} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:RSA} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:rsa_kem} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:KEM} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:PFS} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:k_ab} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:Dec} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:Enc} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:ECDH} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:CIRCL} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:PQCrypto-SIDH} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:SIKE} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:SIDH} has been referenced but does not exist, replaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/joy/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk> </home/joy/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecit1095.600pk> </home/joy/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on /home/joy/Bachelorarbeit/SIDH_Implementations/Benchmarking/doc/Latex/main.pdf (72 pages, 1364068 bytes).
 PDF statistics:
- 1027 PDF objects out of 1200 (max. 8388607)
- 810 compressed objects within 9 object streams
- 393 named destinations out of 1000 (max. 500000)
- 65990 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 2045 PDF objects out of 2073 (max. 8388607)
+ 1738 compressed objects within 18 object streams
+ 576 named destinations out of 1000 (max. 500000)
+ 64621 words of extra memory for PDF output out of 74296 (max. 10000000)
 

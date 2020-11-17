@@ -5,21 +5,31 @@ from matplotlib.ticker import ScalarFormatter
 from multiprocessing import Process
 from pathlib import Path
 
-def map_round(x):
-    scaled = float(x)/1000000
-    if scaled < 1:
-        return round(scaled, 1)
-    return int(scaled)
+# def autolabel(rects, ax):
+#     """Attach a text label above each bar in *rects*, displaying its height."""
+#     for rect in rects:
+#         height = rect.get_height()
+#         print(rect)
+#         ax.annotate('{}'.format(height),
+#                     xy=(rect.get_x() + rect.get_width() / 2, height),
+#                     xytext=(0, 3),  # 3 points vertical offset
+#                     textcoords="offset points",
+#                     ha='center', va='bottom')
 
 def autolabel(rects, ax):
-    """Attach a text label above each bar in *rects*, displaying its height."""
-    for rect in rects:
-        height = rect.get_height()
-        ax.annotate('{}'.format(height),
-                    xy=(rect.get_x() + rect.get_width() / 2, height),
-                    xytext=(0, 3),  # 3 points vertical offset
-                    textcoords="offset points",
-                    ha='center', va='bottom')
+    """
+    Attach a text label above each bar displaying its height
+    """
+
+    data_line, capline, barlinecols = rects.errorbar
+
+    for err_segment, rect in zip(barlinecols[0].get_segments(), rects):
+        height = err_segment[1][1]  # Use height of error bar
+
+        ax.text(rect.get_x() + rect.get_width() / 2, 
+                1.01 * height,
+                f'{height:.0f}',
+                ha='center', va='bottom')
 
 
 def plot_memory(curve, benchmarks, ecdh_compare=None):
@@ -43,18 +53,24 @@ def plot_memory(curve, benchmarks, ecdh_compare=None):
 
 
     for benchmark in benchmarks:
-        values = [round(benchmark.find_benchmark(
-            "Memory", "not found")/1000, 1)]
+        values = [round(benchmark.benchmark_average(
+            "Memory")/1000, 1)]
+        deviations = [round(benchmark.benchmark_stdev(
+            "Memory")/1000, 1)]
         rec = ax.bar(x + width*count + offset, values,
-                     width, label=benchmark.impl.name)
+                     width, label=benchmark.impl.name,
+                     yerr = deviations, capsize=50)
         autolabel(rec, ax)
         count += 1
 
     if ecdh_compare:
-        values = [round(ecdh_compare.find_benchmark(
-            "Memory", "not found")/1000, 1)]
+        values = [round(ecdh_compare.benchmark_average(
+            "Memory")/1000, 1)]
+        deviations = [round(ecdh_compare.benchmark_stdev(
+            "Memory")/1000, 1)]
         ecdh = ax.bar(x + width*count + offset, values, width,
-                      label = 'ECDH '+ecdh_compare.name+' (Reference value)')
+                      label = 'ECDH '+ecdh_compare.name+' (Reference value)',
+                      yerr = deviations, capsize=50)
         autolabel(ecdh, ax)
         count += 1
 
@@ -89,16 +105,16 @@ def plot_instructions(curve, benchmarks, ecdh_compare=None):
     count = 0
 
     for benchmark in benchmarks:
-        values = list(map(map_round, benchmark.get_benchmarks_for_plot()))
-        rec = ax.bar(x + width*count + offset, values,
-                     width, label=benchmark.impl.name)
+        averages, deviations = benchmark.get_benchmarks_for_plot()
+        rec = ax.bar(x + width*count + offset, averages,
+                     width, label=benchmark.impl.name, yerr=deviations, capsize=10)
         autolabel(rec, ax)
         count += 1
 
     if ecdh_compare:
-        values = list(map(map_round, ecdh_compare.get_benchmarks_for_plot()))
-        ecdh = ax.bar(x + width*count + offset, values, width,
-                      label='ECDH '+ecdh_compare.name+' (Reference value)')
+        averages, deviations = ecdh_compare.get_benchmarks_for_plot()
+        ecdh = ax.bar(x + width*count + offset, averages, width,
+                      label='ECDH '+ecdh_compare.name+' (Reference value)', yerr=deviations, capsize=10)
         autolabel(ecdh, ax)
         count += 1
 
@@ -138,9 +154,9 @@ def plot_instructions_all_curves(implementation, benchmarks):
     count = 0
 
     for benchmark in benchmarks:
-        values = list(map(map_round, benchmark.get_benchmarks_for_plot()))
-        rec = ax.bar(x + width*count + offset, values,
-                     width, label="p" + benchmark.name)
+        averages, deviations = benchmark.get_benchmarks_for_plot()
+        rec = ax.bar(x + width*count + offset, averages,
+                     width, label="p" + benchmark.name, yerr=deviations, capsize=10)
         autolabel(rec, ax)
         count += 1
 
@@ -182,10 +198,13 @@ def plot_memory_all_curves(implementation, benchmarks):
 
 
     for benchmark in benchmarks:
-        values = [round(benchmark.find_benchmark(
-            "Memory", "not found")/1000, 1)]
+        values = [round(benchmark.benchmark_average(
+            "Memory")/1000, 1)]
+        deviations = [round(benchmark.benchmark_stdev(
+            "Memory")/1000, 1)]
         rec = ax.bar(x + width*count + offset, values,
-                     width, label="p" + benchmark.name)
+                     width, label="p" + benchmark.name,
+                     yerr = deviations, capsize=50)
         autolabel(rec, ax)
         count += 1
 
@@ -228,6 +247,7 @@ def generate_graph(result):
         #"Microsoft_x64_Compressed",
 
         #CIRCL
+        "CIRCL_Generic",
         "CIRCL_x64",
 
         #ECDH
@@ -245,6 +265,8 @@ def generate_graph(result):
     benchmarks = []
     for curve in curves:
         impl = result.get(name)
+        if not impl:
+            break
         curve = impl.get_curve_by_name(curve)
         benchmarks.append(curve)
     p1 = Process(target=plot_instructions_all_curves, args=(name, benchmarks))
@@ -254,7 +276,7 @@ def generate_graph(result):
     processes.append(p1)
     processes.append(p4)
 
-    # Compare implementations amoung each other
+    # Compare implementations among each other
     for curve in curves:
         # 1. Collect all benchmarks for specific curve
         benchmarks = []
@@ -262,6 +284,7 @@ def generate_graph(result):
             # Ignore these implementations
             impl = result.get(name)
             if not impl:
+                print("Could not find " + name)
                 continue
             found = impl.get_curve_by_name(curve)
             if found:

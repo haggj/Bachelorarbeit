@@ -17,14 +17,14 @@ build: $(OBJ)
 callgrind:
 	@ mkdir -p "benchmarks"
 	@ echo "Running callgrind..."
-	@ sudo ../drop-caches.sh
+	@ sudo ../helper/drop-caches.sh
 	@ valgrind --tool=callgrind --callgrind-out-file=benchmarks/callgrind.out build/benchmark  2> /dev/null
 	@ echo "\e[32mSUCCESS\e[0m"
 
 massif:
 	@ mkdir -p "benchmarks"
 	@ echo "Running massif..."
-	@ sudo ../drop-caches.sh
+	@ sudo ../helper/drop-caches.sh
 	@ valgrind --tool=massif --stacks=yes --massif-out-file=benchmarks/massif.out build/benchmark  2> /dev/null
 	@ echo "\e[32mSUCCESS\e[0m"
 

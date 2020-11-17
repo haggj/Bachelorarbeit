@@ -5,13 +5,13 @@ CC=gcc
 PARAM:=434
 
 # Path to prebuild libs
-PREPATH=../.src/Additional_Implementations/x64/SIKEp$(PARAM)$(COMPRESSED)
+PREPATH=../.src/x64/SIKEp$(PARAM)$(COMPRESSED)
 
 CFLAGS=\
 -I .. \
 -I $(PREPATH)/P$(PARAM)/ \
 -O3 \
--D __LINUX__ \
+-D __NIX__ \
 -D _AMD64_  \
 -D _FAST_ \
 -D _MULX_ \
@@ -24,7 +24,7 @@ endif
 
 OBJ = \
 benchmark.c \
-$(PREPATH)/P$(PARAM)/P$(PARAM).c \
+$(PREPATH)/P$(PARAM)/P$(PARAM)$(COMPRESSED).c \
 $(PREPATH)/P$(PARAM)/AMD64/fp_x64.c \
 $(PREPATH)/P$(PARAM)/AMD64/fp_x64_asm.S \
 $(PREPATH)/random/random.c \
@@ -36,7 +36,7 @@ LIBS=-lm
 build: $(OBJ)
 	@ echo "building p$(PARAM)$(COMPRESSED)..."
 	@ mkdir -p "build"
-	@ $(CC) -o build/benchmark $^ $(CFLAGS) $(LIBS)
+	@ $(CC) -o build/benchmark $^ $(CFLAGS) $(LIBS) -Wno-implicit
 	@ echo "\e[32mSUCCESS\e[0m"
 
 callgrind:

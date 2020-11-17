@@ -7,6 +7,11 @@ def format_number(number):
     except Exception:
         return number
 
+def map_round(x):
+    scaled = float(x)/1000000
+    if scaled < 1:
+        return round(scaled, 1)
+    return int(scaled)
 
 class Benchmark:
     def __init__(self, description, values):
@@ -83,40 +88,81 @@ class BenchmarkCurve:
             list: [[Keygen A], [Keygen B], [Secret A], [Secret B]]
         """
 
-        benchmarks = []
-        #KeyGenA
-        val = self.find_benchmark("PublicKeyA",0)
-        val += self.find_benchmark("PrivateKeyA",0)
-        benchmarks.append(val if val != 0 else "no values")
-        #KeyGenB
-        val = self.find_benchmark("PublicKeyB",0)
-        val += self.find_benchmark("PrivateKeyB",0)
-        benchmarks.append(val if val != 0 else "no values")
-        #SecretA
-        val = self.find_benchmark("SecretA",0)
-        benchmarks.append(val if val != 0 else "no values")
-        #SecretB
-        val = self.find_benchmark("SecretB",0)
-        benchmarks.append(val if val != 0 else "no values")
-        return benchmarks
+        # Calculate average values
 
-    def find_benchmark(self, name, alternative):
+        averages = []
+        #KeyGenA
+        val = self.benchmark_average("PublicKeyA")
+        val += self.benchmark_average("PrivateKeyA")
+        averages.append(val if val != 0 else "no values")
+        #KeyGenB
+        val = self.benchmark_average("PublicKeyB")
+        val += self.benchmark_average("PrivateKeyB")
+        averages.append(val if val != 0 else "no values")
+        #SecretA
+        val = self.benchmark_average("SecretA")
+        averages.append(val if val != 0 else "no values")
+        #SecretB
+        val = self.benchmark_average("SecretB")
+        averages.append(val if val != 0 else "no values")
+
+        # Calculate standard deviation
+        deviations = []
+        # KeyGenA
+        pub_key = self.benchmark_values("PublicKeyA")
+        prv_key = self.benchmark_values("PrivateKeyA")
+        added = list(map(sum, zip(pub_key,prv_key)))
+        dev = round(statistics.stdev(added))
+        deviations.append(dev)
+        # KeyGenB
+        pub_key = self.benchmark_values("PublicKeyB")
+        prv_key = self.benchmark_values("PrivateKeyB")
+        added = list(map(sum, zip(pub_key,prv_key)))
+        dev = round(statistics.stdev(added))
+        deviations.append(dev)
+         #SecretA
+        dev = round(statistics.stdev(self.benchmark_values("SecretA")))
+        deviations.append(dev)
+        #SecretB
+        val = round(statistics.stdev(self.benchmark_values("SecretB")))
+        deviations.append(dev)
+
+
+        return list(map(map_round, averages)), list(map(map_round, deviations))
+
+    def find_benchmark(self, name):
         """Returns average of benchmark specified by name. If benchmark is not found,
-        alternative is returned
+        None is returned
 
         Args:
             name (str): Name of wanted benchmark.
-            alternative: Alternative to return, if name is not a valid benchmark.
 
         Returns:
-            Average of benchmark or alternative.
+            Average of benchmark or None.
         """
+        benchmark = None
         for benchmark in self.benchmarks:
             if benchmark.name == name:
-                return benchmark.get_average()
-        return alternative
+                return benchmark
 
+    def benchmark_average(self, name):
+        benchmark = self.find_benchmark(name)
+        if benchmark:
+            return benchmark.get_average()
+        return 0
 
+    def benchmark_stdev(self, name):
+        benchmark = self.find_benchmark(name)
+        if benchmark:
+            return benchmark.get_stdev()
+        return 0
+    
+    def benchmark_values(self, name):
+        benchmark = self.find_benchmark(name)
+        if benchmark:
+            return benchmark.values
+        return []
+                
 class BenchmarkImpl:
     """BenchmarkImpl saves benchmarks for a specific implementation. It manages a list of benchmarked curves.
     """

@@ -1,28 +1,6 @@
 \chapter{\abstractname}
 
-%TODO: Abstract
+This thesis benchmarks and compares currently available Supersingular Isogeny Diffie-Hellman impelementations: \textit{SIKE}, \textit{PQCrypto-SIDH} and \textit{CIRCL}. While the developed benchmarking suite indicates \textit{PQCrypto-SIDH} as the library executing the least amount of instructions for a single SIDH key exchange, \textit{SIKE} allocates least memory. \textit{CIRCL} demands the most resources (execution time and memory) among the compared libraries. The comparison with a modern Elliptic Curve Diffie-Hellman library (\textit{OpenSSL}) demonstrates the limitations of current SIDH algorithms in terms of execution time for a single key exchange.
 
 
 
-
-
-\makeatletter
-\ifthenelse{\pdf@strcmp{\languagename}{english}=0}
-{\renewcommand{\abstractname}{Kurzfassung}}
-{\renewcommand{\abstractname}{Abstract}}
-\makeatother
-
-\chapter{\abstractname}
-
-%TODO: Abstract in other language
-\begin{otherlanguage}{ngerman} % TODO: select other language, either ngerman or english !
-
-\end{otherlanguage}
-
-
-% Undo the name switch
-\makeatletter
-\ifthenelse{\pdf@strcmp{\languagename}{english}=0}
-{\renewcommand{\abstractname}{Abstract}}
-{\renewcommand{\abstractname}{Kurzfassung}}
-\makeatother

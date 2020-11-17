@@ -17,6 +17,11 @@ class CIRCL_Base(BaseImplementation):
             "SecretB": callgrind_result["main.sharedB"]
         }
         return res
+
 class CIRCL_x64(CIRCL_Base):
     def __init__(self, count):
-        super().__init__(count=count, path="CIRCL/", args="VERSION=amd64")
+        super().__init__(count=count, path="CIRCL/", args="ARCH=amd64")
+
+class CIRCL_Generic(CIRCL_Base):
+    def __init__(self, count):
+        super().__init__(count=count, path="CIRCL/", args='ASM=noasm')

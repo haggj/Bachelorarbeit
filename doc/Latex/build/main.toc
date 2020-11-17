@@ -3,90 +3,91 @@
 \babel@toc {english}{}
 \contentsline {chapter}{Acknowledgments}{iii}{Doc-Start}%
 \contentsline {chapter}{\nonumberline Abstract}{iv}{chapter*.1}%
-\contentsline {chapter}{\nonumberline Kurzfassung}{v}{chapter*.2}%
-\babel@toc {ngerman}{}
-\babel@toc {english}{}
-\contentsline {chapter}{\numberline {1}Background}{1}{chapter.1}%
-\contentsline {subsubsection}{\nonumberline Symmetric Cryptography}{1}{section*.4}%
-\contentsline {subsubsection}{\nonumberline Asymmetric Cryptography}{2}{section*.6}%
-\contentsline {section}{\numberline {1.1}Key Exchange}{3}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Diffie-Hellman Key-Exchange}{3}{subsection.1.1.1}%
-\contentsline {subsubsection}{\nonumberline Protocol}{3}{section*.8}%
-\contentsline {subsubsection}{\nonumberline Security}{4}{section*.10}%
-\contentsline {subsection}{\numberline {1.1.2}Key Encapsulation}{5}{subsection.1.1.2}%
-\contentsline {subsubsection}{\nonumberline Security}{6}{section*.11}%
-\contentsline {subsection}{\numberline {1.1.3}Differences}{6}{subsection.1.1.3}%
-\contentsline {section}{\numberline {1.2}Post-Quantum Cryptography}{6}{section.1.2}%
-\contentsline {subsubsection}{\nonumberline Discrete Logarithm Problem}{7}{section*.12}%
-\contentsline {subsubsection}{\nonumberline Factorization Problem}{7}{section*.13}%
-\contentsline {subsection}{\numberline {1.2.1}Impact of Quantum Computers on Cryptography}{7}{subsection.1.2.1}%
-\contentsline {subsubsection}{\nonumberline Shor's Algorithm}{8}{section*.14}%
-\contentsline {subsubsection}{\nonumberline Grover's Algorithm}{8}{section*.15}%
-\contentsline {subsection}{\numberline {1.2.2}Classes of Post-Quantum Cryptography}{9}{subsection.1.2.2}%
-\contentsline {subsubsection}{\nonumberline Lattice-based Cryptography}{9}{section*.17}%
-\contentsline {subsubsection}{\nonumberline Multivariate Cryptography}{10}{section*.18}%
-\contentsline {subsubsection}{\nonumberline Code-based Cryptography}{10}{section*.19}%
-\contentsline {subsubsection}{\nonumberline Hash-based Signatures}{10}{section*.20}%
-\contentsline {section}{\numberline {1.3}Isogeny-based Cryptography}{11}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Mathematics}{11}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Supersingular Isogeny Diffie Hellman (\gls {SIDH})}{12}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Implemenation Details}{13}{subsection.1.3.3}%
-\contentsline {subsubsection}{\nonumberline Isogeny-based \gls {PKE}}{14}{section*.24}%
-\contentsline {subsubsection}{\nonumberline Isogeny-based \gls {KEM}}{14}{section*.26}%
-\contentsline {subsection}{\numberline {1.3.4}Security}{15}{subsection.1.3.4}%
-\contentsline {chapter}{\numberline {2}Description of existing \gls {SIDH} implementations}{17}{chapter.2}%
-\contentsline {section}{\numberline {2.1}\gls {SIKE}}{17}{section.2.1}%
-\contentsline {subsubsection}{\nonumberline \gls {SIKE} API}{18}{section*.28}%
-\contentsline {section}{\numberline {2.2}\gls {PQCrypto-SIDH}}{18}{section.2.2}%
-\contentsline {subsubsection}{\nonumberline \gls {PQCrypto-SIDH} API}{19}{section*.29}%
-\contentsline {section}{\numberline {2.3}\gls {CIRCL}}{19}{section.2.3}%
-\contentsline {subsubsection}{\nonumberline \gls {CIRCL} API}{20}{section*.30}%
-\contentsline {section}{\numberline {2.4}Overview}{21}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Benchmarking Suite}{22}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Benchmarking Methodology}{22}{section.3.1}%
-\contentsline {subsubsection}{\nonumberline Create the benchmarking code}{22}{section*.32}%
-\contentsline {subsubsection}{\nonumberline Compile the benchmarking code}{23}{section*.33}%
-\contentsline {subsubsection}{\nonumberline Run \textit {Callgrind}}{23}{section*.34}%
-\contentsline {subsubsection}{\nonumberline Run \textit {Massif}}{23}{section*.35}%
-\contentsline {subsubsection}{\nonumberline Collect benchmarks}{24}{section*.36}%
-\contentsline {section}{\numberline {3.2}Application Details}{24}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Application Flow}{25}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Application Structure}{26}{subsection.3.2.2}%
-\contentsline {subsubsection}{\nonumberline Representation of concrete implementations}{26}{section*.38}%
-\contentsline {subsubsection}{\nonumberline Representation of benchmarking results}{28}{section*.40}%
-\contentsline {subsection}{\numberline {3.2.3}Adding Implementations}{28}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Usage}{29}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Benchmarking Results}{31}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Comparing \gls {SIDH} security levels}{31}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Comparing \gls {SIDH} libraries}{33}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Comparing \gls {SIKE} Implementations}{33}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Comparing optimized implementations}{35}{subsection.4.2.2}%
-\contentsline {subsubsection}{\nonumberline Generic optimized implementations}{35}{section*.46}%
-\contentsline {subsubsection}{\nonumberline x64 optimized implementations}{36}{section*.47}%
-\contentsline {subsection}{\numberline {4.2.3}Comparing compressed implementations}{38}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Analysis of execution hotspots}{41}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Comparing \gls {SIDH} and \gls {ECDH}}{42}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Analysis of \gls {ECDH} execution hotspots}{42}{subsection.4.3.1}%
-\contentsline {section}{\numberline {4.4}Security Considerations}{43}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Constant time}{43}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Key size}{44}{subsection.4.4.2}%
-\contentsline {chapter}{\numberline {5}Conclusion}{45}{chapter.5}%
-\contentsline {subsubsection}{\nonumberline Comparing SIDH libraries}{45}{section*.57}%
-\contentsline {subsubsection}{\nonumberline Comparing SIDH and ECDH}{46}{section*.60}%
-\contentsline {chapter}{\numberline {A}General Addenda}{47}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Detailed Benchmarks}{47}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Benchmarks for ECDH}{48}{subsection.A.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Benchmarks for Sike Reference}{49}{subsection.A.1.2}%
-\contentsline {subsection}{\numberline {A.1.3}Benchmarks for Sike Generic}{50}{subsection.A.1.3}%
-\contentsline {subsection}{\numberline {A.1.4}Benchmarks for Sike Generic Compressed}{51}{subsection.A.1.4}%
-\contentsline {subsection}{\numberline {A.1.5}Benchmarks for Sike x64}{52}{subsection.A.1.5}%
-\contentsline {subsection}{\numberline {A.1.6}Benchmarks for Sike x64 Compressed}{53}{subsection.A.1.6}%
-\contentsline {subsection}{\numberline {A.1.7}Benchmarks for CIRCL x64}{54}{subsection.A.1.7}%
-\contentsline {subsection}{\numberline {A.1.8}Benchmarks for Microsoft Generic}{55}{subsection.A.1.8}%
-\contentsline {subsection}{\numberline {A.1.9}Benchmarks for Microsoft Generic Compressed}{56}{subsection.A.1.9}%
-\contentsline {subsection}{\numberline {A.1.10}Benchmarks for Microsoft x64}{57}{subsection.A.1.10}%
-\contentsline {subsection}{\numberline {A.1.11}Benchmarks for Microsoft x64 Compressed}{58}{subsection.A.1.11}%
-\contentsline {chapter}{\nonumberline List of Figures}{59}{chapter*.73}%
-\contentsline {chapter}{\nonumberline List of Tables}{60}{chapter*.74}%
-\contentsline {chapter}{List of Abbreviations}{61}{section*.75}%
-\contentsline {chapter}{\nonumberline Bibliography}{63}{chapter*.77}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Background}{2}{chapter.2}%
+\contentsline {subsubsection}{\nonumberline Symmetric Cryptography}{2}{section*.3}%
+\contentsline {subsubsection}{\nonumberline Asymmetric Cryptography}{3}{section*.5}%
+\contentsline {section}{\numberline {2.1}Key Exchange}{4}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Diffie-Hellman Key-Exchange}{4}{subsection.2.1.1}%
+\contentsline {subsubsection}{\nonumberline Protocol}{4}{section*.7}%
+\contentsline {subsubsection}{\nonumberline Security}{5}{section*.9}%
+\contentsline {subsection}{\numberline {2.1.2}Key Encapsulation}{6}{subsection.2.1.2}%
+\contentsline {subsubsection}{\nonumberline Security}{7}{section*.10}%
+\contentsline {subsection}{\numberline {2.1.3}Differences}{7}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Post-Quantum Cryptography}{7}{section.2.2}%
+\contentsline {subsubsection}{\nonumberline Discrete Logarithm Problem}{8}{section*.11}%
+\contentsline {subsubsection}{\nonumberline Factorization Problem}{8}{section*.12}%
+\contentsline {subsection}{\numberline {2.2.1}Impact of Quantum Computers on Cryptography}{9}{subsection.2.2.1}%
+\contentsline {subsubsection}{\nonumberline Shor's Algorithm}{9}{section*.13}%
+\contentsline {subsubsection}{\nonumberline Grover's Algorithm}{9}{section*.14}%
+\contentsline {subsection}{\numberline {2.2.2}Classes of Post-Quantum Cryptography}{10}{subsection.2.2.2}%
+\contentsline {subsubsection}{\nonumberline Lattice-based Cryptography}{10}{section*.16}%
+\contentsline {subsubsection}{\nonumberline Multivariate Cryptography}{11}{section*.17}%
+\contentsline {subsubsection}{\nonumberline Code-based Cryptography}{11}{section*.18}%
+\contentsline {subsubsection}{\nonumberline Hash-based Signatures}{11}{section*.19}%
+\contentsline {section}{\numberline {2.3}Isogeny-based Cryptography}{12}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Mathematics}{12}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Supersingular Isogeny Diffie-Hellman (\gls {SIDH})}{13}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Implemenation Details}{14}{subsection.2.3.3}%
+\contentsline {subsubsection}{\nonumberline Isogeny-based \gls {PKE}}{15}{section*.23}%
+\contentsline {subsubsection}{\nonumberline Isogeny-based \gls {KEM}}{16}{section*.25}%
+\contentsline {subsection}{\numberline {2.3.4}Security}{17}{subsection.2.3.4}%
+\contentsline {chapter}{\numberline {3}Description of existing \gls {SIDH} implementations}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}\gls {SIKE}}{19}{section.3.1}%
+\contentsline {subsubsection}{\nonumberline \gls {SIKE} API}{20}{section*.27}%
+\contentsline {section}{\numberline {3.2}\gls {PQCrypto-SIDH}}{21}{section.3.2}%
+\contentsline {subsubsection}{\nonumberline \gls {PQCrypto-SIDH} API}{21}{section*.28}%
+\contentsline {section}{\numberline {3.3}\gls {CIRCL}}{22}{section.3.3}%
+\contentsline {subsubsection}{\nonumberline \gls {CIRCL} API}{22}{section*.29}%
+\contentsline {section}{\numberline {3.4}Overview}{24}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Benchmarking Suite}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Benchmarking Methodology}{25}{section.4.1}%
+\contentsline {subsubsection}{\nonumberline Create the benchmarking code}{25}{section*.31}%
+\contentsline {subsubsection}{\nonumberline Compile the benchmarking code}{26}{section*.32}%
+\contentsline {subsubsection}{\nonumberline Run \textit {Callgrind}}{26}{section*.33}%
+\contentsline {subsubsection}{\nonumberline Run \textit {Massif}}{27}{section*.34}%
+\contentsline {subsubsection}{\nonumberline Collect benchmarks}{27}{section*.35}%
+\contentsline {section}{\numberline {4.2}Application Details}{27}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Application Flow}{28}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Application Structure}{29}{subsection.4.2.2}%
+\contentsline {subsubsection}{\nonumberline Representation of concrete implementations}{29}{section*.37}%
+\contentsline {subsubsection}{\nonumberline Representation of benchmarking results}{31}{section*.39}%
+\contentsline {subsection}{\numberline {4.2.3}Adding Implementations}{31}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Usage}{32}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Benchmarking Results}{34}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Comparing \gls {SIDH} security levels}{34}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Comparing \gls {SIDH} libraries}{36}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Comparing \gls {SIKE} Implementations}{36}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Comparing optimized implementations}{38}{subsection.5.2.2}%
+\contentsline {subsubsection}{\nonumberline Generic optimized implementations}{38}{section*.45}%
+\contentsline {subsubsection}{\nonumberline x64 optimized implementations}{39}{section*.46}%
+\contentsline {subsection}{\numberline {5.2.3}Comparing compressed implementations}{41}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Analysis of execution hotspots}{44}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Comparing \gls {SIDH} and \gls {ECDH}}{45}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Analysis of \gls {ECDH} execution hotspots}{45}{subsection.5.3.1}%
+\contentsline {section}{\numberline {5.4}Security Considerations}{46}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Constant time}{46}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Key size}{47}{subsection.5.4.2}%
+\contentsline {chapter}{\numberline {6}Conclusion}{48}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Results}{48}{section.6.1}%
+\contentsline {subsubsection}{\nonumberline Comparing \gls {SIDH} libraries}{48}{section*.56}%
+\contentsline {subsubsection}{\nonumberline Comparing \gls {SIDH} and \gls {ECDH}}{49}{section*.59}%
+\contentsline {section}{\numberline {6.2}Limitations}{49}{section.6.2}%
+\contentsline {chapter}{\numberline {A}General Addenda}{50}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Project hierarchy}{50}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Detailed Benchmarks}{51}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Benchmarks for ECDH}{52}{subsection.A.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}Benchmarks for Sike Reference}{53}{subsection.A.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}Benchmarks for Sike Generic}{54}{subsection.A.2.3}%
+\contentsline {subsection}{\numberline {A.2.4}Benchmarks for Sike Generic Compressed}{55}{subsection.A.2.4}%
+\contentsline {subsection}{\numberline {A.2.5}Benchmarks for Sike x64}{56}{subsection.A.2.5}%
+\contentsline {subsection}{\numberline {A.2.6}Benchmarks for Sike x64 Compressed}{57}{subsection.A.2.6}%
+\contentsline {subsection}{\numberline {A.2.7}Benchmarks for CIRCL x64}{58}{subsection.A.2.7}%
+\contentsline {subsection}{\numberline {A.2.8}Benchmarks for Microsoft Generic}{59}{subsection.A.2.8}%
+\contentsline {subsection}{\numberline {A.2.9}Benchmarks for Microsoft Generic Compressed}{60}{subsection.A.2.9}%
+\contentsline {subsection}{\numberline {A.2.10}Benchmarks for Microsoft x64}{61}{subsection.A.2.10}%
+\contentsline {subsection}{\numberline {A.2.11}Benchmarks for Microsoft x64 Compressed}{62}{subsection.A.2.11}%
+\contentsline {chapter}{\nonumberline List of Figures}{63}{chapter*.72}%
+\contentsline {chapter}{\nonumberline List of Tables}{64}{chapter*.73}%
+\contentsline {chapter}{List of Abbreviations}{65}{section*.74}%
+\contentsline {chapter}{\nonumberline Bibliography}{67}{chapter*.76}%
