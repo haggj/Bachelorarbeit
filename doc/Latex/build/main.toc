@@ -45,49 +45,49 @@
 \contentsline {subsubsection}{\nonumberline Create the benchmarking code}{25}{section*.31}%
 \contentsline {subsubsection}{\nonumberline Compile the benchmarking code}{26}{section*.32}%
 \contentsline {subsubsection}{\nonumberline Run \textit {Callgrind}}{26}{section*.33}%
-\contentsline {subsubsection}{\nonumberline Run \textit {Massif}}{27}{section*.34}%
-\contentsline {subsubsection}{\nonumberline Collect benchmarks}{27}{section*.35}%
-\contentsline {section}{\numberline {4.2}Application Details}{27}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Application Flow}{28}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Application Structure}{29}{subsection.4.2.2}%
-\contentsline {subsubsection}{\nonumberline Representation of concrete implementations}{29}{section*.37}%
-\contentsline {subsubsection}{\nonumberline Representation of benchmarking results}{31}{section*.39}%
-\contentsline {subsection}{\numberline {4.2.3}Adding Implementations}{31}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Usage}{32}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Benchmarking Results}{34}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Comparing \gls {SIDH} security levels}{34}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Comparing \gls {SIDH} libraries}{36}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Comparing \gls {SIKE} Implementations}{36}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Comparing optimized implementations}{38}{subsection.5.2.2}%
-\contentsline {subsubsection}{\nonumberline Generic optimized implementations}{38}{section*.45}%
-\contentsline {subsubsection}{\nonumberline x64 optimized implementations}{39}{section*.46}%
-\contentsline {subsection}{\numberline {5.2.3}Comparing compressed implementations}{41}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Analysis of execution hotspots}{44}{subsection.5.2.4}%
-\contentsline {section}{\numberline {5.3}Comparing \gls {SIDH} and \gls {ECDH}}{45}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Analysis of \gls {ECDH} execution hotspots}{45}{subsection.5.3.1}%
-\contentsline {section}{\numberline {5.4}Security Considerations}{46}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Constant time}{46}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Key size}{47}{subsection.5.4.2}%
-\contentsline {chapter}{\numberline {6}Conclusion}{48}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Results}{48}{section.6.1}%
-\contentsline {subsubsection}{\nonumberline Comparing \gls {SIDH} libraries}{48}{section*.56}%
-\contentsline {subsubsection}{\nonumberline Comparing \gls {SIDH} and \gls {ECDH}}{49}{section*.59}%
-\contentsline {section}{\numberline {6.2}Limitations}{49}{section.6.2}%
-\contentsline {chapter}{\numberline {A}General Addenda}{50}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Project hierarchy}{50}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Detailed Benchmarks}{51}{section.A.2}%
-\contentsline {subsection}{\numberline {A.2.1}Benchmarks for ECDH}{52}{subsection.A.2.1}%
-\contentsline {subsection}{\numberline {A.2.2}Benchmarks for Sike Reference}{53}{subsection.A.2.2}%
-\contentsline {subsection}{\numberline {A.2.3}Benchmarks for Sike Generic}{54}{subsection.A.2.3}%
-\contentsline {subsection}{\numberline {A.2.4}Benchmarks for Sike Generic Compressed}{55}{subsection.A.2.4}%
-\contentsline {subsection}{\numberline {A.2.5}Benchmarks for Sike x64}{56}{subsection.A.2.5}%
-\contentsline {subsection}{\numberline {A.2.6}Benchmarks for Sike x64 Compressed}{57}{subsection.A.2.6}%
-\contentsline {subsection}{\numberline {A.2.7}Benchmarks for CIRCL x64}{58}{subsection.A.2.7}%
-\contentsline {subsection}{\numberline {A.2.8}Benchmarks for Microsoft Generic}{59}{subsection.A.2.8}%
-\contentsline {subsection}{\numberline {A.2.9}Benchmarks for Microsoft Generic Compressed}{60}{subsection.A.2.9}%
-\contentsline {subsection}{\numberline {A.2.10}Benchmarks for Microsoft x64}{61}{subsection.A.2.10}%
-\contentsline {subsection}{\numberline {A.2.11}Benchmarks for Microsoft x64 Compressed}{62}{subsection.A.2.11}%
-\contentsline {chapter}{\nonumberline List of Figures}{63}{chapter*.72}%
-\contentsline {chapter}{\nonumberline List of Tables}{64}{chapter*.73}%
-\contentsline {chapter}{List of Abbreviations}{65}{section*.74}%
-\contentsline {chapter}{\nonumberline Bibliography}{67}{chapter*.76}%
+\contentsline {subsubsection}{\nonumberline Run \textit {Massif}}{28}{section*.34}%
+\contentsline {subsubsection}{\nonumberline Collect benchmarks}{28}{section*.35}%
+\contentsline {section}{\numberline {4.2}Application Details}{28}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Application Flow}{29}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Application Structure}{30}{subsection.4.2.2}%
+\contentsline {subsubsection}{\nonumberline Representation of concrete implementations}{30}{section*.37}%
+\contentsline {subsubsection}{\nonumberline Representation of benchmarking results}{32}{section*.39}%
+\contentsline {subsection}{\numberline {4.2.3}Adding Implementations}{32}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Usage}{33}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Benchmarking Results}{35}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Comparing \gls {SIDH} security levels}{35}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Comparing \gls {SIDH} libraries}{37}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Comparing \gls {SIKE} Implementations}{37}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Comparing optimized implementations}{39}{subsection.5.2.2}%
+\contentsline {subsubsection}{\nonumberline Generic optimized implementations}{39}{section*.45}%
+\contentsline {subsubsection}{\nonumberline x64 optimized implementations}{40}{section*.46}%
+\contentsline {subsection}{\numberline {5.2.3}Comparing compressed implementations}{42}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Analysis of execution hotspots}{45}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Comparing \gls {SIDH} and \gls {ECDH}}{46}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Analysis of \gls {ECDH} execution hotspots}{46}{subsection.5.3.1}%
+\contentsline {section}{\numberline {5.4}Security Considerations}{47}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Constant time}{47}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Key size}{48}{subsection.5.4.2}%
+\contentsline {chapter}{\numberline {6}Conclusion}{49}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Results}{49}{section.6.1}%
+\contentsline {subsubsection}{\nonumberline Comparing \gls {SIDH} libraries}{49}{section*.56}%
+\contentsline {subsubsection}{\nonumberline Comparing \gls {SIDH} and \gls {ECDH}}{50}{section*.59}%
+\contentsline {section}{\numberline {6.2}Limitations}{50}{section.6.2}%
+\contentsline {chapter}{\numberline {A}General Addenda}{51}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Project hierarchy}{51}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Detailed Benchmarks}{52}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Benchmarks for ECDH}{53}{subsection.A.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}Benchmarks for Sike Reference}{54}{subsection.A.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}Benchmarks for Sike Generic}{55}{subsection.A.2.3}%
+\contentsline {subsection}{\numberline {A.2.4}Benchmarks for Sike Generic Compressed}{56}{subsection.A.2.4}%
+\contentsline {subsection}{\numberline {A.2.5}Benchmarks for Sike x64}{57}{subsection.A.2.5}%
+\contentsline {subsection}{\numberline {A.2.6}Benchmarks for Sike x64 Compressed}{58}{subsection.A.2.6}%
+\contentsline {subsection}{\numberline {A.2.7}Benchmarks for CIRCL x64}{59}{subsection.A.2.7}%
+\contentsline {subsection}{\numberline {A.2.8}Benchmarks for Microsoft Generic}{60}{subsection.A.2.8}%
+\contentsline {subsection}{\numberline {A.2.9}Benchmarks for Microsoft Generic Compressed}{61}{subsection.A.2.9}%
+\contentsline {subsection}{\numberline {A.2.10}Benchmarks for Microsoft x64}{62}{subsection.A.2.10}%
+\contentsline {subsection}{\numberline {A.2.11}Benchmarks for Microsoft x64 Compressed}{63}{subsection.A.2.11}%
+\contentsline {chapter}{\nonumberline List of Figures}{64}{chapter*.72}%
+\contentsline {chapter}{\nonumberline List of Tables}{65}{chapter*.73}%
+\contentsline {chapter}{List of Abbreviations}{66}{section*.74}%
+\contentsline {chapter}{\nonumberline Bibliography}{68}{chapter*.76}%

@@ -10,21 +10,21 @@
 \contentsline {table}{\numberline {3.1}{\ignorespaces Existing \gls {SIDH} implementations}}{24}{table.caption.30}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Comparison of key sizes}}{47}{table.caption.55}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Comparison of key sizes}}{48}{table.caption.55}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Relative execution times p434}}{48}{table.caption.57}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces Relative memory consumption p434}}{49}{table.caption.58}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces Relative execution times compared to \gls {ECDH}}}{49}{table.caption.60}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Relative execution times p434}}{49}{table.caption.57}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Relative memory consumption p434}}{50}{table.caption.58}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Relative execution times compared to \gls {ECDH}}}{50}{table.caption.60}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Benchmarks for ECDH}}{52}{table.caption.61}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces Benchmarks for Sike Reference}}{53}{table.caption.62}%
-\contentsline {table}{\numberline {A.3}{\ignorespaces Benchmarks for Sike Generic}}{54}{table.caption.63}%
-\contentsline {table}{\numberline {A.4}{\ignorespaces Benchmarks for Sike Generic Compressed}}{55}{table.caption.64}%
-\contentsline {table}{\numberline {A.5}{\ignorespaces Benchmarks for Sike x64}}{56}{table.caption.65}%
-\contentsline {table}{\numberline {A.6}{\ignorespaces Benchmarks for Sike x64 Compressed}}{57}{table.caption.66}%
-\contentsline {table}{\numberline {A.7}{\ignorespaces Benchmarks for CIRCL x64}}{58}{table.caption.67}%
-\contentsline {table}{\numberline {A.8}{\ignorespaces Benchmarks for Microsoft Generic}}{59}{table.caption.68}%
-\contentsline {table}{\numberline {A.9}{\ignorespaces Benchmarks for Microsoft Generic Compressed}}{60}{table.caption.69}%
-\contentsline {table}{\numberline {A.10}{\ignorespaces Benchmarks for Microsoft x64}}{61}{table.caption.70}%
-\contentsline {table}{\numberline {A.11}{\ignorespaces Benchmarks for Microsoft x64 Compressed}}{62}{table.caption.71}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Benchmarks for ECDH}}{53}{table.caption.61}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Benchmarks for Sike Reference}}{54}{table.caption.62}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces Benchmarks for Sike Generic}}{55}{table.caption.63}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces Benchmarks for Sike Generic Compressed}}{56}{table.caption.64}%
+\contentsline {table}{\numberline {A.5}{\ignorespaces Benchmarks for Sike x64}}{57}{table.caption.65}%
+\contentsline {table}{\numberline {A.6}{\ignorespaces Benchmarks for Sike x64 Compressed}}{58}{table.caption.66}%
+\contentsline {table}{\numberline {A.7}{\ignorespaces Benchmarks for CIRCL x64}}{59}{table.caption.67}%
+\contentsline {table}{\numberline {A.8}{\ignorespaces Benchmarks for Microsoft Generic}}{60}{table.caption.68}%
+\contentsline {table}{\numberline {A.9}{\ignorespaces Benchmarks for Microsoft Generic Compressed}}{61}{table.caption.69}%
+\contentsline {table}{\numberline {A.10}{\ignorespaces Benchmarks for Microsoft x64}}{62}{table.caption.70}%
+\contentsline {table}{\numberline {A.11}{\ignorespaces Benchmarks for Microsoft x64 Compressed}}{63}{table.caption.71}%
 \addvspace {10\p@ }

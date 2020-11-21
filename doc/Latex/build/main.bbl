@@ -1076,8 +1076,8 @@
       \strng{authorbibnamehash}{3699b83dcf4db23da5f35ce2b16efcf7}
       \strng{authornamehash}{3699b83dcf4db23da5f35ce2b16efcf7}
       \strng{authorfullhash}{3699b83dcf4db23da5f35ce2b16efcf7}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Theoretical Computer Science}
@@ -1166,30 +1166,6 @@
       \field{pages}{1594\bibrangedash 1609}
       \range{pages}{16}
     \endentry
-    \entry{microsoft2020sidh}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
-           family={Microsoft},
-           familyi={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {GitHub}%
-      }
-      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
-      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
-      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
-      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
-      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
-      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://github.com/microsoft/PQCrypto-SIDH}}
-      \field{journaltitle}{GitHub repository}
-      \field{title}{PQCrypto-SIDH}
-      \field{year}{2020}
-    \endentry
     \entry{circl2020github}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=3f07179a07b2a7661e37a3fd0e652a07}{%
@@ -1214,6 +1190,30 @@
       \field{title}{CIRCL}
       \field{year}{2020}
     \endentry
+    \entry{microsoft2020sidh}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={Microsoft},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {GitHub}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/microsoft/PQCrypto-SIDH}}
+      \field{journaltitle}{GitHub repository}
+      \field{title}{PQCrypto-SIDH}
+      \field{year}{2020}
+    \endentry
     \entry{circl2019intro}{misc}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=850e51c2bf2ed79335185933af3c3550}{%
@@ -1235,8 +1235,8 @@
       \strng{authorbibnamehash}{ced6ba37d86cfe7a778cd0d03735b769}
       \strng{authornamehash}{ced6ba37d86cfe7a778cd0d03735b769}
       \strng{authorfullhash}{ced6ba37d86cfe7a778cd0d03735b769}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{7}
@@ -1256,6 +1256,42 @@
       \field{howpublished}{\url{https://github.com/golang/go/wiki/CompilerOptimizations}}
       \field{note}{Accessed: 2020-09-25}
       \field{title}{GoLang Wiki Compiler Optimizations}
+    \endentry
+    \entry{alameldeen2006ipc}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b444387ce3bbf2f73de7f5f167e9ef4d}{%
+           family={Alameldeen},
+           familyi={A\bibinitperiod},
+           given={Alaa\bibnamedelima R},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=90ff7bda6dcccbcbb9072ac658c451ba}{%
+           family={Wood},
+           familyi={W\bibinitperiod},
+           given={David\bibnamedelima A},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{f19baaa727d6dc55b7f1ce8b6d7699fe}
+      \strng{fullhash}{f19baaa727d6dc55b7f1ce8b6d7699fe}
+      \strng{bibnamehash}{f19baaa727d6dc55b7f1ce8b6d7699fe}
+      \strng{authorbibnamehash}{f19baaa727d6dc55b7f1ce8b6d7699fe}
+      \strng{authornamehash}{f19baaa727d6dc55b7f1ce8b6d7699fe}
+      \strng{authorfullhash}{f19baaa727d6dc55b7f1ce8b6d7699fe}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Micro}
+      \field{number}{4}
+      \field{title}{IPC considered harmful for multiprocessor workloads}
+      \field{volume}{26}
+      \field{year}{2006}
+      \field{pages}{8\bibrangedash 17}
+      \range{pages}{10}
     \endentry
     \entry{turner2009elliptic}{article}{}
       \name{author}{5}{}{%

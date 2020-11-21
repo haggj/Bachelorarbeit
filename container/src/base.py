@@ -120,20 +120,26 @@ class BaseImplementation():
         args = "{} {} PARAM={}".format(self.path, self.args, self.curves[0])
         bash('make build -B -C {}'.format(args))
 
-        all = []
+        list_ins_per_sec = []
+        list_cycles = []
+        list_ghz = []
+        
         for _ in range(5):
             command = "sudo perf stat -o tmp.txt ./{path}/build/benchmark".format(path=self.path)
             bash(command)
             out = open("tmp.txt").read()
             
-            res = re.findall("[0-9].[0-9][0-9]\  insn per cycle", out)
-            all.append(float(res[0][0:4]))
+            ins_per_sec = float(re.findall("(?<=#)(.*)(?=  insn per cycle)", out)[0])
+            cycles = int(re.findall("(?<=\n)(.*)(?=      cycles)", out)[0].replace(".",""))
+            ghz = float(re.findall("(?<=#)(.*)(?= GHz)", out)[0])
 
-        print("test")
-        print(statistics.mean(all))
-        print(statistics.stdev(all))
-        print(max(all))
-        return
+            list_ins_per_sec.append(ins_per_sec)
+            list_cycles.append(cycles)
+            list_ghz.append(ghz)
+
+        return [Benchmark("IPC", list_ins_per_sec),
+                Benchmark("Cycles", list_cycles),
+                Benchmark("GHZ", list_ghz),]
 
     def hotspots(self) -> list:
         """Extracts the most expensive functions during callgrind execution.
@@ -185,6 +191,7 @@ class BaseImplementation():
         benchmark_curve = BenchmarkCurve(curve)
         benchmark_curve.add_benchmarks(self.callgrind())
         benchmark_curve.add_benchmarks(self.massif())
+        benchmark_curve.add_benchmarks(self.perf())
         benchmark_curve.set_hotspots(self.hotspots())
 
         return benchmark_curve

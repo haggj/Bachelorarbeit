@@ -39,14 +39,36 @@ The go compiler can be directly invoked with a no-inlining (\texttt{-l}) flag:
 go build -gcflags "-l"
 \end{lstlisting}
 
+Compiling the source code determines the Instruction Set Architecture (\gls{ISA}) of the binary. The architecture of a processor describes the \gls{ISA} a concrete processor is able to  process. When executing the binary the instructions that are defined in the \gls{ISA} are executed by the processor.
+
 \subsubsection{Run \textit{Callgrind}}
-\textit{Callgrind} records function calls of a binary. For each call the executed instructions are counted. Moreover, the tool provides detailed information about the callee and frequency of function calls. Thus, the tool also provides information about execution hotspots of the binary. \textit{Callgrind} is part of \textit{Valgrind}, a profiling tool which allows deep analysis of executed binaries.\\
+\textit{Callgrind} records function calls of a binary. For each call the executed instructions which are processed by the processor are counted. Moreover, the tool provides detailed information about the callee and frequency of function calls. Thus, the tool also provides information about execution hotspots of the binary. \textit{Callgrind} is part of \textit{Valgrind}, a profiling tool which allows deep analysis of executed binaries.\\
 Callgrind is invoked on the command line via:
 \begin{lstlisting}[language=Bash]
 valgrind --tool=callgrind --callgrind-out-file=callgrind.out binary
 \end{lstlisting}
 The profiling data of \textit{callgrind} is written to the file defined by \texttt{--callgrind-out-file}. This file might be analyzed using a graphical tool like \textit{KCachegrind} or any other analyzing script.
-Running a binary using callgrind slows down the execution times significantly. This is the main reason for the long execution times of the benchmarking suite. 
+Running a binary using callgrind slows down the execution times of the benchmarking suite significantly. This is the main reason for the long execution times when collecting benchmarks. \\\\
+Besides counting the instructions executed by the processor, one could also count elapsed \gls{CPU} cycles or equivalently the elapsed time for a concrete binary. In the following paragraph the differences are considered and reasons for measuring instructions are given.
+\\
+Firstly, the measured instruction count of \textit{callgrind} can be converted to elapsed \gls{CPU} cycles and to thus to the elapsed time. The following calculation exemplarily shows this conversion for the execution of a SIDH key exchange (using the \gls{SIKE} \texttt{x64\_optimized} implementation initialized with parameter set \texttt{p434}). \textit{Callgrind} measures constantly $64\:621\:792$ instructions when executing that binary. The performance analyzing tool \textit{perf} can also be run on that binary (\texttt{sudo run perf \textit{binary}}). Besides the elapsed \gls{CPU} cycles and elapsed time \textit{perf} also measures the executed instructions per \gls{CPU} cycle (\gls{IPC}) and the average \gls{CPU} frequency in GHz. This values can be used to compute the elapsed time of an application. It is important to note, that the \gls{IPC} is not a characteristic index for a \gls{CPU}, moreover it varies between multiple runs of the same application based on scheduling decisions and hardware dependencies (e.g. cache size) ~\parencite{alameldeen2006ipc}. Thus, the measured \gls{CPU} cycles and the corresponding elapsed time of an application is not constant. The measured \gls{IPC} for the binary (\gls{SIKE} \texttt{x64\_optimized} using \texttt{p434}) is on average $2.87$ (10 samples). The measured \gls{CPU} frequency is on average $2.66\;GHz$ (10 samples). Thus, the elapsed time depending on the measured instructions can be computed as follows~\parencite{alameldeen2006ipc}:
+
+\begin{equation*}
+\begin{split}
+Elapsed\;Time & = \frac{Instructions}{Instructions\;per\;Cycle\;(IPC)\cdot CPU\; Frequency\;in\;GHz\cdot 10^9}\;[s] \\\\
+& = \frac{Instructions}{2.87\cdot 2.66\cdot 10^9}\;[s] = \frac{Instructions}{7,6342\cdot 10^9}\;[s] 
+\end{split}
+\end{equation*}
+\\\\For the instructions counted using \textit{callgrind} this formula yields:
+\begin{equation*}
+\begin{split}
+Elapsed\;Time\ & = \frac{Instructions}{7,6342\cdot 10^9} = \frac{64\:621\:792}{7,6342\cdot 10^9} = 0.0084647759\;[s] = 8.465\;[ms]
+\end{split}
+\end{equation*}
+
+At the same time the measured execution time by \textit{perf} is on average $8.476\;[ms]$ (10 samples). Since the difference is marginal it seems to be sufficient to provide the instruction counts instead of measuring the exact execution times.
+\\
+Secondly, the elapsed time for an application depends on the \gls{IPC}, which is a highly dynamic value (e.g. depending on scheduling decisions, cache misses or parallelism of the underlying \gls{CPU} ~\parencite{alameldeen2006ipc}). At the same time \textit{callgrind} measures the executed instructions of the compiled application, which is a constant value if the binary itself implements static runtime behavior (e.g. the measured instructions of a binary printing \textit{"Hello World"} once is constant, while the executed instructions of a binary printing a randomly chosen amount of \textit{"Hello World"} messages is not constant). Thus, the measured instructions only depend on the compiler and \gls{CPU} architecture (\gls{ISA}) and they are independent of the dynamic behavior of the concrete underlying \gls{CPU}. Besides abstracting from the concrete \gls{CPU} this also increases reproducibility of the benchmarking results.
 
 \subsubsection{Run \textit{Massif}}
 \textit{Massif} measures memory usage of a binary including heap and stack. \textit{Massif} is also part of the profiling tool \textit{Valgrind}. The tool creates multiple snapshots of the memory consumption during execution. Thus, one can extract the maximum memory consumption of a binary. The following command runs the \textit{Massif}:
@@ -221,4 +243,3 @@ This command triggers the \textit{benchmarking.py} script within the docker cont
 	\end{itemize}
 
 \end{itemize}
-

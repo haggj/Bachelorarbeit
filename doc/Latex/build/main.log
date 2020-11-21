@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.13)  16 NOV 2020 12:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.13)  21 NOV 2020 11:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2139,45 +2139,55 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
-) [26]
-Overfull \hbox (7.7168pt too wide) in paragraph at lines 81--82
+)
+Underfull \hbox (badness 10000) in paragraph at lines 50--55
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 61--63
+
+ []
+
+[27]
+Overfull \hbox (7.7168pt too wide) in paragraph at lines 103--104
 []\T1/pplx/m/n/10.95 (-20) Sike generic op-ti-mized and com-pressed im-ple-men-
 ta-tion (\T1/cmtt/m/n/10.95 SIKE_Generic_Compressed\T1/pplx/m/n/10.95 (-20) ) 
  []
 
-[27]
-<figures/benchmarks/application_flow.png, id=879, 500.87125pt x 482.80376pt>
+[28]
+<figures/benchmarks/application_flow.png, id=913, 500.87125pt x 482.80376pt>
 File: figures/benchmarks/application_flow.png Graphic file (type png)
 <use figures/benchmarks/application_flow.png>
 Package pdftex.def Info: figures/benchmarks/application_flow.png  used on input
- line 113.
+ line 135.
 (pdftex.def)             Requested size: 313.69029pt x 302.38516pt.
- [28]
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
+ [29]
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
-<figures/benchmarks/uml.png, id=895, 618.31pt x 904.37875pt>
+<figures/benchmarks/uml.png, id=930, 618.31pt x 904.37875pt>
 File: figures/benchmarks/uml.png Graphic file (type png)
 <use figures/benchmarks/uml.png>
-Package pdftex.def Info: figures/benchmarks/uml.png  used on input line 132.
+Package pdftex.def Info: figures/benchmarks/uml.png  used on input line 154.
 (pdftex.def)             Requested size: 403.31511pt x 589.93678pt.
-[29 <./figures/benchmarks/application_flow.png>]
+[30 <./figures/benchmarks/application_flow.png>]
 Overfull \vbox (31.33652pt too high) has occurred while \output is active []
 
 
-[30 <./figures/benchmarks/uml.png>]
-<figures/benchmarks/uml_results.png, id=912, 934.49126pt x 281.05pt>
+[31 <./figures/benchmarks/uml.png>]
+<figures/benchmarks/uml_results.png, id=947, 934.49126pt x 281.05pt>
 File: figures/benchmarks/uml_results.png Graphic file (type png)
 <use figures/benchmarks/uml_results.png>
 Package pdftex.def Info: figures/benchmarks/uml_results.png  used on input line
- 142.
+ 164.
 (pdftex.def)             Requested size: 448.13095pt x 134.77809pt.
- [31 <./figures/benchmarks/uml_results.png>] (/usr/share/texlive/texmf-dist/tex
+ [32 <./figures/benchmarks/uml_results.png>] (/usr/share/texlive/texmf-dist/tex
 /latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
-) [32])
-(./chapters/04_analysis.tex [33]
+) [33])
+(./chapters/04_analysis.tex [34]
 chapter 5.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -2198,25 +2208,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--25
 
  []
 
-[34
+[35
 
 
 ]
-<figures/benchmarks/all_curves/SIKE_x64.png, id=1008, 1205.4636pt x 639.5895pt>
+<figures/benchmarks/all_curves/SIKE_x64.png, id=1043, 1205.4636pt x 639.5895pt>
 
 File: figures/benchmarks/all_curves/SIKE_x64.png Graphic file (type png)
 <use figures/benchmarks/all_curves/SIKE_x64.png>
 Package pdftex.def Info: figures/benchmarks/all_curves/SIKE_x64.png  used on in
 put line 33.
 (pdftex.def)             Requested size: 403.31511pt x 213.99298pt.
-<figures/benchmarks/all_curves/SIKE_x64_mem.png, id=1009, 1205.4636pt x 639.589
+<figures/benchmarks/all_curves/SIKE_x64_mem.png, id=1044, 1205.4636pt x 639.589
 5pt>
 File: figures/benchmarks/all_curves/SIKE_x64_mem.png Graphic file (type png)
 <use figures/benchmarks/all_curves/SIKE_x64_mem.png>
 Package pdftex.def Info: figures/benchmarks/all_curves/SIKE_x64_mem.png  used o
 n input line 41.
 (pdftex.def)             Requested size: 403.31511pt x 213.99298pt.
- [35 <./figures/benchmarks/all_curves/Sike_x64.png>]
+ [36 <./figures/benchmarks/all_curves/Sike_x64.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\gls' on input line 47.
@@ -2230,20 +2240,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--59
 
  []
 
-[36 <./figures/benchmarks/all_curves/Sike_x64_mem.png>]
-<figures/benchmarks/sike/sike.png, id=1050, 1261.8342pt x 640.3122pt>
+[37 <./figures/benchmarks/all_curves/Sike_x64_mem.png>]
+<figures/benchmarks/sike/sike.png, id=1084, 1261.8342pt x 640.3122pt>
 File: figures/benchmarks/sike/sike.png Graphic file (type png)
 <use figures/benchmarks/sike/sike.png>
 Package pdftex.def Info: figures/benchmarks/sike/sike.png  used on input line 6
 2.
 (pdftex.def)             Requested size: 403.31511pt x 204.65982pt.
-<figures/benchmarks/sike/sike_mem.png, id=1053, 1256.0526pt x 642.4803pt>
+<figures/benchmarks/sike/sike_mem.png, id=1087, 1256.0526pt x 642.4803pt>
 File: figures/benchmarks/sike/sike_mem.png Graphic file (type png)
 <use figures/benchmarks/sike/sike_mem.png>
 Package pdftex.def Info: figures/benchmarks/sike/sike_mem.png  used on input li
 ne 70.
 (pdftex.def)             Requested size: 403.31511pt x 206.29393pt.
- [37 <./figures/benchmarks/sike/sike.png>]
+ [38 <./figures/benchmarks/sike/sike.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 84--89
 
  []
@@ -2253,7 +2263,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--89
 
  []
 
-[38 <./figures/benchmarks/sike/sike_mem.png>]
+[39 <./figures/benchmarks/sike/sike_mem.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 98--105
 
  []
@@ -2263,28 +2273,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--105
 
  []
 
-<figures/benchmarks/optimized/434.png, id=1101, 1391.9202pt x 640.3122pt>
+<figures/benchmarks/optimized/434.png, id=1135, 1391.9202pt x 640.3122pt>
 File: figures/benchmarks/optimized/434.png Graphic file (type png)
 <use figures/benchmarks/optimized/434.png>
 Package pdftex.def Info: figures/benchmarks/optimized/434.png  used on input li
 ne 108.
 (pdftex.def)             Requested size: 448.13095pt x 206.14491pt.
-[39]
-<figures/benchmarks/optimized/434_mem.png, id=1117, 1391.9202pt x 640.3122pt>
+[40]
+<figures/benchmarks/optimized/434_mem.png, id=1151, 1391.9202pt x 640.3122pt>
 File: figures/benchmarks/optimized/434_mem.png Graphic file (type png)
 <use figures/benchmarks/optimized/434_mem.png>
 Package pdftex.def Info: figures/benchmarks/optimized/434_mem.png  used on inpu
 t line 116.
 (pdftex.def)             Requested size: 448.13095pt x 206.14491pt.
-<figures/benchmarks/optimized/751.png, id=1122, 1391.9202pt x 640.3122pt>
+<figures/benchmarks/optimized/751.png, id=1156, 1391.9202pt x 640.3122pt>
 File: figures/benchmarks/optimized/751.png Graphic file (type png)
 <use figures/benchmarks/optimized/751.png>
 Package pdftex.def Info: figures/benchmarks/optimized/751.png  used on input li
 ne 124.
 (pdftex.def)             Requested size: 448.13095pt x 206.14491pt.
- [40 <./figures/benchmarks/optimized/434.png> <./figures/benchmarks/optimized/4
+ [41 <./figures/benchmarks/optimized/434.png> <./figures/benchmarks/optimized/4
 34_mem.png>]
-<figures/benchmarks/optimized/751_mem.png, id=1133, 1391.9202pt x 640.3122pt>
+<figures/benchmarks/optimized/751_mem.png, id=1168, 1391.9202pt x 640.3122pt>
 File: figures/benchmarks/optimized/751_mem.png Graphic file (type png)
 <use figures/benchmarks/optimized/751_mem.png>
 Package pdftex.def Info: figures/benchmarks/optimized/751_mem.png  used on inpu
@@ -2296,7 +2306,7 @@ Overfull \hbox (8.85048pt too wide) in paragraph at lines 139--141
 hort-ened key size com-pared to non-compressed
  []
 
-[41 <./figures/benchmarks/optimized/751.png> <./figures/benchmarks/optimized/75
+[42 <./figures/benchmarks/optimized/751.png> <./figures/benchmarks/optimized/75
 1_mem.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 146--151
 
@@ -2307,33 +2317,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--151
 
  []
 
-<figures/benchmarks/compressed/434.png, id=1155, 1308.8097pt x 640.3122pt>
+<figures/benchmarks/compressed/434.png, id=1191, 1308.8097pt x 640.3122pt>
 File: figures/benchmarks/compressed/434.png Graphic file (type png)
 <use figures/benchmarks/compressed/434.png>
 Package pdftex.def Info: figures/benchmarks/compressed/434.png  used on input l
 ine 154.
 (pdftex.def)             Requested size: 448.13095pt x 219.23721pt.
-<figures/benchmarks/compressed/434_mem.png, id=1158, 1308.8097pt x 640.3122pt>
+<figures/benchmarks/compressed/434_mem.png, id=1194, 1308.8097pt x 640.3122pt>
 File: figures/benchmarks/compressed/434_mem.png Graphic file (type png)
 <use figures/benchmarks/compressed/434_mem.png>
 Package pdftex.def Info: figures/benchmarks/compressed/434_mem.png  used on inp
 ut line 162.
 (pdftex.def)             Requested size: 448.13095pt x 219.23721pt.
-[42 <./figures/benchmarks/compressed/434.png>]
-<figures/benchmarks/compressed/751.png, id=1175, 1316.0367pt x 640.3122pt>
+[43 <./figures/benchmarks/compressed/434.png>]
+<figures/benchmarks/compressed/751.png, id=1209, 1316.0367pt x 640.3122pt>
 File: figures/benchmarks/compressed/751.png Graphic file (type png)
 <use figures/benchmarks/compressed/751.png>
 Package pdftex.def Info: figures/benchmarks/compressed/751.png  used on input l
 ine 170.
 (pdftex.def)             Requested size: 448.13095pt x 218.03545pt.
-<figures/benchmarks/compressed/751_mem.png, id=1178, 1308.8097pt x 640.3122pt>
+<figures/benchmarks/compressed/751_mem.png, id=1212, 1308.8097pt x 640.3122pt>
 File: figures/benchmarks/compressed/751_mem.png Graphic file (type png)
 <use figures/benchmarks/compressed/751_mem.png>
 Package pdftex.def Info: figures/benchmarks/compressed/751_mem.png  used on inp
 ut line 178.
 (pdftex.def)             Requested size: 448.13095pt x 219.23721pt.
- [43 <./figures/benchmarks/compressed/434_mem.png> <./figures/benchmarks/compre
-ssed/751.png>] [44 <./figures/benchmarks/compressed/751_mem.png>]
+ [44 <./figures/benchmarks/compressed/434_mem.png> <./figures/benchmarks/compre
+ssed/751.png>] [45 <./figures/benchmarks/compressed/751_mem.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\gls' on input line 198.
@@ -2363,14 +2373,14 @@ m/n/10.95 (-20) are the low level prime field arith-metic func-tions \T1/cmtt/m
 /n/10.95 __ecp_nistz256_mul_montq
  []
 
-[45]
+[46]
 Underfull \hbox (badness 10000) in paragraph at lines 226--230
 
  []
 
-[46]) (./chapters/05_conclusion.tex [47]
+[47]) (./chapters/05_conclusion.tex [48]
 chapter 6.
-[48
+[49
 
 
 ]
@@ -2378,12 +2388,12 @@ Overfull \hbox (0.67807pt too wide) in paragraph at lines 69--69
  []|[]| 
  []
 
-) (./pages/appendix.tex [49]
+) (./pages/appendix.tex [50]
 chapter A.
-[50
+[51
 
 
-] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61]) [62]
+] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62]) [63]
 Package tocbasic Info: character protrusion at lof deactivated on input line 57
 .
 
@@ -2391,7 +2401,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 57
 \tf@lof=\write9
 \openout9 = `main.lof'.
 
- [63
+ [64
 
 
 ]
@@ -2401,23 +2411,23 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 58
 \tf@lot=\write10
 \openout10 = `main.lot'.
 
- (build/main.gls [64
+ (build/main.gls [65
 
 
-] [65
+] [66
 
 
 
 
-]) [66]
+]) [67]
 chapter without number
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplx/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-[67
+[68
 
 
-] [68]
+] [69]
 Overfull \hbox (62.83977pt too wide) in paragraph at lines 62--62
 []\T1/pplx/m/it/10.95 (-20) GoLang Wiki Com-piler Op-ti-miza-tions\T1/pplx/m/n/
 10.95 (-20) . []$\T1/cmtt/m/n/10.95 https : / / github . com / golang / go / wi
@@ -2425,7 +2435,7 @@ ki / CompilerOptimizations$[]\T1/pplx/m/n/10.95 (-20) .
  []
 
 No complaints by nag.
-[69]
+[70]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 64.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 64.
  (build/main.aux)
@@ -2442,10 +2452,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57978 strings out of 482771
- 1258025 string characters out of 5955540
- 2223808 words of memory out of 5000000
- 71078 multiletter control sequences out of 15000+600000
+ 58105 strings out of 482771
+ 1259979 string characters out of 5955540
+ 2226319 words of memory out of 5000000
+ 71200 multiletter control sequences out of 15000+600000
  636415 words of font info for 507 fonts, out of 8000000 for 9000
  85 hyphenation exceptions out of 8191
  81i,21n,139p,10099b,3428s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2455,6 +2465,9 @@ st, replaced by a fixed one
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
 , replaced by a fixed one
 
+pdfTeX warning (dest): name{glo:IPC} has been referenced but does not exist, re
+placed by a fixed one
+
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 , replaced by a fixed one
 
@@ -2462,8 +2475,8 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/joy/.texlive
-2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecit1095.600pk> </home/joy/.texlive2
-019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk> </home/joy/.texlive20
+2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk> </home/joy/.texlive2
+019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecit1095.600pk> </home/joy/.texlive20
 19/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/joy/.texlive201
 9/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist
@@ -2476,10 +2489,10 @@ mri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr
 ve/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/palatino/uplri8a.pfb>
-Output written on build/main.pdf (76 pages, 1377199 bytes).
+Output written on build/main.pdf (77 pages, 1383381 bytes).
 PDF statistics:
- 2127 PDF objects out of 2487 (max. 8388607)
- 1816 compressed objects within 19 object streams
- 589 named destinations out of 1000 (max. 500000)
+ 2165 PDF objects out of 2487 (max. 8388607)
+ 1848 compressed objects within 19 object streams
+ 594 named destinations out of 1000 (max. 500000)
  79477 words of extra memory for PDF output out of 89155 (max. 10000000)
 

@@ -25,9 +25,6 @@ def benchmark(Class):
 
     instance = Class(N)
 
-    #print(name)
-    #ins_per_cyc = instance.perf()
-
     if name not in RESULTS:
         instance = Class(N)
         RESULTS[name] = instance.get_statistics()
@@ -65,7 +62,6 @@ if __name__ == "__main__":
     for implementation in implementations:
         benchmark(implementation)
 
-    print(RESULTS["CIRCL_Generic"])
     save_as_json(RESULTS)
     generate_graph(RESULTS)
     generate_table(RESULTS)
