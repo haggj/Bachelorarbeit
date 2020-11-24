@@ -5,13 +5,13 @@ CC=gcc
 PARAM:=434
 
 # Path to prebuild libs
-PREPATH=../.src/x64/SIKEp$(PARAM)$(COMPRESSED)
+PREPATH=../.src/SIKE/Additional_Implementations/x64/SIKEp$(PARAM)$(COMPRESSED)
 
 CFLAGS=\
 -I .. \
 -I $(PREPATH)/P$(PARAM)/ \
 -O3 \
--D __NIX__ \
+-D __LINUX__ \
 -D _AMD64_  \
 -D _FAST_ \
 -D _MULX_ \
@@ -24,7 +24,7 @@ endif
 
 OBJ = \
 benchmark.c \
-$(PREPATH)/P$(PARAM)/P$(PARAM)$(COMPRESSED).c \
+$(PREPATH)/P$(PARAM)/P$(PARAM).c \
 $(PREPATH)/P$(PARAM)/AMD64/fp_x64.c \
 $(PREPATH)/P$(PARAM)/AMD64/fp_x64_asm.S \
 $(PREPATH)/random/random.c \
@@ -41,15 +41,12 @@ build: $(OBJ)
 
 callgrind:
 	@ mkdir -p "benchmarks"
-	@ echo "Running callgrind..."
-	@ sudo ../../drop-caches.sh
 	@ valgrind --tool=callgrind --callgrind-out-file=benchmarks/callgrind.out build/benchmark  2> /dev/null
 	@ echo "\e[32mSUCCESS\e[0m"
 
 massif:
 	@ mkdir -p "benchmarks"
 	@ echo "Running massif..."
-	@ sudo ../../drop-caches.sh
 	@ valgrind --tool=massif --stacks=yes --massif-out-file=benchmarks/massif.out build/benchmark  2> /dev/null
 	@ echo "\e[32mSUCCESS\e[0m"
 

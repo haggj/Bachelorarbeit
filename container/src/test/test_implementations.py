@@ -52,13 +52,14 @@ class TestImplementations(TestCase):
             # Compile
             with patch("src.base.BaseImplementation.callgrind", return_value=Benchmark("",0)):
                 with patch("src.base.BaseImplementation.massif", return_value=Benchmark("",0)):
-                    with patch("src.base.BaseImplementation.hotspots", return_value = []):
-                        logger.info("Testing compilation for " + impl.__name__)
-                        for curve in obj.curves:
-                            logger.info("\tHandle parameter" + str(curve))
-                            obj.benchmark_curve(curve)
-                            self.assertTrue(os.path.isfile(obj.path + "/build/benchmark"))
-                            os.remove(obj.path + "/build/benchmark")
+                    with patch("src.base.BaseImplementation.perf", return_value=Benchmark("",0)):
+                        with patch("src.base.BaseImplementation.hotspots", return_value = []):
+                            logger.info("Testing compilation for " + impl.__name__)
+                            for curve in obj.curves:
+                                logger.info("\tHandle parameter" + str(curve))
+                                obj.benchmark_curve(curve)
+                                self.assertTrue(os.path.isfile(obj.path + "/build/benchmark"))
+                                os.remove(obj.path + "/build/benchmark")
 
 
 class TestECDH(TestCase):

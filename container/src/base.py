@@ -116,16 +116,12 @@ class BaseImplementation():
     
     def perf(self):
 
-        # compile and generate benchmark outputs for specific curve
-        args = "{} {} PARAM={}".format(self.path, self.args, self.curves[0])
-        bash('make build -B -C {}'.format(args))
-
         list_ins_per_sec = []
         list_cycles = []
         list_ghz = []
         
         for _ in range(5):
-            command = "sudo perf stat -o tmp.txt ./{path}/build/benchmark".format(path=self.path)
+            command = "perf stat -o tmp.txt ./{path}/build/benchmark".format(path=self.path)
             bash(command)
             out = open("tmp.txt").read()
             

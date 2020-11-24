@@ -35,16 +35,10 @@ RUN mkdir Microsoft
 RUN mkdir Microsoft/.src
 RUN mkdir Microsoft/.src/x64
 RUN mkdir Microsoft/.src/generic
-RUN git clone https://github.com/microsoft/PQCrypto-SIDH.git Microsoft/.src/x64
+RUN git clone https://github.com/microsoft/PQCrypto-SIDH.git Microsoft/.src/x64; cd Microsoft/.src/x64; git checkout 1f8292d08570fe83c518797b6e103eb8a9f5e6dc
 RUN cp -r Microsoft/.src/x64/* Microsoft/.src/generic/
 RUN cd Microsoft/.src/x64; make ARCH=x64 CC=gcc OPT_LEVEL=FAST USE_MULX=TRUE USE_ADX=TRUE
 RUN cd Microsoft/.src/generic; make ARCH=x64 CC=gcc OPT_LEVEL=GENERIC USE_MULX=FALSE USE_ADX=FALSE
-
-# Prepare SIKE
-COPY container/SIKE/.src SIKE/.src
-RUN unzip SIKE/.src/optimized.zip -d SIKE/.src/
-RUN unzip SIKE/.src/x64.zip -d SIKE/.src/
-RUN unzip SIKE/.src/reference.zip -d SIKE/.src/
 
 # Install go dependencies
 RUN wget https://dl.google.com/go/go1.15.2.linux-amd64.tar.gz
@@ -54,11 +48,15 @@ ENV GOROOT=/usr/local/go
 ENV PATH=$GOROOT/bin:$PATH 
 RUN go get "golang.org/x/sys/cpu"
 RUN go get "github.com/cloudflare/circl/"
-RUN sed -i 's/+build noasm,arm64 !amd64/+build noasm !arm64,!amd64/' /root/go/src/github.com/cloudflare/circl/dh/sidh/internal/p434/arith_generic.go
-RUN sed -i 's/ import "golang.org\/x\/crypto\/sha3"//' /root/go/src/github.com/cloudflare/circl/internal/sha3/doc.go
+RUN cd /root/go/src/github.com/cloudflare/circl; git checkout 0440a499b7237516c7ba535bd1420241e13d385c
 
 # Install perf
+RUN apt-get update
 RUN apt-get install -y linux-tools-common linux-tools-generic linux-tools-`uname -r`
+
+# Prepare SIKE
+COPY container/SIKE/.src SIKE/.src
+RUN unzip SIKE/.src/SIKE-Round2.zip -d SIKE/.src/
 
 COPY container .
 

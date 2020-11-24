@@ -17,7 +17,7 @@ import signal
 import sys
 
 # Number of repetitions for each benchmark
-N = 100
+N = 2
 RESULTS = {}
 
 def benchmark(Class):
@@ -35,14 +35,14 @@ def signal_handler(sig,frame):
 
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
-    RESULTS = load_from_json()
+    #RESULTS = load_from_json()
 
     implementations =[
         #ECDH
         #ECDH,
 
         # #SIKE
-        Sike_Reference,
+        #Sike_Reference,
         Sike_Generic,
         Sike_Generic_Compressed,
         Sike_x64,
