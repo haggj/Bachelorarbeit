@@ -2257,15 +2257,15 @@
     <bcf:citekey order="73">koziel2018high</bcf:citekey>
     <bcf:citekey order="74">sike2020spec</bcf:citekey>
     <bcf:citekey order="75">sike2020spec</bcf:citekey>
-    <bcf:citekey order="76">circl2020github</bcf:citekey>
-    <bcf:citekey order="77">microsoft2020sidh</bcf:citekey>
-    <bcf:citekey order="78">jao2011towards</bcf:citekey>
-    <bcf:citekey order="79">sike2020spec</bcf:citekey>
+    <bcf:citekey order="76">microsoft2020sidh</bcf:citekey>
+    <bcf:citekey order="77">circl2020github</bcf:citekey>
+    <bcf:citekey order="78">SikeForJava2020github</bcf:citekey>
+    <bcf:citekey order="79">jao2011towards</bcf:citekey>
     <bcf:citekey order="80">sike2020spec</bcf:citekey>
-    <bcf:citekey order="81">microsoft2020sidh</bcf:citekey>
-    <bcf:citekey order="82">microsoft2020sidh</bcf:citekey>
-    <bcf:citekey order="83">circl2020github</bcf:citekey>
-    <bcf:citekey order="84">circl2019intro</bcf:citekey>
+    <bcf:citekey order="81">sike2020spec</bcf:citekey>
+    <bcf:citekey order="82">circl2020github</bcf:citekey>
+    <bcf:citekey order="83">circl2019intro</bcf:citekey>
+    <bcf:citekey order="84">SikeForJava2020github</bcf:citekey>
     <bcf:citekey order="85">gowiki2020compiler</bcf:citekey>
     <bcf:citekey order="86">alameldeen2006ipc</bcf:citekey>
     <bcf:citekey order="87">alameldeen2006ipc</bcf:citekey>
@@ -2275,10 +2275,11 @@
     <bcf:citekey order="91">brown2010sec</bcf:citekey>
     <bcf:citekey order="92">brown2010sec</bcf:citekey>
     <bcf:citekey order="93">sike2020spec</bcf:citekey>
-    <bcf:citekey order="94">sike2020spec</bcf:citekey>
-    <bcf:citekey order="95">circl2020github</bcf:citekey>
-    <bcf:citekey order="96">turner2009elliptic</bcf:citekey>
-    <bcf:citekey order="97">koziel2018high</bcf:citekey>
+    <bcf:citekey order="94">1056220</bcf:citekey>
+    <bcf:citekey order="95">sike2020spec</bcf:citekey>
+    <bcf:citekey order="96">circl2020github</bcf:citekey>
+    <bcf:citekey order="97">turner2009elliptic</bcf:citekey>
+    <bcf:citekey order="98">koziel2018high</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

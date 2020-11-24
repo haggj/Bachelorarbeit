@@ -5,7 +5,7 @@ from matplotlib.ticker import ScalarFormatter
 from multiprocessing import Process
 from pathlib import Path
 
-def autolabel(rects, ax):
+def autolabel(rects, ax, as_int=True):
     """
     Attach a text label above each bar displaying its height
     """
@@ -14,13 +14,17 @@ def autolabel(rects, ax):
 
     for err_segment, rect in zip(barlinecols[0].get_segments(), rects):
         height = err_segment[1][1]  # Use height of error bar
+        if as_int and height >= 1:
+            format_height =  str(int(height))
+        else:
+            format_height = f'{height:.1f}'
 
         ax.text(rect.get_x() + rect.get_width() / 2, 
                 1.01 * height,
-                f'{height:.0f}',
+                format_height,
                 ha='center', va='bottom')
 
-def plot_any(data, labels, file=None, title=None, y_axis="", log=False):
+def plot_any(data, labels, file=None, title=None, y_axis="", log=False, as_int=True):
     # data = [
     #     {name:"sike generic",
     #     averages: [2,3,4,5],
@@ -60,7 +64,7 @@ def plot_any(data, labels, file=None, title=None, y_axis="", log=False):
                         averages,
                         width, 
                         label=date["name"])
-        autolabel(rec, ax)
+        autolabel(rec, ax, as_int)
         count += 1
 
     # Add some text for labels, title and custom x-axis tick labels, etc.
@@ -76,7 +80,7 @@ def plot_any(data, labels, file=None, title=None, y_axis="", log=False):
     ax.set_xticklabels(labels)
     # Legend
     ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05),
-          fancybox=True, ncol=6)
+          fancybox=True, ncol=3)
     # size
     fig.set_size_inches(20, 10)
 
@@ -111,8 +115,8 @@ def generate_graph(result):
         #"Microsoft_x64_Compressed",
 
         #CIRCL
-        "CIRCL_Generic",
-        "CIRCL_x64",
+        #"CIRCL_Generic",
+        #"CIRCL_x64",
 
         #ECDH
         "ECDH",
@@ -122,6 +126,7 @@ def generate_graph(result):
     matplotlib.rc('font', **font)
     plt.rcParams['axes.prop_cycle'] = plt.cycler(color=['#F9C74F', '#577590', '#F94144', '#43AA8B', '#F3722C', '#90BE6D'])
     plt.rcParams['axes.prop_cycle'] = plt.cycler(color=['#1F77B4', '#FF7F0E', '#2CA02C', '#D62728', '#9467BD', '#ffdd00'])
+    plt.rcParams['axes.prop_cycle'] = plt.cycler(color=['#1F77B4', '#F49500', '#009B5B', '#EC0000', '#fff94c', '#79008D', '#72D200'])
 
     
     for curve in curves:
@@ -157,16 +162,18 @@ def generate_graph(result):
         plot_any(   data=data_instructions, 
                     labels=['Keygen A', 'Keygen B', 'Secret A', 'Secret B'],
                     log=True,
+                    as_int=True,
                     file= str(curve),
                     y_axis="Overall Instructions in 1.000.000\n")
 
         plot_any(   data=data_memory, 
                     labels=[''],
                     log=False,
-                    file= str(curve) +"mem",
+                    as_int=False,
+                    file= str(curve) +"_mem",
                     y_axis="Memory in Kilobytes")
     
-    # Compare parameters among Microsoft_x64
+    # Compare parameters among Microsoft_x64 + ECDH
     name = "Sike_x64"
     data_instructions = []
     data_memory = []
@@ -193,16 +200,36 @@ def generate_graph(result):
             "deviations": deviations,
         }
         data_memory.append(dic)
+    
+    ecdh = result.get("ECDH")
+
+    for curve in ecdh.curves:
+        values, deviations = curve.get_benchmarks_for_plot()
+        data_instructions.append(
+            {
+                "name": "ECDH " + curve.name,
+                "values": values,
+                "deviations": deviations,
+            }
+            
+        )
+        data_memory.append(
+            {
+                "name": "ECDH " + curve.name,
+                "values": [round(curve.benchmark_average("Memory")/1000, 1)],
+                "deviations": [round(curve.benchmark_stdev("Memory")/1000, 1)],
+            }
+        )
 
 
     plot_any(   data=data_instructions, 
             labels=['Keygen A', 'Keygen B', 'Secret A', 'Secret B'],
             log=False,
-            file="SIKE_x64",
+            file="Sike_x64",
             y_axis="Overall Instructions in 1.000.000\n")
 
     plot_any(   data=data_memory, 
                 labels=[''],
                 log=False,
-                file="SIKE_x64_mem",
+                file="Sike_x64_mem",
                 y_axis="Memory in Kilobytes")

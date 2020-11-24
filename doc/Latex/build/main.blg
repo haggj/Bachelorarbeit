@@ -1,23 +1,23 @@
 [0] Config.pm:304> INFO - This is Biber 2.14 (beta)
 [0] Config.pm:307> INFO - Logfile is 'build/main.blg'
-[81] biber:322> INFO - === Sa Nov 21, 2020, 09:54:42
+[81] biber:322> INFO - === Di Nov 24, 2020, 14:50:55
 [98] Biber.pm:415> INFO - Reading 'build/main.bcf'
-[175] Biber.pm:943> INFO - Found 41 citekeys in bib section 0
-[190] Biber.pm:4256> INFO - Processing section 0
-[190] Utils.pm:75> INFO - Globbing data source 'bibliography.bib'
-[190] Utils.pm:91> INFO - Globbed data source 'bibliography.bib' to bibliography.bib
-[202] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[203] bibtex.pm:1653> INFO - LaTeX decoding ...
-[259] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliography.bib'
-[261] Utils.pm:293> WARN - Duplicate entry key: 'hartmanis1982computers' in file 'bibliography.bib', skipping ...
-[286] Utils.pm:293> WARN - year field '21 Aug. 2018' in entry 'ITSicherheit' is not an integer - this will probably not sort properly.
-[396] Utils.pm:293> WARN - year field '2017 (accessed November 14, 2020)' in entry 'nist2017callforproposals' is not an integer - this will probably not sort properly.
-[495] Utils.pm:293> WARN - month field 'Jul' in entry 'circl2019intro' is not an integer - this will probably not sort properly.
-[513] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_1jP4/bibliography.bib_42992.utf8, line 82, warning: 18 characters of junk seen at toplevel
-[559] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[559] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[559] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[559] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[590] bbl.pm:652> INFO - Writing 'build/main.bbl' with encoding 'UTF-8'
-[615] bbl.pm:755> INFO - Output to build/main.bbl
-[615] Biber.pm:128> INFO - WARNINGS: 5
+[174] Biber.pm:943> INFO - Found 43 citekeys in bib section 0
+[188] Biber.pm:4256> INFO - Processing section 0
+[189] Utils.pm:75> INFO - Globbing data source 'bibliography.bib'
+[189] Utils.pm:91> INFO - Globbed data source 'bibliography.bib' to bibliography.bib
+[200] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[202] bibtex.pm:1653> INFO - LaTeX decoding ...
+[250] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliography.bib'
+[251] Utils.pm:293> WARN - Duplicate entry key: 'hartmanis1982computers' in file 'bibliography.bib', skipping ...
+[274] Utils.pm:293> WARN - year field '21 Aug. 2018' in entry 'ITSicherheit' is not an integer - this will probably not sort properly.
+[362] Utils.pm:293> WARN - year field '2017 (accessed November 14, 2020)' in entry 'nist2017callforproposals' is not an integer - this will probably not sort properly.
+[455] Utils.pm:293> WARN - month field 'Jul' in entry 'circl2019intro' is not an integer - this will probably not sort properly.
+[476] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_PMgL/bibliography.bib_18933.utf8, line 82, warning: 18 characters of junk seen at toplevel
+[529] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[529] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[529] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[529] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[566] bbl.pm:652> INFO - Writing 'build/main.bbl' with encoding 'UTF-8'
+[607] bbl.pm:755> INFO - Output to build/main.bbl
+[607] Biber.pm:128> INFO - WARNINGS: 5

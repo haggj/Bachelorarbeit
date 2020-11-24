@@ -1166,6 +1166,30 @@
       \field{pages}{1594\bibrangedash 1609}
       \range{pages}{16}
     \endentry
+    \entry{microsoft2020sidh}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={Microsoft},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {GitHub}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/microsoft/PQCrypto-SIDH}}
+      \field{journaltitle}{GitHub repository}
+      \field{title}{PQCrypto-SIDH}
+      \field{year}{2020}
+    \endentry
     \entry{circl2020github}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=3f07179a07b2a7661e37a3fd0e652a07}{%
@@ -1190,28 +1214,28 @@
       \field{title}{CIRCL}
       \field{year}{2020}
     \endentry
-    \entry{microsoft2020sidh}{misc}{}
+    \entry{SikeForJava2020github}{misc}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
-           family={Microsoft},
-           familyi={M\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=0ddf88a055f9f884a51afb532fe8a02b}{%
+           family={Wultra},
+           familyi={W\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {GitHub}%
       }
-      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
-      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
-      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
-      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
-      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
-      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{namehash}{0ddf88a055f9f884a51afb532fe8a02b}
+      \strng{fullhash}{0ddf88a055f9f884a51afb532fe8a02b}
+      \strng{bibnamehash}{0ddf88a055f9f884a51afb532fe8a02b}
+      \strng{authorbibnamehash}{0ddf88a055f9f884a51afb532fe8a02b}
+      \strng{authornamehash}{0ddf88a055f9f884a51afb532fe8a02b}
+      \strng{authorfullhash}{0ddf88a055f9f884a51afb532fe8a02b}
       \field{sortinit}{7}
       \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://github.com/microsoft/PQCrypto-SIDH}}
+      \field{howpublished}{\url{https://github.com/wultra/sike-java}}
       \field{journaltitle}{GitHub repository}
-      \field{title}{PQCrypto-SIDH}
+      \field{title}{Sike for Java}
       \field{year}{2020}
     \endentry
     \entry{circl2019intro}{misc}{}
@@ -1358,13 +1382,43 @@
       \strng{authorbibnamehash}{2be146928cca275202256d038924a0b7}
       \strng{authornamehash}{2be146928cca275202256d038924a0b7}
       \strng{authorfullhash}{2be146928cca275202256d038924a0b7}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Standars for Efficient Cryptography}
       \field{title}{Sec 2: Recommended elliptic curve domain parameters}
       \field{year}{2010}
+    \endentry
+    \entry{1056220}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=92e159a96b3e8adafb90586f146ba7d6}{%
+           family={{Hellman}},
+           familyi={H\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{92e159a96b3e8adafb90586f146ba7d6}
+      \strng{fullhash}{92e159a96b3e8adafb90586f146ba7d6}
+      \strng{bibnamehash}{92e159a96b3e8adafb90586f146ba7d6}
+      \strng{authorbibnamehash}{92e159a96b3e8adafb90586f146ba7d6}
+      \strng{authornamehash}{92e159a96b3e8adafb90586f146ba7d6}
+      \strng{authorfullhash}{92e159a96b3e8adafb90586f146ba7d6}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Information Theory}
+      \field{number}{4}
+      \field{title}{A cryptanalytic time-memory trade-off}
+      \field{volume}{26}
+      \field{year}{1980}
+      \field{pages}{401\bibrangedash 406}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/TIT.1980.1056220
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

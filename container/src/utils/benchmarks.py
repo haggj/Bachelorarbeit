@@ -10,7 +10,7 @@ def format_number(number):
 def map_round(x):
     scaled = float(x)/1000000
     if scaled < 1:
-        return round(scaled, 1)
+        return round(scaled,1)
     return int(scaled)
 
 class Benchmark:
