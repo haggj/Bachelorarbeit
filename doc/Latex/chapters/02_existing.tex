@@ -6,9 +6,9 @@ In the following, some algorithms are described as \textit{compressed}. These co
 \section{\gls{SIKE}}
 \gls{SIKE} stands for \textbf{S}upersingular \textbf{I}sogeny \textbf{K}ey \textbf{E}ncapsulation. It is the reference implementation of the first proposed isogeny-based cryptographic primitives \parencite{jao2011towards}. Today, \gls{SIKE} is a \gls{NIST} candidate for quantum-resistant \textit{"Public-key Encryption and Key-establishment Algorithms"}. It is developed by a cooperation of researchers, lead by David Jao \parencite{sike2020spec}.
 \subsubsection{SIKE vs. PQCrypto-SIDH}\label{existing:sike_vs_pqcrypto}
-The \gls{SIKE} implementation is highly related to the \gls{SIDH} source code of Microsoft available on Github\footnote{https://github.com/microsoft/PQCrypto-SIDH}, called \gls{PQCrypto-SIDH}. At the beginning of this thesis both implementations were considered as different implementations. Since some researches of \gls{SIKE} also work for Microsoft the similarities of both APIs seemed to be reasonable. After contacting the \gls{SIKE} team due to compilation issues, David Jao stated that \gls{SIKE} uses the \textit{"[G]it repository hosted by Microsoft at
+The \gls{SIKE} implementation is highly related to the \gls{SIDH} source code of Microsoft available on Github\footnote{https://github.com/microsoft/PQCrypto-SIDH}, called \gls{PQCrypto-SIDH}. At the beginning of this thesis both implementations were considered as different implementations. Since some researches of \gls{SIKE} also work for Microsoft the similarities of both APIs seemed to be reasonable. After contacting the \gls{SIKE} team due to compilation issues of their NIST Round 3 submission, David Jao stated that \gls{SIKE} uses the \textit{"[G]it repository hosted by Microsoft at
 https://github.com/Microsoft/PQCrypto-SIDH [...] as the source
-repository [...] to build the NIST package."} (personal communication, November 17, 2020). this circumstance is unfortunately not documented by \gls{SIKE}. At the same time the benchmark analysis between \gls{PQCrypto-SIDH} and \gls{SIKE} reveals performance differences between both implementations, which will be considered in the analysis taking place in \autoref{chapter:analysis}. However, since both libraries are closely related this thesis treats them as equal if not stated otherwise.
+repository [...] to build the NIST package."} (personal communication, November 17, 2020). this circumstance is unfortunately not documented by \gls{SIKE}. This thesis treats them as equal (if not stated otherwise) since both libraries are closely related.
 \\\\
 \gls{SIKE} implements its key encapsulation mechanism (\gls{KEM}) upon a public key encryption system (\gls{PKE}) which is built upon \gls{SIDH} (as described in \autoref{chapter:background}). Besides a generic reference implementation, \gls{SIKE} offers various optimized implementations of their cryptographic primitves:
 \begin{itemize}
@@ -20,6 +20,9 @@ repository [...] to build the NIST package."} (personal communication, November 
   \item VHDL implementation
 \end{itemize}
 All of these implementations can be run with the following parameter sets: \texttt{p434}, \texttt{p503}, \texttt{p610} and \texttt{p751}. \gls{SIKE} asserts to countermeasure timing and cache attacks by implementing constant time cryptography~\parencite{sike2020spec}.
+
+\subsubsection{Benchmarked version}
+The \gls{SIKE} software release used in this thesis is the official \href{https://csrc.nist.gov/CSRC/media/Projects/Post-Quantum-Cryptography/documents/round-2/submissions/SIKE-Round2.zip}{Round 2 submission package}\footnote{https://csrc.nist.gov/CSRC/media/Projects/Post-Quantum-Cryptography/documents/round-2/submissions/SIKE-Round2.zip}. The latest release (Round 3 package) does not support native SIDH compilation as David Jao stated in private communication. Thus, updating to this release is not sufficient. In terms of code optimization the Round 3 package introduces improved algorithms for compressing keys \parencite{sike2020spec}. The differences of these improvements are analyzed using the benchmarks of the \gls{PQCrypto-SIDH}\footnote{commit: \texttt{1f8292d08570fe83c518797b6e103eb8a9f5e6dc}} library, which contains the changes.
 
 \subsubsection{\gls{SIKE} API}
 The API of \gls{SIKE} for a \gls{SIDH} key exchange is the following:
@@ -47,16 +50,6 @@ int EphemeralKeyGeneration_A(PrivateKey_A, PublicKey_A);
 \end{lstlisting}
 This function takes Alice's randomly generated private key \textcolor{keywordcol}{\texttt{PrivateKey}\_A} as input and computes a corresponding public key in \textcolor{keywordcol}{\texttt{PublicKey}\_A}. The function returns 0 if successful.\\
 The reference implementation of SIKE calls this function \texttt{isogen}. All later published SIKE implementations renamed the function to \texttt{EphemeralKeyGeneration}.\\
-
-\begin{algorithmic}
-\If {$i\geq maxval$}
-    \State $i\gets 0$
-\Else
-    \If {$i+k\leq maxval$}
-        \State $i\gets i+k$
-    \EndIf
-\EndIf
-\end{algorithmic}
 
 \begin{lstlisting}[]
 // Generate ephemeral public key for Bob
@@ -90,6 +83,9 @@ Note that this is the same as the function \texttt{isoex} in the SIKE Reference 
   \item ARM64 optimized implementation, partly written in assembly
 \end{itemize}
 Note that there are no compressed versions available. The library supports the following parameter sets: \texttt{p434}, \texttt{p503} and \texttt{p751}. To avoid side-channel attacks, their code is implemented in constant time~\parencite{circl2019intro}.
+
+\subsubsection{Benchmarked version}
+The software release used in this thesis is identified by the following commit id \\ \texttt{0440a499b7237516c7ba535bd1420241e13d385c} of the \gls{CIRCL} \href{https://github.com/cloudflare/circl/}{Github repository}\footnote{https://github.com/cloudflare/circl/}.
 
 \subsubsection{\gls{CIRCL} API}
 The API of \gls{CIRCL} for a \gls{SIDH} key exchange is the following:\\

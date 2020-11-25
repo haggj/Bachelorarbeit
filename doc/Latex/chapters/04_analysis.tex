@@ -103,7 +103,7 @@ The comparison between all \gls{SIKE} implementations showed that \textit{optimi
 \subsection{\gls{PQCrypto-SIDH} vs. \gls{SIKE}}
 
 This section describes the similarities and differences between \gls{PQCrypto-SIDH} and \gls{SIKE}. Note, that the \gls{SIKE} team uses the Microsoft Github repository of \gls{PQCrypto-SIDH} to create their \gls{NIST} submissions (see \autoref{existing:sike_vs_pqcrypto} for details). At the same time the libraries reveal considerable differences when analyzing their \textit{compressed} versions. Compressed implementations of \gls{SIDH} promise shortened key size compared to non-compressed versions, however, this leads to increased execution times and memory allocations. 
-\\\\
+\\
 \subsubsection{Optimized implementations}
 
 \subsubsection{Compressed implementations}
@@ -111,7 +111,7 @@ This section describes the similarities and differences between \gls{PQCrypto-SI
 \\
 The following evaluation of the allocated memory is surprising (\autoref{fig:results_comp_434_mem}): The Microsoft implementations occupy three times more memory than \gls{SIKE} when initiated with \textit{p434}. This gap rises strongly when increasing the security class to \textit{p751} (\autoref{fig:results_comp_751_mem}), where the the \textit{ \gls{PQCrypto-SIDH}} library of Microsoft allocates almost seven times more memory.
 \\\\
-While the benchmarks for the compressed Microsoft implementations show faster execution times, the overhead of allocated memory compared to \gls{SIKE} is enormous.
+While the benchmarks for the compressed Microsoft implementations show faster execution times, the overhead of allocated memory compared to \gls{SIKE} is enormous. As stated earlier this is surprising since both libraries are highly related to each other. Further investigation stated out that the benchmarked \gls{PQCrypto-SIDH} version already contained optimized compression algorithms \parencite{cryptoeprint:2020:431} which are not included in the NIST Round2 submission of \gls{SIKE} \parencite{sike2020spec}. Thus, the observed differences are the results of optimizing compression algorithms: Reducing the execution times for compression directly increases the memory consumption of the algorithms -- again a time-memory trade-off.
 
 \begin{figure}[H]
   \centering

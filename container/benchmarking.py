@@ -35,7 +35,7 @@ def signal_handler(sig,frame):
 
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
-    #RESULTS = load_from_json()
+    RESULTS = load_from_json()
 
     implementations =[
         #ECDH
@@ -63,5 +63,6 @@ if __name__ == "__main__":
         benchmark(implementation)
 
     save_as_json(RESULTS)
-    generate_graph(RESULTS)
+
     generate_table(RESULTS)
+    generate_graph(RESULTS)

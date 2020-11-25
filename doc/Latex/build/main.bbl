@@ -1420,6 +1420,42 @@
       \verb 10.1109/TIT.1980.1056220
       \endverb
     \endentry
+    \entry{cryptoeprint:2020:431}{misc}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=bf4a346ee6ecb988bce85b1d0e44d275}{%
+           family={Pereira},
+           familyi={P\bibinitperiod},
+           given={Geovandro\bibnamedelimb C.\bibnamedelimi C.\bibnamedelimi F.},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af59282ada7c04c0f37acd6de55b6e4d}{%
+           family={Doliskani},
+           familyi={D\bibinitperiod},
+           given={Javad},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=06ad878dfd043470d9603ec49bbb5aa5}{%
+           family={Jao},
+           familyi={J\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{05d8cfdee489306ff65dc49d7172938f}
+      \strng{fullhash}{05d8cfdee489306ff65dc49d7172938f}
+      \strng{bibnamehash}{05d8cfdee489306ff65dc49d7172938f}
+      \strng{authorbibnamehash}{05d8cfdee489306ff65dc49d7172938f}
+      \strng{authornamehash}{05d8cfdee489306ff65dc49d7172938f}
+      \strng{authorfullhash}{05d8cfdee489306ff65dc49d7172938f}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Cryptology ePrint Archive, Report 2020/431}
+      \field{note}{\url{https://eprint.iacr.org/2020/431}}
+      \field{title}{x-only point addition formula and faster torsion basis generation in compressed SIKE}
+      \field{year}{2020}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
