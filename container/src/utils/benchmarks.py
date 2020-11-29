@@ -80,6 +80,14 @@ class BenchmarkCurve:
         final.append(newline.join(self.hotspots))
         return final
     
+    def sum_whole_key_exchange(self) -> int:
+        return  self.benchmark_average("PublicKeyA") + \
+                self.benchmark_average("PrivateKeyA") + \
+                self.benchmark_average("PublicKeyB") + \
+                self.benchmark_average("PrivateKeyB") + \
+                self.benchmark_average("SecretA") + \
+                self.benchmark_average("SecretB")
+
     def get_benchmarks_for_plot(self) -> list:
         """Summarizes benchmarking values. Keygen is the sum of public key generation +
         private key generation. 

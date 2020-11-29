@@ -17,7 +17,7 @@ import signal
 import sys
 
 # Number of repetitions for each benchmark
-N = 2
+N = 20
 RESULTS = {}
 
 def benchmark(Class):
@@ -66,3 +66,9 @@ if __name__ == "__main__":
 
     generate_table(RESULTS)
     generate_graph(RESULTS)
+
+    for imp in RESULTS:
+        print(imp)
+        for curve in RESULTS[imp].curves:
+            print(str(curve.name) + ": " + str(curve.benchmark_average("Memory")))
+

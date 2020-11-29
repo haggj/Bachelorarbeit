@@ -1356,8 +1356,8 @@
       \strng{authorbibnamehash}{316b4ac408e83ccb52257b07fde25554}
       \strng{authornamehash}{dca719896e778e5eb8c8a7b4492e93f4}
       \strng{authorfullhash}{316b4ac408e83ccb52257b07fde25554}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{RFC 5480 (Proposed Standard)}
@@ -1420,6 +1420,59 @@
       \verb 10.1109/TIT.1980.1056220
       \endverb
     \endentry
+    \entry{Hudson:GGC}{manual}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e6fa7eb067e1819925321626a3eae3ad}{%
+           family={Hudson},
+           familyi={H\bibinitperiod},
+           given={Rick},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e6fa7eb067e1819925321626a3eae3ad}
+      \strng{fullhash}{e6fa7eb067e1819925321626a3eae3ad}
+      \strng{bibnamehash}{e6fa7eb067e1819925321626a3eae3ad}
+      \strng{authorbibnamehash}{e6fa7eb067e1819925321626a3eae3ad}
+      \strng{authornamehash}{e6fa7eb067e1819925321626a3eae3ad}
+      \strng{authorfullhash}{e6fa7eb067e1819925321626a3eae3ad}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Getting to Go: The Journey of Go's Garbage Collector}
+      \field{year}{2018 (accessed November 26, 2020)}
+      \verb{urlraw}
+      \verb https://blog.golang.org/ismmkeynote
+      \endverb
+      \verb{url}
+      \verb https://blog.golang.org/ismmkeynote
+      \endverb
+    \endentry
+    \entry{go2020faq}{manual}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3d6954dd72e53b9015d2a6e6546058f8}{%
+           family={GO},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{3d6954dd72e53b9015d2a6e6546058f8}
+      \strng{fullhash}{3d6954dd72e53b9015d2a6e6546058f8}
+      \strng{bibnamehash}{3d6954dd72e53b9015d2a6e6546058f8}
+      \strng{authorbibnamehash}{3d6954dd72e53b9015d2a6e6546058f8}
+      \strng{authornamehash}{3d6954dd72e53b9015d2a6e6546058f8}
+      \strng{authorfullhash}{3d6954dd72e53b9015d2a6e6546058f8}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{GO FAQ - Garbage Collection}
+      \field{year}{2020 (accessed November 28, 2020)}
+      \verb{urlraw}
+      \verb https://golang.org/doc/faq#garbage_collection
+      \endverb
+      \verb{url}
+      \verb https://golang.org/doc/faq#garbage_collection
+      \endverb
+    \endentry
     \entry{cryptoeprint:2020:431}{misc}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=bf4a346ee6ecb988bce85b1d0e44d275}{%
@@ -1447,8 +1500,8 @@
       \strng{authorbibnamehash}{05d8cfdee489306ff65dc49d7172938f}
       \strng{authornamehash}{05d8cfdee489306ff65dc49d7172938f}
       \strng{authorfullhash}{05d8cfdee489306ff65dc49d7172938f}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Cryptology ePrint Archive, Report 2020/431}

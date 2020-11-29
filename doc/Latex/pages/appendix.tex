@@ -357,51 +357,6 @@ Execution hotspots parameter \textit{751}:
 	\item \texttt{rdc\_mont:} 27.79\%
 	\item \texttt{fpsub751:} 3.82\%
 \end{enumerate}
-\subsection{Benchmarks for CIRCL x64}
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
-	\hline
-	\rowcolor{lightgray!50}
-	\bfseries\makecell{Parameter} & \bfseries\makecell{434} & \bfseries\makecell{503} & \bfseries\makecell{751}\\
-	\hline
-	\makecell{PrivateKeyA} & \makecell{671\\(0)} & \makecell{671\\(0)} & \makecell{671\\(0)}\\
-	\hline
-	\makecell{PublicKeyA} & \makecell{27.173.063\\(12.785)} & \makecell{30.588.687\\(14.339)} & \makecell{92.516.170\\(11.132)}\\
-	\hline
-	\makecell{PrivateKeyB} & \makecell{672\\(0)} & \makecell{672\\(0)} & \makecell{672\\(0)}\\
-	\hline
-	\makecell{PublicKeyB} & \makecell{28.959.178\\(431)} & \makecell{32.771.303\\(314)} & \makecell{103.101.351\\(244)}\\
-	\hline
-	\makecell{SecretA} & \makecell{21.089.046\\(2.101)} & \makecell{23.926.495\\(1.461)} & \makecell{75.130.980\\(636)}\\
-	\hline
-	\makecell{SecretB} & \makecell{24.364.188\\(324)} & \makecell{27.627.692\\(360)} & \makecell{87.853.968\\(337)}\\
-	\hline
-	\makecell{Memory\\in bytes} & \makecell{21.654\\(1.022)} & \makecell{21.691\\(896)} & \makecell{21.663\\(1.055)}\\
-
-	\hline
-	\end{tabular}
-	\caption[Benchmarks for CIRCL x64]{Benchmarks for CIRCL x64}
-	\label{tab:benchmarks_CIRCL_x64}
-\end{table}
-Execution hotspots parameter \textit{434}:
-\begin{enumerate}[noitemsep]
-	\item \texttt{p434.mulP434:} 47.28\%
-	\item \texttt{p434.rdcP434:} 22.93\%
-	\item \texttt{p434.subP434:} 5.81\%
-\end{enumerate}
-Execution hotspots parameter \textit{503}:
-\begin{enumerate}[noitemsep]
-	\item \texttt{p503.mulP503:} 41.39\%
-	\item \texttt{p503.rdcP503:} 23.04\%
-	\item \texttt{p503.subP503:} 8.39\%
-\end{enumerate}
-Execution hotspots parameter \textit{751}:
-\begin{enumerate}[noitemsep]
-	\item \texttt{p751.mulP751:} 56.16\%
-	\item \texttt{p751.rdcP751:} 21.72\%
-	\item \texttt{p751.subP751:} 6.02\%
-\end{enumerate}
 \subsection{Benchmarks for Microsoft Generic}
 \begin{table}[H]
 	\centering
@@ -605,4 +560,94 @@ Execution hotspots parameter \textit{751}:
 	\item \texttt{mp\_mul:} 53.4\%
 	\item \texttt{rdc\_mont:} 28.99\%
 	\item \texttt{0x0000000000032f6d:} 2.8\%
+\end{enumerate}
+\subsection{Benchmarks for CIRCL x64}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
+	\hline
+	\rowcolor{lightgray!50}
+	\bfseries\makecell{Parameter} & \bfseries\makecell{434} & \bfseries\makecell{503} & \bfseries\makecell{751}\\
+	\hline
+	\makecell{PrivateKeyA} & \makecell{2.823\\(716)} & \makecell{2.897\\(794)} & \makecell{2.915\\(779)}\\
+	\hline
+	\makecell{PublicKeyA} & \makecell{27.586.964\\(8.609)} & \makecell{31.016.984\\(10.675)} & \makecell{93.010.442\\(9.883)}\\
+	\hline
+	\makecell{PrivateKeyB} & \makecell{663\\(0)} & \makecell{663\\(0)} & \makecell{663\\(0)}\\
+	\hline
+	\makecell{PublicKeyB} & \makecell{29.068.891\\(463)} & \makecell{32.900.437\\(520)} & \makecell{103.305.745\\(699)}\\
+	\hline
+	\makecell{SecretA} & \makecell{21.166.569\\(1.784)} & \makecell{24.018.082\\(998)} & \makecell{75.274.951\\(541)}\\
+	\hline
+	\makecell{SecretB} & \makecell{24.454.234\\(339)} & \makecell{27.733.879\\(407)} & \makecell{88.023.885\\(355)}\\
+	\hline
+	\makecell{Memory\\in bytes} & \makecell{21.992\\(2.120)} & \makecell{21.620\\(1.810)} & \makecell{23.116\\(2.006)}\\
+
+	\hline
+	\end{tabular}
+	\caption[Benchmarks for CIRCL x64]{Benchmarks for CIRCL x64}
+	\label{tab:benchmarks_CIRCL_x64}
+\end{table}
+Execution hotspots parameter \textit{434}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{p434.mulP434:} 46.96\%
+	\item \texttt{p434.rdcP434:} 22.78\%
+	\item \texttt{p434.subP434:} 5.77\%
+\end{enumerate}
+Execution hotspots parameter \textit{503}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{p503.mulP503:} 41.12\%
+	\item \texttt{p503.rdcP503:} 22.89\%
+	\item \texttt{p503.subP503:} 8.34\%
+\end{enumerate}
+Execution hotspots parameter \textit{751}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{p751.mulP751:} 56.01\%
+	\item \texttt{p751.rdcP751:} 21.66\%
+	\item \texttt{p751.subP751:} 6.01\%
+\end{enumerate}
+\subsection{Benchmarks for CIRCL Generic}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
+	\hline
+	\rowcolor{lightgray!50}
+	\bfseries\makecell{Parameter} & \bfseries\makecell{434} & \bfseries\makecell{503} & \bfseries\makecell{751}\\
+	\hline
+	\makecell{PrivateKeyA} & \makecell{2.749\\(678)} & \makecell{2.754\\(692)} & \makecell{2.806\\(704)}\\
+	\hline
+	\makecell{PublicKeyA} & \makecell{94.855.793\\(9.351)} & \makecell{139.394.045\\(8.178)} & \makecell{423.781.686\\(10.860)}\\
+	\hline
+	\makecell{PrivateKeyB} & \makecell{663\\(0)} & \makecell{663\\(0)} & \makecell{663\\(0)}\\
+	\hline
+	\makecell{PublicKeyB} & \makecell{104.075.408\\(761)} & \makecell{152.890.633\\(837)} & \makecell{476.666.916\\(773)}\\
+	\hline
+	\makecell{SecretA} & \makecell{75.854.959\\(1.654)} & \makecell{112.603.650\\(1.000)} & \makecell{348.366.025\\(782)}\\
+	\hline
+	\makecell{SecretB} & \makecell{87.814.021\\(437)} & \makecell{129.337.846\\(501)} & \makecell{407.146.301\\(640)}\\
+	\hline
+	\makecell{Memory\\in bytes} & \makecell{23.903\\(2.246)} & \makecell{24.312\\(2.269)} & \makecell{25.503\\(1.987)}\\
+
+	\hline
+	\end{tabular}
+	\caption[Benchmarks for CIRCL Generic]{Benchmarks for CIRCL Generic}
+	\label{tab:benchmarks_CIRCL_Generic}
+\end{table}
+Execution hotspots parameter \textit{434}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{p434.mulP434:} 42.86\%
+	\item \texttt{p434.rdcP434:} 33.77\%
+	\item \texttt{p434.subP434:} 7.01\%
+\end{enumerate}
+Execution hotspots parameter \textit{503}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{p503.mulP503:} 43.8\%
+	\item \texttt{p503.rdcP503:} 35.49\%
+	\item \texttt{p503.subP503:} 6.35\%
+\end{enumerate}
+Execution hotspots parameter \textit{751}:
+\begin{enumerate}[noitemsep]
+	\item \texttt{p751.mulP751:} 47.46\%
+	\item \texttt{p751.rdcP751:} 37.86\%
+	\item \texttt{p751.subP751:} 4.77\%
 \end{enumerate}

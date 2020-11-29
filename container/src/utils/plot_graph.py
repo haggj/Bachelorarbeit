@@ -13,15 +13,15 @@ def autolabel(rects, ax, as_int=True):
     data_line, capline, barlinecols = rects.errorbar
 
     for err_segment, rect in zip(barlinecols[0].get_segments(), rects):
-        height = err_segment[1][1]  # Use height of error bar
+        height = rect.get_height()
         if as_int and height >= 1:
             format_height =  str(int(height))
         else:
             format_height = f'{height:.1f}'
 
         ax.text(rect.get_x() + rect.get_width() / 2, 
-                1.01 * height,
-                format_height,
+                1.01 * err_segment[1][1],  # Use height of error bar as postition
+                format_height,             # Use formatted height due to rect height
                 ha='center', va='bottom')
 
 def plot_any(data, labels, file=None, title=None, y_axis="", log=False, as_int=True):
@@ -80,7 +80,7 @@ def plot_any(data, labels, file=None, title=None, y_axis="", log=False, as_int=T
     ax.set_xticklabels(labels)
     # Legend
     ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05),
-          fancybox=True, ncol=3)
+          fancybox=True, ncol=5)
     # size
     fig.set_size_inches(20, 10)
 
@@ -92,7 +92,7 @@ def plot_any(data, labels, file=None, title=None, y_axis="", log=False, as_int=T
 def map_to_ecdh(curve):
     if curve == "434":
         return "secp256"
-    if curve == "503":
+    if curve == "610":
         return "secp384"
     if curve == "751":
         return "secp521"
@@ -109,14 +109,14 @@ def generate_graph(result):
         #"Sike_x64_Compressed",
 
         #MICROSOFT
-        "Microsoft_Generic",
+        #Microsoft_Generic",
         #"Microsoft_Generic_Compressed",
-        "Microsoft_x64",
+        #"Microsoft_x64",
         #"Microsoft_x64_Compressed",
 
         #CIRCL
-        #"CIRCL_Generic",
-        #"CIRCL_x64",
+        "CIRCL_Generic",
+        "CIRCL_x64",
 
         #ECDH
         "ECDH",
@@ -174,7 +174,7 @@ def generate_graph(result):
                     y_axis="Memory in Kilobytes")
     
     # Compare parameters among Microsoft_x64 + ECDH
-    name = "Sike_x64"
+    name = "CIRCL_x64"
     data_instructions = []
     data_memory = []
     for curve in curves:
@@ -182,6 +182,8 @@ def generate_graph(result):
         if not impl:
             break
         found = impl.get_curve_by_name(curve)
+        if not found:
+            continue
          # Instructions
         values, deviations = found.get_benchmarks_for_plot()
         dic = {
@@ -204,6 +206,9 @@ def generate_graph(result):
     ecdh = result.get("ECDH")
 
     for curve in ecdh.curves:
+        print(curve.name)
+        if name=="CIRCL_x64" and curve.name == "secp384":
+            continue
         values, deviations = curve.get_benchmarks_for_plot()
         data_instructions.append(
             {
@@ -225,11 +230,12 @@ def generate_graph(result):
     plot_any(   data=data_instructions, 
             labels=['Keygen A', 'Keygen B', 'Secret A', 'Secret B'],
             log=False,
-            file="Sike_x64",
+            file=name,
             y_axis="Overall Instructions in 1.000.000\n")
 
     plot_any(   data=data_memory, 
                 labels=[''],
                 log=False,
-                file="Sike_x64_mem",
+                as_int=False,
+                file=name+"_mem",
                 y_axis="Memory in Kilobytes")

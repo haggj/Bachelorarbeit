@@ -1,23 +1,25 @@
 [0] Config.pm:304> INFO - This is Biber 2.14 (beta)
 [0] Config.pm:307> INFO - Logfile is 'build/main.blg'
-[79] biber:322> INFO - === Mi Nov 25, 2020, 11:40:21
-[96] Biber.pm:415> INFO - Reading 'build/main.bcf'
-[172] Biber.pm:943> INFO - Found 44 citekeys in bib section 0
-[186] Biber.pm:4256> INFO - Processing section 0
-[187] Utils.pm:75> INFO - Globbing data source 'bibliography.bib'
-[187] Utils.pm:91> INFO - Globbed data source 'bibliography.bib' to bibliography.bib
-[198] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[200] bibtex.pm:1653> INFO - LaTeX decoding ...
-[250] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliography.bib'
-[251] Utils.pm:293> WARN - Duplicate entry key: 'hartmanis1982computers' in file 'bibliography.bib', skipping ...
-[278] Utils.pm:293> WARN - year field '21 Aug. 2018' in entry 'ITSicherheit' is not an integer - this will probably not sort properly.
-[373] Utils.pm:293> WARN - year field '2017 (accessed November 14, 2020)' in entry 'nist2017callforproposals' is not an integer - this will probably not sort properly.
-[469] Utils.pm:293> WARN - month field 'Jul' in entry 'circl2019intro' is not an integer - this will probably not sort properly.
-[495] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_MAAL/bibliography.bib_14493.utf8, line 82, warning: 18 characters of junk seen at toplevel
-[544] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[544] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[544] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[544] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[577] bbl.pm:652> INFO - Writing 'build/main.bbl' with encoding 'UTF-8'
-[604] bbl.pm:755> INFO - Output to build/main.bbl
-[604] Biber.pm:128> INFO - WARNINGS: 5
+[84] biber:322> INFO - === Sa Nov 28, 2020, 12:05:12
+[100] Biber.pm:415> INFO - Reading 'build/main.bcf'
+[183] Biber.pm:943> INFO - Found 46 citekeys in bib section 0
+[198] Biber.pm:4256> INFO - Processing section 0
+[198] Utils.pm:75> INFO - Globbing data source 'bibliography.bib'
+[198] Utils.pm:91> INFO - Globbed data source 'bibliography.bib' to bibliography.bib
+[209] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[211] bibtex.pm:1653> INFO - LaTeX decoding ...
+[264] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliography.bib'
+[266] Utils.pm:293> WARN - Duplicate entry key: 'hartmanis1982computers' in file 'bibliography.bib', skipping ...
+[289] Utils.pm:293> WARN - year field '21 Aug. 2018' in entry 'ITSicherheit' is not an integer - this will probably not sort properly.
+[402] Utils.pm:293> WARN - year field '2017 (accessed November 14, 2020)' in entry 'nist2017callforproposals' is not an integer - this will probably not sort properly.
+[507] Utils.pm:293> WARN - month field 'Jul' in entry 'circl2019intro' is not an integer - this will probably not sort properly.
+[531] Utils.pm:293> WARN - year field '2018 (accessed November 26, 2020)' in entry 'Hudson:GGC' is not an integer - this will probably not sort properly.
+[534] Utils.pm:293> WARN - year field '2020 (accessed November 28, 2020)' in entry 'go2020faq' is not an integer - this will probably not sort properly.
+[540] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_sfdj/bibliography.bib_12613.utf8, line 90, warning: 18 characters of junk seen at toplevel
+[589] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[589] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[589] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[590] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[624] bbl.pm:652> INFO - Writing 'build/main.bbl' with encoding 'UTF-8'
+[655] bbl.pm:755> INFO - Output to build/main.bbl
+[656] Biber.pm:128> INFO - WARNINGS: 7

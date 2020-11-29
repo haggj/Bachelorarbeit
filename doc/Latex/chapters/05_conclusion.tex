@@ -1,78 +1,153 @@
 \chapter{Conclusion}\label{chapter:conclusion}
 
-This final chapter presents the major results of the previous \autoref{chapter:analysis} in \autoref{sec:conclusion_res} and describes limitations of the thesis in \autoref{sec:conclusion_limits}.
+This final chapter presents the major results of the previous \autoref{chapter:analysis} in \autoref{sec:conclusion_res}. The considerations in \autoref{sec:conclusion_limits} describe the limitations of this thesis.
 
 \section{Results}\label{sec:conclusion_res}
 
-This section summarizes all results of the benchmarking suite. For a detailed analysis of the measured data see \autoref{chapter:analysis} and addenda \ref{app:detailed_benchmarks}. The presented data in this section provides a relative comparison between the \gls{SIDH} libraries \textit{\gls{SIKE}}, PQ-\textit{Crypto} and \textit{\gls{CIRCL}}. Moreover, the relative difference between \gls{SIDH} and \gls{ECDH} is shown.\\
+This section summarizes all results of the benchmarking suite. For a detailed analysis of the measured data see \autoref{chapter:analysis} and addenda \ref{app:detailed_benchmarks}. The presented data in this section provides a relative comparison between the \gls{SIDH} libraries \textit{\gls{SIKE}} and \textit{\gls{CIRCL}}. Moreover, the relative difference between \gls{SIDH} and \gls{ECDH} is shown.\\
 The most efficient implementation in the following tables is highlighted in green and has a relative difference of 1 to itself. All other implementations in the appropriate row are labeled with the relative distance to the most efficient implementation. For this evaluation the execution times and memory consumption for a whole Diffie-Hellman exchange are accumulated (key generation of A and B \textit{plus} secret generation of A and B).
 
-\subsubsection{Comparing \gls{SIDH} libraries}
+\subsection{Comparing \gls{SIDH} libraries}
+This section summarizes the comparison between \gls{SIKE} and \gls{CIRCL}. The tables below list the measured results considering all available parameter sets. \textit{Generic optimized} and \textit{x64 optimized} implementations are listed separately.
 
-The values in \autoref{tab:conclusion_p434} indicate \textit{\gls{PQCrypto-SIDH} } as the fastest library for \textit{x64}, \textit{x64 compressed} and \textit{generic compressed} implementations, while \textit{\gls{SIKE}} is little faster for the \textit{generic} variant. \textit{\gls{CIRCL}} only provides an \textit{x64} implementation and is much slower than \textit{\gls{SIKE}} and \textit{\gls{PQCrypto-SIDH} }.
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|K{4cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
-	\hline
-	\rowcolor{lightgray!50}
-	\bfseries\makecell{Category} & \bfseries\makecell{\gls{SIKE}} & \bfseries\makecell{PQCrypto} & \bfseries\makecell{\gls{CIRCL}} \\
-	\hline
-	\makecell{x64} & \makecell{1.09} & \cellcolor{green}1 & \makecell{1.57} \\
-	\hline
-	\makecell{Generic} & \cellcolor{green}1 & \makecell{1.002} & \makecell{-}\\
-	\hline
-	\makecell{x64 compressed} &\makecell{1.37}  & \cellcolor{green}1 & \makecell{-} \\
-	\hline
-	\makecell{Generic compressed} &\makecell{1.27}  & \cellcolor{green}1 & \makecell{-} \\
-	\hline
-	\end{tabular}
-	\caption[Relative execution times p434]{Comparison of execution times for all \gls{SIDH} libraries initialized with p434.}
-	\label{tab:conclusion_p434}
-\end{table}
-
-On the contrary, \textit{\gls{SIKE}} allocates less memory than \textit{\gls{PQCrypto-SIDH} } for all implementations, especially for both \textit{compressed} versions \textit{\gls{PQCrypto-SIDH} } demands clearly more memory. Again, \textit{\gls{CIRCL}} request the most resources.
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|K{4cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
-	\hline
-	\rowcolor{lightgray!50}
-	\bfseries\makecell{Category} & \bfseries\makecell{\gls{SIKE}} & \bfseries\makecell{PQCrypto} & \bfseries\makecell{\gls{CIRCL}} \\
-	\hline
-	\makecell{x64} & \cellcolor{green}1 & \makecell{1.09} & \makecell{2.65} \\
-	\hline
-	\makecell{Generic} & \cellcolor{green}1 & \makecell{1.04} & \makecell{-}\\
-	\hline
-	\makecell{x64 compressed} &\cellcolor{green}1  & \makecell{3.68} & \makecell{-} \\
-	\hline
-	\makecell{Generic compressed} &\cellcolor{green}1  & \makecell{4.1} & \makecell{-} \\
-	\hline
-	\end{tabular}
-	\caption[Relative memory consumption p434]{Comparison of memory consumption for all \gls{SIDH} libraries initialized with p434.}
-	\label{tab:conclusion_p434_mem}
-\end{table}
-
-\subsubsection{Comparing \gls{SIDH} and \gls{ECDH}}
-
-The analysis of \autoref{tab:conclusion_ecdh_sidh} reveals the differences between \textit{\gls{SIDH}} and \textit{\gls{ECDH}} in terms of execution times. Note that all security classes and only the x64 optimized variants of all libraries are considered.\\
-While the overhead of \textit{\gls{SIDH}} for the security level AES128 (matches NIST security level 1 and p434) is enormous the relative difference for higher security levels decreases. However, \gls{ECDH} requests slightly more memory than \gls{SIDH} (see \autoref{chapter:analysis}).
+\subsubsection{Generic optimized}
+The values in \autoref{tab:conclusion_generic} indicate \gls{CIRCL} to be the fastest \textit{generic optimized} implementation. For all parameters included in \gls{CIRCL} the library executes less instructions than \gls{SIKE} (\texttt{p610} is not available in \gls{CIRCL}). At the same time the \textit{compressed} version of \gls{SIKE} processes the most operations of all \textit{generic optimized} variants.\\
+\autoref{tab:conclusion_generic_mem} lists the benchmarking results considering memory consumption for \textit{generic optimized} implementations. \gls{SIKE} is the most efficient variant allocating less memory than the fastest version \gls{CIRCL}. \gls{CIRCL} allocates the most memory of all implementations.
 
 
 \begin{table}[H]
-\begin{tabular}{|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}
+\centering
+\begin{tabular}{|K{5cm}|K{3cm}|K{3cm}|K{3cm}|} 
 \hline
-\rowcolor{lightgray!50} 
-\cellcolor{lightgray!50}                                 & \multicolumn{3}{c|}{\cellcolor{lightgray!50}\textbf{SIDH}} & \textbf{ECDH} \\ \hhline{>{\arrayrulecolor{lightgray!50}}->{\arrayrulecolor{black}}----}
-
-\rowcolor{lightgray!50} 
-\multirow{-2}{*}{\cellcolor{lightgray!50}\textbf{Security Level}} &\gls{SIKE}           &PQCrypto       &\gls{CIRCL}          & openSSL \\ \hline
-                                                         AES128 &44.55               &40.93               &64.46               &\cellcolor{green}1  \\ \hline
-                                                         AES192 &2.36               &2.18               &2.78               &\cellcolor{green}1   \\ \hline
-                                                         AES256 &2.71               &2.59               &3.66               &\cellcolor{green}1   \\ \hline
+\multicolumn{4}{|c|}{{\cellcolor[rgb]{0.8,0.8,0.776}} \textbf{Generic optimized} }                                                                                                                             \\ 
+\hline
+\rowcolor[rgb]{0.8,0.8,0.776} \diagbox{\textbf{Parameter}}{\textbf{Library}} & SIKE                 & \begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.8,0.8,0.776}}c@{}}SIKE \\compressed \end{tabular} & CIRCL  \\ 
+{\cellcolor[rgb]{0.925,0.925,0.918}}p434                                     & 2.07           & 3.76                                                                                                          & {\cellcolor{green}}1  \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}p503                                     & 3.2            & 5.75                                                                                                          & {\cellcolor{green}}1  \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}p610                                     & {\cellcolor{green}}1              & 1.79                                                                                                          & -                     \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}p751                                     & 2.33           & 4.13                                                                                                          & {\cellcolor{green}}1  \\
+\hline
 \end{tabular}
-\caption[Relative execution times compared to \gls{ECDH}]{Comparison of the x64 optimized \gls{SIDH} implementations with modern x64 optimized \gls{ECDH} by  \gls{openssl} in terms of execution time.}
+\caption[Comparing instructions of \textit{generic optimized} \gls{SIDH} implementations]{Relative comparison of executes instructions regarding \textit{generic optimized} \gls{SIDH} implementations.}
+\label{tab:conclusion_generic}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|K{5cm}|K{3cm}|K{3cm}|K{3cm}|} 
+\hline
+\multicolumn{4}{|c|}{{\cellcolor[rgb]{0.8,0.8,0.776}} \textbf{Generic optimized} }                                                                                                                         \\ 
+\hline
+\rowcolor[rgb]{0.8,0.8,0.776} \diagbox{\textbf{Parameter}}{\textbf{Library}} & SIKE                 & \begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.8,0.8,0.776}}c@{}}SIKE \\compressed \end{tabular} & CIRCL  \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}p434                                     & {\cellcolor{green}}1 & 2.2                                                                                         & 3.1    \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}p503                                     & {\cellcolor{green}}1 & 2.45                                                                                        & 3.12   \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}p610                                     & {\cellcolor{green}}1 & 2.12                                                                                        & -      \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}p751                                     & {\cellcolor{green}}1 & 2.15                                                                                        & 1.96   \\
+\hline
+\end{tabular}
+\caption[Comparing memory consumption of \textit{generic optimized} \gls{SIDH} implementations]{Relative comparison of memory consumption regarding \textit{generic optimized} \gls{SIDH} implementations.}
+\label{tab:conclusion_generic_mem}
+\end{table}
+
+\subsubsection{X64 optimized}
+The summary for \textit{x64 optimized} \gls{SIDH} implementations is listed in \autoref{tab:conclusion_x64}. \gls{SIKE} executes the least amount of instructions for all parameter sets. \gls{CIRCL} is slightly slower and the \textit{compressed} version of \gls{SIKE} executes the most operations.
+\autoref{tab:conclusion_x64} additionally indicates \gls{SIKE} to claim at least memory for a single \gls{SIDH} key exchange. \gls{CIRCL} and \gls{SIKE} \textit{compressed} allocate an equal amount of memory for lower security levels. However, for increasing security levels the distance between \gls{CIRCL} and \gls{SIKE} decreases.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|K{5cm}|K{3cm}|K{3cm}|K{3cm}|} 
+\hline
+\multicolumn{4}{|c|}{{\cellcolor[rgb]{0.8,0.8,0.776}} \textbf{x64 optimized} }                                                                                                                             \\ 
+\hline
+\rowcolor[rgb]{0.8,0.8,0.776} \diagbox{\textbf{Parameter}}{\textbf{Library}} & SIKE                 & \begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.8,0.8,0.776}}c@{}}SIKE \\compressed \end{tabular} & CIRCL  \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}p434                                     & {\cellcolor{green}}1 & 1.87                                                                                        & 1.45   \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}p503                                     & {\cellcolor{green}}1 & 2.57                                                                                        & 1.65   \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}p610                                     & {\cellcolor{green}}1 & 1.75                                                                                        & -      \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}p751                                     & {\cellcolor{green}}1 & 1.81                                                                                        & 1.35   \\
+\hline
+\end{tabular}
+\caption[Comparing instructions of \textit{x64 optimized} \gls{SIDH} implementations]{Relative comparison of executes instructions regarding \textit{x64 optimized} \gls{SIDH} implementations.}
+\label{tab:conclusion_x64}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|K{5cm}|K{3cm}|K{3cm}|K{3cm}|} 
+\hline
+\multicolumn{4}{|c|}{{\cellcolor[rgb]{0.8,0.8,0.776}} \textbf{x64 optimized} }                                                                                                                             \\ 
+\hline
+\rowcolor[rgb]{0.8,0.8,0.776} \diagbox{\textbf{Parameter}}{\textbf{Library}} & SIKE                 & \begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.8,0.8,0.776}}c@{}}SIKE \\compressed \end{tabular} & CIRCL  \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}p434                                     & {\cellcolor{green}}1 & 2.36                                                                                        & 2.69   \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}p503                                     & {\cellcolor{green}}1 & 2.54                                                                                        & 2.54   \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}p610                                     & {\cellcolor{green}}1 & 2.39                                                                                         & -      \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}p751                                     & {\cellcolor{green}}1 & 2.4                                                                                         & 1.73   \\
+\hline
+\end{tabular}
+\caption[Comparing memory consumption of \textit{x64 optimized} \gls{SIDH} implementations]{Relative comparison of memory consumption regarding \textit{x64 optimized} \gls{SIDH} implementations.}
+\label{tab:conclusion_x64_mem}
+\end{table}
+
+\subsection{Comparing \gls{SIDH} and \gls{ECDH}}
+
+The analysis of \autoref{tab:conclusion_ecdh_sidh} reveals the differences between \textit{\gls{SIDH}} and \textit{\gls{ECDH}} in terms of execution times. Note that all security classes and only the x64 optimized variants of all libraries are considered. While the overhead of \textit{\gls{SIDH}} for the \gls{NIST} security level 1 is enormous, the relative difference for higher security levels decreases.\\
+While \gls{ECDH} is faster in terms of executed instruction, the library also requests more memory than \gls{SIDH} (\autoref{tab:conclusion_ecdh_sidh_mem}).
+
+
+
+\begin{table}[H]
+\centering
+\arrayrulecolor{black}
+\begin{tabular}{|K{1.8cm}|K{1.8cm}|K{1.8cm}|K{2cm}|K{1.8cm}|K{1.8cm}|K{1.8cm}|} 
+\hline
+\rowcolor[rgb]{0.8,0.8,0.776} {\cellcolor[rgb]{0.8,0.8,0.776}}                                                                                                                             & \multicolumn{4}{c|}{\textbf{ SIDH }}                                                                                                                                                                                                                             & \multicolumn{2}{c|}{\textbf{ECHD}}                                                                                                 \\ 
+\hhline{|>{\arrayrulecolor[rgb]{0.8,0.8,0.776}}->{\arrayrulecolor{black}}------|}
+\rowcolor[rgb]{0.8,0.8,0.776} \multirow{-2}{*}{{\cellcolor[rgb]{0.8,0.8,0.776}}\begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.8,0.8,0.776}}c@{}}\textbf{NIST}\\\textbf{Security} \end{tabular}} & \begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.8,0.8,0.776}}c@{}}\textbf{SIDH}\\\textbf{parameter}\end{tabular} & \textbf{SIKE}        & \begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.8,0.8,0.776}}c@{}}\textbf{SIKE}\\\textbf{compressed}\end{tabular} & \textbf{CIRCL} & \begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.8,0.8,0.776}}c@{}}\textbf{ECDH}\\\textbf{parameter}\end{tabular} & \textbf{openSSL}      \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}Level 1                                                                                                                                                & {\cellcolor[rgb]{0.925,0.925,0.918}}p434                                                                   & 44.55                & 81.61                                                                                                       & 64.46          & {\cellcolor[rgb]{0.925,0.925,0.918}}secp256r1                                                              & {\cellcolor{green}}1  \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}Level 3                                                                                                                                                & {\cellcolor[rgb]{0.925,0.925,0.918}}p610                                                                   & 4.18                 & 7.48                                                                                                        & -              & {\cellcolor[rgb]{0.925,0.925,0.918}}secp384r1                                                              & {\cellcolor{green}}1  \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}Level 4                                                                                                                                                & {\cellcolor[rgb]{0.925,0.925,0.918}}p751                                                                   & 2.71                 & 4.91                                                                                                        & 3.66           & {\cellcolor[rgb]{0.925,0.925,0.918}}secp521r1                                                              & {\cellcolor{green}}1  \\
+\hline
+\end{tabular}
+\caption[Comparing executed instructions between \gls{ECDH} and \gls{SIDH}]{Relative comparison of executed instructions between \gls{ECDH} and \gls{SIDH}.}
 \label{tab:conclusion_ecdh_sidh}
+\end{table}
+
+\begin{table}[H]
+\centering
+\arrayrulecolor{black}
+\begin{tabular}{|K{1.8cm}|K{1.8cm}|K{1.8cm}|K{2cm}|K{1.8cm}|K{1.8cm}|K{1.8cm}|} 
+\hline
+\rowcolor[rgb]{0.8,0.8,0.776} {\cellcolor[rgb]{0.8,0.8,0.776}}                                                                                                                              & \multicolumn{4}{c|}{\textbf{ SIDH } }                                                                                                                                                                                                                               & \multicolumn{2}{c|}{\textbf{ECHD} }                                                                                              \\ 
+\hhline{|>{\arrayrulecolor[rgb]{0.8,0.8,0.776}}->{\arrayrulecolor{black}}------|}
+\rowcolor[rgb]{0.8,0.8,0.776} \multirow{-2}{*}{{\cellcolor[rgb]{0.8,0.8,0.776}}\begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.8,0.8,0.776}}l@{}} \textbf{NIST}\\\textbf{Security} \end{tabular}} & \begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.8,0.8,0.776}}l@{}}\textbf{SIDH}\\\textbf{parameter} \end{tabular} & \textbf{SIKE}        & \begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.8,0.8,0.776}}l@{}}\textbf{SIKE}\\\textbf{compressed} \end{tabular} & \textbf{CIRCL}  & \begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.8,0.8,0.776}}l@{}}\textbf{ECDH}\\\textbf{parameter} \end{tabular} & \textbf{openSSL}   \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}Level 1                                                                                                                                                 & {\cellcolor[rgb]{0.925,0.925,0.918}}p434                                                                    & {\cellcolor{green}}1 & 2.36                                                                                                         & 2.69            & {\cellcolor[rgb]{0.925,0.925,0.918}}secp256r1                                                               & 1.49               \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}Level 3                                                                                                                                                 & {\cellcolor[rgb]{0.925,0.925,0.918}}p610                                                                    & {\cellcolor{green}}1 & 2.39                                                                                                         & -               & {\cellcolor[rgb]{0.925,0.925,0.918}}secp384r1                                                               & 1.23               \\ 
+\hline
+{\cellcolor[rgb]{0.925,0.925,0.918}}Level 4                                                                                                                                                 & {\cellcolor[rgb]{0.925,0.925,0.918}}p751                                                                    & {\cellcolor{green}}1 & 2.4                                                                                                          & 1.73            & {\cellcolor[rgb]{0.925,0.925,0.918}}secp521r1                                                               & 1.22               \\
+\hline
+\end{tabular}
+\caption[Comparing allocated memory between \gls{ECDH} and \gls{SIDH}]{Relative comparison of allocated memory between \gls{ECDH} and \gls{SIDH}.}
+\label{tab:conclusion_ecdh_sidh_mem}
 \end{table}
 
 \section{Limitations}\label{sec:conclusion_limits}

@@ -113,15 +113,16 @@ The benchmarking suite is developed in Python3 on a Linux/Ubuntu operating syste
 	\end{itemize}
 \item CIRCL working on: \texttt{p434, p503 and p751}
 	\begin{itemize}
+	\item CIRCL generic optimized implementation (\texttt{CIRCL\_Generic})
 	\item CIRCL x64 optimized implementation (\texttt{CIRCL\_x64})
 	\end{itemize}
 \end{itemize}
 Furthermore, the benchmarking suite provides \gls{ECDH} implemented in \gls{openssl}. Since \gls{SIDH} is a candidate to replace current Diffie-Hellman algorithms, \gls{ECDH} is intended as reference value: The objective is to compare optimized state-of-the-art \gls{ECDH} with quantum-secure \gls{SIDH}.\\
 Since each parameter set of \gls{SIDH} meets a different security level (compare \autoref{sidh_security}) \gls{ECDH} is also instantiated with different curves, each matching a \gls{SIDH} security level. The used elliptic curves are:
 \begin{enumerate}
-\item \texttt{secp256r1} (openssl: \texttt{prime256v1} \parencite{turner2009elliptic}): 128 bit security matching \texttt{p434} \parencite{brown2010sec}
-\item \texttt{secp384r1} (openssl: \texttt{secp384r1}): 192 bit security matching \texttt{p610} \parencite{brown2010sec}
-\item \texttt{secp521r1} (openssl: \texttt{secp521r1}): 256 bit security  matching \texttt{p751} \parencite{brown2010sec}
+\item \texttt{secp256r1} also known as \texttt{P-256} (\gls{openssl} implementation: \texttt{prime256v1} \parencite{turner2009elliptic}): 128 bit security matching \texttt{p434} \parencite{brown2010sec}
+\item \texttt{secp384r1} also known as \texttt{P-384} (\gls{openssl} implementation \texttt{secp384r1}): 192 bit security matching \texttt{p610} \parencite{brown2010sec}
+\item \texttt{secp521r1} also known as \texttt{P-521} (\gls{openssl} implementation \texttt{secp521r1}): 256 bit security  matching \texttt{p751} \parencite{brown2010sec}
 \end{enumerate}
 For each of these introduced implementations the application measures benchmarks. The following sections present detailed information about the internals of the suite. Besides the precise application flow (\autoref{sec:app_flow}), the internal class structure of the Python3 code is shown (\autoref{sec:app_structure}).
 
