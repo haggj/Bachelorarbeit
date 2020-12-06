@@ -142,7 +142,7 @@ Note that once an attacker was able to compromise Bobs private key, all followin
 Both presented protocols securely share a symmetric encryption key between two communicating subjects. However, there are some differences between \gls{KEM} and Diffie-Hellman. Firstly, while \glspl{KEM} transmit a shared secret from one subject to another, the calculation in the Diffie-Hellman protocol is decentralized. Thus, the shared secret will never be send through an insecure channel.\\
 Secondly, \gls{KEM} relies on a long-term asymmetric key pair which is used to encapsulate and decapsulate the randomly chosen shared secret. If the private key is compromised by an attacker, all following symmetric encrypted communication could be revealed. On the contrary, a compromised Diffie-Hellman key exchange would only affect the messages which are encrypted using the secret resulting from that single Diffie-Hellman handshake. All following \gls{DH} key exchanges are not compromised from the previously compromised exchange. Thus, \gls{DH} key exchanges might be used as the basis of a \gls{PFS} protocol.\\
 Thirdly, KEMs can be used offline: Since one subject (e.g the sending subject) chooses the secret key, data calculation and encryption can be performed without any previous communication with the receiver. Thus, no synchronization between the subjects is necessary to exchange encrypted data.
-
+\newpage
 \section{Post-Quantum Cryptography}
 This section introduces the term \textit{quantum computer} and describes its consequences on modern cryptography. In the following, a \textit{classical computer} refers to a non-quantum computer which can be simulated by a Turing machine. In contrast to \textit{classical computer} the term \textit{quantum computer} describes a machine using quantum mechanical phenomena to perform computations. It is important to note that quantum computers can simulate classical computers~\parencite{nielsen2002quantum}. In addition, classical computer are able to simulate quantum computers with exponential time overhead~\parencite{nielsen2002quantum}. Thus, classical and quantum computers can calculate the same class of functions. However, quantum computers enable operations allowing much faster computation in some cases~\parencite{nielsen2002quantum}.\\
 In the past, scientists queried whether large-scale quantum computer are physically possible. It was argued that the underlying quantum states are too fragile and hard to control~\parencite{chen2016report}. Today, quantum error correction codes are known, putting large-scale quantum computers within the realms of possibility~\parencite{lidar2013quantum}. However, it is still a major engineering challenge from a laboratory approach to a general-purpose quantum computer that involves thousands or millions of logical qubits~\parencite{chen2016report}.
@@ -166,7 +166,6 @@ Given two large primes p and q, it is easy to compute their respective product:
 n = p \cdot q
 \end{equation*}
 For a given $n$, however, it is difficult to find the prime factors $p$ and $q$. The computation of the prime factorization for a given integer $n$ is called the factorization problem~\parencite{ITSicherheit}. For large numbers $n$ no efficient algorithm for classical computers is known to solve this challenge~\parencite{ITSicherheit}. The most famous cryptographic protocol which builds upon the hardness of the factorization problem is \gls{RSA}.
-\newpage
 
 \subsection{Impact of Quantum Computers on Cryptography}
 
@@ -179,7 +178,7 @@ Peter Shor published \textit{"Algorithms for quantum computation: discrete logar
 \subsubsection{Grover's Algorithm}
 The second algorithm impacting computer security was published by Lov Grover in 1996 (\textit{"A fast quantum mechanical algorithm for database search"}, \parencite{grover1996fast}) - also referred to as \textit{Grover's algorithm}. The algorithms solves the problem of finding an element $y$ in a set $S$ (e.g. a database) where $|S| = N$. On a classical computer an algorithm solving this problem runs in $\mathcal{O}(N)$. However, \textit{Grover's algorithm} has complexity $\mathcal{O}(\sqrt{N})$~\parencite{nielsen2002quantum}.\\
 In contrast to public-key systems that rely on hard mathematical problems, symmetric encryption schemes rely in particular on the secrecy of a randomly generated key. 
-Thus, to break symmetric encryption, one can perform a brute-force attack on the symmetric key. \textit{Grover's algorithm} offers a square root speed-up on classical brute-force attacks~\parencite{mavroeidis2018impact}. Assume a randomly generated $n$-bit key. A classical brute force algorithm takes $\mathcal{O}(2^n)$ steps, which is considered to be safe for a big $n$ (e.g. $n=128$). \textit{Grover's algorithm} speeds up this attack to $\mathcal{O}(\sqrt{2^n})$ = $\mathcal{O}(2^{n/2})$ steps~\parencite{mavroeidis2018impact}. For $n=128$ this results in a security level of 64-bit ($2^{128/2}=2^{64}$)~\parencite{mavroeidis2018impact}. Note that \gls{NIST} considers a security-level of at least 112-bits as secure ~\parencite{barker2019transitioning}.  However, the complexity is still exponential and with a growing key size $n$ the security can be increased further (E.g. doubling key size $n$ is sufficient to restore previous security). Thus, \textit{Grover's algorithm} forces symmetric encryption schemes to increase their key size in order to stay secure.
+Thus, to break symmetric encryption, one can perform a brute-force attack on the symmetric key. \textit{Grover's algorithm} offers a square root speed-up on classical brute-force attacks~\parencite{mavroeidis2018impact}. Assume a randomly generated $n$-bit key. A classical brute force algorithm takes $\mathcal{O}(2^n)$ steps, which is considered to be safe for a big $n$ (e.g. $n=128$). \textit{Grover's algorithm} speeds up this attack to $\mathcal{O}(\sqrt{2^n})$ = $\mathcal{O}(2^{n/2})$ steps~\parencite{mavroeidis2018impact}. For $n=128$ this results in a security level of 64-bit ($2^{128/2}=2^{64}$)~\parencite{mavroeidis2018impact}. Note that \gls{NIST} considers a security-level of at least 112-bits as secure ~\parencite{barker2019transitioning}.  However, the complexity is still exponential and with a growing key size $n$ the security can be increased further (e.g. doubling key size $n$ is sufficient to restore previous security). Thus, \textit{Grover's algorithm} forces symmetric encryption schemes to increase their key size in order to stay secure.
 \\\\
 Summing up, quantum computers make use of quantum mechanical phenomena in order to solve mathematical problems which are assumed to be difficult for classical computers. As a result large-scale quantum computers might break many algorithms of modern \textit{asymmetric} cryptography and enforce increased key sizes for \textit{symmetric} encryption schemes. The following table form the \gls{NIST} \textit{"Report on Post-Quantum Cryptography"} \parencite{chen2016report} demonstrates the impact of quantum computers on modern encryption schemes:
 
@@ -226,8 +225,8 @@ Hash-based signatures refer to the construction of digital signatures schemes ba
 The initially developed One-Time Signatures have the downside that a new public key pair is needed for each signature~\parencite{becker2008merkle}. In 1979, Merkle introduced the Merkle Signature Scheme (\gls{MSS}) which uses one public key for multiple signatures~\parencite{merkle1979secrecy}. Further improvements of \gls{MSS} introduced public keys usable for $2^{80}$ signatures. However, this also leads to longer signature sizes~\parencite{becker2008merkle}.
 
 \section{Isogeny-based Cryptography} \label{sec:isogeny-based_crypto}
-Isogeny-based cryptography was proposed in 2011 as a new cryptographic system that might resists quantum computing~\parencite{jao2011towards}. Besides the publication describing isogeny-based cryptography, the authors also provided a reference implementation of a \gls{PKE} and a \gls{KEM} based on isogenies. This implementation is called \textit{\gls{SIKE}}~\parencite{sike2020spec}. Isogeny-based cryptography benefits from small key sizes compared to other post-quantum cryptography classes, however, their performance is comparatively slow~\parencite{sike2020spec}. The security of these primitives is based on finding isogenies between supersingular elliptic curves.\\
-In the following, the problem is firstly roughly illustrated. It is not indented to provide exact mathematical details about isogeny-based cryptography, since that would be beyond the scope of this thesis. However, one might become a intuition for supersingular isogenies. Subsequently, the central component of isogeny-based cryptography - namely the Supersingular Isogeny Diffie-Hellman (\gls{SIDH}) - is described. Finally, details of the reference implementation \gls{SIKE} are given and the security of \gls{SIDH} is considered.
+Isogeny-based cryptography was proposed in 2011 as a new cryptographic system that might resists quantum computing~\parencite{jao2011towards}. Besides describing isogeny-based cryptography, the authors also provided a reference implementation for a \gls{PKE} and a \gls{KEM} based on isogenies. This implementation is called \textit{\gls{SIKE}}~\parencite{sike2020spec}. Isogeny-based cryptography benefits from small key sizes compared to other post-quantum cryptography classes, however, their performance is comparatively slow~\parencite{sike2020spec}. The security of these primitives is based on finding isogenies between supersingular elliptic curves.\\
+In the following, the problem is firstly roughly illustrated. It is not indented to provide exact mathematical details about isogeny-based cryptography, since that would be beyond the scope of this thesis. However, one might become an intuition for supersingular isogenies. Subsequently, the central component of isogeny-based cryptography - namely the Supersingular Isogeny Diffie-Hellman (\gls{SIDH}) - is described. Finally, details of the reference implementation \gls{SIKE} are given and the security of \gls{SIDH} is considered.
 
 \subsection{Mathematics}
 This section is adopted from~\citetitle{urbanik2017friendly}~\parencite{urbanik2017friendly} and~\citetitle{costello2019supersingular}~\parencite{costello2019supersingular}.\\
@@ -241,7 +240,7 @@ Supersingular elliptic curves are a special type of elliptic curves having prope
 The idea behind isogeny-based cryptography might be illustrated as follows:
 
 \begin{enumerate}
-\item Start with a known curve $E$ and build a isogeny to a arbitrary reachable curve $E_A$.
+\item Start with a known curve $E$ and build an isogeny to an arbitrary reachable curve $E_A$.
 \item This yields the isogeny $\phi_A: E \to E_A$ which is used as private key.
 \item The curve $E_A$ is used as part of the public key.
 \end{enumerate}
@@ -269,7 +268,7 @@ Starting point of \gls{SIDH} is a publicly known supersingular elliptic curve E.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{background/sidh}
-  \caption[Supersingular Isogeny Diffie-Hellman diagram]{Supersingular Isogeny Diffie-Hellman procedure - both paths lead to the same result $E_{AB}$. Note the different isogenies $\phi_{A}'$ and $\phi_{B}'$ that are applied in each second step of the diagram. The reason for this lies in the mathematics of supersingular isogenies: $\phi_{A} \phi_{B} \neq \phi_{B} \phi_{A}$. In order to construct $\phi_{X}'$ or $\phi_{B}'$ the public key of each communication partner provides additional information besides the curve $E_A$ or $E_B$.~\parencite{costello2016gentle}}
+  \caption[Supersingular Isogeny Diffie-Hellman diagram]{Supersingular Isogeny Diffie-Hellman procedure - both paths lead to the same result $E_{AB}$. Note the different isogenies $\phi_{A}'$ and $\phi_{B}'$ that are applied in each second step of the diagram. The reason for this lies in the mathematics of supersingular isogenies. In order to construct $\phi_{X}'$ or $\phi_{B}'$ the public key of each communication partner provides additional information besides the curve $E_A$ or $E_B$.~\parencite{costello2016gentle}}
   \label{fig:sidh}
 \end{figure}
 
@@ -317,7 +316,7 @@ Note that the function $F$ used in \textit{\gls{Enc}} and \textit{\gls{Dec}} is 
 \end{figure}
 
 \subsubsection{Isogeny-based \gls{KEM}}
-The construciton of the isogeny-based key encapsulation mechanism (\gls{KEM}, \autoref{fig:sike-kem}) consists of three algorithms. The authors of \gls{SIKE} state to build a \textit{IND-CCA} \gls{KEM} from their \gls{PKE} \parencite{sike2020spec} (by applying a slight modification of the transformation published by Hofheinz, Hüvelsmann and Klitz \parencite{cryptoeprint:2017:604}). This essentially means, that an attacker can not distinguish two ciphertexts created by the \gls{KEM} decryption function. The following algorithms describe how the isogeny-based \gls{KEM} is created from the isogeny-based \gls{PKE} described above. The goal of this construction is to build an \textit{IND-CCA} \gls{KEM} (see \parencite{cryptoeprint:2017:604} for details).
+The construction of the isogeny-based key encapsulation mechanism (\gls{KEM}, \autoref{fig:sike-kem}) consists of three algorithms. The authors of \gls{SIKE} state to build a \textit{IND-CCA} \gls{KEM} from their \gls{PKE} \parencite{sike2020spec} (by applying a slight modification of the transformation published by Hofheinz, Hüvelsmann and Klitz \parencite{cryptoeprint:2017:604}). This essentially means, that an attacker can not distinguish two ciphertexts created by the \gls{KEM} encryption function \textit{Encaps}. The following algorithms describe how the isogeny-based \gls{KEM} is created from the isogeny-based \gls{PKE} described above. The goal of this construction is to build an \textit{IND-CCA} \gls{KEM} (see \parencite{cryptoeprint:2017:604} for details).
 \begin{enumerate}
 \item \textit{KeyGen} generates a key pair ($sk_A$,$pk_A$) and a secret \textit{s}. The private key $sk$ and the secret $s$ are chosen at random. The public key is derived from the random private key using \textit{isogen}.
 \item \textit{Encaps} takes a given public key $pk_B$ as input and calculates a secret to share named \textit{K}. Moreover, the function returns a ciphertext \textit{c} that will be forwarded to the owner of the public key.
@@ -329,19 +328,36 @@ The construciton of the isogeny-based key encapsulation mechanism (\gls{KEM}, \a
   \caption[Isogeny-based \gls{KEM}]
   {Isogeny-based key encapsulation mechanism (\gls{KEM}).} \label{fig:sike-kem}
 \end{figure}
-
 \subsection{Security}\label{sidh_security}
 The security of isogeny-based cryptography is based on the hardness of the \textit{\gls{SIDH} problem}: Given two supersingular elliptic curves $E$ and $E'$, find an isogeny between them~\parencite{sike2020spec}. 
 \\
-The \gls{SIKE} reference implementation proposes different parameter sets, each supposing to ensure a \gls{NIST} defined security level. These \gls{NIST} defined security levels are:
-\begin{enumerate}[{label=Level \arabic*:},align=left]
-\itemsep0em 
-	\item Any attack breaking this security level must require resources comparable to perform a key search on a 128-bit key (e.g. AES128).
-	\item Any attack breaking this security level must require resources comparable to perform a collision search on a 256-bit hash function (e.g. SHA256).
-	\item Any attack breaking this security level must require resources comparable to perform a key search on a 192-bit key (e.g. AES192).
-	\item Any attack breaking this security level must require resources comparable to perform a collision search search on a 384-bit hash function (e.g. SHA384).
-	\item Any attack breaking this security level must require resources comparable to perform a key search on a 256-bit key (e.g. AES256).
-\end{enumerate}
+The \gls{SIKE} reference implementation proposes different parameter sets, each supposing to ensure a \gls{NIST} defined security level. These \gls{NIST} defined security levels are:\\
+\renewcommand\arraystretch{2}
+\begin{tabular}{ | L{2cm} | L{13cm} | }  
+\hline
+    \textbf{Level 1}
+    &
+    Any attack breaking this security level must require resources comparable to perform a key search on a 128-bit key (e.g. AES128). \\
+\hline
+    \textbf{Level 2}
+    &
+    Any attack breaking this security level must require resources comparable to perform a collision search on a 256-bit hash function (e.g. SHA256). \\
+\hline
+    \textbf{Level 3}
+    &
+    Any attack breaking this security level must require resources comparable to perform a key search on a 192-bit key (e.g. AES192). \\
+\hline
+    \textbf{Level 4}
+    &
+    Any attack breaking this security level must require resources comparable to perform a collision search search on a 384-bit hash function (e.g. SHA384). \\
+\hline
+    \textbf{Level 5}
+    &
+    Any attack breaking this security level must require resources comparable to perform a key search on a 256-bit key (e.g. AES256). \\
+\hline
+\end{tabular}
+\renewcommand\arraystretch{1}
+\newline
 The proposed parameter sets of \gls{SIKE} are named after the bit length of the underlying primes $p$. This prime $p$ is part of the parameter set itself. See \parencite{sike2020spec} for the detailed definition of each parameter set. Note that the authors of SIKE did not propose a parameter set supposed to satisfy \gls{NIST} security level 4 (SHA384).
 
 \begin{itemize}

@@ -6,7 +6,7 @@ In the following, some algorithms are described as \textit{compressed}. These co
 \section{\gls{SIKE}}
 \gls{SIKE} stands for \textbf{S}upersingular \textbf{I}sogeny \textbf{K}ey \textbf{E}ncapsulation. It is the reference implementation of the first proposed isogeny-based cryptographic primitives \parencite{jao2011towards}. Today, \gls{SIKE} is a \gls{NIST} candidate for quantum-resistant \textit{"Public-key Encryption and Key-establishment Algorithms"}. It is developed by a cooperation of researchers, lead by David Jao \parencite{sike2020spec}.
 \subsubsection{SIKE vs. PQCrypto-SIDH}\label{existing:sike_vs_pqcrypto}
-The \gls{SIKE} implementation is highly related to the \gls{SIDH} source code of Microsoft available on Github\footnote{https://github.com/microsoft/PQCrypto-SIDH}, called \gls{PQCrypto-SIDH}. At the beginning of this thesis both implementations were considered as different implementations. Since some researches of \gls{SIKE} also work for Microsoft, the similarities of both APIs seemed to be reasonable. After contacting the \gls{SIKE} team due to compilation issues of their NIST Round 3 submission, David Jao stated that \gls{SIKE} uses the \textit{"[G]it repository hosted by Microsoft at
+The \gls{SIKE} implementation is highly related to the \gls{SIDH} source code of Microsoft available on Github\footnote{\url{https://github.com/microsoft/PQCrypto-SIDH}}, called \gls{PQCrypto-SIDH}. At the beginning of this thesis both implementations were considered as different implementations. Since some researches of \gls{SIKE} also work for Microsoft, the similarities of both APIs seemed to be reasonable. After contacting the \gls{SIKE} team due to compilation issues of their NIST Round 3 submission, David Jao stated that \gls{SIKE} uses the \textit{"[G]it repository hosted by Microsoft at
 https://github.com/Microsoft/PQCrypto-SIDH [...] as the source
 repository [...] to build the NIST package."} (personal communication, November 17, 2020). This circumstance is unfortunately not documented by \gls{SIKE}. This communication took place after the major benchmarks of this thesis -- include \gls{PQCrypto-SIDH} -- were measured. Thus, the developed benchmarking suite still contains this implementation and the benchmarks are also appended to this thesis. However, this thesis treats both libraries as equal (if not stated otherwise) since both are based on the same source code.
 \\\\
@@ -22,11 +22,11 @@ repository [...] to build the NIST package."} (personal communication, November 
 All of these implementations can be run with the following parameter sets: \texttt{p434}, \texttt{p503}, \texttt{p610} and \texttt{p751}. \gls{SIKE} asserts to countermeasure timing and cache attacks by implementing constant time cryptography~\parencite{sike2020spec}.
 
 \subsubsection{Benchmarked version}
-The \gls{SIKE} software release used in this thesis is the official \href{https://csrc.nist.gov/CSRC/media/Projects/Post-Quantum-Cryptography/documents/round-2/submissions/SIKE-Round2.zip}{Round 2 submission package}\footnote{https://csrc.nist.gov/CSRC/media/Projects/Post-Quantum-Cryptography/documents/round-2/submissions/SIKE-Round2.zip}. The latest release (Round 3 package) does not support native SIDH compilation as David Jao stated in private communication. Thus, updating to this release is not sufficient. In terms of code optimization the Round 3 package introduces improved algorithms for compressing keys \parencite{sike2020spec}. The differences of these improvements are analyzed using the benchmarks of the above mentioned library \gls{PQCrypto-SIDH}\footnote{commit: \texttt{1f8292d08570fe83c518797b6e103eb8a9f5e6dc}}, which contains the improved algorithms.
+The \gls{SIKE} software release used in this thesis is the official \href{https://csrc.nist.gov/CSRC/media/Projects/Post-Quantum-Cryptography/documents/round-2/submissions/SIKE-Round2.zip}{Round 2 submission package}\footnote{\url{https://csrc.nist.gov/CSRC/media/Projects/Post-Quantum-Cryptography/documents/round-2/submissions/SIKE-Round2.zip}}. The latest release (Round 3 package) does not support native SIDH compilation as David Jao stated in private communication. Thus, updating to this release is not sufficient. In terms of code optimization the Round 3 package introduces improved algorithms for compressing keys \parencite{sike2020spec}. The differences of these improvements are analyzed using the benchmarks of the above mentioned library \gls{PQCrypto-SIDH}\footnote{Commit: \texttt{1f8292d08570fe83c518797b6e103eb8a9f5e6dc}}, which contains the improved algorithms.
 
 \subsection{\gls{SIKE} API}
 For all implementations and all parameter sets the API is the same. Therefore, during compilation one need to include the correct subfolders (namely \texttt{SIKEp434}, \texttt{SIKEp503}, \texttt{SIKEp610} and \texttt{SIKEp751}) to initialize \gls{SIKE} with a specific parameter set.
-
+\newpage
 \subsubsection{Key generation}
 
 The key generation of the \gls{SIKE} API consists of the following functions:
@@ -163,7 +163,7 @@ int EphemeralSecretAgreement_B(const unsigned char* PrivateKey_B,
 \end{lstlisting}
 \texttt{EphemeralSecretAgreement\_A} uses Alice's \texttt{PrivateKey\_A} and Bob's \texttt{PublicKey\_B} to produce a shared secret \texttt{SharedSecret\_A} between Alice and Bob. All compressed versions of \gls{SIKE} perform a public key decompression before the shared secret is computed. If successful, this function returns 0. \texttt{EphemeralSecretAgreement\_B} follows the same principles in order to allow Bob to compute the shared secret.\\
 Both functions are an implementation of \textit{isoex} introduced in the previous chapter (see \autoref{sec:sidh_implementation} for details).
-
+\newpage
 \section{\gls{CIRCL}} \label{sec:circl_description}
 
 \gls{CIRCL} (\textbf{C}loudflare \textbf{I}nteroperable, \textbf{R}eusable \textbf{C}ryptographic \textbf{L}ibrary) is a collection of cryptographic primitives developed by Cloudflare ~\parencite{circl2020github}. \gls{CIRCL} is written in Go and implements some quantum-secure algorithms like \gls{SIDH} and an isogeny-based \gls{KEM}. Note that the GO compiler outputs a native binary.  Cloudflare does not guarantee for any security within their library. Furthermore, the isogeny-based cryptographic primitives are adopted from the official \gls{SIKE} implementation. The following implementation optimizations are stated to be available:
@@ -297,8 +297,8 @@ In order to create the shared secrets for Alice and Bob, the initially created p
 The code above firstly allocates the memory for a shared secret and finally generates the shared secret between Alice and Bob.
 \\
 \section{SIKE for Java}
-\textit{SIKE for Java} implements experimental supersingular isogeny cryptography in Java \parencite{SikeForJava2020github}. The library is developed by \textit{Wutra} in cooperation with \textit{Raiffeisen Bank International}. Besides a slow reference implementation which focuses on code readability, \textit{SIKE for Java} implements a optimized variant that focuses on performance and security. The library implements isogeny based \gls{PKE}, \gls{KEM} and \gls{SIDH} and supports the following parameter sets: \texttt{p434}, \texttt{p503}, \texttt{p610} and \texttt{p751}.\\
-Since Java applications run via the Java Virtual Machine (\gls{JVM})and are compiled during execution (Just-in-time compiler), the execution of Java programs is significantly slower than  executing C or GO programs, which compile the source code before the execution takes place (Ahead-of-time compiler). Thus, comparing SIDH implementations between Java and C/GO does not produce meaningful results. For that reason \textit{SIKE for Java} will not be considered for the benchmarks in this work.
+\textit{SIKE for Java} implements experimental supersingular isogeny cryptography in Java \parencite{SikeForJava2020github}. The library is developed by \textit{Wutra} in cooperation with \textit{Raiffeisen Bank International}. Besides a slow reference implementation which focuses on code readability, \textit{SIKE for Java} implements an optimized variant that focuses on performance and security. The library implements isogeny based \gls{PKE}, \gls{KEM} and \gls{SIDH} and supports the following parameter sets: \texttt{p434}, \texttt{p503}, \texttt{p610} and \texttt{p751}.\\
+Since Java applications run via the Java Virtual Machine (\gls{JVM}) and are compiled during execution (Just-in-time compiler), the execution of Java programs is significantly slower than  executing C or GO programs, which compile the source code before the execution takes place (Ahead-of-time compiler). Thus, comparing SIDH implementations between Java and C/GO does not produce meaningful results. For that reason \textit{SIKE for Java} will not be considered for the benchmarks in this work.
 
 \subsection{API of SIKE for Java}
 
@@ -322,7 +322,7 @@ The API of \textit{SIKE for Java} for a \gls{SIDH} key exchange is described in 
             \item Implementation type (optimized or reference)
         \end{itemize} & 
         \begin{itemize}[noitemsep, leftmargin=*]
-            \item Returns a object of type \texttt{SikeParamPXXX} representing the used parameter set
+            \item Returns an object of type \texttt{SikeParamPXXX} representing the used parameter set
         \end{itemize} \\
         \hline
         
@@ -331,7 +331,7 @@ The API of \textit{SIKE for Java} for a \gls{SIDH} key exchange is described in 
             \item Parameter object of type \texttt{SikeParamPXXX}
         \end{itemize} & 
         \begin{itemize}[noitemsep, leftmargin=*]
-            \item Returns a object of type \texttt{KeyGenerator} implementing a key generator
+            \item Returns an object of type \texttt{KeyGenerator} implementing a key generator
         \end{itemize} \\
         \hline
         
@@ -340,7 +340,7 @@ The API of \textit{SIKE for Java} for a \gls{SIDH} key exchange is described in 
             \item Parameter object of type \texttt{SikeParamPXXX}
         \end{itemize} & 
         \begin{itemize}[noitemsep, leftmargin=*]
-            \item Returns a object of type \texttt{Sidh} implementing the secret key computation
+            \item Returns an object of type \texttt{Sidh} implementing the secret key computation
         \end{itemize} \\
         \hline
         
@@ -358,7 +358,7 @@ KeyGenerator keyGenerator = new KeyGenerator(sikeParam);
 // Prepare SIDH object
 Sidh sidh = new Sidh(sikeParam);
 \end{lstlisting}
-First of all, the parameter set and the desired implementation is defined by creating a object \texttt{sikeParam} of type \texttt{SikeParam} (this is a generalization of type \texttt{SikeParamXXX}). This object is then used to initialize a object of type \texttt{KeyGenerator} (which is later used to generate \gls{SIDH} keys) and to initialize a object of type \texttt{Sidh} (which is later used to compute shared secrets).\\
+First of all, the parameter set and the desired implementation is defined by creating an object \texttt{sikeParam} of type \texttt{SikeParam} (this is a generalization of type \texttt{SikeParamXXX}). This object is then used to initialize an object of type \texttt{KeyGenerator} (which is later used to generate \gls{SIDH} keys) and to initialize an object of type \texttt{Sidh} (which is later used to compute shared secrets).\\
 
 \subsubsection{Key generation}
 
@@ -375,7 +375,7 @@ First of all, the parameter set and the desired implementation is defined by cre
             \item Party (Alice or Bob)
         \end{itemize} & 
         \begin{itemize}[noitemsep, leftmargin=*]
-            \item Returns a object of type \texttt{KeyPair} containing a random private key and the corresponding public key
+            \item Returns an object of type \texttt{KeyPair} containing a random private key and the corresponding public key
         \end{itemize} \\
 		\hline
         
@@ -389,7 +389,7 @@ KeyPair keyPairA = keyGenerator.generateKeyPair(Party.ALICE);
 // Initializing key pair for Bob
 KeyPair keyPairB = keyGenerator.generateKeyPair(Party.BOB);
 \end{lstlisting}
-The previously generated object \texttt{keyGenerator} is used to generate key pairs for Alice and Bob by passing the appropriate party as parameter. Internally this function first generates a random private key. The following computation of the corresponding public key is a implementation of \textit{isogen} described in \autoref{sec:sidh_implementation}.\\
+The previously generated object \texttt{keyGenerator} is used to generate key pairs for Alice and Bob by passing the appropriate party as parameter. Internally this function first generates a random private key. The following computation of the corresponding public key is an implementation of \textit{isogen} described in \autoref{sec:sidh_implementation}.\\
 The returned object of type \texttt{KeyPair} is later used to access the private and public key.
 \\
 \subsubsection{Secret generation}
@@ -409,7 +409,7 @@ The returned object of type \texttt{KeyPair} is later used to access the private
             \item Public key of the not chosen party
         \end{itemize} & 
         \begin{itemize}[noitemsep, leftmargin=*]
-            \item Returns a object of type \texttt{Fp2Element} representing the shared secret
+            \item Returns an object of type \texttt{Fp2Element} representing the shared secret
         \end{itemize} \\
 		\hline
         
@@ -430,7 +430,7 @@ Fp2Element secretB = sidh.generateSharedSecret(Party.BOB,
 In order to generate the shared secret between Alice and Bob, both parties need to use the previously created \texttt{Sidh} object to call \texttt{Sidh.generateSharedSecret}. Each party passes the own private key and the public key of the other party in order to compute the shared secret of type \texttt{Fp2Element}. This function is an implementation of \textit{isoex} described in \autoref{sec:sidh_implementation}.\\
 
 \section{Overview}
-
+\renewcommand\arraystretch{1}
 \begin{table}[H]
   \centering
   \begin{tabular}{|K{3cm}|K{4cm}|K{4cm}|K{4cm}|}
@@ -460,3 +460,4 @@ In order to generate the shared secret between Alice and Bob, both parties need 
   \end{tabular}
    \caption[Overview over existing \gls{SIDH} implementations]{Overview over existing \gls{SIDH} implementations.}\label{tab:existing_sidh}
 \end{table}
+\renewcommand\arraystretch{1}

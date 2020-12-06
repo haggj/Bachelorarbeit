@@ -78,7 +78,7 @@ The summary for \textit{x64 optimized} \gls{SIDH} implementations is listed in \
 {\cellcolor{darkgray!10}}\texttt{p751}                                     & {\cellcolor{green}}1 & 1.81                                                                                        & 1.35   \\
 \hline
 \end{tabular}
-\caption[Comparing instructions of \textit{x64 optimized} \gls{SIDH} implementations]{Relative comparison of executes instructions regarding \textit{x64 optimized} \gls{SIDH} implementations.}
+\caption[Comparing instructions of \textit{x64 optimized} \gls{SIDH} implementations]{Relative comparison of executed instructions regarding \textit{x64 optimized} \gls{SIDH} implementations.}
 \label{tab:conclusion_x64}
 \end{table}
 
@@ -151,11 +151,11 @@ While \gls{ECDH} is faster in terms of executed instruction, the library also re
 \label{tab:conclusion_ecdh_sidh_mem}
 \end{table}
 
-\section{Limitations}\label{sec:conclusion_limits}
+\section{Limitations of this thesis}\label{sec:conclusion_limits}
 
-This section lists limitations and sapproaches for future work in the context of this thesis.
+This section lists limitations and approaches for future work in the context of this thesis.
 \\
-Firstly, the correctness of the results measured by the benchmarking suite is based on the tools \textit{massif} and \textit{callgrind} provided by \texttt{valgrind}. Any disruptions within these tools directly affect all benchmarks.
+Firstly, the correctness of the results measured by the benchmarking suite are based on the tools \textit{massif} and \textit{callgrind} provided by \texttt{valgrind}. Any disruptions within these tools directly affect all benchmarks.
 \\
 Secondly, the integration process to generate benchmarks for a new implementation could be further improved. Up to now, the process described in \ref{sec:benchmarks_details_add} is time-consuming and error-prone. This could be improved e.g. by auto detecting new sub folders containing appropriate Makefiles. Moreover, the generation of different output graphs can currently only be achieved by manually changing the source code of the benchmarking suite. Appropriate command line arguments for the benchmarking suite might increase usability.
 \\

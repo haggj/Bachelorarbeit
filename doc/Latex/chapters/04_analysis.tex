@@ -38,7 +38,7 @@ Before drawing any differences between libraries or implementations, this sectio
 	\hline
 	\end{tabular}
 	\caption[NIST security levels with SIDH and ECDH parameters]{NIST security levels with SIDH and ECDH parameters.}
-	\label{tab:benchmarks_Sike_x64}
+	\label{tab:matching_security_levels}
 \end{table}
 This section concludes with a short summary of all identified findings (\autoref{sec:findings_sidh_sec_levels}).
 
@@ -47,7 +47,7 @@ This section evaluates the performance of the different parameter sets implement
 \\\\
 \autoref{fig:results_all_curves_sike} shows the absolute instruction counts for \texttt{SIKE\_x64} initialized with all available parameter sets. While \texttt{p434} executes 18 million instructions for \textit{KeygenA}, \texttt{p751} requires 67 million operations ($3.7$ times more). Roughly the same can be observed regarding \textit{KeygenB}, \textit{SecretA} and \textit{SecretB}. The other parameter sets \texttt{p503} and \texttt{p610} almost lie on a linear line between the highest and lowest security class. At the same time the \gls{ECDH} implementations are clearly faster while providing the same security levels: \texttt{Secp256r1} processes in total 1.7 million instructions while \texttt{p434} executes 69 million operations (40.6 times more) for a single \gls{SIDH} key exchange. \texttt{Secp384r1} (40 million) executes 4.3 times more instructions than \texttt{p610} (170 million) and \texttt{secp521r1} (96 million) executes 2.6 times more instructions than \texttt{p751} (253 million).\\
 The measured peak memory consumption is for \texttt{p751} the highest ($13.3$ \gls{kB}) and for \texttt{p434} the lowest ($8.2$ \gls{kB}) among \gls{SIDH} parameters. Again, the other parameter sets can be found in between of these boundary values (\autoref{fig:results_all_curves_sike_mem}). Moreover, one can observe an increased memory consumption of \gls{ECDH} parameters: Compared to \texttt{p434}, the elliptic curve parameter set \texttt{secp256r1} demands 4 $kB$ more memory. \texttt{Secp384r1} and \texttt{secp521r1} allocate 3 $kB$ additional memory compared to their appropriate \gls{SIDH} parameters, respectively.\\\\
-This analysis clearly demonstrates that an increased security level of \gls{SIDH} corresponds with a increased claim of resources. Whereas the difference in terms of memory consumption is relatively small, the execution times differ noticeably: On average and compared to \texttt{p434} the parameter set
+This analysis clearly demonstrates that an increased security level of \gls{SIDH} corresponds with an increased claim of resources. Whereas the difference in terms of memory consumption is relatively small, the execution times differ noticeably: On average and compared to \texttt{p434} the parameter set
 \begin{itemize}
 \itemsep0em 
 \item \texttt{p503} executes $1.4$ times more instructions
@@ -59,7 +59,7 @@ While the \gls{ECDH} parameter sets enable faster computation times for a single
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{benchmarks/compare_sidh_parameters/sike/Sike_x64}
-  \caption[Overall instructions for all parameter sets via \texttt{SIKE\_x64} compared to \texttt{ECDH}]
+  \caption[Instructions for all parameter sets via \texttt{SIKE\_x64}]
   {Overall instructions for \texttt{SIKE\_x64} initiated with all possible parameter sets compared to appropriate \texttt{ECDH} parameter sets.}
   \label{fig:results_all_curves_sike}
 \end{figure}
@@ -67,7 +67,7 @@ While the \gls{ECDH} parameter sets enable faster computation times for a single
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{benchmarks/compare_sidh_parameters/sike/Sike_x64_mem}
-  \caption[Maximum memory consumption for all parameter sets via \texttt{SIKE\_x64}  compared to \texttt{ECDH}]
+  \caption[Memory consumption for all parameter sets via \texttt{SIKE\_x64}]
   {Maximum memory consumption in kilobytes of \texttt{SIKE\_x64} initiated with all possible parameter sets compared to appropriate \texttt{ECDH} parameter sets.}
   \label{fig:results_all_curves_sike_mem}
 \end{figure}
@@ -78,7 +78,7 @@ This section evaluates the performance of the different parameter sets implement
 When comparing \gls{CIRCL} to \gls{ECDH} a significant speed difference can be observed: \texttt{Secp256r1} executes in total 1.7 million instructions (95 times less than \texttt{p434}) and texttt{Secp521r1} executes in total 96 million instructions (4 times less than \texttt{p751}). Thus, \gls{ECDH} is clearly faster for both parameter sets.\\
 The analysis of the allocated memory of the different parameter sets reveals a dynamic allocation behavior of the \gls{CIRCL} library (\autoref{fig:results_all_curves_circl_mem}). For each parameter set the peak memory consumption varies between multiple measurements (see the standard deviation in the graph). The claimed memory for the different parameter sets is almost equal: \texttt{p434} allocates on average about 22 \gls{kB} memory, \texttt{p503} about 21.6 \gls{kB} and \texttt{p751} about 23.1 \gls{kB}. At the same time \gls{CIRCL} allocates more memory than \gls{ECDH}: \texttt{Secp256r1} uses 12.2 \gls{kB} memory  and \texttt{Secp521r1} allocates 16.3 \gls{kB}.\\
 
-Increased security levels of \gls{SIDH} corresponds with a increased amount of executed instructions. The remarkable increase between \texttt{p434} and \texttt{p710}, however, can also be observed for the \gls{SIKE} library (see \autoref{sec:levels_sike}). Compared to \texttt{p434} the parameter set
+Increased security levels of \gls{SIDH} corresponds with an increased amount of executed instructions. The remarkable increase between \texttt{p434} and \texttt{p710}, however, can also be observed for the \gls{SIKE} library (see \autoref{sec:levels_sike}). Compared to \texttt{p434} the parameter set
 \begin{itemize}
 \itemsep0em 
 \item \texttt{p503} executes on average $1.1$ times more instructions
@@ -91,7 +91,7 @@ The observed memory allocations by \gls{CIRCL} marginally differ for different p
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{benchmarks/compare_sidh_parameters/circl/CIRCL_x64}
-  \caption[Overall instructions for all parameter sets via \texttt{CIRCL\_x64} compared to \texttt{ECDH}]
+  \caption[Instructions for all parameter sets via \texttt{CIRCL\_x64}]
   {Overall instructions for \texttt{CIRCL\_x64} initiated with all possible parameter sets compared to appropriate \texttt{ECDH} parameter sets.}
   \label{fig:results_all_curves_circl}
 \end{figure}
@@ -99,7 +99,7 @@ The observed memory allocations by \gls{CIRCL} marginally differ for different p
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{benchmarks/compare_sidh_parameters/circl/CIRCL_x64_mem}
-  \caption[Maximum memory consumption for all parameter sets via \texttt{CIRCL\_x64}  compared to \texttt{ECDH}]
+  \caption[Memory consumption for all parameter sets via \texttt{CIRCL\_x64}]
   {Maximum memory consumption in kilobytes of \texttt{CIRCL\_x64} initiated with all possible parameter sets compared to appropriate \texttt{ECDH} parameter sets.}
   \label{fig:results_all_curves_circl_mem}
 \end{figure}
@@ -125,7 +125,7 @@ Thus, the increased speed involves the allocation of more memory -- a time-memor
 \gls{SIKE} provides \textit{compressed} variants for both optimized implementations:\\ \texttt{SIKE\_Generic\_Compressed} and \texttt{SIKE\_x64\_Compressed}.
 Both \textit{compressed} versions also contain \textit{optimized} code. Their key sizes, however, are reduced compared to \textit{non-compressed} variants. In order to reduce the key sizes these algorithms implement functions to compress and to decompress cryptographic keys.
 \\\\
-\autoref{fig:results_sike} clearly shows a difference between \textit{optimized} and \textit{compressed} versions of \gls{SIKE} in terms of absolute instructions. \textit{Compressed} versions roughly claim twice as much operations ($\sim$ 500 million for \texttt{SIKE\_Generic\_Compressed} and $\sim$ 45 million \texttt{SIKE\_x64\_Compressed}) to generate a key pair as \textit{non-compressed} variants ($\sim$ 200 million for \texttt{SIKE\_Generic} and $\sim$ 19 million \texttt{SIKE\_x64}). Additionally, the generation of the shared secret using \textit{compressed} implementations is slightly slower. For all \textit{compressed} versions the executed instructions vary (see the standard deviation) because the compression of the public keys depends on a randomly generated key, which is different for each \gls{SIDH} key exchange.\\
+\autoref{fig:results_sike} clearly shows a difference between \textit{optimized} and \textit{compressed} versions of \gls{SIKE} in terms of absolute instructions. \textit{Compressed} versions roughly claim about twice as much operations ($\sim$ 500 million for \texttt{SIKE\_Generic\_Compressed} and $\sim$ 45 million \texttt{SIKE\_x64\_Compressed}) to generate a key pair as \textit{non-compressed} variants ($\sim$ 200 million for \texttt{SIKE\_Generic} and $\sim$ 19 million \texttt{SIKE\_x64}). Additionally, the generation of the shared secret using \textit{compressed} implementations is slightly slower. For all \textit{compressed} versions the executed instructions vary (see the standard deviation) because the compression of the public keys depends on a randomly generated key, which is different for each \gls{SIDH} key exchange.\\
 Besides execution times, \autoref{fig:results_sike_mem} also compares the memory consumption of \textit{compressed} implementations. As stated by the authors of \gls{SIKE}, \textit{compressed} variants allocate more memory~\parencite{sike2020spec}: The peak memory allocation is with 17 kilobytes (\texttt{SIKE\_Generic\_Compressed}) and 19.2 kilobytes (\texttt{SIKE\_x64\_Compressed}) twice as high as for the \textit{non-compressed} versions. The measured peak memory consumption is constant for \textit{compressed} implementations and does not vary.
 \\\\
 This shows that \textit{optimized} versions have reduced execution times as well as decreased memory consumption compared to \textit{compressed} implementations. Roughly speaking, \textit{compressed} versions demand twice as much resources than \textit{optimized} variants, while decreasing the effective key sizes (see \autoref{sec:analysis_security_keys} for details). Since the key compression and decompression force additional steps during a \gls{SIDH} key exchange, the increased claim of resources is reasonable.
@@ -135,7 +135,7 @@ This shows that \textit{optimized} versions have reduced execution times as well
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{benchmarks/compare_sike/compressed/sike}
-  \caption[Overall instructions \gls{SIKE}]
+  \caption[Instructions  of \gls{SIKE} implementations]
   {Overall instructions for all \gls{SIKE} implementations initialized with \texttt{p434}. \gls{ECDH} is shown as reference value using parameter \texttt{secp256r1}.}
   \label{fig:results_sike}
 \end{figure}
@@ -143,7 +143,7 @@ This shows that \textit{optimized} versions have reduced execution times as well
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{benchmarks/compare_sike/compressed/sike_mem}
-  \caption[Maximum memory consumption \gls{SIKE}]
+  \caption[Memory consumption of \gls{SIKE} implementations]
   {Maximum memory consumption in kilobytes or all \gls{SIKE} implementations initialized with \texttt{p434}. \gls{ECDH} is shown as reference value using parameter \texttt{secp256r1}.}
   \label{fig:results_sike_mem}
 \end{figure}
@@ -165,7 +165,7 @@ Both implementations hardly differ in their performance benchmarks. This analysi
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{benchmarks/compare_sike/compare_pqc_sike/optimized/434}
-  \caption[Overall instructions for optimized implementations of \gls{SIKE} and \gls{PQCrypto-SIDH} using \texttt{p434}]
+  \caption[Instructions of optimized \gls{SIKE} and \gls{PQCrypto-SIDH} implementations]
   {Overall instructions for optimized implementations of \gls{SIKE} and \gls{PQCrypto-SIDH} using \texttt{p434} compared to \gls{ECDH} via \texttt{secp256r1}.}
   \label{fig:results_sike_pqc_opt_434}
 \end{figure}
@@ -173,7 +173,7 @@ Both implementations hardly differ in their performance benchmarks. This analysi
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{benchmarks/compare_sike/compare_pqc_sike/optimized/434_mem}
-  \caption[Maximum memory consumption for optimized implementations of \gls{SIKE} and \gls{PQCrypto-SIDH} using \texttt{p434}]
+  \caption[Memory consumption of optimized \gls{SIKE} and \gls{PQCrypto-SIDH} implementations]
   {Maximum memory consumption in kilobytes for optimized implementations of \gls{SIKE} and \gls{PQCrypto-SIDH} using \texttt{p434} compared to \gls{ECDH} via \texttt{secp256r1}.}
   \label{fig:results_sike_pqc_opt_434_mem}
 \end{figure}
@@ -191,7 +191,7 @@ While the benchmarks for the compressed Microsoft implementations reveal faster 
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{benchmarks/compare_sike/compare_pqc_sike/compressed/434}
-  \caption[Overall instructions for compressed implementations of \gls{SIKE} and \gls{PQCrypto-SIDH} using \texttt{p434}]
+  \caption[Instructions of compressed \gls{SIKE} and \gls{PQCrypto-SIDH} implementations (\texttt{p434})]
   {Overall instructions for compressed implementations of \gls{SIKE} and \gls{PQCrypto-SIDH} using \texttt{p434} compared to \gls{ECDH} via \texttt{secp256r1}.}
   \label{fig:results_sike_pqc_comp_434}
 \end{figure}
@@ -199,7 +199,7 @@ While the benchmarks for the compressed Microsoft implementations reveal faster 
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{benchmarks/compare_sike/compare_pqc_sike/compressed/434_mem}
-  \caption[Maximum memory consumption in kilobytes for compressed implementations of \gls{SIKE} and \gls{PQCrypto-SIDH} using \texttt{p434}]
+  \caption[Memory consumption of compressed \gls{SIKE} and \gls{PQCrypto-SIDH} implementations (\texttt{p434})]
   {Maximum memory consumption in kilobytes for compressed implementations of \gls{SIKE} and \gls{PQCrypto-SIDH} using \texttt{p434} compared to \gls{ECDH} via \texttt{secp256r1}.}
   \label{fig:results_sike_pqc_comp_434_mem}
 \end{figure}
@@ -207,7 +207,7 @@ While the benchmarks for the compressed Microsoft implementations reveal faster 
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{benchmarks/compare_sike/compare_pqc_sike/compressed/751}
-  \caption[Overall instructions for compressed implementations of \gls{SIKE} and \gls{PQCrypto-SIDH} using \texttt{p751}]
+  \caption[Instructions of compressed \gls{SIKE} and \gls{PQCrypto-SIDH} implementations (\texttt{p751})]
   {Overall instructions for compressed implementations of \gls{SIKE} and \gls{PQCrypto-SIDH} using \texttt{p751} compared to \gls{ECDH} via \texttt{secp521r1}.}
   \label{fig:results_sike_pqc_comp_751}
 \end{figure}
@@ -215,7 +215,7 @@ While the benchmarks for the compressed Microsoft implementations reveal faster 
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{benchmarks/compare_sike/compare_pqc_sike/compressed/751_mem}
-  \caption[Maximum memory consumption in kilobytes for compressed implementations of \gls{SIKE} and \gls{PQCrypto-SIDH} using \texttt{p751}]
+  \caption[Memory consumption of compressed \gls{SIKE} and \gls{PQCrypto-SIDH} implementations (\texttt{p751})]
   {Maximum memory consumption in kilobytes for compressed implementations of \gls{SIKE} and \gls{PQCrypto-SIDH} using \texttt{p751} compared to \gls{ECDH} via \texttt{secp521r1}.}
   \label{fig:results_sike_pqc_comp_751_mem}
 \end{figure}
@@ -224,7 +224,7 @@ While the benchmarks for the compressed Microsoft implementations reveal faster 
 The comparison among \gls{SIKE} implementations reveals significant the performance differences: The x64 optimized version (\texttt{SIKE\_x64}) is faster than the generic optimized variant (\texttt{SIKE\_Generic}). The reference implementation (\texttt{SIKE\_Reference}) is by far the slowest implementation. This is reasonable, since the reference implementation does not focus on performance. While \texttt{SIKE\_Generic} implements code for arbitrary target architectures, \texttt{SIKE\_x64} implements hardware specific instructions leading to faster execution.  Moreover, compressed versions reduce the performance for \gls{SIDH} key exchanges: In order to decrease cryptographic keys these implementations implement compression and decompression algorithms. These key transformations lead to an increased amount of executed instructions. Additionally, more memory is allocated during key (de)compression.\\
 The evaluation between \gls{PQCrypto-SIDH} and \gls{SIKE} exemplarily shows, how further research might influence isogeny based cryptography. Improved compression algorithms reduced the executed instructions while the memory costs increased (space-time trade-off). At the same time, the analysis of optimized algorithms reveals the similarities between both libraries.
 
-
+\newpage
 \section{Comparing \gls{SIKE} and \gls{CIRCL}} \label{sec:sike_vs_circl}
 
 This section compares the SIDH libraries \gls{SIKE} and \gls{CIRCL}. Since \gls{CIRCL} does not provide any compressed versions, the analysis in this section includes the following implementations: \texttt{SIKE\_Generic}, \texttt{SIKE\_x64}, \texttt{CIRCL\_Generic} and \texttt{CIRCL\_x64}.\\
@@ -236,7 +236,7 @@ Generic optimized implementations do not make use of any assembler specific inst
 \autoref{fig:results_opt_434} contains the benchmarks for \gls{SIDH} key exchanges using generic implementations instantiated with \texttt{p434}.  In all four aspects of the key exchange \texttt{SIKE\_Generic} processes twice as many instructions as \texttt{CIRCL\_Generic}. This difference even grows when considering parameter set \texttt{p751} (\autoref{fig:results_opt_751}), where \texttt{SIKE\_Generic} executes on average 2.3 times more instructions than \texttt{CIRCL\_Generic}.\\
 At the same time \texttt{CIRCL\_Generic} allocates more memory: Running the benchmarks with parameter \texttt{p434} reveals a memory overhead of $16.2$ \gls{kB} (\autoref{fig:results_opt_434_mem}). Using parameter \texttt{p751} reduces this overhead to $12.5$ \gls{kB} (\autoref{fig:results_opt_751_mem}), however, this difference is still significant. Additionally, note the standard deviation for the allocated memory measured for \texttt{CIRCL\_Generic} in both graphs: The generic optimized \gls{CIRCL} implementation does not provide a constant memory consumption.
 \\\\
-This analysis shows, that \gls{CIRCL} provides a faster generic optimized implementation than \gls{SIKE}. This result is a contrast to \autoref{sec:sike_circl_analysis_x64}, where the C implementation of \gls{SIKE} is faster that the GO implementation of \gls{CIRCL}. A detailed investigation reveals performance differences in time expensive hotspot functions. Both libraries spent most time for calculating \textit{Karatsubas multiplication algorithm} (see \autoref{sec:analysis_sidh_hotspots}). The generic implementation of \gls{CIRCL} calculates this algorithm on average in $1120$ instructions, while the realization in generic C of \gls{SIKE} executes on average $3373$ instructions. Since these functions are called more than $130\:000$ times, these differences have strong impact to the the overall executed instructions. Note that these values were extracted manually from the \textit{callgrind} output files generated by the benchmarking suite.
+This analysis shows, that \gls{CIRCL} provides a faster generic optimized implementation than \gls{SIKE}. This result is a contrast to \autoref{sec:sike_circl_analysis_x64}, where the C implementation of \gls{SIKE} is faster that the GO implementation of \gls{CIRCL}. A detailed investigation reveals performance differences in time expensive hotspot functions. Both libraries spent most time for calculating \textit{Karatsubas multiplication algorithm} (see \autoref{sec:analysis_sidh_hotspots}). The generic implementation of \gls{CIRCL} calculates this algorithm on average in $1120$ instructions, while the realization in generic C of \gls{SIKE} executes on average $3373$ instructions. Since these functions are called more than $130\:000$ times, these differences have strong impact to the overall executed instructions. Note that these values were extracted manually from the \textit{callgrind} output files generated by the benchmarking suite.
 
 At the same time \texttt{SIKE\_Generic} occupies less memory -- again a trade-off between executed instructions and allocated memory can be observed (e.g. \parencite{1056220}). The benchmarked deviation of peak memory consumption by \gls{CIRCL} might be the result of the GO garbage collector \parencite{Hudson:GGC}.
 
@@ -255,7 +255,7 @@ The fastest x64 optimized \gls{SIDH} key exchange is performed by \textit{SIKE\_
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{benchmarks/compare_circl_sike/434}
-  \caption[Overall instructions of SIKE and CIRCL using \texttt{p434}]
+  \caption[Instructions of SIKE and CIRCL (\texttt{p434})]
   {Overall instructions for \gls{SIDH} parameter \texttt{p434} compared to \gls{ECDH} via \texttt{secp256r1}.}
   \label{fig:results_opt_434}
 \end{figure}
@@ -263,7 +263,7 @@ The fastest x64 optimized \gls{SIDH} key exchange is performed by \textit{SIKE\_
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{benchmarks/compare_circl_sike/434_mem}
-  \caption[Maximum memory consumption of SIKE and CIRCL using \texttt{p434}]
+  \caption[Memory consumption of SIKE and CIRCL (\texttt{p434})]
   {Maximum memory consumption in kilobytes for \gls{SIDH} parameter \texttt{p434} compared to \gls{ECDH} via \texttt{secp256r1}.}
   \label{fig:results_opt_434_mem}
 \end{figure}
@@ -271,7 +271,7 @@ The fastest x64 optimized \gls{SIDH} key exchange is performed by \textit{SIKE\_
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{benchmarks/compare_circl_sike/751}
-  \caption[Overall instructions of SIKE and CIRCL using \texttt{p751}]
+  \caption[Instructions of SIKE and CIRCL (\texttt{p751})]
   {Overall instructions for \gls{SIDH} parameter \texttt{p751} compared to \gls{ECDH} via \texttt{secp521r1}.}
   \label{fig:results_opt_751}
 \end{figure}
@@ -279,7 +279,7 @@ The fastest x64 optimized \gls{SIDH} key exchange is performed by \textit{SIKE\_
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{benchmarks/compare_circl_sike/751_mem}
-  \caption[Maximum memory consumption  of SIKE and CIRCL using \texttt{p751}]
+  \caption[Memory consumption of SIKE and CIRCL (\texttt{p751})]
   {Maximum memory consumption in kilobytes for \gls{SIDH} parameter \texttt{p751} compared to \gls{ECDH} via \texttt{secp521r1}.}
   \label{fig:results_opt_751_mem}
 \end{figure}
@@ -288,13 +288,13 @@ The fastest x64 optimized \gls{SIDH} key exchange is performed by \textit{SIKE\_
 Besides detailed benchmarks, addenda \ref{app:detailed_benchmarks} also lists the execution hotspots of each implementation initialized with different parameters. The following description of these hotspots reveals potentials to further improve performance of \gls{SIDH}.\\
 Each implementation of the \gls{SIKE} library spends more than $50$\% of its execution time within the function \texttt{mp\_mul}. The second great hotspot of the library is the function \texttt{rdc\_mont} with up to $32$\% consumed operations:
 \begin{enumerate}
-\item \texttt{mp\_mul} calculates $c=a*b$ for two given n-digit integers $a$ and $b$ (based on Karatsubas multiplication algorithm).
-\item \texttt{rdc\_mont} calculates $c = a\;mod\;p$ for given integers $a$ and $p$ (based on Montgomery reduction).
+\item \texttt{mp\_mul} calculates $c=a*b$ for two given $n$-digit integers $a$ and $b$ (based on Karatsubas multiplication algorithm).
+\item \texttt{rdc\_mont} calculates $c = a\mod p$ for given integers $a$ and $p$ (based on Montgomery reduction).
 \end{enumerate}
 The identified hotspots of \textit{\gls{CIRCL}} are namely \texttt{mulPxxx} (\textasciitilde $50$\%) and \texttt{rdcPxxx} (\textasciitilde $22$\%) where \\\texttt{xxx} $\in \{434, 503, 751\}$. The source code provides further information, however, the documentation of \textit{\gls{CIRCL}} makes it hard to form reliable statements on the exact internals of the identified hotspot functions:
 \begin{enumerate}
 \item \texttt{mulPxxx} calculates $z=x*y$ given integers $a$ and $b$ (based on Karatsubas multiplication algorithm).
-\item \texttt{rdcPxxx} calculates $z = x*R^{-1} (mod 2*p)$ for given integers $x$ and $p$ (based on Montgomery reduction).
+\item \texttt{rdcPxxx} calculates $z = x*R^{-1} \pmod{2*p}$ for given integers $x$ and $p$ (based on Montgomery reduction).
 \end{enumerate}
 It can be seen that both \gls{SIDH} libraries struggle with the same issue: Performing many multiplications and modulo operations is expensive. Since all libraries exploit state-of-the-art algorithms (Karatsubas multiplication algorithm and Montgomery reduction), ongoing research in supersingular isogeny cryptography needs to find other ways to improve performance. Especially when comparing \gls{SIDH} with modern \gls{ECDH} key exchanges, these limitations are clearly visible (details in \autoref{sec:analysis_effiency_ecdh}).
 
@@ -314,16 +314,16 @@ More moderate results can be observed for parameter set \texttt{P751} and \textt
 While \gls{ECDH} exploits much faster execution times, the memory consumption of \gls{ECDH} is higher.  \autoref{fig:results_opt_434_mem} shows a memory consumption of $7.7$ \gls{kB} (\texttt{SIKE\_Generic} via \texttt{p434}) while \gls{ECDH} allocates $12.2$ \gls{kB} memory ($1.5$ times more). Similarly \gls{ECDH} allocates $1.2$ times more memory than \gls{SIDH} instantiated with \texttt{p751} (\autoref{fig:results_opt_751_mem}).
 \\\\
 \gls{ECDH} parameter sets enable faster computation times for a single key exchange.
-Especially the elliptic curve \texttt{secp256r1} executes significantly less instructions than the other implementations. This could be caused by the high interest of cryptographic reasearch in the field of elliptic curves in the past years. As a result, \gls{ECDH} provide highly optimized algorithms. Especially the \gls{openssl} implementation of \texttt{secp256r1} (providing a security level of 128 bit) benefits from these progresses \parencite{adalier2015efficient}. At the same time \gls{ECDH} suffers from an increased memory consumption compared to \gls{SIDH}. The reason for this might be a trade-off between execution time and memory consumption for elliptic curve algorithms \parencite{adalier2015efficient}.
+Especially the elliptic curve \texttt{secp256r1} executes significantly less instructions than the other implementations. This could be caused by the high interest of cryptographic research in the field of elliptic curves in the past years. As a result, \gls{ECDH} provide highly optimized algorithms. Especially the \gls{openssl} implementation of \texttt{secp256r1} (providing a security level of 128 bit) benefits from these progresses \parencite{adalier2015efficient}. A further analysis of the \textit{callgrind} files generated by the benchmarking suite reveals that \texttt{secp256r1} is assembler optimized in \gls{openssl}, while \texttt{secp384r1} and \texttt{secp512r1} are not. This justifies the significant low number of executed instructions for \texttt{secp256r1}. At the same time \gls{ECDH} suffers from an increased memory consumption compared to \gls{SIDH}. The reason for this might be a trade-off between execution time and memory consumption for elliptic curve algorithms \parencite{adalier2015efficient}.
 
 \subsection{Analysis of \gls{ECDH} execution hotspots}
 \label{sec:analysis_ecdh_hotspots}
 
-As listed in addenda \ref{app:detailed_benchmarks}, the measured execution hotspots for the \gls{openssl} implementation of \gls{ECDH} differ, since the \gls{openssl} implementation for \texttt{secp256r1} is \texttt{prime256v1} while \texttt{secp384r1} and \texttt{secp512r1} are directly implemented in the library (see \autoref{sec:benchmarks_details} and \parencite{turner2009elliptic} for details). Thus, the underlying source code of \texttt{secp256r1} is different leading to different observed execution hotspots.\\
+As listed in addenda \ref{app:detailed_benchmarks}, the measured execution hotspots for the \gls{openssl} implementation of \gls{ECDH} differ, since the \gls{openssl} implementation of \texttt{secp256r1} is highly optimized while \texttt{secp384r1} and \texttt{secp512r1} are not (see \autoref{sec:analysis_effiency_ecdh} and \parencite{adalier2015efficient} for details). Thus, the underlying source code of \texttt{secp256r1} is different leading to different observed execution hotspots.\\
 The hotspots of \texttt{secp256r1} are the low level prime field arithmetic functions\\\texttt{\_\_ecp\_nistz256\_mul\_montq} ($29.9$\%) and \texttt{\_\_ecp\_nistz256\_sqr\_montq} ($18.3$\%):
 \begin{enumerate}
-\item \texttt{\_\_ecp\_nistz256\_mul\_montq}\\Computation of a montgomery multiplication: $res = a*b*2^{-256}\;mod\;P$, for integers a, b and P.
-\item \texttt{\_\_ecp\_nistz256\_sqr\_montq} \\Computation of a montgomery square: $res = a*a*2^{-256}\;mod\;P$, for integers a and P.
+\item \texttt{\_\_ecp\_nistz256\_mul\_montq}\\Computation of a montgomery multiplication: $res = a*b*2^{-256}\mod P$, for integers a, b and P.
+\item \texttt{\_\_ecp\_nistz256\_sqr\_montq} \\Computation of a montgomery square: $res = a*a*2^{-256}\mod P$, for integers a and P.
 \end{enumerate}
 The measured hotspots for the \texttt{secp384r1} and \texttt{secp512r1} are likewise prime field arithmetics: \texttt{bn\_mul\_mont} claims $67.2$\% (\texttt{secp384r1}) and $80.0$\% (\texttt{secp512r1}) of all executed instructions. \texttt{bn\_mod\_add\_fixed\_top} demands $6.2$\% (\texttt{secp384r1}) and $4.3$\% (\texttt{secp512r1}):
 \begin{enumerate}
@@ -351,13 +351,13 @@ The standard deviation for the following variants is zero and thus these variant
 \item \texttt{SIKE\_Generic} 
 \item \texttt{SIKE\_x64}
 \item \texttt{\gls{ECDH}} initialized with curve \texttt{secp256r1}.\\
-Note that the standard deviation for \texttt{secretA} and \texttt{secretB} is not zero. However, when analyzing the detailed results of the benchmarking suite the following can be observed: 99 runs of the function \texttt{secretA} execute \textit{exactly} $652\:796$ instructions. Only one execution of this function executed $65\:777$ instructions (19 instructions less). The same behavior can be observed for \texttt{secretB}: Exactly one run of this function executes 19 instructions less than the other 99 runs. Since this difference corresponds to about 6 clock cycles on a 3GHz processor and only one run out of 99 is affected, one can state that this is a constant time implementation. Both functions \texttt{secretA} and \texttt{secreB} call the same \gls{openssl} function \texttt{ECDH\_compute\_key} (each passing appropriate parameters).
+Note that the standard deviation for \texttt{secretA} and \texttt{secretB} is not zero. However, when analyzing the detailed results of the benchmarking suite the following can be observed: 99 runs of the function \texttt{secretA} execute \textit{exactly} $652\:796$ instructions. Only one execution of this function executed $652\:777$ instructions (19 instructions less). The same behavior can be observed for \texttt{secretB}: Exactly one run of this function executes 19 instructions less than the other 99 runs. Since this difference corresponds to about 6 clock cycles on a 3GHz processor and only one run out of 99 is affected, one can state that this is a constant time implementation. Both functions \texttt{secretA} and \texttt{secretB} make use of the same \gls{openssl} function \texttt{ECDH\_compute\_key} (each passing appropriate parameters).
 \end{itemize}
-On the other hand, the following implementations show deviations in their execution time. Thus, they are not implemented in constant time:
+On the other hand, the following implementations show deviations in their execution times. Thus, they are not implemented in constant time:
 
 \begin{itemize}
 \item \texttt{\gls{ECDH}} for the benchmarked curves \texttt{secp384r1} and \texttt{secp512r1} in \textit{\gls{openssl}}.\\
-At this point it is important to specify the API used for \gls{ECDH}. Note that the source code of the benchmarking suite contains the C-file performing the \gls{ECDH} key exchange (\texttt{container/ECDH/benchmark.c}). The APIs used in this file are adapted from the \href{https://wiki.openssl.org/index.php/Elliptic\_Curve\_Diffie\_Hellman}{official \gls{openssl} wiki}\footnote{Section \textit{"Using the Low Level APIs"} at https://wiki.openssl.org/index.php/Elliptic\_Curve\_Diffie\_Hellman}. The concrete functions of that API that do not execute a static amount of instructions for the parameters above are namely: \texttt{EC\_KEY\_generate\_key} and \texttt{ECDH\_compute\_key}.
+Note that the source code of the benchmarking suite contains the C-file performing the \gls{ECDH} key exchange (\texttt{container/ECDH/benchmark.c}). The APIs used in this file are adapted from the \href{https://wiki.openssl.org/index.php/Elliptic\_Curve\_Diffie\_Hellman}{official \gls{openssl} wiki}\footnote{Section \textit{"Using the Low Level APIs"} at \url{https://wiki.openssl.org/index.php/Elliptic\_Curve\_Diffie\_Hellman}}. The concrete functions of that API that do not execute a static amount of instructions for the parameters above are namely: \texttt{EC\_KEY\_generate\_key} and \texttt{ECDH\_compute\_key}.
 \item \texttt{\gls{CIRCL}\_Generic} and \texttt{\gls{CIRCL}\_x64}\\
 In particular the API functions \texttt{GeneratePublicKey} and \texttt{DeriveSecret }(both are class functions for private key objects, for details see the \gls{CIRCL} API in \autoref{sec:circl_description}) do not execute a static amount of instructions.
 \item \texttt{\gls{SIKE}\_Generic\_Compressed} and \texttt{\gls{SIKE}\_x64\_Compressed}\\
@@ -384,6 +384,6 @@ This section compares the size of public keys implemented by the \gls{SIDH} libr
 	\hline
 	\end{tabular}
 	\caption[Comparison of key sizes]{Comparison of key sizes in bytes}
-	\label{tab:benchmarks_Sike_x64}
+	\label{tab:security_key_size}
 \end{table}
 Shorter public key sizes reduce transmitting and storage costs. The \gls{ECDH} implementations exploit significantly shorter public keys than \gls{SIDH}. However, \gls{SIDH} implements the shortest public key sizes of all quantum-resistant alternatives \parencite{koziel2018high}.

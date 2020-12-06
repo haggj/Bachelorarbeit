@@ -2,7 +2,7 @@
 In this chapter a benchmarking suite is presented that is able to generate comparable benchmarks between all \gls{SIDH} implementations introduced in \autoref{chapter:existing_sidh}. To get a better understanding of the results, this chapter starts with a  description of the tools and methodologies used for benchmarking (\autoref{sec:benchmarks_methods}). The implementation details given in \autoref{sec:benchmarks_details} provide precise internals of the benchmarking suite. This might be used for further development of the software. A description of how to actually use the presented benchmarking suite is given in \autoref{sec:benchmarks_usage}.
 
 \section{Benchmarking Methodology}\label{sec:benchmarks_methods}
-In order to generate independent and stable benchmarking results, the benchmarking suite runs within a virtual environment: \textit{Docker} is used to separate the running suite from the host operating system. This reduces the influence of resource intensive processes which might falsify benchmarking results. Moreover, \textit{Docker} enables a portable and scalable software solution. The benchmarking suite runs within a Ubuntu Docker container providing a virtual operating system.\\
+In order to generate independent and stable benchmarking results, the benchmarking suite runs within a virtual environment: \textit{Docker} is used to separate the running suite from the host operating system. This reduces the influence of resource intensive processes which might falsify benchmarking results. Moreover, \textit{Docker} enables a portable and scalable software solution. The benchmarking suite runs within an Ubuntu Docker container providing a virtual operating system.\\
 The benchmarks measured in this thesis are \textit{execution time} and \textit{memory consumption}. These measurements are used to quantify the claimed resources of an algorithm. 
 \\
 In the following, the process of benchmarking is described within five steps. In a short version, the required steps are:
@@ -83,14 +83,7 @@ Once the output files of \textit{Callgrind} and \textit{Massif} are produced, on
 \item Absolute instructions per function.
 \item Maximum memory consumption during \gls{SIDH} key exchange.
 \end{enumerate}
-This information is finally used by the benchmarking suite to produce graphs and tables for further investigation. To receive reliable information all benchmarks are measured multiple times (e.g. $N=100$ times).\\
-To further increase the quality and reproducibility of the results the cache of the virtual operating system is cleared, before \textit{Callgrind} and \textit{Massif} are executed. This is done via:
-\begin{lstlisting}[language=Bash]
-sync; sudo sh -c "echo 1 > /proc/sys/vm/drop_caches"
-sync; sudo sh -c "echo 2 > /proc/sys/vm/drop_caches"
-sync; sudo sh -c "echo 3 > /proc/sys/vm/drop_caches"
-\end{lstlisting}
-
+This information is finally used by the benchmarking suite to produce graphs and tables for further investigation. To receive reliable information all benchmarks are measured multiple times (e.g. $N=100$ times) and averaged over all outcomes.
 
 \section{Application Details}\label{sec:benchmarks_details}
 The benchmarking suite is developed in Python3 on a Linux/Ubuntu operating system. Currently, the following implementations are included:
@@ -148,13 +141,13 @@ Finally, the results are visualized in different formats. Graphs compare the rec
 
 \subsection{Application Structure}\label{sec:app_structure}
 
-This section covers the internal structure of the benchmarking suite. It illustrates, how each implementation is represented in code and how the benchmarking results are managed. To get a detailed description of the implemented functions, consider the the well-documented source code.
+This section covers the internal structure of the benchmarking suite. It illustrates, how each implementation is represented in code and how the benchmarking results are managed. To get a detailed description of the implemented functions, consider the highly-documented source code of the benchmarking suite.
 
 \subsubsection{Representation of concrete implementations}
 
-The main logic of the benchmarking suite is placed within the class \texttt{BaseImplementation}. This class implements the logic for compiling, executing \textit{Callgrind} and \textit{Massif} and parsing their results. For each implementation which shall be benchmarked, a subclass of \texttt{BaseImplementation} is created (see \autoref{fig:uml}). These subclasses provide a link to the respective \textit{Makefile} which is used by the \texttt{BaseImplementation} for compiling, running callgrind and running massif. Furthermore, each subclass can provide a set of arguments passed to the \textit{Makefile}.\\
+The main logic of the benchmarking suite is placed within the class \texttt{BaseImplementation}. This class implements the logic for compiling, executing \textit{Callgrind} and \textit{Massif} and parsing their results. For each implementation which shall be benchmarked, a subclass of \texttt{BaseImplementation} is created (see \autoref{fig:uml}). These subclasses provide a link to the respective \textit{Makefile} which is used by the \texttt{BaseImplementation} for compiling, running callgrind and running massif. Furthermore, each subclass can provide a set of arguments passed to the \textit{Makefile}.
 
-\begin{figure}[H]
+\begin{figure}[]
   \centering
   \includegraphics[width=0.9\textwidth]{benchmarks/uml}
   \caption[Class diagram for supported implementations]
@@ -162,7 +155,7 @@ The main logic of the benchmarking suite is placed within the class \texttt{Base
 \end{figure}
 
 \subsubsection{Representation of benchmarking results}
-In order to ensure a clear analysis of the results, the application implements a structure for the returned benchmarking values. Since each implementation can be run based on different parameter sets (in the terminology of the benchmarking suite this is called \textit{curves}) and for each curve different benchmarking values are processed, the following hierarchy is applied (see \autoref{fig:uml_results}).\\
+In order to ensure a clear analysis of the results, the application implements a structure for the returned benchmarking values. Since each implementation can be run based on different parameter sets (in the terminology of the benchmarking suite this is called \textit{curves}) and for each curve different benchmarking values are processed, the hierarchy shown in \autoref{fig:uml_results} is applied.\\
 The class \texttt{BenchmarkImpl} represents the benchmarking results of a specific implementation. Therefore, the class manages a list of \texttt{BenchmarkCurve} objects which contains benchmarks for a specific curve. Each benchmark for such a curve is represented by an instance of \texttt{Benchmark}. Thus, \texttt{BenchmarkCurve} holds a list of \texttt{Benchmark} objects.
 \begin{figure}[H]
   \centering
@@ -170,9 +163,9 @@ The class \texttt{BenchmarkImpl} represents the benchmarking results of a specif
   \caption[Class diagram for benchmarking results.]
   {Class diagram representing the management of the benchmarking results.}\label{fig:uml_results}
 \end{figure}
-
+\newpage
 \subsection{Adding Implementations}\label{sec:benchmarks_details_add}
-To add a new implementation to the benchmarking suite it is recommended to consider already existing implementations. Moreover, addenda \ref{app:hierarchy} might be helpful to get a better understanding about the applied project hierarchy. Adding a \gls{SIDH} implementation to the benchmarking suite requires the following steps:
+To add a new implementation to the benchmarking suite it is recommended to consider already existing implementations. Moreover, appendix \ref{app:hierarchy} might be helpful to get a better understanding about the applied project hierarchy. Adding a \gls{SIDH} implementation to the benchmarking suite requires the following steps:
 \begin{enumerate}
 \itemsep0em 
 \item Add a new folder into the \texttt{container/} folder of the root directory \\ \texttt{container/new\_implementation/}.
@@ -217,7 +210,7 @@ implementations =[
 Once these steps are done the benchmarking suits is able to benchmark the new implementation.
 
 \section{Usage}\label{sec:benchmarks_usage}
-This section explains the usage of the benchmarking suite. Besides the execution of benchmarks, the application also provides unit tests for the suite itself. Both tasks - running benchmarks and executing unit tests - need to run within the docker container. Thus, it is mandatory to \href{https://docs.docker.com/get-docker/}{install docker} on your system to run the benchmarking suite\footnote{The application was developed using Docker version 19.03.8, build \texttt{afacb8b7f0}. Instructions for installing \textit{Docker}: https://docs.docker.com/get-docker/}. To provide an easy to use interface for both tasks a script \textit{run.sh} is available (see addenda \ref{app:hierarchy} for the project hierarchy). This script can be invoked with different arguments:
+This section explains the usage of the benchmarking suite. Besides the execution of benchmarks, the application also provides unit tests for the suite itself. Both tasks - running benchmarks and executing unit tests - need to run within the docker container. Thus, it is mandatory to \href{https://docs.docker.com/get-docker/}{install docker} on your system to run the benchmarking suite\footnote{The application was developed using Docker version \texttt{19.03.8}, build \texttt{afacb8b7f0}. Instructions for installing \textit{Docker}: \url{https://docs.docker.com/get-docker/}}. To provide an easy to use interface for both tasks a script \textit{run.sh} is available (see addenda \ref{app:hierarchy} for the project hierarchy). This script can be invoked with different arguments:
 \begin{itemize}
 \itemsep0em 
 \item Building the docker container:
@@ -240,7 +233,7 @@ This command triggers the \textit{benchmarking.py} script within the docker cont
 	\item \textit{XXX.png}: These files compare the absolute instruction counts of all implementations which were run on the XXX parameter set (XXX $\in {434, 503, 610, 751}$). Additionally, it contains a \gls{ECDH} benchmark for comparison.
 	\item \textit{XXX\_mem.png}: These files compare the peak memory consumption of all implementations which were run on the XXX parameter set (XXX $\in {434, 503, 610, 751}$). Additionally, it contains a \gls{ECDH} benchmark for comparison.
 
-	\item \textit{cached.json}: This \textit{json} file contains cached benchmarking results. It can be used as input for the benchmarking suite to import cached data instead of generating all benchmarks again. Since the benchmarking suite runs multiple hours if each implementation is evaluated N=100 times, this functionality speeds up the generation of the output graphs significantly. To use the cached file as input, copy it to \texttt{container/.cached/cached.json} and run the benchmarking suite again.
+	\item \textit{cached.json}: This \textit{json} file contains cached benchmarking results. It can be used as input for the benchmarking suite to import cached data instead of generating all benchmarks again. Since the benchmarking suite runs multiple hours if each implementation is evaluated $N$=$100$ times, this functionality speeds up the generation of the output graphs significantly. To use the cached file as input, copy it to \texttt{container/.cached/cached.json} and run the benchmarking suite again.
 	
 	\item \textit{results.html}: This file lists detailed benchmarking results in a human readable \gls{HTML} table. 
 	

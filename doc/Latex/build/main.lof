@@ -14,25 +14,25 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Flow chart of the benchmarking suite.}}{34}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Class diagram for benchmarking results.}}{35}{figure.caption.54}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Class diagram for supported implementations}}{36}{figure.caption.52}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Class diagram for benchmarking results.}}{37}{figure.caption.54}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Overall instructions for all parameter sets via \texttt {SIKE\_x64} compared to \texttt {ECDH}}}{42}{figure.caption.56}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Maximum memory consumption for all parameter sets via \texttt {SIKE\_x64} compared to \texttt {ECDH}}}{43}{figure.caption.57}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Overall instructions for all parameter sets via \texttt {CIRCL\_x64} compared to \texttt {ECDH}}}{44}{figure.caption.58}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Maximum memory consumption for all parameter sets via \texttt {CIRCL\_x64} compared to \texttt {ECDH}}}{45}{figure.caption.59}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Overall instructions \gls {SIKE}}}{47}{figure.caption.63}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Maximum memory consumption \gls {SIKE}}}{48}{figure.caption.64}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Overall instructions for optimized implementations of \gls {SIKE} and \gls {PQCrypto-SIDH} using \texttt {p434}}}{49}{figure.caption.66}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Maximum memory consumption for optimized implementations of \gls {SIKE} and \gls {PQCrypto-SIDH} using \texttt {p434}}}{50}{figure.caption.67}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Overall instructions for compressed implementations of \gls {SIKE} and \gls {PQCrypto-SIDH} using \texttt {p434}}}{51}{figure.caption.69}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Maximum memory consumption in kilobytes for compressed implementations of \gls {SIKE} and \gls {PQCrypto-SIDH} using \texttt {p434}}}{52}{figure.caption.70}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Overall instructions for compressed implementations of \gls {SIKE} and \gls {PQCrypto-SIDH} using \texttt {p751}}}{52}{figure.caption.71}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Maximum memory consumption in kilobytes for compressed implementations of \gls {SIKE} and \gls {PQCrypto-SIDH} using \texttt {p751}}}{53}{figure.caption.72}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Overall instructions of SIKE and CIRCL using \texttt {p434}}}{56}{figure.caption.73}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Maximum memory consumption of SIKE and CIRCL using \texttt {p434}}}{56}{figure.caption.74}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Overall instructions of SIKE and CIRCL using \texttt {p751}}}{57}{figure.caption.75}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Maximum memory consumption of SIKE and CIRCL using \texttt {p751}}}{57}{figure.caption.76}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Instructions for all parameter sets via \texttt {SIKE\_x64}}}{42}{figure.caption.56}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Memory consumption for all parameter sets via \texttt {SIKE\_x64}}}{43}{figure.caption.57}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Instructions for all parameter sets via \texttt {CIRCL\_x64}}}{44}{figure.caption.58}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Memory consumption for all parameter sets via \texttt {CIRCL\_x64}}}{45}{figure.caption.59}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Instructions of \gls {SIKE} implementations}}{47}{figure.caption.63}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Memory consumption of \gls {SIKE} implementations}}{48}{figure.caption.64}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Instructions of optimized \gls {SIKE} and \gls {PQCrypto-SIDH} implementations}}{49}{figure.caption.66}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Memory consumption of optimized \gls {SIKE} and \gls {PQCrypto-SIDH} implementations}}{50}{figure.caption.67}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Instructions of compressed \gls {SIKE} and \gls {PQCrypto-SIDH} implementations (\texttt {p434})}}{51}{figure.caption.69}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Memory consumption of compressed \gls {SIKE} and \gls {PQCrypto-SIDH} implementations (\texttt {p434})}}{52}{figure.caption.70}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Instructions of compressed \gls {SIKE} and \gls {PQCrypto-SIDH} implementations (\texttt {p751})}}{52}{figure.caption.71}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Memory consumption of compressed \gls {SIKE} and \gls {PQCrypto-SIDH} implementations (\texttt {p751})}}{53}{figure.caption.72}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Instructions of SIKE and CIRCL (\texttt {p434})}}{56}{figure.caption.73}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Memory consumption of SIKE and CIRCL (\texttt {p434})}}{56}{figure.caption.74}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Instructions of SIKE and CIRCL (\texttt {p751})}}{57}{figure.caption.75}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Memory consumption of SIKE and CIRCL (\texttt {p751})}}{57}{figure.caption.76}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
