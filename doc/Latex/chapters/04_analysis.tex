@@ -313,7 +313,7 @@ More moderate results can be observed for parameter set \texttt{P751} and \textt
 \\
 While \gls{ECDH} exploits much faster execution times, the memory consumption of \gls{ECDH} is higher.  \autoref{fig:results_opt_434_mem} shows a memory consumption of $7.7$ \gls{kB} (\texttt{SIKE\_Generic} via \texttt{p434}) while \gls{ECDH} allocates $12.2$ \gls{kB} memory ($1.5$ times more). Similarly \gls{ECDH} allocates $1.2$ times more memory than \gls{SIDH} instantiated with \texttt{p751} (\autoref{fig:results_opt_751_mem}).
 \\\\
-\gls{ECDH} parameter sets enable faster computation times for a single key exchange
+\gls{ECDH} parameter sets enable faster computation times for a single key exchange.
 Especially the elliptic curve \texttt{secp256r1} executes significantly less instructions than the other implementations. This could be caused by the high interest of cryptographic reasearch in the field of elliptic curves in the past years. As a result, \gls{ECDH} provide highly optimized algorithms. Especially the \gls{openssl} implementation of \texttt{secp256r1} (providing a security level of 128 bit) benefits from these progresses \parencite{adalier2015efficient}. At the same time \gls{ECDH} suffers from an increased memory consumption compared to \gls{SIDH}. The reason for this might be a trade-off between execution time and memory consumption for elliptic curve algorithms \parencite{adalier2015efficient}.
 
 \subsection{Analysis of \gls{ECDH} execution hotspots}
@@ -336,7 +336,7 @@ Similar to the previously described \gls{SIDH} hotspots, the underlying performa
 \label{sec:analysis_ecdh_sidh_findings}
 
 The analysis in this section showed that modern \gls{ECDH} algorithms execute significantly less instructions than \gls{SIDH} for a single key exchange, while allocating more memory (space-time trade-off). Hence, the deployment of \gls{SIDH} in a wide range of applications is currently hard to imagine. At the same time research is still ongoing and multiple optimizations for \gls{SIDH} were proposed within the last years (see \url{https://sike.org/}).\\
-All optimized implementations (\gls{SIDH} and \gls{ECDH}) are based on the same highly optimized prime filed arithmetic. Thus, isogeny based cryptography might need to reduce arithmetic operations in general, since major optimizations of the already well-researched prime filed arithmetic are rather unlikely.
+All optimized implementations (\gls{SIDH} and \gls{ECDH}) are based on the same highly optimized prime filed arithmetic algorithms. Thus, isogeny based cryptography might need to reduce arithmetic operations in general, since major optimizations of the already well-researched prime filed arithmetic are rather unlikely.
 
 \section{Security Considerations}\label{sec:analysis_security}
 
@@ -350,12 +350,14 @@ The standard deviation for the following variants is zero and thus these variant
 \item \texttt{SIKE\_Reference}
 \item \texttt{SIKE\_Generic} 
 \item \texttt{SIKE\_x64}
+\item \texttt{\gls{ECDH}} initialized with curve \texttt{secp256r1}.\\
+Note that the standard deviation for \texttt{secretA} and \texttt{secretB} is not zero. However, when analyzing the detailed results of the benchmarking suite the following can be observed: 99 runs of the function \texttt{secretA} execute \textit{exactly} $652\:796$ instructions. Only one execution of this function executed $65\:777$ instructions (19 instructions less). The same behavior can be observed for \texttt{secretB}: Exactly one run of this function executes 19 instructions less than the other 99 runs. Since this difference corresponds to about 6 clock cycles on a 3GHz processor and only one run out of 99 is affected, one can state that this is a constant time implementation. Both functions \texttt{secretA} and \texttt{secreB} call the same \gls{openssl} function \texttt{ECDH\_compute\_key} (each passing appropriate parameters).
 \end{itemize}
 On the other hand, the following implementations show deviations in their execution time. Thus, they are not implemented in constant time:
 
 \begin{itemize}
-\item \texttt{\gls{ECDH}} for the benchmarked curves \texttt{secp256r1},  \texttt{secp384r1} and \texttt{secp512r1} in \textit{\gls{openssl}}.\\
-At this point it is important to specify the API used for \gls{ECDH}. Note that the source code of the benchmarking suite contains the c file performing the \gls{ECDH} key exchange (\texttt{container/ECDH/benchmark.c}). The APIs used in this file are adapted from the \href{https://wiki.openssl.org/index.php/Elliptic\_Curve\_Diffie\_Hellman}{official \gls{openssl} wiki}\footnote{Section \textit{"Using the Low Level APIs"} at https://wiki.openssl.org/index.php/Elliptic\_Curve\_Diffie\_Hellman}. The concrete functions of that API that do not execute a static amount of instructions are namely: \texttt{EC\_KEY\_generate\_key} and \texttt{ECDH\_compute\_key}.
+\item \texttt{\gls{ECDH}} for the benchmarked curves \texttt{secp384r1} and \texttt{secp512r1} in \textit{\gls{openssl}}.\\
+At this point it is important to specify the API used for \gls{ECDH}. Note that the source code of the benchmarking suite contains the C-file performing the \gls{ECDH} key exchange (\texttt{container/ECDH/benchmark.c}). The APIs used in this file are adapted from the \href{https://wiki.openssl.org/index.php/Elliptic\_Curve\_Diffie\_Hellman}{official \gls{openssl} wiki}\footnote{Section \textit{"Using the Low Level APIs"} at https://wiki.openssl.org/index.php/Elliptic\_Curve\_Diffie\_Hellman}. The concrete functions of that API that do not execute a static amount of instructions for the parameters above are namely: \texttt{EC\_KEY\_generate\_key} and \texttt{ECDH\_compute\_key}.
 \item \texttt{\gls{CIRCL}\_Generic} and \texttt{\gls{CIRCL}\_x64}\\
 In particular the API functions \texttt{GeneratePublicKey} and \texttt{DeriveSecret }(both are class functions for private key objects, for details see the \gls{CIRCL} API in \autoref{sec:circl_description}) do not execute a static amount of instructions.
 \item \texttt{\gls{SIKE}\_Generic\_Compressed} and \texttt{\gls{SIKE}\_x64\_Compressed}\\
@@ -364,7 +366,7 @@ This is expected, since compressed versions need to compress and decompress the 
 
 \subsection{Key size}\label{sec:analysis_security_keys}
 
-This section compares the size of public keys implemented by the \gls{SIDH} libraries \textit{\gls{SIKE}} and \textit{\gls{CIRCL}} with modern \gls{openssl} \gls{ECDH}. The used parameters matching the appropriate \gls{NIST} security level can be found in \autoref{sec:benchmarks_details}. Since all \gls{SIDH} libraries implement the same parameter sets their key sizes are identical. However, \textit{compressed} variants of \gls{SIDH} benefit from reduced public key sizes, while extending execution time. The key sizes of the used \gls{ECDH} curves is part of the name, e.g. \texttt{secp256r1} exploits 256 bits (256/8 = 32 bytes) as public key. The following table lists the relevant key sizes in bytes:
+This section compares the size of public keys implemented by the \gls{SIDH} libraries \textit{\gls{SIKE}} and \textit{\gls{CIRCL}} with modern \gls{openssl} \gls{ECDH}. The used parameters matching the appropriate \gls{NIST} security level can be found in \autoref{sec:benchmarks_details}. Since all \gls{SIDH} libraries implement the same parameter sets their key sizes are identical. However, \textit{compressed} variants of \gls{SIDH} benefit from reduced public key sizes, while extending execution time. The key size of the used \gls{ECDH} curves is part of their name, e.g. \texttt{secp256r1} exploits 256 bits (256/8 = 32 bytes) as public key. The following table lists the relevant key sizes in bytes:
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|K{2.5cm}|}

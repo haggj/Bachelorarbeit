@@ -37,6 +37,10 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     RESULTS = load_from_json()
 
+    from collections import Counter
+    print(Counter(RESULTS["ECDH"].get_curve_by_name("secp256").find_benchmark("SecretA").values))
+    print(Counter(RESULTS["ECDH"].get_curve_by_name("secp256").find_benchmark("SecretB").values))
+
     implementations =[
         #ECDH
         #ECDH,

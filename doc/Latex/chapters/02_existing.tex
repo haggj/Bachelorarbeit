@@ -6,9 +6,9 @@ In the following, some algorithms are described as \textit{compressed}. These co
 \section{\gls{SIKE}}
 \gls{SIKE} stands for \textbf{S}upersingular \textbf{I}sogeny \textbf{K}ey \textbf{E}ncapsulation. It is the reference implementation of the first proposed isogeny-based cryptographic primitives \parencite{jao2011towards}. Today, \gls{SIKE} is a \gls{NIST} candidate for quantum-resistant \textit{"Public-key Encryption and Key-establishment Algorithms"}. It is developed by a cooperation of researchers, lead by David Jao \parencite{sike2020spec}.
 \subsubsection{SIKE vs. PQCrypto-SIDH}\label{existing:sike_vs_pqcrypto}
-The \gls{SIKE} implementation is highly related to the \gls{SIDH} source code of Microsoft available on Github\footnote{https://github.com/microsoft/PQCrypto-SIDH}, called \gls{PQCrypto-SIDH}. At the beginning of this thesis both implementations were considered as different implementations. Since some researches of \gls{SIKE} also work for Microsoft the similarities of both APIs seemed to be reasonable. After contacting the \gls{SIKE} team due to compilation issues of their NIST Round 3 submission, David Jao stated that \gls{SIKE} uses the \textit{"[G]it repository hosted by Microsoft at
+The \gls{SIKE} implementation is highly related to the \gls{SIDH} source code of Microsoft available on Github\footnote{https://github.com/microsoft/PQCrypto-SIDH}, called \gls{PQCrypto-SIDH}. At the beginning of this thesis both implementations were considered as different implementations. Since some researches of \gls{SIKE} also work for Microsoft, the similarities of both APIs seemed to be reasonable. After contacting the \gls{SIKE} team due to compilation issues of their NIST Round 3 submission, David Jao stated that \gls{SIKE} uses the \textit{"[G]it repository hosted by Microsoft at
 https://github.com/Microsoft/PQCrypto-SIDH [...] as the source
-repository [...] to build the NIST package."} (personal communication, November 17, 2020). This circumstance is unfortunately not documented by \gls{SIKE}. This communication took place after the major benchmarks of this thesis -- include \gls{PQCrypto-SIDH} -- were measured. Thus, the developed benchmarking suite still contains this implementation and the benchmarks are also appended to this thesis. However, this thesis treats both libraries as equal (if not stated otherwise) since both are closely related.
+repository [...] to build the NIST package."} (personal communication, November 17, 2020). This circumstance is unfortunately not documented by \gls{SIKE}. This communication took place after the major benchmarks of this thesis -- include \gls{PQCrypto-SIDH} -- were measured. Thus, the developed benchmarking suite still contains this implementation and the benchmarks are also appended to this thesis. However, this thesis treats both libraries as equal (if not stated otherwise) since both are based on the same source code.
 \\\\
 \gls{SIKE} implements its key encapsulation mechanism (\gls{KEM}) upon a public key encryption system (\gls{PKE}) which is built upon \gls{SIDH} (as described in \autoref{chapter:background}). Besides a generic reference implementation, \gls{SIKE} offers various optimized implementations of their cryptographic primitives:
 \begin{itemize}
@@ -108,8 +108,8 @@ int EphemeralKeyGeneration_A(const unsigned char* PrivateKey_A,
 int EphemeralKeyGeneration_B(const unsigned char* PrivateKey_B,
 							    unsigned char* PublicKey_B);
 \end{lstlisting}
-This function takes the randomly generated private key of Alice (\texttt{PrivateKey\_A}) or Bob (\texttt{PrivateKey\_A}) as input and computes the corresponding public key \texttt{PrivateKey\_A} or \texttt{PrivateKey\_B}. All compressed versions of \gls{SIKE} perform a key compression before the generated public key is returned. The function returns 0 if successful.\\
-This function is an implementation of \textit{isogen} introduced in the previous chapter (see \autoref{sec:sidh_implementation} for details).
+This function takes the randomly generated private key of Alice (\texttt{PrivateKey\_A}) or Bob (\texttt{PrivateKey\_A}) as input and computes the corresponding public key \texttt{PrivateKey\_A} or \texttt{PrivateKey\_B}. All compressed versions of \gls{SIKE} additionally perform a key compression before the generated public key is returned. The function returns 0 if successful.\\
+The function \texttt{EphemeralKeyGeneration\_X} is an implementation of \textit{isogen} introduced in the previous chapter (see \autoref{sec:sidh_implementation} for details).
 
 \subsubsection{Secret generation}
 
@@ -244,7 +244,7 @@ PrivateKey_A.Generate(rand.Reader)
 PrivateKey_B = sidh.NewPrivateKey(sidh.FpXXX, sidh.KeyVariantSidhB)
 PrivateKey_B.Generate(rand.Reader)
 \end{lstlisting}
-The function \texttt{NewPrivateKey} returns a object of type \texttt{PrivatKey} containing the defined parameter set (\texttt{sidh.FpXXX}) and the defined subject (\texttt{sidh.KeyVariantSidhA} for Alice and \texttt{sidh.KeyVariantSidhB} for Bob). This \texttt{PrivateKey}objects provides the function \texttt{Generate} that randomly generates a new private key based on a passed random number generator (e.g. \texttt{rand.Reader}). The generated private key is stored within the attribute \texttt{PrivateKey.Scalar} as an array of bytes.\\
+The function \texttt{NewPrivateKey} returns an object of type \texttt{PrivatKey} containing the defined parameter set (\texttt{sidh.FpXXX}) and the defined subject (\texttt{sidh.KeyVariantSidhA} for Alice and \texttt{sidh.KeyVariantSidhB} for Bob). \texttt{PrivateKey} object provides the function \texttt{PrivateKey.Generate} that randomly generates a new private key based on a passed random number generator (e.g. \texttt{rand.Reader}). The generated private key is stored within the attribute \texttt{PrivateKey.Scalar} as an array of bytes.\\
 The code above initializes and randomly generates the private keys for Alice (\textcolor{keywordcol}{\texttt{PrivateKey\_A}}) and Bob (\textcolor{keywordcol}{\texttt{PrivateKey\_B}}).\\
 
 \begin{lstlisting}[]
@@ -257,8 +257,8 @@ PublicKey_B = sidh.NewPublicKey(sidh.FpXXX, sidh.KeyVariantSidhB)
 PrivateKey_B.GeneratePublicKey(PublicKey_B)
 \end{lstlisting}
 
-The function \texttt{NewPublicKey} creates an object of type \texttt{PublicKey} using the defined parameter set (\texttt{sidh.FpXXX}) and the defined subject (\texttt{sidh.KeyVariantSidhA} indicates Alice and \texttt{sidh.KeyVariantSidhB} indicates Bob). Objects of type \texttt{PrivateKey} provide the function \texttt{PrivateKey.GeneratePublicKey} that generates the appropriate public key for a given private key. The resulting public key is stored within the \texttt{PublicKey} object passed to that function. \texttt{PrivateKey.GeneratePublicKey} is an implementation of \textit{isogen} introduced in the previous chapter (see \autoref{sec:sidh_implementation} for details).\\
-The code above firstly initializes the public keys for Alice (\textcolor{keywordcol}{\texttt{PublicKey\_A}}) and Bob (\textcolor{keywordcol}{\texttt{PublicKey\_B}}). The previously created private keys of Alice and Bob are then used to fill the public key objects.\\
+The function \texttt{NewPublicKey} creates an object of type \texttt{PublicKey} using the passed parameter set (\texttt{sidh.FpXXX}) and the defined subject (\texttt{sidh.KeyVariantSidhA} indicates Alice and \texttt{sidh.KeyVariantSidhB} indicates Bob). Objects of type \texttt{PrivateKey} provide the function \texttt{PrivateKey.GeneratePublicKey} that generates the appropriate public key for a given private key. The resulting public key is stored within the \texttt{PublicKey} object passed to that function. \texttt{PrivateKey.GeneratePublicKey} is an implementation of \textit{isogen} introduced in the previous chapter (see \autoref{sec:sidh_implementation} for details).\\
+The code above firstly initializes the public keys for Alice (\textcolor{keywordcol}{\texttt{PublicKey\_A}}) and Bob (\textcolor{keywordcol}{\texttt{PublicKey\_B}}). The previously created private keys of Alice and Bob are then used to fill these public key objects.\\
 
 \subsubsection{Secret generation}
 
@@ -293,9 +293,9 @@ PrivateKey_A.DeriveSecret(SharedSecret_A, PublicKey_B)
 SharedSecret_B := make([]byte, PrivateKey_B.SharedSecretSize())
 PrivateKey_B.DeriveSecret(SharedSecret_B, PublicKey_A)
 \end{lstlisting}
-In order to create the shared secrets for Alice and Bob, the initially created private key objects provide the function \texttt{PrivateKey.DeriveSecret}. This function expects a public key and a previously allocated memory to store the shared secret in.\texttt{PrivateKey.DeriveSecret} is an implementation of \textit{isoex} introduced in the previous chapter (see \autoref{sec:sidh_implementation} for details).\\ 
+In order to create the shared secrets for Alice and Bob, the initially created private key objects provide the function \texttt{PrivateKey.DeriveSecret}. This function expects a public key and a previously allocated memory to store the shared secret in. \texttt{PrivateKey.DeriveSecret} is an implementation of \textit{isoex} introduced in the previous chapter (see \autoref{sec:sidh_implementation} for details).\\ 
 The code above firstly allocates the memory for a shared secret and finally generates the shared secret between Alice and Bob.
-
+\\
 \section{SIKE for Java}
 \textit{SIKE for Java} implements experimental supersingular isogeny cryptography in Java \parencite{SikeForJava2020github}. The library is developed by \textit{Wutra} in cooperation with \textit{Raiffeisen Bank International}. Besides a slow reference implementation which focuses on code readability, \textit{SIKE for Java} implements a optimized variant that focuses on performance and security. The library implements isogeny based \gls{PKE}, \gls{KEM} and \gls{SIDH} and supports the following parameter sets: \texttt{p434}, \texttt{p503}, \texttt{p610} and \texttt{p751}.\\
 Since Java applications run via the Java Virtual Machine (\gls{JVM})and are compiled during execution (Just-in-time compiler), the execution of Java programs is significantly slower than  executing C or GO programs, which compile the source code before the execution takes place (Ahead-of-time compiler). Thus, comparing SIDH implementations between Java and C/GO does not produce meaningful results. For that reason \textit{SIKE for Java} will not be considered for the benchmarks in this work.
