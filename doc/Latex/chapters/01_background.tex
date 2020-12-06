@@ -139,7 +139,7 @@ If an attacker wants to compute \gls{k_ab} it is necessary to break the \gls{RSA
 Note that once an attacker was able to compromise Bobs private key, all following exchanged shared secrets \gls{k_ab} are compromised as well. Thus, this protocol does not ensure perfect forward secrecy (\gls{PFS}).
 
 \subsection{Differences}
-Both presented protocols securely share a symmetric encryption key between two communicating subjects. However, there are some differences between \gls{KEM} and Diffie-Hellman. Firsty, while \glspl{KEM} transmit a shared secret from one subject to another, the calculation in the Diffie-Hellman protocol is decentralized. Thus, the shared secret will never be send through an insecure channel.\\
+Both presented protocols securely share a symmetric encryption key between two communicating subjects. However, there are some differences between \gls{KEM} and Diffie-Hellman. Firstly, while \glspl{KEM} transmit a shared secret from one subject to another, the calculation in the Diffie-Hellman protocol is decentralized. Thus, the shared secret will never be send through an insecure channel.\\
 Secondly, \gls{KEM} relies on a long-term asymmetric key pair which is used to encapsulate and decapsulate the randomly chosen shared secret. If the private key is compromised by an attacker, all following symmetric encrypted communication could be revealed. On the contrary, a compromised Diffie-Hellman key exchange would only affect the messages which are encrypted using the secret resulting from that single Diffie-Hellman handshake. All following \gls{DH} key exchanges are not compromised from the previously compromised exchange. Thus, \gls{DH} key exchanges might be used as the basis of a \gls{PFS} protocol.\\
 Thirdly, KEMs can be used offline: Since one subject (e.g the sending subject) chooses the secret key, data calculation and encryption can be performed without any previous communication with the receiver. Thus, no synchronization between the subjects is necessary to exchange encrypted data.
 
@@ -196,7 +196,7 @@ Summing up, quantum computers make use of quantum mechanical phenomena in order 
     \hline
       \gls{RSA} & Public key & Signatures, key establishment & No longer secure \\
 	\hline      
-      \gls{DSA} & Publiy key & Signatures, key exchange & No longer secure \\
+      \gls{DSA} & Public key & Signatures, key exchange & No longer secure \\
     \hline
       \gls{ECDH}, \gls{ECDSA} & Public key & Signatures, key exchange & No longer secure \\
     \hline
@@ -217,7 +217,7 @@ This section provides an overview over important post-quantum cryptography class
 Lattice-based cryptography is -- as the name suggests -- based on the mathematical construct of lattices\footnote{A lattice $l$ is a subgroup of $\mathbb{R}^n$. In the context of cryptography usually integer lattices are considered: $l \subseteq \mathbb{Z}^n$ \parencite{chi2015lattice}.}. There are different computational optimization problems involving lattices that are considered difficult to be solved even by quantum computers~\parencite{chi2015lattice}. In 1998, \gls{NTRU} was published as the first public-key system based on lattices ~\parencite{hoffstein1998ntru}. Since then \gls{NTRU} was continuously improved resulting in NTRUencrypt (public-key system) and \gls{NTRUsign} (digital signing algorithm). Furthermore, a fully homomorphic encryption scheme based on lattices was published in 2009~\parencite{gentry2009fully}.\\
 Lattice-based cryptography is characterized by simplicity and efficiency \parencite{chen2016report}. However, lattices encryption schemes have problems to prove security against known cryptoanalysis \parencite{chen2016report}.
 \subsubsection{Multivariate Cryptography}
-Multivariate cryptography are public key systems that are based on multivariate polynomials (e.g. $p(x,y)=x+2y$) over a finite field $\mathbb{F}$. The proof that solving systems of multivariate polynomials are NP-hard~\parencite{hartmanis1982computers} is the bsis of their security. This makes multivariate public key systems attractive for post-quantum cryptography; especially their short signatures make them a candidate for quantum-secure digital signature algorithms~\parencite{ding2017current}, e.g. the Rainbow signature scheme~\parencite{ding2005rainbow}.
+Multivariate cryptography are public key systems that are based on multivariate polynomials (e.g. $p(x,y)=x+2y$) over a finite field $\mathbb{F}$. The proof that solving systems of multivariate polynomials are NP-hard~\parencite{hartmanis1982computers} is the basis of their security. This makes multivariate public key systems attractive for post-quantum cryptography; especially their short signatures make them a candidate for quantum-secure digital signature algorithms~\parencite{ding2017current}, e.g. the Rainbow signature scheme~\parencite{ding2005rainbow}.
 \subsubsection{Code-based Cryptography}
 Code-based cryptographic primitives are build upon error-correcting codes. A public key system using error-correcting codes uses a public key to add errors to a given plaintext resulting in a ciphertext. Only the owner of the private key is able to correct these errors and to reconstruct the plaintext~\parencite{bernstein2017post}. \gls{McEliece}, published in 1978, was the first of those systems and it has not been broken until today~\parencite{mceliece1978public}. On the other hand, code-based cryptography requires large key sizes~\parencite{bernstein2017post}.\\
 Besides asymmetric cryptography, code-based schemes have been proposed for digital signatures, random number generators and cryptographic hash functions~\parencite{bernstein2017post}.
@@ -226,7 +226,7 @@ Hash-based signatures refer to the construction of digital signatures schemes ba
 The initially developed One-Time Signatures have the downside that a new public key pair is needed for each signature~\parencite{becker2008merkle}. In 1979, Merkle introduced the Merkle Signature Scheme (\gls{MSS}) which uses one public key for multiple signatures~\parencite{merkle1979secrecy}. Further improvements of \gls{MSS} introduced public keys usable for $2^{80}$ signatures. However, this also leads to longer signature sizes~\parencite{becker2008merkle}.
 
 \section{Isogeny-based Cryptography} \label{sec:isogeny-based_crypto}
-Isogeny-based cryptography was proposed in 2011 as a new cryptographic system that might resists quantum computing~\parencite{jao2011towards}. Besides the publication describing isogeny-based cryptgraphy, the authors also provided a reference implementation of a \gls{PKE} and a \gls{KEM} based on isogenies. This implementation is called \textit{\gls{SIKE}}~\parencite{sike2020spec}. Isogeny-based cryptography benfits from small key sizes compared to other post-quantum cryptography classes, however, their performance is comparatively slow~\parencite{sike2020spec}. The security of these primitives is based on finding isogenies between supersingular elliptic curves.\\
+Isogeny-based cryptography was proposed in 2011 as a new cryptographic system that might resists quantum computing~\parencite{jao2011towards}. Besides the publication describing isogeny-based cryptography, the authors also provided a reference implementation of a \gls{PKE} and a \gls{KEM} based on isogenies. This implementation is called \textit{\gls{SIKE}}~\parencite{sike2020spec}. Isogeny-based cryptography benefits from small key sizes compared to other post-quantum cryptography classes, however, their performance is comparatively slow~\parencite{sike2020spec}. The security of these primitives is based on finding isogenies between supersingular elliptic curves.\\
 In the following, the problem is firstly roughly illustrated. It is not indented to provide exact mathematical details about isogeny-based cryptography, since that would be beyond the scope of this thesis. However, one might become a intuition for supersingular isogenies. Subsequently, the central component of isogeny-based cryptography - namely the Supersingular Isogeny Diffie-Hellman (\gls{SIDH}) - is described. Finally, details of the reference implementation \gls{SIKE} are given and the security of \gls{SIDH} is considered.
 
 \subsection{Mathematics}
@@ -248,7 +248,7 @@ The idea behind isogeny-based cryptography might be illustrated as follows:
 Usually, in asymmetric asymmetric cryptography the hard mathematical problem consists in computing the private key while knowing the public key. To be more precise: Find the isogeny $\phi_A: E \to E_A$ while knowing curves $E$ and $E_A$ is considered to be a quantum-resistant challenge. In literature, this is formally defined as \textit{\gls{SIDH} problem}~\parencite{sike2020spec}. 
 \\
 This key pair, however, is not used to decrypt or encrypt data. In fact, the procedure is very similar to the previously introduced Diffie-Hellman key exchange where the key pair is used to establish a shared secret between two communication partners.
-In its core, isogney-based cryptography creates a shared secret via a Diffie-Hellman like procedure. This is called \textit{Supersingular Isogeny Diffie Hellman (\gls{SIDH})}.
+In its core, isogeny-based cryptography creates a shared secret via a Diffie-Hellman like procedure. This is called \textit{Supersingular Isogeny Diffie Hellman (\gls{SIDH})}.
 
 \subsection{Supersingular Isogeny Diffie-Hellman (\gls{SIDH})}
 
@@ -273,7 +273,7 @@ Starting point of \gls{SIDH} is a publicly known supersingular elliptic curve E.
   \label{fig:sidh}
 \end{figure}
 
-\subsection{Implemenation Details}
+\subsection{Implementation Details}\label{sec:sidh_implementation}
 
 The implementation details described in this subsection are based on \textit{\gls{SIKE}}~\parencite{sike2020spec}, the first proposed supersingular isogeny-based cryptography. The following explanations also illustrate the connection between SIDH and isogeny-based \gls{PKE} and \gls{KEM}.\\
 The reference implementation of \gls{SIKE} provides two fundamental functions: \textit{isogen} and \textit{isoex}. Both are used, to implement the previously introduced \gls{SIDH} algorithm. Note that the secret key \textit{sk} is represented as a random integer. Moreover, the used parameters that represent the applied supersingular curve are also passed to \textit{isogen} and \textit{isoex}. For simplicity, this is not listed here, however the exact parameter sets for all curves are listed in the specification of \gls{SIKE}~\parencite{sike2020spec}.
@@ -292,20 +292,20 @@ The reference implementation of \gls{SIKE} provides two fundamental functions: \
   \end{tabular}
    \caption[Core functions of the \gls{SIKE} reference implementation]{Core functions of the \gls{SIKE} reference implementation.}\label{tab:sike_core_functions}
 \end{table}
-The function \textit{isogen} takes a secret key (random integer), the parameter set and the party (Alice or Bob) as input and generates the public key. The shared secret is generated by \textit{isoex} taking the own secret key and the foreign public key as input. Additionally \textit{isoex} also expect the used parameter set and the party of the key exchange. The party needs to be specified since Alice and Bob do not use the same logic to generate their keys and the shared secret. The reason for this lies in the mathematical foundation of isogeny based crpytography. The \gls{SIDH} key exchange procedure with respect to \textit{isogen} and \textit{isoex} works as follows:
+The function \textit{isogen} takes a secret key (random integer), the parameter set and the party (Alice or Bob) as input and generates the public key. The shared secret is generated by \textit{isoex} taking the own secret key and the foreign public key as input. Additionally \textit{isoex} also expect the used parameter set and the party of the key exchange. The party needs to be specified since Alice and Bob do not use the same logic to generate their keys and the shared secret. The reason for this lies in the mathematical foundation of isogeny based cryptography. The \gls{SIDH} key exchange procedure with respect to \textit{isogen} and \textit{isoex} works as follows:
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{background/sike_sidh}
   \caption[\gls{SIDH} based on \textit{isogen} and \textit{isoex}]{\gls{SIDH} based on \textit{isogen} and \textit{isoex}: After generating a random secret key \textit{sk} each subject computes its public key \textit{pk}. After the exchange of public keys each subject finally calculates the shared secret \textit{sec}. It is important that both parties use the same parameter set \textit{param}} \label{fig:sike-sidh}
 \end{figure}
-Besides this key exchange algorithm, \gls{SIKE} provides a complete asymmetric encryption scheme  and a key encpsulation mechansim  ~\parencite{sike2020spec}. Both of these schemes build upon the here described \gls{SIKE} core functions \textit{isogen} and \textit{isoex}.
+Besides this key exchange algorithm, \gls{SIKE} provides a complete asymmetric encryption scheme  and a key encapsulation mechanism  ~\parencite{sike2020spec}. Both of these schemes build upon the here described \gls{SIKE} core functions \textit{isogen} and \textit{isoex}.
 
 \subsubsection{Isogeny-based \gls{PKE}}
-The isogeny-based public-key encryption system (\gls{PKE}, \autoref{fig:sike-pke}) consists of three algorithms:
+The isogeny-based public-key encryption system (\gls{PKE}, \autoref{fig:sike-pke}) consists of three algorithms. The authors of \gls{SIKE} state, that their \gls{PKE} scheme is a modification of the classical hashed ElGamal scheme by replacing classical Diffie-Hellman procedure with quantum-secure \gls{SIDH} \parencite{sike2020spec}.
 \begin{enumerate}
-\item \textit{Gen} generates a key pair ($sk_A$,$pk_A$)
-\item \textit{\gls{Enc}} encrypts a given plaintext $m$ using a foreign public key $pk_B$ and a random $r$.
-\item \textit{\gls{Dec}} decodes a given ciphertext using the secret key $sk_B$
+\item \textit{Gen} generates a key pair ($sk_A$,$pk_A$). Firstly, the private key is chosen at random. The public key is then derived from the random private key using \textit{isogen}.
+\item \textit{\gls{Enc}} encrypts a given plaintext $m$ using a foreign public key $pk_B$ and a random $r$. Internally, the random $r$ is treated as private key: $c_0$ is derived from $r$ via \textit{isogen}. A secret is then generated by \textit{isoex} using the foreign public key $pk_B$ and the private key $r$. The hash of this secret $F(sec)$ is finally XORed with the given plaintext $m$ and saved in $c_1$. The function returns $c_0$ and $c_1$.
+\item \textit{\gls{Dec}} decodes a given ciphertext ($c_0$,$c_1$) using the secret key $sk_B$. Firstly, a secret is derived by \textit{isoex} using the private key $sk_B$ and foreign public key $c_0$. The hash of this secret $F(sec)$ is XORed with the ciphertext $c_1$ returning the plaintext $m$. The function returns $m$.
 \end{enumerate}
 Note that the function $F$ used in \textit{\gls{Enc}} and \textit{\gls{Dec}} is a key derivation function.
 
@@ -317,9 +317,9 @@ Note that the function $F$ used in \textit{\gls{Enc}} and \textit{\gls{Dec}} is 
 \end{figure}
 
 \subsubsection{Isogeny-based \gls{KEM}}
-The isogeny-based key encapsulation mechanism (\gls{KEM}, \autoref{fig:sike-kem}) consists of three algorithms:
+The construciton of the isogeny-based key encapsulation mechanism (\gls{KEM}, \autoref{fig:sike-kem}) consists of three algorithms. The authors of \gls{SIKE} state to build a \textit{IND-CCA} \gls{KEM} from their \gls{PKE} \parencite{sike2020spec} (by applying a slight modification of the transformation published by Hofheinz, Hüvelsmann and Klitz \parencite{cryptoeprint:2017:604}). This essentially means, that an attacker can not distinguish two ciphertexts created by the \gls{KEM} decryption function. The following algorithms describe how the isogeny-based \gls{KEM} is created from the isogeny-based \gls{PKE} described above. The goal of this construction is to build an \textit{IND-CCA} \gls{KEM} (see \parencite{cryptoeprint:2017:604} for details).
 \begin{enumerate}
-\item \textit{Gen} generates a key pair ($sk_A$,$pk_A$) and a secret \textit{s}.
+\item \textit{KeyGen} generates a key pair ($sk_A$,$pk_A$) and a secret \textit{s}. The private key $sk$ and the secret $s$ are chosen at random. The public key is derived from the random private key using \textit{isogen}.
 \item \textit{Encaps} takes a given public key $pk_B$ as input and calculates a secret to share named \textit{K}. Moreover, the function returns a ciphertext \textit{c} that will be forwarded to the owner of the public key.
 \item \textit{Decaps} takes a ciphertext \textit{c} and the output of \textit{Gen} as input in order to retrieve the shared secret \textit{K}.
 \end{enumerate}
@@ -346,10 +346,10 @@ The proposed parameter sets of \gls{SIKE} are named after the bit length of the 
 
 \begin{itemize}
 \itemsep0em 
-	\item \texttt{p434} supposed to satisfy \gls{NIST} securiy level 1 (AES128)
-	\item \texttt{p503} supposed to satisfy \gls{NIST} securiy level 2 (SHA256)
-	\item \texttt{p610} supposed to satisfy \gls{NIST} securiy level 3 (AES192)
-	\item \texttt{p751} supposed to satisfy \gls{NIST} securiy level 5 (AES256)
+	\item \texttt{p434} supposed to satisfy \gls{NIST} security level 1 (AES128)
+	\item \texttt{p503} supposed to satisfy \gls{NIST} security level 2 (SHA256)
+	\item \texttt{p610} supposed to satisfy \gls{NIST} security level 3 (AES192)
+	\item \texttt{p751} supposed to satisfy \gls{NIST} security level 5 (AES256)
 \end{itemize}
 All isogeny-based cryptographic primitives presented in this chapter can be initialized with one of these parameter sets to match a certain security level. In the context of this thesis the used parameter sets are also called \textit{curves}.
 \\\\

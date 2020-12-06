@@ -1024,6 +1024,42 @@
       \field{title}{A gentle introduction to isogeny-based cryptography}
       \field{year}{2016}
     \endentry
+    \entry{cryptoeprint:2017:604}{misc}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=405c6134bda3e13e109f9c9e4c3dbc6c}{%
+           family={Hofheinz},
+           familyi={H\bibinitperiod},
+           given={Dennis},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ef560d47cb95868232d5a27bb4e0548f}{%
+           family={Hövelmanns},
+           familyi={H\bibinitperiod},
+           given={Kathrin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3a691fc6ff884507edcdc40d4048c61a}{%
+           family={Kiltz},
+           familyi={K\bibinitperiod},
+           given={Eike},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1f477e3a07cb27967f11d49018dc61b7}
+      \strng{fullhash}{1f477e3a07cb27967f11d49018dc61b7}
+      \strng{bibnamehash}{1f477e3a07cb27967f11d49018dc61b7}
+      \strng{authorbibnamehash}{1f477e3a07cb27967f11d49018dc61b7}
+      \strng{authornamehash}{1f477e3a07cb27967f11d49018dc61b7}
+      \strng{authorfullhash}{1f477e3a07cb27967f11d49018dc61b7}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Cryptology ePrint Archive, Report 2017/604}
+      \field{note}{\url{https://eprint.iacr.org/2017/604}}
+      \field{title}{A Modular Analysis of the Fujisaki-Okamoto Transformation}
+      \field{year}{2017}
+    \endentry
     \entry{jaques2019quantum}{inproceedings}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=fd6b7c223a2d6ac13db71a9e0e765925}{%
@@ -1048,8 +1084,8 @@
       \strng{authorbibnamehash}{e8a43c5613855176f96c525ed257a3d7}
       \strng{authornamehash}{e8a43c5613855176f96c525ed257a3d7}
       \strng{authorfullhash}{e8a43c5613855176f96c525ed257a3d7}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Annual International Cryptology Conference}
@@ -1181,8 +1217,8 @@
       \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
       \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
       \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://github.com/microsoft/PQCrypto-SIDH}}
@@ -1205,8 +1241,8 @@
       \strng{authorbibnamehash}{3f07179a07b2a7661e37a3fd0e652a07}
       \strng{authornamehash}{3f07179a07b2a7661e37a3fd0e652a07}
       \strng{authorfullhash}{3f07179a07b2a7661e37a3fd0e652a07}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://github.com/cloudflare/circl}}
@@ -1229,8 +1265,8 @@
       \strng{authorbibnamehash}{0ddf88a055f9f884a51afb532fe8a02b}
       \strng{authornamehash}{0ddf88a055f9f884a51afb532fe8a02b}
       \strng{authorfullhash}{0ddf88a055f9f884a51afb532fe8a02b}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://github.com/wultra/sike-java}}
@@ -1274,8 +1310,8 @@
       \endverb
     \endentry
     \entry{gowiki2020compiler}{misc}{}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://github.com/golang/go/wiki/CompilerOptimizations}}
       \field{note}{Accessed: 2020-09-25}
@@ -1305,8 +1341,8 @@
       \strng{authorbibnamehash}{f19baaa727d6dc55b7f1ce8b6d7699fe}
       \strng{authornamehash}{f19baaa727d6dc55b7f1ce8b6d7699fe}
       \strng{authorfullhash}{f19baaa727d6dc55b7f1ce8b6d7699fe}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Micro}
@@ -1390,35 +1426,106 @@
       \field{title}{Sec 2: Recommended elliptic curve domain parameters}
       \field{year}{2010}
     \endentry
-    \entry{1056220}{article}{}
+    \entry{lenstra2006key}{report}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=92e159a96b3e8adafb90586f146ba7d6}{%
-           family={{Hellman}},
-           familyi={H\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod},
+        {{un=0,uniquepart=base,hash=e49f62d1d6c5a5661a0423b6b7072f39}{%
+           family={Lenstra},
+           familyi={L\bibinitperiod},
+           given={Arjen\bibnamedelima K},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{92e159a96b3e8adafb90586f146ba7d6}
-      \strng{fullhash}{92e159a96b3e8adafb90586f146ba7d6}
-      \strng{bibnamehash}{92e159a96b3e8adafb90586f146ba7d6}
-      \strng{authorbibnamehash}{92e159a96b3e8adafb90586f146ba7d6}
-      \strng{authornamehash}{92e159a96b3e8adafb90586f146ba7d6}
-      \strng{authorfullhash}{92e159a96b3e8adafb90586f146ba7d6}
+      \list{institution}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{e49f62d1d6c5a5661a0423b6b7072f39}
+      \strng{fullhash}{e49f62d1d6c5a5661a0423b6b7072f39}
+      \strng{bibnamehash}{e49f62d1d6c5a5661a0423b6b7072f39}
+      \strng{authorbibnamehash}{e49f62d1d6c5a5661a0423b6b7072f39}
+      \strng{authornamehash}{e49f62d1d6c5a5661a0423b6b7072f39}
+      \strng{authorfullhash}{e49f62d1d6c5a5661a0423b6b7072f39}
       \field{sortinit}{9}
       \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Information Theory}
-      \field{number}{4}
-      \field{title}{A cryptanalytic time-memory trade-off}
-      \field{volume}{26}
-      \field{year}{1980}
-      \field{pages}{401\bibrangedash 406}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1109/TIT.1980.1056220
-      \endverb
+      \field{title}{Key lengths}
+      \field{type}{techreport}
+      \field{year}{2006}
+    \endentry
+    \entry{gupta2015birthday}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=29c5545d059da72bd69fdb5476e04f97}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{29c5545d059da72bd69fdb5476e04f97}
+      \strng{fullhash}{29c5545d059da72bd69fdb5476e04f97}
+      \strng{bibnamehash}{29c5545d059da72bd69fdb5476e04f97}
+      \strng{authorbibnamehash}{29c5545d059da72bd69fdb5476e04f97}
+      \strng{authornamehash}{29c5545d059da72bd69fdb5476e04f97}
+      \strng{authorfullhash}{29c5545d059da72bd69fdb5476e04f97}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is Birthday attack??}
+      \field{year}{2015}
+    \endentry
+    \entry{barker2016recommendation}{report}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fe89f812e7e0e1b0369322681b2dcd7c}{%
+           family={Barker},
+           familyi={B\bibinitperiod},
+           given={Elaine},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{2}{%
+        {National Institute of Standards}%
+        {Technology}%
+      }
+      \strng{namehash}{fe89f812e7e0e1b0369322681b2dcd7c}
+      \strng{fullhash}{fe89f812e7e0e1b0369322681b2dcd7c}
+      \strng{bibnamehash}{fe89f812e7e0e1b0369322681b2dcd7c}
+      \strng{authorbibnamehash}{fe89f812e7e0e1b0369322681b2dcd7c}
+      \strng{authornamehash}{fe89f812e7e0e1b0369322681b2dcd7c}
+      \strng{authorfullhash}{fe89f812e7e0e1b0369322681b2dcd7c}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Recommendation for Key Management, Part 1: General}
+      \field{type}{techreport}
+      \field{year}{2016}
+    \endentry
+    \entry{adalier2015efficient}{inproceedings}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c42a036fc89b9603fa95b3db15f20ca4}{%
+           family={Adalier},
+           familyi={A\bibinitperiod},
+           given={Mehmet},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3d2b4f1426f413f00ae6e82d08b39c95}
+      \strng{fullhash}{3d2b4f1426f413f00ae6e82d08b39c95}
+      \strng{bibnamehash}{3d2b4f1426f413f00ae6e82d08b39c95}
+      \strng{authorbibnamehash}{3d2b4f1426f413f00ae6e82d08b39c95}
+      \strng{authornamehash}{3d2b4f1426f413f00ae6e82d08b39c95}
+      \strng{authorfullhash}{3d2b4f1426f413f00ae6e82d08b39c95}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Workshop on Elliptic Curve Cryptography Standards}
+      \field{title}{Efficient and secure elliptic curve cryptography implementation of Curve P-256}
+      \field{volume}{66}
+      \field{year}{2015}
     \endentry
     \entry{Hudson:GGC}{manual}{}
       \name{author}{1}{}{%
@@ -1435,8 +1542,8 @@
       \strng{authorbibnamehash}{e6fa7eb067e1819925321626a3eae3ad}
       \strng{authornamehash}{e6fa7eb067e1819925321626a3eae3ad}
       \strng{authorfullhash}{e6fa7eb067e1819925321626a3eae3ad}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Getting to Go: The Journey of Go's Garbage Collector}
@@ -1460,8 +1567,8 @@
       \strng{authorbibnamehash}{3d6954dd72e53b9015d2a6e6546058f8}
       \strng{authornamehash}{3d6954dd72e53b9015d2a6e6546058f8}
       \strng{authorfullhash}{3d6954dd72e53b9015d2a6e6546058f8}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{GO FAQ - Garbage Collection}
@@ -1471,6 +1578,36 @@
       \endverb
       \verb{url}
       \verb https://golang.org/doc/faq#garbage_collection
+      \endverb
+    \endentry
+    \entry{1056220}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=92e159a96b3e8adafb90586f146ba7d6}{%
+           family={{Hellman}},
+           familyi={H\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{92e159a96b3e8adafb90586f146ba7d6}
+      \strng{fullhash}{92e159a96b3e8adafb90586f146ba7d6}
+      \strng{bibnamehash}{92e159a96b3e8adafb90586f146ba7d6}
+      \strng{authorbibnamehash}{92e159a96b3e8adafb90586f146ba7d6}
+      \strng{authornamehash}{92e159a96b3e8adafb90586f146ba7d6}
+      \strng{authorfullhash}{92e159a96b3e8adafb90586f146ba7d6}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Information Theory}
+      \field{number}{4}
+      \field{title}{A cryptanalytic time-memory trade-off}
+      \field{volume}{26}
+      \field{year}{1980}
+      \field{pages}{401\bibrangedash 406}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/TIT.1980.1056220
       \endverb
     \endentry
     \entry{cryptoeprint:2020:431}{misc}{}
