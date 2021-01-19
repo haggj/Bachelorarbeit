@@ -1,31 +1,28 @@
-from src.ecdh import ECDH
-
-from src.sike import Sike_Generic, Sike_Generic_Compressed
-from src.sike import Sike_x64, Sike_x64_Compressed
-from src.sike import Sike_Reference, Sike_Base
-
-from src.circl import CIRCL_x64, CIRCL_Base, CIRCL_Generic
-
-from src.microsoft import Microsoft_x64, Microsoft_x64_Compressed
-from src.microsoft import Microsoft_Generic, Microsoft_Generic_Compressed
-from src.microsoft import Microsoft_Base, get_matching
-
-from src.utils.benchmarks import Benchmark
-
+import logging
+import os
+import os.path
 from unittest import TestCase
 from unittest.mock import MagicMock, patch
-import logging
-import sys
-import os, os.path
 
+from src.circl import CIRCL_x64, CIRCL_Base, CIRCL_Generic
+from src.ecdh import ECDH
+from src.microsoft import Microsoft_Base, get_matching
+from src.microsoft import Microsoft_Generic, Microsoft_Generic_Compressed
+from src.microsoft import Microsoft_x64, Microsoft_x64_Compressed
+from src.sike import Sike_Generic, Sike_Generic_Compressed
+from src.sike import Sike_Reference, Sike_Base
+from src.sike import Sike_x64, Sike_x64_Compressed
+from src.utils.benchmarks import Benchmark
 
 logger = logging.getLogger()
 
+
 class TestImplementations(TestCase):
     def test_init(self):
-        implementations =[
-            #ECDH
-            #ECDH,
+        # This test tries to compile each implementation
+        implementations = [
+            # ECDH
+            ECDH,
 
             # #SIKE
             Sike_Reference,
@@ -34,7 +31,7 @@ class TestImplementations(TestCase):
             Sike_x64,
             Sike_x64_Compressed,
 
-            #CIRCL
+            # CIRCL
             CIRCL_x64,
             CIRCL_Generic,
 
@@ -50,13 +47,13 @@ class TestImplementations(TestCase):
             self.assertEqual(type(obj), impl)
 
             # Compile
-            with patch("src.base.BaseImplementation.callgrind", return_value=Benchmark("",0)):
-                with patch("src.base.BaseImplementation.massif", return_value=Benchmark("",0)):
-                    with patch("src.base.BaseImplementation.perf", return_value=Benchmark("",0)):
-                        with patch("src.base.BaseImplementation.hotspots", return_value = []):
-                            logger.info("Testing compilation for " + impl.__name__)
+            with patch("src.base.BaseImplementation.callgrind", return_value=Benchmark("", 0)):
+                with patch("src.base.BaseImplementation.massif", return_value=Benchmark("", 0)):
+                    with patch("src.base.BaseImplementation.perf", return_value=Benchmark("", 0)):
+                        with patch("src.base.BaseImplementation.hotspots", return_value=[]):
+                            logger.info("Testing compilation for %s", impl.__name__)
                             for curve in obj.curves:
-                                logger.info("\tHandle parameter" + str(curve))
+                                logger.info("\tHandle parameter %s", str(curve))
                                 obj.benchmark_curve(curve)
                                 self.assertTrue(os.path.isfile(obj.path + "/build/benchmark"))
                                 os.remove(obj.path + "/build/benchmark")
@@ -81,6 +78,7 @@ class TestECDH(TestCase):
         self.assertEqual(result["PrivateKeyA"], 0)
         self.assertEqual(result["PrivateKeyB"], 0)
 
+
 class TestCIRCL(TestCase):
     def test_map_functions(self):
         val = MagicMock()
@@ -102,6 +100,7 @@ class TestCIRCL(TestCase):
         self.assertEqual(result["PrivateKeyA"], val)
         self.assertEqual(result["PrivateKeyB"], val)
 
+
 class TestMicrosoft(TestCase):
     def test_map_functions(self):
         val = MagicMock()
@@ -116,14 +115,14 @@ class TestMicrosoft(TestCase):
         base = Microsoft_Base(5, "path", "args")
         result = base.map_functions(dic)
         self.assertEqual(len(result), 6)
-        for key, value in result.items():
+        for _, value in result.items():
             self.assertEqual(value, val)
-    
+
     def test_get_matching(self):
-        dic ={
-            "a":1,
-            "b":2,
-            "bb":3,
+        dic = {
+            "a": 1,
+            "b": 2,
+            "bb": 3,
             "cb": 4
         }
         self.assertEqual(get_matching(dic, "a"), 1)
@@ -191,3 +190,31 @@ class TestSIKE(TestCase):
         self.assertEqual(result["SecretB"], val)
         self.assertEqual(result["PrivateKeyA"], val)
         self.assertEqual(result["PrivateKeyB"], val)
+
+    def test_generic_map_function(self):
+        obj = Sike_Generic(5)
+        param = MagicMock()
+        with patch("src.sike.Sike_Base.sike_map_functions") as mock:
+            obj.map_functions(param)
+        mock.assert_called_once_with(param, False)
+
+    def test_generic_comp_map_function(self):
+        obj = Sike_Generic_Compressed(5)
+        param = MagicMock()
+        with patch("src.sike.Sike_Base.sike_map_functions") as mock:
+            obj.map_functions(param)
+        mock.assert_called_once_with(param, True)
+
+    def test_x64_map_function(self):
+        obj = Sike_x64(5)
+        param = MagicMock()
+        with patch("src.sike.Sike_Base.sike_map_functions") as mock:
+            obj.map_functions(param)
+        mock.assert_called_once_with(param, False)
+
+    def test_x64_comp_map_function(self):
+        obj = Sike_x64_Compressed(5)
+        param = MagicMock()
+        with patch("src.sike.Sike_Base.sike_map_functions") as mock:
+            obj.map_functions(param)
+        mock.assert_called_once_with(param, True)

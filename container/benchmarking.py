@@ -1,58 +1,69 @@
-from src.ecdh import ECDH
-
-from src.sike import Sike_Generic, Sike_Generic_Compressed
-from src.sike import Sike_x64, Sike_x64_Compressed
-from src.sike import Sike_Reference
-
-from src.circl import CIRCL_x64, CIRCL_Generic
-
-from src.microsoft import Microsoft_x64, Microsoft_x64_Compressed
-from src.microsoft import Microsoft_Generic, Microsoft_Generic_Compressed
-
-from src.utils.plot_graph import generate_graph
-from src.utils.plot_table import generate_table
-from src.utils.caching import load_from_json, save_as_json
-
+"""
+Entrypoint of the benchmarking suite.
+"""
 import signal
 import sys
+import argparse
 
-# Number of repetitions for each benchmark
-N = 20
+from src.circl import CIRCL_x64, CIRCL_Generic
+from src.ecdh import ECDH
+from src.microsoft import Microsoft_Generic, Microsoft_Generic_Compressed
+from src.microsoft import Microsoft_x64, Microsoft_x64_Compressed
+from src.output.caching import load_from_json, save_as_json
+from src.output.plot_graph import generate_graph
+from src.output.plot_table import generate_table
+from src.sike import Sike_Generic, Sike_Generic_Compressed
+from src.sike import Sike_Reference
+from src.sike import Sike_x64, Sike_x64_Compressed
+
+# Number of repetitions for each benchmark (N>=2)
+N = 1
 RESULTS = {}
 
-def benchmark(Class):
-    name = Class.__name__
 
-    instance = Class(N)
+def benchmark(impl):
+    name = impl.__name__
 
     if name not in RESULTS:
-        instance = Class(N)
+        instance = impl(N)
         RESULTS[name] = instance.get_statistics()
 
-def signal_handler(sig,frame):
+
+def signal_handler(sig, frame):
     save_as_json(RESULTS)
     sys.exit(0)
 
+
+def parse_arguments():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--no-cache', dest='cache', action='store_false')
+    parser.set_defaults(cache=True)
+    return parser.parse_args()
+
+
 if __name__ == "__main__":
+    # Register signal handler
     signal.signal(signal.SIGINT, signal_handler)
-    RESULTS = load_from_json()
 
-    from collections import Counter
-    print(Counter(RESULTS["ECDH"].get_curve_by_name("secp256").find_benchmark("SecretA").values))
-    print(Counter(RESULTS["ECDH"].get_curve_by_name("secp256").find_benchmark("SecretB").values))
+    # Parse arguments
+    args = parse_arguments()
 
-    implementations =[
-        #ECDH
-        #ECDH,
+    RESULTS = {}
+    if args.cache:
+        RESULTS = load_from_json()
+
+    implementations = [
+        # ECDH
+        ECDH,
 
         # #SIKE
-        #Sike_Reference,
+        Sike_Reference,
         Sike_Generic,
         Sike_Generic_Compressed,
         Sike_x64,
         Sike_x64_Compressed,
 
-        #CIRCL
+        # CIRCL
         CIRCL_x64,
         CIRCL_Generic,
 
@@ -70,9 +81,3 @@ if __name__ == "__main__":
 
     generate_table(RESULTS)
     generate_graph(RESULTS)
-
-    for imp in RESULTS:
-        print(imp)
-        for curve in RESULTS[imp].curves:
-            print(str(curve.name) + ": " + str(curve.benchmark_average("Memory")))
-

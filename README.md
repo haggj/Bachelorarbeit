@@ -9,6 +9,7 @@ This repository contains code to benchmark currently available SIDH implementati
     - x64 Implementation Compressed
 - CIRCL
     - x64 Implementation
+    - Generic Implementation
 - Microsoft
     - Generic Implementation
     - Generic Implementation Compressed
@@ -18,12 +19,19 @@ This repository contains code to benchmark currently available SIDH implementati
 # Usage
 
 1. Make sure you have installed ```docker``` on your system.
-1. Checkout this repository.
-2. Run the script ```./run.sh```. This will:
-    - build the docker container specified in the Dockerfile
-    - run all benchmarks within that docker environment
-    - extract diagrams and a html overview into a subfolder ```data/``` within your current directory
-3. Analyse output files in ```data/```.
+2. Checkout this repository.
+3. The following commands are available by running the script ```run.sh```:
+    - ```./run.sh build```<br>
+      This command builds the docker container with all needed dependencies.
+    - ```./run.sh benchmark```<br>
+      This command builds and runs the benchmarking suite. The generated data by the benchmarking suite will be available in new ```data/``` subfolder in your current directory (for details see secion output files below).
+    - ```./run.sh test```<br>
+      This command executes unittests of the benchmarking suite.
+    - ```./run.sh coverage```<br>
+      This command executes unittests and list the coverage of the tests.
+    - ```./run.sh bash```<br>
+      Opens a interactive terminal within the docker container
+4. Analyse output files in ```data/```.
 
 # Output files
 The following output files are generated:
@@ -36,7 +44,7 @@ The following output files are generated:
 
 - ```data/cached.json```: Contains cached JSON Data, that can be read by the application to produce the output graphs and html. The idea is to save the internal status for later use. The benchmarking application checks if the file "cached.json" exists in it's local directory. If the file is found, the cached data is used and benchmarking takes less time. If you want to use cached data within the docker container, simply copy that file to .cached/cached.json.
 
-# SIDH Security Level
+# SIDH Security Levels
 The assumed security levels of the SIDH parameters, as described by [NIST](https://csrc.nist.gov/CSRC/media/Projects/Post-Quantum-Cryptography/documents/call-for-proposals-final-dec-2016.pdf) and [SIKE](https://sike.org/files/SIDH-spec.pdf):
 
 	p434: 128-AES

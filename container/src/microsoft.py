@@ -1,5 +1,7 @@
+"""
+Benchmarking Microsoft PQCrypto-SIDH implementations.
+"""
 from src.base import BaseImplementation
-
 
 curves = ["434", "503", "610", "751"]
 
@@ -9,6 +11,7 @@ def get_matching(dic, search):
     if found:
         return found[0]
     return None
+
 
 class Microsoft_Base(BaseImplementation):
     def __init__(self, count, path, args):

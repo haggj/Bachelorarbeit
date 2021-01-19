@@ -1,4 +1,8 @@
+"""
+Helper functions to extract data from callgrind files.
+"""
 import gprof2dot
+
 
 def extract_hotspots(callgrind, count):
     """Opens a callgrind.out file and finds the most expensive functions
@@ -14,28 +18,26 @@ def extract_hotspots(callgrind, count):
     parser = gprof2dot.CallgrindParser(f)
     profile = parser.parse()
 
-    
     class Function:
-        def __init__(self, name, instructions, percentage):
+        def __init__(self, name, instructions, percent):
             self.absolute_instructions = instructions
             self.name = name
-            self.percentage = percentage
+            self.percentage = percent
 
         def __str__(self):
-            return self.name.split("/")[-1] + ": " + str(round(self.percentage*100,2)) + "%"
-    
+            return self.name.split("/")[-1] + ": " + str(round(self.percentage * 100, 2)) + "%"
+
     functions = []
     for name, fun in profile.functions.items():
-        percentage=None
-        samples=None
+        percentage = None
+        samples = None
         for event, value in fun.events.items():
-            if event.name=="Time ratio":
-                percentage=value
-            elif event.name=="Samples":
-                samples=value
+            if event.name == "Time ratio":
+                percentage = value
+            elif event.name == "Samples":
+                samples = value
         if percentage and samples:
             functions.append(Function(name, samples, percentage))
-
 
     functions = sorted(functions, key=lambda func: func.percentage, reverse=True)
     return [str(f) for f in functions[:count]]
@@ -49,7 +51,8 @@ def extract_function_calls(callgrind, function):
         function (string): Name of a called function
 
     Returns:
-       dictionary that contains all called function with the specified function as keys (values are the measured opcounts)
+       dictionary that contains all called function with the specified function as keys
+       (values are the measured opcounts)
     """
     f = open(callgrind)
     parser = gprof2dot.CallgrindParser(f)

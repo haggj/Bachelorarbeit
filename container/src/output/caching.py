@@ -1,12 +1,17 @@
+"""
+Functions that load and save data. This is used to cache and load data between runs of the benchmarking suite.
+"""
 import json
 import os
 
 from src.base import bcolors, BenchmarkCurve, BenchmarkImpl, Benchmark
 
 cached_file = ".cached/cached.json"
+
+
 class MyEncoder(json.JSONEncoder):
-    def default(self, obj):
-        dic = dict(obj.__dict__)
+    def default(self, o):
+        dic = dict(o.__dict__)
         if "impl" in dic:
             del dic["impl"]
         return dic
@@ -18,7 +23,7 @@ def save_as_json(result):
             json.dump(result, f, cls=MyEncoder)
     else:
         with open("data/cached.json", 'w+') as f:
-            json.dump(result, f,  cls=MyEncoder)
+            json.dump(result, f, cls=MyEncoder)
 
 
 def deserialize_impl(dic):

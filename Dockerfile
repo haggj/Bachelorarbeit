@@ -21,14 +21,13 @@ ENV PYTHONUNBUFFERED=1
 # Install libgmp3 and wget
 RUN apt-get -y install  libgmp3-dev
 
-COPY openssl openssl
-
 # Install openssl from source with debug symbols
-# RUN mkdir /opt/openssl
-# RUN tar xfvz openssl/openssl-1.1.1g.tar.gz --directory /opt/openssl
-# RUN cd /opt/openssl/openssl-1.1.1g; ./config --prefix=/usr/local/ssl --openssldir=/usr/local/ssl -g3 -ggdb --debug -O3
-# RUN cd /opt/openssl/openssl-1.1.1g; make
-# RUN cd /opt/openssl/openssl-1.1.1g; make install
+COPY openssl openssl
+RUN mkdir /opt/openssl
+RUN tar xfvz openssl/openssl-1.1.1g.tar.gz --directory /opt/openssl
+RUN cd /opt/openssl/openssl-1.1.1g; ./config --prefix=/usr/local/ssl --openssldir=/usr/local/ssl -g3 -ggdb --debug -O3
+RUN cd /opt/openssl/openssl-1.1.1g; make
+RUN cd /opt/openssl/openssl-1.1.1g; make install
 
 # Download and compile PQCrypto-SIDH
 RUN mkdir Microsoft
@@ -47,14 +46,16 @@ RUN sudo mv go /usr/local
 ENV GOROOT=/usr/local/go 
 ENV PATH=$GOROOT/bin:$PATH 
 RUN go get "golang.org/x/sys/cpu"
+
+# Install CIRCL
 RUN go get "github.com/cloudflare/circl/"
 RUN cd /root/go/src/github.com/cloudflare/circl; git checkout 0440a499b7237516c7ba535bd1420241e13d385c
 
-# Install perf
+# Install PERF
 RUN apt-get update
 RUN apt-get install -y linux-tools-common linux-tools-generic linux-tools-`uname -r`
 
-# Prepare SIKE
+# Install SIKE
 COPY container/SIKE/.src SIKE/.src
 RUN unzip SIKE/.src/SIKE-Round2.zip -d SIKE/.src/
 

@@ -1,7 +1,10 @@
+"""
+Benchmarking CIRCL implementations.
+"""
 from src.base import BaseImplementation
 
+curves = ["434", "503", "751"]
 
-curves = ["434","503","751"]
 
 class CIRCL_Base(BaseImplementation):
     def __init__(self, count, path, args):
@@ -18,9 +21,11 @@ class CIRCL_Base(BaseImplementation):
         }
         return res
 
+
 class CIRCL_x64(CIRCL_Base):
     def __init__(self, count):
         super().__init__(count=count, path="CIRCL/", args="ARCH=amd64")
+
 
 class CIRCL_Generic(CIRCL_Base):
     def __init__(self, count):

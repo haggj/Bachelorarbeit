@@ -1,28 +1,31 @@
-
+"""
+Benchmarking SIKE implementations.
+"""
 from src.base import BaseImplementation
 from src.utils.callgrind import extract_function_calls
 
-
 curves = ["434", "503", "610", "751"]
+
 
 class Sike_Base(BaseImplementation):
 
-    def __init__(self, count, path, args, callgrind_main, curves):
-        super().__init__(count, path, args, callgrind_main, curves)
+    def map_functions(self, callgrind_result: dict) -> dict:
+        raise NotImplementedError("Mapping not implemented")
 
     def sike_map_functions(self, callgrind_result: dict, compressed: bool) -> dict:
         add = ""
         if compressed:
             add = "Compressed_"
         res = {
-                "PrivateKeyA": callgrind_result["random_mod_order_A"],
-                "PublicKeyA": callgrind_result["EphemeralKeyGeneration_" + add + "A"],
-                "PrivateKeyB": callgrind_result["random_mod_order_B"],
-                "PublicKeyB": callgrind_result["EphemeralKeyGeneration_" + add + "B"],
-                "SecretA": callgrind_result["EphemeralSecretAgreement_" + add + "A"],
-                "SecretB": callgrind_result["EphemeralSecretAgreement_" + add + "B"]
-            }
+            "PrivateKeyA": callgrind_result["random_mod_order_A"],
+            "PublicKeyA": callgrind_result["EphemeralKeyGeneration_" + add + "A"],
+            "PrivateKeyB": callgrind_result["random_mod_order_B"],
+            "PublicKeyB": callgrind_result["EphemeralKeyGeneration_" + add + "B"],
+            "SecretA": callgrind_result["EphemeralSecretAgreement_" + add + "A"],
+            "SecretB": callgrind_result["EphemeralSecretAgreement_" + add + "B"]
+        }
         return res
+
 
 class Sike_Generic(Sike_Base):
     def __init__(self, count):
@@ -80,17 +83,17 @@ class Sike_Reference(Sike_Base):
         result = {}
 
         c1 = extract_function_calls(
-            self.path+"/benchmarks/callgrind.out", "benchmark_keygen_A")
+            self.path + "/benchmarks/callgrind.out", "benchmark_keygen_A")
         c2 = extract_function_calls(
-            self.path+"/benchmarks/callgrind.out", "benchmark_secret_A")
+            self.path + "/benchmarks/callgrind.out", "benchmark_secret_A")
         c1.update(c2)
         for key in c1.keys():
             result[str(key) + "_A"] = c1[key]
 
         c1 = extract_function_calls(
-            self.path+"/benchmarks/callgrind.out", "benchmark_keygen_B")
+            self.path + "/benchmarks/callgrind.out", "benchmark_keygen_B")
         c2 = extract_function_calls(
-            self.path+"/benchmarks/callgrind.out", "benchmark_secret_B")
+            self.path + "/benchmarks/callgrind.out", "benchmark_secret_B")
         c1.update(c2)
         for key in c1.keys():
             result[str(key) + "_B"] = c1[key]
