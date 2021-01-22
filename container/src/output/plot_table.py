@@ -20,7 +20,7 @@ def generate_html_table(results):
     Path("data").mkdir(parents=True, exist_ok=True)
     with open('data/result.html', 'w') as file:
         file.write(
-            preHTML + "<p>All values (except Memory) are averages of absolute instruction counts. <br> All values in brackets are the standard derivation over N=100 samples.</p>" + \
+            preHTML + "<p>All values (except Memory) are averages of absolute instruction counts. <br> All values in brackets are the standard derivation over N samples.</p>" + \
             "<p>*Maximum memory consumption in bytes.</p>")
         for name, impl in results.items():
             file.write("<h1>" + name + "</h1>")

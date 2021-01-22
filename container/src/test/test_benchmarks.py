@@ -2,7 +2,7 @@ import statistics
 from unittest import TestCase
 from unittest.mock import MagicMock, patch
 
-from src.utils.benchmarks import Benchmark, BenchmarkCurve, BenchmarkImpl, format_number
+from src.utils.benchmarks import Benchmark, BenchmarkCurve, BenchmarkImpl, format_number, map_round
 
 
 class TestBenchmark(TestCase):
@@ -156,7 +156,6 @@ class TestBenchmarkImpl(TestCase):
         result = self.impl.get_curve_by_name("test")
         self.assertEqual(result, curve)
 
-
 class TestFormatNumber(TestCase):
     def test_all(self):
         # Int as  input
@@ -173,3 +172,17 @@ class TestFormatNumber(TestCase):
 
         # Invalid input
         self.assertEqual(format_number("abc"), "abc")
+
+class TestMapRound(TestCase):
+    def test_all(self):
+        # String as  input
+        self.assertEqual(map_round("3000000"), int(3))
+
+        # String as input
+        self.assertEqual(map_round("300000"), 0.3)
+
+        # int as  input
+        self.assertEqual(map_round(3000000), int(3))
+
+        # int as input
+        self.assertEqual(map_round(300000), 0.3)

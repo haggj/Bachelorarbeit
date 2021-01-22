@@ -117,35 +117,38 @@ def _generate(result, implementations):
 
     curves = ["434", "503", "610", "751"]
     for curve in curves:
-        # 1. Collect all benchmarks for specific curve
+        # 1. Collect all benchmarks of specific curve
         data_instructions = []
         data_memory = []
         for name in implementations:
             impl = result.get(name)
             if not impl:
-                print("Could not find " + name)
                 continue
             found = impl.get_curve_by_name(_map_to_ecdh(curve) if impl.name == "ECDH" else curve)
-            if found:
-                # Instructions
-                values, deviations = found.get_benchmarks_for_plot()
-                dic = {
-                    "name": impl.name + ("(Reference Value)" if impl.name == "ECDH" else ""),
-                    "values": values,
-                    "deviations": deviations,
-                }
-                data_instructions.append(dic)
+            if not found:
+                continue
+            # implementation has benchmarks for specifc curve -> add
 
-                # Memory
-                values = [round(found.benchmark_average("Memory") / 1000, 1)]
-                deviations = [round(found.benchmark_stdev("Memory") / 1000, 1)]
-                dic = {
-                    "name": impl.name + ("(Reference Value)" if impl.name == "ECDH" else ""),
-                    "values": values,
-                    "deviations": deviations,
-                }
-                data_memory.append(dic)
+            # Add instruction benchmarks
+            values, deviations = found.get_benchmarks_for_plot()
+            dic = {
+                "name": impl.name + ("(Reference Value)" if impl.name == "ECDH" else ""),
+                "values": values,
+                "deviations": deviations,
+            }
+            data_instructions.append(dic)
 
+            # Add memory benchmarks
+            values = [round(found.benchmark_average("Memory") / 1000, 1)]
+            deviations = [round(found.benchmark_stdev("Memory") / 1000, 1)]
+            dic = {
+                "name": impl.name + ("(Reference Value)" if impl.name == "ECDH" else ""),
+                "values": values,
+                "deviations": deviations,
+            }
+            data_memory.append(dic)
+
+        # 2. Generate graph for all benchmarks of specific curve
         _plot_any(data=data_instructions,
                  labels=['Keygen A', 'Keygen B', 'Secret A', 'Secret B'],
                  log=True,
@@ -160,21 +163,24 @@ def _generate(result, implementations):
                  file=str(curve) + "_mem",
                  y_axis="Memory in Kilobytes")
 
-    # Compare parameters among Microsoft_x64 + ECDH
-    name = "CIRCL_x64"
+
+def generate_graph_for(implementation, ecdh=None):
+    # Generates graphs for a single implementation (includes parameters are listed within on graph)
+    # Both parameters are objects of type BenchmarkImpl
+
     data_instructions = []
     data_memory = []
+    name = implementation.name
+
+    curves = ["434", "503", "610", "751"]
     for curve in curves:
-        impl = result.get(name)
-        if not impl:
-            break
-        found = impl.get_curve_by_name(curve)
+        found = implementation.get_curve_by_name(curve)
         if not found:
             continue
         # Instructions
         values, deviations = found.get_benchmarks_for_plot()
         dic = {
-            "name": "p" + curve,
+            "name": name + " p" + curve,
             "values": values,
             "deviations": deviations,
         }
@@ -184,33 +190,32 @@ def _generate(result, implementations):
         values = [round(found.benchmark_average("Memory") / 1000, 1)]
         deviations = [round(found.benchmark_stdev("Memory") / 1000, 1)]
         dic = {
-            "name": "p" + curve,
+            "name": name + " p" + curve,
             "values": values,
             "deviations": deviations,
         }
         data_memory.append(dic)
 
-    ecdh = result.get("ECDH")
+    if ecdh:
+        for curve in ecdh.curves:
+            if name == "CIRCL_x64" and curve.name == "secp384":
+                continue
+            values, deviations = curve.get_benchmarks_for_plot()
+            data_instructions.append(
+                {
+                    "name": "ECDH " + curve.name,
+                    "values": values,
+                    "deviations": deviations,
+                }
 
-    for curve in ecdh.curves:
-        if name == "CIRCL_x64" and curve.name == "secp384":
-            continue
-        values, deviations = curve.get_benchmarks_for_plot()
-        data_instructions.append(
-            {
-                "name": "ECDH " + curve.name,
-                "values": values,
-                "deviations": deviations,
-            }
-
-        )
-        data_memory.append(
-            {
-                "name": "ECDH " + curve.name,
-                "values": [round(curve.benchmark_average("Memory") / 1000, 1)],
-                "deviations": [round(curve.benchmark_stdev("Memory") / 1000, 1)],
-            }
-        )
+            )
+            data_memory.append(
+                {
+                    "name": "ECDH " + curve.name,
+                    "values": [round(curve.benchmark_average("Memory") / 1000, 1)],
+                    "deviations": [round(curve.benchmark_stdev("Memory") / 1000, 1)],
+                }
+            )
 
     _plot_any(data=data_instructions,
              labels=['Keygen A', 'Keygen B', 'Secret A', 'Secret B'],
@@ -225,7 +230,8 @@ def _generate(result, implementations):
              file=name + "_mem",
              y_axis="Memory in Kilobytes")
 
-def generate_graph(result):
+
+def generate_graphs(result):
     """
     This function generates graphs based on the measured benchmarking data. Modify the list implementations below to
     determine if an implementation is included into the output graph.
@@ -237,9 +243,11 @@ def generate_graph(result):
         result (dict): Results from the benchmarking suite
 
     Returns:
-        Saves the output graphs in an intermediate folder within the docker container. Once the suite ran sucessfully,
+        Saves the output graphs in an intermediate folder within the docker container. Once the suite ran successfully,
         you can access these graphs in the data/ subfolder of your current directory.
     """
+
+    # Do not include more than 6 implementations to obtain nice graphs
     implementations = [
         # SIKE
         # "Sike_Reference",

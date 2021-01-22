@@ -10,18 +10,15 @@ from src.ecdh import ECDH
 from src.microsoft import Microsoft_Generic, Microsoft_Generic_Compressed
 from src.microsoft import Microsoft_x64, Microsoft_x64_Compressed
 from src.output.caching import load_from_json, save_as_json
-from src.output.plot_graph import generate_graph
+from src.output.plot_graph import generate_graphs, generate_graph_for
 from src.output.plot_table import generate_table
 from src.sike import Sike_Generic, Sike_Generic_Compressed
 from src.sike import Sike_Reference
 from src.sike import Sike_x64, Sike_x64_Compressed
 
-# Number of repetitions for each benchmark (N>=2)
-N = 1
 RESULTS = {}
 
-
-def benchmark(impl):
+def benchmark(impl, N):
     name = impl.__name__
 
     if name not in RESULTS:
@@ -36,9 +33,15 @@ def signal_handler(sig, frame):
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--no-cache', dest='cache', action='store_false')
-    parser.set_defaults(cache=True)
+    parser.add_argument('-N', dest='repetitions', action='store', type=int, default=100, help='repetitions of measurements')
+    parser.add_argument('--no-cache', dest='cache', action='store_false', help='disable the use of cached data')
     return parser.parse_args()
+
+def check_positive(value):
+    ivalue = int(value)
+    if ivalue <= 0:
+        raise argparse.ArgumentTypeError("%s is a negative number" % value)
+    return ivalue
 
 
 if __name__ == "__main__":
@@ -47,11 +50,17 @@ if __name__ == "__main__":
 
     # Parse arguments
     args = parse_arguments()
-
+    N = args.repetitions
+    print("\nInvoked benchmarking suites with following arguments:")
+    print("N\t=\t{}".format(N))
+    print("Cache\t=\t{}".format(args.cache))
+    
+    # Load cached data if requested
     RESULTS = {}
     if args.cache:
         RESULTS = load_from_json()
 
+    # Implementations to benchmark
     implementations = [
         # ECDH
         ECDH,
@@ -74,10 +83,11 @@ if __name__ == "__main__":
         Microsoft_x64_Compressed,
     ]
 
+    # Execute benchmarks
     for implementation in implementations:
-        benchmark(implementation)
+        benchmark(implementation, N)
 
+    # Generate output files
     save_as_json(RESULTS)
-
     generate_table(RESULTS)
-    generate_graph(RESULTS)
+    generate_graphs(RESULTS)

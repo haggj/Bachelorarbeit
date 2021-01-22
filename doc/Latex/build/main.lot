@@ -7,29 +7,29 @@
 \contentsline {table}{\numberline {2.1}{\ignorespaces Impact of quantum computers on modern encryption schemes}}{10}{table.caption.15}%
 \contentsline {table}{\numberline {2.2}{\ignorespaces Core functions of the \gls {SIKE} reference implementation}}{14}{table.caption.21}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Overview over existing \gls {SIDH} implementations}}{28}{table.caption.44}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Overview over existing \gls {SIDH} implementations}}{29}{table.caption.44}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces NIST security levels with SIDH and ECDH parameters}}{41}{table.caption.55}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Comparison of key sizes}}{62}{table.caption.77}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces NIST security levels with SIDH and ECDH parameters}}{42}{table.caption.55}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Comparison of key sizes}}{63}{table.caption.77}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Comparing instructions of \textit {generic optimized} \gls {SIDH} implementations}}{64}{table.caption.79}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces Comparing memory consumption of \textit {generic optimized} \gls {SIDH} implementations}}{64}{table.caption.80}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces Comparing instructions of \textit {x64 optimized} \gls {SIDH} implementations}}{64}{table.caption.82}%
-\contentsline {table}{\numberline {6.4}{\ignorespaces Comparing memory consumption of \textit {x64 optimized} \gls {SIDH} implementations}}{65}{table.caption.83}%
-\contentsline {table}{\numberline {6.5}{\ignorespaces Comparing executed instructions between \gls {ECDH} and \gls {SIDH}}}{65}{table.caption.84}%
-\contentsline {table}{\numberline {6.6}{\ignorespaces Comparing allocated memory between \gls {ECDH} and \gls {SIDH}}}{65}{table.caption.85}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Comparing instructions of \textit {generic optimized} \gls {SIDH} implementations}}{65}{table.caption.79}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Comparing memory consumption of \textit {generic optimized} \gls {SIDH} implementations}}{65}{table.caption.80}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Comparing instructions of \textit {x64 optimized} \gls {SIDH} implementations}}{65}{table.caption.82}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces Comparing memory consumption of \textit {x64 optimized} \gls {SIDH} implementations}}{66}{table.caption.83}%
+\contentsline {table}{\numberline {6.5}{\ignorespaces Comparing executed instructions between \gls {ECDH} and \gls {SIDH}}}{66}{table.caption.84}%
+\contentsline {table}{\numberline {6.6}{\ignorespaces Comparing allocated memory between \gls {ECDH} and \gls {SIDH}}}{66}{table.caption.85}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Benchmarks for ECDH}}{69}{table.caption.86}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces Benchmarks for Sike Reference}}{70}{table.caption.87}%
-\contentsline {table}{\numberline {A.3}{\ignorespaces Benchmarks for Sike Generic}}{71}{table.caption.88}%
-\contentsline {table}{\numberline {A.4}{\ignorespaces Benchmarks for Sike Generic Compressed}}{72}{table.caption.89}%
-\contentsline {table}{\numberline {A.5}{\ignorespaces Benchmarks for Sike x64}}{73}{table.caption.90}%
-\contentsline {table}{\numberline {A.6}{\ignorespaces Benchmarks for Sike x64 Compressed}}{74}{table.caption.91}%
-\contentsline {table}{\numberline {A.7}{\ignorespaces Benchmarks for Microsoft Generic}}{75}{table.caption.92}%
-\contentsline {table}{\numberline {A.8}{\ignorespaces Benchmarks for Microsoft Generic Compressed}}{76}{table.caption.93}%
-\contentsline {table}{\numberline {A.9}{\ignorespaces Benchmarks for Microsoft x64}}{77}{table.caption.94}%
-\contentsline {table}{\numberline {A.10}{\ignorespaces Benchmarks for Microsoft x64 Compressed}}{78}{table.caption.95}%
-\contentsline {table}{\numberline {A.11}{\ignorespaces Benchmarks for CIRCL x64}}{79}{table.caption.96}%
-\contentsline {table}{\numberline {A.12}{\ignorespaces Benchmarks for CIRCL Generic}}{80}{table.caption.97}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Benchmarks for ECDH}}{70}{table.caption.86}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Benchmarks for Sike Reference}}{71}{table.caption.87}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces Benchmarks for Sike Generic}}{72}{table.caption.88}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces Benchmarks for Sike Generic Compressed}}{73}{table.caption.89}%
+\contentsline {table}{\numberline {A.5}{\ignorespaces Benchmarks for Sike x64}}{74}{table.caption.90}%
+\contentsline {table}{\numberline {A.6}{\ignorespaces Benchmarks for Sike x64 Compressed}}{75}{table.caption.91}%
+\contentsline {table}{\numberline {A.7}{\ignorespaces Benchmarks for Microsoft Generic}}{76}{table.caption.92}%
+\contentsline {table}{\numberline {A.8}{\ignorespaces Benchmarks for Microsoft Generic Compressed}}{77}{table.caption.93}%
+\contentsline {table}{\numberline {A.9}{\ignorespaces Benchmarks for Microsoft x64}}{78}{table.caption.94}%
+\contentsline {table}{\numberline {A.10}{\ignorespaces Benchmarks for Microsoft x64 Compressed}}{79}{table.caption.95}%
+\contentsline {table}{\numberline {A.11}{\ignorespaces Benchmarks for CIRCL x64}}{80}{table.caption.96}%
+\contentsline {table}{\numberline {A.12}{\ignorespaces Benchmarks for CIRCL Generic}}{81}{table.caption.97}%
 \addvspace {10\p@ }

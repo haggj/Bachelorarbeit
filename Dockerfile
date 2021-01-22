@@ -2,6 +2,8 @@ FROM ubuntu:18.04
 
 WORKDIR /usr/src/app
 
+### 1. Install all dependencies for benchmarking suite
+
 # Install valgrind
 RUN apt-get -y update
 RUN apt-get -y install valgrind
@@ -21,7 +23,21 @@ ENV PYTHONUNBUFFERED=1
 # Install libgmp3 and wget
 RUN apt-get -y install  libgmp3-dev
 
-# Install openssl from source with debug symbols
+# Install GO
+RUN wget https://dl.google.com/go/go1.15.2.linux-amd64.tar.gz
+RUN sudo tar -xvf go1.15.2.linux-amd64.tar.gz
+RUN sudo mv go /usr/local
+ENV GOROOT=/usr/local/go 
+ENV PATH=$GOROOT/bin:$PATH 
+RUN go get "golang.org/x/sys/cpu"
+
+# Install PERF
+RUN apt-get update
+RUN apt-get install -y linux-tools-common linux-tools-generic linux-tools-`uname -r`
+
+### 2. Install SIDH libraries + OpenSSL for ECDH
+
+# Install OpenSSL with debu symbols (via local source)
 COPY openssl openssl
 RUN mkdir /opt/openssl
 RUN tar xfvz openssl/openssl-1.1.1g.tar.gz --directory /opt/openssl
@@ -29,7 +45,7 @@ RUN cd /opt/openssl/openssl-1.1.1g; ./config --prefix=/usr/local/ssl --openssldi
 RUN cd /opt/openssl/openssl-1.1.1g; make
 RUN cd /opt/openssl/openssl-1.1.1g; make install
 
-# Download and compile PQCrypto-SIDH
+# Download and compile PQCrypto-SIDH (from github)
 RUN mkdir Microsoft
 RUN mkdir Microsoft/.src
 RUN mkdir Microsoft/.src/x64
@@ -39,23 +55,11 @@ RUN cp -r Microsoft/.src/x64/* Microsoft/.src/generic/
 RUN cd Microsoft/.src/x64; make ARCH=x64 CC=gcc OPT_LEVEL=FAST USE_MULX=TRUE USE_ADX=TRUE
 RUN cd Microsoft/.src/generic; make ARCH=x64 CC=gcc OPT_LEVEL=GENERIC USE_MULX=FALSE USE_ADX=FALSE
 
-# Install go dependencies
-RUN wget https://dl.google.com/go/go1.15.2.linux-amd64.tar.gz
-RUN sudo tar -xvf go1.15.2.linux-amd64.tar.gz
-RUN sudo mv go /usr/local
-ENV GOROOT=/usr/local/go 
-ENV PATH=$GOROOT/bin:$PATH 
-RUN go get "golang.org/x/sys/cpu"
-
-# Install CIRCL
+# Install CIRCL (via github)
 RUN go get "github.com/cloudflare/circl/"
 RUN cd /root/go/src/github.com/cloudflare/circl; git checkout 0440a499b7237516c7ba535bd1420241e13d385c
 
-# Install PERF
-RUN apt-get update
-RUN apt-get install -y linux-tools-common linux-tools-generic linux-tools-`uname -r`
-
-# Install SIKE
+# Install SIKE (via local source)
 COPY container/SIKE/.src SIKE/.src
 RUN unzip SIKE/.src/SIKE-Round2.zip -d SIKE/.src/
 

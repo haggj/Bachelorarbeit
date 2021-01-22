@@ -191,6 +191,17 @@ class TestSIKE(TestCase):
         self.assertEqual(result["PrivateKeyA"], val)
         self.assertEqual(result["PrivateKeyB"], val)
 
+    def test_sike_reference(self):
+        sike = Sike_Reference(MagicMock())
+        with patch("src.sike.extract_function_calls", return_value={"test": 5}):
+            with patch("src.sike.Sike_Reference.map_functions") as mock_map:
+                sike.callgrind_result()
+        mock_map.assert_called_once_with({"test_A": 5, "test_B": 5})
+    
+    def test_base_map_function(self):
+        sike =  Sike_Base(MagicMock(), MagicMock(), MagicMock(), MagicMock(), MagicMock())
+        self.assertRaises(NotImplementedError, sike.map_functions, {})
+
     def test_generic_map_function(self):
         obj = Sike_Generic(5)
         param = MagicMock()

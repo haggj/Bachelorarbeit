@@ -127,7 +127,7 @@ class BaseImplementation:
         list_cycles = []
         list_ghz = []
 
-        for _ in range(5):
+        for _ in progressbar.progressbar(range(self.count), redirect_stdout=True, prefix="    Perf       "):
             command = "perf stat -o tmp.txt ./{path}/build/benchmark".format(path=self.path)
             bash(command)
             out = open("tmp.txt").read()
@@ -195,7 +195,7 @@ class BaseImplementation:
         benchmark_curve = BenchmarkCurve(curve)
         benchmark_curve.add_benchmarks(self.callgrind())
         benchmark_curve.add_benchmarks(self.massif())
-        benchmark_curve.add_benchmarks(self.perf())
+        #benchmark_curve.add_benchmarks(self.perf())
         benchmark_curve.set_hotspots(self.hotspots())
 
         return benchmark_curve

@@ -39,17 +39,17 @@ To formalize this procedure, again assume \textit{p} as plaintext and \textit{c}
 \gls{Dec}(c, d_{Bob}) = p
 \end{align*}
 \\
-In contrast to \textit{symmetric} encryption, no secret key needs to be exchanged. However, the encryption and decryption of data using \textit{asymmetric} encryption require intensive mathematical computations. Hence, the encryption of big sets of data using asymmetric encryption is not efficient.\\
+In contrast to \textit{symmetric} encryption, no secret key needs to be exchanged. However, the encryption and decryption of data using \textit{asymmetric} encryption require intensive mathematical computations. Hence, the encryption of big sets of data using asymmetric encryption is not efficient~\parencite{ITSicherheit}.\\
 One the other hand, \textit{symmetric} encryption algorithms are usually based on simple operations, such as bit shifting or XOR. This can be implemented efficiently in software and hardware. Thus, the practical relevance of \textit{symmetric} encryption is enormous~\parencite{ITSicherheit}.
 \\
-As stated above, securely exchanged keys are a precondition for the use of efficient \textit{symmetric} encryption schemes. In order to exchange arbitrary keys securely, two major key exchange protocols are available.
+As stated above, securely exchanged keys are a precondition for the use of efficient \textit{symmetric} encryption schemes. In order to exchange arbitrary keys securely, two major key exchange principles are available: Key agreement and key encapsulation, which are investigated in the following.
 
 \section{Key Exchange}
-This section describes and compares the major protocols to establish a shared secret between two communicating subjects: The \textit{Diffie-Hellman Key-Exchange} and a \textit{Key Encapsulation Mechanism}.
+This section describes and compares the basic protocols to establish a shared secret between two communicating subjects: The \textit{Diffie-Hellman Key-Exchange} (key agreement) and \textit{RSA-KEM} (key encapsulation).
 
-\subsection{Diffie-Hellman Key-Exchange}
+\subsection{Key Agreement}
 
-The Diffie-Hellman key exchange was introduced by Whitfield Diffie and Martin Hellman in 1976 ~\parencite{diffie1976new}. This protocol creates a shared secret between two subjects. The resulting shared key of the protocol is calculated decentralized and is never transported through an insecure channel.
+In a Key Agreement protocol all participating parties influence the resulting shared secret, e.g. the Diffie-Hellman key exchange. This protocol was introduced by Whitfield Diffie and Martin Hellman in 1976 ~\parencite{diffie1976new}. The resulting shared key of the protocol is calculated decentralized and is never transported through an insecure channel.
 
 \subsubsection{Protocol}
 
@@ -91,7 +91,7 @@ This procedure can also be illustrated in the following diagram emphasizing the 
 \end{figure}
 
 \subsubsection{Security}
-The security of the Diffie-Hellman protocol is based on the challenge: Given the public generator element $g$, the public key of Alice $g^a$ and the public key of Bob $g^b$, compute $g^{ab}$.
+The security of the Diffie-Hellman protocol is based on the challenge: Given the public generator element $g$, the public key of Alice $A$ and the public key of Bob $B$, compute the shared secret $g^{ab}$.
 If an attacker wants to compute $g^{ab}$, she needs to compute the private keys $a$ and $b$ of Alice and Bob. Since only the public keys $A=g^a$ and $B=g^b$ are exchanged, it suffices to compute:
 \begin{equation*}
 \begin{split}
@@ -100,7 +100,7 @@ a &= \log_g A \bmod p
 \end{split}
 \end{equation*}
 \\
-Hence, the security of the classical Diffie-Hellman key exchange is based on the discrete logarithm problem considered difficult to be solved by classical computers (see \autoref{discrete_log_problem}). However, if an attacker is able to solve this challenge, this would neither compromise any keys from the past nor any future keys of the communication (this is called \textit{perfect forward secrecy}, short \textit{\gls{PFS}}~\parencite{ITSicherheit}). Another Diffie-Hellman handshake would challenge the attacker with the discrete logarithm problem again. Thus, the Diffie-Hellman key exchange may be used as efficient \gls{PFS} protocol when keys are renewed regularly.\\
+Hence, the security of the classical Diffie-Hellman key exchange is based on the discrete logarithm problem considered difficult to be solved by classical computers (see \autoref{discrete_log_problem}). Note, if an attacker is able to solve this challenge, this would neither compromise any keys from the past nor any future keys of the communication (this is called \textit{perfect forward secrecy}, short \textit{\gls{PFS}}~\parencite{ITSicherheit}). Another Diffie-Hellman handshake would generate a fresh and completely independent new shared secret. This would challenge the attacker with the discrete logarithm problem again. Thus, the Diffie-Hellman key exchange may be used as efficient \gls{PFS} protocol when keys are renewed regularly.\\
 In modern cryptography elliptic curves are often used to increase the security of the Diffie-Hellman key exchange (\gls{ECDH}). The participants have to agree on an elliptic curve and a point $P$ on that curve. In order to generate a shared secret \gls{k_ab} \gls{ECDH} follows the same principles as described above. However, the protocol is adopted to work on elliptic curves. The advantage of \gls{ECDH} is the increased security strength while using the same key size as the classical Diffie-Hellman protocol~\parencite{ITSicherheit}.
 \\
 Note that the introduced protocol does not authenticate the participating subjects and does not guarantee integrity. Thus, this simple protocol may be exploited by a Man-In-The-Middle attack. A more advanced protocol using certificates and signed messages can be implemented, to guarantee authentication and integrity~\parencite{ITSicherheit}.
@@ -135,8 +135,8 @@ k_{AB} = h^{-1}(m1)
 \end{enumerate}
 
 \subsubsection{Security}
-If an attacker wants to compute \gls{k_ab} it is necessary to break the \gls{RSA} encryption $RSA_{enc}(m, e_{Bob})$ in order to reveal $m$. Applying the inverse mapping function $h^{-1}$ then yields the secret key \gls{k_ab}. In order to break the \gls{RSA} encryption it is sufficient to compute the private key of Bob given his public key. This computation is assumed to be equally demanding as solving the factorization problem (see \autoref{factorization_problem}) for big numbers~\parencite{rsa2005problem}.\\
-Note that once an attacker was able to compromise Bobs private key, all following exchanged shared secrets \gls{k_ab} are compromised as well. Thus, this protocol does not ensure perfect forward secrecy (\gls{PFS}).
+If an attacker wants to compute \gls{k_ab} it is necessary to break the \gls{RSA} encryption $RSA_{enc}(m, e_{Bob})$ in order to reveal $m$. Applying the inverse mapping function $h^{-1}$ then yields the secret key \gls{k_ab}. In order to break the \gls{RSA} encryption it is sufficient to compute the private key of Bob given his public key. This computation is assumed to be equally demanding as solving the factorization problem (see \autoref{factorization_problem}) for big numbers~\parencite{rsa2005problem}. Thus, the RSA encryption is considered to be secure.\\
+Note that once an attacker was able to compromise Bobs long term private key, all following exchanged shared secrets \gls{k_ab} using this key are compromised as well. Thus, this protocol does not ensure perfect forward secrecy (\gls{PFS}).
 
 \subsection{Differences}
 Both presented protocols securely share a symmetric encryption key between two communicating subjects. However, there are some differences between \gls{KEM} and Diffie-Hellman. Firstly, while \glspl{KEM} transmit a shared secret from one subject to another, the calculation in the Diffie-Hellman protocol is decentralized. Thus, the shared secret will never be send through an insecure channel.\\
@@ -226,7 +226,7 @@ The initially developed One-Time Signatures have the downside that a new public 
 
 \section{Isogeny-based Cryptography} \label{sec:isogeny-based_crypto}
 Isogeny-based cryptography was proposed in 2011 as a new cryptographic system that might resists quantum computing~\parencite{jao2011towards}. Besides describing isogeny-based cryptography, the authors also provided a reference implementation for a \gls{PKE} and a \gls{KEM} based on isogenies. This implementation is called \textit{\gls{SIKE}}~\parencite{sike2020spec}. Isogeny-based cryptography benefits from small key sizes compared to other post-quantum cryptography classes, however, their performance is comparatively slow~\parencite{sike2020spec}. The security of these primitives is based on finding isogenies between supersingular elliptic curves.\\
-In the following, the problem is firstly roughly illustrated. It is not indented to provide exact mathematical details about isogeny-based cryptography, since that would be beyond the scope of this thesis. However, one might become an intuition for supersingular isogenies. Subsequently, the central component of isogeny-based cryptography - namely the Supersingular Isogeny Diffie-Hellman (\gls{SIDH}) - is described. Finally, details of the reference implementation \gls{SIKE} are given and the security of \gls{SIDH} is considered.
+In the following, the problem is firstly roughly illustrated. It is not indented to provide exact mathematical details about isogeny-based cryptography, since that would be beyond the scope of this thesis. However, one might become an intuition for supersingular isogenies. Subsequently, the central building block of isogeny-based cryptography - namely the Supersingular Isogeny Diffie-Hellman (\gls{SIDH}) - is described. Finally, details of the reference implementation \gls{SIKE} are given and the security of \gls{SIDH} is considered.
 
 \subsection{Mathematics}
 This section is adopted from~\citetitle{urbanik2017friendly}~\parencite{urbanik2017friendly} and~\citetitle{costello2019supersingular}~\parencite{costello2019supersingular}.\\
@@ -246,7 +246,7 @@ The idea behind isogeny-based cryptography might be illustrated as follows:
 \end{enumerate}
 Usually, in asymmetric asymmetric cryptography the hard mathematical problem consists in computing the private key while knowing the public key. To be more precise: Find the isogeny $\phi_A: E \to E_A$ while knowing curves $E$ and $E_A$ is considered to be a quantum-resistant challenge. In literature, this is formally defined as \textit{\gls{SIDH} problem}~\parencite{sike2020spec}. 
 \\
-This key pair, however, is not used to decrypt or encrypt data. In fact, the procedure is very similar to the previously introduced Diffie-Hellman key exchange where the key pair is used to establish a shared secret between two communication partners.
+This key pair, however, is not used as long term key to decrypt or encrypt data. In fact, the procedure is very similar to the previously introduced Diffie-Hellman key exchange where the key pair is used to establish a shared secret between two communication partners. In particular, the authors of \textit{\gls{SIKE}} state, that key recovery of static \textit{\gls{SIDH}} keys is possible~\parencite{sike2020spec}.
 In its core, isogeny-based cryptography creates a shared secret via a Diffie-Hellman like procedure. This is called \textit{Supersingular Isogeny Diffie Hellman (\gls{SIDH})}.
 
 \subsection{Supersingular Isogeny Diffie-Hellman (\gls{SIDH})}
@@ -291,7 +291,7 @@ The reference implementation of \gls{SIKE} provides two fundamental functions: \
   \end{tabular}
    \caption[Core functions of the \gls{SIKE} reference implementation]{Core functions of the \gls{SIKE} reference implementation.}\label{tab:sike_core_functions}
 \end{table}
-The function \textit{isogen} takes a secret key (random integer), the parameter set and the party (Alice or Bob) as input and generates the public key. The shared secret is generated by \textit{isoex} taking the own secret key and the foreign public key as input. Additionally \textit{isoex} also expect the used parameter set and the party of the key exchange. The party needs to be specified since Alice and Bob do not use the same logic to generate their keys and the shared secret. The reason for this lies in the mathematical foundation of isogeny based cryptography. The \gls{SIDH} key exchange procedure with respect to \textit{isogen} and \textit{isoex} works as follows:
+The function \textit{isogen} takes a secret key (random integer), the parameter set and the party (Alice or Bob) as input and generates the public key. The shared secret is generated by \textit{isoex} taking the own secret key and the foreign public key as input. Additionally \textit{isoex} also expects the used parameter set and the party of the key exchange. The party needs to be specified since Alice and Bob do not use the same logic to generate their keys and the shared secret. The reason for this lies in the mathematical foundation of isogeny based cryptography. The \gls{SIDH} key exchange procedure with respect to \textit{isogen} and \textit{isoex} works as follows:
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{background/sike_sidh}
@@ -300,13 +300,13 @@ The function \textit{isogen} takes a secret key (random integer), the parameter 
 Besides this key exchange algorithm, \gls{SIKE} provides a complete asymmetric encryption scheme  and a key encapsulation mechanism  ~\parencite{sike2020spec}. Both of these schemes build upon the here described \gls{SIKE} core functions \textit{isogen} and \textit{isoex}.
 
 \subsubsection{Isogeny-based \gls{PKE}}
-The isogeny-based public-key encryption system (\gls{PKE}, \autoref{fig:sike-pke}) consists of three algorithms. The authors of \gls{SIKE} state, that their \gls{PKE} scheme is a modification of the classical hashed ElGamal scheme by replacing classical Diffie-Hellman procedure with quantum-secure \gls{SIDH} \parencite{sike2020spec}.
+The isogeny-based public-key encryption system (\gls{PKE}, \autoref{fig:sike-pke}) consists of three algorithms. The authors of \gls{SIKE} state, that their \gls{PKE} scheme is a modification of the classical hashed ElGamal scheme by replacing classical Diffie-Hellman procedure with quantum-secure \gls{SIDH} yielding a \textit{IND-CPA} secure encryption scheme~\parencite{sike2020spec} .
 \begin{enumerate}
 \item \textit{Gen} generates a key pair ($sk_A$,$pk_A$). Firstly, the private key is chosen at random. The public key is then derived from the random private key using \textit{isogen}.
 \item \textit{\gls{Enc}} encrypts a given plaintext $m$ using a foreign public key $pk_B$ and a random $r$. Internally, the random $r$ is treated as private key: $c_0$ is derived from $r$ via \textit{isogen}. A secret is then generated by \textit{isoex} using the foreign public key $pk_B$ and the private key $r$. The hash of this secret $F(sec)$ is finally XORed with the given plaintext $m$ and saved in $c_1$. The function returns $c_0$ and $c_1$.
 \item \textit{\gls{Dec}} decodes a given ciphertext ($c_0$,$c_1$) using the secret key $sk_B$. Firstly, a secret is derived by \textit{isoex} using the private key $sk_B$ and foreign public key $c_0$. The hash of this secret $F(sec)$ is XORed with the ciphertext $c_1$ returning the plaintext $m$. The function returns $m$.
 \end{enumerate}
-Note that the function $F$ used in \textit{\gls{Enc}} and \textit{\gls{Dec}} is a key derivation function.
+Note that the function $F$ used in \textit{\gls{Enc}} and \textit{\gls{Dec}} is a key derivation function (\textit{SHAKE256} is used for \textit{\gls{SIKE}}.
 
 \begin{figure}[H]
   \centering
@@ -371,6 +371,6 @@ All isogeny-based cryptographic primitives presented in this chapter can be init
 \\\\
 Current research suggest that the \gls{SIKE} parameter sets satisfy the defined security levels even under the assumption of currently known algorithms~\parencite{jaques2019quantum}. Therefore, the authors consider three algorithms to solve the \textit{\gls{SIDH} problem}: \textit{Tani's quantum claw finding algorithm}~\parencite{tani2009claw}, \textit{Grover's algorithm}~\parencite{grover1996fast} and a \textit{parallel collision-finding algorithm}~\parencite{van1999parallel}.
 \\
-Ephemeral \gls{SIDH} keys are predestined to implement quantum-secure perfect forward secret protocols ~\parencite{koziel2018high}. \gls{PFS} ensures that a compromised long-term key does not reveal past or future keys of the protocol.
+Ephemeral \gls{SIDH} keys are predestined to implement quantum-secure perfect forward secret protocols ~\parencite{koziel2018high}. \gls{PFS} ensures that a compromised secret key does not reveal past or future keys of the protocol.
 \\
 Side-channel attacks against isogeny-based cryptography might 1) reveal parts of the secret private key or 2) reveal parts of the public key computation. To protect against power-analysis side-channel attacks it is recommend to implement constant-time cryptography~\parencite{sike2020spec}. The authors state, however, that an attacker has \textit{"access to a wide range of power, timing, fault and various other side-channels"}. Thus, preventing isogeny-based cryptography from all side-channel attacks seems to be a challenge and is an active research area.

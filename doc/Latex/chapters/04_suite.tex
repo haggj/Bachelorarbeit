@@ -1,11 +1,13 @@
 \chapter{Benchmarking Suite}\label{chapter:benchmarking_suite}
-In this chapter a benchmarking suite is presented that is able to generate comparable benchmarks between all \gls{SIDH} implementations introduced in \autoref{chapter:existing_sidh}. To get a better understanding of the results, this chapter starts with a  description of the tools and methodologies used for benchmarking (\autoref{sec:benchmarks_methods}). The implementation details given in \autoref{sec:benchmarks_details} provide precise internals of the benchmarking suite. This might be used for further development of the software. A description of how to actually use the presented benchmarking suite is given in \autoref{sec:benchmarks_usage}.
+In this chapter a benchmarking suite is presented that is able to generate comparable benchmarks between \gls{SIDH} implementations introduced in \autoref{chapter:existing_sidh}. To get a better understanding of the results, this chapter starts with a  description of the tools and methodologies used for benchmarking (\autoref{sec:benchmarks_methods}). The implementation details given in \autoref{sec:benchmarks_details} provide precise internals of the benchmarking suite. This might be used for further development of the software. A description of how to actually use the presented benchmarking suite is given in \autoref{sec:benchmarks_usage}.
+
+The benchmarking suite is available on Github\footnote{\texttt{https://github.com/haggj/Bachelorarbeit}}.
 
 \section{Benchmarking Methodology}\label{sec:benchmarks_methods}
 In order to generate independent and stable benchmarking results, the benchmarking suite runs within a virtual environment: \textit{Docker} is used to separate the running suite from the host operating system. This reduces the influence of resource intensive processes which might falsify benchmarking results. Moreover, \textit{Docker} enables a portable and scalable software solution. The benchmarking suite runs within an Ubuntu Docker container providing a virtual operating system.\\
 The benchmarks measured in this thesis are \textit{execution time} and \textit{memory consumption}. These measurements are used to quantify the claimed resources of an algorithm. 
 \\
-In the following, the process of benchmarking is described within five steps. In a short version, the required steps are:
+In the following, the process of benchmarking is described within five steps. In a summarized version, the required steps are:
 
 \begin{enumerate}
   \itemsep0em 
@@ -17,12 +19,12 @@ In the following, the process of benchmarking is described within five steps. In
 \end{enumerate}
 
 \subsubsection{Create the benchmarking code}
-Each software libraries presented in \autoref{chapter:existing_sidh} implements various cryptographic primitives. To avoid overhead when calculating benchmarks, only the required functions to generate a \gls{SIDH} key exchange should be called. Thus, a simple benchmarking file is provided for each implementation which calls the appropriate underlying API. This benchmarking file must ensure that all required headers are imported, the API is called correctly and a \texttt{main}-function is provided.
+Each software libraries presented in \autoref{chapter:existing_sidh} implements various cryptographic primitives. To avoid overhead when calculating benchmarks, only the required functions that generate a secret key via \gls{SIDH} should be called. Thus, a simple benchmarking file is provided for each implementation which calls the appropriate underlying API. This benchmarking file must ensure that all required headers are imported, the API is called correctly and a \texttt{main}-function is provided.
 
 \subsubsection{Compile the benchmarking code}
 Once the benchmarking source code is created, it needs to be compiled to a binary. Therefore, all required dependencies (libraries, headers, source code, ..) need to be provided to the compiler. The benchmarking suite provides a \texttt{Makefile} for each implementation, where the compilation process is implemented.
 All compilations performed for the benchmarking suite must use consistent compiler optimizations. This ensures the comparability of the binaries. Currently, the optimization flag \texttt{-O3} is passed to the gcc compiler. Note that CIRCL is implemented in GO and therefore the go compiler is used for compilation. Since this compiler does not provide optimization flags, the default compiler optimizations are used \parencite{gowiki2020compiler}.
-To be able to extract benchmarks for specific functions \textit{inlining} is disabled during compilation. In order to avoid the modification of the source code of the libraries simple wrapper function were created, which only call the underlying API function. These wrapper function were marked to avoid \textit{inlining}. The C programming language offers the following directive to disable \textit{inlining} for a function:
+To be able to extract benchmarks for specific functions \textit{inlining} is disabled during compilation. In order to avoid the modification of the source code of the libraries simple wrapper function were created, which only call the underlying API function. These wrapper functions are marked to avoid \textit{inlining}. The C programming language offers the following directive to disable \textit{inlining} for a function:
 \begin{lstlisting}[language=C]
 // This function will not be inlined by the compiler
 void __attribute__ ((noinline)) no_inlining() {
@@ -39,7 +41,6 @@ The go compiler can be directly invoked with a no-inlining (\texttt{-l}) flag:
 go build -gcflags "-l"
 \end{lstlisting}
 
-Compiling the source code determines the Instruction Set Architecture (\gls{ISA}) of the binary. The architecture of a processor describes the \gls{ISA} a concrete processor is able to  process. When executing the binary the instructions that are defined in the \gls{ISA} are executed by the processor.
 
 \subsubsection{Run \textit{Callgrind}}
 \textit{Callgrind} records function calls of a binary. For each call the executed instructions which are processed by the processor are counted. Moreover, the tool provides detailed information about the callee and frequency of function calls. Thus, the tool also provides information about execution hotspots of the binary. \textit{Callgrind} is part of \textit{Valgrind}, a profiling tool which allows deep analysis of executed binaries.\\
@@ -48,7 +49,7 @@ Callgrind is invoked on the command line via:
 valgrind --tool=callgrind --callgrind-out-file=callgrind.out binary
 \end{lstlisting}
 The profiling data of \textit{callgrind} is written to the file defined by \texttt{--callgrind-out-file}. This file might be analyzed using a graphical tool like \textit{KCachegrind} or any other analyzing script.
-Running a binary using callgrind slows down the execution times of the benchmarking suite significantly. This is the main reason for the long execution times when collecting benchmarks. \\\\
+Running a binary using callgrind slows down the execution times of that binary significantly. This is the main reason for the long execution times when collecting benchmarks. \\\\
 Besides counting the instructions executed by the processor, one could also count elapsed \gls{CPU} cycles or equivalently the elapsed time for a concrete binary. In the following paragraph the differences are considered and reasons for measuring instructions are given.
 \\
 Firstly, the measured instruction count of \textit{callgrind} can be converted to elapsed \gls{CPU} cycles and to thus to the elapsed time. The following calculation exemplarily shows this conversion for the execution of a SIDH key exchange (using the \gls{SIKE} \texttt{x64\_optimized} implementation initialized with parameter set \texttt{p434}). \textit{Callgrind} measures constantly $64\:621\:792$ instructions when executing that binary. The performance analyzing tool \textit{perf} can also be run on that binary (\texttt{sudo run perf \textit{binary}}). Besides the elapsed \gls{CPU} cycles and elapsed time \textit{perf} also measures the executed instructions per \gls{CPU} cycle (\gls{IPC}) and the average \gls{CPU} frequency in GHz. This values can be used to compute the elapsed time of an application. It is important to note, that the \gls{IPC} is not a characteristic index for a \gls{CPU}, moreover it varies between multiple runs of the same application based on scheduling decisions and hardware dependencies (e.g. cache size) ~\parencite{alameldeen2006ipc}. Thus, the measured \gls{CPU} cycles and the corresponding elapsed time of an application is not constant. The measured \gls{IPC} for the binary (\gls{SIKE} \texttt{x64\_optimized} using \texttt{p434}) is on average $2.87$ (10 samples). The measured \gls{CPU} frequency is on average $2.66\;GHz$ (10 samples). Thus, the elapsed time depending on the measured instructions can be computed as follows~\parencite{alameldeen2006ipc}:
@@ -89,22 +90,22 @@ This information is finally used by the benchmarking suite to produce graphs and
 The benchmarking suite is developed in Python3 on a Linux/Ubuntu operating system. Currently, the following implementations are included:
 \label{sec:included_implementations}
 \begin{itemize}
-\item \gls{SIKE} working on: \texttt{p434, p503, p610 and p751}
+\item \gls{SIKE} supporting \texttt{p434, p503, p610 and p751}
 	\begin{itemize}
-	\item Sike reference implementation (\texttt{SIKE\_Reference})
-	\item Sike generic optimized implementation (\texttt{SIKE\_Generic})
-	\item Sike generic optimized and compressed implementation (\texttt{SIKE\_Generic\_Compressed})
-	\item Sike x64 optimized implementation (\texttt{SIKE\_x64})
-	\item Sike x64 optimized and compressed implementation (\texttt{SIKE\_x64\_Compressed})
+	\item SIKE reference implementation (\texttt{SIKE\_Reference})
+	\item SIKE generic optimized implementation (\texttt{SIKE\_Generic})
+	\item SIKE generic optimized and compressed implementation (\texttt{SIKE\_Generic\_Compressed})
+	\item SIKE x64 optimized implementation (\texttt{SIKE\_x64})
+	\item SIKE x64 optimized and compressed implementation (\texttt{SIKE\_x64\_Compressed})
 	\end{itemize}
-\item \gls{PQCrypto-SIDH} working on: \texttt{p434, p503, p610 and p751}
+\item \gls{PQCrypto-SIDH} supporting \texttt{p434, p503, p610 and p751}
 	\begin{itemize}
 	\item PQCrypto-SIDH generic optimized implementation (\texttt{Microsoft\_Generic})
 	\item PQCrypto-SIDH generic optimized and compressed implementation \\ (\texttt{Microsoft\_Generic\_Compressed})
 	\item PQCrypto-SIDH x64 optimized implementation (\texttt{Microsoft\_x64})
 	\item PQCrypto-SIDH x64 optimized and compressed implementation \\ (\texttt{Microsoft\_x64\_Compressed})
 	\end{itemize}
-\item CIRCL working on: \texttt{p434, p503 and p751}
+\item CIRCL supporting \texttt{p434, p503 and p751}
 	\begin{itemize}
 	\item CIRCL generic optimized implementation (\texttt{CIRCL\_Generic})
 	\item CIRCL x64 optimized implementation (\texttt{CIRCL\_x64})
@@ -118,9 +119,8 @@ Since each parameter set of \gls{SIDH} meets a different security level (compare
 \item \texttt{secp521r1} also known as \texttt{P-521} (\gls{openssl} implementation \texttt{secp521r1}): \\256 bit security  matching \texttt{p751} \parencite{brown2010sec}
 \end{enumerate}
 
-Note that the classical security assumptions for \texttt{p434} (key search for 128 bit AES) and \texttt{p503} (collision search for 256 bit SHA) are comparable: A key search for a 128 bit AES key takes $2^{128}$ operations indicating a security level of $128$ bits \parencite{lenstra2006key}. Due to the birthday attack \parencite{gupta2015birthday}, the collision finding on a 256 bit hash function requires about $2^{256/2} = 2^{128}$ operations leading security level of 128 bit \parencite{lenstra2006key}. Thus, both parameter sets \texttt{p434} and \texttt{p503} provide similar classical security levels. NIST maps this security level to elliptic curves employing key sizes of 256 bit (e.g. curve \texttt{secp256r1}). Hence, no separate elliptic curves for \texttt{p434} and \texttt{p503} are included. For completion: Security levels of 192 bit and 256 bit are mapped to elliptic curves providing of key sizes 384 bit (e.g.  \texttt{secp384r1}) and 512 bit (e.g.  \texttt{secp512r1}), respectively \parencite{barker2016recommendation}. 
-
-
+Note that the classical security assumptions for \texttt{p434} (key search for 128 bit AES) and \texttt{p503} (collision search for 256 bit SHA) are comparable: A key search for a 128 bit AES key takes $2^{128}$ operations indicating a security level of $128$ bits \parencite{lenstra2006key}. Due to the birthday attack \parencite{gupta2015birthday}, the collision finding on a 256 bit hash function requires about $2^{256/2} = 2^{128}$ operations leading to a security level of 128 bit \parencite{lenstra2006key}. Thus, both parameter sets \texttt{p434} and \texttt{p503} provide similar classical security levels. NIST maps this security level to elliptic curves employing key sizes of 256 bit (e.g. curve \texttt{secp256r1}). Hence, no separate elliptic curves for \texttt{p434} and \texttt{p503} are included. For completion: Security levels of 192 bit and 256 bit are mapped to elliptic curves providing of key sizes 384 bit (e.g.  \texttt{secp384r1}) and 512 bit (e.g.  \texttt{secp512r1}), respectively \parencite{barker2016recommendation}. 
+\\\\
 For each of these introduced implementations the application measures benchmarks. The following sections present detailed information about the internals of the suite. Besides the precise application flow (\autoref{sec:app_flow}), the internal class structure of the Python3 code is shown (\autoref{sec:app_structure}).
 
 \subsection{Application Flow}\label{sec:app_flow}
@@ -210,7 +210,7 @@ implementations =[
 Once these steps are done the benchmarking suits is able to benchmark the new implementation.
 
 \section{Usage}\label{sec:benchmarks_usage}
-This section explains the usage of the benchmarking suite. Besides the execution of benchmarks, the application also provides unit tests for the suite itself. Both tasks - running benchmarks and executing unit tests - need to run within the docker container. Thus, it is mandatory to \href{https://docs.docker.com/get-docker/}{install docker} on your system to run the benchmarking suite\footnote{The application was developed using Docker version \texttt{19.03.8}, build \texttt{afacb8b7f0}. Instructions for installing \textit{Docker}: \url{https://docs.docker.com/get-docker/}}. To provide an easy to use interface for both tasks a script \textit{run.sh} is available (see addenda \ref{app:hierarchy} for the project hierarchy). This script can be invoked with different arguments:
+This section explains the usage of the benchmarking suite. All tasks need to run within the docker container. Thus, it is mandatory to \href{https://docs.docker.com/get-docker/}{install docker} on your system to run the benchmarking suite\footnote{The application was developed using Docker version \texttt{19.03.8}, build \texttt{afacb8b7f0}. Instructions for installing \textit{Docker}: \url{https://docs.docker.com/get-docker/}}. To provide an easy to use interface a script \textit{run.sh} is available, which might be used to get a better understanding of the required docker commands. This script can be invoked with the following arguments:
 \begin{itemize}
 \itemsep0em 
 \item Building the docker container:
@@ -218,26 +218,40 @@ This section explains the usage of the benchmarking suite. Besides the execution
 ./run.sh build
 \end{lstlisting}
 
-\item Running unit tests within the docker container.
-\begin{lstlisting}[numbers=none,linewidth=4cm]
-./run.sh test
-\end{lstlisting}
-Testing the benchmarking suite runs for a while, since each implementation is compiled to verify the functionality of the \textit{Makefiles}. However, this procedure is logged while the unit tests are executed.
 
 \item Running benchmarks within the docker container.
-\begin{lstlisting}[numbers=none,linewidth=4cm]
-./run.sh benchmark
+\begin{lstlisting}[numbers=none,linewidth=10cm]
+./run.sh benchmark [-N=REPETITIONS] [--no-cache]
 \end{lstlisting}
-This command triggers the \textit{benchmarking.py} script within the docker container. This script contains the entry logic of the benchmarking suite. It benchmarks all available implementations and generates different output formats (graphs, \gls{HTML}, LaTeX). The frequency of measurements for each benchmark is configurable: The variable \texttt{N} in \texttt{container/benchmarking.py} describes the amount of repetitions for \textit{callgrind} and \textit{massif}. Once the benchmarks are done all output files can be inspected in the  \texttt{data/} folder of your current directory. These files visualize average values over N samples. The output files are:
+This command triggers the \textit{benchmarking.py} script within the docker container. This script contains the entry logic of the benchmarking suite. It benchmarks all available implementations and generates different output formats (graphs, \gls{HTML}, LaTeX). The frequency of measurements for each benchmark is configurable: The optional argument \textit{-N}  defines the amount of repetitions for \textit{callgrind} and \textit{massif}. Once the benchmarks are done all output files can be inspected in the  \texttt{data/} folder of your current directory. These files visualize average values over N samples. The output files are:
 	\begin{itemize}
 	\item \textit{XXX.png}: These files compare the absolute instruction counts of all implementations which were run on the XXX parameter set (XXX $\in {434, 503, 610, 751}$). Additionally, it contains a \gls{ECDH} benchmark for comparison.
 	\item \textit{XXX\_mem.png}: These files compare the peak memory consumption of all implementations which were run on the XXX parameter set (XXX $\in {434, 503, 610, 751}$). Additionally, it contains a \gls{ECDH} benchmark for comparison.
 
-	\item \textit{cached.json}: This \textit{json} file contains cached benchmarking results. It can be used as input for the benchmarking suite to import cached data instead of generating all benchmarks again. Since the benchmarking suite runs multiple hours if each implementation is evaluated $N$=$100$ times, this functionality speeds up the generation of the output graphs significantly. To use the cached file as input, copy it to \texttt{container/.cached/cached.json} and run the benchmarking suite again.
+	\item \textit{cached.json}: This \textit{json} file contains cached benchmarking results. It can be used as input for the benchmarking suite to import cached data instead of generating all benchmarks again. Since the benchmarking suite runs multiple hours if each implementation is evaluated $N$=$100$ times, this functionality speeds up the generation of the output graphs significantly. To use the cached file as input, copy it to \texttt{container/.cached/cached.json} and run the benchmarking suite again. To avoid the use of cached data either delete \texttt{container/.cached/cached.json} or simply invoke the benchmarking suite with the \textit{no-cache} flag.	
 	
 	\item \textit{results.html}: This file lists detailed benchmarking results in a human readable \gls{HTML} table. 
 	
 	\item \textit{results.tex}: This file contains the benchmarking results formatted in LaTeX. The output is used for this thesis.
 	\end{itemize}
+
+\item Running unit tests within the docker container.
+\begin{lstlisting}[numbers=none,linewidth=4cm]
+./run.sh test
+\end{lstlisting}
+Testing the benchmarking suite runs for a while, since each implementation is compiled to verify the functionality of the \textit{Makefiles}. However, this procedure is logged while the unit tests are executed.
+	
+	
+\item Running unit test coverage within the docker container.
+\begin{lstlisting}[numbers=none,linewidth=4cm]
+./run.sh coverage
+\end{lstlisting}
+This command measures the coverage of the implemented unit tests. Note that no unit tests are provided for all files that generate output data, since these files change frequently.
+
+\item Opening an interactive bash within the docker container.
+\begin{lstlisting}[numbers=none,linewidth=4cm]
+./run.sh bash
+\end{lstlisting}
+This command provides an interactive bash for the docker container. This might be used for debugging reasons and to get a better understanding of the internals of the benchmarking suite.
 
 \end{itemize}

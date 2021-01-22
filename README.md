@@ -23,12 +23,12 @@ This repository contains code to benchmark currently available SIDH implementati
 3. The following commands are available by running the script ```run.sh```:
     - ```./run.sh build```<br>
       This command builds the docker container with all needed dependencies.
-    - ```./run.sh benchmark```<br>
-      This command builds and runs the benchmarking suite. The generated data by the benchmarking suite will be available in new ```data/``` subfolder in your current directory (for details see secion output files below).
+    - ```./run.sh benchmark [-N=REPETITIONS] [--no-cache]```<br>
+      This command builds and runs the benchmarking suite. The generated data by the benchmarking suite will be available in new ```data/``` subfolder in your current directory (for details see section output files below). The optional parameter -N defines the repetitions of callgrind and massif. To avoid the use of cached data, invoke the script with the --no-cache flag.
     - ```./run.sh test```<br>
-      This command executes unittests of the benchmarking suite.
+      This command executes unit tests of the benchmarking suite.
     - ```./run.sh coverage```<br>
-      This command executes unittests and list the coverage of the tests.
+      This command executes unit tests and list the coverage of the tests.
     - ```./run.sh bash```<br>
       Opens a interactive terminal within the docker container
 4. Analyse output files in ```data/```.

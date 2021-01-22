@@ -139,12 +139,12 @@
 \newglossaryentry{ISA}
 {
     name=ISA,
-    description={Instruction Set Architecture}
+    description={Instruction Set Arcitecture}
 }
 \newglossaryentry{x86_64}
 {
     name=x86_64,
-    description={64 Bit Instruction Set Architecture}
+    description={64 Bit Instruction Set Arcitecture}
 }
 \newglossaryentry{CPU}
 {
@@ -154,7 +154,7 @@
 \newglossaryentry{IPC}
 {
     name=IPC,
-    description={Instructions per Cycle, the executed instructions within a CPU cycle}
+    description={Instrucitons per Cycle, the executed instructions within a CPU cycle}
 }
 \newglossaryentry{JVM}
 {

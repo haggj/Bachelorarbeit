@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.13)  11 JAN 2021 10:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.13)  22 JAN 2021 18:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1974,9 +1974,9 @@ LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
 \tf@toc=\write8
 \openout8 = `main.toc'.
 
- [7] (./chapters/00_introduction.tex
+ [7] (./chapters/01_introduction.tex
 chapter 1.
-) (./chapters/01_background.tex
+) (./chapters/02_background.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--1
 
  []
@@ -1992,7 +1992,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-<figures/background/symmetric_encryption.png, id=271, 758.835pt x 231.86626pt>
+<figures/background/symmetric_encryption.png, id=274, 758.835pt x 231.86626pt>
 File: figures/background/symmetric_encryption.png Graphic file (type png)
 <use figures/background/symmetric_encryption.png>
 Package pdftex.def Info: figures/background/symmetric_encryption.png  used on i
@@ -2002,7 +2002,7 @@ nput line 13.
 
 
  <./figures/background/symmetric_encryption.png>]
-<figures/background/asymmetric_encryption.png, id=288, 783.92876pt x 282.05376p
+<figures/background/asymmetric_encryption.png, id=291, 783.92876pt x 282.05376p
 t>
 File: figures/background/asymmetric_encryption.png Graphic file (type png)
 <use figures/background/asymmetric_encryption.png>
@@ -2023,7 +2023,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 56.
  [4]
-<figures/background/diffie_hellman.png, id=324, 473.77pt x 333.245pt>
+<figures/background/diffie_hellman.png, id=328, 473.77pt x 333.245pt>
 File: figures/background/diffie_hellman.png Graphic file (type png)
 <use figures/background/diffie_hellman.png>
 Package pdftex.def Info: figures/background/diffie_hellman.png  used on input l
@@ -2037,72 +2037,72 @@ en-cryp-tion $\OML/zplm/m/it/10.95 RSA[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.
 95 m\OT1/pplx/m/n/10.95 (-20) , \OML/zplm/m/it/10.95 e[]\OT1/zplm/m/n/10.95 )$
  []
 
-[6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 147--151
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 146--150
 
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 179--184
+[7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 178--183
 
  []
 
-[9] [10]
+[9]
 LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
-216.
+215.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-) [11]
+) [10] [11]
 [12]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 252.
+(hyperref)                removing `\gls' on input line 251.
 
-<figures/background/sidh.png, id=553, 383.4325pt x 338.26375pt>
+<figures/background/sidh.png, id=560, 383.4325pt x 338.26375pt>
 File: figures/background/sidh.png Graphic file (type png)
 <use figures/background/sidh.png>
-Package pdftex.def Info: figures/background/sidh.png  used on input line 270.
+Package pdftex.def Info: figures/background/sidh.png  used on input line 269.
 (pdftex.def)             Requested size: 224.06548pt x 197.67444pt.
 [13]
-<figures/background/sike_sidh.png, id=578, 462.72874pt x 292.09125pt>
+<figures/background/sike_sidh.png, id=585, 462.72874pt x 292.09125pt>
 File: figures/background/sike_sidh.png Graphic file (type png)
 <use figures/background/sike_sidh.png>
 Package pdftex.def Info: figures/background/sike_sidh.png  used on input line 2
-97.
+96.
 (pdftex.def)             Requested size: 268.8813pt x 169.72946pt.
  [14 <./figures/background/sidh.png>] [15 <./figures/background/sike_sidh.png>]
-<figures/background/sike_asym.png, id=613, 703.62875pt x 412.54124pt>
+<figures/background/sike_asym.png, id=621, 703.62875pt x 412.54124pt>
 File: figures/background/sike_asym.png Graphic file (type png)
 <use figures/background/sike_asym.png>
 Package pdftex.def Info: figures/background/sike_asym.png  used on input line 3
-13.
+12.
 (pdftex.def)             Requested size: 448.13095pt x 262.74133pt.
  [16 <./figures/background/sike_asym.png>]
-<figures/background/sike_kem.png, id=640, 815.045pt x 584.1825pt>
+<figures/background/sike_kem.png, id=648, 815.045pt x 584.1825pt>
 File: figures/background/sike_kem.png Graphic file (type png)
 <use figures/background/sike_kem.png>
 Package pdftex.def Info: figures/background/sike_kem.png  used on input line 32
-7.
+6.
 (pdftex.def)             Requested size: 448.13095pt x 321.1944pt.
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 332--362
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 331--361
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--362
+Underfull \hbox (badness 10000) in paragraph at lines 331--361
 
  []
 
 [17 <./figures/background/sike_kem.png>]
 LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 
-365.
+364.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pplx.fd
 File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
 )
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-65.
+64.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -2112,8 +2112,8 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 )
-(./chapters/02_existing.tex
-Underfull \hbox (badness 10000) in paragraph at lines 370--1
+(./chapters/03_existing.tex
+Underfull \hbox (badness 10000) in paragraph at lines 369--1
 
  []
 
@@ -2143,7 +2143,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--25
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 27.
+(hyperref)                removing `\gls' on input line 28.
 
 [20] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
@@ -2151,27 +2151,27 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 ) [21]
-Underfull \hbox (badness 1199) in paragraph at lines 130--131
+Underfull \hbox (badness 1199) in paragraph at lines 131--132
 []\T1/pplx/m/n/10.95 (+20) Allocated mem-ory for
  []
 
 
-Underfull \hbox (badness 1199) in paragraph at lines 142--143
+Underfull \hbox (badness 1199) in paragraph at lines 143--144
 []\T1/pplx/m/n/10.95 (+20) Allocated mem-ory for
  []
 
 [22]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 167.
+(hyperref)                removing `\gls' on input line 168.
 
 
-Package nag Warning: \label in float, but not after \caption on input line 167.
+Package nag Warning: \label in float, but not after \caption on input line 168.
 
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 181.
+(hyperref)                removing `\gls' on input line 182.
 
 [23] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
@@ -2182,74 +2182,74 @@ File: lstlang2.sty 2019/09/10 1.8c listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2019/09/10 1.8c listings language file
 )
-Overfull \hbox (11.99944pt too wide) in paragraph at lines 247--249
+Overfull \hbox (11.99944pt too wide) in paragraph at lines 248--250
 \T1/cmtt/m/n/10.95 sidh.KeyVariantSidhB \T1/pplx/m/n/10.95 (-20) for Bob). \T1/
 cmtt/m/n/10.95 PrivateKey \T1/pplx/m/n/10.95 (-20) ob-ject pro-vides the func-t
 ion \T1/cmtt/m/n/10.95 PrivateKey.Generate
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--249
+Underfull \hbox (badness 10000) in paragraph at lines 248--250
 
  []
 
 [24]
-Overfull \hbox (4.96436pt too wide) in paragraph at lines 260--262
+Overfull \hbox (4.96436pt too wide) in paragraph at lines 261--263
 \T1/pplx/m/n/10.95 (-20) The code above firstly ini-tial-izes the pub-lic keys 
 for Al-ice ([]\T1/cmtt/m/n/10.95 PublicKey_A[]\T1/pplx/m/n/10.95 (-20) ) and Bo
 b ([]\T1/cmtt/m/n/10.95 PublicKey_B[]\T1/pplx/m/n/10.95 (-20) ).
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 260--262
+Underfull \hbox (badness 10000) in paragraph at lines 261--263
 
  []
 
 
-Underfull \hbox (badness 5374) in paragraph at lines 276--277
+Underfull \hbox (badness 5374) in paragraph at lines 277--278
 []\T1/pplx/m/n/10.95 (+20) Allocated mem-ory for
  []
 
 
-Underfull \hbox (badness 2913) in paragraph at lines 277--278
+Underfull \hbox (badness 2913) in paragraph at lines 278--279
 []\T1/pplx/m/n/10.95 (+20) Object of type \T1/cmtt/m/n/10.95 Public
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--299
+Underfull \hbox (badness 10000) in paragraph at lines 297--300
 
  []
 
 [25] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 ) [26]
-Underfull \hbox (badness 10000) in paragraph at lines 361--362
+Underfull \hbox (badness 10000) in paragraph at lines 362--363
 
  []
 
 
-Overfull \hbox (3.9782pt too wide) in paragraph at lines 367--383
+Overfull \hbox (3.9782pt too wide) in paragraph at lines 368--384
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--395
+Underfull \hbox (badness 10000) in paragraph at lines 393--396
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
 
  []
 
 
-Overfull \hbox (28.66034pt too wide) in paragraph at lines 436--461
+Overfull \hbox (28.66034pt too wide) in paragraph at lines 437--462
  [][] 
  []
 
-) (./chapters/03_benchmarks.tex [28]
+) (./chapters/04_suite.tex [28] [29]
 chapter 4.
-[29
+[30
 
 
 ] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -2258,34 +2258,39 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
-Underfull \hbox (badness 10000) in paragraph at lines 50--55
-
- []
-
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 61--63
+Underfull \hbox (badness 10000) in paragraph at lines 51--56
 
  []
 
 [31]
-Overfull \hbox (7.7168pt too wide) in paragraph at lines 96--97
-[]\T1/pplx/m/n/10.95 (-20) Sike generic op-ti-mized and com-pressed im-ple-men-
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
+
+ []
+
+[32]
+Overfull \hbox (11.45044pt too wide) in paragraph at lines 97--98
+[]\T1/pplx/m/n/10.95 (-20) SIKE generic op-ti-mized and com-pressed im-ple-men-
 ta-tion (\T1/cmtt/m/n/10.95 SIKE_Generic_Compressed\T1/pplx/m/n/10.95 (-20) ) 
  []
 
-[32] [33]
-<figures/benchmarks/application_flow.png, id=1054, 500.87125pt x 482.80376pt>
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 122--125
+
+ []
+
+[34]
+<figures/benchmarks/application_flow.png, id=1065, 500.87125pt x 482.80376pt>
 File: figures/benchmarks/application_flow.png Graphic file (type png)
 <use figures/benchmarks/application_flow.png>
 Package pdftex.def Info: figures/benchmarks/application_flow.png  used on input
  line 133.
 (pdftex.def)             Requested size: 313.69029pt x 302.38516pt.
- [34 <./figures/benchmarks/application_flow.png>]
+ [35 <./figures/benchmarks/application_flow.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 150.
 
-<figures/benchmarks/uml.png, id=1065, 618.31pt x 904.37875pt>
+<figures/benchmarks/uml.png, id=1077, 618.31pt x 904.37875pt>
 File: figures/benchmarks/uml.png Graphic file (type png)
 <use figures/benchmarks/uml.png>
 Package pdftex.def Info: figures/benchmarks/uml.png  used on input line 152.
@@ -2293,24 +2298,24 @@ Package pdftex.def Info: figures/benchmarks/uml.png  used on input line 152.
 
 LaTeX Warning: Float too large for page by 31.33652pt on input line 155.
 
-<figures/benchmarks/uml_results.png, id=1069, 934.49126pt x 281.05pt>
+<figures/benchmarks/uml_results.png, id=1081, 934.49126pt x 281.05pt>
 File: figures/benchmarks/uml_results.png Graphic file (type png)
 <use figures/benchmarks/uml_results.png>
 Package pdftex.def Info: figures/benchmarks/uml_results.png  used on input line
  162.
 (pdftex.def)             Requested size: 448.13095pt x 134.77809pt.
-[35 <./figures/benchmarks/uml_results.png>] [36 <./figures/benchmarks/uml.png>]
+[36 <./figures/benchmarks/uml_results.png>] [37 <./figures/benchmarks/uml.png>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
-) [37] [38])
-(./chapters/04_analysis.tex [39]
+) [38] [39])
+(./chapters/05_analysis.tex [40]
 chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-[40
+[41
 
 
 ]
@@ -2328,8 +2333,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--52
 
  []
 
-[41]
-<figures/benchmarks/compare_sidh_parameters/sike/Sike_x64.png, id=1209, 1205.46
+[42]
+<figures/benchmarks/compare_sidh_parameters/sike/Sike_x64.png, id=1225, 1205.46
 36pt x 692.3466pt>
 File: figures/benchmarks/compare_sidh_parameters/sike/Sike_x64.png Graphic file
  (type png)
@@ -2337,7 +2342,7 @@ File: figures/benchmarks/compare_sidh_parameters/sike/Sike_x64.png Graphic file
 Package pdftex.def Info: figures/benchmarks/compare_sidh_parameters/sike/Sike_x
 64.png  used on input line 61.
 (pdftex.def)             Requested size: 403.31511pt x 231.6444pt.
-<figures/benchmarks/compare_sidh_parameters/sike/Sike_x64_mem.png, id=1210, 118
+<figures/benchmarks/compare_sidh_parameters/sike/Sike_x64_mem.png, id=1226, 118
 5.9507pt x 692.3466pt>
 File: figures/benchmarks/compare_sidh_parameters/sike/Sike_x64_mem.png Graphic 
 file (type png)
@@ -2345,7 +2350,7 @@ file (type png)
 Package pdftex.def Info: figures/benchmarks/compare_sidh_parameters/sike/Sike_x
 64_mem.png  used on input line 69.
 (pdftex.def)             Requested size: 403.31511pt x 235.44756pt.
- [42 <./figures/benchmarks/compare_sidh_parameters/sike/Sike_x64.png>]
+ [43 <./figures/benchmarks/compare_sidh_parameters/sike/Sike_x64.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 76--80
 
  []
@@ -2355,249 +2360,251 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--80
 
  []
 
-[43 <./figures/benchmarks/compare_sidh_parameters/sike/Sike_x64_mem.png>]
-<figures/benchmarks/compare_sidh_parameters/circl/CIRCL_x64.png, id=1250, 1217.
+[44 <./figures/benchmarks/compare_sidh_parameters/sike/Sike_x64_mem.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
+
+ []
+
+<figures/benchmarks/compare_sidh_parameters/circl/CIRCL_x64.png, id=1267, 1217.
 0268pt x 639.5895pt>
 File: figures/benchmarks/compare_sidh_parameters/circl/CIRCL_x64.png Graphic fi
 le (type png)
 <use figures/benchmarks/compare_sidh_parameters/circl/CIRCL_x64.png>
 Package pdftex.def Info: figures/benchmarks/compare_sidh_parameters/circl/CIRCL
-_x64.png  used on input line 93.
+_x64.png  used on input line 94.
 (pdftex.def)             Requested size: 403.31511pt x 211.95328pt.
-<figures/benchmarks/compare_sidh_parameters/circl/CIRCL_x64_mem.png, id=1251, 1
+<figures/benchmarks/compare_sidh_parameters/circl/CIRCL_x64_mem.png, id=1268, 1
 185.9507pt x 639.5895pt>
 File: figures/benchmarks/compare_sidh_parameters/circl/CIRCL_x64_mem.png Graphi
 c file (type png)
 <use figures/benchmarks/compare_sidh_parameters/circl/CIRCL_x64_mem.png>
 Package pdftex.def Info: figures/benchmarks/compare_sidh_parameters/circl/CIRCL
-_x64_mem.png  used on input line 101.
+_x64_mem.png  used on input line 102.
 (pdftex.def)             Requested size: 403.31511pt x 217.50633pt.
-
-[44 <./figures/benchmarks/compare_sidh_parameters/circl/CIRCL_x64.png>]
+[45 <./figures/benchmarks/compare_sidh_parameters/circl/CIRCL_x64.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 111.
+(hyperref)                removing `\gls' on input line 112.
 
-[45 <./figures/benchmarks/compare_sidh_parameters/circl/CIRCL_x64_mem.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 125--132
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 125--132
+[46 <./figures/benchmarks/compare_sidh_parameters/circl/CIRCL_x64_mem.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 126--133
 
  []
 
-[46]
-<figures/benchmarks/compare_sike/compressed/sike.png, id=1317, 1228.59pt x 667.
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--133
+
+ []
+
+[47]
+<figures/benchmarks/compare_sike/compressed/sike.png, id=1335, 1228.59pt x 667.
 0521pt>
 File: figures/benchmarks/compare_sike/compressed/sike.png Graphic file (type pn
 g)
 <use figures/benchmarks/compare_sike/compressed/sike.png>
 Package pdftex.def Info: figures/benchmarks/compare_sike/compressed/sike.png  u
-sed on input line 137.
+sed on input line 138.
 (pdftex.def)             Requested size: 448.13095pt x 243.30405pt.
-<figures/benchmarks/compare_sike/compressed/sike_mem.png, id=1322, 1203.2955pt 
+<figures/benchmarks/compare_sike/compressed/sike_mem.png, id=1340, 1203.2955pt 
 x 669.2202pt>
 File: figures/benchmarks/compare_sike/compressed/sike_mem.png Graphic file (typ
 e png)
 <use figures/benchmarks/compare_sike/compressed/sike_mem.png>
 Package pdftex.def Info: figures/benchmarks/compare_sike/compressed/sike_mem.pn
-g  used on input line 145.
+g  used on input line 146.
 (pdftex.def)             Requested size: 448.13095pt x 249.23122pt.
- [47 <./figures/benchmarks/compare_sike/compressed/sike.png>]
+ [48 <./figures/benchmarks/compare_sike/compressed/sike.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 151.
+(hyperref)                removing `\gls' on input line 152.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 151.
+(hyperref)                removing `\gls' on input line 152.
 
 
-Overfull \hbox (14.56294pt too wide) in paragraph at lines 156--164
+Overfull \hbox (14.56294pt too wide) in paragraph at lines 157--165
 \T1/pplx/m/n/10.95 (-20) This sec-tion com-pares the \T1/pplx/m/it/10.95 (-20) 
 op-ti-mized \T1/pplx/m/n/10.95 (-20) im-ple-men-ta-tions of [][]SIKE[] and [][]
 PQCrypto-SIDH[]: \T1/cmtt/m/n/10.95 SIKE_Generic\T1/pplx/m/n/10.95 (-20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--164
+Underfull \hbox (badness 10000) in paragraph at lines 157--165
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--164
+Underfull \hbox (badness 10000) in paragraph at lines 157--165
 
  []
 
-[48 <./figures/benchmarks/compare_sike/compressed/sike_mem.png>]
-<figures/benchmarks/compare_sike/compare_pqc_sike/optimized/434.png, id=1362, 1
+[49 <./figures/benchmarks/compare_sike/compressed/sike_mem.png>]
+<figures/benchmarks/compare_sike/compare_pqc_sike/optimized/434.png, id=1379, 1
 217.0268pt x 667.0521pt>
 File: figures/benchmarks/compare_sike/compare_pqc_sike/optimized/434.png Graphi
 c file (type png)
 <use figures/benchmarks/compare_sike/compare_pqc_sike/optimized/434.png>
 Package pdftex.def Info: figures/benchmarks/compare_sike/compare_pqc_sike/optim
-ized/434.png  used on input line 167.
+ized/434.png  used on input line 168.
 (pdftex.def)             Requested size: 448.13095pt x 245.62471pt.
-<figures/benchmarks/compare_sike/compare_pqc_sike/optimized/434_mem.png, id=136
-9, 1185.9507pt x 667.0521pt>
+<figures/benchmarks/compare_sike/compare_pqc_sike/optimized/434_mem.png, id=138
+6, 1185.9507pt x 667.0521pt>
 File: figures/benchmarks/compare_sike/compare_pqc_sike/optimized/434_mem.png Gr
 aphic file (type png)
 <use figures/benchmarks/compare_sike/compare_pqc_sike/optimized/434_mem.png>
 Package pdftex.def Info: figures/benchmarks/compare_sike/compare_pqc_sike/optim
-ized/434_mem.png  used on input line 175.
+ized/434_mem.png  used on input line 176.
 (pdftex.def)             Requested size: 448.13095pt x 252.05745pt.
- [49 <./figures/benchmarks/compare_sike/compare_pqc_sike/optimized/434.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 182--189
+ [50 <./figures/benchmarks/compare_sike/compare_pqc_sike/optimized/434.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 183--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--189
+Underfull \hbox (badness 10000) in paragraph at lines 183--190
 
  []
 
-[50 <./figures/benchmarks/compare_sike/compare_pqc_sike/optimized/434_mem.png>]
-<figures/benchmarks/compare_sike/compare_pqc_sike/compressed/434.png, id=1411, 
+[51 <./figures/benchmarks/compare_sike/compare_pqc_sike/optimized/434_mem.png>]
+<figures/benchmarks/compare_sike/compare_pqc_sike/compressed/434.png, id=1428, 
 1217.0268pt x 667.0521pt>
 File: figures/benchmarks/compare_sike/compare_pqc_sike/compressed/434.png Graph
 ic file (type png)
 <use figures/benchmarks/compare_sike/compare_pqc_sike/compressed/434.png>
 Package pdftex.def Info: figures/benchmarks/compare_sike/compare_pqc_sike/compr
-essed/434.png  used on input line 193.
+essed/434.png  used on input line 194.
 (pdftex.def)             Requested size: 448.13095pt x 245.62471pt.
 <figures/benchmarks/compare_sike/compare_pqc_sike/compressed/434_mem.png, id=14
-18, 1185.9507pt x 667.0521pt>
+35, 1185.9507pt x 667.0521pt>
 File: figures/benchmarks/compare_sike/compare_pqc_sike/compressed/434_mem.png G
 raphic file (type png)
 <use figures/benchmarks/compare_sike/compare_pqc_sike/compressed/434_mem.png>
 Package pdftex.def Info: figures/benchmarks/compare_sike/compare_pqc_sike/compr
-essed/434_mem.png  used on input line 201.
+essed/434_mem.png  used on input line 202.
 (pdftex.def)             Requested size: 448.13095pt x 252.05745pt.
-[51 <./figures/benchmarks/compare_sike/compare_pqc_sike/compressed/434.png>]
-<figures/benchmarks/compare_sike/compare_pqc_sike/compressed/751.png, id=1432, 
+[52 <./figures/benchmarks/compare_sike/compare_pqc_sike/compressed/434.png>]
+<figures/benchmarks/compare_sike/compare_pqc_sike/compressed/751.png, id=1449, 
 1228.59pt x 667.0521pt>
 File: figures/benchmarks/compare_sike/compare_pqc_sike/compressed/751.png Graph
 ic file (type png)
 <use figures/benchmarks/compare_sike/compare_pqc_sike/compressed/751.png>
 Package pdftex.def Info: figures/benchmarks/compare_sike/compare_pqc_sike/compr
-essed/751.png  used on input line 209.
+essed/751.png  used on input line 210.
 (pdftex.def)             Requested size: 448.13095pt x 243.30405pt.
 <figures/benchmarks/compare_sike/compare_pqc_sike/compressed/751_mem.png, id=14
-39, 1197.5139pt x 667.0521pt>
+56, 1197.5139pt x 667.0521pt>
 File: figures/benchmarks/compare_sike/compare_pqc_sike/compressed/751_mem.png G
 raphic file (type png)
 <use figures/benchmarks/compare_sike/compare_pqc_sike/compressed/751_mem.png>
 Package pdftex.def Info: figures/benchmarks/compare_sike/compare_pqc_sike/compr
-essed/751_mem.png  used on input line 217.
+essed/751_mem.png  used on input line 218.
 (pdftex.def)             Requested size: 448.13095pt x 249.62482pt.
 
-[52 <./figures/benchmarks/compare_sike/compare_pqc_sike/compressed/434_mem.png>
+[53 <./figures/benchmarks/compare_sike/compare_pqc_sike/compressed/434_mem.png>
  <./figures/benchmarks/compare_sike/compare_pqc_sike/compressed/751.png>]
-[53 <./figures/benchmarks/compare_sike/compare_pqc_sike/compressed/751_mem.png>
+[54 <./figures/benchmarks/compare_sike/compare_pqc_sike/compressed/751_mem.png>
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 228.
+(hyperref)                removing `\gls' on input line 229.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 228.
+(hyperref)                removing `\gls' on input line 229.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--240
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--240
+Underfull \hbox (badness 10000) in paragraph at lines 235--241
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--254
+Underfull \hbox (badness 10000) in paragraph at lines 235--241
+
+ []
+
+[55]
+Underfull \hbox (badness 10000) in paragraph at lines 246--255
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--254
+Underfull \hbox (badness 10000) in paragraph at lines 246--255
 
  []
 
-[54]
-<figures/benchmarks/compare_circl_sike/434.png, id=1526, 1217.0268pt x 667.0521
+<figures/benchmarks/compare_circl_sike/434.png, id=1546, 1217.0268pt x 667.0521
 pt>
 File: figures/benchmarks/compare_circl_sike/434.png Graphic file (type png)
 <use figures/benchmarks/compare_circl_sike/434.png>
 Package pdftex.def Info: figures/benchmarks/compare_circl_sike/434.png  used on
- input line 257.
+ input line 258.
 (pdftex.def)             Requested size: 448.13095pt x 245.62471pt.
- [55]
-<figures/benchmarks/compare_circl_sike/434_mem.png, id=1536, 1185.9507pt x 667.
+[56]
+<figures/benchmarks/compare_circl_sike/434_mem.png, id=1556, 1185.9507pt x 667.
 0521pt>
 File: figures/benchmarks/compare_circl_sike/434_mem.png Graphic file (type png)
 
 <use figures/benchmarks/compare_circl_sike/434_mem.png>
 Package pdftex.def Info: figures/benchmarks/compare_circl_sike/434_mem.png  use
-d on input line 265.
+d on input line 266.
 (pdftex.def)             Requested size: 448.13095pt x 252.05745pt.
-<figures/benchmarks/compare_circl_sike/751.png, id=1541, 1228.59pt x 667.0521pt
+<figures/benchmarks/compare_circl_sike/751.png, id=1561, 1228.59pt x 667.0521pt
 >
 File: figures/benchmarks/compare_circl_sike/751.png Graphic file (type png)
 <use figures/benchmarks/compare_circl_sike/751.png>
 Package pdftex.def Info: figures/benchmarks/compare_circl_sike/751.png  used on
- input line 273.
+ input line 274.
 (pdftex.def)             Requested size: 448.13095pt x 243.30405pt.
- [56 <./figures/benchmarks/compare_circl_sike/434.png> <./figures/benchmarks/co
+ [57 <./figures/benchmarks/compare_circl_sike/434.png> <./figures/benchmarks/co
 mpare_circl_sike/434_mem.png>]
-<figures/benchmarks/compare_circl_sike/751_mem.png, id=1552, 1185.9507pt x 667.
+<figures/benchmarks/compare_circl_sike/751_mem.png, id=1572, 1185.9507pt x 667.
 0521pt>
 File: figures/benchmarks/compare_circl_sike/751_mem.png Graphic file (type png)
 
 <use figures/benchmarks/compare_circl_sike/751_mem.png>
 Package pdftex.def Info: figures/benchmarks/compare_circl_sike/751_mem.png  use
-d on input line 281.
+d on input line 282.
 (pdftex.def)             Requested size: 448.13095pt x 252.05745pt.
- [57 <./figures/benchmarks/compare_circl_sike/751.png> <./figures/benchmarks/co
+ [58 <./figures/benchmarks/compare_circl_sike/751.png> <./figures/benchmarks/co
 mpare_circl_sike/751_mem.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 306.
+(hyperref)                removing `\gls' on input line 307.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 306.
+(hyperref)                removing `\gls' on input line 307.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--309
-
- []
-
-[58]
-Underfull \hbox (badness 10000) in paragraph at lines 311--318
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
 
  []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 319.
 
 [59]
-Underfull \hbox (badness 10000) in paragraph at lines 346--350
+Underfull \hbox (badness 10000) in paragraph at lines 312--319
 
  []
 
-[60] [61]) (./chapters/05_conclusion.tex [62]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gls' on input line 320.
+
+[60]
+Underfull \hbox (badness 10000) in paragraph at lines 347--351
+
+ []
+
+[61] [62]) (./chapters/06_conclusion.tex [63]
 chapter 6.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\gls' on input line 10.
 
-[63
+[64
 
 
-] [64]
+] [65]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\gls' on input line 107.
@@ -2626,12 +2633,12 @@ Overfull \hbox (3.26476pt too wide) in paragraph at lines 137--150
  [][] 
  []
 
-) [65] (./pages/appendix.tex [66]
+) [66] (./pages/appendix.tex [67]
 chapter A.
-[67
+[68
 
 
-] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79]) [80]
+] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80]) [81]
 Package tocbasic Info: character protrusion at lof deactivated on input line 57
 .
 
@@ -2639,7 +2646,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 57
 \tf@lof=\write9
 \openout9 = `main.lof'.
 
- [81
+ [82
 
 
 ]
@@ -2649,48 +2656,51 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 58
 \tf@lot=\write10
 \openout10 = `main.lot'.
 
- (build/main.gls [82
+ (build/main.gls [83
 
 
-] [83
+] [84
 
 
 
 
-]) [84]
+]) [85]
 chapter without number
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplx/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-[85
+[86
 
 
-] [86]
+] [87]
 
 Package nag Warning: 1 complaints in total.
 
-[87] [88]
+[88] [89]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 64.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 64.
  (build/main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 64.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 64.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: <no file>.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 58564 strings out of 482771
- 1270440 string characters out of 5955540
- 2243814 words of memory out of 5000000
- 71552 multiletter control sequences out of 15000+600000
- 630498 words of font info for 498 fonts, out of 8000000 for 9000
+ 58589 strings out of 482771
+ 1270692 string characters out of 5955540
+ 2243285 words of memory out of 5000000
+ 71567 multiletter control sequences out of 15000+600000
+ 630708 words of font info for 501 fonts, out of 8000000 for 9000
  85 hyphenation exceptions out of 8191
  81i,21n,139p,10099b,3478s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exi
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
 , replaced by a fixed one
@@ -2728,10 +2738,10 @@ mri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr
 ve/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/palatino/uplri8a.pfb>
-Output written on build/main.pdf (96 pages, 1706371 bytes).
+Output written on build/main.pdf (97 pages, 1711284 bytes).
 PDF statistics:
- 2751 PDF objects out of 2984 (max. 8388607)
- 2311 compressed objects within 24 object streams
- 671 named destinations out of 1000 (max. 500000)
+ 2782 PDF objects out of 2984 (max. 8388607)
+ 2340 compressed objects within 24 object streams
+ 677 named destinations out of 1000 (max. 500000)
  69361 words of extra memory for PDF output out of 74296 (max. 10000000)
 

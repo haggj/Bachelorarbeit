@@ -2,7 +2,7 @@
 CC=gcc
 
 # Include Files
-CFLAGS= -ggdb -O3 -I/usr/local/ssl/include/ -Wl,-rpath,/usr/local/ssl/lib/ -L/usr/local/ssl/lib/ -lcrypto -D ${PARAM}
+CFLAGS= -ggdb -O3 -I/usr/local/ssl/include/ -Wl,-rpath,/usr/local/ssl/lib/ -L/usr/local/ssl/lib/ -Wno-discarded-qualifiers -lcrypto -D ${PARAM}
 LD_LIBRARY_PATH=/usr/local/ssl/lib
 
 OBJ = benchmark.c

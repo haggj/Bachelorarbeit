@@ -1,0 +1,5 @@
+# Add additional_dict.txt to dictionary
+cat additional_dict.txt | while read word; do echo -e "*${word}\n#" | aspell -a; done
+
+# Spell check using aspell
+ aspell -c -t "--add-tex-command=parencite op" --add-tex-command="autoref op" 01_background.tex
