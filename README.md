@@ -1,6 +1,6 @@
 # Benchmarking SIDH Implementations
 
-This repository contains code to benchmark currently available SIDH implementations:
+This repository contains my [Bachelor's Thesis](doc/Latex/build/main.pdf) along with the code to benchmark currently available SIDH implementations:
 - SIKE
     - Reference Implementation
     - Optimized Implementation
